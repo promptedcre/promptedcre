@@ -13,14 +13,15 @@ export const site = {
   url: "https://promptedcre.com",
   // True once the hosted connector is deployed. Every "not live yet" line on the site, the
   // status line's connector cell, /install and /llms.txt follow it; nothing else changes.
-  connectorLive: false,
+  // Switched on 2026-11-19 at the owner's go to launch (D246).
+  connectorLive: true as boolean,
   // The engine (the command line and the local MCP server that refuse a move a
-  // playbook does not allow). It is packaged (bin/, installed straight from GitHub);
-  // until the repository is public too, every page that shows the engine says so.
-  engineReleased: false,
-  // The public repository (card G: the PromptedCRE organization, created 2026-11-18). It is
-  // private until launch (DEPLOY.md section 6), so its contest links answer only once it is
-  // public. The engine's install command waits for engineReleased as well.
+  // playbook does not allow). It is packaged (bin/, installed straight from GitHub), and
+  // released with the public repository on 2026-11-19 (D246).
+  engineReleased: true as boolean,
+  // The public repository (card G: the PromptedCRE organization, created 2026-11-18, made
+  // public at launch on 2026-11-19). Its contest links and the engine's install command
+  // follow it.
   repoUrl: "https://github.com/promptedcre/promptedcre" as string | null,
   codeLicense: "Apache-2.0",
   contentLicense: "CC BY 4.0",
