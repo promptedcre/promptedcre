@@ -1,0 +1,138 @@
+{
+  "id": "comp-set",
+  "name": "Comparable sales and leases",
+  "what": "The set of comparable sales and leases gathered to test a price and a rent, each with what makes it comparable.",
+  "fields": [
+    {
+      "key": "subject",
+      "label": "Subject property",
+      "type": "text",
+      "definition": "The property the set is gathered for, with the size, type and features the comparables are measured against."
+    },
+    {
+      "key": "preparedDate",
+      "label": "Prepared",
+      "type": "date",
+      "definition": "The date the set was compiled; the comparables speak only to the market up to this date."
+    },
+    {
+      "key": "searchCriteria",
+      "label": "Search criteria",
+      "type": "text",
+      "definition": "The area, date range, size range and property types searched, so a reader can see what could have been found and was not."
+    },
+    {
+      "key": "compType",
+      "label": "Sale or lease",
+      "type": "enum",
+      "definition": "For each comparable, whether it is a sale or a lease."
+    },
+    {
+      "key": "address",
+      "label": "Address",
+      "type": "string",
+      "definition": "The comparable's street address and, for a lease, the suite."
+    },
+    {
+      "key": "transactionDate",
+      "label": "Date",
+      "type": "date",
+      "definition": "The closing date of a sale, or the signing or commencement date of a lease; say which."
+    },
+    {
+      "key": "area",
+      "label": "Area",
+      "type": "integer",
+      "unit": "SF",
+      "definition": "The building square feet sold or the space leased, and whether rentable or gross."
+    },
+    {
+      "key": "salePrice",
+      "label": "Sale price",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The recorded or confirmed price for a sale; null for a lease."
+    },
+    {
+      "key": "pricePerSf",
+      "label": "Price per square foot",
+      "type": "money",
+      "unit": "USD/SF",
+      "definition": "Sale price divided by building area."
+    },
+    {
+      "key": "capRate",
+      "label": "Cap rate",
+      "type": "string",
+      "definition": "The cap rate at sale and the income it was figured on, in-place or projected; null if not known."
+    },
+    {
+      "key": "rent",
+      "label": "Starting rent",
+      "type": "money",
+      "unit": "USD/SF/year",
+      "definition": "The first-year base rent of a lease per square foot per year; null for a sale."
+    },
+    {
+      "key": "expenseBasis",
+      "label": "Expense basis",
+      "type": "enum",
+      "definition": "Whether a lease rent is gross, modified gross or triple net, so rents are compared on one basis before they are averaged."
+    },
+    {
+      "key": "leaseTermsAndConcessions",
+      "label": "Term and concessions",
+      "type": "text",
+      "definition": "The lease term in months, annual steps, free rent and improvement allowance, which move the effective rent away from the starting rent."
+    },
+    {
+      "key": "characteristics",
+      "label": "Physical characteristics",
+      "type": "text",
+      "definition": "Year built, site size, and for industrial the clear height, loading, office share and yard, as far as they bear on comparability."
+    },
+    {
+      "key": "conditionsOfSale",
+      "label": "Conditions of the deal",
+      "type": "text",
+      "definition": "Anything that made the price or rent unusual, such as a sale-leaseback, a related-party deal, a distressed seller, or a portfolio allocation."
+    },
+    {
+      "key": "sourceAndVerification",
+      "label": "Source and verification",
+      "type": "text",
+      "definition": "Where each figure came from, such as the offering memorandum, a broker, a data service, a deed or the appraisal district, and who confirmed it and on what date; the comp's status is recorded on its own in Confirmation status."
+    },
+    {
+      "key": "confirmationStatus",
+      "label": "Confirmation status",
+      "type": "enum",
+      "definition": "For each comparable: confirmed by a party to the deal, confirmed by a public record only, or unconfirmed (reported by a broker or data service and not yet checked). A source is not a confirmation: a database record stays unconfirmed until a party or a record confirms it."
+    },
+    {
+      "key": "netEffectiveRent",
+      "label": "Net effective rent",
+      "type": "money",
+      "unit": "USD/SF/year",
+      "definition": "For a lease, the rent over the term after free rent, the improvement allowance and commissions, spread evenly per square foot per year on the subject's expense basis, with the method used (for example, the lease-rent calculator's run); null for a sale."
+    },
+    {
+      "key": "adjustments",
+      "label": "Adjustments",
+      "type": "list",
+      "definition": "For each comparable, each adjustment toward the subject: the factor (conditions of sale, market conditions, location, size, age and condition, quality, lease terms), the percentage or amount, its direction and the reason; or, where the comps are bracketed, whether the comp is better or worse than the subject."
+    },
+    {
+      "key": "adjustedValue",
+      "label": "Adjusted price or rent",
+      "type": "money",
+      "definition": "Each comparable's price per square foot or net effective rent after its adjustments, in the unit of the figure adjusted; null where the comps are bracketed and not adjusted."
+    },
+    {
+      "key": "concludedRanges",
+      "label": "Concluded ranges",
+      "type": "text",
+      "definition": "The concluded low and high for price per square foot, cap rate and market rent, each with the comps that support each end, the statistic the conclusion rests on (mean, median or weighted mean), how many comps are confirmed, and where the evidence is thin."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "us-fed.reg-d.form-d-filing",
+  "jurisdiction": "us-federal",
+  "title": "File Form D within 15 days of the first sale",
+  "rule": "An issuer selling under Rule 504 or Rule 506 files a notice on Form D with the SEC no later than 15 calendar days after the first sale in each new offering. A deadline that lands on a Saturday, Sunday or holiday moves to the next business day. The first sale is the date the first investor is irrevocably contractually committed to invest. The notice is filed electronically on EDGAR, signed by a person the issuer authorizes, and carries no federal fee.",
+  "citation": {
+    "authority": "17 CFR 230.503(a)(1) and (b)",
+    "url": "https://www.ecfr.gov/current/title-17/section-230.503"
+  },
+  "asOf": "2026-11-09",
+  "lastVerified": "2026-11-11",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Regulation D, Form D or EDGAR filing rules.",
+  "sources": [
+    {
+      "id": "ecfr-230-503",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.503",
+      "title": "17 CFR 230.503, Filing of notice of sales",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-11",
+      "quote": "no later than 15 calendar days after the first sale of securities in the offering",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-form-d",
+      "url": "https://www.sec.gov/files/formd.pdf",
+      "title": "Form D, Notice of Exempt Offering of Securities, with instructions",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-11",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-form-d-notice",
+      "url": "https://www.sec.gov/resources-small-businesses/exempt-offerings/filing-form-d-notice",
+      "title": "Filing a Form D Notice",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-11",
+      "tier": "primary"
+    }
+  ]
+}

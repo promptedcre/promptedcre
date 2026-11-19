@@ -1,0 +1,36 @@
+{
+  "id": "negotiate-the-sale",
+  "slug": "negotiate-the-sale",
+  "kind": "process",
+  "title": "Negotiate and sign the sale contract",
+  "summary": "Choose a buyer, negotiate the contract and manage the buyer's due diligence.",
+  "phase": "exit",
+  "order": 515,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Compare offers on price, deposits, timing and financing certainty",
+    "Check each buyer's capital and record of closing",
+    "Pick a buyer and sign a letter of intent",
+    "Map the existing loan's payoff or assumption path into the timeline",
+    "Negotiate the sale contract with counsel",
+    "Agree the deed form and what the seller will represent",
+    "Get the approvals to sign under the governing agreement",
+    "Sign the contract and confirm the deposit is in escrow",
+    "Deliver diligence materials on the contract's schedule",
+    "Request the tenant estoppels the contract requires",
+    "Respond to title, survey and diligence objections",
+    "Handle any repricing request before the deposit goes hard"
+  ]
+}

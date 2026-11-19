@@ -1,0 +1,135 @@
+{
+  "vendor": "yardi-matrix",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://www.yardimatrix.com/about-us/yardi-matrix-ai-connectors/",
+      "found": false,
+      "note": "No public documentation or help center found; the nav Support link leads off-site and was not opened. The AI Connectors page is a marketing page with no setup steps."
+    },
+    "api": {
+      "url": "https://www.yardimatrix.com/property-types/industrial/",
+      "found": false,
+      "note": "No public API page; industrial product page and FAQ mention Excel export and a Claude connector, not an API."
+    },
+    "pricing": {
+      "url": "https://www.yardimatrix.com/buy-now/",
+      "found": true,
+      "note": "Public per-user monthly plan prices with online purchase; Enterprise is contact sales."
+    },
+    "changelog": {
+      "url": "https://www.yardimatrix.com/blog/category/news/press-releases/",
+      "found": false,
+      "note": "Only market press releases; no product release notes or changelog."
+    }
+  },
+  "links": {
+    "docs": "https://www.yardimatrix.com/about-us/yardi-matrix-ai-connectors/",
+    "mcp": "https://www.yardimatrix.com/about-us/yardi-matrix-ai-connectors/"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://www.yardimatrix.com/about-us/yardi-matrix-ai-connectors/",
+      "excerpt": "Yardi Matrix uses Model Context Protocol (MCP), an open standard for connecting AI applications with external data sources and tools.",
+      "fetched": "2026-11-12",
+      "hash": "748e028b14c1ee10500537f9c78006dfd22263e0db54049447025400f022dc03"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://www.yardimatrix.com/about-us/yardi-matrix-ai-connectors/",
+      "excerpt": "Yardi Matrix plans to extend connector support to Microsoft Copilot and additional AI platforms over time.",
+      "fetched": "2026-11-12",
+      "note": "Connector is available for Claude only today.",
+      "hash": "d382570363776fed61d47352464aed687abfcba0114e0cf661ee93cb0c7c043d"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://www.yardimatrix.com/buy-now/",
+      "excerpt": "Yardi Matrix is now available for purchase online. Gain access to the Matrix Portal and Claude Connector with one subscription.",
+      "fetched": "2026-11-12",
+      "hash": "2b0ef0c5aeaf86f679ee3bd01d33a8d6b0315a76098c81fa9ca2f06f908ac557"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://www.yardimatrix.com/buy-now/",
+      "excerpt": "$ 199 / asset class / user / mo",
+      "fetched": "2026-11-12",
+      "note": "Starter plan, 1 metro. Other plans: $699 (5 metros), $999 (10 metros), $1,999 (nationwide), Enterprise contact sales.",
+      "hash": "21988e67dfbb8aed23f300d321bbbddfd5e8e2949c86fa95bb6c613471e6b334"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://www.yardimatrix.com/buy-now/",
+      "excerpt": "Cancel at any time from your account settings and you keep access through the end of the current billing period.",
+      "fetched": "2026-11-12",
+      "hash": "0c2356c991516e6a8fd4c5ff6378da00be5e31812813cf631de7480ff532dedc"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://www.yardimatrix.com/buy-now/",
+      "excerpt": "Custom agreement with Sales for seats, SSO, custom regions and procurement on your terms.",
+      "fetched": "2026-11-12",
+      "note": "Enterprise tier.",
+      "hash": "2867c0f7348401ab692fa9a53f400871e2c5c50fef5e4b52f2c59d38fdd86697"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://www.yardimatrix.com/property-types/industrial/",
+      "excerpt": "Users can export property data, reports and maps directly into Microsoft Excel.",
+      "fetched": "2026-11-12",
+      "hash": "30e9a9274881eb5e4bc77dd643cad73e6a5c99bbce6b38cba40749c255a24ddf"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://www.yardimatrix.com/property-types/industrial/",
+      "excerpt": "Matrix provides direct access to the real owners (not the LLC), key contacts and portfolios with site-level granularity.",
+      "fetched": "2026-11-12",
+      "hash": "55a80f0d7393e72f6240d101128f82ec98e9abf537c8d61d87229f13d1ad71dd"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://www.yardimatrix.com/property-types/industrial/",
+      "excerpt": "Yardi Matrix allows users to compare industrial properties using asking rents, available and leased space, property characteristics, sales history and ownership information.",
+      "fetched": "2026-11-12",
+      "hash": "01d45649c320c3d94d3e6901425d7cb7d7dcc9ef0add3e5aab958789a97f938f"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://www.yardimatrix.com/property-types/industrial/",
+      "excerpt": "Our coverage spans 16+ billion square feet across 118 U.S. markets, with property-level data on buildings of 25,000 sq ft and above.",
+      "fetched": "2026-11-12",
+      "note": "Buildings under 25,000 SF not covered.",
+      "hash": "46d92d1bb25f9ddc8ccafdf9c85c1902a3b7ca0d2e33fb4e6261c73dcabbd444"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://www.yardimatrix.com/property-types/industrial/",
+      "excerpt": "An active subscription is required.",
+      "fetched": "2026-11-12",
+      "hash": "a26d8b081f9e909e8b99ecc4132b4933c75604fcedf54b43044565365203561e"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://www.yardimatrix.com/about-us/yardi-matrix-ai-connectors/",
+      "excerpt": "Yardi Matrix AI Connectors | Yardi Matrix",
+      "note": "MCP page resolves: GET 200 (page title)",
+      "fetched": "2026-11-12",
+      "hash": "60d18233f936ecefc5382efbfcd58ccb5a686fbe5856f8fe466687298943db2c"
+    }
+  ]
+}

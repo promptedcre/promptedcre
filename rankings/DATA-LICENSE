@@ -1,0 +1,25 @@
+Prompted CRE rankings data license
+DRAFT, not attorney-reviewed
+
+This license covers the files in rankings/ (stories, vendor lists, evidence packs,
+verdicts, golden cells) and the scores computed from them. The code is Apache-2.0
+(LICENSE) and the playbook content is CC BY 4.0 (CONTENT-LICENSE); neither of those
+licenses covers rankings/.
+
+You may:
+- View the rankings and the evidence behind them, for any purpose.
+- Quote individual scores, verdicts and evidence excerpts, crediting "Prompted CRE
+  rankings" with a link to the page you quote.
+- Use the rankings to make your own decisions, including inside your company.
+
+You may not:
+- Copy the rankings data in bulk, such as a whole market's verdicts or the evidence
+  packs as a set, into another data set, product or service.
+- Use the data to build a competing ranking, rating or review data set.
+- Present a score as an endorsement, a certification or a paid placement.
+
+Evidence excerpts are short quotations from the pages they cite, for review and
+comment. They belong to those pages' publishers.
+
+Scores describe the public evidence on the dates shown. They are not advice to buy or
+avoid any product. Provided as is, without warranty.

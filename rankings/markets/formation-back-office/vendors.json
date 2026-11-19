@@ -1,0 +1,117 @@
+{
+  "market": "formation-back-office",
+  "vendors": [
+    {
+      "id": "northwest-registered-agent",
+      "name": "Northwest Registered Agent",
+      "kind": "product",
+      "what": "Registered agent and business formation service.",
+      "homepage": "https://www.northwestregisteredagent.com/"
+    },
+    {
+      "id": "csc",
+      "name": "CSC",
+      "kind": "product",
+      "what": "Registered agent, entity management and corporate filing services.",
+      "homepage": "https://www.cscglobal.com/"
+    },
+    {
+      "id": "legalzoom",
+      "name": "LegalZoom",
+      "kind": "product",
+      "what": "Business formation, registered agent and legal document service.",
+      "homepage": "https://www.legalzoom.com/"
+    },
+    {
+      "id": "zenbusiness",
+      "name": "ZenBusiness",
+      "kind": "product",
+      "what": "Business formation, registered agent and compliance service.",
+      "homepage": "https://www.zenbusiness.com/"
+    },
+    {
+      "id": "mercury",
+      "name": "Mercury",
+      "kind": "product",
+      "what": "Business banking for companies.",
+      "homepage": "https://mercury.com/"
+    },
+    {
+      "id": "relay",
+      "name": "Relay",
+      "kind": "product",
+      "what": "Business banking for small businesses.",
+      "homepage": "https://relayfi.com/"
+    },
+    {
+      "id": "docusign",
+      "name": "Docusign",
+      "kind": "product",
+      "what": "Electronic signature and agreement management.",
+      "homepage": "https://www.docusign.com/"
+    },
+    {
+      "id": "dropbox-sign",
+      "name": "Dropbox Sign",
+      "kind": "product",
+      "what": "Electronic signature service from Dropbox.",
+      "homepage": "https://sign.dropbox.com/"
+    },
+    {
+      "id": "quickbooks-online",
+      "name": "QuickBooks Online",
+      "kind": "product",
+      "what": "Small business accounting software.",
+      "homepage": "https://quickbooks.intuit.com/"
+    },
+    {
+      "id": "verifyinvestor",
+      "name": "VerifyInvestor",
+      "kind": "product",
+      "what": "Accredited investor verification service.",
+      "homepage": "https://www.verifyinvestor.com/"
+    },
+    {
+      "id": "icapital-identity",
+      "name": "iCapital Identity Solutions (formerly Parallel Markets)",
+      "kind": "product",
+      "what": "Investor identity, KYC and accreditation verification; Parallel Markets renamed under iCapital.",
+      "homepage": "https://parallelmarkets.com/"
+    },
+    {
+      "id": "sec-edgar",
+      "name": "SEC EDGAR",
+      "kind": "government",
+      "what": "The SEC's electronic filing system, where Form D is filed.",
+      "homepage": "https://www.sec.gov/edgar"
+    },
+    {
+      "id": "nasaa-efd",
+      "name": "NASAA Electronic Filing Depository",
+      "kind": "government",
+      "what": "The system state securities regulators use for Form D notice filings and fees.",
+      "homepage": "https://nasaaefd.org/"
+    },
+    {
+      "id": "irs-ein",
+      "name": "IRS EIN online application",
+      "kind": "government",
+      "what": "The IRS's online application for an employer identification number.",
+      "homepage": "https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number"
+    },
+    {
+      "id": "tx-sosportal",
+      "name": "Texas SOSPortal (formerly SOSDirect)",
+      "kind": "government",
+      "what": "The Texas Secretary of State's online system for business filings, orders and searches, which replaced SOSDirect in September 2026.",
+      "homepage": "https://www.sos.state.tx.us/corp/sosda/index.shtml"
+    },
+    {
+      "id": "de-corporations",
+      "name": "Delaware Division of Corporations",
+      "kind": "government",
+      "what": "Delaware's office for entity formation filings, annual taxes and entity searches; documents are submitted through its upload service.",
+      "homepage": "https://corp.delaware.gov/"
+    }
+  ]
+}

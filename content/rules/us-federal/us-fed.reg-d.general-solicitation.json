@@ -1,0 +1,33 @@
+{
+  "id": "us-fed.reg-d.general-solicitation",
+  "jurisdiction": "us-federal",
+  "title": "No general solicitation outside Rule 506(c) (Rule 502(c))",
+  "rule": "Unless the offering relies on Rule 506(c) or Rule 504(b)(1), neither the issuer nor anyone acting for it may offer or sell by general solicitation or general advertising, such as published or broadcast ads or seminars whose attendees were invited that way. SEC staff treats an offer on an unrestricted public website as general solicitation, treats an offer to someone with a pre-existing, substantive relationship as not, and says limiting a solicitation to accredited investors does not cure it.",
+  "citation": {
+    "authority": "17 CFR 230.502(c); SEC Securities Act Rules C&DIs 256.18, 256.23 and 256.26",
+    "url": "https://www.ecfr.gov/current/title-17/section-230.502"
+  },
+  "asOf": "2026-11-09",
+  "lastVerified": "2026-11-12",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Rule 502(c) or Rule 148, or new staff interpretations in Securities Act Rules C&DI Section 256.",
+  "sources": [
+    {
+      "id": "ecfr-230-502",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.502",
+      "title": "17 CFR 230.502, General conditions to be met",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-cdi-securities-act-rules",
+      "url": "https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/securities-act-rules",
+      "title": "Securities Act Rules: Compliance and Disclosure Interpretations (Sections 255 to 260)",
+      "publisher": "U.S. Securities and Exchange Commission, Division of Corporation Finance",
+      "accessed": "2026-11-12",
+      "quote": "one means, but not the exclusive means, of demonstrating the absence of a general solicitation in a Regulation D offering",
+      "tier": "primary"
+    }
+  ]
+}

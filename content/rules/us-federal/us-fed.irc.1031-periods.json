@@ -1,0 +1,25 @@
+{
+  "id": "us-fed.irc.1031-periods",
+  "jurisdiction": "us-federal",
+  "title": "Like-kind exchange: the 45-day and 180-day periods",
+  "rule": "In a deferred like-kind exchange, replacement property must be identified by midnight on the 45th day after the relinquished property is transferred, and received by midnight on the earlier of the 180th day or the due date, including extensions, of the tax return for the year of the transfer. When several relinquished properties go on different dates, both periods run from the earliest transfer. The periods are counted in calendar days; the regulation provides no weekend or holiday extension.",
+  "citation": {
+    "authority": "26 CFR 1.1031(k)-1(b)(2)",
+    "url": "https://www.ecfr.gov/current/title-26/section-1.1031(k)-1"
+  },
+  "asOf": "2026-11-09",
+  "lastVerified": "2026-11-11",
+  "review": "ai-drafted",
+  "changeWatch": "Changes to Section 1031 or its regulations, and disaster-relief postponements announced by the IRS.",
+  "sources": [
+    {
+      "id": "ecfr-1-1031-k-1",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.1031(k)-1",
+      "title": "26 CFR 1.1031(k)-1, Treatment of deferred exchanges",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-11",
+      "quote": "ends at midnight on the 45th day thereafter",
+      "tier": "primary"
+    }
+  ]
+}

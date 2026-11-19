@@ -1,0 +1,41 @@
+{
+  "id": "us-fed.fincen.boi",
+  "jurisdiction": "us-federal",
+  "title": "Beneficial ownership reporting: companies created in the U.S. are exempt",
+  "rule": "Under FinCEN's final rule effective August 14, 2026, making its March 2025 interim final rule permanent, an entity created in the United States by a filing with a secretary of state or similar office is not a reporting company under the Corporate Transparency Act and files no beneficial ownership report. Only entities formed under foreign law and registered to do business in a state or tribal jurisdiction must report, and they report no U.S. persons. FinCEN charges no filing fee.",
+  "citation": {
+    "authority": "31 CFR 1010.380(c); FinCEN final rule, 91 FR 52508 (Aug. 14, 2026)",
+    "url": "https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-C/section-1010.380"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-12",
+  "review": "ai-drafted",
+  "changeWatch": "A new FinCEN rule, Treasury notice or court decision on the Corporate Transparency Act that would bring U.S. companies back into reporting.",
+  "sources": [
+    {
+      "id": "fincen-boi",
+      "url": "https://www.fincen.gov/boi",
+      "title": "Beneficial Ownership Information Reporting (alert updated August 11, 2026)",
+      "publisher": "Financial Crimes Enforcement Network",
+      "accessed": "2026-11-12",
+      "quote": "The final rule became effective on August 14, 2026.",
+      "tier": "primary"
+    },
+    {
+      "id": "fr-boi-final-rule",
+      "url": "https://www.federalregister.gov/documents/2026/08/14/2026-16576/beneficial-ownership-information-reporting-requirement-revision",
+      "title": "Beneficial Ownership Information Reporting Requirement Revision, final rule, 91 FR 52508 (Aug. 14, 2026)",
+      "publisher": "Financial Crimes Enforcement Network (Federal Register)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-31-1010-380",
+      "url": "https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-C/section-1010.380",
+      "title": "31 CFR 1010.380, Reports of beneficial ownership information",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    }
+  ]
+}

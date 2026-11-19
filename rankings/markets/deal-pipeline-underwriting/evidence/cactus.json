@@ -1,0 +1,146 @@
+{
+  "vendor": "cactus",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://www.trycactus.com/faq",
+      "found": true,
+      "note": "No developer docs; the FAQ is the help center"
+    },
+    "api": {
+      "url": "https://www.trycactus.com/solutions/api",
+      "found": true,
+      "note": "API sold as a scoped enterprise integration; no public reference or spec; /api is 404"
+    },
+    "pricing": {
+      "url": "https://www.trycactus.com/pricing",
+      "found": true
+    },
+    "changelog": {
+      "url": "https://www.trycactus.com/changelog",
+      "found": true
+    }
+  },
+  "links": {
+    "docs": "https://www.trycactus.com/faq",
+    "api": "https://www.trycactus.com/solutions/api"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://www.trycactus.com/",
+      "excerpt": "Turn offering memorandums and deal financials into a shareable underwriting report.",
+      "fetched": "2026-11-12",
+      "hash": "d4e2d387f81699738002992b68f4f28c7ced9ab41f482823204089bf48967d61"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://www.trycactus.com/",
+      "excerpt": "Send documents by email or start an analysis inside ChatGPT . Your Cactus report is just a link away. Claude support is coming soon.",
+      "fetched": "2026-11-12",
+      "hash": "4bd140ddfc4633db177bac4fd8a90872cf4fa4298ad225062a4c859ef184fda6"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://www.trycactus.com/",
+      "excerpt": "Property values, cash flows, and returns are computed with fixed financial formulas.",
+      "fetched": "2026-11-12",
+      "hash": "8f7039eaafc4ecd10e6fe3f495447f5348a7e46f9b575470d4ae6d152a6731d5"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://www.trycactus.com/",
+      "excerpt": "Industrial and logistics",
+      "fetched": "2026-11-12",
+      "note": "Asset-type card reads 'In development · Join the beta list' (no further text for this card in the extract)",
+      "hash": "23efbdefe2323862f751315913ce7aede55ca7f8ad50255220aea2cf1fede9e2"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://www.trycactus.com/faq",
+      "excerpt": "Yes. Our API solution is for corporations and software teams that want Cactus underwriting or valuation within their own product.",
+      "fetched": "2026-11-12",
+      "hash": "5d4b68868193ef1bb570270cf5033ff4d5b68697bc42d20d758f0d9acd8e706b"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://www.trycactus.com/faq",
+      "excerpt": "API integrations are scoped separately.",
+      "fetched": "2026-11-12",
+      "hash": "809cf2a00072319d3e30da064b5cc99001092b6fd8d6fbe4615f831be453c6ad"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://www.trycactus.com/solutions/api",
+      "excerpt": "Example product experience, not an API specification. Available fields, delivery methods, and supported workflows are confirmed during integration scoping.",
+      "fetched": "2026-11-12",
+      "hash": "42a642563debc748bde7e748a69d2619f1f1a401fe81173f1ef52b9fd47def09"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://www.trycactus.com/faq",
+      "excerpt": "Cactus produces a multi-tab Excel model with working formulas so your team can inspect assumptions and follow the calculations.",
+      "fetched": "2026-11-12",
+      "hash": "05dd0073c40e4fa3e5fd2b0f5925c9ac586425bdc19d617ef43c2c98fc52f046"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://www.trycactus.com/pricing",
+      "excerpt": "Pay as you go from $35 , or buy credits for your team.",
+      "fetched": "2026-11-12",
+      "hash": "b04ac8fe2d6ecbac5e0663ae3d52c234a59bd9d015d6bdeea100cade6ece116e"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://www.trycactus.com/pricing",
+      "excerpt": "Annual billing saves $2 per credit, with rates from $17.50.",
+      "fetched": "2026-11-12",
+      "hash": "ebb9db068f7a4be28977759bcb4a4586fef8f86cdbf789fbd5933d8e6549e848"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://www.trycactus.com/changelog",
+      "excerpt": "Every value now shows its source, whether it came from your document, a data partner, or an estimate.",
+      "fetched": "2026-11-12",
+      "hash": "0fcd80fe86087e8a5b6c52ddc5bf51fec8b31dd5de99d2dc3a054509001df8a3"
+    },
+    {
+      "id": "c12",
+      "tier": "vendor-claim",
+      "url": "https://www.trycactus.com/changelog",
+      "excerpt": "Excel exports now carry the AI summary, risks, and assumptions on the executive summary sheet.",
+      "fetched": "2026-11-12",
+      "hash": "55a23486da194f4a67cf60488e1408d0b7f67b310c3a72bf5bb7487cae01dd46"
+    },
+    {
+      "id": "c13",
+      "tier": "vendor-claim",
+      "url": "https://www.trycactus.com/email",
+      "excerpt": "Cactus emails you when it’s underway and again when it’s finished, with a link to your report.",
+      "fetched": "2026-11-12",
+      "hash": "cbd833f63abdc9fb3c10dfc5b9119d1064bd729a0d7dbc04748ff0a5cd75c707"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://www.trycactus.com/llms.txt",
+      "excerpt": "# Cactus",
+      "note": "llms.txt: GET 200, 25594 bytes",
+      "fetched": "2026-11-12",
+      "hash": "dc293d48ed6cbefd35a523a8b9665b1d292b297cb64bade1000c0e7493461b87"
+    }
+  ]
+}

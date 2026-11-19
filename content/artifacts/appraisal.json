@@ -1,0 +1,103 @@
+{
+  "id": "appraisal",
+  "name": "Appraisal",
+  "what": "A licensed appraiser's opinion of the property's market value, typically ordered by the lender.",
+  "fields": [
+    {
+      "key": "client",
+      "label": "Client and intended users",
+      "type": "string",
+      "definition": "The party that engaged the appraiser and the intended users the report names."
+    },
+    {
+      "key": "appraiser",
+      "label": "Appraiser",
+      "type": "string",
+      "definition": "The appraiser who signed the report and the state license or certification each signer holds, as shown in the certification."
+    },
+    {
+      "key": "intendedUse",
+      "label": "Intended use",
+      "type": "string",
+      "definition": "The use the report states, such as a lending decision, a purchase or a tax appeal."
+    },
+    {
+      "key": "effectiveDate",
+      "label": "Effective date of value",
+      "type": "date",
+      "definition": "The date the opinion of value speaks to, which can differ from the date the report was signed."
+    },
+    {
+      "key": "interestAppraised",
+      "label": "Interest appraised",
+      "type": "string",
+      "definition": "The property rights valued, such as the leased fee subject to existing leases, the fee simple, or a leasehold."
+    },
+    {
+      "key": "valuePremise",
+      "label": "Value premise",
+      "type": "enum",
+      "definition": "The premise of each value reported: as is, as stabilized, as complete, or prospective at a stated future date. Record each premise and its value as its own entry."
+    },
+    {
+      "key": "marketValue",
+      "label": "Market value",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The final reconciled opinion of market value for the premise recorded, after the appraiser weighs the approaches.",
+      "authority": "12 CFR 34.42(h)"
+    },
+    {
+      "key": "salesComparisonValue",
+      "label": "Sales comparison value",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The value the sales comparison approach indicates, with the adjusted price per square foot it rests on."
+    },
+    {
+      "key": "incomeApproachValue",
+      "label": "Income approach value",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The value the income approach indicates, noting whether it came from direct capitalization, a discounted cash flow, or both."
+    },
+    {
+      "key": "costApproachValue",
+      "label": "Cost approach value",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The value the cost approach indicates, or null with a note when the appraiser did not develop it."
+    },
+    {
+      "key": "capitalizationRates",
+      "label": "Capitalization and discount rates",
+      "type": "string",
+      "definition": "The overall capitalization rate applied to net operating income, and the terminal capitalization and discount rates if a discounted cash flow was run."
+    },
+    {
+      "key": "appraisedNoi",
+      "label": "Net operating income used",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The net operating income the income approach capitalizes, which can differ from the trailing-12 and from the buyer's underwriting; note the reserves and vacancy it deducts."
+    },
+    {
+      "key": "marketConclusions",
+      "label": "Market rent, vacancy and expenses",
+      "type": "text",
+      "definition": "The market rent per square foot, vacancy and credit loss, and operating expenses the appraiser concluded, set beside the property's actual figures."
+    },
+    {
+      "key": "comparableSales",
+      "label": "Comparable sales",
+      "type": "list",
+      "definition": "Each comparable sale with address, sale date, price, size, price per square foot, and each adjustment with its percentage and stated reason."
+    },
+    {
+      "key": "assumptionsAndConditions",
+      "label": "Extraordinary assumptions and hypothetical conditions",
+      "type": "list",
+      "definition": "Each assumption or condition the value depends on, such as completion of planned work, a lease being signed, or a report the appraiser did not see."
+    }
+  ]
+}

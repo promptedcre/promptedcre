@@ -1,0 +1,70 @@
+{
+  "id": "phase-i-esa",
+  "name": "Phase I environmental site assessment",
+  "what": "An environmental professional's report on whether the property shows signs of contamination, based on records, interviews and a site visit.",
+  "fields": [
+    {
+      "key": "standard",
+      "label": "Standard",
+      "type": "string",
+      "definition": "The practice the report follows: ASTM E1527-21, or E2247-23 for forestland or rural property.",
+      "authority": "40 CFR 312.11"
+    },
+    {
+      "key": "environmentalProfessional",
+      "label": "Environmental professional",
+      "type": "string",
+      "definition": "The person who signed the report's declaration, with the qualifications the report states.",
+      "authority": "40 CFR 312.10 and 312.21(c)(3), (d)"
+    },
+    {
+      "key": "siteVisitDate",
+      "label": "Site visit",
+      "type": "date",
+      "definition": "The date of the visual inspection of the property and adjoining properties.",
+      "authority": "40 CFR 312.27"
+    },
+    {
+      "key": "earliestTimedComponent",
+      "label": "Earliest 180-day component",
+      "type": "date",
+      "definition": "The earliest of the interviews, cleanup-lien search, government records review, site visit and declaration; acquisition must follow within 180 days of it.",
+      "authority": "40 CFR 312.20(b)"
+    },
+    {
+      "key": "inquiryDate",
+      "label": "Inquiry date",
+      "type": "date",
+      "definition": "When the inquiry was conducted; acquisition must follow within one year.",
+      "authority": "40 CFR 312.20(a)"
+    },
+    {
+      "key": "findings",
+      "label": "Conditions found",
+      "type": "list",
+      "definition": "Conditions the professional identified as indicating releases or threatened releases of hazardous substances, which ASTM reports call recognized environmental conditions.",
+      "authority": "40 CFR 312.21(c)(1)"
+    },
+    {
+      "key": "dataGaps",
+      "label": "Data gaps",
+      "type": "list",
+      "definition": "Information the professional could not obtain, with comments on how much each gap matters.",
+      "authority": "40 CFR 312.21(c)(2)"
+    },
+    {
+      "key": "furtherInvestigation",
+      "label": "Further investigation",
+      "type": "text",
+      "definition": "The professional's opinion on additional appropriate investigation, such as a Phase II, if it has one.",
+      "authority": "40 CFR 312.31(b)"
+    },
+    {
+      "key": "userInquiries",
+      "label": "Buyer's own inquiries",
+      "type": "text",
+      "definition": "The buyer's cleanup-lien search, specialized knowledge and comparison of price with uncontaminated value.",
+      "authority": "40 CFR 312.22"
+    }
+  ]
+}

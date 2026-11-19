@@ -1,0 +1,34 @@
+{
+  "id": "hold-annual-investor-update",
+  "slug": "hold-annual-investor-update",
+  "kind": "process",
+  "title": "Hold the annual investor update",
+  "summary": "Walk investors through the year's results and the plan, and answer questions on the record.",
+  "phase": "report",
+  "order": 425,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Set the date and send the invitation",
+    "Prepare the year's results against plan",
+    "Present occupancy, tenant credit and the lease term ahead",
+    "Show returns to date and how much still depends on the sale",
+    "Restate the hold and exit view for each property",
+    "Review with counsel what can be said about future plans",
+    "Prepare answers to the questions investors are likely to ask",
+    "Hold the meeting and take questions on the record",
+    "Send the materials and the answers afterward",
+    "Record follow-up items and who owns each one"
+  ]
+}

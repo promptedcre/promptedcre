@@ -1,0 +1,85 @@
+{
+  "id": "jv-agreement",
+  "name": "Joint venture agreement",
+  "what": "The agreement between the sponsor and a capital partner that sets contributions, control, decisions that need the partner's consent, the promote and exit rights.",
+  "fields": [
+    {
+      "key": "capitalShares",
+      "label": "Capital shares and later contributions",
+      "type": "text",
+      "definition": "Each party's share of the equity and its initial contribution. Record how later contributions are requested, approved and split between the parties, such as against an approved budget."
+    },
+    {
+      "key": "fundingDefault",
+      "label": "Failure to fund",
+      "type": "text",
+      "definition": "What happens when a party does not fund a required contribution: whether the other party may fund it as a loan and at what rate, or as a contribution that dilutes the defaulting party under a stated formula. Record any loss of control or buy-sell right the default opens."
+    },
+    {
+      "key": "fees",
+      "label": "Fees to the sponsor and related companies",
+      "type": "list",
+      "definition": "Each fee the sponsor, its principals or related companies may charge the venture or the property: its name, rate, base, payer and when it is earned and paid. Include any commission or fee a principal or related company receives from someone else, such as the seller, a buyer, a tenant or a lender, on the purchase, the loan, leasing or the sale, and whether the agreement requires it to be disclosed or approved."
+    },
+    {
+      "key": "distributions",
+      "label": "Distributions and promote",
+      "type": "text",
+      "definition": "The preferred return (rate, simple or compounding, whether unpaid amounts carry forward, and when accrual starts), the order in which capital comes back, any catch-up, and each promote tier with its hurdle, the measure the hurdle uses and the split."
+    },
+    {
+      "key": "decisionSchedule",
+      "label": "Schedule of decisions",
+      "type": "list",
+      "definition": "Each decision the agreement assigns, marked as the sponsor's alone, needing the partner's consent, or needing both. Record any deadline for the partner's answer and whether silence counts as consent."
+    },
+    {
+      "key": "sponsorRemoval",
+      "label": "Removal of the sponsor",
+      "type": "text",
+      "definition": "The grounds on which the partner may remove the sponsor as manager and how cause is defined. Record what removal does to the sponsor's fees, its promote and its own capital, such as conversion to a passive interest or a buyout at a stated value."
+    },
+    {
+      "key": "saleRights",
+      "label": "Right to call a sale",
+      "type": "text",
+      "definition": "Which party may start a sale of the property, from what date or event, and the process it must follow. Record any right of the other party to make the first offer or to match a buyer's price."
+    },
+    {
+      "key": "buyout",
+      "label": "Buyout mechanism",
+      "type": "text",
+      "definition": "What triggers a buy-sell or other buyout, how a named price for the property becomes each party's payout, such as by running a deemed sale through the waterfall, and the time the buyer has to fund. Record what happens if the buyout does not close."
+    },
+    {
+      "key": "guarantyExposure",
+      "label": "Loan guaranties and shared exposure",
+      "type": "text",
+      "definition": "Who signs the lender's guaranties and environmental indemnity, and how the parties share a loss under them. Record any reimbursement between the parties, the acts that leave the signer to bear a loss alone, and any fee paid for providing the guaranty."
+    },
+    {
+      "key": "pursuitCosts",
+      "label": "Pursuit costs and deposits at risk",
+      "type": "text",
+      "definition": "Who pays pursuit costs and earnest money before closing, whether they are repaid or credited at closing, and who bears them when the acquisition does not close."
+    },
+    {
+      "key": "partnerReports",
+      "label": "Reports owed to the partner",
+      "type": "list",
+      "definition": "Each report, budget and notice the sponsor owes the partner, with its frequency and deadline, and the partner's rights to inspect the books and to require an audit."
+    },
+    {
+      "key": "transfers",
+      "label": "Transfers",
+      "type": "text",
+      "definition": "Which transfers of each party's interest, or changes in control of a party, need the other's consent, which are permitted without it, and any right of first offer or refusal."
+    },
+    {
+      "key": "lenderConsents",
+      "label": "Lender consents relied on",
+      "type": "list",
+      "definition": "Each provision that works only with the lender's consent under the loan documents, such as removal of the sponsor, a buyout, a transfer or a change of the party in control. Record whether the consent was obtained or the loan documents already allow it."
+    }
+  ]
+}

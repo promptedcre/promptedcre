@@ -1,0 +1,36 @@
+{
+  "id": "hold-the-first-close",
+  "slug": "hold-the-first-close",
+  "kind": "process",
+  "title": "Hold the first close",
+  "summary": "Admit the first group of investors to a fund or a multi-closing offering and start the clocks that run from it.",
+  "phase": "raise",
+  "order": 155,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "List the conditions to closing in the offering documents",
+    "Read the later-closing terms in the governing agreement",
+    "Confirm each condition to closing is met",
+    "Confirm every subscription in the first close is accepted and funded",
+    "Have counsel confirm the close can proceed",
+    "Set the first close date",
+    "Have a person approve each release of funds",
+    "Admit the first investors on the entity's records",
+    "Record the close in the investor register",
+    "Calendar the deadlines that run from the first close",
+    "Send each admitted investor confirmation of the close",
+    "File the closing record and keep it"
+  ]
+}

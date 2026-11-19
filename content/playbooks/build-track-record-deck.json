@@ -1,0 +1,365 @@
+{
+  "id": "build-track-record-deck",
+  "slug": "build-track-record-deck",
+  "kind": "process",
+  "title": "Build the track-record deck",
+  "summary": "List every deal the principals took part in and the role each held, settle with counsel what prior-firm results may be shown, compute every deal one written way from source documents, show realized and unrealized deals and the losses apart, then certify, review, approve and log each version.",
+  "phase": "stand-up",
+  "order": 55,
+  "featured": false,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-14",
+  "requires": [
+    "choose-counsel-and-cpa"
+  ],
+  "consumes": [
+    "settlement-statement",
+    "investor-register",
+    "appraisal",
+    "payoff-letter",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "sponsor-operating-agreement",
+    "underwriting-model",
+    "private-placement-memorandum",
+    "offering-term-sheet"
+  ],
+  "produces": [],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-14",
+      "quote": "To make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-502",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.502",
+      "title": "17 CFR 230.502, General conditions to be met (paragraph (c), limitation on manner of offering)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-14",
+      "quote": "neither the issuer nor any person acting on its behalf shall offer or sell the securities by any form of general solicitation or general advertising",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-275-206-4-1",
+      "url": "https://www.ecfr.gov/current/title-17/section-275.206(4)-1",
+      "title": "17 CFR 275.206(4)-1, Investment adviser marketing",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-14",
+      "quote": "Include or exclude performance results, or present performance time periods, in a manner that is not fair and balanced",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "list-every-deal",
+      "title": "List every deal and the role actually held",
+      "instruction": "Build one inventory of every real estate deal any principal has taken part in, whatever the result, from each principal's own files. For each deal record the property, the dates bought and sold, whose deal it was (the sponsor, a prior employer, another sponsor or a lender), the entity that held it, and the role the principal actually held: who found it, who signed the loan or guaranty, who made the investment and management decisions, and who only invested or advised. Record whether the principal was there from purchase to sale or left partway. Mark any role the documents do not show as stated by the principal and unproven. Nothing is dropped from the inventory at this stage, including deals that lost money or are still held.",
+      "mode": "agent",
+      "modeBasis": "Assembling a list from the principals' files and records is file work; each principal confirms their own entries in the certification step.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "consumes": [
+        "settlement-statement",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "separate-prior-firm-deals",
+      "title": "Separate prior-firm deals from the sponsor's own",
+      "instruction": "Sort the inventory into three groups: deals the sponsor itself sponsored and controlled; deals a principal worked on at a prior firm or under someone else's control; and deals in which a principal was only a passive investor. A deal belongs to the sponsor only if the sponsor's entity held the sponsor role in the governing documents. For each prior-firm deal, list the agreements that may limit what can be said about it: employment, separation, confidentiality and non-solicitation terms, and who holds the deal's records today. Collect those agreements for counsel. Do not draft any deck page, headline or summary figure until counsel has answered on the second group.",
+      "mode": "agent",
+      "modeBasis": "Sorting by the governing documents and collecting agreements is file work; what may be shown is counsel's conclusion in the next step.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-every-deal"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "sponsor-operating-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "counsel-on-prior-results",
+      "title": "Have counsel decide what prior-firm results may be shown",
+      "instruction": "Before anything is drafted, give counsel the sorted inventory and the prior-firm agreements, and ask in writing, deal by deal: may this deal be shown, in what words, with what attribution to the firm that controlled it, and with whose permission. Rule 10b-5 makes it unlawful, in connection with buying or selling a security, to state a material fact untruly or to omit one needed to keep what is said from misleading; a prior-firm deal shown as the sponsor's own, or winners shown without the rest, raises that question. For a fund, ask whether the sponsor is an investment adviser, whether the Advisers Act marketing rule applies, and if so how it treats predecessor and related performance, gross figures without net, projections, and one deal drawn from a fund. Record counsel's answers as the deck's rules.",
+      "mode": "human-online",
+      "modeBasis": "Whether prior-firm results may be shown, and how, is a legal conclusion; an agent prepares the inventory and records the answers.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "separate-prior-firm-deals"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5"
+      ],
+      "consumes": [
+        "sponsor-operating-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5",
+        "ecfr-275-206-4-1"
+      ]
+    },
+    {
+      "id": "gather-source-documents",
+      "title": "Gather the documents behind every figure",
+      "instruction": "Take forward the sponsor's own deals, and the passive and prior-firm deals only as counsel ruled. For each, collect the documents that prove each figure the deck will show: the purchase and sale settlement statements, the loan payoff letter, the distribution records showing every capital contribution and distribution with its date and amount, the investor reports, and, for a deal still held, the appraisal or other valuation and its date. File them by deal and build a source table that ties each planned figure to a document and page. A figure with no document goes on a gap list with a proposed handling. Counsel, or a principal within counsel's rules, decides whether it is shown marked unverified or left out with the gap stated, and the decision is written on the gap list. No gap is filled with an estimate that reads as a record.",
+      "mode": "agent",
+      "modeBasis": "Collecting records and tying each figure to a page is document work an agent can do.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-on-prior-results"
+      ],
+      "consumes": [
+        "settlement-statement",
+        "payoff-letter",
+        "appraisal"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "write-the-method",
+      "title": "Write the method before computing anything",
+      "instruction": "Write down, before any result is computed, the one method every deal will use. State the level measured (the deal's equity as a whole, or the investors' share), which cash flows count, the date each is placed on, and how a deal still held is ended for measurement. Define each measure shown: internal rate of return, equity multiple (total cash returned over total equity contributed) and any other. Define gross (before the sponsor's fees, expense reimbursements and promote) and net (after them), and say which measure is which. Where records allow only one of the two for a deal, say so for that deal, and follow counsel's rules on gross figures shown without net. A principal approves the method; it is printed in the deck beside the results and does not change from deal to deal.",
+      "mode": "agent",
+      "modeBasis": "Writing definitions is drafting work; a principal approves the method before results are computed.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "gather-source-documents"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "compute-results",
+      "title": "Compute every deal's results the same way",
+      "instruction": "For each deal, enter the dated cash flows from the source table and compute results by the written method. The npv-irr calculator gives the internal rate of return from yearly flows: the equity at year 0, cash to equity in later years and net sale proceeds in the final year, each placed at its year's end. Run it once on cash before the sponsor's pay and once after, where records allow; the required return it asks for does not change the IRR, and the deck does not show the NPV. Where the method calls for exact dates, compute in the sponsor's own workbook and say so in the notes. Compute the equity multiple from the same flows. To check recorded distributions against the deal's agreement, run its terms through waterfall-promote; a reconstructed split is labeled as reconstructed. Keep each deal's inputs.",
+      "mode": "agent",
+      "modeBasis": "The calculators and the workbook run from the source table and the written method.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "write-the-method"
+      ],
+      "calculators": [
+        "npv-irr",
+        "waterfall-promote"
+      ],
+      "consumes": [
+        "settlement-statement",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "split-realized-unrealized",
+      "title": "Show realized and unrealized deals apart",
+      "instruction": "Put deals that have been sold and fully distributed in one table and deals still held in another. For each held deal, state the value used to end the measurement, its basis (an appraisal, a broker opinion, a written offer, the sponsor's own model or cost) and its date, and show the figure that comes from that value as unrealized. Never add realized and unrealized results into one figure without showing each part beside it. Projected returns for a deal still held are not results: keep them off the track-record pages or, only where counsel's rules allow, put them on a separate page marked as projections with the model version and date they came from. Show prior-firm deals apart from the sponsor's own, as counsel's rules require.",
+      "mode": "agent",
+      "modeBasis": "Arranging the computed results by status and labeling each value's basis is drafting from the source table.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "compute-results"
+      ],
+      "consumes": [
+        "appraisal",
+        "underwriting-model"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "include-every-loss",
+      "title": "Include the losses and the deals behind plan",
+      "instruction": "Compare the deck's deal list with the inventory, deal by deal, and account for every difference. Deals that lost money, were foreclosed or handed back, needed more capital, suspended distributions, or are behind their original plan appear in the same tables as the rest, in the same format, not in a footnote. A deal is left out only for a reason counsel recorded, and the notes state the rule used to choose the deals shown, such as all deals sponsored since a stated date. Count the deals in the inventory, the deals shown and the deals left out, and write the three counts in the notes. Rule 10b-5 reaches omissions of material facts needed to keep what is said from misleading.",
+      "mode": "agent",
+      "modeBasis": "Reconciling the deck's list with the inventory is checking work; what is material is counsel's call in the review step.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "split-realized-unrealized"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5",
+        "us-tx.securities.offer-sale-liability"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5"
+      ]
+    },
+    {
+      "id": "write-the-notes",
+      "title": "Write the notes a reader needs",
+      "instruction": "Write the notes beside the tables: the method and each measure's definition; which figures are gross and which net, and of what; the date every figure is measured as of; which figures are unaudited; which values are unrealized and their basis; which pages are projections; the role each principal held on each deal and whose deal it was; the attribution counsel set for prior-firm deals; the rule used to choose the deals shown and the three counts; and each gap and how it was handled. State the leverage and the sponsor's pay on each deal where the records show them. Do not describe any result as good, strong, typical or above any benchmark, and do not compare the results with a market level.",
+      "mode": "agent",
+      "modeBasis": "The notes are drafted from the method, the source table and counsel's rules.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "include-every-loss"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "certify-each-figure",
+      "title": "Have a principal certify each figure against its source",
+      "instruction": "A principal who did not compute the figures checks every number, date, role and label in the deck against the source table and the documents behind it, and re-runs a sample of deals from their inputs. Each principal also confirms in writing the role the deck gives them on every deal they appear in. Differences go back to the compute step and the deck is rebuilt, not patched by hand. The principal then signs a certification sheet listing the deck's version number, each deal and figure checked, and each gap left open. If the sponsor has only one principal, a person the sponsor engages who took no part in the computation re-performs the check, and the principal still signs. A deck with an unsigned figure does not go to counsel.",
+      "mode": "human-online",
+      "modeBasis": "Standing behind each figure is the principal's own act; an agent prepares the source table and the sheet.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "write-the-notes"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "counsel-reviews-deck",
+      "title": "Have counsel review the deck against the offering",
+      "instruction": "Send counsel the certified deck, the certification sheet and the source table. While no offering is chosen, counsel says whether the deck may be shown at all, where and to whom. Once an offering exists, counsel reviews the deck against its documents and the exemption recorded in choose-structure-and-exemption, and checks that it matches the track record in the memorandum. In a Regulation D offering, unless it relies on Rule 506(c) or Rule 504(b)(1), the issuer and anyone acting for it may not offer or sell by general solicitation or general advertising, so counsel decides whether the deck may sit on a website or go to people without a prior relationship. For a joint venture, counsel says whether the interest is a security. Counsel decides what is material; changes go back through compute and certification.",
+      "mode": "human-online",
+      "modeBasis": "Review against the offering and the exemption is counsel's licensed work; an agent assembles the package and carries changes back.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "certify-each-figure"
+      ],
+      "rules": [
+        "us-fed.reg-d.general-solicitation",
+        "us-fed.reg-d.rule-506c",
+        "us-fed.exchange-act.rule-10b-5",
+        "us-tx.securities.offer-sale-liability",
+        "us-fed.securities.jv-interests"
+      ],
+      "consumes": [
+        "private-placement-memorandum",
+        "offering-term-sheet",
+        "jv-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-502",
+        "ecfr-240-10b-5"
+      ]
+    },
+    {
+      "id": "approve-and-log-release",
+      "title": "Approve each release and log the version sent",
+      "instruction": "Lock the cleared deck as a numbered, dated version, kept with its certification sheet, counsel's sign-off and the workbook. Each time it is to go to an investor or capital partner, a principal approves that release: the version, the recipient and the channel counsel allowed. Where an offering is open, the principal checks the recipient's entry in the investor register, including how the recipient was introduced, against the channel counsel allowed. Record in a release log the version, the date, the recipient, who approved and how it was sent. Only the current cleared version goes out; earlier versions are marked superseded and kept, not deleted. In a joint venture, the deck goes to the capital partner as part of the information package counsel cleared.",
+      "mode": "human-online",
+      "modeBasis": "Releasing a performance statement to an investor or partner is a person's decision; an agent keeps the version store and the log.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-reviews-deck"
+      ],
+      "consumes": [
+        "investor-register"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "update-on-events",
+      "title": "Update the deck when a deal closes, sells or is re-marked",
+      "instruction": "Keep a list of events that change the deck: a deal bought, sold, refinanced, foreclosed or re-valued, a new valuation or investor report, a change in a principal's role, and an offering opened, which sends the deck back to counsel for review against that offering. When one happens, add the new cash flows and documents to the source table, re-run the affected deals by the same written method, update the as-of dates, and send the new version back through certification, counsel's review and approval. A deal that turned worse is updated as promptly as one that turned better. If an offering is open, tell counsel at once, because the memorandum's track record may need a supplement, and give counsel the release log so counsel can decide whether earlier recipients receive the new version.",
+      "mode": "agent",
+      "modeBasis": "Watching for events and rebuilding from the records is file work; the new version goes out only after certification, counsel's review and a principal's approval.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "approve-and-log-release"
+      ],
+      "calculators": [
+        "npv-irr"
+      ],
+      "consumes": [
+        "settlement-statement",
+        "appraisal",
+        "private-placement-memorandum"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    }
+  ],
+  "outlineSteps": []
+}

@@ -1,0 +1,176 @@
+{
+  "vendor": "trepp",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "11d27a8fa768a2e38888f1e68b37c6de5d2a909a09dd4a27ec6132010826bf17",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c7"
+      ],
+      "rationale": "The coverage check found no public API reference (the TreppData Feed page offers only demo and brochure requests and trepp.com/api returns 404), and no item has Trepp claiming an API.",
+      "missing": "No public API documentation, endpoint reference or developer portal is shown, and no item says an API exists."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "partial",
+      "quality": 8,
+      "evidence": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "p1"
+      ],
+      "rationale": "Trepp's homepage and MCP page say agents connect to a TreppMCP server exposing named tools (get_entity, get_comparables, search_properties_loans), and the probe confirms the page loads, but the page offers only demo requests and no setup steps.",
+      "missing": "No setup steps, server endpoint, authentication or availability terms are shown, and the probe confirmed only that the marketing page loads, not the server itself."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item mentions an SDK, CLI, package or code repository, and the coverage check found no public documentation or developer site.",
+      "missing": "No SDK, CLI, code samples or public registry or repository listing is shown."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "na",
+      "quality": 6,
+      "evidence": [
+        "c3",
+        "c4",
+        "c5",
+        "c7",
+        "c8"
+      ],
+      "rationale": "The pack presents Trepp as a published CRE data source (a database of securitized properties with sales, lease and tax assessment data, a daily data feed, and MCP tools that only look data up), with no records that change on a customer's behalf.",
+      "missing": "The pack does not state outright that customers keep no records of their own in Trepp (such as portfolios or watchlists), and it shows no webhook or event documentation either way."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c2",
+        "c7"
+      ],
+      "rationale": "No item shows API keys, tokens or OAuth clients, let alone scopes, and access to the MCP server and data feed is shown only through demo requests.",
+      "missing": "No credential type, scopes, roles or permissions are shown for the MCP server, the data feed or any API."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item shows an OpenAPI, Swagger, GraphQL or other machine-readable spec, and the coverage check found no public API reference or documentation.",
+      "missing": "No downloadable or in-docs API specification, and no published tool schema for the MCP server, is shown."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item shows an llms.txt file or Markdown documentation, and the coverage check found no public documentation or help center (the support, help and developer subdomains do not resolve).",
+      "missing": "No llms.txt file, Markdown pages or public documentation of any kind is shown."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "na",
+      "quality": 6,
+      "evidence": [
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c7",
+        "c8"
+      ],
+      "rationale": "The only programmatic access the pack shows is the MCP server's lookup tools (address resolution, comparables, property and loan screening) and a daily data feed, all of which read published CRE data, so there is nothing to protect by testing first.",
+      "missing": "The pack names only three of the MCP server's suite of tools and shows no API documentation, so it cannot confirm that every interface is read-only, and it shows no sandbox either way."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "partial",
+      "quality": 4,
+      "evidence": [
+        "c7"
+      ],
+      "rationale": "Trepp's Data Feed delivers its data to customers as a single daily feed, but the pack shows it only as a marketing page reached by demo request, with no documentation, file format or self-serve download.",
+      "missing": "No file formats (CSV, JSON, Excel), feed documentation, in-app export or self-serve download are shown."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c2",
+        "c7",
+        "c9",
+        "c10"
+      ],
+      "rationale": "The free-trial page is a contact form where the team follows up, the MCP server and data feed are offered only by demo request, and the CRE Direct Subscribe link is not shown to be a self-serve sign-up.",
+      "missing": "No self-serve sign-up, instant trial or online checkout is shown for any Trepp product, and where the CRE Direct Subscribe link leads is not shown."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c2",
+        "c9"
+      ],
+      "rationale": "The coverage check found no pricing page (trepp.com/pricing returns 404), the trial page is a contact form, and the MCP page shows no pricing.",
+      "missing": "No plan prices, fees or starting prices are shown for any Trepp product, including the CRE Direct subscription."
+    },
+    {
+      "story": "md-property-lookup",
+      "verdict": "partial",
+      "quality": 5,
+      "evidence": [
+        "c3",
+        "c5",
+        "c8"
+      ],
+      "rationale": "The MCP page describes get_entity resolving property addresses into TreppRealIDs and a tool screening properties by type and financial metrics over Trepp's securitized-property database, but no item shows size, year built or use returned for an address.",
+      "missing": "No tool or service is shown returning size, year built or use for an address or parcel, there is no parcel lookup, and the MCP server has no public setup or output schema."
+    },
+    {
+      "story": "md-comps",
+      "verdict": "partial",
+      "quality": 6,
+      "evidence": [
+        "c4",
+        "c8",
+        "c10"
+      ],
+      "rationale": "The MCP page's get_comparables tool returns pre-identified comparables for a property with summary financial data, TreppCRE holds sales transaction and lease data, and CRE Direct offers a property sales database by subscription, but no filters by place, type, size or date are shown.",
+      "missing": "The pack does not show whether get_comparables returns sale or lease transactions, any filters for place, type, size or date, a structured output schema, or setup for the MCP server."
+    },
+    {
+      "story": "md-owner",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c8"
+      ],
+      "rationale": "No item mentions the owner of record or a mailing address, and TreppCRE's mention of tax assessment data does not say owner fields are included.",
+      "missing": "No owner name, mailing address or owner lookup is shown in any tool, feed or database description."
+    },
+    {
+      "story": "md-bulk-area",
+      "verdict": "partial",
+      "quality": 3,
+      "evidence": [
+        "c7"
+      ],
+      "rationale": "Trepp's Data Feed delivers its data as a daily feed available only through a separate demo request, and no item shows a county, shape or radius query or any area filter.",
+      "missing": "The pack does not show any area query, a geographic filter in search_properties_loans, the feed's contents or format, or how one area's records would be pulled in bulk."
+    }
+  ]
+}

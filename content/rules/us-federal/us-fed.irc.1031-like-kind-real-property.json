@@ -1,0 +1,43 @@
+{
+  "id": "us-fed.irc.1031-like-kind-real-property",
+  "jurisdiction": "us-federal",
+  "title": "Like-kind exchange: what property qualifies",
+  "rule": "For exchanges completed after 2017, no gain or loss is recognized when real property held for productive use in a trade or business or for investment is exchanged solely for like-kind real property to be held for either use. Real property held primarily for sale does not qualify. Like kind looks to the nature of the property, not its grade or quality: improved and unimproved real estate are like kind; United States and foreign real property are not. Real property means land and improvements, and interests such as fee ownership, leaseholds, options and easements, but not notes, securities, most partnership interests or stock other than cooperative housing stock.",
+  "citation": {
+    "authority": "26 USC 1031(a)(1), (a)(2) and (h); 26 CFR 1.1031(a)-1(b) and 1.1031(a)-3(a)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/1031"
+  },
+  "asOf": "2026-11-13",
+  "lastVerified": "2026-11-13",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Section 1031(a) or to 26 CFR 1.1031(a)-1 and 1.1031(a)-3 (the real property definition applies to exchanges beginning after December 2, 2020).",
+  "sources": [
+    {
+      "id": "lii-26-usc-1031",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1031",
+      "title": "26 U.S. Code 1031, Exchange of real property held for productive use or investment",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-13",
+      "quote": "This subsection shall not apply to any exchange of real property held primarily for sale.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-1-1031-a-1",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.1031(a)-1",
+      "title": "26 CFR 1.1031(a)-1, Property held for productive use in trade or business or for investment",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "The fact that any real estate involved is improved or unimproved is not material",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-1-1031-a-3",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.1031(a)-3",
+      "title": "26 CFR 1.1031(a)-3, Definition of real property",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "means land and improvements to land, unsevered natural products of land, and water and air space superjacent to land",
+      "tier": "primary"
+    }
+  ]
+}

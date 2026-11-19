@@ -1,0 +1,446 @@
+{
+  "id": "pull-sale-and-lease-comps",
+  "slug": "pull-sale-and-lease-comps",
+  "kind": "process",
+  "title": "Pull sale and lease comps",
+  "summary": "Build the comp set that tests the price and the rent: define the subject and the search area, gather sales and leases from brokers, public records and the sponsor's data services, confirm each one, and adjust or bracket. Conclude ranges for price per square foot, cap rate and market rent, and hand them to underwriting.",
+  "phase": "acquire",
+  "order": 215,
+  "featured": false,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-13",
+  "requires": [
+    "screen-deal-buy-box"
+  ],
+  "consumes": [
+    "deal-screen",
+    "offering-memorandum",
+    "rent-roll",
+    "site-visit-report",
+    "loan-term-sheet"
+  ],
+  "produces": [
+    "comp-set"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "tx-prop-11",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.11.htm",
+      "title": "Texas Property Code, Chapter 11 (Section 11.001, Place of recording)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "must be recorded in the county in which a part of the property is located",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-13",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.13.htm",
+      "title": "Texas Property Code, Chapter 13 (Section 13.002, Effect of recorded instrument)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "An instrument that is properly recorded in the proper county is: (1) notice to all persons of the existence of the instrument",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-25",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.25.htm",
+      "title": "Texas Tax Code, Chapter 25 (Section 25.02, Form and content of appraisal records)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "the appraised value of improvements to land",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-1",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.1.htm",
+      "title": "Texas Tax Code, Chapter 1 (Section 1.04, Definitions)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "the price at which a property would transfer for cash or its equivalent under prevailing market conditions",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-23",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.23.htm",
+      "title": "Texas Tax Code, Chapter 23 (Section 23.01, Appraisals generally)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "all taxable property is appraised at its market value as of January 1",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-22",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.22.htm",
+      "title": "Texas Tax Code, Chapter 22 (Section 22.27, Confidential information)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "information voluntarily disclosed to an appraisal office or the comptroller about real or personal property sales prices after a promise it will be held confidential",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-occ-code-1103",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1103.htm",
+      "title": "Texas Occupations Code, Chapter 1103 (Sections 1103.003, 1103.004 and 1103.201)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "A person may not perform an appraisal of real estate unless the person is licensed or certified as an appraiser under this chapter",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "define-the-subject",
+      "title": "Write the subject profile",
+      "instruction": "Write the profile the comps will be measured against: property type and product, building area and whether it is rentable or gross, site area, year built and renovations, construction and condition, location and access, and the features buyers and tenants pay for. Add the income side: tenancy, remaining lease term, tenant credit, in-place rent and its expense basis, and the net operating income from the deal screen. Say which interest is being priced: the leased fee, valued on the in-place leases, or space that will be leased at market. Take each fact from the offering memorandum, the rent roll or a site visit report, and record which.",
+      "mode": "agent",
+      "modeBasis": "The profile is assembled from documents already in the deal file; nothing needs a login or a visit.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "consumes": [
+        "deal-screen",
+        "offering-memorandum",
+        "rent-roll",
+        "site-visit-report"
+      ],
+      "produces": [
+        "comp-set"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "industrial": "Record clear height, dock-high and grade-level doors, truck court depth, office share of the building, power, sprinklers, yard and the land-to-building ratio.",
+        "multifamily": "Record the unit mix by bedroom count and unit size, amenities, which utilities are billed back, and the year and scope of any unit renovations.",
+        "office": "Record the building class, floor plate, parking ratio, and whether leases are full service, base year or expense stop.",
+        "retail": "Record anchors and shadow anchors, visibility and frontage, parking, and which tenants report sales."
+      }
+    },
+    {
+      "id": "set-search-criteria",
+      "title": "Set the search area, dates and size range",
+      "instruction": "Write the search criteria before searching, so the set is not chosen to fit the asking price. Set the area where the subject's buyers and tenants actually compare options; a district next door can be a different market. A building leased long term to one strong-credit tenant trades mostly on the lease, so its sales can come from a wider area than a building leased to local tenants. Set the date window by the market's direction: a stable market tolerates older sales, but after a turn, sales from before it mislead, so flag them. Set a size range around the subject and the product types that count. Record the criteria in the comp set.",
+      "mode": "agent",
+      "modeBasis": "Setting criteria from the subject profile and the deal screen is written analysis; a person can change them before the search runs.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "define-the-subject"
+      ],
+      "consumes": [
+        "deal-screen"
+      ],
+      "produces": [
+        "comp-set"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "industrial": "Search warehouse, manufacturing, flex, cold storage and outdoor storage or yard sites separately; they price differently even at the same size."
+      }
+    },
+    {
+      "id": "request-broker-comps",
+      "title": "Collect the brokers' comps",
+      "instruction": "Log the comps the offering memorandum shows, then draft requests to the listing broker and to brokers active in the submarket for recent closed sales and signed leases that meet the criteria, with price or rent, date, size, terms and who confirmed each figure. A person approves each request before it goes out. Share nothing from the offering beyond what its confidentiality agreement allows. Log every comp with its source, marked unconfirmed. Treat the listing broker's comps as a starting list: they were picked to support the asking price, so search past them.",
+      "mode": "agent",
+      "modeBasis": "Drafting and logging requests is agent work; each request speaks for the sponsor, so a person approves it.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-search-criteria"
+      ],
+      "consumes": [
+        "offering-memorandum"
+      ],
+      "produces": [
+        "comp-set"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "search-data-services",
+      "title": "Search the sponsor's comp data services",
+      "instruction": "Sign in to the comp databases the sponsor subscribes to and run the written criteria for sales and for leases. Export the results in a form the subscription allows, with each record's source and any confirmation notes, and save the file to the deal folder for the agent to clean. Read the subscription's terms on sharing before any of its data goes into material that leaves the firm. A database record is a reported comp until a party to the deal or a public record confirms it.",
+      "mode": "human-online",
+      "modeBasis": "Subscription data sits behind the sponsor's login and license; where the license includes an API, an agent can run the same query.",
+      "actor": "principal",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-search-criteria"
+      ],
+      "market": "market-property-data",
+      "produces": [
+        "comp-set"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "check-deed-records",
+      "title": "Check each sale against the county deed records",
+      "instruction": "For each sale comp, find the deed in the county clerk's records for the county where the land sits. In Texas an instrument about real property is recorded in that county, and a properly recorded instrument is notice to everyone and open to public inspection (Property Code 11.001 and 13.002). Record the grantor, grantee, date, recording number and legal description, and check them against the reported sale. Look for signs the sale was not at arm's length: the same people on both sides, an affiliate's name, a deed in lieu of foreclosure, or a trustee's or sheriff's deed. Note any deed of trust recorded with it and the lender named. If the deed does not state the price, a party to the sale must confirm it.",
+      "mode": "agent-browser",
+      "modeBasis": "County clerk records are public and searchable online; an agent reads them under a standing approval for public-record lookups.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "request-broker-comps",
+        "search-data-services"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.property.conveyance-recording"
+      ],
+      "produces": [
+        "comp-set"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-11",
+        "tx-prop-13"
+      ]
+    },
+    {
+      "id": "read-appraisal-records",
+      "title": "Read the appraisal district records",
+      "instruction": "Pull the appraisal district record for the subject and each comp. Texas appraisal records carry the owner's name and address, the appraised value of the land and of the improvements, the tax year and each taxing unit (Tax Code 25.02); district websites usually add building area, year built and land area, which fill gaps in the comps' descriptions. Use the district's value as a cross-check, not as a comp: it is an estimate of market value as of January 1, and may come from mass appraisal (Tax Code 1.04(7) and 23.01). Do not expect income figures there: income and expense information owners give the district, and sale prices disclosed under a promise of confidentiality, are not open to public inspection (Tax Code 22.27).",
+      "mode": "agent-browser",
+      "modeBasis": "Appraisal district records are public websites an agent can search by address or account under a standing approval.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "request-broker-comps",
+        "search-data-services"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.tax.market-value"
+      ],
+      "market": "market-property-data",
+      "produces": [
+        "comp-set"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-25",
+        "tx-tax-code-1",
+        "tx-tax-code-23",
+        "tx-tax-code-22"
+      ]
+    },
+    {
+      "id": "confirm-each-comp",
+      "title": "Confirm each comp with a party to the deal",
+      "instruction": "Call a party to each transaction: the buyer, the seller, or a broker on either side. Confirm the price or rent, the date, the area and how it was measured, and for a sale the net operating income at sale and whether it was in place or projected. For a lease confirm the term, starting rent and steps, expense basis, free rent, improvement allowance, and whether it was new or a renewal. Ask what made the deal unusual: a leaseback, a related party, a portfolio price, an exchange buyer up against a deadline, a distressed seller, or vacancy. Record who confirmed each figure; a comp no party confirms stays marked unconfirmed.",
+      "mode": "human-offline",
+      "modeBasis": "Confirmation is a phone conversation with a party to the deal; an agent prepares the call sheet and records the answers.",
+      "actor": "principal",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-deed-records",
+        "read-appraisal-records"
+      ],
+      "produces": [
+        "comp-set"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "multifamily": "Databases lag apartment pricing: survey competing properties by phone or visit for current rent, concessions and occupancy by unit type, and check what managers say against their published pricing."
+      }
+    },
+    {
+      "id": "screen-the-set",
+      "title": "Keep, flag or drop each comp",
+      "instruction": "Sort the comps into those that measure market value and those that do not. Keep closed sales and signed leases. Move listings and asking rents to a separate table: they show where owners are pricing, not where deals close. Drop or flag sales that were not at arm's length, forced or distressed sales, portfolio allocations, and sale-leasebacks whose price rests on a rent the seller set. Mark owner-user sales: they support price per square foot but carry no cap rate. Keep rents set by related parties, build-to-suits or seller master leases apart from market leases. Record why each comp was kept, flagged or dropped.",
+      "mode": "agent",
+      "modeBasis": "Sorting comps against written tests is document work on the confirmed records.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-each-comp"
+      ],
+      "produces": [
+        "comp-set"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "industrial": "Owner-user sales are common among smaller industrial buildings and can price differently from investment sales of similar buildings; keep them in their own column."
+      }
+    },
+    {
+      "id": "adjust-sale-comps",
+      "title": "Adjust or bracket the sales",
+      "instruction": "Put every sale on the same area basis and compute its price per square foot. Adjust each comp toward the subject for the differences that matter: conditions of sale, market conditions since the sale date, location, size, age and condition, quality and features. A comp better than the subject is adjusted down and a worse one up; write the reason and the percentage for each adjustment. Where the data cannot support a percentage, bracket instead: rank the comps as better or worse than the subject and place it between them. Show the simple mean, the median and the size-weighted mean, name the one the conclusion rests on, and say whether one outlier moves it.",
+      "mode": "agent",
+      "modeBasis": "The arithmetic and the written adjustments are spreadsheet work; each percentage is an assumption a person reviews.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "screen-the-set"
+      ],
+      "calculators": [
+        "income-value"
+      ],
+      "produces": [
+        "comp-set"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "extract-cap-rates",
+      "title": "Extract cap rates from the sales",
+      "instruction": "For each confirmed investment sale, divide the net operating income at sale by the price. Record whether the income was in place or projected and whether it allowed for vacancy and reserves; rates on mixed bases do not compare. Run the cap-rate calculator for the range, mean and median, and flag rates from stale sales, other markets, very different buildings or unconfirmed income. Cross-check with the calculator's band of investment and lender's coverage methods at currently quoted loan terms; if those sit above the extracted range, the sales may predate a change in the market. Use a gross income multiplier only among comps with the same lease structure, since it ignores expenses.",
+      "mode": "agent",
+      "modeBasis": "The cap-rate and income-value calculators run from the confirmed comps and a recorded loan quote.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "screen-the-set"
+      ],
+      "calculators": [
+        "cap-rate",
+        "income-value"
+      ],
+      "consumes": [
+        "loan-term-sheet"
+      ],
+      "produces": [
+        "comp-set"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "normalize-lease-comps",
+      "title": "Put the leases on one basis",
+      "instruction": "Put each lease comp on the subject's expense basis before comparing: add the expense load to a net rent or take it out of a gross rent, using the subject's expenses per square foot, and show the conversion. Run the lease-rent calculator on each comp's term, steps, free rent, improvement allowance and commissions to get its net effective rent, the figure that compares; use the expense-recovery calculator where a lease has a base year or an expense stop. Keep new leases, renewals and asking rents in separate columns. Adjust or bracket for size, term, tenant credit, improvements and date, as with the sales.",
+      "mode": "agent",
+      "modeBasis": "Both calculators run from the confirmed lease terms; the expense conversion is recorded arithmetic.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "screen-the-set"
+      ],
+      "calculators": [
+        "lease-rent",
+        "expense-recovery"
+      ],
+      "consumes": [
+        "rent-roll"
+      ],
+      "produces": [
+        "comp-set"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "industrial": "Rents move with office share and clear height; adjust for the office build-out, or compare the warehouse and office portions separately.",
+        "multifamily": "Compare rent by unit type, per unit and per square foot, net of concessions and with the same utilities included.",
+        "office": "Allowances and free rent are often large next to face rent; compare net effective rents and record each lease's base year or expense stop.",
+        "retail": "Keep anchor and shop-space leases apart, and record percentage rent and each tenant's share of common area costs."
+      }
+    },
+    {
+      "id": "conclude-the-ranges",
+      "title": "Conclude price, cap rate and rent ranges",
+      "instruction": "Conclude a range for price per square foot, cap rate and market rent. For each end of each range, name the comps that support it and why the subject sits where it does. Apply the cap rate range to the subject's net operating income with the income-value calculator and compare the result with the sales comparison range; if sale prices run well above what the income supports, say so, since that can mean prices have moved ahead of rents. Compare the subject's in-place rents with the concluded market rent lease by lease, and the asking price and the offering memorandum's rent assumptions with the ranges. Record how many comps are confirmed and where the evidence is thin.",
+      "mode": "agent",
+      "modeBasis": "The ranges follow from the confirmed comps and written adjustments; a principal accepts or changes them when approving the underwriting.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "adjust-sale-comps",
+        "extract-cap-rates",
+        "normalize-lease-comps"
+      ],
+      "calculators": [
+        "income-value",
+        "cap-rate"
+      ],
+      "consumes": [
+        "rent-roll",
+        "offering-memorandum"
+      ],
+      "produces": [
+        "comp-set"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "label-and-hand-off",
+      "title": "Label the comp set and hand it to underwriting",
+      "instruction": "Finish the comp set: subject, criteria, each comp with its source and confirmation status, the adjustments, and the concluded ranges. Hand it to underwriting for market rent at each rollover, the exit cap rate and the price test, and to whoever writes the investment committee memo. Label it the sponsor's comparable analysis, not an appraisal. Texas defines an appraisal as an opinion of value and requires a state license or certification to perform one, with exceptions that include a licensed broker's written price analysis, given in the ordinary course of business and not called an appraisal (Occupations Code 1103.003, 1103.004 and 1103.201). Where comps will appear in material investors see, the underwriting playbook's step on tying the offering to the model applies.",
+      "mode": "agent",
+      "modeBasis": "Assembling and labeling the file is document work; underwriting and the memo pick it up from the deal folder.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "conclude-the-ranges"
+      ],
+      "produces": [
+        "comp-set"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-occ-code-1103"
+      ]
+    }
+  ],
+  "outlineSteps": []
+}

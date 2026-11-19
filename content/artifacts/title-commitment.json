@@ -1,0 +1,79 @@
+{
+  "id": "title-commitment",
+  "name": "Title commitment",
+  "what": "The title insurer's offer to issue a policy, listing what it will insure, what must happen first and what it will not cover.",
+  "fields": [
+    {
+      "key": "effectiveDate",
+      "label": "Effective date",
+      "type": "date",
+      "definition": "The date through which the public records were searched.",
+      "authority": "TDI Form T-7, Schedule A"
+    },
+    {
+      "key": "expiresOn",
+      "label": "Commitment ends",
+      "type": "date",
+      "definition": "The date the commitment lapses unless the policy issues first; on the Texas form, 90 days after the effective date.",
+      "authority": "TDI Form T-7, commitment jacket"
+    },
+    {
+      "key": "proposedInsured",
+      "label": "Proposed insured",
+      "type": "string",
+      "definition": "Who the policy will cover.",
+      "authority": "TDI Form T-7, Schedule A, item 1"
+    },
+    {
+      "key": "policyAmount",
+      "label": "Policy amount",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The amount of coverage proposed.",
+      "authority": "TDI Form T-7, Schedule A, item 1"
+    },
+    {
+      "key": "interestInsured",
+      "label": "Interest covered",
+      "type": "string",
+      "definition": "The estate in the land the commitment covers, such as fee simple or a leasehold.",
+      "authority": "TDI Form T-7, Schedule A, item 2"
+    },
+    {
+      "key": "vestedIn",
+      "label": "Title vested in",
+      "type": "string",
+      "definition": "The current owner of record.",
+      "authority": "TDI Form T-7, Schedule A, item 3"
+    },
+    {
+      "key": "legalDescription",
+      "label": "Legal description",
+      "type": "text",
+      "definition": "The land the commitment covers.",
+      "authority": "TDI Form T-7, Schedule A, item 4"
+    },
+    {
+      "key": "exceptions",
+      "label": "Exceptions",
+      "type": "list",
+      "definition": "Matters the policy will not cover, such as recorded easements, restrictions, the area-and-boundary exception and current taxes.",
+      "authority": "TDI Form T-7, Schedule B"
+    },
+    {
+      "key": "requirements",
+      "label": "Requirements",
+      "type": "list",
+      "definition": "What must be done or delivered before the policy issues, such as releases, payoffs and evidence that recent work is paid; anything not cleared becomes an exception.",
+      "authority": "TDI Form T-7, Schedule C"
+    },
+    {
+      "key": "estimatedPremium",
+      "label": "Estimated premium",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The estimated premium for the policy and endorsements; in Texas, set by the promulgated rate chart.",
+      "authority": "TDI Form T-7, Schedule D; Tex. Ins. Code 2703.151"
+    }
+  ]
+}

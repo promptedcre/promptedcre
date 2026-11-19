@@ -1,0 +1,25 @@
+{
+  "id": "us-tx.boc.certificate-of-amendment",
+  "jurisdiction": "us-tx",
+  "title": "Amending a Texas certificate of formation, including a name change",
+  "rule": "A Texas filing entity that amends its certificate of formation, including to change its name, signs and files a certificate of amendment or a restated certificate with the Secretary of State. The certificate of amendment states the entity's name and type, identifies each provision added, changed or deleted, gives the text of any new or changed provision, and states that the amendment was approved as the code and the entity's governing documents require. The amendment takes effect when the filing does. A suit brought by or against the entity under its former name does not end because the name changed.",
+  "citation": {
+    "authority": "Tex. Bus. Orgs. Code 3.051, 3.052, 3.053 and 3.056",
+    "url": "https://statutes.capitol.texas.gov/Docs/BO/htm/BO.3.htm"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Business Organizations Code chapter 3, subchapter B, or to the Secretary of State's certificate of amendment form and fee.",
+  "sources": [
+    {
+      "id": "tx-boc-3",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.3.htm",
+      "title": "Texas Business Organizations Code, Chapter 3 (Sections 3.051 to 3.056, amendments to the certificate of formation)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "an action brought by or against the entity in the former name of the entity does not abate because of the name change",
+      "tier": "primary"
+    }
+  ]
+}

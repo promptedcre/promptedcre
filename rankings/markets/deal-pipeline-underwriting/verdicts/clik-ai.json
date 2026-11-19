@@ -1,0 +1,151 @@
+{
+  "vendor": "clik-ai",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "79642472852996fc85bcc69abe2565b8ebf5d886f51a69f0d4285ddd1b230022",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "partial",
+      "quality": 7,
+      "evidence": [
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "rationale": "The vendor says it offers API access for programmatic integration, document upload and pushing outputs (c2, c3, c4), but the coverage check found no public API reference, with /docs and /api returning 404.",
+      "missing": "No public API documentation is shown, so the pack does not show which core records the API reads or changes, or how access is obtained."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Nothing in the pack mentions an MCP server.",
+      "missing": "No evidence of an official MCP server, its setup steps or what it covers."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no SDK, CLI or public code repository, and the only client tool it mentions is an Excel add-in, which is neither.",
+      "missing": "No vendor-maintained SDK or CLI on a public package registry or repository, and no code samples."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack documents no webhooks or event subscriptions, and its claims of Salesforce sync, real-time Excel sync and pushing outputs to data lakes do not describe events an agent can subscribe to.",
+      "missing": "No webhook or event-subscription documentation for deals, documents or outputs."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows only a login page at gateway.clik.ai and no API keys, OAuth clients, scopes or roles.",
+      "missing": "No evidence of how API credentials are issued or whether they can be limited by scope, role or permission."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No OpenAPI, Swagger, GraphQL or other machine-readable specification appears in the pack, and the coverage check found no API reference at all.",
+      "missing": "No machine-readable API specification, public or behind a login."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "partial",
+      "quality": 6,
+      "evidence": [
+        "p1"
+      ],
+      "rationale": "The probe found an llms.txt at clik.ai (GET 200, 8,068 bytes, headed '# Clik.ai'), but the coverage check found no documentation site, so the file can cover only the marketing site.",
+      "missing": "The pack shows only the file's first line, not which pages it lists, and there are no documentation pages or Markdown versions of them for it to cover."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack mentions no sandbox, test mode or developer environment.",
+      "missing": "No evidence of a self-serve or on-request sandbox or test environment."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "partial",
+      "quality": 5,
+      "evidence": [
+        "c4",
+        "c2"
+      ],
+      "rationale": "The vendor says all outputs can be pushed to data lakes and existing systems via its API and Excel add-in, with direct data lake connectivity (c4, c2), but no export is documented.",
+      "missing": "The pack does not document a self-serve export, name a file format, or show whether deal records and uploaded documents can be exported along with outputs."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c6"
+      ],
+      "rationale": "The AutoUW page offers only Schedule a Demo alongside an Enterprise plan (c6), and the only other entry point in the pack is the gateway.clik.ai login page, with no sign-up or free trial.",
+      "missing": "No self-serve sign-up, free trial or self-serve tier is shown."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c6"
+      ],
+      "rationale": "The /pricing page returns 404 and the AutoUW page names plans, including an Enterprise plan, with no prices and only Schedule a Demo (c6).",
+      "missing": "No prices, starting price or calculator for any plan, including the one a small sponsor would buy."
+    },
+    {
+      "story": "dp-deal-record",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack mentions self-created deals on the Enterprise plan and a Salesforce sync, but nothing on creating deals or changing their stage through an API.",
+      "missing": "No API documentation for creating deals or updating their stage or status, and the Salesforce sync claim does not say which records or fields it carries."
+    },
+    {
+      "story": "dp-load-financials",
+      "verdict": "partial",
+      "quality": 6,
+      "evidence": [
+        "c1",
+        "c3",
+        "c10"
+      ],
+      "rationale": "The vendor says T12s, rent rolls and operating statements are spread into financial models and can be uploaded by drag-and-drop, API or bulk upload (c1, c3, c10), but with no documented upload endpoint only the app path is shown.",
+      "missing": "No documentation of an API upload endpoint, the file types it accepts, or the structured data it returns."
+    },
+    {
+      "story": "dp-model-outputs",
+      "verdict": "partial",
+      "quality": 4,
+      "evidence": [
+        "c4",
+        "c5"
+      ],
+      "rationale": "The vendor says all outputs can be pushed to data lakes and existing systems via its API and a real-time Excel add-in (c4, c5), but no endpoint or export is documented.",
+      "missing": "The pack does not document API endpoints or an export, or show that the outputs it says can be pushed include cash flows, returns or valuation results, or in what structure."
+    },
+    {
+      "story": "dp-documents",
+      "verdict": "partial",
+      "quality": 4,
+      "evidence": [
+        "c3"
+      ],
+      "rationale": "The vendor says documents can be uploaded via API (c3), but the API is undocumented and nothing shows documents attached to a deal or listed and downloaded back.",
+      "missing": "No API documentation for uploading documents to a deal, and no evidence of listing or downloading them."
+    }
+  ]
+}

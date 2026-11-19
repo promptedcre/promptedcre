@@ -1,0 +1,25 @@
+{
+  "id": "us-tx.property.commercial-landlord-lien",
+  "jurisdiction": "us-tx",
+  "title": "Texas building landlord's lien on a nonresidential tenant's property",
+  "rule": "A Texas landlord leasing all or part of a building for nonresidential use has a preference lien on the tenant's or subtenant's property in the building for rent due and rent to become due during the current 12-month period from the start of the rental agreement or its anniversary. The lien cannot be enforced for rent more than six months past due unless the landlord files a verified lien statement with the county clerk, itemizing the rent by month and naming the tenant, premises and lease dates. The lien lasts while the tenant occupies the building and one month after it abandons. Property exempt from forced sale stays exempt.",
+  "citation": {
+    "authority": "Tex. Prop. Code 54.021 to 54.025",
+    "url": "https://statutes.capitol.texas.gov/Docs/PR/htm/PR.54.htm"
+  },
+  "asOf": "2026-11-13",
+  "lastVerified": "2026-11-13",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Property Code chapter 54, subchapter B (54.021 last amended 1985, 54.025 in 1993), and to the distress warrant procedure. The Legislature's text, which carries 2025 amendments elsewhere in the Property Code (chapter 24), lists no later amendment to these sections; watch bills in the regular session that starts in 2027.",
+  "sources": [
+    {
+      "id": "tx-prop-code-54",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.54.htm",
+      "title": "Texas Property Code, Chapter 54 (Landlord's liens), Subchapter B (Building landlord's lien)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "The lien is unenforceable for rent on a commercial building that is more than six months past due unless the landlord files a lien statement",
+      "tier": "primary"
+    }
+  ]
+}

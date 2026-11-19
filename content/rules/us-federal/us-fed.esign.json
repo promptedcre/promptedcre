@@ -1,0 +1,33 @@
+{
+  "id": "us-fed.esign",
+  "jurisdiction": "us-federal",
+  "title": "Electronic signatures and records in commerce (E-SIGN Act)",
+  "rule": "In a transaction affecting interstate commerce, a signature, contract or record may not be denied legal effect solely because it is electronic, and a contract is not unenforceable solely because electronic signatures or records formed it. No one must agree to use or accept them. Where a law requires written information for a consumer, an electronic record counts only with the consumer's affirmative consent and required disclosures. A state that enacts the Uniform Electronic Transactions Act may displace these rules.",
+  "citation": {
+    "authority": "15 U.S.C. 7001(a) to (c) and 7002(a)",
+    "url": "https://www.law.cornell.edu/uscode/text/15/7001"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-12",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to the Electronic Signatures in Global and National Commerce Act.",
+  "sources": [
+    {
+      "id": "usc-15-7001",
+      "url": "https://www.law.cornell.edu/uscode/text/15/7001",
+      "title": "15 U.S.C. 7001, General rule of validity",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "quote": "may not be denied legal effect, validity, or enforceability solely because it is in electronic form",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-7002",
+      "url": "https://www.law.cornell.edu/uscode/text/15/7002",
+      "title": "15 U.S.C. 7002, Exemption to preemption",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    }
+  ]
+}

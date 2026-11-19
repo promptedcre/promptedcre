@@ -1,0 +1,24 @@
+{
+  "id": "us-tx.securities.rule-506-compensation",
+  "jurisdiction": "us-tx",
+  "title": "Texas pays solicitors only if they are registered",
+  "rule": "In a Rule 506 offering, no commission, fee or other pay may go to anyone who solicits Texas investors unless that person is registered in Texas as a securities dealer or agent. The State Securities Board also treats anyone other than the issuer's owners, directors, officers and employees who offers or sells its securities as subject to Texas dealer registration.",
+  "citation": {
+    "authority": "Texas State Securities Board, Exemptions from Registration (Rules 109.13(k) and 114.4(b)(1))",
+    "url": "https://www.ssb.texas.gov/securities-professionals/regulation-securities/exemptions-registration"
+  },
+  "asOf": "2026-11-11",
+  "lastVerified": "2026-11-11",
+  "review": "ai-drafted",
+  "changeWatch": "Texas dealer and agent registration rules.",
+  "sources": [
+    {
+      "id": "ssb-exemptions",
+      "url": "https://www.ssb.texas.gov/securities-professionals/regulation-securities/exemptions-registration",
+      "title": "Exemptions from Registration",
+      "publisher": "Texas State Securities Board",
+      "accessed": "2026-11-11",
+      "tier": "primary"
+    }
+  ]
+}

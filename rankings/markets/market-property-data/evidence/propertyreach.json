@@ -1,0 +1,155 @@
+{
+  "vendor": "propertyreach",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://docs.propertyreach.com",
+      "found": true,
+      "note": "Public API docs site with quickstart, glossary, endpoint pages and an llms.txt. The help center (help.propertyreach.com) refused automated requests."
+    },
+    "api": {
+      "url": "https://www.propertyreach.com/property-api/",
+      "found": true,
+      "note": "Public Property API page with endpoints and pricing; /api path was bot-walled."
+    },
+    "pricing": {
+      "url": "https://www.propertyreach.com/pricing/",
+      "found": true,
+      "note": "Public app plan prices; API pricing on the Property API page."
+    },
+    "changelog": {
+      "url": "https://docs.propertyreach.com",
+      "found": false,
+      "note": "No changelog or release notes page found on the docs site or in its llms.txt."
+    }
+  },
+  "links": {
+    "docs": "https://docs.propertyreach.com",
+    "api": "https://www.propertyreach.com/property-api/"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://docs.propertyreach.com/llms.txt",
+      "excerpt": "plus a REST API that exposes the same data for your own apps and agents.",
+      "fetched": "2026-11-12",
+      "note": "llms.txt for the docs site.",
+      "hash": "e1e2146a728873f890faf1f2c4b0ae9480825d29ce463bb82716e7cef2df195a"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://www.propertyreach.com/property-api/",
+      "excerpt": "one RESTful real estate API with JSON responses and daily updates. Developer Access starts at $30/month with 100 free monthly credits.",
+      "fetched": "2026-11-12",
+      "hash": "ac3db1ed288060bb009a38a8c1c7e1d2bd0c9fb9c420a23d8d556ad7639f77bc"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://www.propertyreach.com/property-api/",
+      "excerpt": "After selecting a data plan simply create your API key with the click of a button.",
+      "fetched": "2026-11-12",
+      "hash": "82241fdf4edd7d7a4d6787f7342e54893f39784ef2ab76f2061d8b7f0b81bd8c"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://docs.propertyreach.com",
+      "excerpt": "To create a PropertyReach API account, visit https://offer.propertyreach.com/api-checkout and complete the signup process.",
+      "fetched": "2026-11-12",
+      "note": "Self-serve API signup; one key per account, no scopes described.",
+      "hash": "d6e46eda7f2a5c0177e7ea06109686b92185c6881489b2317be9a3144752934e"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://www.propertyreach.com/property-api/",
+      "excerpt": "$0.05 Per Credit",
+      "fetched": "2026-11-12",
+      "note": "1,000-credit block; larger blocks $0.045, $0.04, $0.035 per credit. $30/month access fee required.",
+      "hash": "a501c1b0366fa7174ed3ca11f64b9757906c7b1b671d4ffe048758218e3ac697"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://www.propertyreach.com/property-api/",
+      "excerpt": "Credit usage varies by endpoint. See PropertyReach API Docs for details.",
+      "fetched": "2026-11-12",
+      "hash": "533cf3180053aa7f1fc6f912dcd344faa29f0e1edee27a036369b27aa436fa91"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://docs.propertyreach.com/operations/Search%20Properties",
+      "excerpt": "Each successful request to this endpoint will deduct 1 API credit from your balance.",
+      "fetched": "2026-11-12",
+      "note": "Search Properties endpoint filters by city, county, fips and more.",
+      "hash": "fa950bc79e538cfa9826b6d48999599827be9ce2be3644ea8e79e4fcc990f9f4"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://docs.propertyreach.com/llms.txt",
+      "excerpt": "Offers data on comparable properties (comps) to a subject property, assisting in market analysis and property valuation",
+      "fetched": "2026-11-12",
+      "note": "Comparables endpoint description.",
+      "hash": "e430b9fb5e033f6a13e748a855e9e0e8ebbb365962a6eb8929de772d214e2c4f"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://docs.propertyreach.com/llms.txt",
+      "excerpt": "Retrieves properties that belong to the same owner.",
+      "fetched": "2026-11-12",
+      "note": "Linked Properties endpoint.",
+      "hash": "9584fb70f1d6926bd076efd8a99f33ead4cffa01a0edbfee631911f4406790ff"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://www.propertyreach.com/",
+      "excerpt": "Search 158M+ properties, get verified owner phones and emails, and see the real decision-maker behind LLC and trust-owned homes.",
+      "fetched": "2026-11-12",
+      "hash": "ed121c3acae909bea236043a031f5428c514d3802942ec57e4f282e0ee04f3aa"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://www.propertyreach.com/",
+      "excerpt": "5 Days for $5 | then from $39/month | cancel anytime",
+      "fetched": "2026-11-12",
+      "note": "App trial; the pricing page lists plans from $19.95/month billed annually.",
+      "hash": "bb91012b4e1283e4a44c8362afcf3f3b72f99440ff3fa24f0b0eb1358b9fa3a8"
+    },
+    {
+      "id": "c12",
+      "tier": "vendor-claim",
+      "url": "https://www.propertyreach.com/",
+      "excerpt": "When you save a property lead, you gain access to the most current owner contact details, including emails, phone numbers, and tax mailing addresses.",
+      "fetched": "2026-11-12",
+      "hash": "7c15d52547dd4f8532d647b1c4cd80f79bbc4d0a7b2ec6a9a66ef4fa62078d5e"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://www.propertyreach.com/llms.txt",
+      "excerpt": "# PropertyReach",
+      "note": "llms.txt: GET 200, 2800 bytes",
+      "fetched": "2026-11-12",
+      "hash": "5d5485fd92b1ad4095ce1fe9ecc6eb227bfa0b7f7b2c34e507a557aebb409084"
+    },
+    {
+      "id": "p2",
+      "tier": "probe",
+      "url": "https://docs.propertyreach.com/llms.txt",
+      "excerpt": "# PropertyReach",
+      "note": "llms.txt: GET 200, 2423 bytes",
+      "fetched": "2026-11-12",
+      "hash": "42607943b9a5fa46079caa60f703b0ca0e1281b641daed3daefed4725c4e6ef2"
+    }
+  ]
+}

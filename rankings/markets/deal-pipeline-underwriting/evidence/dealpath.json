@@ -1,0 +1,159 @@
+{
+  "vendor": "dealpath",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://www.dealpath.com/faq/",
+      "found": false,
+      "note": "No public documentation or help center found; FAQ is marketing-level. The API reference is hosted on Stoplight and did not render as readable text."
+    },
+    "api": {
+      "url": "https://www.dealpath.com/integrations-and-partners/",
+      "found": true,
+      "note": "Open API described on the integrations page and Enterprise plan; reference at dealpath.stoplight.io could not be read by the page-text tool."
+    },
+    "pricing": {
+      "url": "https://www.dealpath.com/plans/",
+      "found": false,
+      "note": "Plans page lists Professional and Enterprise with Request Demo buttons and no prices."
+    },
+    "changelog": {
+      "url": "https://www.dealpath.com/blog/",
+      "found": false,
+      "note": "No release notes or changelog page; product news appears only in blog posts."
+    }
+  },
+  "links": {
+    "mcp": "https://www.dealpath.com/ai/mcp/"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://www.dealpath.com/ai/mcp/",
+      "excerpt": "Dealpath MCP connects your AI to your firm’s deal pipeline, investment history, and decision logic, so you can screen opportunities",
+      "fetched": "2026-11-12",
+      "hash": "8079f44098b70aa4caf8127dbcf0d9454f4978e918c09cfc1c1cb56fe6e998c8"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://www.dealpath.com/ai/mcp/",
+      "excerpt": "Dealpath MCP is read-only by default. With write access enabled, you can create new deals or update existing ones from your AI tool.",
+      "fetched": "2026-11-12",
+      "hash": "bf7c2eb07aa76a29c8954520522445b69b5719f413c4a6166fc9be4accec84c7"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://www.dealpath.com/ai/mcp/",
+      "excerpt": "Dealpath MCP is included at no additional cost for Dealpath clients on the Enterprise plan.",
+      "fetched": "2026-11-12",
+      "hash": "b395a39ee27d05a6ddc7adc7fcb078c1d527475e167ef9ca88f1fdaae7135678"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://www.dealpath.com/ai/mcp/",
+      "excerpt": "Your AI sees only what each user can already see in Dealpath.",
+      "fetched": "2026-11-12",
+      "hash": "7d9b57b5a0d61ca3ed298fa52e3de9740715df171b3dd9c7dcc08cb0d75011f0"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://www.dealpath.com/plans/",
+      "excerpt": "Open API to centralize your CRE tech ecosystem",
+      "fetched": "2026-11-12",
+      "note": "Listed under the Enterprise plan, 'Everything in the Professional Plan +'.",
+      "hash": "82ee18efeb755c8720263f36b777d7ecf679227e3fb80cef8bd4179ff97f422e"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://www.dealpath.com/plans/",
+      "excerpt": "Sandbox environments",
+      "fetched": "2026-11-12",
+      "note": "Listed under the Enterprise plan for technologists.",
+      "hash": "ccae63b816e3d2765258d225e31124e56a5972afa1013f04b04523585e90c668"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://www.dealpath.com/plans/",
+      "excerpt": "Please contact us to learn more about pricing based on your needs.",
+      "fetched": "2026-11-12",
+      "note": "Plans page shows no prices; both plans have a Request Demo button.",
+      "hash": "6d60dee9140aaf0eaeab76e7eb4005893212ab78f552a7b4c107e186e6819c56"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://www.dealpath.com/faq/",
+      "excerpt": "Bulk Import: Mass-upload deals via an Excel import to map data directly to your Dealpath data model",
+      "fetched": "2026-11-12",
+      "hash": "8e685d68b9b9f2ef500ebe844525e084d67d508e1445cf42f7e022632fe69841"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://www.dealpath.com/faq/",
+      "excerpt": "Dealpath can be configured to seamlessly ingest newly uploaded Excel underwriting models to instantly capture real-time data.",
+      "fetched": "2026-11-12",
+      "hash": "a7d413f5224a98341baa86481b8082691da812480d3f114c0eb1a3d507488ba2"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://www.dealpath.com/blog/dealpath-api",
+      "excerpt": "The Dealpath API provides access and connectivity with other systems to pipeline data, deal analytics, and property information",
+      "fetched": "2026-11-12",
+      "hash": "5785d2e351b5ac6ef012836e42c3c100c9003c097ee7be070cc8797b4e05e539"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://www.dealpath.com/integrations-and-partners/",
+      "excerpt": "Seamlessly import data such as financial models and export data from Dealpath for clear consumption.",
+      "fetched": "2026-11-12",
+      "hash": "64a99c9755798cc8d798ddc93c4ca4f8b613908f0053f4c51532737cf0c76ee6"
+    },
+    {
+      "id": "c12",
+      "tier": "vendor-claim",
+      "url": "https://www.dealpath.com/integrations-and-partners/",
+      "excerpt": "Dealpath was built on top of the Box platform allowing for easy uploading and viewing of deal files directly in Dealpath.",
+      "fetched": "2026-11-12",
+      "hash": "5b690745282a8067a03ef520fdd3604bd80d05a04a11bf84a48bdab72bd9ed99"
+    },
+    {
+      "id": "c13",
+      "tier": "vendor-claim",
+      "url": "https://www.dealpath.com/llms.txt",
+      "excerpt": "Generated by Yoast SEO v28.1, this is an llms.txt file, meant for consumption by LLMs.",
+      "fetched": "2026-11-12",
+      "note": "Auto-generated list of site pages and blog posts; no documentation pages.",
+      "hash": "9960bb6ab76a833cb7aca0e5aefd1851a614d23ee392521fcdc57708dab7bd45"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://www.dealpath.com/llms.txt",
+      "excerpt": "# Dealpath: Real Estate’s most trusted deal management platform",
+      "note": "llms.txt: GET 200, 9128 bytes",
+      "fetched": "2026-11-12",
+      "hash": "afca49545c0b36676f8f27614050435480b652d328c4b958218431d8d84b6eea"
+    },
+    {
+      "id": "p2",
+      "tier": "probe",
+      "url": "https://www.dealpath.com/ai/mcp/",
+      "excerpt": "Dealpath MCP | Connect Your AI to Your Deal Record",
+      "note": "MCP page resolves: GET 200 (page title)",
+      "fetched": "2026-11-12",
+      "hash": "381893476a0598367cfa8200e685a8cdeecc90d9ab268ae37164b9f1a61b99f7"
+    }
+  ]
+}

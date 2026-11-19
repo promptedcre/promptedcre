@@ -1,0 +1,159 @@
+{
+  "vendor": "avestor",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "40faccb8e087f686168ac996b37daf8936bb4bf6eba7b2cb67136aa64dc5fc8c",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c5",
+        "c9"
+      ],
+      "rationale": "The pack shows no API: the coverage check found no developer, API or documentation page, the Scalable Plan technology list has no API item (c5), and support runs through tickets, phone, text and Zoom rather than public docs (c9).",
+      "missing": "Any public API documentation, or even a vendor statement that an API exists, for reading or changing investor, fund or transaction records."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item mentions a Model Context Protocol server, and the coverage check found no developer or API page.",
+      "missing": "Any vendor-maintained MCP server, its setup steps or what part of the product it covers."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item mentions a CLI, SDK, code samples or a public package or repository.",
+      "missing": "Any vendor-maintained SDK or CLI on a public package registry or in a public repository, or even code samples."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c6",
+        "c7"
+      ],
+      "rationale": "No item mentions webhooks or event subscriptions, and na does not apply because the product holds investor accounts and ACH transactions that change on customers' behalf (c6, c7).",
+      "missing": "Any documented webhooks or event subscriptions, direct or through an automation platform, for investor, transaction or document records."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c5"
+      ],
+      "rationale": "No item shows API keys, tokens or OAuth clients; the only related item is 'Role Management' in the portal feature list (c5), which says nothing about credentials an agent could hold or their scopes.",
+      "missing": "Any API keys, tokens or OAuth clients, and any documented scopes, roles or permissions that limit what such a credential can do."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item shows an OpenAPI, Swagger, GraphQL or other API specification, and the coverage check found no API or documentation page.",
+      "missing": "Any machine-readable API specification, public or behind a login."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "partial",
+      "quality": 6,
+      "evidence": [
+        "p1"
+      ],
+      "rationale": "The probe found a 28,598-byte llms.txt on avestorinc.com (p1), but the coverage check found no public documentation or help center, so the file can cover only the vendor's site pages, not documentation.",
+      "missing": "The llms.txt contents beyond its '# Avestor' heading, so which pages it covers is inferred rather than shown; no documentation pages, in Markdown or any other form, are shown."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c6",
+        "c7"
+      ],
+      "rationale": "No item mentions a sandbox, test mode or developer environment, and na does not apply because no read-only API over published data is shown and the product handles live investor accounts and ACH transfers (c6, c7).",
+      "missing": "Any sandbox, test mode or developer environment, self-serve or on request."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c5",
+        "c8"
+      ],
+      "rationale": "No item mentions exporting records: transactions, balances and investment history are described as in-portal views (c8), and 'Manager Reports' in the feature list (c5) comes with no export, download or file format.",
+      "missing": "Any bulk export or download of investor, transaction or fund records in CSV, JSON, Excel or another open format, documented or even mentioned."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c1",
+        "c3"
+      ],
+      "rationale": "No item shows a sign-up page or free trial; the pricing page lists plans with an $8,500 fund setup and training fee (c1) and a 'Contact us' Pro plan (c3) but says nothing about starting without the vendor.",
+      "missing": "Any self-serve sign-up or free trial for any plan, and whether a demo or sales call is required to start."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "partial",
+      "quality": 8,
+      "evidence": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "rationale": "The public pricing page gives only starting prices for the plans a small sponsor would buy, 'Starts at $400/month' for the 4-SPV Syndication/SPV Base Plan (c2) and bundles that 'start at $600 / month' plus an $8,500 setup and training fee for the Scalable Plan (c1), with Pro on 'Contact us' and Enterprise 'Custom' (c3).",
+      "missing": "What a sponsor actually pays above the starting prices, for example beyond 4 SPVs or for a customized fund bundle, and the Pro and Enterprise prices."
+    },
+    {
+      "story": "ip-create-investor",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c6"
+      ],
+      "rationale": "c6 describes investors opening accounts and e-signing documents through a guided process in the portal, but the pack shows no API for creating investors or sending subscription documents.",
+      "missing": "API documentation, or a third-party integration, for creating investor records or sending or starting subscription documents."
+    },
+    {
+      "story": "ip-distribution",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item mentions distributions or investor notices, and the pack shows no API at all.",
+      "missing": "Any API for creating or reading distributions, and any way to generate or send investor notices through it."
+    },
+    {
+      "story": "ip-register",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c7",
+        "c8"
+      ],
+      "rationale": "Capital, transactions, balances and investment history are described as tracked and viewed within the portal (c7, c8), with no API endpoint or export returning the register as structured data.",
+      "missing": "Any API endpoint or export, manual or automated, that returns investors, commitments and contributions as JSON or CSV."
+    },
+    {
+      "story": "ip-capital-call",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c7"
+      ],
+      "rationale": "c7 says capital moves by ACH and is tracked in real time within the system, but the pack shows no API for creating capital calls or reading each investor's funding status.",
+      "missing": "API documentation for creating capital calls and for reading per-investor funding status."
+    }
+  ]
+}

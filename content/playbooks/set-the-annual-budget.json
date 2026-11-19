@@ -1,0 +1,36 @@
+{
+  "id": "set-the-annual-budget",
+  "slug": "set-the-annual-budget",
+  "kind": "process",
+  "title": "Set the annual budget",
+  "summary": "Build next year's operating and capital budget for each property and get it approved.",
+  "phase": "report",
+  "order": 420,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Pull the prior years' operating statements and confirm they foot",
+    "Remove depreciation, interest and one-time items",
+    "Ask the manager what was one-time and what was deferred",
+    "Project rent from the rent roll with its steps and expirations",
+    "Forecast vacancy, downtime and leasing costs for expiring leases",
+    "Set each expense line by average, trend or a current quote",
+    "Re-estimate property taxes at the current value",
+    "Set the management fee and the reimbursement budget",
+    "Set capital spending and reserves from the component schedule",
+    "Test the budget against comparable properties and the loan's coverage",
+    "Get the budget approved",
+    "Send the approved budget to the manager and, where required, the lender"
+  ]
+}

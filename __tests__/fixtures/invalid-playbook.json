@@ -1,0 +1,30 @@
+{
+  "id": "broken-example",
+  "slug": "broken-example",
+  "kind": "process",
+  "title": "A deliberately broken record",
+  "summary": "Used by the tests to prove that validation failures read clearly.",
+  "phase": "raise",
+  "order": 99,
+  "depth": "full",
+  "review": "reviewed-by-someone",
+  "lastVerified": "11/11/2026",
+  "written": { "structure": ["syndication"], "jurisdiction": ["us-federal"] },
+  "sources": [],
+  "steps": [
+    {
+      "id": "first-step",
+      "title": "Do the thing",
+      "instruction": "This instruction is long enough to pass the minimum length rule.",
+      "mode": "robot",
+      "modeBasis": "Because the test says so.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "basis": "cited",
+      "colour": "teal"
+    }
+  ]
+}

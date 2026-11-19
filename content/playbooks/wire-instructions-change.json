@@ -1,0 +1,309 @@
+{
+  "id": "wire-instructions-change",
+  "slug": "wire-instructions-change",
+  "kind": "situation",
+  "title": "Wire instructions change before closing",
+  "summary": "Stop the wire and confirm the instructions through a channel you already trust before any money moves.",
+  "phase": "acquire",
+  "order": 101,
+  "featured": true,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-12",
+  "situation": {
+    "trigger": "Someone sends new or changed wire instructions shortly before money is due to move.",
+    "urgency": "hours"
+  },
+  "requires": [],
+  "consumes": [
+    "wire-instructions"
+  ],
+  "produces": [
+    "wire-instructions"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "ic3-bec",
+      "url": "https://www.ic3.gov/CrimeInfo/BEC",
+      "title": "Business Email Compromise (BEC)",
+      "publisher": "FBI Internet Crime Complaint Center (IC3)",
+      "accessed": "2026-11-12",
+      "quote": "Use secondary channels or two-factor authentication to verify requests for changes in account information with the intended recipient.",
+      "tier": "primary"
+    },
+    {
+      "id": "ic3-psa-2024",
+      "url": "https://www.ic3.gov/PSA/2024/PSA240911",
+      "title": "Business Email Compromise: The $55 Billion Scam (public service announcement)",
+      "publisher": "FBI Internet Crime Complaint Center (IC3)",
+      "accessed": "2026-11-12",
+      "quote": "If you discover a fraudulent transfer, time is of the essence.",
+      "tier": "primary"
+    },
+    {
+      "id": "ic3-psa-2023",
+      "url": "https://www.ic3.gov/PSA/2023/psa230609",
+      "title": "Business Email Compromise: The $50 Billion Scam (public service announcement, real estate section)",
+      "publisher": "FBI Internet Crime Complaint Center (IC3)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "ic3-psa-2018",
+      "url": "https://www.ic3.gov/PSA/2018/PSA180712",
+      "title": "Business E-mail Compromise: The 12 Billion Dollar Scam (public service announcement, real estate section)",
+      "publisher": "FBI Internet Crime Complaint Center (IC3)",
+      "accessed": "2026-11-12",
+      "quote": "The best defense is to verify all requests for a change in payment type and/or location.",
+      "tier": "primary"
+    },
+    {
+      "id": "ic3-2023-report",
+      "url": "https://www.ic3.gov/AnnualReport/Reports/2023_IC3Report.pdf",
+      "title": "2023 Internet Crime Report (business email compromise section)",
+      "publisher": "FBI Internet Crime Complaint Center (IC3)",
+      "accessed": "2026-11-12",
+      "quote": "direct phone calls but to a known verified number and not relying on information or phone numbers included in the email communication",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bc-4a",
+      "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.4A.htm",
+      "title": "Texas Business and Commerce Code, Chapter 4A (Sections 4A.207 and 4A.211, funds transfers)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "After a payment order has been accepted, cancellation or amendment of the order is not effective unless the receiving bank agrees",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-p27",
+      "url": "https://www.tdi.texas.gov/title/titlem4d.html",
+      "title": "Basic Manual of Title Insurance, Procedural Rule P-27, Disbursement From Escrow or Trust Fund Accounts",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-12",
+      "quote": "Good funds in an amount equal to all disbursements must be received and deposited before any disbursement may be made.",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "hold-the-payment",
+      "title": "Hold every payment tied to the change",
+      "instruction": "Treat changed instructions as suspect until verified; the IC3 calls verifying every change in payment type or location the best defense. Tell everyone who can release money, in the firm and at the title company, the investors or the lender, that nothing goes to the new instructions until the change is confirmed, and ask the bank to hold any wire already queued. Fraudsters who get into a party's email in a real estate deal watch it and time the change, often a switch from check to wire or to a different account.",
+      "mode": "human-online",
+      "modeBasis": "Stopping a payment means instructing the people and the bank that control the money.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "basis": "cited",
+      "sources": [
+        "ic3-psa-2018",
+        "ic3-psa-2023"
+      ]
+    },
+    {
+      "id": "call-bank-if-sent",
+      "title": "If money already went out, call the bank at once",
+      "instruction": "If any money already went to the new instructions, time matters most. Call the sending bank's wire or fraud department now, ask it to recall the wire, and ask for any hold harmless or indemnity letter it needs; banks' policies differ, so ask what help it will give. Under Texas funds-transfer law, once the receiving bank accepts a payment order, cancelling it needs that bank's agreement, and a beneficiary's bank may pay by account number even when the name does not match.",
+      "mode": "human-offline",
+      "modeBasis": "Only an account holder the bank can identify can ask it to recall a wire, and the request is made by phone.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "basis": "cited",
+      "sources": [
+        "ic3-bec",
+        "ic3-psa-2024",
+        "tx-bc-4a"
+      ]
+    },
+    {
+      "id": "examine-the-message",
+      "title": "Compare the change with what is on file",
+      "instruction": "Without replying or using any link, phone number or attachment in the message, compare it with the verified instructions on file and the earlier thread: the sender's full address and the spelling of its domain, any reply-to address, whether the bank, account name or country changed, and whether the change came only by email. List the differences for the person who will call. Any change is the warning sign; a message that looks right can still be fraud.",
+      "mode": "agent",
+      "modeBasis": "Reading the message, its headers and the file is work an agent with mailbox access can do without contacting anyone.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "hold-the-payment"
+      ],
+      "consumes": [
+        "wire-instructions"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ic3-bec",
+        "ic3-psa-2024",
+        "ic3-2023-report"
+      ]
+    },
+    {
+      "id": "verify-by-phone",
+      "title": "Verify by phone at a number you already had",
+      "instruction": "Call the party that supposedly sent the change at a number obtained before it: the signed contract, the title commitment, the company's published main line or an earlier verified call. Never use a number from the new message. Have the person read the instructions to you, not the other way round. Fraudsters also make phone calls, so a code phrase agreed in advance helps. If the party did not send the change, the instructions on file stand and the message is fraud.",
+      "mode": "human-offline",
+      "modeBasis": "The verification is a phone call to a known number, judged by a person who knows the counterparty.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "examine-the-message"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ic3-2023-report",
+        "ic3-psa-2018"
+      ]
+    },
+    {
+      "id": "record-the-verification",
+      "title": "Record the verification",
+      "instruction": "Record in the firm file who called whom, at what number and when, what was confirmed, and the decision. Keep confirmed account details only in the document that holds them, never in the firm file, chat or task notes. If the change was genuine, replace the old instructions wherever they are stored and tell the people who release money.",
+      "mode": "agent",
+      "modeBasis": "Writing up the call and updating where instructions are kept is record keeping.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "verify-by-phone"
+      ],
+      "produces": [
+        "wire-instructions"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "warn-the-parties",
+      "title": "If it was fraud, warn the other parties",
+      "instruction": "Business email compromise targets every party to a real estate deal, so a fake change usually means someone's email is compromised or imitated. Warn the title company, the lender, the brokers, counsel and, if investors could get the same message, every investor, so no one else pays the wrong account. Send the warning through known channels, not by replying to the fraudulent thread, and ask whoever's mailbox may be compromised to have it checked.",
+      "mode": "agent",
+      "modeBasis": "Drafting and sending warnings through known channels is message work; a person approves each one before it goes.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "verify-by-phone"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ic3-psa-2023"
+      ]
+    },
+    {
+      "id": "assemble-incident-file",
+      "title": "Assemble the incident file",
+      "instruction": "Gather what the bank, the IC3 and counsel will ask for: a timeline, the fraudulent messages saved with their full headers, the instructions as received, the wire confirmation and its reference, and a log of every call to the banks. Save copies where the firm keeps sensitive records and note their location in the firm file. The IC3 complaint needs complete banking information; the person who files it enters the account numbers.",
+      "mode": "agent",
+      "modeBasis": "Collecting messages, headers and logs is file work; account numbers stay with the person who files.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "call-bank-if-sent"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ic3-bec"
+      ]
+    },
+    {
+      "id": "report-to-ic3",
+      "title": "Report to the FBI's IC3",
+      "instruction": "Whatever the amount, file a complaint at ic3.gov as soon as possible, filling in every required field, including the banking details of the wire. The IC3 may be able to help banks and law enforcement freeze funds. The IC3's real estate guidance also says to report the transfer to the local FBI field office.",
+      "mode": "human-online",
+      "modeBasis": "The complaint needs the victim's identity and banking details, which an agent must not hold.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "assemble-incident-file"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ic3-bec",
+        "ic3-psa-2024",
+        "ic3-psa-2018"
+      ]
+    },
+    {
+      "id": "resend-and-confirm",
+      "title": "Send only to verified instructions and confirm receipt",
+      "instruction": "Once the instructions are verified, send the payment to them and nowhere else, then confirm receipt by phone with the recipient at the known number. In Texas a title company may not disburse until good funds covering every disbursement are received and deposited, and a wire counts once its bank reports it received, so a delay here can move the closing. If it will, ask the other side in writing for time before the deadline passes.",
+      "mode": "human-online",
+      "modeBasis": "Sending a wire takes a bank sign-in and an authorized approver.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-the-verification"
+      ],
+      "consumes": [
+        "wire-instructions"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tdi-p27",
+        "ic3-2023-report"
+      ]
+    },
+    {
+      "id": "bring-in-counsel",
+      "title": "Bring in counsel on recovery and deadlines",
+      "instruction": "If money was lost, counsel works with the bank and law enforcement on recovery, reads the account agreement and the purchase contract for who bears the loss and how the delay affects the closing deadlines, and handles any notice the contract, the loan or the governing agreement requires. Keep investors informed as the governing agreement requires.",
+      "mode": "human-online",
+      "modeBasis": "Allocating the loss and protecting the contract deadlines are legal judgments.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "report-to-ic3"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    }
+  ],
+  "outlineSteps": []
+}

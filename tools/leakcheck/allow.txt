@@ -1,0 +1,26 @@
+# Public names the leak check must never block: agencies, standards bodies and
+# software vendors that playbooks and rankings name in the open. One per line.
+# Adding a name here is safe only when it is public and says nothing private.
+Securities and Exchange Commission
+SEC
+EDGAR
+EDGAR Filer Management
+Login.gov
+NASAA
+North American Securities Administrators Association
+Electronic Filing Depository
+EFD
+Texas State Securities Board
+Texas Securities Commissioner
+Texas Secretary of State
+Texas Legislature
+Delaware Division of Corporations
+Internal Revenue Service
+IRS
+FINRA
+Legal Information Institute
+Cornell Law School
+Office of the Federal Register
+Ultrametric
+Prompted CRE
+PromptedCRE

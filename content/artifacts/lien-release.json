@@ -1,0 +1,95 @@
+{
+  "id": "lien-release",
+  "name": "Lien release",
+  "what": "A recorded instrument that releases a lien once it is paid or resolved.",
+  "fields": [
+    {
+      "key": "instrumentType",
+      "label": "Kind of instrument",
+      "type": "enum",
+      "definition": "Release of deed of trust, release of mechanic's lien, bond to discharge a mechanic's lien, IRS certificate of release or certificate of discharge of a federal tax lien, or release of a judgment lien. A tax receipt is evidence of payment, not a recorded release, and is filed with the title requirements instead. Read it from the instrument's title and body."
+    },
+    {
+      "key": "lienReleased",
+      "label": "Lien being released",
+      "type": "string",
+      "definition": "The lien the instrument releases, identified by the recording information of the original lien instrument: county, instrument or volume and page number, and recording date. Match it to the Schedule B or C item in the title commitment."
+    },
+    {
+      "key": "releasingParty",
+      "label": "Releasing party",
+      "type": "string",
+      "definition": "The lienholder or claimant that signs the release, or the IRS for a federal tax lien certificate. Check it is the current holder of the lien, including any assignee of record."
+    },
+    {
+      "key": "owner",
+      "label": "Owner or debtor",
+      "type": "string",
+      "definition": "The property owner or debtor the instrument names."
+    },
+    {
+      "key": "propertyDescription",
+      "label": "Property released",
+      "type": "string",
+      "definition": "The legal description the instrument covers. Compare it with the title commitment's description of the land being bought."
+    },
+    {
+      "key": "scope",
+      "label": "Full or partial",
+      "type": "enum",
+      "definition": "Full release, or partial release of named land or amounts. For a partial release, record exactly what is released and what stays encumbered."
+    },
+    {
+      "key": "releaseRequested",
+      "label": "Release requested",
+      "type": "date",
+      "definition": "For a mechanic's lien whose debt is paid by collected funds, the date a written request for a release was sent. The claimant must furnish a recordable release, to the extent of the amount paid, within 10 days after receiving it.",
+      "authority": "Tex. Prop. Code 53.152"
+    },
+    {
+      "key": "bond",
+      "label": "Bond to discharge",
+      "type": "text",
+      "definition": "For a bonded-around mechanic's lien, the principal, the corporate surety, the bond amount and the liens it refers to, and whether the clerk's notice issued and the bond and notice were recorded; discharge needs all three.",
+      "authority": "Tex. Prop. Code 53.171 and 53.172"
+    },
+    {
+      "key": "federalTaxLienCertificate",
+      "label": "IRS certificate",
+      "type": "text",
+      "definition": "For a federal tax lien, whether the certificate is one of release, issued once the liability is satisfied, legally unenforceable or bonded, or one of discharge of this property from the lien, with its date.",
+      "authority": "26 U.S.C. 6325(a) and (b)"
+    },
+    {
+      "key": "signedDate",
+      "label": "Date signed",
+      "type": "date",
+      "definition": "The date the releasing party signed."
+    },
+    {
+      "key": "acknowledged",
+      "label": "Acknowledged for recording",
+      "type": "boolean",
+      "definition": "Whether the instrument is acknowledged, sworn to with a proper jurat or proved, as Texas requires before an instrument concerning property may be recorded.",
+      "authority": "Tex. Prop. Code 12.001(a)"
+    },
+    {
+      "key": "recording",
+      "label": "Recording information",
+      "type": "string",
+      "definition": "The county, instrument number and recording date of the release itself, from the clerk's stamp or the title company's report. Empty until it is of record."
+    },
+    {
+      "key": "titlePolicyResult",
+      "label": "Removed from the title policy",
+      "type": "boolean",
+      "definition": "Whether the pro forma or issued owner's and loan policies leave the lien out of Schedule B."
+    },
+    {
+      "key": "storageLocation",
+      "label": "Where the release is kept",
+      "type": "string",
+      "definition": "Where the firm keeps the recorded release, filed with the title policy."
+    }
+  ]
+}

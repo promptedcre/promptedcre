@@ -1,0 +1,155 @@
+{
+  "vendor": "dropbox-sign",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "d749f3eb52aec10e2a8761189e5d4421cc4bc644987dd20ff1ceb34c53d30373",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "c1",
+        "c7",
+        "c8",
+        "p1"
+      ],
+      "rationale": "The public developer docs, whose llms.txt index the probe confirmed, describe sending and retrieving signature requests, checking status and downloading completed documents, the overview says every endpoint can be tested, and the changelog names a specific v3 endpoint.",
+      "missing": "The API reference pages are not shown, so operations that change existing signature requests (such as cancel or update) and coverage of other records rest on the docs index and overview rather than the reference itself."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "partial",
+      "quality": 3,
+      "evidence": [
+        "c4"
+      ],
+      "rationale": "The developer llms.txt points AI clients such as Claude Code and Cursor to an MCP server URL on the docs site, but the pack shows no setup steps beyond the URL and its note says the server appears to cover the documentation rather than the product.",
+      "missing": "Whether the server exposes product actions (such as sending or reading signature requests) or only documentation search, any setup steps beyond the URL, and any verification of the server are not shown."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "full",
+      "quality": 5,
+      "evidence": [
+        "c3"
+      ],
+      "rationale": "The developer docs state that Dropbox Sign maintains official libraries for different programming languages.",
+      "missing": "The pack does not name the languages or show the libraries on a public package registry or in a public repository."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "full",
+      "quality": 6,
+      "evidence": [
+        "c5"
+      ],
+      "rationale": "The developer docs index lists a Dropbox Sign Events page on using webhooks to automate an integration with the API.",
+      "missing": "The event types offered and whether they cover changes to signature requests are not shown; only the docs index entry is quoted."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "partial",
+      "quality": 5,
+      "evidence": [
+        "c6"
+      ],
+      "rationale": "The docs show OAuth for calling the API on behalf of users, but nothing in the pack documents scopes, roles or permissions that limit what a credential can do.",
+      "missing": "Whether OAuth apps or API keys can be limited by documented scopes or permissions is not shown, and API key handling is not shown at all."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item in the pack mentions an OpenAPI, Swagger, GraphQL or other machine-readable API specification.",
+      "missing": "No machine-readable API specification, downloadable or behind a login, is shown."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "full",
+      "quality": 10,
+      "evidence": [
+        "p1",
+        "c5",
+        "c7"
+      ],
+      "rationale": "The probe fetched a 29,591-byte llms.txt titled Dropbox Sign Developer Documentation, and its quoted entries cover developer topics such as webhooks and signature requests."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "full",
+      "quality": 9,
+      "evidence": [
+        "c1",
+        "c11",
+        "c2"
+      ],
+      "rationale": "The developer overview documents a test mode in which every endpoint can be tested even from a free account, with a stated test-mode rate limit and production signature requests reserved for paid API plans.",
+      "missing": "How the free account is created is not shown, so self-serve access to test mode is stated by the docs rather than demonstrated."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack has no item about bulk export or bulk download of records in any format.",
+      "missing": "No self-serve bulk export or download, and no open format such as CSV, JSON or Excel, is shown; the per-request API retrieval in c7 belongs to the records story."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "full",
+      "quality": 5,
+      "evidence": [
+        "c1",
+        "c9"
+      ],
+      "rationale": "The docs say the API can be fully tested from a free account and the API pricing page publishes a $75/mo Essentials plan with a signature-volume selector, which indicates access without a sales call.",
+      "missing": "The sign-up or checkout flow is not shown, so the pack does not directly show that the free account or the paid plan can be started without contacting sales, and the pricing page also offers Contact sales."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c9",
+        "c10"
+      ],
+      "rationale": "Public pricing pages show $75/mo for the API Essentials tier at 50 signature requests a month and $15/mo for the non-API Dropbox Sign plan.",
+      "missing": "Prices at higher volumes on the signature-volume selector and billing terms such as monthly versus annual are not shown."
+    },
+    {
+      "story": "fb-start",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c7",
+        "c2",
+        "c6"
+      ],
+      "rationale": "The developer docs describe sending signature requests through the API, including on behalf of users via OAuth, with legally binding production requests on a paid API plan.",
+      "missing": "The endpoint reference for creating a signature request (parameters, signer setup) is not shown; the evidence is the docs index and overview."
+    },
+    {
+      "story": "fb-status",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "c7"
+      ],
+      "rationale": "The developer docs index says the docs cover checking the status of signature requests through the API.",
+      "missing": "The status endpoint and the status values it returns are not shown; only the docs index line is quoted."
+    },
+    {
+      "story": "fb-records",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "c7"
+      ],
+      "rationale": "The developer docs index says the docs cover downloading completed documents through the API.",
+      "missing": "The download endpoint and the file formats returned are not shown; only the docs index line is quoted."
+    }
+  ]
+}

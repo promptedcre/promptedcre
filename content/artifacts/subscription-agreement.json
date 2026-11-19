@@ -1,0 +1,63 @@
+{
+  "id": "subscription-agreement",
+  "name": "Subscription agreement",
+  "what": "The investor's signed commitment to buy an interest in the offering, with the representations the exemption depends on.",
+  "fields": [
+    {
+      "key": "subscriptionAmount",
+      "label": "Amount subscribed",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The amount the subscriber offers to invest or commit, as written on the signature page. Record the amount the sponsor accepted beside it if the two differ."
+    },
+    {
+      "key": "subscriberName",
+      "label": "Subscriber",
+      "type": "string",
+      "definition": "The subscriber's full legal name as written on the signature page. For an entity or trust, also its type, its state of formation, and the person signing for it with that person's title."
+    },
+    {
+      "key": "titleHolding",
+      "label": "How title is held",
+      "type": "enum",
+      "definition": "The form of ownership the subscriber elects, such as individual, joint with right of survivorship, tenants in common, community property, trust, entity, or a retirement account held through a custodian."
+    },
+    {
+      "key": "retirementAccount",
+      "label": "Retirement account holder",
+      "type": "boolean",
+      "definition": "Whether the holder is an individual retirement account or an employee benefit plan, with the custodian's or trustee's name where it signs. Record no account number, taxpayer number or other identifier."
+    },
+    {
+      "key": "acceptanceTerms",
+      "label": "Acceptance",
+      "type": "text",
+      "definition": "How long the sponsor has to accept or reject the subscription in whole or in part, and how acceptance is shown, such as the sponsor's countersignature. Record the event at which the agreement says the subscriber is irrevocably bound."
+    },
+    {
+      "key": "returnOfFunds",
+      "label": "Declined or excess money",
+      "type": "text",
+      "definition": "What happens to money for a subscription that is rejected, or that exceeds the amount accepted: where it is held before acceptance, when it is returned and to whom, and whether interest is paid."
+    },
+    {
+      "key": "representations",
+      "label": "Investor representations",
+      "type": "list",
+      "definition": "Each statement the subscriber makes, such as its accredited category, buying for its own account, understanding that the interests are unregistered and restricted, and receipt of the offering documents. For a Rule 506(c) offering, include the representations the issuer's verification method relies on; under the SEC staff's minimum-investment position, these are accredited status and no third-party financing of the minimum."
+    },
+    {
+      "key": "documentsReceived",
+      "label": "Documents acknowledged",
+      "type": "list",
+      "definition": "Each offering document the subscriber acknowledges receiving, by version and date, as listed in the agreement."
+    },
+    {
+      "key": "electronicConsent",
+      "label": "Consent to electronic dealings",
+      "type": "boolean",
+      "definition": "Whether the subscriber agrees to sign and to receive documents electronically. Record any process the agreement gives for withdrawing that consent or asking for paper. Whether the consumer-consent steps of 15 U.S.C. 7001(c) apply is counsel's call.",
+      "authority": "15 U.S.C. 7001(b)(2)"
+    }
+  ]
+}

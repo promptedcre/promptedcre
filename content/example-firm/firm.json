@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "name": "Example Sponsor LLC",
+  "entity": {
+    "type": "llc",
+    "state": "TX",
+    "status": "formed",
+    "formedOn": "2026-01-15",
+    "fileNumber": null,
+    "management": "member-managed",
+    "taxClassification": "partnership",
+    "registeredAgent": {
+      "name": "Sample Registered Agent Co.",
+      "office": null,
+      "consent": "Affirmed by naming the agent in the filed certificate",
+      "confirmedOn": "2026-01-15"
+    }
+  },
+  "structure": "syndication",
+  "propertyTypes": ["industrial"],
+  "jurisdictions": ["us-federal", "us-tx"],
+  "principals": [
+    { "name": "Alex Example", "role": "Managing member" },
+    { "name": "Sam Sample", "role": "Managing member" }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "us-tx.ueta",
+  "jurisdiction": "us-tx",
+  "title": "Texas Uniform Electronic Transactions Act",
+  "rule": "Texas's Uniform Electronic Transactions Act covers only transactions where each party agreed, as shown by context and conduct, to deal electronically, and a party may refuse later electronic dealings. There, a record or signature is not denied effect solely because it is electronic, and electronic records and signatures satisfy laws requiring writings and signatures. A signature is attributed to a person if it was that person's act, which a security procedure can help show. The Act does not reach wills, codicils, testamentary trusts or most Uniform Commercial Code transactions. The Act displaces federal E-SIGN as E-SIGN permits.",
+  "citation": {
+    "authority": "Tex. Bus. & Com. Code 322.003, 322.005, 322.007, 322.009 and 322.019",
+    "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.322.htm"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Chapter 322 of the Texas Business and Commerce Code.",
+  "sources": [
+    {
+      "id": "tx-bus-com-code-322",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.322.htm",
+      "title": "Texas Business and Commerce Code, Chapter 322 (Uniform Electronic Transactions Act)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "This chapter applies only to transactions between parties each of which has agreed to conduct transactions by electronic means.",
+      "tier": "primary"
+    }
+  ]
+}

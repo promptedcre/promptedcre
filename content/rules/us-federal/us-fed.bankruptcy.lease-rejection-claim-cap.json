@@ -1,0 +1,25 @@
+{
+  "id": "us-fed.bankruptcy.lease-rejection-claim-cap",
+  "jurisdiction": "us-federal",
+  "title": "Tenant bankruptcy: the cap on a landlord's lease termination damages claim",
+  "rule": "If a claim is objected to, a landlord's claim for damages from termination of a real property lease is disallowed to the extent it exceeds (A) the rent reserved by the lease, without acceleration, for the greater of one year or 15 percent of the remaining term, not to exceed three years, following the earlier of the petition date or the date the landlord repossessed or the tenant surrendered the premises, plus (B) unpaid rent due under the lease, without acceleration, on that earlier date. A claim from rejection of an unexpired lease that was not assumed is treated as if it arose before the petition was filed.",
+  "citation": {
+    "authority": "11 U.S.C. 502(b)(6) and (g)(1)",
+    "url": "https://www.law.cornell.edu/uscode/text/11/502"
+  },
+  "asOf": "2026-11-13",
+  "lastVerified": "2026-11-13",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to 11 U.S.C. 502(b)(6) or 502(g); the cap is a statutory formula with no indexed dollar amount.",
+  "sources": [
+    {
+      "id": "usc-11-502-b-6",
+      "url": "https://www.law.cornell.edu/uscode/text/11/502",
+      "title": "11 U.S.C. 502(b)(6), Allowance of claims or interests",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "for the greater of one year, or 15 percent, not to exceed three years, of the remaining term of such lease",
+      "tier": "primary"
+    }
+  ]
+}

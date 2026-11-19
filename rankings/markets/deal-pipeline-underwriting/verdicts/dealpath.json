@@ -1,0 +1,158 @@
+{
+  "vendor": "dealpath",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "adfc165476191e95afa0e766d6ca438c980cf2d795a24b3a3f8d03a74eacdfc3",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "partial",
+      "quality": 6,
+      "evidence": [
+        "c5",
+        "c10"
+      ],
+      "rationale": "Dealpath says it offers an Open API on the Enterprise plan (c5) giving access to pipeline data, deal analytics and property information (c10), but the pack never shows the API reference, which the coverage notes say could not be read.",
+      "missing": "The content of the Stoplight-hosted reference: which core records the API can read or change, and whether the documentation is public rather than behind a login or the Enterprise plan."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "partial",
+      "quality": 7,
+      "evidence": [
+        "p2",
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "rationale": "The vendor's own MCP page resolves (p2) and describes an official Dealpath MCP that connects AI tools to the deal pipeline, is read-only by default with optional deal writes, and is included on the Enterprise plan (c1, c2, c3), but the pack shows no setup steps.",
+      "missing": "Setup steps such as the server address, authentication flow and supported AI clients, and whether the server is generally available rather than in beta or preview."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item mentions an official SDK, CLI, code samples, package registry listing or public repository.",
+      "missing": "Any vendor-maintained SDK or CLI on a public registry or repository, or even code samples."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item mentions webhooks, event subscriptions or change notifications for Dealpath records.",
+      "missing": "Any documented webhook or event subscription for deals or other core records, including events offered through a third-party automation platform."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "partial",
+      "quality": 4,
+      "evidence": [
+        "c4",
+        "c2"
+      ],
+      "rationale": "The MCP page says an AI connection sees only what its user can already see and stays read-only unless write access is enabled (c4, c2), but the pack shows no API keys, OAuth clients or documented scopes.",
+      "missing": "How an agent gets its own credential, whether API keys or OAuth clients exist, and any documented scope or role list; the limits shown are vendor claims about the MCP connection rather than API credential documentation."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item shows an OpenAPI, Swagger, GraphQL or other machine-readable specification, and the coverage notes say the Stoplight-hosted API reference could not be read.",
+      "missing": "Whether a public, downloadable specification file exists for the Dealpath API."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "partial",
+      "quality": 9,
+      "evidence": [
+        "p1",
+        "c13"
+      ],
+      "rationale": "A Yoast-generated llms.txt exists and returns 200 (p1, c13), but it lists only site pages and blog posts and no documentation pages.",
+      "missing": "The pack summarizes the llms.txt entries rather than listing them, and shows no Markdown versions of any documentation pages."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "partial",
+      "quality": 5,
+      "evidence": [
+        "c6",
+        "c7"
+      ],
+      "rationale": "Sandbox environments appear only as a bullet on the Enterprise plan (c6), which is reached through Request Demo buttons and contact-us pricing (c7), so the pack shows sandbox access only through sales.",
+      "missing": "Developer documentation for the sandbox, how a customer gets one, and whether it can be provisioned self-serve."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "partial",
+      "quality": 4,
+      "evidence": [
+        "c11"
+      ],
+      "rationale": "The integrations page says data can be exported from Dealpath (c11), but it gives no export documentation, file formats or record coverage.",
+      "missing": "Documented self-serve bulk export, its file formats such as CSV, JSON or Excel, and which records it covers."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c7"
+      ],
+      "rationale": "Both plans on the plans page offer only Request Demo buttons and a contact-us pricing line (c7), so no self-serve sign-up or trial is shown.",
+      "missing": "Any sign-up page, free trial or paid-plan checkout that works without a sales call."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c7"
+      ],
+      "rationale": "The plans page shows no prices for either plan and asks visitors to contact Dealpath for pricing (c7).",
+      "missing": "Any published plan price, starting price or pricing calculator."
+    },
+    {
+      "story": "dp-deal-record",
+      "verdict": "partial",
+      "quality": 5,
+      "evidence": [
+        "c2",
+        "c10"
+      ],
+      "rationale": "The vendor says its MCP can create new deals or update existing ones once write access is enabled (c2) and that the API exposes pipeline data (c10), but no API documentation shows how to create a deal or change its stage.",
+      "missing": "API documentation for creating deals and updating their stage or status, and whether 'update existing ones' covers the stage field."
+    },
+    {
+      "story": "dp-load-financials",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack never mentions rent rolls or operating statements, and its only ingestion claims cover uploaded Excel underwriting models (c9) and Excel deal imports (c8), neither shown through an API.",
+      "missing": "Any API, upload endpoint or app feature that accepts a rent roll or operating statement and returns structured data."
+    },
+    {
+      "story": "dp-model-outputs",
+      "verdict": "partial",
+      "quality": 3,
+      "evidence": [
+        "c9",
+        "c10"
+      ],
+      "rationale": "Dealpath says it captures data from uploaded Excel underwriting models (c9) and that its API exposes deal analytics (c10), but no item names cash flows, returns or valuation results or shows them returned as structured data.",
+      "missing": "API endpoints or a documented export for cash flows, returns or valuations, and which underwriting outputs are actually available to pull."
+    },
+    {
+      "story": "dp-documents",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The only document claim is that deal files can be uploaded and viewed inside the Dealpath app through Box (c12), and nothing shows API calls to attach, list or download deal documents.",
+      "missing": "API documentation for uploading documents to a deal and listing or downloading them."
+    }
+  ]
+}

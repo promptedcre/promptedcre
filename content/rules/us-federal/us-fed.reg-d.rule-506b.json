@@ -1,0 +1,49 @@
+{
+  "id": "us-fed.reg-d.rule-506b",
+  "jurisdiction": "us-federal",
+  "title": "Rule 506(b): a private offering with no general solicitation",
+  "rule": "Rule 506(b) treats an offering as not public under Section 4(a)(2) if it meets Rules 501 and 502, including the ban on general solicitation. The issuer may sell to any number of accredited investors but to no more than 35 non-accredited purchasers in any 90-calendar-day period, and each non-accredited purchaser, alone or with a purchaser representative, must be able to evaluate the merits and risks. Selling to a non-accredited purchaser also triggers the Rule 502(b) disclosure duty.",
+  "citation": {
+    "authority": "17 CFR 230.506(b), with 230.501(e) and 230.502",
+    "url": "https://www.ecfr.gov/current/title-17/section-230.506"
+  },
+  "asOf": "2026-11-09",
+  "lastVerified": "2026-11-12",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Rules 501, 502 or 506, or new staff interpretations in Securities Act Rules C&DI Sections 256 and 260.",
+  "sources": [
+    {
+      "id": "ecfr-230-506",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.506",
+      "title": "17 CFR 230.506, Exemption for limited offers and sales without regard to dollar amount of offering",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "quote": "35 purchasers of securities from the issuer in offerings under this section in any 90-calendar-day period",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-501",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.501",
+      "title": "17 CFR 230.501, Definitions and terms used in Regulation D",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-502",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.502",
+      "title": "17 CFR 230.502, General conditions to be met",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-506b-page",
+      "url": "https://www.sec.gov/resources-small-businesses/exempt-offerings/private-placements-rule-506b",
+      "title": "Private Placements - Rule 506(b)",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    }
+  ]
+}

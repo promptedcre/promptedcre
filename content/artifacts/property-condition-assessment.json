@@ -1,0 +1,95 @@
+{
+  "id": "property-condition-assessment",
+  "name": "Property condition assessment",
+  "what": "A consultant's report on the physical condition of the buildings and systems, with estimated near-term repair costs.",
+  "fields": [
+    {
+      "key": "consultant",
+      "label": "Consultant",
+      "type": "string",
+      "definition": "The firm that wrote the report and the person who signed it."
+    },
+    {
+      "key": "siteVisitDate",
+      "label": "Site visit date",
+      "type": "date",
+      "definition": "The date the consultant walked the property."
+    },
+    {
+      "key": "reportDate",
+      "label": "Report date",
+      "type": "date",
+      "definition": "The date on the final report."
+    },
+    {
+      "key": "scope",
+      "label": "Scope and exclusions",
+      "type": "text",
+      "definition": "What the report says it covered and left out, such as roof access, interiors of occupied suites, environmental matters, seismic or accessibility review, and any guide or standard it says it followed."
+    },
+    {
+      "key": "relyingParties",
+      "label": "Who may rely",
+      "type": "list",
+      "definition": "The parties named as entitled to rely on the report, and whether a reliance letter is needed to add a lender."
+    },
+    {
+      "key": "areasNotObserved",
+      "label": "Areas not observed",
+      "type": "list",
+      "definition": "Roofs, suites, systems or areas the consultant could not see, and why."
+    },
+    {
+      "key": "systems",
+      "label": "Building systems",
+      "type": "list",
+      "definition": "For the roof, structure, paving, plumbing, electrical, heating and cooling, fire protection and elevators: the type, age, observed condition and the consultant's estimate of remaining useful life."
+    },
+    {
+      "key": "immediateCosts",
+      "label": "Immediate repair costs",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The total of costs the report places in its immediate or present-need category, read from its cost table."
+    },
+    {
+      "key": "nearTermCosts",
+      "label": "Near-term repair costs",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The total of costs the report places in its short-term category, with the number of years that category covers."
+    },
+    {
+      "key": "reserveTable",
+      "label": "Replacement reserve table",
+      "type": "list",
+      "definition": "The report's year-by-year schedule of expected replacements over its evaluation term, with the cost of each item in the year it falls."
+    },
+    {
+      "key": "reservePerSfYear",
+      "label": "Reserve per square foot per year",
+      "type": "money",
+      "unit": "USD/SF/year",
+      "definition": "The reserve table's total divided by the evaluation term and the building area, as the report states it or as computed from the table."
+    },
+    {
+      "key": "evaluationTermYears",
+      "label": "Evaluation term",
+      "type": "integer",
+      "unit": "years",
+      "definition": "The number of years the reserve table covers."
+    },
+    {
+      "key": "documentsReviewed",
+      "label": "Documents reviewed",
+      "type": "list",
+      "definition": "The permits, warranties, drawings, service records and prior reports the consultant says it reviewed."
+    },
+    {
+      "key": "findingsForUnderwriting",
+      "label": "Findings for underwriting",
+      "type": "list",
+      "definition": "The analyst's list of findings that change the model or the price ask, each with the report's cost and whether the lease makes the tenant or the landlord responsible."
+    }
+  ]
+}

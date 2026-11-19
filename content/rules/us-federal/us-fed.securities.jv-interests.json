@@ -1,0 +1,34 @@
+{
+  "id": "us-fed.securities.jv-interests",
+  "jurisdiction": "us-federal",
+  "title": "When a joint venture or general partnership interest is a security",
+  "rule": "An investment contract, and so a security, is an investment of money in a common enterprise with profits to come solely from others' efforts. In the Fifth Circuit, which covers Texas, a general partnership or joint venture interest ordinarily is not one, because partners hold real control, unless the agreement leaves the partner little more power than a limited partner, the partner is too inexperienced to use its powers, or it cannot replace a manager whose unique skill it depends on.",
+  "citation": {
+    "authority": "SEC v. W.J. Howey Co., 328 U.S. 293 (1946); Williamson v. Tucker, 645 F.2d 404 (5th Cir. 1981)",
+    "url": "https://openjurist.org/645/f2d/404"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-12",
+  "review": "ai-drafted",
+  "changeWatch": "New Supreme Court or Fifth Circuit decisions on investment contracts, or SEC interpretive releases on the investment-contract test.",
+  "sources": [
+    {
+      "id": "williamson",
+      "url": "https://openjurist.org/645/f2d/404",
+      "title": "Williamson v. Tucker, 645 F.2d 404 (5th Cir. 1981)",
+      "publisher": "OpenJurist (opinion text)",
+      "accessed": "2026-11-12",
+      "quote": "an investor who claims his general partnership or joint venture interest is an investment contract has a difficult burden to overcome",
+      "tier": "primary"
+    },
+    {
+      "id": "howey",
+      "url": "https://supreme.justia.com/cases/federal/us/328/293/",
+      "title": "SEC v. W.J. Howey Co., 328 U.S. 293 (1946)",
+      "publisher": "Justia (opinion text)",
+      "accessed": "2026-11-12",
+      "quote": "The test is whether the scheme involves an investment of money in a common enterprise with profits to come solely from the efforts of others.",
+      "tier": "primary"
+    }
+  ]
+}

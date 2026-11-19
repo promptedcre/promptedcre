@@ -1,0 +1,412 @@
+{
+  "id": "present-the-deal-to-investors",
+  "slug": "present-the-deal-to-investors",
+  "kind": "process",
+  "title": "Present the deal to investors",
+  "summary": "Decide who may be approached and what they are shown under the chosen exemption. Build a short deal summary from the approved terms and memo, have counsel review it, approve and log every send, keep early interest apart from subscriptions, and deliver diligence and loan terms before anyone subscribes.",
+  "phase": "raise",
+  "order": 125,
+  "featured": false,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-14",
+  "requires": [
+    "choose-structure-and-exemption",
+    "build-investor-list",
+    "set-the-offering-terms",
+    "prepare-offering-documents"
+  ],
+  "consumes": [
+    "offering-term-sheet",
+    "ic-memo",
+    "underwriting-model",
+    "private-placement-memorandum",
+    "purchase-and-sale-agreement",
+    "loan-term-sheet",
+    "title-commitment",
+    "survey",
+    "phase-i-esa",
+    "property-condition-assessment",
+    "zoning-report",
+    "lease-abstract"
+  ],
+  "produces": [],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "ecfr-230-502",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.502",
+      "title": "17 CFR 230.502, General conditions to be met (paragraphs (b) and (c))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-14",
+      "quote": "neither the issuer nor any person acting on its behalf shall offer or sell the securities by any form of general solicitation or general advertising",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-14",
+      "quote": "necessary in order to make the statements made, in the light of the circumstances under which they were made, not misleading",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "confirm-outreach-rules",
+      "title": "Confirm the outreach guardrails are current",
+      "instruction": "Read the guardrails written into the firm file when counsel chose the exemption, and check that they still fit this offering: the same exemption, the same vehicle and the same people paid to solicit, if any. Rule 502(c) bars the issuer and anyone acting for it from offering by general solicitation or general advertising, such as published or broadcast ads or seminars whose attendees were invited that way, unless the offering relies on Rule 506(c). A documented pre-existing, substantive relationship is one way, not the only way, to show an offer was not a general solicitation; any other way is counsel's call. In a joint venture, follow counsel's written decision on whether the interest is a security and which outreach and disclosure rules apply. Anything the guardrails do not cover, such as who speaks for the sponsor or the channels for this deal, goes to counsel before any outreach.",
+      "mode": "agent",
+      "modeBasis": "Checking recorded guardrails against this offering's facts is document work; every gap goes back to counsel.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-fed.reg-d.general-solicitation",
+        "us-fed.reg-d.rule-506b",
+        "us-fed.reg-d.rule-506c",
+        "us-fed.exchange-act.broker-registration",
+        "us-tx.securities.rule-506-compensation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-502"
+      ]
+    },
+    {
+      "id": "choose-who-to-approach",
+      "title": "Choose who will be approached for this deal",
+      "instruction": "The principal decides who will be approached for this offering, by whom and through what channel: a call, a meeting, a personal email or, where the guardrails allow it, a public page or open webinar. An agent first checks each name against the guardrails and the dated investor list and flags anyone who falls outside them, such as a Rule 506(b) prospect with no documented relationship, a contact who came through public marketing, or an introducer counsel did not clear to be paid. Flagged names stay off the list until counsel answers. The approved list, with its date and the principal who approved it, goes into the firm file and is the only list later sends draw on.",
+      "mode": "human-online",
+      "modeBasis": "Choosing whom to offer securities to binds the sponsor and rests on relationships only the principal knows.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-outreach-rules"
+      ],
+      "rules": [
+        "us-fed.reg-d.general-solicitation",
+        "us-fed.reg-d.rule-506b"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "assemble-deal-summary",
+      "title": "Assemble a short deal summary",
+      "instruction": "Draft a short summary from the approved offering term sheet and the approved investment memo, and from nothing else: the property and the business plan, sources and uses, the vehicle and the equity sought, the minimum investment, every payment to the sponsor and related companies in dollars, the sponsor's own contribution, the distribution terms in plain sentences, the planned hold and exit, the main risks, and the exemption's limits on who may buy. Tag each figure with the model version and date it came from. The term sheet itself goes to no investor; the summary is a separate document. For a fund, describe the strategy and terms, and any deal already under contract from its approved memo. In a joint venture, the summary leads into the venture term sheet the partner receives. A figure the term sheet and memo do not hold is left out or sent back to them.",
+      "mode": "agent",
+      "modeBasis": "The summary is drawn from two documents the principals already approved; no new figure or judgment enters it.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-outreach-rules"
+      ],
+      "consumes": [
+        "offering-term-sheet",
+        "ic-memo"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "show-returns-with-downside",
+      "title": "Put the downside case beside the base case",
+      "instruction": "Show the returns as the approved memo states them, with the downside case beside the base case in one table. Take the downside inputs from the memo's own cases; if the memo has none, the summary waits for the memo to be revised. Give every return its definition next to it: levered or unlevered, before or after the promote, before or after tax, the period and cash flows it covers, and what the equity figure includes. Run returns-sensitivity for the IRR, equity multiple and cash-on-cash in each case, and waterfall-promote on each case's cash after every fee the deal pays, for the investors' share after the promote. Label projections as projections. A figure that differs from the memo goes back through the economics check in prepare-offering-documents. A fund with no deal under contract shows no deal returns, only what the approved term sheet and counsel allow.",
+      "mode": "agent",
+      "modeBasis": "The calculators run from the approved model's inputs; matching them to the memo is document control.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "assemble-deal-summary"
+      ],
+      "calculators": [
+        "returns-sensitivity",
+        "waterfall-promote"
+      ],
+      "consumes": [
+        "ic-memo",
+        "underwriting-model",
+        "offering-term-sheet"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "draft-outreach-materials",
+      "title": "Draft the messages and any deck from the summary",
+      "instruction": "Draft everything else that will be shown or said: the first email, a call or meeting outline, any slides and, under Rule 506(c) only, any public page or webinar script. Each piece draws its facts from the summary and says nothing the summary does not. Every piece points the reader to the offering documents as the complete terms, and none promises a return or a closing date. Give each piece a version number and date. Under Rule 506(b), no piece is written for a public page or a mass audience.",
+      "mode": "agent",
+      "modeBasis": "Writing from an approved summary is drafting work; release comes later through counsel and a principal.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-who-to-approach",
+        "show-returns-with-downside"
+      ],
+      "rules": [
+        "us-fed.reg-d.general-solicitation"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "counsel-reviews-materials",
+      "title": "Counsel reviews every piece drafted here",
+      "instruction": "Counsel reviews each piece first drafted in this playbook: the summary, the returns table, and every message, outline, slide and page. Each piece goes through the antifraud check in prepare-offering-documents against the locked offering documents, so every figure traces to a dated source and matches the memorandum. Starting outreach before the set is locked is counsel's decision; if counsel allows it, record the decision and the drafts the pieces were checked against, and check the pieces again once the set is locked. Counsel marks what must change, decides any legend or cautionary language, and approves each version in writing. A piece changed after approval goes back to counsel.",
+      "mode": "human-online",
+      "modeBasis": "Whether materials are accurate, complete and consistent with the offering documents is a legal judgment for counsel.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "draft-outreach-materials"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5",
+        "us-tx.securities.offer-sale-liability",
+        "us-fed.reg-d.general-solicitation"
+      ],
+      "consumes": [
+        "private-placement-memorandum"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "send-and-log-versions",
+      "title": "Send each approved version and log who received it",
+      "instruction": "For each send, prepare a request naming the counsel-approved version, the recipients and the channel, and confirm every recipient is on the approved list and the version is the one counsel approved. A principal approves the request; one approval covers one send, and no standing approval covers sends. Then send through a channel that records delivery and log the recipient, the version and its date, the channel, the delivery date and the approving principal. Log calls and meetings the same way, with the version of any material shown. The log matters later: under Rule 506(b), a non-accredited buyer must receive, a reasonable time before the sale, a brief written description of any material written information given to accredited investors and not already delivered to that buyer.",
+      "mode": "agent",
+      "modeBasis": "Checking and sending a version for named recipients is routine; a principal approves every send before it goes.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-reviews-materials"
+      ],
+      "rules": [
+        "us-fed.reg-d.information-requirements"
+      ],
+      "market": "investor-portals-fund-admin",
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-502"
+      ]
+    },
+    {
+      "id": "present-in-meetings",
+      "title": "Present in calls and meetings from the approved summary",
+      "instruction": "The principal presents the deal by call or meeting only to people on the approved list, or at events the guardrails and counsel allow. The principal works from the approved summary and outline, states projections as projections with the downside case alongside, and gives no figure or promise the summary does not hold. Questions that need a fact not in the materials are written down and answered later in writing, after the answer is checked against the source and, where it adds a material fact, cleared by counsel. An agent keeps a question and answer log for the offering so the same question gets the same answer from everyone.",
+      "mode": "human-offline",
+      "modeBasis": "What is said in a meeting is the sponsor's statement in a securities sale and is made by a principal.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-reviews-materials"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5",
+        "us-tx.securities.offer-sale-liability"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "record-indications-of-interest",
+      "title": "Record early interest as non-binding",
+      "instruction": "When a prospect says they want in, whether by reply, call or meeting, record it as a non-binding indication: the name, the amount indicated, the date, how it was given and the materials they had seen by then. Keep these records in their own list, apart from subscriptions. No money is taken, no subscription is signed and no allocation is promised on an indication; every commitment is made later through the offering documents. Tell the prospect in writing that the indication binds neither side, using wording counsel approved.",
+      "mode": "agent",
+      "modeBasis": "Recording what prospects said is data entry; the wording sent to them is counsel's and goes out with a principal's approval.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "send-and-log-versions",
+        "present-in-meetings"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "track-interest-against-hard-date",
+      "title": "Track interest against the hard-deposit date",
+      "instruction": "Put the total of indications next to the equity sought and the purchase contract's calendar: the date the deposit becomes non-refundable, the closing date and any extension right. Run deadline-calendar with the contract periods to fix the dates. Update the comparison after each new indication or withdrawal. Indications are not commitments, so report them as a range of what may close, never as money raised. If the gap is still open close to the hard date, put it in front of the principal, who decides whether to seek more equity, seek a contract change or walk away before the deposit is at risk.",
+      "mode": "agent",
+      "modeBasis": "Comparing a tally with a contract calendar is calendar work; what to do about a shortfall is the principal's decision.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-indications-of-interest"
+      ],
+      "when": {
+        "structure": [
+          "syndication"
+        ]
+      },
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "assemble-diligence-package",
+      "title": "Assemble the diligence findings and final loan terms",
+      "instruction": "Once diligence is complete and the loan terms are final, assemble a package for the prospects who indicated interest: title and survey exceptions, environmental and condition findings, zoning, the lease review, the loan amount, rate, term, recourse, reserves and covenants, and the updated underwriting. Mark what changed from the summary they saw. If diligence or the loan moved a figure, run returns-sensitivity again on the summary's cases and show the new figures beside the old ones. Send the package and the list of changes to counsel.",
+      "mode": "agent",
+      "modeBasis": "Drawing findings and terms from the reports and the loan term sheet is document work; counsel judges what changed.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "track-interest-against-hard-date"
+      ],
+      "when": {
+        "structure": [
+          "syndication"
+        ]
+      },
+      "calculators": [
+        "returns-sensitivity"
+      ],
+      "consumes": [
+        "title-commitment",
+        "survey",
+        "phase-i-esa",
+        "property-condition-assessment",
+        "zoning-report",
+        "lease-abstract",
+        "loan-term-sheet",
+        "underwriting-model"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "counsel-clears-changes",
+      "title": "Counsel clears the package and decides on a supplement",
+      "instruction": "Counsel reads the package and the marked changes. Rule 10b-5 bars omitting a material fact necessary to make the statements made, in the light of the circumstances under which they were made, not misleading, in connection with a securities sale. Whether a change is material, whether statements already made must be corrected, and whether the memorandum needs a supplement before more sales are counsel's decisions, made under prepare-offering-documents. Counsel approves the package in writing, with any supplement attached.",
+      "mode": "human-online",
+      "modeBasis": "Materiality and the need for a supplement are legal judgments for counsel.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "assemble-diligence-package"
+      ],
+      "when": {
+        "structure": [
+          "syndication"
+        ]
+      },
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5",
+        "us-tx.securities.offer-sale-liability"
+      ],
+      "consumes": [
+        "private-placement-memorandum"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5"
+      ]
+    },
+    {
+      "id": "deliver-diligence-and-loan-terms",
+      "title": "Deliver the cleared package before any subscription",
+      "instruction": "Deliver the package counsel cleared to each prospect who indicated interest before any subscription from that prospect is accepted. That order is the sponsor's practice, so that no one commits without the findings and the final loan terms. A principal approves the package and its recipient list before it goes out, and each delivery is entered in the send log with the version and date.",
+      "mode": "agent",
+      "modeBasis": "Sending a cleared package to named recipients is routine; a principal approves every delivery.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-clears-changes"
+      ],
+      "when": {
+        "structure": [
+          "syndication"
+        ]
+      },
+      "rules": [
+        "us-fed.reg-d.information-requirements"
+      ],
+      "market": "investor-portals-fund-admin",
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "hand-off-to-onboarding",
+      "title": "Hand interested prospects to onboarding",
+      "instruction": "In a syndication, no subscription is accepted until the cleared diligence and loan package has gone to that prospect. When a prospect asks to invest, hand them to the onboarding playbook, which logs them in the investor register and sends the locked offering documents. Pass along what this work recorded: how the relationship began, the approved list entry, every version sent and its date, the questions asked and answered, and the indication given. In a fund, investors commit to the fund under its own documents rather than to one deal, and its deals are funded by capital call, so any material change a deal brings goes to counsel through prepare-offering-documents. Keep the send log and the question log in the offering's file. When the offering closes or counsel changes the exemption, stop all sends until the guardrails are updated.",
+      "mode": "agent",
+      "modeBasis": "Passing recorded facts to the next playbook is file work; the onboarding playbook carries its own approvals.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-indications-of-interest",
+        "deliver-diligence-and-loan-terms"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    }
+  ],
+  "outlineSteps": []
+}

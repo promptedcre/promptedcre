@@ -1,0 +1,69 @@
+{
+  "id": "ein-confirmation",
+  "name": "EIN confirmation",
+  "what": "The IRS notice assigning an entity its employer identification number. Agents record where it is stored and at most the last four digits, never the full number.",
+  "fields": [
+    {
+      "key": "legalName",
+      "label": "Name on the notice",
+      "type": "string",
+      "definition": "The entity name exactly as the notice prints it. It should match the certificate of formation word for word; a difference is a finding for the name match."
+    },
+    {
+      "key": "noticeType",
+      "label": "Form of confirmation",
+      "type": "enum",
+      "definition": "Which document the firm holds: the confirmation letter printed when the EIN was issued online, an original notice from the CP575A-J series, the digital CP575 from the IRS Business Tax Account, or Letter 147C, EIN Previously Assigned. The IRS says the digital CP575 is accepted as written confirmation in place of the original notice or Letter 147C, and that an original CP575A-J notice cannot be duplicated.",
+      "authority": "IRS, Understanding your CP575 notice"
+    },
+    {
+      "key": "noticeDate",
+      "label": "Notice date",
+      "type": "date",
+      "definition": "The date printed on the notice or letter."
+    },
+    {
+      "key": "einAssigned",
+      "label": "EIN assigned",
+      "type": "boolean",
+      "definition": "Whether the firm holds a notice showing an EIN was assigned to this entity. This records that the number exists, not the number."
+    },
+    {
+      "key": "einLastFour",
+      "label": "Last four digits",
+      "type": "string",
+      "definition": "At most the last four digits of the EIN, enough to tell which notice is which when comparing bank and tax records. The full number is never copied into the firm file, a task note or chat: shared records are read by more people and tools than need it, and the full number helps anyone impersonating the entity to a bank or the IRS. The person who needs the full number reads it from the stored notice."
+    },
+    {
+      "key": "storageLocation",
+      "label": "Where the notice is kept",
+      "type": "string",
+      "definition": "Where the firm keeps the notice, such as a restricted tax-documents folder, and who can open it. This is the field other steps point to when a bank, lender or filing needs the number."
+    },
+    {
+      "key": "responsibleParty",
+      "label": "Responsible party",
+      "type": "string",
+      "definition": "The name of the individual the application named as responsible party, taken from the firm's copy of the application answers. Never record that person's Social Security number or ITIN. A change of responsible party goes to the IRS on Form 8822-B within 60 days.",
+      "authority": "IRS, Understanding your CP575 notice"
+    },
+    {
+      "key": "taxClassification",
+      "label": "Tax classification applied for",
+      "type": "string",
+      "definition": "The classification the application chose, such as partnership, disregarded entity or corporation by election, from the firm's copy of the answers. The CPA confirms it; leave it empty if the firm has no record of the answers."
+    },
+    {
+      "key": "copiesProvidedTo",
+      "label": "Copies provided to",
+      "type": "list",
+      "definition": "Each bank, lender or other institution given a copy to confirm the EIN, with the date. The IRS suggests keeping copies for that purpose."
+    },
+    {
+      "key": "laterChanges",
+      "label": "Later name, address or responsible-party changes",
+      "type": "list",
+      "definition": "Each change reported to the IRS after the notice, such as a business name change or a Form 8822-B, with the date it was sent and where the confirmation is kept."
+    }
+  ]
+}

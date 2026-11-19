@@ -1,0 +1,33 @@
+{
+  "id": "us-tx.contracts.statute-of-frauds",
+  "jurisdiction": "us-tx",
+  "title": "A Texas contract to sell real estate must be in a signed writing",
+  "rule": "A contract for the sale of real estate is unenforceable unless it, or a memorandum of it, is in writing and signed by the person to be charged or someone lawfully authorized to sign for that person. The rule also covers real estate leases longer than one year and agreements not to be performed within a year. Separately, a Texas suit to recover a commission on a real estate sale or purchase needs a writing signed by the party sued.",
+  "citation": {
+    "authority": "Tex. Bus. & Com. Code 26.01(a) and (b)(4)-(6); Tex. Occ. Code 1101.806(c)",
+    "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.26.htm"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Business and Commerce Code 26.01 (last amended in 2005) or Occupations Code 1101.806.",
+  "sources": [
+    {
+      "id": "bc-26",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.26.htm",
+      "title": "Texas Business and Commerce Code, Chapter 26 (Statute of Frauds, Section 26.01)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "is not enforceable unless the promise or agreement, or a memorandum of it, is",
+      "tier": "primary"
+    },
+    {
+      "id": "occ-code-1101",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1101.htm",
+      "title": "Texas Occupations Code, Chapter 1101 (Section 1101.806, Liability for payment of compensation or commission)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "tier": "primary"
+    }
+  ]
+}

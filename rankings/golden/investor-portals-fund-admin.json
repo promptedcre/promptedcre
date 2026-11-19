@@ -1,0 +1,25 @@
+{
+  "market": "investor-portals-fund-admin",
+  "cells": [
+    { "vendor": "covercy", "story": "public-pricing", "verdict": "full", "why": "The pricing page lists a monthly price for each plan, from $498 a month at two entities.", "checked": "2026-11-12", "evidence": ["c2"] },
+    { "vendor": "covercy", "story": "self-serve", "verdict": "full", "why": "The pricing page offers a 14-day trial that starts without a sales call.", "checked": "2026-11-12", "evidence": ["c2"] },
+    { "vendor": "covercy", "story": "agent-docs", "verdict": "partial", "why": "An llms.txt file exists on the marketing site and lists marketing and product pages, not documentation.", "checked": "2026-11-12", "evidence": ["c7", "p1"] },
+    { "vendor": "covercy", "story": "public-api", "verdict": "none", "why": "No API or developer page; the only API mention is an in-account snippet for embedding the portal.", "checked": "2026-11-12", "evidence": ["c5"] },
+    { "vendor": "cash-flow-portal", "story": "self-serve", "verdict": "full", "why": "The home page says start for free with no credit card, and accounts are created instantly.", "checked": "2026-11-12", "evidence": ["c8"] },
+    { "vendor": "cash-flow-portal", "story": "public-api", "verdict": "none", "why": "No developer or API page; the API addresses checked return 404.", "checked": "2026-11-12", "evidence": [] },
+    { "vendor": "investnext", "story": "mcp-server", "verdict": "full", "why": "The help center documents its MCP server, read-only and a paid add-on, with a connection guide.", "checked": "2026-11-12", "evidence": ["c4", "c5", "c6", "p3"] },
+    { "vendor": "investnext", "story": "public-api", "verdict": "none", "why": "No public API or developer documentation; integration is by Zapier and the read-only MCP.", "checked": "2026-11-12", "evidence": [] },
+    { "vendor": "investnext", "story": "webhooks", "verdict": "partial", "why": "Data reaches other apps only through Zapier connections; no webhook documentation.", "checked": "2026-11-12", "evidence": ["c9", "c10"] },
+    { "vendor": "investnext", "story": "agent-docs", "verdict": "full", "why": "The help center publishes its own llms.txt file.", "checked": "2026-11-12", "evidence": ["p2"] },
+    { "vendor": "agora", "story": "public-pricing", "verdict": "partial", "why": "Only the Essential plan shows a price, as a starting price; Pro shows a demo button.", "checked": "2026-11-12", "evidence": ["c1"] },
+    { "vendor": "agora", "story": "webhooks", "verdict": "partial", "why": "Connections to other apps run through Zapier; no webhook documentation.", "checked": "2026-11-12", "evidence": ["c2"] },
+    { "vendor": "agora", "story": "self-serve", "verdict": "none", "why": "No sign-up or trial is shown; buying paths lead to a demo.", "checked": "2026-11-12", "evidence": ["c1"] },
+    { "vendor": "sponsorcloud", "story": "public-pricing", "verdict": "none", "why": "The pricing page says it does not publish a price list; quotes only.", "checked": "2026-11-12", "evidence": ["c3", "c4"] },
+    { "vendor": "sponsorcloud", "story": "public-api", "verdict": "none", "why": "No developer or API page; integrations run through Zapier.", "checked": "2026-11-12", "evidence": [] },
+    { "vendor": "janover-connect", "story": "public-pricing", "verdict": "none", "why": "The pricing page shows no prices, only a waitlist and a demo button.", "checked": "2026-11-12", "evidence": ["c3"] },
+    { "vendor": "janover-connect", "story": "agent-docs", "verdict": "full", "why": "The help center publishes its own llms.txt file.", "checked": "2026-11-12", "evidence": ["p1"] },
+    { "vendor": "realpage-ims", "story": "self-serve", "verdict": "none", "why": "The product page offers only Contact Sales.", "checked": "2026-11-12", "evidence": ["c6"] },
+    { "vendor": "appfolio-investment-manager", "story": "self-serve", "verdict": "none", "why": "Entry is a product demo; no self-serve sign-up is shown.", "checked": "2026-11-12", "evidence": ["c7"] },
+    { "vendor": "appfolio-investment-manager", "story": "agent-docs", "verdict": "partial", "why": "The llms.txt file is on the marketing site and covers marketing pages, not documentation.", "checked": "2026-11-12", "evidence": ["p1", "c9"] }
+  ]
+}

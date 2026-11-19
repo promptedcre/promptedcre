@@ -1,0 +1,166 @@
+{
+  "vendor": "intellcre",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "463439bbaedfd6f37704e8ff62a34c9de2d0379ec3910d932bd1515dd2a2d750",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "partial",
+      "quality": 6,
+      "evidence": [
+        "c5",
+        "c8",
+        "c9",
+        "p2"
+      ],
+      "rationale": "The only documented programmatic surface is the hosted MCP connector (the coverage notes record no REST API page and /api is 404), whose tools cover properties, tenants, comparables, images and brochures with a write scope for properties and related records (c5, c8, c9) but nothing for deals' stage, rent rolls or operating statements, or underwriting outputs.",
+      "missing": "No REST or HTTP API reference is shown, the full MCP tool reference is not quoted, and the documented tools do not reach deals, financial-statement data or underwriting outputs."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "c4",
+        "c5",
+        "c6",
+        "c8",
+        "c9",
+        "c10",
+        "p2"
+      ],
+      "rationale": "The vendor's own MCP page, which a probe confirms resolves (p2), documents a live hosted connector with 40 tools, OAuth 2.1 + PKCE over Streamable HTTP, scope and tool tables, and connection through the normal IntellCRE login with nothing to install (c4, c5, c6, c8, c9, c10).",
+      "missing": "Setup is only summarized (nothing to install, authorize through the IntellCRE login); the connector URL and client-by-client steps are not quoted, and the tools omit deal stage, financial-statement upload and underwriting outputs (c9)."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item shows a vendor-maintained SDK, CLI, package-registry listing or public code repository.",
+      "missing": "Any official SDK, CLI, package or public repository; the pack shows no developer tooling beyond the hosted MCP connector."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item shows webhooks, event subscriptions or any other way to be notified of changes instead of polling.",
+      "missing": "Any webhook or event-subscription documentation for properties, deals or other records."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c5",
+        "c6",
+        "c7",
+        "c8"
+      ],
+      "rationale": "The MCP connector authorizes assistants through OAuth 2.1 + PKCE via the IntellCRE login with documented scopes such as properties:write, and read and write are granted separately so an assistant can be connected read-only and unable to change anything (c5, c6, c7, c8).",
+      "missing": "Only the properties:write scope row is quoted, so the full scope list and how finely access can be limited beyond read versus write per record type are not shown."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item shows an OpenAPI, Swagger, GraphQL or other machine-readable specification, and the coverage notes record no REST API page (/api is 404).",
+      "missing": "Any published or downloadable machine-readable API description, including schemas for the MCP tools."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "partial",
+      "quality": 5,
+      "evidence": [
+        "p1"
+      ],
+      "rationale": "A probe confirms an llms.txt at www.intellcre.com headed with the platform's marketing title (p1), but nothing shows it covering the help-center or MCP documentation, and no Markdown versions of documentation pages appear in the pack.",
+      "missing": "The llms.txt contents beyond its title and size (3,322 bytes) are not shown, so whether it indexes help.intellcre.com or the MCP documentation is unknown, and no Markdown documentation pages are shown."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c7"
+      ],
+      "rationale": "No item shows a sandbox, test mode or developer environment; the read-only connection mode (c7) limits permissions on live records rather than providing a place to test.",
+      "missing": "Any self-serve or on-request sandbox, test account or developer environment."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c2",
+        "c3",
+        "c11"
+      ],
+      "rationale": "The pack shows only uploads into IntellCRE (Excel models, rent rolls, T-12s and other financial documents in c2, c3, c11) and no self-serve bulk export or download of records in any format.",
+      "missing": "Any documented export or bulk download of properties, deals or financial data in CSV, JSON, Excel or another format."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item shows self-serve sign-up, a free trial or a paid plan bought without a call; the coverage notes record only Start Now and Book a Call buttons on the pricing page, without showing where Start Now leads.",
+      "missing": "A sign-up page, free trial or checkout, or confirmation that Start Now opens an account without a sales call."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pricing page was checked and shows included features, a savings calculator and Start Now and Book a Call buttons, but no plan prices, starting price or fees.",
+      "missing": "Any published price, starting price or fee for any plan, including the one a small sponsor would buy."
+    },
+    {
+      "story": "dp-deal-record",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c4",
+        "c9"
+      ],
+      "rationale": "The MCP tool table lists property, tenant, comparable, image and brochure tools and no tool for deals' stage (c9), and there is no REST API, so the general claim of pipeline access (c4) does not show creating deals or updating their stage.",
+      "missing": "Any API or MCP tool documentation for creating a deal, reading deals, or changing a deal's stage or status."
+    },
+    {
+      "story": "dp-load-financials",
+      "verdict": "partial",
+      "quality": 6,
+      "evidence": [
+        "c3",
+        "c11",
+        "c9"
+      ],
+      "rationale": "The vendor says users upload rent rolls, T-12s and operating statements in Excel or PDF for AI parsing (c3, c11), but the MCP tool table has no rent-roll or financial-statement upload tool (c9) and there is no REST API, so loading is shown only through the app.",
+      "missing": "The upload screen itself and the structured data the parser returns are not shown, and no API or MCP endpoint that accepts these documents is shown."
+    },
+    {
+      "story": "dp-model-outputs",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c9"
+      ],
+      "rationale": "The MCP tool table has no tool for underwriting outputs (c9), and no item shows an API, endpoint or export that returns cash flows, returns or valuation results.",
+      "missing": "Any API endpoint, MCP tool or documented export, manual or automated, for cash flows, returns or value."
+    },
+    {
+      "story": "dp-documents",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c9"
+      ],
+      "rationale": "The MCP tool table lists property, tenant, comparable, image and brochure tools (c9) but nothing shows a way to attach documents to a deal or list and download them.",
+      "missing": "Any API or MCP tool for uploading documents to a deal or listing and downloading them; what the image and brochure tools actually do is not shown."
+    }
+  ]
+}

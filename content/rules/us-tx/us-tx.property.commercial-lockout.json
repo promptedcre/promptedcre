@@ -1,0 +1,25 @@
+{
+  "id": "us-tx.property.commercial-lockout",
+  "jurisdiction": "us-tx",
+  "title": "Texas commercial lockout for unpaid rent: the door notice and the new key",
+  "rule": "A Texas commercial landlord may not intentionally keep a tenant out except by judicial process, but may change the door locks of a tenant delinquent in paying at least part of the rent and must post written notice on the front door naming who holds the new key, with its address or telephone number. The key is due only during the tenant's regular business hours, after the delinquent rent is paid. A wronged tenant may retake possession or end the lease and recover actual damages, one month's rent or $500, whichever is greater, attorney's fees and costs, less sums it owes. A lease supersedes this section where they conflict.",
+  "citation": {
+    "authority": "Tex. Prop. Code 93.002(c), (f), (g) and (h)",
+    "url": "https://statutes.capitol.texas.gov/Docs/PR/htm/PR.93.htm"
+  },
+  "asOf": "2026-11-13",
+  "lastVerified": "2026-11-13",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Property Code 93.002 or 93.003 (93.002 last amended effective September 1, 1993). The Legislature's text, which carries 2025 amendments elsewhere in the Property Code (chapter 24), lists no later amendment to these sections; watch bills in the regular session that starts in 2027.",
+  "sources": [
+    {
+      "id": "tx-prop-code-93",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.93.htm",
+      "title": "Texas Property Code, Chapter 93 (Commercial tenancies), Section 93.002",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "changing the door locks of a tenant who is delinquent in paying at least part of the rent",
+      "tier": "primary"
+    }
+  ]
+}

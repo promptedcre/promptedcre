@@ -1,0 +1,34 @@
+{
+  "id": "audit-past-raises",
+  "slug": "audit-past-raises",
+  "kind": "audit",
+  "title": "Audit past capital raises",
+  "summary": "For a firm that has taken investor money: check each offering's exemption, filings, investor records and payments against the rules it relied on. It ends with a list of what to fix and a calendar of what is due.",
+  "phase": "raise",
+  "order": 20,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "List each offering and the exemption it relied on",
+    "Confirm Form D was filed on time for each offering",
+    "Confirm state notice filings where investors bought",
+    "Check yearly Form D amendments for offerings still open",
+    "Check bad-actor questionnaires for covered persons",
+    "Check accreditation records for each investor",
+    "Check how investors were solicited against the exemption used",
+    "Reconcile the investor register to subscriptions and funds received",
+    "Check who was paid for raising capital",
+    "Build the filing calendar"
+  ]
+}

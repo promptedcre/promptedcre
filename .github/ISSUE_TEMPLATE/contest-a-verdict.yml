@@ -1,0 +1,41 @@
+name: Contest a verdict
+description: Point to a public page that changes a rankings verdict.
+title: "Contest: <vendor> / <story>"
+labels: ["rankings", "contest"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Verdicts come only from public evidence. To change one, point to a public page (no login) that shows something the evidence pack does not. Vendors are welcome to contest. No one can pay for a listing, a score or a review.
+  - type: input
+    id: vendor
+    attributes:
+      label: Vendor page
+      description: The rankings page for the vendor.
+      placeholder: /rankings/<market>/<vendor>
+    validations:
+      required: true
+  - type: input
+    id: story
+    attributes:
+      label: Story
+      description: The story whose verdict you contest, for example public-api.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Public evidence
+      description: Links to public pages and the exact sentences on them that show it.
+    validations:
+      required: true
+  - type: dropdown
+    id: relationship
+    attributes:
+      label: Your relationship to the vendor
+      options:
+        - I work for the vendor or represent it
+        - I am a customer
+        - No relationship
+    validations:
+      required: true

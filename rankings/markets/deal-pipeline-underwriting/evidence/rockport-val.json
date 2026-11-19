@@ -1,0 +1,128 @@
+{
+  "vendor": "rockport-val",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://www.therockportgroup.com/resources/val-training",
+      "found": true,
+      "note": "Public training page with VAL training manuals and an Excel rent roll import file; no documentation site found."
+    },
+    "api": {
+      "url": "https://www.therockportgroup.com/products/rockport-engine",
+      "found": true,
+      "note": "Rockport ENGINE page describes RESTful APIs to the calc engine; no public API reference or spec found."
+    },
+    "pricing": {
+      "url": "https://www.therockportgroup.com/products/rockport-val",
+      "found": false,
+      "note": "VAL page claims transparent pricing but shows no prices; only Contact Sales and Contact Us links."
+    },
+    "changelog": {
+      "url": "https://www.therockportgroup.com/",
+      "found": false,
+      "note": "No release notes, changelog or product updates page found; /pricing and /release-notes return 404."
+    }
+  },
+  "links": {
+    "docs": "https://www.therockportgroup.com/resources/val-training",
+    "api": "https://www.therockportgroup.com/products/rockport-engine"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://www.therockportgroup.com/products/rockport-val",
+      "excerpt": "Rockport VAL is cloud-based commercial real estate valuation software built for the way valuation professionals work today.",
+      "fetched": "2026-11-12",
+      "note": "rockportval.com redirects to therockportgroup.com; VAL is one of several Rockport products.",
+      "hash": "dd8d90f46418496618c02939370740b22571c9d130644168d878f878563cf397"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://www.therockportgroup.com/products/rockport-engine",
+      "excerpt": "For the first time, we are making this available directly through RESTful APIs.",
+      "fetched": "2026-11-12",
+      "note": "'This' refers to the Rockport calc engine described in the preceding sentence.",
+      "hash": "8787e226b45234bf74e88cb6f8bd816e6839c78b14afb90166a05bc002cd2f32"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://www.therockportgroup.com/products/rockport-engine",
+      "excerpt": "Cloud-native, RESTful APIs that plugin easily.",
+      "fetched": "2026-11-12",
+      "hash": "cea0afa9aa11c64d39a42ce00b134d4b50165b344454f529a3d9a825a1398cc3"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://www.therockportgroup.com/products/rockport-val",
+      "excerpt": "2-way Open API",
+      "fetched": "2026-11-12",
+      "note": "Listed as a VAL feature with the caption 'Data, Report Packages, PMs, OMs.'; no API documentation linked.",
+      "hash": "ba4f9f7422084dbc52f4809f0021d8510db0b10f89e3e8dca4cb31424a4d99ea"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://www.therockportgroup.com/products/rockport-val",
+      "excerpt": "Transparent, predictable pricing with no surprises.",
+      "fetched": "2026-11-12",
+      "note": "No prices appear on the page.",
+      "hash": "cbe8239d7cb6583f27da2749d6aae38d7e918aec541b437ae52bac7399b2be82"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://www.therockportgroup.com/products/rockport-val",
+      "excerpt": "Connect seamlessly with Microsoft Excel ® and leading real estate systems.",
+      "fetched": "2026-11-12",
+      "hash": "2c44a2cf7521a0b42a3a10f309a28963569a0a6a9570bc28977d9368ce585992"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://www.therockportgroup.com/products/rockport-val",
+      "excerpt": "Quickly generate polished valuation models and export professional-grade reports.",
+      "fetched": "2026-11-12",
+      "hash": "ef88ca78ec3e7c78788d449106dbea22b1ef401cfdf95302839b3d5e1f5fc241"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://www.therockportgroup.com/resources/val-training",
+      "excerpt": "Rockport VAL Multifamily Excel Rent Roll Import For Manual",
+      "fetched": "2026-11-12",
+      "note": "Listed as an XLS download under Additional Resources.",
+      "hash": "b9b7039a0e2af0c099473101663046aa51f0513237d286fe06e80d4b6a5a543e"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://www.therockportgroup.com/products/rockport-val",
+      "excerpt": "We don't sell or share your data. What you input into VAL remains entirely yours, safeguarded and private.",
+      "fetched": "2026-11-12",
+      "hash": "7f7ae3f815d822001307079c0a4108ebad163d4b267af4b75759aa0feed9903c"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://www.therockportgroup.com/solutions/technology-solutions/technology-solutions-for-systems-platforms-data-integrations",
+      "excerpt": "Interested in becoming a Rockport Integration partner? Chat to us today",
+      "fetched": "2026-11-12",
+      "hash": "34d6b864512174ca7c93c10056261ea00bbc57111901e6392a18156ff05bfa4f"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://www.therockportgroup.com/products/rockport-val",
+      "excerpt": "A big shoutout to the knowledgeable and accessible Dev Team at VAL for assisting us with a custom integration",
+      "fetched": "2026-11-12",
+      "note": "Customer testimonial published by the vendor.",
+      "hash": "90d0e4532ddcf96801eecd3a2bf2a57a5b876b8fff10ceded315f981ee94400e"
+    }
+  ]
+}

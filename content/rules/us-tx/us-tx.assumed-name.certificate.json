@@ -1,0 +1,25 @@
+{
+  "id": "us-tx.assumed-name.certificate",
+  "jurisdiction": "us-tx",
+  "title": "Texas assumed name certificates for an LLC or a registered series",
+  "rule": "A Texas LLC, or a registered series of one, that regularly does business in Texas under a name other than the one in its certificate of formation (for a series, its certificate of registered series) files an assumed name certificate with the Secretary of State, for $25. A protected series name lacking the LLC's name is also an assumed name of the LLC. A certificate lasts no more than 10 years and is void at the end of its term unless a renewal is filed in the six months before it expires. Until it files one, the entity cannot sue in Texas on a contract made under the assumed name.",
+  "citation": {
+    "authority": "Tex. Bus. & Com. Code 71.002, 71.101, 71.103, 71.151, 71.155 and 71.201",
+    "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.71.htm"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Business and Commerce Code chapter 71; the county-filing provisions for entities were repealed effective September 1, 2019.",
+  "sources": [
+    {
+      "id": "tx-bcc-71",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.71.htm",
+      "title": "Texas Business and Commerce Code, Chapter 71, Assumed Business or Professional Name Act",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "A certificate is effective for a term not to exceed 10 years from the date the certificate is filed.",
+      "tier": "primary"
+    }
+  ]
+}

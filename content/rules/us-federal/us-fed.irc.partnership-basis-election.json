@@ -1,0 +1,68 @@
+{
+  "id": "us-fed.irc.partnership-basis-election",
+  "jurisdiction": "us-federal",
+  "title": "Partnership basis adjustments: the section 754 election",
+  "rule": "A section 754 election adjusts partnership property basis on every transfer of an interest and every distribution in that year and later years. Without one, the adjustments still apply on a transfer when the partnership has a substantial built-in loss and on a distribution with a substantial basis reduction. On a sale, exchange or partner's death, section 743(b) adjusts basis, for the transferee alone, by the gap between its basis in the interest (at death, generally fair market value under section 1014) and its share of partnership basis. Section 734(b) adjusts for distributions. The partnership elects with its timely return; revocation needs IRS approval, refused if mainly to avoid step-downs.",
+  "citation": {
+    "authority": "26 U.S.C. 754, 743(a), (b) and (d), 734(a), (b) and (d), 742 and 1014(a); 26 CFR 1.754-1",
+    "url": "https://www.law.cornell.edu/uscode/text/26/754"
+  },
+  "asOf": "2026-11-14",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to sections 754, 743 or 734, including the substantial built-in loss and substantial basis reduction thresholds, or to the election and revocation procedure in 26 CFR 1.754-1.",
+  "sources": [
+    {
+      "id": "usc-26-754",
+      "url": "https://www.law.cornell.edu/uscode/text/26/754",
+      "title": "26 U.S.C. 754, Manner of electing optional adjustment to basis of partnership property",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "Such election may be revoked by the partnership, subject to such limitations as may be provided by regulations prescribed by the Secretary.",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-743",
+      "url": "https://www.law.cornell.edu/uscode/text/26/743",
+      "title": "26 U.S.C. 743, Special rules where section 754 election or substantial built-in loss",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "such increase or decrease shall constitute an adjustment to the basis of partnership property with respect to the transferee partner only",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-734",
+      "url": "https://www.law.cornell.edu/uscode/text/26/734",
+      "title": "26 U.S.C. 734, Adjustment to basis of undistributed partnership property where section 754 election or substantial basis reduction",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-742",
+      "url": "https://www.law.cornell.edu/uscode/text/26/742",
+      "title": "26 U.S.C. 742, Basis of transferee partner's interest",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-1014",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1014",
+      "title": "26 U.S.C. 1014, Basis of property acquired from a decedent",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "the fair market value of the property at the date of the decedent’s death",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-1-754-1",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.754-1",
+      "title": "26 CFR 1.754-1, Time and manner of making election to adjust basis of partnership property",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-14",
+      "quote": "An election may not be filed to make the adjustments provided in either section 734(b) or section 743(b) alone",
+      "tier": "primary"
+    }
+  ]
+}

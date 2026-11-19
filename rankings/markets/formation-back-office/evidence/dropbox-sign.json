@@ -1,0 +1,132 @@
+{
+  "vendor": "dropbox-sign",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://developers.hellosign.com/docs/overview",
+      "found": true
+    },
+    "api": {
+      "url": "https://sign.dropbox.com/products/dropbox-sign-api",
+      "found": true
+    },
+    "pricing": {
+      "url": "https://sign.dropbox.com/products/dropbox-sign-api/pricing",
+      "found": true
+    },
+    "changelog": {
+      "url": "https://developers.hellosign.com/changelog",
+      "found": true
+    }
+  },
+  "links": {
+    "docs": "https://developers.hellosign.com/docs/overview",
+    "api": "https://developers.hellosign.com/docs/overview",
+    "mcp": "https://developers.hellosign.com/llms.txt"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://developers.hellosign.com/docs/overview",
+      "excerpt": "You can fully test every endpoint and almost every feature in the Dropbox Sign API (even from a free account )",
+      "fetched": "2026-11-12",
+      "hash": "15bd103e7f826245d872a7084375460ffe1f6e962ccfda975fe0aa3fb1cb9d06"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://developers.hellosign.com/docs/overview",
+      "excerpt": "Sending production (legally-binding) signature requests requires a paid API plan .",
+      "fetched": "2026-11-12",
+      "hash": "c4d5b94d18bc795685b08ac1f40b9273297dc5f3d32c6806ec2bda6bcf98969e"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://developers.hellosign.com/llms.txt",
+      "excerpt": "Dropbox Sign maintains official libraries for different programming languages.",
+      "fetched": "2026-11-12",
+      "hash": "fbf26acd59ee4c401186225deacde256fbd295c134a8870cf8e5c00897a3de81"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://developers.hellosign.com/llms.txt",
+      "excerpt": "For AI client integration (Claude Code, Cursor, etc.), connect to the MCP server at https://developers.hellosign.com/_mcp/server",
+      "fetched": "2026-11-12",
+      "note": "Appears to be a docs-assistant MCP server for the documentation, not a product MCP; not verified",
+      "hash": "c90b0ccdb9b1280d6d9563581c00fde0329e5ca93dd3a6d042749849dfb97cb9"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://developers.hellosign.com/llms.txt",
+      "excerpt": "Click here to learn about Dropbox Sign Events how to use webhooks to automate your integration with the Dropbox Sign API.",
+      "fetched": "2026-11-12",
+      "hash": "ac04e3cb39743b804ba61a27a47237cc6252016fc687dea9b67bd73e7c07810a"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://developers.hellosign.com/llms.txt",
+      "excerpt": "OAuth allows you to send signature requests and call the Dropbox Sign API on behalf of your users.",
+      "fetched": "2026-11-12",
+      "hash": "1de67a96b49f5e89e0d514e7467c39889852b093377f686d65101da9dac13a8f"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://developers.hellosign.com/llms.txt",
+      "excerpt": "Find out how to send and retrieve signature requests, check their status, and download completed documents",
+      "fetched": "2026-11-12",
+      "hash": "066c7270fcb324d0a7f5fc84e6f163939feac1c09318a3f54cdb90ea58d4c4b5"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://developers.hellosign.com/changelog",
+      "excerpt": "The new POST /v3/document/detect_fields endpoint lets you analyze a PDF for form annotations",
+      "fetched": "2026-11-12",
+      "note": "Dated Oct 6, 2026 entry",
+      "hash": "a94d495e43aa417162177ea0b17d3f92927db205355eb4502cc11e37c214e6b3"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://sign.dropbox.com/products/dropbox-sign-api/pricing",
+      "excerpt": "$75 USD / mo",
+      "fetched": "2026-11-12",
+      "note": "API Essentials tier, starting at 50 signature requests per month; page also has Contact sales and a signature-volume selector",
+      "hash": "e39814f2d79ac26d1b6bbcd646702249f52f76d327540152624df26041fd765c"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://sign.dropbox.com/products/dropbox-sign/pricing",
+      "excerpt": "$15 USD / mo",
+      "fetched": "2026-11-12",
+      "note": "Dropbox Sign (non-API) plan price shown on the pricing page",
+      "hash": "f27429e09c577011d4ab9efa59e96771b7cc69067a7673932725efc066449e37"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://developers.hellosign.com/docs/overview",
+      "excerpt": "In test mode, you can do 10 requests per minute.",
+      "fetched": "2026-11-12",
+      "hash": "ece53b23ea522c04ce8ad9a855838791b45205db480df45cb56e22a1435789f0"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://developers.hellosign.com/llms.txt",
+      "excerpt": "# Dropbox Sign Developer Documentation",
+      "note": "llms.txt: GET 200, 29591 bytes",
+      "fetched": "2026-11-12",
+      "hash": "5813b1aabc71c4c9f6eb65b28dce62c5c8a4f28dcfc4579abce4eb86f0984723"
+    }
+  ]
+}

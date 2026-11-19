@@ -1,0 +1,413 @@
+{
+  "id": "tour-a-property",
+  "slug": "tour-a-property",
+  "kind": "process",
+  "title": "Tour a property",
+  "summary": "Prepare from the documents, then walk the site, the building, its systems and every tenant space, ask the manager what the files do not say, and drive the competition. The site visit report sends its repair costs to reserves and its rent and vacancy observations to the comps and the underwriting.",
+  "phase": "acquire",
+  "order": 210,
+  "featured": false,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-13",
+  "requires": [
+    "screen-deal-buy-box"
+  ],
+  "consumes": [
+    "deal-screen",
+    "offering-memorandum",
+    "rent-roll",
+    "trailing-12",
+    "survey",
+    "phase-i-esa",
+    "property-condition-assessment"
+  ],
+  "produces": [
+    "site-visit-report"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "fema-msc",
+      "url": "https://msc.fema.gov/portal/home",
+      "title": "FEMA Flood Map Service Center",
+      "publisher": "Federal Emergency Management Agency",
+      "accessed": "2026-11-13",
+      "quote": "Effective information that you download or print from this site may change or become superseded by new maps over time.",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-42-4012a",
+      "url": "https://www.law.cornell.edu/uscode/text/42/4012a",
+      "title": "42 U.S.C. 4012a, Flood insurance purchase and compliance requirements and escrow accounts",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "covered for the term of the loan by flood insurance in an amount at least equal to the outstanding principal balance of the loan",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-312-27",
+      "url": "https://www.ecfr.gov/current/title-40/section-312.27",
+      "title": "40 CFR 312.27, Visual inspections of the facility and of adjoining properties",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "Physical limitations to the visual inspection must be noted.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-312-22",
+      "url": "https://www.ecfr.gov/current/title-40/section-312.22",
+      "title": "40 CFR 312.22, Additional inquiries",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "may provide the information associated with such inquiries to the environmental professional",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-312-28",
+      "url": "https://www.ecfr.gov/current/title-40/section-312.28",
+      "title": "40 CFR 312.28, Specialized knowledge or experience on the part of the defendant",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "are not complete unless the results of the inquiries take into account the relevant and applicable specialized knowledge and experience",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "arrange-access",
+      "title": "Arrange the tour and its limits with the listing broker",
+      "instruction": "Draft the tour request to the listing broker. Ask for a date, who will attend for the seller (the property manager or building engineer is the most useful), and access to every suite, vacant and occupied, plus the roof, the electrical and mechanical rooms, the sprinkler riser and any yard or outdoor storage. Ask whether the seller allows questions to tenants during the tour and on what terms; the confidentiality agreement or the broker may forbid tenant contact, and the tour stays inside those limits. Ask for a site plan with suite numbers, a safe way onto the roof, and a current rent roll if the one in the package is old. List the sponsor's attendees. A person approves the request before it goes out, and the agreed terms go in the deal file.",
+      "mode": "agent",
+      "modeBasis": "Drafting and scheduling the request is agent work; the request speaks for the sponsor, so a person approves it.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "consumes": [
+        "offering-memorandum",
+        "deal-screen"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "build-tour-packet",
+      "title": "Build the tour packet from the documents",
+      "instruction": "Build what the walk is checked against. From the rent roll and offering, list every suite: tenant, area, lease dates, stated use and rent per square foot, each marked on the site plan. List each physical claim to confirm on site, such as building area, clear height, door counts, power, sprinklers, parking, roof age and recent capital work. From the trailing-12, note repair lines that recur or jump, to ask about. If the seller has shared a prior survey, title policy, Phase I or condition report, mark the easements, encroachments and reported deficiencies on the site plan so each can be looked at where it falls. Add recent public aerial imagery and note what changed over the years, such as new paving, outdoor storage or new neighbors. Load the packet on the device the walker will carry.",
+      "mode": "agent",
+      "modeBasis": "Every input is a document or public imagery an agent can read and lay out.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "arrange-access"
+      ],
+      "consumes": [
+        "rent-roll",
+        "offering-memorandum",
+        "trailing-12",
+        "deal-screen",
+        "survey",
+        "phase-i-esa",
+        "property-condition-assessment"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "multifamily": "List units by type with status (occupied, vacant, notice, down) from the rent roll, and pick the sample of units to enter before the tour so the seller does not choose them."
+      }
+    },
+    {
+      "id": "check-flood-map",
+      "title": "Confirm the flood map and mark it on the site plan",
+      "instruction": "Start from the flood zone the deal screen recorded, then open FEMA's Flood Map Service Center, the official public source for National Flood Insurance Program flood hazard data, and confirm the effective panel and its date; the service warns that maps are revised and downloaded copies can be superseded. Overlay the mapped zone on the site plan and mark which buildings, parking and drives fall in or near a special flood hazard area. Federal law has lending regulators bar regulated lenders from making, increasing, extending or renewing a loan secured by a building in that area, where federal flood insurance is available, unless flood insurance covers it for the loan's term, so a mapped building changes the debt and insurance cost. Add to the walk list: where the mapped edge falls, low points, drainage paths, detention ponds and any water marks on walls.",
+      "mode": "agent-browser",
+      "modeBasis": "FEMA's map service is a public website that needs no sign-in.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-tour-packet"
+      ],
+      "rules": [
+        "us-fed.flood.mandatory-purchase"
+      ],
+      "consumes": [
+        "deal-screen"
+      ],
+      "basis": "cited",
+      "sources": [
+        "fema-msc",
+        "usc-42-4012a"
+      ]
+    },
+    {
+      "id": "map-neighborhood-and-competition",
+      "title": "Map the neighborhood and the competing buildings",
+      "instruction": "From public maps and aerials, draw the neighborhood's edges (major roads, rail, water, changes in land use), the routes in from highways and arterials, and the use of every adjoining parcel. Then list the competing buildings: properties of similar type, size and age that a tenant of this building would also consider. For each, record any public listing for lease or sale, the listing broker, the asking rent if posted, and the date seen; an asking rent is not an achieved rent. Note new construction or cleared sites that could add supply. Turn the list into a drive route for after the walk, and give the competing buildings to the person pulling comps.",
+      "mode": "agent-browser",
+      "modeBasis": "Maps, aerial imagery and public listing sites can be read by an agent operating a browser.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-tour-packet"
+      ],
+      "market": "market-property-data",
+      "consumes": [
+        "offering-memorandum"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "industrial": "Compare the competing buildings' clear height, door counts, truck court depth and trailer parking with the subject; a newer building nearby with better specifications sets the tenant's alternative.",
+        "multifamily": "List competing communities of similar age and unit mix, and any under construction or recently opened that will compete on rent and concessions.",
+        "office": "Note the distance to the area's office core and its amenities; a location away from it can take longer to re-lease.",
+        "retail": "Record any public traffic count with its source and year, which side of the road the center sits on, signalized access, and the competing centers in the same trade area."
+      }
+    },
+    {
+      "id": "walk-the-site",
+      "title": "Walk the site and photograph it",
+      "instruction": "Walk the perimeter first, with the site plan. Check each access point and curb cut, the truck court or parking field, paving (cracks, potholes, failed patches, ponding), striping and the parking count, drainage inlets and detention, fencing and gates, lighting, signage and landscaping. Stand where each easement, encroachment and flood edge marked in the packet falls and note whether it touches a building, a dock, a drive or parking. Look across each property line at the neighbors' uses and anything stored or draining toward the site. Photograph from fixed points marked on the site plan and keep a photo log by number and location. Write down each difference from the offering as it is seen.",
+      "mode": "human-offline",
+      "modeBasis": "Someone has to be on the property to see, walk and photograph it.",
+      "actor": "principal",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-flood-map",
+        "map-neighborhood-and-competition"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "industrial": "Check truck court depth and turning room, trailer and car parking, the yard's surface, and any rail spur's condition and whether it is in use.",
+        "retail": "Check visibility from the road, the walk from parking to storefronts, cart and pylon signs, and rear service access for delivery trucks."
+      }
+    },
+    {
+      "id": "inspect-envelope-and-roof",
+      "title": "Inspect the exterior walls, openings and roof",
+      "instruction": "Walk the exterior walls and openings: cracks, settlement, staining, failed sealant and rust at panel joints and the base of walls, damaged doors, dock bumpers, levelers and seals, and broken glass. Go onto the roof only where the owner provides safe access; otherwise view it from a lift, a nearby vantage point or recent aerials, and say so in the report. On the roof, note the membrane type, ponding, blisters, patches, clogged drains, loose flashing and the condition of rooftop units. Inside, look up for stains, daylight and buckets. Ask the roof's installation year and whether a warranty is in force and can be assigned, and ask for the documents. This is the buyer's observation; the measured assessment is the condition consultant's, ordered with the other third-party reports.",
+      "mode": "human-offline",
+      "modeBasis": "Seeing the walls and roof means being on the property.",
+      "actor": "principal",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "walk-the-site"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "record-building-systems",
+      "title": "Record the building systems from their labels and tags",
+      "instruction": "Find each building system and record what its labels and tags say, without opening or operating equipment. Heating and cooling: count the units and record each nameplate's make and manufacture date. Electrical: the main service's rated amperage and voltage, and any visible damage or scorching. Fire protection: the sprinkler system type at the riser, the date on the latest inspection tag, and the fire alarm panel's status. Plumbing: water heater dates and signs of leaks. Elevators: the posted certificate and its date. Note generators, compressors, cranes and other equipment, and ask which belong to a tenant. List every component with its age for the reserve step, and mark anything not working, or old for its type, as a question for the condition consultant.",
+      "mode": "human-offline",
+      "modeBasis": "The labels and tags can only be read by someone in the building.",
+      "actor": "principal",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "inspect-envelope-and-roof"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "industrial": "Record crane capacity tags, the power serving tenant equipment, and the height of stored goods next to the sprinkler type; whether the sprinkler design suits the storage is a question for a fire protection professional.",
+        "multifamily": "Systems repeat unit by unit: record water heater and air conditioner ages in each unit entered, plus boilers, laundry rooms and any elevators.",
+        "office": "Record the central plant, elevators, the fire alarm and life-safety systems, and the building automation controls.",
+        "retail": "Rooftop units often serve one tenant each; the leases say whether the tenant or the landlord repairs and replaces them."
+      }
+    },
+    {
+      "id": "walk-each-tenant-space",
+      "title": "Walk every tenant space against the rent roll",
+      "instruction": "Enter every suite on the rent roll, vacant and occupied, unless the seller withholds one; list any not seen and why. In each, compare what is seen with its rent roll line: is it occupied, by the named tenant, at the stated size? Note signs that a tenant is shrinking or leaving, such as dark or empty areas, packed goods, a sublease sign or another company's name. Note the use, including processes, outdoor storage, and any drums, tanks, chemicals or staining, against the lease's permitted use. Record alterations a tenant added that may need removal when it leaves, and the space's condition: finishes, lighting, restrooms, slab cracks and damage. Photograph each suite under its number.",
+      "mode": "human-offline",
+      "modeBasis": "Entering and observing occupied space means being there with the seller's permission.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "walk-the-site"
+      ],
+      "consumes": [
+        "rent-roll"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "industrial": "In a single-tenant building the walk is the tenant's operation: note its investment in the space, such as racking, equipment and added power, and whether another user could take the space without heavy rework.",
+        "multifamily": "Enter the sample chosen in advance, every vacant and down unit, and the units the manager calls worst, not only models; occupied units are entered on the notice the leases require, arranged by the seller's manager.",
+        "office": "Note how densely suites are used, any space marked for sublease, and how the common areas and suites compare with the competing buildings.",
+        "retail": "Note storefront condition, posted hours and customer activity, and whether each space would suit a different retailer if the tenant left."
+      }
+    },
+    {
+      "id": "ask-manager-and-tenants",
+      "title": "Ask the property manager and, where allowed, the tenants",
+      "instruction": "Ask the property manager, with the seller's broker present if the seller requires: which repairs keep recurring and what they cost; when the roof, paving and major systems were last replaced and by whom; open warranties, permits, and code or fire inspection findings; insurance claims; which service contracts exist; which tenants pay late, have asked for relief, or have said they will renew, expand or leave; and any utility or tax problems. Ask tenants only within the limits the seller set, and keep to their experience of the building, how the landlord responds, and their space needs; never share the sponsor's price or plans. Record each answer as what the person said, with name, role and date; documents confirm it later.",
+      "mode": "human-offline",
+      "modeBasis": "These are conversations on site with people who answer a person, not an agent.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "walk-each-tenant-space",
+        "record-building-systems"
+      ],
+      "consumes": [
+        "trailing-12"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "drive-the-competition",
+      "title": "Drive the neighborhood and the competing buildings",
+      "instruction": "After the walk, drive the route prepared from the map. At each competing building, note the vacancy that can be seen (dark suites, for-lease signs and their brokers), its condition and age against the subject, and any construction or cleared land nearby that could add supply. Drive the approach routes at the time of day tenants or customers use them and note congestion, truck routes and anything that changed since the aerials were taken. Afterward, get asking rents and concessions from the listing brokers by phone or listing sheet, and record each with its source and date for the comps.",
+      "mode": "human-offline",
+      "modeBasis": "Seeing the competing buildings and the routes in person means driving them.",
+      "actor": "principal",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "ask-manager-and-tenants"
+      ],
+      "market": "market-property-data",
+      "basis": "practitioner"
+    },
+    {
+      "id": "write-site-visit-report",
+      "title": "Write the site visit report",
+      "instruction": "While the visit is fresh, turn the notes, photo log and answers into the site visit report. Fill every field: property, date, attendees by role, areas seen and not seen with the reason, occupancy and use observed suite by suite against the rent roll, condition observed with locations, building features as read on site, access and surroundings, the photo index, and the follow-up questions with who answers each. The most useful part is the list of differences from the documents; each names the document it contradicts. Keep what was seen, what was said and what is inferred apart. A person who toured reads and corrects the draft before it is filed in the deal file.",
+      "mode": "agent",
+      "modeBasis": "Writing the report from notes and photos is document work; the person who toured confirms it.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "drive-the-competition"
+      ],
+      "consumes": [
+        "rent-roll",
+        "offering-memorandum"
+      ],
+      "produces": [
+        "site-visit-report"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "note-environmental-observations",
+      "title": "Write up environmental observations for the Phase I",
+      "instruction": "Copy the report's environmental observations into a separate note: tanks, vent and fill pipes, drums, staining, stressed vegetation, floor drains and sumps, odors, tenants' processes, past uses the building suggests, and what was seen on adjoining land. Under the federal all-appropriate-inquiries rule, the inquiry is not complete unless it takes into account the buyer's specialized knowledge of the property and its surroundings, and the buyer may give that information to the environmental professional; send the note when the Phase I is engaged. The tour does not replace the professional's own visit: the rule requires a visual inspection of the property and of adjoining properties, with physical limitations noted, and a voluntary seller's refusal of access does not excuse it.",
+      "mode": "agent",
+      "modeBasis": "Extracting and organizing observations already in the report is document work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "write-site-visit-report"
+      ],
+      "rules": [
+        "us-fed.epa.all-appropriate-inquiries"
+      ],
+      "consumes": [
+        "site-visit-report"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-40-312-28",
+        "ecfr-40-312-22",
+        "ecfr-40-312-27"
+      ]
+    },
+    {
+      "id": "price-deferred-maintenance",
+      "title": "Turn condition findings into repairs and reserves",
+      "instruction": "Sort each condition finding in the report into one of two lists. Immediate repairs: work needed now or at closing, such as a failed roof section, a broken dock leveler or a life-safety item; each gets a cost from a bid, the seller's invoices or a consultant, with the source named, or is marked not estimated. Replacement components: roof, paving, heating and cooling units and the like, each with its observed age, an expected life and a current replacement cost, each with its source. Run the replacement-reserves calculator on the components for the annual reserve and the years it runs short, and the income-value calculator to show net operating income with the reserve included. Mark every figure preliminary until the property condition assessment arrives, and add anything the tour could not judge to that assessment's scope.",
+      "mode": "agent",
+      "modeBasis": "The lists and calculator runs work from the report and sourced costs; the cost estimates are assumptions a person reviews.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "write-site-visit-report"
+      ],
+      "calculators": [
+        "replacement-reserves",
+        "income-value"
+      ],
+      "consumes": [
+        "site-visit-report"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "multifamily": "Carry the reserve per unit and add the cost of turning vacant and down units to rentable condition as an immediate item.",
+        "office": "Leasing costs at each rollover, tenant improvements and commissions, are a separate reserve from building components; the tour's notes on suite condition inform them.",
+        "retail": "Leasing costs at each rollover, tenant improvements and commissions, are a separate reserve from building components; the tour's notes on suite condition inform them."
+      }
+    },
+    {
+      "id": "hand-findings-to-underwriting",
+      "title": "Hand the cost and rent findings to underwriting",
+      "instruction": "Send underwriting three things with the report attached. First, the immediate repair list and the reserve run, for the capital plan and the reserve line. Second, each difference from the rent roll in occupancy or use, as a question to settle before rent is projected, such as a suite that looked empty or a tenant showing signs of leaving. Third, the market observations: competing buildings' visible vacancy, asking rents with source and date, and new supply, for the lease comps and the market rent and downtime assumptions. Where a capital partner or investment committee will review the deal, include the report in its materials. Send the follow-up questions to the broker once a person approves them, and log the answers against the report. The tour is done when the report is filed and underwriting has the handoff.",
+      "mode": "agent",
+      "modeBasis": "Routing the report and its lists is document work; the questions to the broker speak for the sponsor, so a person approves them.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "note-environmental-observations",
+        "price-deferred-maintenance"
+      ],
+      "consumes": [
+        "site-visit-report",
+        "rent-roll"
+      ],
+      "basis": "practitioner"
+    }
+  ],
+  "outlineSteps": []
+}

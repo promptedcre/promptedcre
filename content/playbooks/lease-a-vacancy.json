@@ -1,0 +1,35 @@
+{
+  "id": "lease-a-vacancy",
+  "slug": "lease-a-vacancy",
+  "kind": "process",
+  "title": "Lease a vacancy",
+  "summary": "Market the space, qualify tenants, negotiate terms and sign the lease.",
+  "phase": "operate",
+  "order": 310,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Walk the space and list what it needs before it shows",
+    "Survey market rents for comparable space on one expense basis",
+    "Set the asking rent, term and lease structure",
+    "Budget improvements, commissions and free rent",
+    "Market the space and track inquiries and tours",
+    "Qualify the prospective tenant's operating record and credit",
+    "Compare each proposal on net effective rent",
+    "Test the deal against the return hurdle and loan coverage",
+    "Check the lender's consent rights over new leases",
+    "Negotiate and sign the lease",
+    "Get the SNDA and update the rent roll"
+  ]
+}

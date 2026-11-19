@@ -1,0 +1,505 @@
+{
+  "basis": "For each playbook step that names a ranked software market, the products in that market that do the step's work. AI-drafted on 2026-11-17 from each product's own one-line description in rankings/markets/*/vendors.json, at the owner's word (D218). It is not part of any practitioner review. An empty list means no product does the step (a phone call, a drive). Order is not rank: pages sort by score.",
+  "checkedOn": "2026-11-17",
+  "steps": {
+    "abstract-the-leases/hand-differences-to-underwriting": [
+      "argus-enterprise",
+      "rockport-val",
+      "radix-underwriting",
+      "archer",
+      "clik-ai",
+      "cactus",
+      "keyway",
+      "intellcre",
+      "microsoft-excel"
+    ],
+    "abstract-the-leases/reconcile-to-rent-roll": [
+      "clik-ai",
+      "radix-underwriting",
+      "keyway",
+      "microsoft-excel"
+    ],
+    "call-capital-fund-closing/approve-and-send-notices": [
+      "juniper-square",
+      "appfolio-investment-manager",
+      "investnext",
+      "agora",
+      "covercy",
+      "sponsorcloud",
+      "cash-flow-portal",
+      "janover-connect",
+      "avestor",
+      "realpage-ims"
+    ],
+    "call-capital-fund-closing/track-receipts": [
+      "juniper-square",
+      "appfolio-investment-manager",
+      "investnext",
+      "agora",
+      "covercy",
+      "sponsorcloud",
+      "cash-flow-portal",
+      "janover-connect",
+      "avestor",
+      "realpage-ims"
+    ],
+    "call-capital-fund-closing/verify-receiving-account": [],
+    "close-the-sale/answer-diligence-requests": [
+      "dealpath",
+      "intellcre"
+    ],
+    "close-the-sale/file-and-hand-off": [
+      "juniper-square",
+      "appfolio-investment-manager",
+      "investnext",
+      "agora",
+      "covercy",
+      "sponsorcloud",
+      "cash-flow-portal",
+      "janover-connect",
+      "avestor",
+      "realpage-ims"
+    ],
+    "close-the-sale/sign-closing-documents": [
+      "docusign",
+      "dropbox-sign"
+    ],
+    "close-the-sale/verify-funds-received": [
+      "mercury",
+      "relay"
+    ],
+    "decide-when-to-sell/tell-investors": [
+      "juniper-square",
+      "appfolio-investment-manager",
+      "investnext",
+      "agora",
+      "covercy",
+      "sponsorcloud",
+      "cash-flow-portal",
+      "janover-connect",
+      "avestor",
+      "realpage-ims"
+    ],
+    "file-form-d-and-state-notices/file-other-state-notices": [
+      "nasaa-efd"
+    ],
+    "file-form-d-and-state-notices/file-texas-notice": [
+      "nasaa-efd"
+    ],
+    "file-form-d-and-state-notices/receive-cik-set-up-account": [
+      "sec-edgar"
+    ],
+    "file-form-d-and-state-notices/set-up-login-gov": [
+      "sec-edgar"
+    ],
+    "file-form-d-and-state-notices/sign-and-file-form-d": [
+      "sec-edgar"
+    ],
+    "file-form-d-and-state-notices/sign-notarize-submit-form-id": [
+      "sec-edgar"
+    ],
+    "finance-and-close/call-capital-for-closing": [
+      "juniper-square",
+      "appfolio-investment-manager",
+      "investnext",
+      "agora",
+      "covercy",
+      "sponsorcloud",
+      "cash-flow-portal",
+      "janover-connect",
+      "avestor",
+      "realpage-ims"
+    ],
+    "finance-and-close/sign-closing-documents": [
+      "docusign",
+      "dropbox-sign"
+    ],
+    "finance-and-close/verify-wire-and-fund": [
+      "mercury",
+      "relay"
+    ],
+    "form-sponsor-entity/file-delaware-certificate": [
+      "de-corporations",
+      "csc",
+      "legalzoom",
+      "northwest-registered-agent",
+      "zenbusiness"
+    ],
+    "form-sponsor-entity/file-texas-certificate": [
+      "tx-sosportal",
+      "legalzoom",
+      "northwest-registered-agent",
+      "csc",
+      "zenbusiness"
+    ],
+    "form-sponsor-entity/line-up-registered-agent": [
+      "northwest-registered-agent",
+      "csc",
+      "legalzoom",
+      "zenbusiness"
+    ],
+    "form-sponsor-entity/open-bank-account": [
+      "mercury",
+      "relay"
+    ],
+    "investor-asks-to-exit/record-and-notify": [
+      "juniper-square",
+      "appfolio-investment-manager",
+      "investnext",
+      "agora",
+      "covercy",
+      "sponsorcloud",
+      "cash-flow-portal",
+      "janover-connect",
+      "avestor",
+      "realpage-ims"
+    ],
+    "investor-misses-capital-call/update-register-and-investors": [
+      "juniper-square",
+      "appfolio-investment-manager",
+      "investnext",
+      "agora",
+      "covercy",
+      "sponsorcloud",
+      "cash-flow-portal",
+      "janover-connect",
+      "avestor",
+      "realpage-ims"
+    ],
+    "lender-retrades-term-sheet/tell-investors": [
+      "juniper-square",
+      "appfolio-investment-manager",
+      "investnext",
+      "agora",
+      "covercy",
+      "sponsorcloud",
+      "cash-flow-portal",
+      "janover-connect",
+      "avestor",
+      "realpage-ims"
+    ],
+    "loan-covenant-breach/tell-investors": [
+      "juniper-square",
+      "appfolio-investment-manager",
+      "investnext",
+      "agora",
+      "covercy",
+      "sponsorcloud",
+      "cash-flow-portal",
+      "janover-connect",
+      "avestor",
+      "realpage-ims"
+    ],
+    "loan-maturity-refi-fails/tell-investors": [
+      "juniper-square",
+      "appfolio-investment-manager",
+      "investnext",
+      "agora",
+      "covercy",
+      "sponsorcloud",
+      "cash-flow-portal",
+      "janover-connect",
+      "avestor",
+      "realpage-ims"
+    ],
+    "make-a-distribution/record-the-distribution": [
+      "juniper-square",
+      "appfolio-investment-manager",
+      "investnext",
+      "agora",
+      "covercy",
+      "sponsorcloud",
+      "cash-flow-portal",
+      "janover-connect",
+      "avestor",
+      "realpage-ims"
+    ],
+    "make-a-distribution/send-statements": [
+      "juniper-square",
+      "appfolio-investment-manager",
+      "investnext",
+      "agora",
+      "covercy",
+      "sponsorcloud",
+      "cash-flow-portal",
+      "janover-connect",
+      "avestor",
+      "realpage-ims"
+    ],
+    "missed-form-d-deadline/file-form-d-now": [
+      "sec-edgar"
+    ],
+    "missed-form-d-deadline/file-other-state-notices": [
+      "nasaa-efd"
+    ],
+    "missed-form-d-deadline/file-texas-notice-now": [
+      "nasaa-efd"
+    ],
+    "missed-form-d-deadline/get-edgar-access": [
+      "sec-edgar"
+    ],
+    "negotiate-purchase-contract/fund-earnest-money": [
+      "mercury",
+      "relay"
+    ],
+    "negotiate-purchase-contract/sign-contract": [
+      "docusign",
+      "dropbox-sign"
+    ],
+    "onboard-an-investor/deliver-offering-documents": [
+      "juniper-square",
+      "appfolio-investment-manager",
+      "investnext",
+      "agora",
+      "covercy",
+      "sponsorcloud",
+      "cash-flow-portal",
+      "janover-connect",
+      "avestor",
+      "realpage-ims"
+    ],
+    "onboard-an-investor/investor-signs-package": [
+      "juniper-square",
+      "appfolio-investment-manager",
+      "investnext",
+      "agora",
+      "covercy",
+      "sponsorcloud",
+      "cash-flow-portal",
+      "janover-connect",
+      "avestor",
+      "realpage-ims"
+    ],
+    "onboard-an-investor/log-the-prospect": [
+      "juniper-square",
+      "appfolio-investment-manager",
+      "investnext",
+      "agora",
+      "covercy",
+      "sponsorcloud",
+      "cash-flow-portal",
+      "janover-connect",
+      "avestor",
+      "realpage-ims"
+    ],
+    "onboard-an-investor/update-investor-register": [
+      "juniper-square",
+      "appfolio-investment-manager",
+      "investnext",
+      "agora",
+      "covercy",
+      "sponsorcloud",
+      "cash-flow-portal",
+      "janover-connect",
+      "avestor",
+      "realpage-ims"
+    ],
+    "onboard-an-investor/verify-accredited-status": [
+      "verifyinvestor",
+      "icapital-identity"
+    ],
+    "phase-i-flags-condition/price-the-finding": [
+      "argus-enterprise",
+      "rockport-val",
+      "radix-underwriting",
+      "archer",
+      "clik-ai",
+      "cactus",
+      "keyway",
+      "intellcre",
+      "microsoft-excel"
+    ],
+    "prepare-offering-documents/approve-final-set": [
+      "juniper-square",
+      "appfolio-investment-manager",
+      "investnext",
+      "agora",
+      "covercy",
+      "sponsorcloud",
+      "cash-flow-portal",
+      "janover-connect",
+      "avestor",
+      "realpage-ims"
+    ],
+    "present-the-deal-to-investors/deliver-diligence-and-loan-terms": [
+      "juniper-square",
+      "appfolio-investment-manager",
+      "investnext",
+      "agora",
+      "covercy",
+      "sponsorcloud",
+      "cash-flow-portal",
+      "janover-connect",
+      "avestor",
+      "realpage-ims"
+    ],
+    "present-the-deal-to-investors/send-and-log-versions": [
+      "juniper-square",
+      "appfolio-investment-manager",
+      "investnext",
+      "agora",
+      "covercy",
+      "sponsorcloud",
+      "cash-flow-portal",
+      "janover-connect",
+      "avestor",
+      "realpage-ims"
+    ],
+    "pull-sale-and-lease-comps/read-appraisal-records": [
+      "harris-cad",
+      "bexar-cad"
+    ],
+    "pull-sale-and-lease-comps/search-data-services": [
+      "costar",
+      "compstak",
+      "crexi",
+      "reonomy",
+      "yardi-matrix",
+      "attom"
+    ],
+    "renew-a-tenant/gather-market-evidence": [
+      "compstak",
+      "costar",
+      "yardi-matrix",
+      "crexi",
+      "placer-ai"
+    ],
+    "renew-a-tenant/tell-lender-and-investors": [
+      "juniper-square",
+      "appfolio-investment-manager",
+      "investnext",
+      "agora",
+      "covercy",
+      "sponsorcloud",
+      "cash-flow-portal",
+      "janover-connect",
+      "avestor",
+      "realpage-ims"
+    ],
+    "run-due-diligence/update-underwriting": [
+      "argus-enterprise",
+      "rockport-val",
+      "radix-underwriting",
+      "archer",
+      "clik-ai",
+      "cactus",
+      "keyway",
+      "intellcre",
+      "microsoft-excel"
+    ],
+    "screen-deal-buy-box/log-lead-collect-package": [
+      "dealpath",
+      "archer",
+      "intellcre"
+    ],
+    "screen-deal-buy-box/pull-appraisal-record": [
+      "harris-cad",
+      "bexar-cad",
+      "regrid",
+      "attom",
+      "propertyreach"
+    ],
+    "screen-deal-buy-box/run-quick-math": [
+      "argus-enterprise",
+      "rockport-val",
+      "radix-underwriting",
+      "archer",
+      "clik-ai",
+      "cactus",
+      "keyway",
+      "intellcre",
+      "microsoft-excel"
+    ],
+    "screen-deal-buy-box/sign-confidentiality-agreement": [
+      "docusign",
+      "dropbox-sign"
+    ],
+    "source-acquisition-debt/rerun-returns-by-quote": [
+      "argus-enterprise",
+      "rockport-val",
+      "radix-underwriting",
+      "archer",
+      "clik-ai",
+      "cactus",
+      "keyway",
+      "intellcre",
+      "microsoft-excel"
+    ],
+    "submit-letter-of-intent/decide-counter": [
+      "docusign",
+      "dropbox-sign"
+    ],
+    "submit-letter-of-intent/sign-and-send-loi": [
+      "docusign",
+      "dropbox-sign"
+    ],
+    "tenant-files-bankruptcy/tell-investors": [
+      "juniper-square",
+      "appfolio-investment-manager",
+      "investnext",
+      "agora",
+      "covercy",
+      "sponsorcloud",
+      "cash-flow-portal",
+      "janover-connect",
+      "avestor",
+      "realpage-ims"
+    ],
+    "tenant-stops-paying/brief-investors": [
+      "juniper-square",
+      "appfolio-investment-manager",
+      "investnext",
+      "agora",
+      "covercy",
+      "sponsorcloud",
+      "cash-flow-portal",
+      "janover-connect",
+      "avestor",
+      "realpage-ims"
+    ],
+    "tour-a-property/drive-the-competition": [],
+    "tour-a-property/map-neighborhood-and-competition": [
+      "regrid",
+      "placer-ai",
+      "census-bureau",
+      "costar",
+      "crexi"
+    ],
+    "underwrite-a-deal/project-income": [
+      "compstak",
+      "costar",
+      "yardi-matrix",
+      "cherre"
+    ],
+    "underwrite-a-deal/run-returns": [
+      "argus-enterprise",
+      "rockport-val",
+      "radix-underwriting",
+      "archer",
+      "clik-ai",
+      "cactus",
+      "keyway",
+      "intellcre",
+      "microsoft-excel"
+    ],
+    "write-the-ic-memo/describe-property-and-market": [
+      "census-bureau",
+      "costar",
+      "yardi-matrix",
+      "placer-ai",
+      "attom",
+      "trepp"
+    ],
+    "write-the-ic-memo/show-returns-and-drivers": [
+      "argus-enterprise",
+      "rockport-val",
+      "radix-underwriting",
+      "archer",
+      "clik-ai",
+      "cactus",
+      "keyway",
+      "intellcre",
+      "microsoft-excel"
+    ]
+  }
+}

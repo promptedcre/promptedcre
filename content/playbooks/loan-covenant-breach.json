@@ -1,0 +1,522 @@
+{
+  "id": "loan-covenant-breach",
+  "slug": "loan-covenant-breach",
+  "kind": "situation",
+  "title": "The property breaches a loan covenant",
+  "summary": "Compute the test as the loan agreement defines it, project the next test dates and read the cure, cash management and default terms before the certificate is due. Tell the lender early with a priced plan, get any waiver or forbearance signed in writing, fund the cure as the governing documents allow and tell investors.",
+  "phase": "operate",
+  "order": 125,
+  "featured": false,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-13",
+  "situation": {
+    "trigger": "A covenant test, such as debt coverage, fails or is about to fail.",
+    "urgency": "days"
+  },
+  "requires": [
+    "negotiate-loan-documents",
+    "meet-loan-covenants"
+  ],
+  "consumes": [
+    "loan-documents",
+    "trailing-12",
+    "rent-roll",
+    "lease-abstract",
+    "underwriting-model",
+    "default-notice",
+    "guaranty",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "investor-register"
+  ],
+  "produces": [
+    "underwriting-model",
+    "forbearance-agreement",
+    "capital-call-notice"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "tx-bc-26",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.26.htm",
+      "title": "Texas Business and Commerce Code, Chapter 26 (Section 26.02, Loan agreement must be in writing)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "a financial institution loans or delays repayment of or agrees to loan or delay repayment of money",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-64",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.64.htm",
+      "title": "Texas Property Code, Chapter 64 (Assignment of rents to lienholder), Sections 64.051 to 64.060",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "After default, or as otherwise agreed by the assignor, the assignee may give the assignor a notice demanding that the assignor pay the assignee",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-51",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.51.htm",
+      "title": "Texas Property Code, Chapter 51 (Section 51.002, Sale of real property under contract lien)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "must be given at least 21 days before the date of the sale",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-fin-306",
+      "url": "https://tcss.legis.texas.gov/resources/FI/htm/FI.306.htm",
+      "title": "Texas Finance Code, Chapter 306 (Section 306.002, Interest on commercial loans)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "a rate or amount of interest that does not exceed the applicable ceilings computed in accordance with Chapter 303",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "To make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made",
+      "tier": "primary"
+    },
+    {
+      "id": "frb-cre-workouts-2023",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/files/bcreg20230629a1.pdf",
+      "title": "Policy Statement on Prudent Commercial Real Estate Loan Accommodations and Workouts (OCC, Federal Reserve, FDIC and NCUA, 2023)",
+      "publisher": "Board of Governors of the Federal Reserve System",
+      "accessed": "2026-11-13",
+      "quote": "Proactive engagement by the financial institution with the borrower often plays a key role in the success of the workout.",
+      "tier": "primary"
+    },
+    {
+      "id": "frb-cre-workouts-release",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20230629a.htm",
+      "title": "Agencies finalize policy statement on commercial real estate loan accommodations and workouts (June 29, 2023)",
+      "publisher": "Board of Governors of the Federal Reserve System",
+      "accessed": "2026-11-13",
+      "quote": "work prudently and constructively with creditworthy borrowers during times of financial stress",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-17-246-7",
+      "url": "https://www.ecfr.gov/current/title-17/part-246/section-246.7",
+      "title": "17 CFR 246.7, Hold of credit risk by third-party purchasers in commercial mortgage-backed securitizations (definitions)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "any servicer that, upon the occurrence of one or more specified conditions in the servicing agreement, has the right to service one or more assets",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "compute-the-covenant",
+      "title": "Compute the test the way the loan agreement defines it",
+      "instruction": "Copy each financial covenant from the loan agreement into the working file word for word: the ratio and its required level; how it defines income (which revenues and expenses count, whether reserves, a management fee or one-time items are adjusted, whether rent from defaulted or departing tenants is excluded); how it defines debt service (actual payments, or a stated rate and amortization); the period measured; trailing or annualized; and each test date. Compute the ratio from the trailing-12 and the rent roll on that definition, not on the underwriting's net operating income. Run the leverage calculator for coverage, debt yield and break-even occupancy as the agreement defines them. Record the result, the required level, the shortfall in dollars of income, and every line where the lender's definition differs from the books.",
+      "mode": "agent",
+      "modeBasis": "The definition is in the signed documents and the calculation runs from the operating statements and a live calculator.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "calculators": [
+        "leverage"
+      ],
+      "consumes": [
+        "loan-documents",
+        "trailing-12",
+        "rent-roll"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "project-next-tests",
+      "title": "Project the ratio at each coming test date",
+      "instruction": "Project income to each of the next test dates from the rent roll and lease abstracts: scheduled rent steps, free rent ending, known move-outs, each expiration with a stated renewal assumption, signed leases not yet paying, and expense changes such as a tax reassessment or an insurance renewal. Run the lease-rollover calculator for what expires before each date. If the rate floats, run the rate-reset calculator on the loan's index, spread and any rate cap with its expiration, because coverage can fail on rate alone. Put each date's projected ratio, the cushion or shortfall, and the income at which it fails in one table, and mark which assumptions rest on signed leases and which are hoped for.",
+      "mode": "agent",
+      "modeBasis": "The projection follows from the rent roll, lease abstracts and loan terms run through live calculators.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "compute-the-covenant"
+      ],
+      "calculators": [
+        "lease-rollover",
+        "rate-reset",
+        "leverage"
+      ],
+      "consumes": [
+        "rent-roll",
+        "lease-abstract",
+        "loan-documents",
+        "underwriting-model"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "industrial": "In a single-tenant or few-tenant building one renewal decides the result at a test date; project the test with the tenant renewing and with it leaving.",
+        "multifamily": "Trailing tests move each month with lease trade-outs, concessions and bad debt; project month by month up to each test date."
+      }
+    },
+    {
+      "id": "read-cure-and-cash-terms",
+      "title": "Read the cure rights, notice duties and cash management terms",
+      "instruction": "Start from the default map made when the loan documents were negotiated, if there is one, and confirm it against the signed documents. Find whether missing the test is an event of default or only a trigger for cash management, a reserve or recourse; any equity cure right (cash deposit, letter of credit or paydown), how the cure amount is computed, how often it may be used and its deadline; the notice the borrower must give and when, including the compliance certificate's due date and who signs it; any cure period; whether a lockbox springs, what a cash sweep captures and whether distributions stop. List each term with its section and date, and hand the dates to the principal before the lender is called.",
+      "mode": "agent",
+      "modeBasis": "Reading and listing the terms of signed documents is document work.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "consumes": [
+        "loan-documents"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "read-lender-remedies",
+      "title": "List what the lender may do after a default",
+      "instruction": "From the loan documents and any notice of default the lender has sent, list what the lender may do after a default (accelerate, charge default interest, apply reserves, take rents, foreclose), with each notice and cure period. In Texas an enforceable deed of trust creates an assignment of rents unless it says otherwise; after default, or as agreed, the lender may demand the rents from the borrower, who must pay over collected rents within 30 days of the notice unless the documents set another period, or may notify tenants to pay it directly (Tex. Prop. Code 64.051 to 64.060). Notice of a trustee's sale must be given at least 21 days before the sale; the statutory 20-day cure notice applies only to a debtor's residence (Tex. Prop. Code 51.002). Texas allows commercial loan interest up to the Chapter 303 ceilings (Tex. Fin. Code 306.002): send counsel default interest and fees.",
+      "mode": "agent",
+      "modeBasis": "The remedies are in the documents and the statutes; whether a charge is lawful is counsel's call.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-cure-and-cash-terms"
+      ],
+      "rules": [
+        "us-tx.property.assignment-of-rents",
+        "us-tx.property.foreclosure-sale-notice"
+      ],
+      "consumes": [
+        "loan-documents",
+        "default-notice"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-64",
+        "tx-prop-51",
+        "tx-fin-306"
+      ]
+    },
+    {
+      "id": "check-guaranty-and-cross-defaults",
+      "title": "Check the guaranty and the cross-defaults",
+      "instruction": "Read the guaranty record and the loan documents for what this miss sets off beyond the loan. Does it, or a default that follows, trigger full or partial recourse, such as a carve-out for rents paid out after a cash trap began or for late financial reports? Do the guarantor's own net worth and liquidity covenants still hold after the same downturn, and after a cure the guarantor funds? Which cross-defaults apply: in this loan to the guarantor's other debt, and in the guarantor's other loans, credit lines and interest rate swaps to this default? List each exposure with its document and section, and send counsel any trigger whose meaning is unclear before anyone writes to the lender.",
+      "mode": "agent",
+      "modeBasis": "The guaranty and loan documents are read and compared; how an unclear trigger reads is counsel's call.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-cure-and-cash-terms"
+      ],
+      "consumes": [
+        "guaranty",
+        "loan-documents"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "price-the-remedies",
+      "title": "Price each way back to compliance",
+      "instruction": "Price each option on the projected income. Run the debt-sizing calculator at the covenant level to find the loan the income supports; the difference from today's balance is the paydown a cure would need, before any prepayment premium or swap breakage the documents charge. Run the loan-payments calculator for a modification: longer amortization, interest-only months or a new payment, and the balance at maturity. Run the leverage calculator for the ratio after each option and how long a cash sweep would run at projected cash flow. Run returns-sensitivity and waterfall-promote on each option to show the effect on equity returns and on each class of investor. Record each option's cost, cash needed and date in the underwriting model.",
+      "mode": "agent",
+      "modeBasis": "Each option is priced with live calculators from recorded inputs.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "project-next-tests",
+        "read-cure-and-cash-terms"
+      ],
+      "calculators": [
+        "debt-sizing",
+        "loan-payments",
+        "leverage",
+        "returns-sensitivity",
+        "waterfall-promote"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "loan-documents"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "list-cure-funding-sources",
+      "title": "List what can fund a cure under the governing documents",
+      "instruction": "From the governing documents, list each source that could fund a cure, with its clause, who decides and its limits. Reserves: lender-held reserves move only as the loan documents allow, and property cash may be caught by a sweep. A capital call: whether the agreement allows further calls for this purpose, whether contributions are mandatory or voluntary, and what happens to a member who does not fund, such as dilution or a priority loan by the others. A member or sponsor loan: whether it is allowed, its rank and rate, and who approves a loan from the manager's affiliate. In a fund, whether unfunded commitments may be drawn for an existing asset; in a joint venture, the additional-capital and partner-loan clauses. Note any limit the loan documents put on new equity, pledges or other debt.",
+      "mode": "agent",
+      "modeBasis": "The funding terms are in the governing and loan documents; choosing among them is the principal's decision.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "price-the-remedies"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "loan-documents"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "call-the-lender-early",
+      "title": "Call the lender before the compliance certificate is due",
+      "instruction": "Once the numbers show a miss, a principal calls the loan officer or servicer before the compliance certificate is due. Explain the result, its cause and the projection, say a written plan will follow, and ask how the lender wants the request made, by when, and whether it requires a pre-negotiation letter before talks. For bank and credit union lenders, the federal banking agencies' 2023 policy statement calls for working prudently and constructively with creditworthy borrowers and says proactive engagement often plays a key role in a workout. On a securitized loan, call the servicer named in the loan documents; the servicing agreement sets the conditions on which a special servicer takes the loan over. Promise nothing on the call that is not yet approved, and log what was said.",
+      "mode": "human-offline",
+      "modeBasis": "A phone call that speaks for the borrower is a person's; an agent prepares the numbers and the notes.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "compute-the-covenant",
+        "project-next-tests",
+        "read-cure-and-cash-terms"
+      ],
+      "consumes": [
+        "loan-documents",
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "frb-cre-workouts-2023",
+        "frb-cre-workouts-release",
+        "ecfr-17-246-7"
+      ]
+    },
+    {
+      "id": "choose-the-plan",
+      "title": "Choose the request and how the cure is funded",
+      "instruction": "Decide what to ask the lender for and how any cure is funded: a one-time waiver, an equity cure, a paydown, added collateral or reserves, accepting the cash sweep, or a modification, and the source of each dollar from the funding list. Weigh each option's cost, the coming test dates, the recourse and cross-default exposure, and what investors were told. In a fund, record any approval the fund documents require, such as the investment committee's vote or the advisory committee's consent to a loan from the sponsor. Record the decision, the reasons and the fallback if the lender says no.",
+      "mode": "human-online",
+      "modeBasis": "What to offer a lender and whose money funds it are decisions that bind the firm.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-lender-remedies",
+        "check-guaranty-and-cross-defaults",
+        "price-the-remedies",
+        "list-cure-funding-sources",
+        "call-the-lender-early"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "deal-entity-agreement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "partner-consents-to-plan",
+      "title": "Get the capital partner's consent to the plan",
+      "instruction": "Send the capital partner the covenant computation, the projection, the priced options and the chosen plan. Modifying the loan, adding capital or reserves and a partner loan are usually major decisions a JV agreement reserves for the capital partner; get its written consent before anything goes to the lender. Confirm how added capital is split and credited, whether a partner that does not fund is diluted, and whether the change affects the promote.",
+      "mode": "human-online",
+      "modeBasis": "The partner's consent is its own decision under the JV agreement.",
+      "actor": "investor",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-the-plan"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "calculators": [
+        "waterfall-promote"
+      ],
+      "consumes": [
+        "jv-agreement",
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "deliver-certificate-and-request",
+      "title": "Deliver an accurate certificate and the written request",
+      "instruction": "Sign and deliver the compliance certificate on time and accurate; a certificate that hides a miss can be a default or a recourse trigger of its own. With it or before it, send the written request by the method and to the addresses the notice clause sets. Attach the covenant computation, the projection, the cause and the fix, the current rent roll and trailing-12, the plan and how it is funded, and current financial statements for the borrower and each guarantor. For bank and credit union lenders, the 2023 policy statement lists updated and comprehensive financial information on the borrower, the project and all guarantors and sponsors, and current collateral valuations, among the elements of a prudent workout plan. Counsel reads any pre-negotiation letter before a principal signs it.",
+      "mode": "human-online",
+      "modeBasis": "The certificate and the request are signed for the borrower; an agent assembles the package.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-the-plan",
+        "partner-consents-to-plan"
+      ],
+      "consumes": [
+        "loan-documents",
+        "rent-roll",
+        "trailing-12",
+        "underwriting-model",
+        "guaranty"
+      ],
+      "basis": "cited",
+      "sources": [
+        "frb-cre-workouts-2023"
+      ]
+    },
+    {
+      "id": "sign-the-agreement-in-writing",
+      "title": "Get any waiver, forbearance or modification signed",
+      "instruction": "Counsel negotiates the waiver, forbearance or modification and puts it in one document both sides sign. In Texas, a loan agreement includes an agreement by a bank, savings bank, savings and loan association, credit union, one of their affiliates or a HUD-approved lender to delay repayment or make a financial accommodation; where more than $50,000 is involved it is unenforceable unless in writing and signed by the party to be bound, so such a lender's spoken promise to hold off does not bind it (Tex. Bus. & Com. Code 26.02, which applies only where the lender gave its conspicuous notice on or before signing). Before a principal signs, counsel reviews the acknowledged defaults, any release of claims, termination events and milestones, fees, guarantor reaffirmations and the reservation of rights, and they are recorded in the forbearance agreement record.",
+      "mode": "human-online",
+      "modeBasis": "Negotiating and signing an agreement that changes the loan is counsel's work and a principal's signature.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "deliver-certificate-and-request"
+      ],
+      "rules": [
+        "us-tx.finance.loan-agreement-in-writing"
+      ],
+      "consumes": [
+        "loan-documents",
+        "guaranty"
+      ],
+      "produces": [
+        "forbearance-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-bc-26"
+      ]
+    },
+    {
+      "id": "run-the-agreed-terms",
+      "title": "Prepare the cure funding and calendar the agreed terms",
+      "instruction": "Carry out what was signed, up to the point where money moves. Prepare the cure funding from the approved source for a principal to release: a capital call follows the playbook Call capital and fund a closing, and an investor who does not fund opens the situation An investor fails to fund a capital call; a member loan gets its own signed note on the terms the governing documents require. Put every milestone, report, sweep, reserve deposit and coming test date from the agreement on the covenant calendar, and compute each period's ratio on the lender's definition so the next certificate is prepared the same way. Flag to a principal any milestone at risk before it is missed.",
+      "mode": "agent",
+      "modeBasis": "Drafting notices, preparing the funding request and keeping the calendar is agent work; a person approves each notice, and a person releases the money.",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-the-agreement-in-writing"
+      ],
+      "calculators": [
+        "leverage"
+      ],
+      "consumes": [
+        "forbearance-agreement",
+        "deal-entity-agreement",
+        "investor-register"
+      ],
+      "produces": [
+        "capital-call-notice"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "release-the-cure-payment",
+      "title": "Release the cure payment",
+      "instruction": "On the date the agreement sets, a principal releases the cure payment from the approved source to the account the lender's written instructions name, after confirming those instructions through a channel already trusted, as the situation Wire instructions change before closing describes. Save the bank's confirmation with the signed agreement, and give the agent the amount and the date so the covenant calendar and the next investor update show the cure as made.",
+      "mode": "human-online",
+      "modeBasis": "Moving money is a person's act: the bank takes the instruction only from an authorized signer.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "run-the-agreed-terms"
+      ],
+      "consumes": [
+        "forbearance-agreement",
+        "wire-instructions"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "tell-investors",
+      "title": "Tell investors what happened and what comes next",
+      "instruction": "Draft an update once the plan is agreed, or sooner if the governing documents or a stopped distribution call for it: the test missed and why, the lender's response, the cure and how it is funded, any capital requested, the effect on distributions and projected returns, and the risks that remain. Rule 10b-5 bars untrue statements of material fact, and omissions that make what is said misleading, in connection with buying or selling securities; where an offering is open, interests are changing hands or investors are asked for more capital, counsel decides what must be said. Match every figure to the covenant computation and the underwriting model. A principal approves the update before it goes out.",
+      "mode": "agent",
+      "modeBasis": "Drafting from the computation and the model is writing work; investor communications go out only with a person's approval.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-the-agreement-in-writing"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "market": "investor-portals-fund-admin",
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5"
+      ]
+    }
+  ],
+  "outlineSteps": []
+}

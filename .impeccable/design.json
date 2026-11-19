@@ -1,0 +1,605 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-15T04:59:14.378Z",
+  "title": "Design System: PromptedCRE",
+  "extensions": {
+    "colorMeta": {
+      "bg": {
+        "role": "neutral",
+        "displayName": "Ground (Night)",
+        "canonical": "oklch(0.185 0.028 258)"
+      },
+      "bg-raised": {
+        "role": "neutral",
+        "displayName": "Sheet Paper (Night)",
+        "canonical": "oklch(0.215 0.032 258)"
+      },
+      "bg-inset": {
+        "role": "neutral",
+        "displayName": "Well (Night)",
+        "canonical": "oklch(0.15 0.024 258)"
+      },
+      "bg-panel": {
+        "role": "neutral",
+        "displayName": "Selected (Night)",
+        "canonical": "oklch(0.25 0.036 258)"
+      },
+      "bg-tile": {
+        "role": "neutral",
+        "displayName": "Control Fill (Night)",
+        "canonical": "oklch(0.29 0.036 258)"
+      },
+      "fill-hover": {
+        "role": "neutral",
+        "displayName": "Hover Fill (Night)",
+        "canonical": "oklch(0.89 0.03 254)"
+      },
+      "selection": {
+        "role": "neutral",
+        "displayName": "Selection (Night)",
+        "canonical": "oklch(0.4 0.1 256)"
+      },
+      "scrim": {
+        "role": "neutral",
+        "displayName": "Scrim (Night)"
+      },
+      "shadow": {
+        "role": "neutral",
+        "displayName": "Shadow (Night)",
+        "canonical": "oklch(0.15 0.024 258)"
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Row Rule (Night)",
+        "canonical": "oklch(0.3 0.04 258)"
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Sheet Border (Night)",
+        "canonical": "oklch(0.39 0.04 258)"
+      },
+      "line-bold": {
+        "role": "neutral",
+        "displayName": "Emphasis (Night)",
+        "canonical": "oklch(0.515 0.04 258)"
+      },
+      "grid-minor": {
+        "role": "neutral",
+        "displayName": "Grid Minor (Night)"
+      },
+      "grid-major": {
+        "role": "neutral",
+        "displayName": "Grid Major (Night)"
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Ink (Night)",
+        "canonical": "oklch(0.955 0.012 255)"
+      },
+      "text-muted": {
+        "role": "neutral",
+        "displayName": "Muted Ink (Night)",
+        "canonical": "oklch(0.83 0.025 255)"
+      },
+      "text-faint": {
+        "role": "neutral",
+        "displayName": "Faint Ink (Night)",
+        "canonical": "oklch(0.74 0.03 255)"
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Drafting Blue (Night)",
+        "canonical": "oklch(0.78 0.09 252)"
+      },
+      "accent-strong": {
+        "role": "primary",
+        "displayName": "Strong Drafting Blue (Night)",
+        "canonical": "oklch(0.85 0.077 250)"
+      },
+      "accent-ink": {
+        "role": "primary",
+        "displayName": "Ink on a Fill (Night)",
+        "canonical": "oklch(0.16 0.026 258)"
+      },
+      "agent": {
+        "role": "secondary",
+        "displayName": "Agent Green (Night)",
+        "canonical": "oklch(0.82 0.14 162)"
+      },
+      "agent-text": {
+        "role": "secondary",
+        "displayName": "Agent Word (Night)",
+        "canonical": "oklch(0.885 0.11 162)"
+      },
+      "agent-mid": {
+        "role": "secondary",
+        "displayName": "Agent Border (Night)",
+        "canonical": "oklch(0.5 0.09 162)"
+      },
+      "agent-deep": {
+        "role": "secondary",
+        "displayName": "Agent Tint (Night)",
+        "canonical": "oklch(0.29 0.05 162)"
+      },
+      "human": {
+        "role": "tertiary",
+        "displayName": "Person Amber (Night)",
+        "canonical": "oklch(0.82 0.13 78)"
+      },
+      "human-text": {
+        "role": "tertiary",
+        "displayName": "Person Word (Night)",
+        "canonical": "oklch(0.88 0.105 80)"
+      },
+      "human-mid": {
+        "role": "tertiary",
+        "displayName": "Person Border (Night)",
+        "canonical": "oklch(0.52 0.085 78)"
+      },
+      "human-deep": {
+        "role": "tertiary",
+        "displayName": "Person Tint (Night)",
+        "canonical": "oklch(0.29 0.045 78)"
+      },
+      "human-ink": {
+        "role": "tertiary",
+        "displayName": "Ink on Amber (Night)",
+        "canonical": "oklch(0.16 0.026 258)"
+      },
+      "danger": {
+        "role": "status",
+        "displayName": "Redline (Night)",
+        "canonical": "oklch(0.7 0.185 27)"
+      },
+      "warn": {
+        "role": "status",
+        "displayName": "Burnt Orange (Night)",
+        "canonical": "oklch(0.75 0.155 52)"
+      },
+      "dim-line": {
+        "role": "primary",
+        "displayName": "Dimension Line (Night)"
+      },
+      "dim-ext": {
+        "role": "primary",
+        "displayName": "Extension Line (Night)"
+      },
+      "paper-bg": {
+        "role": "neutral",
+        "displayName": "Ground (Paper)",
+        "canonical": "oklch(0.972 0.006 250)"
+      },
+      "paper-bg-raised": {
+        "role": "neutral",
+        "displayName": "Sheet Paper (Paper)",
+        "canonical": "oklch(0.995 0.002 250)"
+      },
+      "paper-bg-inset": {
+        "role": "neutral",
+        "displayName": "Well (Paper)",
+        "canonical": "oklch(0.952 0.01 250)"
+      },
+      "paper-bg-panel": {
+        "role": "neutral",
+        "displayName": "Selected (Paper)",
+        "canonical": "oklch(0.935 0.016 250)"
+      },
+      "paper-bg-tile": {
+        "role": "neutral",
+        "displayName": "Control Fill (Paper)",
+        "canonical": "oklch(0.915 0.022 250)"
+      },
+      "paper-fill-hover": {
+        "role": "neutral",
+        "displayName": "Hover Fill (Paper)",
+        "canonical": "oklch(0.32 0.075 262)"
+      },
+      "paper-selection": {
+        "role": "neutral",
+        "displayName": "Selection (Paper)",
+        "canonical": "oklch(0.86 0.06 255)"
+      },
+      "paper-scrim": {
+        "role": "neutral",
+        "displayName": "Scrim (Paper)"
+      },
+      "paper-shadow": {
+        "role": "neutral",
+        "displayName": "Shadow (Paper)"
+      },
+      "paper-line": {
+        "role": "neutral",
+        "displayName": "Row Rule (Paper)",
+        "canonical": "oklch(0.885 0.018 255)"
+      },
+      "paper-line-strong": {
+        "role": "neutral",
+        "displayName": "Sheet Border (Paper)",
+        "canonical": "oklch(0.74 0.04 258)"
+      },
+      "paper-line-bold": {
+        "role": "neutral",
+        "displayName": "Emphasis (Paper)",
+        "canonical": "oklch(0.55 0.08 260)"
+      },
+      "paper-grid-minor": {
+        "role": "neutral",
+        "displayName": "Grid Minor (Paper)"
+      },
+      "paper-grid-major": {
+        "role": "neutral",
+        "displayName": "Grid Major (Paper)"
+      },
+      "paper-text": {
+        "role": "neutral",
+        "displayName": "Ink (Paper)",
+        "canonical": "oklch(0.24 0.045 262)"
+      },
+      "paper-text-muted": {
+        "role": "neutral",
+        "displayName": "Muted Ink (Paper)",
+        "canonical": "oklch(0.38 0.04 260)"
+      },
+      "paper-text-faint": {
+        "role": "neutral",
+        "displayName": "Faint Ink (Paper)",
+        "canonical": "oklch(0.47 0.035 258)"
+      },
+      "paper-accent": {
+        "role": "primary",
+        "displayName": "Drafting Blue (Paper)",
+        "canonical": "oklch(0.45 0.16 262)"
+      },
+      "paper-accent-strong": {
+        "role": "primary",
+        "displayName": "Strong Drafting Blue (Paper)",
+        "canonical": "oklch(0.38 0.17 264)"
+      },
+      "paper-accent-ink": {
+        "role": "primary",
+        "displayName": "Ink on a Fill (Paper)",
+        "canonical": "oklch(0.995 0.002 250)"
+      },
+      "paper-agent": {
+        "role": "secondary",
+        "displayName": "Agent Green (Paper)",
+        "canonical": "oklch(0.52 0.122 158)"
+      },
+      "paper-agent-text": {
+        "role": "secondary",
+        "displayName": "Agent Word (Paper)",
+        "canonical": "oklch(0.43 0.1 158)"
+      },
+      "paper-agent-mid": {
+        "role": "secondary",
+        "displayName": "Agent Border (Paper)",
+        "canonical": "oklch(0.63 0.1 160)"
+      },
+      "paper-agent-deep": {
+        "role": "secondary",
+        "displayName": "Agent Tint (Paper)",
+        "canonical": "oklch(0.955 0.035 160)"
+      },
+      "paper-human": {
+        "role": "tertiary",
+        "displayName": "Person Amber (Paper)",
+        "canonical": "oklch(0.6 0.13 70)"
+      },
+      "paper-human-text": {
+        "role": "tertiary",
+        "displayName": "Person Word (Paper)",
+        "canonical": "oklch(0.45 0.101 65)"
+      },
+      "paper-human-mid": {
+        "role": "tertiary",
+        "displayName": "Person Border (Paper)",
+        "canonical": "oklch(0.64 0.13 82)"
+      },
+      "paper-human-deep": {
+        "role": "tertiary",
+        "displayName": "Person Tint (Paper)",
+        "canonical": "oklch(0.95 0.075 95)"
+      },
+      "paper-human-ink": {
+        "role": "tertiary",
+        "displayName": "Ink on Amber (Paper)",
+        "canonical": "oklch(0.16 0.026 258)"
+      },
+      "paper-danger": {
+        "role": "status",
+        "displayName": "Redline (Paper)",
+        "canonical": "oklch(0.52 0.21 27)"
+      },
+      "paper-warn": {
+        "role": "status",
+        "displayName": "Burnt Orange (Paper)",
+        "canonical": "oklch(0.5 0.143 45)"
+      },
+      "paper-dim-line": {
+        "role": "primary",
+        "displayName": "Dimension Line (Paper)"
+      },
+      "paper-dim-ext": {
+        "role": "primary",
+        "displayName": "Extension Line (Paper)"
+      }
+    },
+    "typographyMeta": {
+      "hero": {
+        "displayName": "Hero",
+        "purpose": "The home h1 only. Fluid."
+      },
+      "page": {
+        "displayName": "Page",
+        "purpose": "Every other h1. Under 640 px: 2rem, line-height 1.14."
+      },
+      "title-l": {
+        "displayName": "Title L",
+        "purpose": "h2. Under 640 px: 1.5rem, line-height 1.16."
+      },
+      "title-m": {
+        "displayName": "Title M",
+        "purpose": "h3, a sheet's title."
+      },
+      "title-s": {
+        "displayName": "Title S",
+        "purpose": "Row and step titles, h4."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "One per page head, muted ink. Under 640 px: 1.125rem."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Prose, with the 68ch measure."
+      },
+      "body-s": {
+        "displayName": "Body S",
+        "purpose": "Secondary rows, table cells, captions."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Controls, table heads, chips, keys. Sentence case."
+      },
+      "note": {
+        "displayName": "Note",
+        "purpose": "The 12 px floor: chart ticks, fine print."
+      },
+      "figure": {
+        "displayName": "Figure",
+        "purpose": "One lead figure per sheet at most. Fluid."
+      },
+      "code": {
+        "displayName": "Code",
+        "purpose": "Prompts and commands. IBM Plex Mono 400."
+      },
+      "data": {
+        "displayName": "Data",
+        "purpose": "Dimension labels, ids, dates in a table. IBM Plex Mono 500."
+      }
+    },
+    "shadows": [
+      {
+        "name": "search-dialog",
+        "value": "0 1.5rem 4rem var(--shadow)",
+        "purpose": "The one shadow on the site, under the search palette."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Short strokes, ink changes, every CSS transition."
+      },
+      {
+        "name": "ease-in-out",
+        "value": "cubic-bezier(0.65, 0, 0.35, 1)",
+        "purpose": "Long strokes: the revision cloud and the connectors."
+      },
+      {
+        "name": "dur-1",
+        "value": "120ms",
+        "purpose": "Feedback; the default of every transition utility."
+      },
+      {
+        "name": "dur-2",
+        "value": "200ms",
+        "purpose": "A change of state: pencil to ink."
+      },
+      {
+        "name": "dur-3",
+        "value": "320ms",
+        "purpose": "A change of layout: a fold opening, a short stroke."
+      },
+      {
+        "name": "dur-4",
+        "value": "600ms",
+        "purpose": "The authored moment."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "An action that stays on the page; one per screenful.",
+      "html": "<button class=\"ds-btn ds-btn-primary\">Copy the sentence</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 2.5rem; padding: 0 1rem; border: 1px solid transparent; border-radius: 2px; font: 540 0.8125rem/1.35 var(--font-sans); letter-spacing: 0.01em; white-space: nowrap; cursor: pointer; transition: background-color var(--dur-1) var(--ease-out), border-color var(--dur-1) var(--ease-out), color var(--dur-1) var(--ease-out); } .ds-btn:focus-visible { outline: var(--focus-ring); outline-offset: 2px; } .ds-btn-primary { border-color: var(--text); background-color: var(--text); color: var(--accent-ink); } .ds-btn-primary:hover { border-color: var(--fill-hover); background-color: var(--fill-hover); } .ds-btn-primary:active { border-color: var(--text-muted); background-color: var(--text-muted); }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "An outlined action; also the motion controls.",
+      "html": "<button class=\"ds-btn ds-btn-secondary\">Replay the handoff</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 2.5rem; padding: 0 1rem; border: 1px solid transparent; border-radius: 2px; font: 540 0.8125rem/1.35 var(--font-sans); letter-spacing: 0.01em; white-space: nowrap; cursor: pointer; } .ds-btn:focus-visible { outline: var(--focus-ring); outline-offset: 2px; } .ds-btn-secondary { border-color: var(--line-bold); background-color: transparent; color: var(--text); } .ds-btn-secondary:hover { border-color: var(--text-faint); background-color: var(--bg-tile); } .ds-btn-secondary:active { background-color: var(--bg-panel); }"
+    },
+    {
+      "name": "Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "A fact or a state; the frame and square carry the tone, the word is neutral ink.",
+      "html": "<span class=\"ds-tag ds-tag-human ds-tag-dashed\"><span class=\"ds-tag-dot\"></span>Not live yet</span>",
+      "css": ".ds-tag { --tag-ink: var(--line-bold); display: inline-flex; align-items: center; gap: 0.375rem; border: 1px solid var(--tag-ink); border-radius: 2px; padding: 0.125rem 0.5rem; font: 540 0.8125rem/1.35 var(--font-sans); letter-spacing: 0.01em; white-space: nowrap; color: var(--text); } .ds-tag-dashed { border-style: dashed; } .ds-tag-human { --tag-ink: var(--human); } .ds-tag-dot { display: inline-block; width: 0.4375rem; height: 0.4375rem; background-color: var(--tag-ink); }"
+    },
+    {
+      "name": "Stamp",
+      "kind": "custom",
+      "refersTo": "stamp",
+      "description": "A person reviewed this record, on this date. The one review color.",
+      "html": "<span class=\"ds-stamp\"><span class=\"ds-stamp-word\">Practitioner</span><span class=\"ds-stamp-date\">reviewed <time>YYYY-MM-DD</time></span></span>",
+      "css": ".ds-stamp { display: inline-flex; flex-direction: column; align-items: center; gap: 0.125rem; border: 1.5px solid var(--accent); padding: 0.4375rem 0.75rem 0.375rem; white-space: nowrap; color: var(--accent-strong); } .ds-stamp-word { font: 600 0.8125rem/1.35 var(--font-sans); letter-spacing: 0.01em; } .ds-stamp-date { font: 480 0.75rem/1.4 var(--font-sans); letter-spacing: 0.015em; } .ds-stamp-date time { font: 500 0.75rem/1.4 var(--font-mono); }"
+    },
+    {
+      "name": "Role Marks",
+      "kind": "custom",
+      "refersTo": "role-mark",
+      "description": "Who does a step: green square for an agent, amber with a cut corner for a person, hatched for the variants.",
+      "html": "<span class=\"ds-role\"><i class=\"ds-mk\"></i>Agent</span> <span class=\"ds-role\"><i class=\"ds-mk ds-mk-o\"></i>Person offline</span>",
+      "css": ".ds-role { display: inline-flex; align-items: center; gap: 0.5rem; font: 540 0.8125rem/1.35 var(--font-sans); letter-spacing: 0.01em; color: var(--text); } .ds-mk { display: block; width: 0.75rem; height: 0.75rem; color: var(--agent); background-color: currentColor; } .ds-mk-o { color: var(--human); background-color: transparent; background-image: var(--hatch); box-shadow: inset 0 0 0 1px currentColor; clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 5px, 100% 100%, 0 100%); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Drawing Set, Seen in Two Lights",
+    "overview": "The site is a set of construction drawings. Real estate operators read drawings every week, so the drawing conventions carry meaning the reader already knows: a solid line is written, a dashed line is outlined, hatching is a variant, a cut corner is a person's step, a dash-dot property line divides the agent's side from the person's, a red revision cloud circles the one step the engine refused, a flat stamp says a person reviewed it, and a title block says who drew it and who approves it. Each device has one meaning and one definition, and the system uses it for that meaning and nothing else.\n\nNight is the drawing set at night: a dark blue ground, sheets one step lighter, light ink. Paper is the same set on a desk in daylight, composed for paper rather than inverted: a cool white sheet on a greyer light table, a blue-line border, and every color a writing instrument. Density is calm. Persuade pages (`/`, `/audit`, `/connect`, `/run`) commit fully to the world and carry the one authored motion. Read and Operate pages (the catalog, the library, the calculators, the rankings, search) are precise and restrained: plain ground, ruled rows, a fixed type scale, no load choreography.\n\nThe world carries structure, not decoration. The grid wallpaper, the kickers, the tick rules under headings, mono on words, boxes inside boxes, colored side stripes and the blurred header were removed in this round and are banned.",
+    "keyCharacteristics": [
+      "One border per sheet; inside it, rules, never another box.",
+      "The drafting grid only inside a drawing.",
+      "Color encodes role and state; a mark carries the color and the words stay neutral ink.",
+      "Meaning by shape as well as color: a cut corner, hatching, a dashed line, a cloud.",
+      "Archivo for every word; Plex Mono only for prompts, commands, paths, ids and measured figures.",
+      "Square: radius 0 on surfaces, 2 px on controls. No shadows but the search dialog's.",
+      "Server HTML is the finished drawing; motion pencils it and inks it, replaying only the recorded run."
+    ],
+    "rules": [
+      {
+        "name": "The Writing Instrument Rule",
+        "body": "Every color is a writing instrument: blue-black ink for words and linework, blue ink for links, dimensions and the stamp, green ink for the agent, amber and a highlighter for a person, red pencil for a refusal, burnt orange for a finding. A color that is not an instrument (a gradient, a glow, a translucent stack where a token would do) does not belong on the sheet.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mark Carries the Color Rule",
+        "body": "On every page a mark, a chip's frame, a square or a glyph carries the color, and the words beside it stay neutral ink. No colored body text except links. Color is a code for role and state; colored words would make it a mood.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Review Color Rule",
+        "body": "A person's review has one color, the drafting blue, in the list, the ledger and the stamp. AI-drafted is a dashed neutral outline. A review is never drawn in a lane color, so it never reads as the agent's or the person's step.",
+        "section": "colors"
+      },
+      {
+        "name": "The Subject Owns the Strongest Color Rule",
+        "body": "The strongest color on any screen belongs to the thing the screen is about. On the home cover that is the refusal and the person's step; nothing else on the cover competes with the redline and the amber.",
+        "section": "colors"
+      },
+      {
+        "name": "The No-Kicker Rule",
+        "body": "Nothing sits above a heading: no eyebrow, no kicker, no small label. Where such a label held real information (\"Scene 2 of 5\", a record's phase), it moves into the heading line, the breadcrumb or the facts line. A kicker is the commonest sign of a template, and this system is not one.",
+        "section": "typography"
+      },
+      {
+        "name": "The Mono for Measures Rule",
+        "body": "Plex Mono is for prompts, commands, file paths, ids and measured figures, and nothing else. A word in mono reads as code; costume mono on labels and buttons made the site read as a console. Digits inside a sentence are Archivo, with `tabular-nums` where they align.",
+        "section": "typography"
+      },
+      {
+        "name": "The 12 px Floor Rule",
+        "body": "No text is smaller than `type-note` (0.75rem, 12 px). The tokens test scans every font size in the stylesheet and the design lint every size in the code. There is no exception for chart ticks any more.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Scale Rule",
+        "body": "Type is set only through the role utilities. No arbitrary `text-[..px]`, weight, width or tracking; the design lint fails on each.",
+        "section": "typography"
+      },
+      {
+        "name": "The Grid Under a Drawing Rule",
+        "body": "The drafting grid (24 px minor, 120 px major) is drawn only by `.sheet-grid`, inside a drawing. Prose, lists, forms and the footer sit on plain ground. The tokens test asserts that the body has no grid and that `--grid-major` is used only in `.sheet-grid`. On the whole page the grid was wallpaper; under a drawing it is paper.",
+        "section": "layout"
+      },
+      {
+        "name": "The Three Papers Rule",
+        "body": "No shadows, no glows, no blur. A surface is told from another by a step of paper and a rule, never by lifting it. The search dialog is the one thing that floats.",
+        "section": "elevation"
+      },
+      {
+        "name": "The One-Border Sheet Rule",
+        "body": "A sheet has one 1 px border. Inside it there are rules, never another bordered box: divide it with `SheetPart`. A `Sheet` placed inside a `Sheet` loses its border and becomes a part of it. Boxes inside boxes made every page read as a template; a drawing has one frame.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Shape Before Color Rule",
+        "body": "Every meaning that color carries is also carried by a shape: a person's step by the cut corner, a variant by hatching, \"not yet\" by a dash, a refusal by the cloud, high risk by the risk triangle. Color alone fails in print, for a reader who does not see the hue, and in forced colors.",
+        "section": "shapes"
+      },
+      {
+        "name": "The One Meaning Rule",
+        "body": "Each device means one thing. A dimension line sits only over a counted or computed number, never as a divider. The cloud circles only a refusal, one per view. The stamp means only that a person reviewed the record, with its date. The property line is only the boundary between the agent's side and the person's.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Only the Recording Moves Rule",
+        "body": "The one demonstration is the recorded run of the real engine (`content/demo/run.json`). Motion may replay what was recorded; it may not stage a chat, type a prompt or invent a step. A demonstration that is not the engine's own would be the one dishonest thing on an honest site.",
+        "section": "components"
+      },
+      {
+        "name": "The Penciled, Then Inked Rule",
+        "body": "A sequence never hides its content to replay it. Before it plays the drawing is in pencil (reduced weight and contrast, words still 4.5:1, marks 3:1, no size change); playing inks it. This is the world's own idea, outlined then written, and it is the only entrance on the site.",
+        "section": "components"
+      },
+      {
+        "name": "The Visible by Default Rule",
+        "body": "The server's HTML is the finished state. With scripts off, with reduced motion, if GSAP fails to load, and on paper, the page is complete and still. Nothing on screen at load disappears or jumps.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "**Do** put one 1 px border on a sheet and divide its inside with rules (`SheetPart`).",
+      "**Do** draw the grid only with `.sheet-grid` (or `Sheet grid`) in a drawing area.",
+      "**Do** set every word with a type role; mono only through `type-code`, `type-data` or `TextLink mono`, for prompts, commands, paths, ids and measured figures.",
+      "**Do** color the mark and leave the words in neutral ink (`text`, `text-muted`, `text-faint`).",
+      "**Do** carry every color meaning in a shape too: cut corner, hatching, dash, cloud, risk triangle.",
+      "**Do** use the review blue for every review statement, and a dashed neutral chip for AI-drafted.",
+      "**Do** keep radius 0 on surfaces and 2 px on controls, and 44 px touch targets on a phone.",
+      "**Do** take every icon from `Icon` and every fold from `Disclosure`.",
+      "**Do** write colors only as tokens; add a token to both theme blocks with its OKLCH and to the tokens test.",
+      "**Do** make a sequence start penciled from the finished server HTML, with Replay over two seconds and Pause when it plays by itself, keyboard reachable at 44 px.",
+      "**Do** give reduced motion the finished state, and a step-through whose change is an opacity change of 120 ms at most."
+    ],
+    "donts": [
+      "**Don't** put the drafting grid on `body` or behind prose, lists, forms, questions or the footer.",
+      "**Don't** put a kicker or eyebrow above a heading.",
+      "**Don't** draw a tick-ended rule under a section heading.",
+      "**Don't** set words in mono.",
+      "**Don't** put a bordered container inside another bordered container.",
+      "**Don't** use a colored side stripe (a `border-left` or inset shadow above 1 px) on a card, row, note or error.",
+      "**Don't** circle a number, zero-pad a section number, or number things that have no order.",
+      "**Don't** use a radial glow, a blurred header, or a color written outside the token blocks.",
+      "**Don't** stand a text glyph (`+`, `›`, a diamond, a chevron character) in for an icon.",
+      "**Don't** use `hover:bg-white`; the hover fill is `fill-hover`.",
+      "**Don't** use a dimension line as a divider, the cloud for anything but a refusal, or the stamp for anything but a person's review.",
+      "**Don't** fade and raise sections into view, count numbers up, type out a prompt or a fake chat, animate or parallax the grid, draw dimension lines on scroll, lift rows or cards on hover, stagger lists of cards, pulse chips, or loop anything.",
+      "**Don't** use ScrollTrigger or put GSAP in a shared chunk; only `lib/motion/loader.ts` imports it, on demand.",
+      "**Don't** set text under 12 px."
+    ]
+  }
+}

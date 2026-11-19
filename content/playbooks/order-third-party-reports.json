@@ -1,0 +1,490 @@
+{
+  "id": "order-third-party-reports",
+  "slug": "order-third-party-reports",
+  "kind": "process",
+  "title": "Order third-party reports",
+  "summary": "Scope, engage and schedule the Phase I, condition report, survey, zoning report, any specialty study and the lender's appraisal so each lands before its deadline, in the right client's name and with the right reliance parties. It ends when each report is delivered, checked for form and logged.",
+  "phase": "acquire",
+  "order": 245,
+  "featured": false,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-13",
+  "requires": [
+    "negotiate-purchase-contract"
+  ],
+  "consumes": [
+    "purchase-and-sale-agreement",
+    "loan-term-sheet",
+    "title-commitment",
+    "jv-agreement"
+  ],
+  "produces": [
+    "phase-i-esa",
+    "property-condition-assessment",
+    "survey",
+    "zoning-report",
+    "appraisal"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "ecfr-40-312",
+      "url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-J/part-312",
+      "title": "40 CFR Part 312, Innocent Landowners, Standards for Conducting All Appropriate Inquiries",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "must be conducted or updated within 180 days of and prior to the date of acquisition of the subject property",
+      "tier": "primary"
+    },
+    {
+      "id": "astm-e1527-21",
+      "url": "https://store.astm.org/e1527-21.html",
+      "title": "ASTM E1527-21, Standard Practice for Environmental Site Assessments: Phase I Environmental Site Assessment Process",
+      "publisher": "ASTM International",
+      "accessed": "2026-11-13",
+      "tier": "primary"
+    },
+    {
+      "id": "astm-e2018-24",
+      "url": "https://store.astm.org/e2018-24.html",
+      "title": "ASTM E2018-24, Standard Guide for Property Condition Assessments: Baseline Property Condition Assessment Process",
+      "publisher": "ASTM International",
+      "accessed": "2026-11-13",
+      "tier": "primary"
+    },
+    {
+      "id": "alta-survey-standards",
+      "url": "https://www.alta.org/topics/topic-land-survey-standards",
+      "title": "ALTA/NSPS Land Title Survey Standards",
+      "publisher": "American Land Title Association",
+      "accessed": "2026-11-13",
+      "quote": "The standards cover required fieldwork, plat or map preparation, Table A optional items, certification and deliverables for surveys effective Feb. 23, 2026.",
+      "tier": "primary"
+    },
+    {
+      "id": "amerisurv-2026-standards",
+      "url": "https://amerisurv.com/2026/02/01/the-2026-minimum-standard-detail-requirements-for-alta-nsps-land-title-surveys/",
+      "title": "The 2026 Minimum Standard Detail Requirements for ALTA/NSPS Land Title Surveys",
+      "publisher": "The American Surveyor",
+      "accessed": "2026-11-13",
+      "quote": "An “update” is a new survey because the surveyor is certifying that the survey reflects the current conditions on the property",
+      "tier": "secondary"
+    },
+    {
+      "id": "tx-oc-1071",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1071.htm",
+      "title": "Texas Occupations Code, Chapter 1071 (Section 1071.251, Registration, license, or certificate required)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "A person may not engage in the practice of professional surveying unless the person is registered, licensed, or certified as provided by this chapter.",
+      "tier": "primary"
+    },
+    {
+      "id": "tbpels-ls-roster",
+      "url": "https://pels.texas.gov/roster/ls_rosters.html",
+      "title": "Land Surveyor Roster",
+      "publisher": "Texas Board of Professional Engineers and Land Surveyors",
+      "accessed": "2026-11-13",
+      "quote": "Our online search rosters allow you to find surveying registrants/licensees by entering one or more search values.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-12-34-45",
+      "url": "https://www.ecfr.gov/current/title-12/chapter-I/part-34/subpart-C/section-34.45",
+      "title": "12 CFR 34.45, Appraiser independence",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "the appraiser shall be engaged directly by the regulated institution or its agent",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-12-34-43",
+      "url": "https://www.ecfr.gov/current/title-12/chapter-I/part-34/subpart-C/section-34.43",
+      "title": "12 CFR 34.43, Appraisals required; transactions requiring a State certified or licensed appraiser",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "The transaction is a commercial real estate transaction that has a transaction value of $500,000 or less",
+      "tier": "primary"
+    },
+    {
+      "id": "fr-interagency-appraisal-guidelines",
+      "url": "https://www.federalregister.gov/documents/2010/12/10/2010-30913/interagency-appraisal-and-evaluation-guidelines",
+      "title": "Interagency Appraisal and Evaluation Guidelines (75 FR 77450, December 10, 2010)",
+      "publisher": "Federal Register (OCC, Federal Reserve, FDIC, OTS, NCUA)",
+      "accessed": "2026-11-13",
+      "quote": "An institution's use of a borrower-ordered or borrower-provided appraisal violates the Agencies' appraisal regulations.",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-42-4104b",
+      "url": "https://www.law.cornell.edu/uscode/text/42/4104b",
+      "title": "42 U.S.C. 4104b, Standard hazard determination forms",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "The Federal entities for lending regulation shall by regulation require the use of the form under this section by regulated lending institutions.",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "list-reports-and-need-dates",
+      "title": "List each report and the date it is needed",
+      "instruction": "From the signed contract and the deadline calendar built when it was signed, list every report the deal needs: the Phase I, the property condition assessment, the survey, the zoning report, any specialty study and, if the deal is financed, the lender's appraisal and flood determination. Against each, write the date it must be in hand: the survey before the title and survey objection deadline; the Phase I, condition and zoning reports before the feasibility period ends; the appraisal and any reliance letters before the lender's commitment or closing checklist needs them. Leave time before each date to read the report and act on it. Start a tracker with one row per report: vendor, scope, client, reliance parties, ordered, site visit, draft due, final due, need-by date and status. Hand it to the principal.",
+      "mode": "agent",
+      "modeBasis": "The dates come from the signed contract and the calendar, which an agent can read and compute.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "loan-term-sheet"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "collect-prior-reports",
+      "title": "Collect the reports and records that already exist",
+      "instruction": "Ask the seller, under the contract's delivery clause, for every prior Phase I and Phase II, tank and spill records, any state closure or no-further-action letter, prior surveys, condition reports, zoning letters and certificates of occupancy. Log what arrives in the tracker. Prior work helps scoping but does not replace the buyer's own inquiry. Under 40 CFR 312.20, an environmental report prepared for someone else counts only if it meets part 312's objectives and the buyer does its own additional inquiries; the interviews, lien search, government records review, site visit and professional's declaration must be updated within 180 days before acquisition, and the inquiry must fall within one year. Pass the prior environmental reports to the environmental professional once engaged.",
+      "mode": "agent",
+      "modeBasis": "The request and the log are document work; a person approves the message to the seller before it goes.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-reports-and-need-dates"
+      ],
+      "rules": [
+        "us-fed.epa.all-appropriate-inquiries"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-40-312"
+      ]
+    },
+    {
+      "id": "confirm-lender-requirements",
+      "title": "Ask the lender what it orders and what it will accept",
+      "instruction": "If the deal is financed, ask the lender, or each lender still quoting, in writing: which reports it orders itself, which it will take from the buyer, whether it keeps an approved vendor list, the standard and scope it requires for each report, the survey certification wording and Table A items it wants, the form of reliance letter it needs, and how old a report it will accept at closing. Record the answers in the tracker beside each report. A report ordered to the lender's terms the first time is not ordered twice. If no lender is chosen yet, scope to the strictest answer received and note that choice.",
+      "mode": "agent",
+      "modeBasis": "Drafting and logging the request is agent work; the message speaks for the borrower, so a person approves it.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-reports-and-need-dates"
+      ],
+      "consumes": [
+        "loan-term-sheet"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "set-client-and-reliance",
+      "title": "Decide whose name each report is in and who may rely on it",
+      "instruction": "The environmental inquiry serves the person seeking the landowner protections, the one taking title. Under 40 CFR 312.1 and 312.20 the inquiry is done by or for that person; a report made for someone else counts only after the acquirer's own inquiries and the 180-day updates. So name as client the entity that will take title, or have the consultant add it before closing if the contract will be assigned to it. For each report, list the reliance parties: the lender, the title insurer for the survey, and any affiliate that will hold title. Note which consultants charge for reliance or limit it, and record the plan in the tracker for the engagement letters.",
+      "mode": "agent",
+      "modeBasis": "Matching the buying entity and the lender's requirements to each report is document work for a principal to confirm.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-lender-requirements"
+      ],
+      "rules": [
+        "us-fed.epa.all-appropriate-inquiries"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "loan-term-sheet"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-40-312"
+      ]
+    },
+    {
+      "id": "scope-phase-i",
+      "title": "Write the Phase I scope",
+      "instruction": "Ask for a Phase I to ASTM E1527-21, or E2247-23 for forestland or rural property; 40 CFR 312.11 recognizes both. The inquiry must be done by, or under the responsible charge of, an environmental professional as 40 CFR 312.10 defines one: for example, a state professional engineer or geologist license with three years of relevant full-time experience, an engineering or science degree with five, or ten years of experience. The report must give the professional's opinion, the data gaps and their significance, and the professional's qualifications, and carry the signed declaration 312.21(d) prescribes. ASTM standards are paid; rely on what the consultant's proposal says they cover. List in writing any work the buyer or lender wants beyond the standard practice, such as asbestos, lead-based paint, radon, mold, wetlands or emerging contaminants, and ask which are included.",
+      "mode": "agent",
+      "modeBasis": "The scope is a written request drawn from the regulation, the lender's answers and the deal file.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "collect-prior-reports",
+        "set-client-and-reliance"
+      ],
+      "rules": [
+        "us-fed.epa.all-appropriate-inquiries"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-40-312",
+        "astm-e1527-21"
+      ],
+      "typeNotes": {
+        "industrial": "Past manufacturing, plating, fueling or solvent use, or any tank, makes a follow-on Phase II more likely; ask the consultant now how it would scope and price sampling, so a Phase II can start without a new search for a firm."
+      }
+    },
+    {
+      "id": "scope-condition-report",
+      "title": "Write the property condition assessment scope",
+      "instruction": "Ask for a property condition assessment to ASTM E2018-24 and have the consultant state in its proposal what that scope covers and excludes; the standard is paid, so do not work from a summary of it. Name the buildings, systems and share of tenant spaces to be entered, the documents the seller will provide, and any add-ons the deal needs, such as roof cores, an infrared roof scan, a sewer line camera or an accessibility review. Ask for costs split into immediate repairs, near-term repairs and a reserve table over a stated term, listing each component's cost, useful life and age or remaining life, so the table can be run through the replacement-reserves calculator, which takes age (useful life less remaining life).",
+      "mode": "agent",
+      "modeBasis": "The scope is a written request drawn from the deal file and the lender's answers.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-client-and-reliance"
+      ],
+      "calculators": [
+        "replacement-reserves"
+      ],
+      "basis": "practitioner",
+      "sources": [
+        "astm-e2018-24"
+      ]
+    },
+    {
+      "id": "scope-survey",
+      "title": "Write the survey scope and certification list",
+      "instruction": "Ask for an ALTA/NSPS Land Title Survey to the 2026 standards, effective February 23, 2026, which set the fieldwork, the plat, the optional Table A items and the certification. Name the Table A items wanted, agreed with the lender and the title company, and list who the survey is certified to: the entity taking title, the lender and the title insurer. Send the surveyor the title commitment and every recorded exception document. A site surveyed before still needs a current survey: a so-called update is a new survey certified to current conditions. In Texas, only a person registered, licensed or certified under Occupations Code chapter 1071 may practice professional surveying.",
+      "mode": "agent",
+      "modeBasis": "The scope and certification list are written from the commitment, the lender's answers and the standards' public summary.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-client-and-reliance"
+      ],
+      "rules": [
+        "us-fed.alta-nsps.survey-standards"
+      ],
+      "consumes": [
+        "title-commitment"
+      ],
+      "basis": "cited",
+      "sources": [
+        "alta-survey-standards",
+        "amerisurv-2026-standards",
+        "tx-oc-1071"
+      ]
+    },
+    {
+      "id": "scope-zoning-and-specialty",
+      "title": "Write the zoning report and specialty study scopes",
+      "instruction": "Decide whether the zoning confirmation will be a letter from the city, a report from a zoning vendor, or both, as the lender requires. Ask that it state the district, whether the current use is permitted, conditional or nonconforming, parking and setback compliance, open code violations and the certificates of occupancy on file. List any specialty study the business plan depends on and scope it in writing: a geotechnical report for an expansion, a wetlands delineation, an asbestos survey before renovation, a roof or structural study the condition consultant recommends, or a market study for a lease-up. Give each specialty study its own row in the tracker with its need-by date.",
+      "mode": "agent",
+      "modeBasis": "The scopes are written requests drawn from the business plan, the lender's answers and the deal file.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-client-and-reliance"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "industrial": "Have the zoning report confirm outdoor storage, truck parking and the specific industrial use where the business plan relies on them; slab, pavement and fire-protection capacity for the planned storage may need a specialist beyond the condition report.",
+        "multifamily": "Have the zoning report confirm the legal unit count, and plan an asbestos and lead-based paint survey before any unit renovation starts.",
+        "retail": "Have the zoning report confirm parking counts and signage, since a replacement tenant's use may need more parking than the current one."
+      }
+    },
+    {
+      "id": "get-proposals-check-licenses",
+      "title": "Get proposals and check each provider's license",
+      "instruction": "Send each scope to the lender's approved firms or, without a list, to more than one firm, and ask for a written proposal stating the scope, exclusions, turnaround, fee, insurance, limit of liability and reliance terms. Compare them line by line in the tracker and mark any proposal whose delivery date misses the need-by date. Look up each surveyor on the Texas Board of Professional Engineers and Land Surveyors' public roster and record the registration number and status. Check the environmental professional's stated qualifications against 40 CFR 312.10. Hand the comparison to the principal.",
+      "mode": "agent-browser",
+      "modeBasis": "Requests and comparisons are document work and the license roster is a public website; a person approves the messages to firms.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "scope-phase-i",
+        "scope-condition-report",
+        "scope-survey",
+        "scope-zoning-and-specialty"
+      ],
+      "rules": [
+        "us-fed.epa.all-appropriate-inquiries"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-oc-1071",
+        "tbpels-ls-roster",
+        "ecfr-40-312"
+      ]
+    },
+    {
+      "id": "jv-partner-consents",
+      "title": "Get the capital partner's sign-off on firms and scopes",
+      "instruction": "Check the JV agreement for any right of the capital partner to approve consultants, diligence budgets or scopes, or to be named as a reliance party. Send the partner the proposal comparison and the reliance plan, and get any required approval in writing before the engagement letters are signed.",
+      "mode": "human-online",
+      "modeBasis": "The approval is the capital partner's own decision under the JV agreement.",
+      "actor": "investor",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "get-proposals-check-licenses"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "sign-engagements",
+      "title": "Sign the engagement letters and pay the retainers",
+      "instruction": "A principal picks each firm and signs its engagement letter after checking that the letter names the right client, matches the agreed scope and turnaround, lists the reliance parties or the terms for adding them, and states its limit of liability. Pay any retainer the letter requires. Record the signing date and the promised delivery dates in the tracker, and send each firm its site contact.",
+      "mode": "human-online",
+      "modeBasis": "Engagement letters are contracts a principal signs, and retainers are payments a person authorizes.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "get-proposals-check-licenses",
+        "jv-partner-consents"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "lender-orders-appraisal",
+      "title": "Have the lender order the appraisal and flood determination",
+      "instruction": "Under the federal banking agencies' appraisal rules (for the OCC, 12 CFR 34.45), a regulated lender engages a fee appraiser directly or through its agent, or accepts one engaged by another financial services institution if it conforms; the agencies' guidelines say a borrower-ordered appraisal violates those rules. So the buyer does not order it. A commercial real estate loan of $500,000 or less needs only an evaluation (12 CFR 34.43). Federal law also has regulated lenders use the standard flood hazard determination form (42 U.S.C. 4104b). Ask the lender to order both as soon as the application allows, and give it the access contact and the documents the appraiser asks for. Lenders outside these rules set their own requirements; get them in writing.",
+      "mode": "human-online",
+      "modeBasis": "The lender controls the appraisal engagement and the flood determination.",
+      "actor": "lender",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-lender-requirements"
+      ],
+      "rules": [
+        "us-fed.firrea.appraisal-thresholds",
+        "us-fed.flood.mandatory-purchase"
+      ],
+      "consumes": [
+        "loan-term-sheet"
+      ],
+      "produces": [
+        "appraisal"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-12-34-45",
+        "fr-interagency-appraisal-guidelines",
+        "ecfr-12-34-43",
+        "usc-42-4104b"
+      ]
+    },
+    {
+      "id": "schedule-access-and-track",
+      "title": "Schedule site visits and track every delivery",
+      "instruction": "Book each site visit through the contract's access clause and the seller's contact, giving tenants the notice their leases require, and send the seller any insurance certificate it asks of the consultants. Send the environmental professional the buyer's own inquiry answers before its visit. Each week, update the tracker from the firms' confirmations and flag any report whose expected delivery now falls after its need-by date. Tell the principal the same day a date slips, with the contract date at risk, so an extension or a narrower scope can be sought before the deadline rather than after it.",
+      "mode": "agent",
+      "modeBasis": "Scheduling, logging and comparing dates are calendar and message work; a person approves outbound messages.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-engagements",
+        "lender-orders-appraisal"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "check-and-log-deliveries",
+      "title": "Check each report's form on delivery and log it",
+      "instruction": "On receipt, check form, not findings: right property and legal description, right client and reliance parties, the standard named, signed and dated. The Phase I must carry the professional's opinion, data gaps, qualifications and signed declaration (40 CFR 312.21). The survey must carry the agreed Table A items and certification list. Record the appraisal's client, intended use, interest appraised and effective date. Send errors back at once. Enter the Phase I's expiry in the deadline calendar: the inquiry must fall within one year before acquisition, and the interviews, lien search, records review, site visit and declaration within 180 days, so a slipping closing needs an update. Whether an existing appraisal still holds is the lender's call. File each report and hand it to whoever runs due diligence.",
+      "mode": "agent",
+      "modeBasis": "Checking a report against its scope and the rule's required contents is document work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "schedule-access-and-track"
+      ],
+      "rules": [
+        "us-fed.epa.all-appropriate-inquiries",
+        "us-fed.alta-nsps.survey-standards"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "produces": [
+        "phase-i-esa",
+        "property-condition-assessment",
+        "survey",
+        "zoning-report",
+        "appraisal"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-40-312",
+        "fr-interagency-appraisal-guidelines"
+      ]
+    }
+  ],
+  "outlineSteps": []
+}

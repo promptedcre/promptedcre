@@ -1,0 +1,168 @@
+{
+  "vendor": "cactus",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "cc5af1cbaf258372711b97e708f804ab2c2082a20a155b1b9c273781358bf1b0",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "partial",
+      "quality": 8,
+      "evidence": [
+        "c5",
+        "c6",
+        "c7"
+      ],
+      "rationale": "The FAQ says Cactus has an API for companies that want its underwriting or valuation inside their own product (c5), but integrations are scoped separately and the API page is an example experience, not a specification (c6, c7), with no public reference found.",
+      "missing": "Any public API reference, and which records the API reads or changes; fields, delivery methods and workflows are confirmed only during integration scoping."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c2"
+      ],
+      "rationale": "The pack mentions starting an analysis inside ChatGPT and says Claude support is coming soon (c2), but nothing names an MCP server or gives setup steps.",
+      "missing": "Any statement that Cactus publishes or maintains an MCP server, and any setup steps; the ChatGPT route in c2 is not identified as an MCP server."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no SDK, CLI, package-registry listing or public repository.",
+      "missing": "Any vendor-maintained SDK or CLI, partner SDK, code samples or public repository."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c13"
+      ],
+      "rationale": "The only notification shown is an email to the user when an analysis starts and when it finishes (c13), which is not a webhook or event subscription an agent can register for.",
+      "missing": "Any documented webhooks, event subscriptions or automation-platform triggers for reports or other records."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c6"
+      ],
+      "rationale": "The pack shows no API keys, tokens or OAuth clients, and 'scoped' in c6 refers to scoping each API integration, not to credential permissions.",
+      "missing": "Any API keys, tokens or OAuth clients, and any documented scopes, roles or permissions that limit them."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c7"
+      ],
+      "rationale": "The API page calls itself an example product experience, not an API specification (c7), and the coverage check found no public reference or spec.",
+      "missing": "Any OpenAPI, Swagger, GraphQL or other machine-readable specification, public or gated."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "partial",
+      "quality": 5,
+      "evidence": [
+        "p1"
+      ],
+      "rationale": "The probe confirms a 25,594-byte llms.txt at the site root (p1), but the pack shows only its title line, and the vendor has no developer docs beyond its FAQ help center for the file to cover.",
+      "missing": "What the llms.txt covers (the FAQ help center or only marketing pages), and any Markdown versions of documentation pages."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no sandbox, test mode or developer environment, either self-serve or on request.",
+      "missing": "Any sandbox, test mode or developer environment for trying the product or API before live use."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "partial",
+      "quality": 6,
+      "evidence": [
+        "c8",
+        "c12"
+      ],
+      "rationale": "Cactus produces a multi-tab Excel model with working formulas, and the changelog notes Excel exports (c8, c12), but nothing shows a bulk or account-wide export across a customer's reports.",
+      "missing": "A bulk or account-wide export, CSV or JSON options, and documented self-serve download steps."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "full",
+      "quality": 6,
+      "evidence": [
+        "c9",
+        "c10",
+        "c2"
+      ],
+      "rationale": "The pricing page offers pay-as-you-go use from $35 and team credit purchases with annual billing (c9, c10), and analyses start by emailing documents or inside ChatGPT (c2), with no sales call shown for the core product.",
+      "missing": "A sign-up page or flow, or an explicit statement that no sales call is required for the pay-as-you-go plan."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "partial",
+      "quality": 7,
+      "evidence": [
+        "c9",
+        "c10"
+      ],
+      "rationale": "The pricing page gives only starting prices, pay-as-you-go 'from $35' and annual credit rates 'from $17.50' with $2 off per credit (c9, c10), not the full price a small sponsor would pay.",
+      "missing": "The full per-report and per-credit price list, what one credit buys, and what pushes a report above the 'from' prices."
+    },
+    {
+      "story": "dp-deal-record",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c7"
+      ],
+      "rationale": "The pack shows no deal stages and no public API documentation, and c7 says the API's fields and workflows are only confirmed during integration scoping.",
+      "missing": "Any API documentation for creating deals or updating their stage or status, or any deal-stage feature in the product."
+    },
+    {
+      "story": "dp-load-financials",
+      "verdict": "partial",
+      "quality": 4,
+      "evidence": [
+        "c1",
+        "c2",
+        "c11",
+        "c13"
+      ],
+      "rationale": "Cactus takes offering memorandums and deal financials by email or inside ChatGPT and sends back a report link (c1, c2, c13), with each value traced to the source document (c11), but no documented API or upload endpoint is shown.",
+      "missing": "Whether rent rolls and operating statements specifically are accepted, whether the email route returns structured data rather than a report link, and any documented API or upload endpoint."
+    },
+    {
+      "story": "dp-model-outputs",
+      "verdict": "partial",
+      "quality": 6,
+      "evidence": [
+        "c3",
+        "c8",
+        "c12",
+        "c5",
+        "c7"
+      ],
+      "rationale": "Cactus computes values, cash flows and returns (c3) and delivers a multi-tab Excel model export with working formulas (c8, c12), but its enterprise API for underwriting output has no published fields or endpoints (c5, c7).",
+      "missing": "An API endpoint or programmatic export for outputs, whether the Excel file can be fetched without a manual download, and an explicit statement of which sheets hold cash flows, returns and value."
+    },
+    {
+      "story": "dp-documents",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c2"
+      ],
+      "rationale": "Documents can be sent in by email or through ChatGPT (c2), but the pack shows no API for attaching documents to a deal or for listing and downloading them.",
+      "missing": "Any API documentation for uploading documents to a deal and listing or downloading them; email intake is not an API and no read-back is shown."
+    }
+  ]
+}

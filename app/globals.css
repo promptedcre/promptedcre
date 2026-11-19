@@ -1,0 +1,2100 @@
+@import "tailwindcss";
+
+/* Class names are read from the code that renders pages. The tests, the docs and the tools
+   quote class names as examples, some of them ones the design lint bans, so they are left
+   out: a class nobody uses must not end up in the stylesheet that ships. */
+@source not "../__tests__";
+@source not "../docs";
+@source not "../tools";
+
+/* "Drawing set": the site is a set of construction drawings, seen in two lights.
+
+   Night, this first :root block: the drawing set at night. It is the site with no preference
+   and no choice. Paper, the theme-paper block below it: the same set on a desk in daylight.
+   The visitor's system picks one, the switch in the header overrides it, and print is paper
+   (the remap at the end of this file).
+
+   Every color is declared once per theme, as hex. Each was computed from the OKLCH written
+   beside it (lightness, chroma, hue): to retune one, change the OKLCH, recompute the hex, and
+   keep both. Both themes declare the same names. __tests__/tokens.test.ts reads both blocks
+   and checks every ink against every surface it sits on, in each theme.
+
+   Meaning lives in line and shape as well as color:
+   solid = written, dashed = outlined (drawn next), hatched = a variant (an agent in a
+   browser, a person offline, unverified), a cut corner = a person's step, dash-dot = the
+   property line between agent and person, red scallops = the one thing the engine refused. */
+:root {
+  color-scheme: dark;
+
+  /* Surfaces: depth is three steps of paper, never a shadow */
+  --bg: #0b131f; /* oklch(0.185 0.028 258) the ground */
+  --bg-raised: #101a28; /* oklch(0.215 0.032 258) a sheet's paper */
+  --bg-inset: #050b15; /* oklch(0.15 0.024 258) wells: a prompt, code, a transcript */
+  --bg-panel: #172233; /* oklch(0.25 0.036 258) the selected state */
+  --bg-tile: #202c3d; /* oklch(0.29 0.036 258) a secondary control's fill */
+  --logo-ground: #eef2f7; /* oklch(0.96 0.008 255) the light tile under a company icon drawn in dark ink */
+  --fill-hover: #cedcef; /* oklch(0.89 0.03 254) a light fill under the pointer */
+  --selection: #1f487c; /* oklch(0.4 0.1 256) selected text */
+  --scrim: rgba(5, 11, 21, 0.8); /* --bg-inset at 80%: behind the search dialog */
+  --shadow: #050b15; /* oklch(0.15 0.024 258) the one shadow on the site, under the search dialog */
+  --shadow-box: 0 1px 2px rgba(5, 11, 21, 0.5), 0 12px 32px -8px rgba(5, 11, 21, 0.55); /* --bg-inset: the soft lift under a box (D224) */
+
+  /* Lines */
+  --line: #212e42; /* oklch(0.3 0.04 258) a row rule */
+  --line-strong: #38465b; /* oklch(0.39 0.04 258) a sheet's border, title-block rules */
+  --line-bold: #59697f; /* oklch(0.515 0.04 258) emphasis, a control's outline; lifted from 0.5 to hold 3:1 on paper */
+  --grid-minor: rgba(141, 187, 240, 0.02); /* --accent at 2%: the 24 px drafting grid, inside a drawing only */
+  --grid-major: rgba(141, 187, 240, 0.04); /* --accent at 4%: the 120 px drafting grid */
+
+  /* Ink */
+  --text: #ebf1f8; /* oklch(0.955 0.012 255) primary */
+  --text-muted: #bdc8d8; /* oklch(0.83 0.025 255) body, labels */
+  --text-faint: #9eacbe; /* oklch(0.74 0.03 255) notes; lifted from 0.73 to hold 6:1 on a tile */
+
+  /* Drafting blue */
+  --accent: #8dbbf0; /* oklch(0.78 0.09 252) links, dimension lines, the review stamp */
+  --accent-strong: #a8d2ff; /* oklch(0.85 0.077 250) link text, the focus ring; chroma clipped to sRGB */
+  --accent-ink: #070d18; /* oklch(0.16 0.026 258) the ink on a filled control or mark: dark, on Night's light fills */
+
+  /* Who does a step: marks and small fills, never running text */
+  --agent: #60e0a8; /* oklch(0.82 0.14 162) an agent's mark */
+  --agent-text: #93f0c3; /* oklch(0.885 0.11 162) an agent's word, where a word must carry it */
+  --agent-mid: #287353; /* oklch(0.5 0.09 162) an agent's border */
+  --agent-deep: #103324; /* oklch(0.29 0.05 162) an agent's tint */
+  --human: #f2b95a; /* oklch(0.82 0.13 78) a person's mark, the sign-here moments */
+  --human-text: #fcd086; /* oklch(0.88 0.105 80) a person's word, "Not live yet" */
+  --human-mid: #84622a; /* oklch(0.52 0.085 78) a person's border */
+  --human-deep: #38280f; /* oklch(0.29 0.045 78) a person's tint */
+  --human-ink: #070d18; /* oklch(0.16 0.026 258) the ink on an amber fill: dark in both themes */
+
+  /* Status */
+  --danger: #fc675c; /* oklch(0.7 0.185 27) the redline: a refusal, a high-severity finding */
+  --warn: #f98e46; /* oklch(0.75 0.155 52) a finding, hard to undo; never on a neutral tag */
+
+  /* Derived (translucent mixes of the tokens above, so a line reads on any paper) */
+  --dim-line: rgba(141, 187, 240, 0.45); /* --accent at 45%: the hairline of a dimension */
+  --dim-ext: rgba(141, 187, 240, 0.3); /* --accent at 30%: extension lines */
+
+  /* What only one theme draws, and how a sequence's generic mark reads in pencil */
+  --show-on-night: visible; /* a thing drawn on Night only sets visibility to this */
+  --show-on-paper: hidden; /* and a thing drawn on Paper only to this */
+  --highlight: transparent; /* the highlighter over the line a person signs on: there is none at night */
+  --pencil-mark-opacity: 0.45; /* pencil on a dark sheet: the mark at reduced strength */
+  --pencil-mark-filter: none; /* (on Paper: graphite) */
+
+  /* Motion: CSS owns appearance, a timeline owns time (docs/MOTION.md) */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-1: 120ms; /* feedback */
+  --dur-2: 200ms; /* a change of state */
+  --dur-3: 320ms; /* a change of layout */
+  --dur-4: 600ms; /* the authored moment */
+
+  /* Space: a 4 px base, used through Tailwind's steps 1, 2, 3, 4, 6, 8, 12, 16, 24, 32 */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  /* Frame and browser surfaces */
+  --header-h: 3.5rem; /* the sticky header; 3.75rem from 768 px (below) */
+  --measure: 68ch; /* the prose column */
+  --underline-offset: 0.2em;
+  --underline-thickness: 1px;
+  --focus-ring: 2px solid var(--accent-strong);
+
+  /* Notation, defined once */
+  --hatch: repeating-linear-gradient(135deg, currentColor 0 1.25px, transparent 1.25px 4px); /* a variant: 4 px pitch, in the element's own color */
+}
+@media (min-width: 768px) {
+  :root {
+    --header-h: 3.75rem;
+  }
+}
+
+/* Paper: the same drawing set on a desk in daylight. A cool white sheet on a slightly greyer
+   light table, and every color a writing instrument: blue-black ink for the words and the
+   linework; blue ink for links, dimensions and the review stamp; green ink for the agent; amber
+   and a yellow highlighter for a person; red pencil for a refusal; burnt orange for a finding.
+
+   Composed for paper, not Night turned inside out. A sheet is told from the table by its
+   blue-line border more than by its tone. The selected state goes deeper, not lighter. The grid
+   is the faint blue of engineering paper. The primary button is filled with ink and its words
+   are paper. A mark is an ink that holds 3:1 on every surface; an ink that is set as words
+   (--agent-text, --human-text, --danger, --warn, both blues) holds 4.5:1 on every surface, so
+   on paper --agent and --human are for marks only.
+
+   The values are written once, here. The theme rules below and the print remap apply this
+   block; Tailwind copies it into each when the stylesheet is built. */
+@utility theme-paper {
+  color-scheme: light;
+
+  /* Surfaces: a white sheet, a greyer table, and deeper tints for a well and a selection */
+  --bg: #f3f6fa; /* oklch(0.972 0.006 250) the ground: the light table under the sheets */
+  --bg-raised: #fcfdff; /* oklch(0.995 0.002 250) a sheet's paper */
+  --bg-inset: #eaf0f6; /* oklch(0.952 0.01 250) wells: a prompt, code, a transcript */
+  --bg-panel: #e2ebf4; /* oklch(0.935 0.016 250) the selected state */
+  --bg-tile: #d8e4f1; /* oklch(0.915 0.022 250) a secondary control's fill */
+  --logo-ground: #fcfdff; /* oklch(0.995 0.002 250) the light tile under a company icon drawn in dark ink */
+  --fill-hover: #1d3259; /* oklch(0.32 0.075 262) the ink fill under the pointer, a shade up from --text */
+  --selection: #b7d4f9; /* oklch(0.86 0.06 255) selected text */
+  --scrim: rgba(243, 246, 250, 0.82); /* --bg at 82%: tracing paper laid over the page, behind the search dialog */
+  --shadow: rgba(19, 31, 53, 0.2); /* --text at 20%: the one shadow on the site, under the search dialog */
+  --shadow-box: 0 1px 2px rgba(19, 31, 53, 0.06), 0 12px 32px -8px rgba(19, 31, 53, 0.12); /* --text, faint: the soft lift under a box (D224) */
+
+  /* Lines */
+  --line: #d1dae5; /* oklch(0.885 0.018 255) a row rule */
+  --line-strong: #9cacc5; /* oklch(0.74 0.04 258) a sheet's blue-line border, title-block rules */
+  --line-bold: #5672a0; /* oklch(0.55 0.08 260) emphasis, a control's outline: 3:1 on every surface */
+  --grid-minor: rgba(30, 78, 172, 0.05); /* --accent at 5%: the 24 px grid of engineering paper, inside a drawing only */
+  --grid-major: rgba(30, 78, 172, 0.1); /* --accent at 10%: the 120 px grid; as strong as it can be with a refusal's red still 4.5:1 where two lines cross */
+
+  /* Ink */
+  --text: #131f35; /* oklch(0.24 0.045 262) primary: the drafter's blue-black */
+  --text-muted: #364358; /* oklch(0.38 0.04 260) body, labels */
+  --text-faint: #4f5c6f; /* oklch(0.47 0.035 258) notes, and pencil: 4.5:1 on every surface, a tile included */
+
+  /* Blue ink */
+  --accent: #1e4eac; /* oklch(0.45 0.16 262) links, dimension lines, the property line, the review stamp */
+  --accent-strong: #0f359b; /* oklch(0.38 0.17 264) link text, the focus ring */
+  --accent-ink: #fcfdff; /* oklch(0.995 0.002 250) the ink on a filled control or mark: paper, on Paper's ink fills */
+
+  /* Who does a step: green ink, amber and the highlighter */
+  --agent: #007d4d; /* oklch(0.52 0.122 158) an agent's mark; chroma clipped to sRGB */
+  --agent-text: #01603a; /* oklch(0.43 0.1 158) an agent's word, where a word must carry it */
+  --agent-mid: #4c9c74; /* oklch(0.63 0.1 160) an agent's border: 3:1 on the table and on a sheet */
+  --agent-deep: #ddf8e8; /* oklch(0.955 0.035 160) an agent's tint */
+  --human: #b17000; /* oklch(0.6 0.13 70) a person's mark, the sign-here moments; chroma clipped to sRGB */
+  --human-text: #7b4700; /* oklch(0.45 0.101 65) a person's word, "Not live yet"; chroma clipped to sRGB */
+  --human-mid: #b38309; /* oklch(0.64 0.13 82) a person's border: 3:1 on the table and on a sheet */
+  --human-deep: #feefb5; /* oklch(0.95 0.075 95) a person's tint: the highlighter */
+  --human-ink: #070d18; /* oklch(0.16 0.026 258) the ink on an amber fill: dark in both themes */
+
+  /* Status */
+  --danger: #c50516; /* oklch(0.52 0.21 27) the red pencil: a refusal, a high-severity finding */
+  --warn: #a24100; /* oklch(0.5 0.143 45) burnt orange: a finding, hard to undo; chroma clipped to sRGB */
+
+  /* Derived (translucent blue ink, so a line reads on any paper) */
+  --dim-line: rgba(30, 78, 172, 0.65); /* --accent at 65%: the hairline of a dimension, 3:1 on a sheet */
+  --dim-ext: rgba(30, 78, 172, 0.4); /* --accent at 40%: extension lines */
+
+  /* What only one theme draws, and how a sequence's generic mark reads in pencil */
+  --show-on-night: hidden;
+  --show-on-paper: visible;
+  --highlight: var(--human-deep); /* the highlighter over the line a person signs on */
+  --pencil-mark-opacity: 1; /* pencil on paper is graphite, not a paler ink: amber at any less than full strength drops under 3:1 */
+  --pencil-mark-filter: brightness(0) invert(0.48); /* one grey for any mark, 3:1 on every surface */
+}
+
+/* Which theme is drawn (D218: Paper first, Night on the toggle). Night is the :root block at
+   the top; Paper is drawn for every visitor, whatever the system asks for, unless the visitor
+   chose Night. The choice is <html data-theme="night"> (or "paper"): the head script in
+   app/layout.tsx sets it before the first paint from localStorage "pcre-theme", and
+   components/ui/theme-toggle.tsx changes it. With scripts off there is no attribute, so Paper.
+   :where() keeps both rules at the weight of :root, so the print remap at the end of this file
+   still wins on paper. */
+:root:where(:not([data-theme="night"])) {
+  @apply theme-paper;
+}
+:root:where([data-theme="paper"]) {
+  @apply theme-paper;
+}
+
+/* --draw: how much of a drawable device is drawn, 0 (nothing) to 1 (all of it). The
+   default is the finished drawing; a sequence tweens it, on the device or any ancestor. */
+@property --draw {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 1;
+}
+
+/* Tailwind colors: bg-bg, bg-raised, bg-inset, bg-panel, bg-tile, bg-fill-hover, border-line ...
+   text-text, text-muted, text-faint, text-accent ... text-agent-text ... */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-raised: var(--bg-raised);
+  --color-inset: var(--bg-inset);
+  --color-panel: var(--bg-panel);
+  --color-tile: var(--bg-tile);
+  --color-fill-hover: var(--fill-hover);
+  --color-selection: var(--selection);
+  --color-scrim: var(--scrim);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-line-bold: var(--line-bold);
+  --color-text: var(--text);
+  --color-muted: var(--text-muted);
+  --color-faint: var(--text-faint);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-ink: var(--accent-ink);
+  --color-agent: var(--agent);
+  --color-agent-text: var(--agent-text);
+  --color-agent-mid: var(--agent-mid);
+  --color-agent-deep: var(--agent-deep);
+  --color-human: var(--human);
+  --color-human-text: var(--human-text);
+  --color-human-mid: var(--human-mid);
+  --color-human-deep: var(--human-deep);
+  --color-danger: var(--danger);
+  --color-warn: var(--warn);
+  /* Every `transition-*` utility takes the feedback duration and the site's one ease. */
+  --default-transition-duration: var(--dur-1);
+  --default-transition-timing-function: var(--ease-out);
+}
+
+/* Two families. Archivo (weight and width axes) for every word; IBM Plex Mono, 400 and 500,
+   for prompts, commands, paths, ids and measured figures. "Archivo Fallback" is the faces
+   below. Emitted as real variables so plain CSS can use them. */
+@theme {
+  --font-sans: "Archivo Variable", "Archivo Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  /* Corners (D218: the owner asked for smooth edges on the boxes). A box (a sheet, a panel, a
+     window) takes --radius-box; a well, a button or a field --radius-control; a chip
+     --radius-chip. The notation stays square: a role mark, a cut corner, a stamp and the
+     drafting grid are drawing, not boxes. Utilities: rounded-box, rounded-control, rounded-chip. */
+  --radius-box: 0.75rem;
+  --radius-control: 0.5rem;
+  --radius-chip: 0.375rem;
+}
+
+/* Metric-matched fallbacks: the installed sans, scaled to Archivo's measured advance width at
+   the weights and widths the type roles use, so a line breaks in the same place before and
+   after the web font arrives (the home headline is set at width 110 and would re-wrap).
+   size-adjust is Archivo's width over Arial's for real copy from this site; the overrides are
+   Archivo's own ascent (878) and descent (210) per 1000 units, divided by that factor. */
+@font-face {
+  font-family: "Archivo Fallback";
+  src: local("Arial"), local("ArialMT"), local("Liberation Sans"), local("Arimo"), local("Roboto");
+  font-weight: 100 570;
+  font-stretch: 62% 103%;
+  size-adjust: 99%;
+  ascent-override: 88.69%;
+  descent-override: 21.21%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Archivo Fallback";
+  src: local("Arial Bold"), local("Arial-BoldMT"), local("Liberation Sans Bold"), local("Arimo Bold"), local("Roboto Bold"), local("Arial");
+  font-weight: 571 900;
+  font-stretch: 62% 103%;
+  size-adjust: 95.5%;
+  ascent-override: 91.94%;
+  descent-override: 21.99%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Archivo Fallback";
+  src: local("Arial Bold"), local("Arial-BoldMT"), local("Liberation Sans Bold"), local("Arimo Bold"), local("Roboto Bold"), local("Arial");
+  font-weight: 100 900;
+  font-stretch: 104% 107%;
+  size-adjust: 99%;
+  ascent-override: 88.69%;
+  descent-override: 21.21%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Archivo Fallback";
+  src: local("Arial Bold"), local("Arial-BoldMT"), local("Liberation Sans Bold"), local("Arimo Bold"), local("Roboto Bold"), local("Arial");
+  font-weight: 100 900;
+  font-stretch: 108% 109%;
+  size-adjust: 103.2%;
+  ascent-override: 85.08%;
+  descent-override: 20.35%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Archivo Fallback";
+  src: local("Arial Bold"), local("Arial-BoldMT"), local("Liberation Sans Bold"), local("Arimo Bold"), local("Roboto Bold"), local("Arial");
+  font-weight: 100 900;
+  font-stretch: 110% 125%;
+  size-adjust: 107.2%;
+  ascent-override: 81.9%;
+  descent-override: 19.59%;
+  line-gap-override: 0%;
+}
+
+/* ---------- Type roles ----------
+   One scale, named by job. Each role sets family, size, leading, weight, width and
+   tracking, so nothing else is needed: no arbitrary text-[..] size, weight or width. They
+   are utilities, so each takes responsive variants, and a single-property utility on the
+   same element (a color, text-balance) still wins. Display type is fluid only in
+   type-hero and type-figure (Persuade pages); every other role is fixed. */
+
+/* The home h1 only. */
+@utility type-hero {
+  font-family: var(--font-sans);
+  font-size: clamp(2.75rem, 4.2vw + 1.25rem, 5rem);
+  line-height: 0.98;
+  font-weight: 620;
+  font-stretch: 110%;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+/* Every other h1. */
+@utility type-page {
+  font-family: var(--font-sans);
+  font-size: 2rem;
+  line-height: 1.14;
+  font-weight: 600;
+  font-stretch: 108%;
+  letter-spacing: -0.022em;
+  text-wrap: balance;
+  @media (min-width: 640px) {
+    font-size: 2.75rem;
+    line-height: 1.04;
+  }
+}
+/* h2. */
+@utility type-title-l {
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  line-height: 1.16;
+  font-weight: 600;
+  font-stretch: 104%;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+  @media (min-width: 640px) {
+    font-size: 1.875rem;
+    line-height: 1.14;
+  }
+}
+/* h3, a sheet's title. */
+@utility type-title-m {
+  font-family: var(--font-sans);
+  font-size: 1.375rem;
+  line-height: 1.24;
+  font-weight: 600;
+  font-stretch: 102%;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+/* Row and step titles, h4. */
+@utility type-title-s {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  line-height: 1.32;
+  font-weight: 600;
+  font-stretch: 100%;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+/* One per page head. Muted ink. */
+@utility type-lede {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-weight: 400;
+  font-stretch: 100%;
+  letter-spacing: 0;
+  text-wrap: pretty;
+  color: var(--text-muted);
+  @media (min-width: 640px) {
+    font-size: 1.25rem;
+  }
+}
+/* Prose. Pair it with `measure`. Light-on-dark body carries extra leading and weight on purpose. */
+@utility type-body {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 420;
+  font-stretch: 100%;
+  letter-spacing: 0;
+  text-wrap: pretty;
+}
+/* Secondary rows, table cells, captions under figures. */
+@utility type-body-s {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  font-weight: 430;
+  font-stretch: 100%;
+  letter-spacing: 0;
+}
+/* Controls, table heads, chips, keys. Sentence case: write the capital in the text. */
+@utility type-label {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  font-weight: 540;
+  font-stretch: 100%;
+  letter-spacing: 0.01em;
+}
+/* The floor: chart ticks, fine print. Nothing on the site is smaller. */
+@utility type-note {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  line-height: 1.4;
+  font-weight: 480;
+  font-stretch: 100%;
+  letter-spacing: 0.015em;
+}
+/* One lead figure per sheet at most. */
+@utility type-figure {
+  font-family: var(--font-sans);
+  font-size: clamp(3.5rem, 6vw, 6rem);
+  line-height: 0.9;
+  font-weight: 600;
+  font-stretch: 110%;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+}
+/* Prompts and commands. */
+@utility type-code {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  font-weight: 400;
+  font-stretch: 100%;
+  letter-spacing: 0;
+}
+/* Dimension labels, ids, dates in a table. */
+@utility type-data {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  font-weight: 500;
+  font-stretch: 100%;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+/* The prose column: 68 characters. */
+@utility measure {
+  max-width: var(--measure);
+}
+
+/* Deprecated aliases. Each old utility now draws the nearest role, so the files that still
+   use them keep working until they are rebuilt; they are removed at the end of the rebuild.
+   Do not write new uses: `npm run design:lint` reports every one. */
+/* @deprecated use type-hero */
+@utility display-xl {
+  @apply type-hero;
+}
+/* @deprecated use type-page */
+@utility display-page {
+  @apply type-page;
+}
+/* @deprecated use type-title-l */
+@utility display-l {
+  @apply type-title-l;
+}
+/* @deprecated use type-title-l (a section's h2) or type-title-m (a sheet's title) */
+@utility display-m {
+  @apply type-title-l;
+}
+/* @deprecated use type-title-s */
+@utility display-s {
+  @apply type-title-s;
+}
+/* @deprecated use type-lede (the old utility set no color; neither does this alias) */
+@utility lede {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-weight: 400;
+  font-stretch: 100%;
+  letter-spacing: 0;
+  text-wrap: pretty;
+  @media (min-width: 640px) {
+    font-size: 1.25rem;
+  }
+}
+/* @deprecated use type-figure */
+@utility figure {
+  @apply type-figure;
+}
+/* @deprecated use type-label */
+@utility ann {
+  @apply type-label;
+}
+/* @deprecated a kicker above a heading is banned; the alias draws a plain label (no mono, no capitals) */
+@utility eyebrow {
+  @apply type-label;
+}
+
+/* ---------- Base: the ground and the browser's own surfaces ---------- */
+
+@layer base {
+  html {
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+    /* An in-page jump lands clear of the sticky header. */
+    scroll-padding-top: calc(var(--header-h) + 1.25rem);
+    scrollbar-color: var(--line-bold) var(--bg);
+    caret-color: var(--accent-strong);
+    accent-color: var(--accent);
+    text-underline-offset: var(--underline-offset);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  /* Plain ground: prose, lists, forms and the footer sit on --bg. The drafting grid is
+     .sheet-grid, inside a drawing, and nowhere else. */
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 420;
+    font-stretch: 100%;
+    /* Plex Mono ships at 400 and 500 only: a heavier request takes 500, never a faked bold. */
+    font-synthesis: style;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: var(--selection);
+    color: var(--text);
+  }
+
+  /* One focus ring, always visible. A control that draws its own drops this with outline-none. */
+  :focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: 2px;
+  }
+
+  :where(h1, h2, h3, h4, h5, h6) {
+    text-wrap: balance;
+  }
+  :where(p, li, dt, dd, figcaption, blockquote) {
+    text-wrap: pretty;
+  }
+  :where(a, u, ins) {
+    text-decoration-thickness: var(--underline-thickness);
+  }
+  /* Figures that sit in columns line up. */
+  :where(table, time, output) {
+    font-variant-numeric: tabular-nums;
+  }
+
+  details > summary {
+    list-style: none;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  /* Scrollbars where scrollbar-color is not read. */
+  @supports not (scrollbar-color: auto) {
+    ::-webkit-scrollbar {
+      width: 12px;
+      height: 12px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--bg);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--line-bold);
+      border: 3px solid var(--bg);
+    }
+  }
+}
+
+/* A reader who asks for less motion gets none from CSS: every transition (a chevron's
+   turn, a fold opening, pencil turning to ink) lands at once. A scripted sequence reads
+   <html data-motion> and does not play. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
+
+/* ---------- Variant switching (unchanged behavior) ---------- */
+
+/* Every variant is rendered; the root's data attributes pick which one shows.
+   Works without JavaScript (default view). A root that holds a VariantSwitch for
+   that attribute is left to the switch: its radios pick the variant with :has()
+   rules the switch renders, so the choice works with scripts off too. (:where()
+   forgives a browser without :has(), which keeps the attribute rule.) */
+[data-structure="syndication"]:not(:where(:has(input[data-vsw-attr="data-structure"]))) [data-s]:not([data-s~="syndication"]),
+[data-structure="fund"]:not(:where(:has(input[data-vsw-attr="data-structure"]))) [data-s]:not([data-s~="fund"]),
+[data-structure="jv"]:not(:where(:has(input[data-vsw-attr="data-structure"]))) [data-s]:not([data-s~="jv"]),
+[data-ptype="industrial"]:not(:where(:has(input[data-vsw-attr="data-ptype"]))) [data-p]:not([data-p~="industrial"]),
+[data-ptype="multifamily"]:not(:where(:has(input[data-vsw-attr="data-ptype"]))) [data-p]:not([data-p~="multifamily"]),
+[data-ptype="office"]:not(:where(:has(input[data-vsw-attr="data-ptype"]))) [data-p]:not([data-p~="office"]),
+[data-ptype="retail"]:not(:where(:has(input[data-vsw-attr="data-ptype"]))) [data-p]:not([data-p~="retail"]) {
+  display: none !important;
+}
+
+/* ---------- Drafting classes ----------
+   One definition for each piece of the drawing-set notation. Each is used by a component in
+   components/ui; use the component rather than the class where one exists. They sit in the
+   components layer, so a Tailwind utility on the same element wins.
+
+   Labels that break a line (a dimension, the property line, the refused tag) paint
+   --dim-surface behind them: a Sheet sets it to its paper; anywhere else that is not the
+   ground, set it yourself, e.g. style={{ "--dim-surface": "var(--bg-inset)" }}. */
+
+@layer components {
+  /* ----- The sheet: a drawing. One border; inside it rules, never another box. ----- */
+  .sheet {
+    --dim-surface: var(--bg-raised);
+    position: relative;
+    min-width: 0;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-box);
+    background-color: var(--bg-raised);
+    /* A box sits a little above the table it lies on (D224: the owner's soft shadows). */
+    box-shadow: var(--shadow-box);
+    /* The rounded corner trims what is drawn inside it; clip, not hidden, so a sticky part inside still sticks. */
+    overflow: clip;
+  }
+  /* A sheet inside a sheet is a part of it, not a second frame. */
+  .sheet .sheet {
+    border: 0;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .sheet-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+    border-bottom: 1px solid var(--line-strong);
+    padding: 0.875rem 1rem;
+  }
+  .sheet-title {
+    @apply type-title-m;
+    margin: 0;
+    min-width: 0;
+    color: var(--text);
+  }
+  .sheet-note {
+    @apply type-body-s;
+    margin: 0;
+    color: var(--text-faint);
+  }
+  .sheet-body {
+    min-width: 0;
+    padding: 1rem;
+  }
+  /* A ruled part of a sheet: what a nested card used to be. */
+  .sheet-part {
+    min-width: 0;
+    border-top: 1px solid var(--line);
+    padding: 1rem;
+  }
+  .sheet-part:first-child {
+    border-top: 0;
+  }
+  /* The title block's place: ruled off the drawing, flush with the sheet's own border. */
+  .sheet-tb {
+    border-top: 1px solid var(--line-strong);
+  }
+  .sheet-foot {
+    @apply type-body-s;
+    margin: 0;
+    border-top: 1px solid var(--line-strong);
+    padding: 0.75rem 1rem;
+    color: var(--text-faint);
+  }
+  @media (min-width: 768px) {
+    .sheet-head,
+    .sheet-foot {
+      padding-inline: 1.5rem;
+    }
+    .sheet-body,
+    .sheet-part {
+      padding: 1.5rem;
+    }
+  }
+
+  /* .sheet-grid: the drafting grid, 120 px major over 24 px minor. For the drawing area of a
+     sheet (a board, a figure, a plan) and nothing else: never behind prose, lists or forms. */
+  .sheet-grid {
+    background-image:
+      linear-gradient(var(--grid-major) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-major) 1px, transparent 1px),
+      linear-gradient(var(--grid-minor) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-minor) 1px, transparent 1px);
+    background-size:
+      120px 120px,
+      120px 120px,
+      24px 24px,
+      24px 24px;
+    background-position: -1px -1px;
+  }
+
+  /* ----- The title block: who drew it, who approves, when, what state. Ruled cells of a
+     label over a value; on its own it is one ruled band, inside a Sheet it is the sheet's
+     bottom edge. Never a box inside a box: only the rules between cells are drawn. ----- */
+  .tblock {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+    margin: 0;
+    overflow: clip;
+    border-block: 1px solid var(--line-strong);
+  }
+  .tblock > * {
+    min-width: 0;
+    /* The last column's rule and the last row's rule fall outside the block and are clipped. */
+    margin: 0 -1px -1px 0;
+    border-right: 1px solid var(--line-strong);
+    border-bottom: 1px solid var(--line-strong);
+    padding: 0.625rem 1rem 0.75rem;
+  }
+  .sheet-tb > .tblock {
+    border-block: 0;
+  }
+  /* .tblock--rows (set by TitleBlock): every cell spans a label track and a value track
+     shared across its row, so a label that wraps does not drop its neighbours' values out
+     of line. A cell of a label and a value (dt + dd) lays them on the two tracks; any other
+     cell just spans both. */
+  .tblock--rows > * {
+    grid-row: span 2;
+  }
+  .tblock--rows > :has(> dt:first-child + dd:last-child) {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-template-columns: minmax(0, 1fr);
+    align-content: start;
+  }
+  .tblock-label {
+    @apply type-label;
+    display: block;
+    margin: 0 0 0.25rem;
+    color: var(--text-faint);
+  }
+  .tblock-value {
+    @apply type-body-s;
+    margin: 0;
+    overflow-wrap: break-word;
+    font-weight: 540;
+    color: var(--text);
+  }
+  /* .sigline: the line a person signs on, inside an Approved by cell. On Paper it is run over
+     with the highlighter (--highlight), the way a sheet on a desk is marked "sign here". At
+     night there is none: an amber line glows enough on a dark sheet. */
+  .sigline {
+    position: relative;
+    display: block;
+    height: 1.5rem;
+    margin-top: 0.125rem;
+    border-bottom: 1px solid var(--text-faint);
+    background-color: var(--highlight);
+  }
+  .sigline::before {
+    content: "\00d7";
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    font: 400 0.9375rem/1 var(--font-sans);
+    color: var(--text-faint);
+  }
+
+  /* ----- Hatching: a variant (an agent in a browser, a person offline, unverified). One
+     pattern (--hatch), one spacing, drawn in the element's own color with a 1 px outline. ----- */
+  .hatch,
+  .hatch-agent,
+  .hatch-human,
+  .hatch-unverified,
+  .mk-B,
+  .mk-O {
+    background-color: transparent;
+    background-image: var(--hatch);
+    box-shadow: inset 0 0 0 1px currentColor;
+  }
+  .hatch-agent {
+    color: var(--agent);
+  }
+  .hatch-human {
+    color: var(--human);
+  }
+  .hatch-unverified {
+    color: var(--accent);
+  }
+
+  /* ----- The cut corner: a person's step. Shape, never color alone: the top-right corner is
+     cut by --cut (about 40% of the width, and never on a mark under 12 px). .cut-corner
+     cuts a filled shape; .cut-corner-ruled is for an outlined box, and draws the cut edge. ----- */
+  .cut-corner,
+  .cut-corner-ruled,
+  .mk-H,
+  .mk-O {
+    clip-path: polygon(0 0, calc(100% - var(--cut, 5px)) 0, 100% var(--cut, 5px), 100% 100%, 0 100%);
+  }
+  .cut-corner-ruled {
+    --cut: 12px;
+    background-image: linear-gradient(
+      to top right,
+      transparent calc(50% - 0.75px),
+      var(--cut-line, currentColor) calc(50% - 0.75px) calc(50% + 0.75px),
+      transparent calc(50% + 0.75px)
+    );
+    background-size: var(--cut) var(--cut);
+    background-position: top right;
+    background-repeat: no-repeat;
+  }
+
+  /* ----- .mk: who does a step, as a mark. A agent, B agent in a browser, H person online,
+     O person offline. Green or amber, hatched for the variants, and a person's mark has its
+     corner cut, so who does a step never rests on color alone. 12 px by default; --md 14,
+     --lg 20. Every key that explains the marks says "A person's step has a cut corner". ----- */
+  .mk {
+    --cut: 5px;
+    display: block;
+    flex: none;
+    width: 0.75rem;
+    height: 0.75rem;
+    color: var(--agent);
+    background-color: currentColor;
+    /* Pencil to ink, and back: the outline, the fill and the color change together. */
+    transition:
+      color var(--dur-2) var(--ease-out),
+      background-color var(--dur-2) var(--ease-out),
+      box-shadow var(--dur-2) var(--ease-out);
+  }
+  .mk--md {
+    --cut: 6px;
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+  .mk--lg {
+    --cut: 8px;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  .mk-H,
+  .mk-O {
+    color: var(--human);
+  }
+  .mk-B,
+  .mk-O {
+    background-color: transparent;
+  }
+
+  /* ----- Lane identity: whose column, card or row this is. Carried by the role mark, the
+     lane word and position on the sheet; never by a colored side stripe. [data-lane] hands
+     the lane's inks to whatever is inside it. ----- */
+  [data-lane="agent"] {
+    --lane: var(--agent);
+    --lane-mid: var(--agent-mid);
+    --lane-deep: var(--agent-deep);
+  }
+  [data-lane="person"] {
+    --lane: var(--human);
+    --lane-mid: var(--human-mid);
+    --lane-deep: var(--human-deep);
+  }
+  .lane-tag {
+    @apply type-label;
+    display: inline-flex;
+    min-width: 0;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text);
+  }
+
+  /* ----- Ink on a fill follows the fill. --accent-ink is the ink of the theme's filled controls
+     and marks: dark on Night's light fills, paper on Paper's ink fills. Amber is a light ink in
+     both themes (on paper it is the highlighter's cousin), so whatever is written on an amber
+     fill takes --human-ink, the dark one. bg-human is the Tailwind utility that paints that
+     fill, and text-accent-ink reads --accent-ink from the nearest element that sets it. ----- */
+  .bg-human {
+    --accent-ink: var(--human-ink);
+  }
+
+  /* ----- The role word beside a mark: neutral ink; the mark carries the color. ----- */
+  .role {
+    @apply type-label;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    color: var(--text);
+  }
+
+  /* ----- Icons: one drawn set (components/ui/icon.tsx), 1.5 px stroke at any size. ----- */
+  .icon {
+    display: inline-block;
+    flex: none;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: square;
+    stroke-linejoin: miter;
+  }
+  .icon * {
+    vector-effect: non-scaling-stroke;
+  }
+
+  /* ----- The disclosure: one fold, one chevron. Native details and summary, so it opens
+     with scripts off and find-in-page opens it too. ----- */
+  .disclosure > summary {
+    display: flex;
+    min-height: 2.75rem;
+    cursor: pointer;
+    align-items: center;
+    gap: 0.625rem;
+    color: var(--text);
+  }
+  .disclosure-label {
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+  .disclosure-chevron {
+    color: var(--text-faint);
+    transition:
+      rotate var(--dur-2) var(--ease-out),
+      color var(--dur-1) var(--ease-out);
+  }
+  .disclosure[open] > summary .disclosure-chevron {
+    rotate: 90deg;
+  }
+  .disclosure--end > summary .disclosure-chevron {
+    order: 2;
+  }
+  @media (hover: hover) {
+    .disclosure > summary:hover .disclosure-chevron {
+      color: var(--text);
+    }
+  }
+  @media (min-width: 768px) {
+    .disclosure--sm > summary {
+      min-height: 2rem;
+    }
+  }
+  /* Opening is animated where the browser can size to content; closing runs at three quarters. */
+  @supports selector(::details-content) and (interpolate-size: allow-keywords) {
+    .disclosure {
+      interpolate-size: allow-keywords;
+    }
+    .disclosure::details-content {
+      block-size: 0;
+      overflow-y: clip;
+      transition-property: block-size, content-visibility;
+      transition-duration: calc(var(--dur-3) * 0.75);
+      transition-timing-function: var(--ease-out);
+      transition-behavior: allow-discrete;
+    }
+    .disclosure[open]::details-content {
+      block-size: auto;
+      transition-duration: var(--dur-3);
+    }
+  }
+  @supports selector(::details-content) {
+    /* A fold that is the page's #target, or sits directly in it, shows its body with scripts off. */
+    :is(.disclosure:target, :target > .disclosure)::details-content {
+      display: contents;
+      content-visibility: visible;
+    }
+    /* .disclosure--open-md: a fold on a phone, simply open (no summary) from 768 px. */
+    @media (min-width: 768px) {
+      .disclosure--open-md > summary {
+        display: none;
+      }
+      .disclosure--open-md::details-content {
+        display: contents;
+        content-visibility: visible;
+      }
+    }
+  }
+
+  /* ----- The refused badge: the revision triangle with the step's number. Wherever the
+     engine refused a step: on the cloud's corner (.rev-delta) or at the head of a row. ----- */
+  .refused-badge {
+    position: relative;
+    display: inline-grid;
+    flex: none;
+    width: 1.625rem;
+    height: 1.4375rem;
+    place-items: center;
+    color: var(--danger);
+    transition: color var(--dur-2) var(--ease-out);
+  }
+  .refused-badge > svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    fill: var(--dim-surface, var(--bg));
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linejoin: miter;
+  }
+  .refused-badge > b {
+    position: relative;
+    padding-top: 0.3125rem;
+    font: 500 0.75rem/1 var(--font-mono);
+  }
+
+  /* ----- .rev-cloud: the red scalloped outline around the one thing the engine refused.
+     Drawn from tiles of one scallop each, masked out of a block of ink: `round` fits a whole
+     number of scallops to any width, the ink is a token (so it prints, and print remaps it),
+     and --draw draws it clockwise from the top left: 1 the whole cloud, 0 nothing.
+     The band is the cloud's own border, so the caller's padding starts inside the scallops.
+     .cloud-ink is the red line; .cloud-pencil is the same line in pencil, shown whenever
+     --draw is below 1 (it does not read data-inked). ----- */
+  .rev-cloud {
+    --cloud-band: 8px;
+    --cloud-corner: 12px;
+    position: relative;
+    border: var(--cloud-band) solid transparent;
+    border-radius: var(--radius-control);
+    padding: 0.5rem 0.75rem;
+    /* Without masks the refusal is still circled, plainly. */
+    outline: 1.5px solid var(--danger);
+    outline-offset: -5px;
+  }
+  .cloud-ink,
+  .cloud-pencil {
+    display: none;
+  }
+  @supports (mask-repeat: round) {
+    .rev-cloud {
+      outline: 0;
+    }
+    .cloud-ink,
+    .cloud-pencil {
+      position: absolute;
+      inset: calc(-1 * var(--cloud-band));
+      display: block;
+      pointer-events: none;
+    }
+    .cloud-ink {
+      color: var(--cloud-ink, var(--danger));
+      /* The draw: four strips round the frame, each uncovered along its own direction. The
+         top and bottom runs take about a third of the stroke each, the sides a sixth. */
+      --cloud-t: clamp(0, var(--draw, 1) / 0.34, 1);
+      --cloud-r: clamp(0, (var(--draw, 1) - 0.34) / 0.16, 1);
+      --cloud-b: clamp(0, (var(--draw, 1) - 0.5) / 0.34, 1);
+      --cloud-l: clamp(0, (var(--draw, 1) - 0.84) / 0.16, 1);
+      mask-image:
+        linear-gradient(to right, black calc(var(--cloud-t) * 100%), transparent 0),
+        linear-gradient(to bottom, black calc(var(--cloud-r) * 100%), transparent 0),
+        linear-gradient(to left, black calc(var(--cloud-b) * 100%), transparent 0),
+        linear-gradient(to top, black calc(var(--cloud-l) * 100%), transparent 0);
+      mask-size:
+        calc(100% - var(--cloud-corner)) var(--cloud-corner),
+        var(--cloud-corner) calc(100% - var(--cloud-corner)),
+        calc(100% - var(--cloud-corner)) var(--cloud-corner),
+        var(--cloud-corner) calc(100% - var(--cloud-corner));
+      mask-position:
+        left top,
+        right top,
+        right bottom,
+        left bottom;
+      mask-repeat: no-repeat;
+    }
+    .cloud-pencil {
+      color: var(--text-faint);
+      /* A function of --draw alone: 0.7 while the cloud is not fully drawn, 0 at --draw: 1. */
+      opacity: calc(clamp(0, (1 - var(--draw, 1)) * 1000, 1) * 0.7);
+      transition: opacity var(--dur-4) var(--ease-out);
+    }
+    .cloud-ink::before,
+    .cloud-ink::after,
+    .cloud-pencil::before,
+    .cloud-pencil::after {
+      content: "";
+      position: absolute;
+      background-color: currentColor;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    /* The four corners, and the top and bottom runs between them. */
+    .cloud-ink::before,
+    .cloud-pencil::before {
+      inset: 0;
+      border-inline: var(--cloud-corner) solid transparent;
+      mask-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M6.5 28A10 10 0 0 1 6.5 12A4.6 4.6 0 1 1 12 6.5A10 10 0 0 1 28 6.5' fill='none' stroke='black' stroke-width='1.5'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M-16 6.5A10 10 0 0 1 0 6.5A4.6 4.6 0 1 1 5.5 12A10 10 0 0 1 5.5 28' fill='none' stroke='black' stroke-width='1.5'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M5.5 -16A10 10 0 0 1 5.5 0A4.6 4.6 0 1 1 0 5.5A10 10 0 0 1 -16 5.5' fill='none' stroke='black' stroke-width='1.5'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M28 5.5A10 10 0 0 1 12 5.5A4.6 4.6 0 1 1 6.5 0A10 10 0 0 1 6.5 -16' fill='none' stroke='black' stroke-width='1.5'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='8' viewBox='0 0 16 8' preserveAspectRatio='none'%3E%3Cpath d='M-16 6.5A10 10 0 0 1 0 6.5A10 10 0 0 1 16 6.5A10 10 0 0 1 32 6.5' fill='none' stroke='black' stroke-width='1.5'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='8' viewBox='0 0 16 8' preserveAspectRatio='none'%3E%3Cpath d='M32 1.5A10 10 0 0 1 16 1.5A10 10 0 0 1 0 1.5A10 10 0 0 1 -16 1.5' fill='none' stroke='black' stroke-width='1.5'/%3E%3C/svg%3E");
+      mask-position:
+        left top,
+        right top,
+        right bottom,
+        left bottom,
+        left top,
+        left bottom;
+      mask-size:
+        var(--cloud-corner) var(--cloud-corner),
+        var(--cloud-corner) var(--cloud-corner),
+        var(--cloud-corner) var(--cloud-corner),
+        var(--cloud-corner) var(--cloud-corner),
+        16px var(--cloud-band),
+        16px var(--cloud-band);
+      mask-repeat:
+        no-repeat,
+        no-repeat,
+        no-repeat,
+        no-repeat,
+        round no-repeat,
+        round no-repeat;
+      mask-origin:
+        border-box,
+        border-box,
+        border-box,
+        border-box,
+        padding-box,
+        padding-box;
+      mask-clip:
+        border-box,
+        border-box,
+        border-box,
+        border-box,
+        padding-box,
+        padding-box;
+    }
+    /* The left and right runs. */
+    .cloud-ink::after,
+    .cloud-pencil::after {
+      inset: var(--cloud-corner) 0;
+      mask-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='16' viewBox='0 0 8 16' preserveAspectRatio='none'%3E%3Cpath d='M6.5 32A10 10 0 0 1 6.5 16A10 10 0 0 1 6.5 0A10 10 0 0 1 6.5 -16' fill='none' stroke='black' stroke-width='1.5'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='16' viewBox='0 0 8 16' preserveAspectRatio='none'%3E%3Cpath d='M1.5 -16A10 10 0 0 1 1.5 0A10 10 0 0 1 1.5 16A10 10 0 0 1 1.5 32' fill='none' stroke='black' stroke-width='1.5'/%3E%3C/svg%3E");
+      mask-position:
+        left top,
+        right top;
+      mask-size: var(--cloud-band) 16px;
+      mask-repeat: no-repeat round;
+    }
+  }
+  /* .rev-delta: the refused badge on the cloud's corner. */
+  .rev-delta {
+    position: absolute;
+    right: -1rem;
+    top: -1.375rem;
+  }
+
+  /* ----- .dim: a dimension line. Hairline, a 45-degree tick at each end, and a figure that
+     breaks the line. Only over something counted or computed; never a section divider.
+     .dim--below puts the label under the line; .dim--low drops it a second row (for a narrow
+     span beside another label); .dim--v is vertical, its label read bottom to top.
+     --draw draws the line from its start; the ticks land as it closes. ----- */
+  .dim {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 30px;
+    min-width: 0;
+  }
+  .dim::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 21px;
+    border-top: 1px solid var(--dim-line);
+    transform: scaleX(var(--draw, 1));
+    transform-origin: left center;
+  }
+  .dim-tick {
+    position: absolute;
+    top: 17px;
+    width: 1px;
+    height: 9px;
+    background: var(--dim-line);
+    transform: rotate(45deg);
+    opacity: clamp(0, (var(--draw, 1) - 0.85) / 0.15, 1);
+  }
+  .dim-tick:first-of-type {
+    left: 0;
+  }
+  .dim-tick:last-of-type {
+    right: 0;
+  }
+  .dim-label {
+    position: relative;
+    font: 500 0.8125rem/1rem var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    color: var(--text-muted);
+    background: var(--dim-surface, var(--bg));
+    padding: 0 0.5rem;
+  }
+  .dim--below::before {
+    top: 8px;
+  }
+  .dim--below .dim-tick {
+    top: 4px;
+  }
+  .dim--below .dim-label {
+    margin-top: 14px;
+  }
+  .dim--low .dim-label {
+    margin-top: 30px;
+  }
+  .dim--v {
+    width: 30px;
+    height: auto;
+    min-height: 60px;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+  }
+  .dim--v::before {
+    left: 15px;
+    right: auto;
+    top: 0;
+    bottom: 0;
+    border-top: 0;
+    border-left: 1px solid var(--dim-line);
+    transform: scaleY(var(--draw, 1));
+    transform-origin: center top;
+  }
+  .dim--v .dim-tick {
+    left: 15px;
+    top: auto;
+    transform: rotate(-45deg);
+  }
+  .dim--v .dim-tick:first-of-type {
+    left: 15px;
+    top: -4px;
+  }
+  .dim--v .dim-tick:last-of-type {
+    right: auto;
+    bottom: -4px;
+  }
+  .dim--v .dim-label {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    padding: 0.5rem 0;
+  }
+  /* .dim-ext: a dashed extension line from a dimension down to what it measures. */
+  .dim-ext {
+    position: absolute;
+    width: 0;
+    border-left: 1px dashed var(--dim-ext);
+    pointer-events: none;
+  }
+
+  /* ----- .pline: the property line (dash-dot). The boundary between the agent's side and
+     the person's side, and between the operator's machine and the hosted site. --h
+     horizontal, --v vertical; --fold turns a vertical line horizontal below 768 px, where
+     columns stack. --draw draws it from its start. ----- */
+  .pline {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pline::before {
+    content: "";
+    position: absolute;
+  }
+  .pline--h {
+    min-height: 2rem;
+  }
+  .pline--h::before,
+  .pline--fold::before {
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1.5px;
+    transform: translateY(-50%);
+    background: repeating-linear-gradient(90deg, var(--accent) 0 22px, transparent 22px 28px, var(--accent) 28px 31px, transparent 31px 37px);
+    clip-path: inset(0 calc((1 - var(--draw, 1)) * 100%) 0 0);
+  }
+  .pline-label {
+    @apply type-label;
+    position: relative;
+    padding: 0 0.75rem;
+    background: var(--dim-surface, var(--bg));
+    color: var(--accent);
+  }
+  @media (min-width: 768px) {
+    .pline--v {
+      min-width: 2rem;
+      align-self: stretch;
+    }
+    .pline--v::before {
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      right: auto;
+      width: 1.5px;
+      height: auto;
+      transform: translateX(-50%);
+      background: repeating-linear-gradient(180deg, var(--accent) 0 22px, transparent 22px 28px, var(--accent) 28px 31px, transparent 31px 37px);
+      clip-path: inset(0 0 calc((1 - var(--draw, 1)) * 100%) 0);
+    }
+    .pline--v .pline-label {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      padding: 0.75rem 0;
+    }
+  }
+  @media (max-width: 767.98px) {
+    .pline--fold {
+      min-height: 2rem;
+    }
+    .pline--v:not(.pline--fold) {
+      min-width: 2rem;
+      align-self: stretch;
+    }
+    .pline--v:not(.pline--fold)::before {
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 1.5px;
+      transform: translateX(-50%);
+      background: repeating-linear-gradient(180deg, var(--accent) 0 22px, transparent 22px 28px, var(--accent) 28px 31px, transparent 31px 37px);
+      clip-path: inset(0 0 calc((1 - var(--draw, 1)) * 100%) 0);
+    }
+    .pline--v:not(.pline--fold) .pline-label {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      padding: 0.75rem 0;
+    }
+  }
+
+  /* ----- .stamp: a person reviewed this, on this date. A word over its date in a ruled box,
+     flat (never tilted), in the one review color. Never a lane color. ----- */
+  .stamp {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.125rem;
+    border: 1.5px solid var(--accent);
+    padding: 0.4375rem 0.75rem 0.375rem;
+    white-space: nowrap;
+    color: var(--accent-strong);
+    transition:
+      color var(--dur-2) var(--ease-out),
+      border-color var(--dur-2) var(--ease-out);
+  }
+  .stamp-word {
+    font: 600 0.8125rem/1.35 var(--font-sans);
+    letter-spacing: 0.01em;
+  }
+  .stamp-date {
+    font: 480 0.75rem/1.4 var(--font-sans);
+    letter-spacing: 0.015em;
+  }
+  .stamp-date time {
+    font: 500 0.75rem/1.4 var(--font-mono);
+    letter-spacing: 0;
+  }
+
+  /* ----- .outcome: the line that says what happened to a step. Neutral ink, except the two
+     outcomes a screen is about: a refusal and a finding. ----- */
+  .outcome {
+    @apply type-body-s;
+    margin: 0;
+    font-weight: 600;
+    color: var(--text);
+    transition: color var(--dur-2) var(--ease-out);
+  }
+  .outcome[data-outcome="refused"] > :first-child {
+    color: var(--danger);
+  }
+  .outcome[data-outcome="finding"] {
+    color: var(--warn);
+  }
+  .outcome[data-outcome="unverified"],
+  .outcome[data-outcome="read"] {
+    font-weight: 430;
+    color: var(--text-muted);
+  }
+
+  /* ----- Penciled, then inked. A sequence does not hide a drawing to replay it: it pencils it
+     (data-inked="false" on the device or an ancestor), then inks it. Penciled is reduced
+     weight and contrast, still 4.5:1 for words and 3:1 for marks; the change is a
+     transition on --dur-2. No attribute is the finished, inked state. These devices carry
+     data-ink="" (their own pencil, here); the generic data-ink="text" and "mark" belong to
+     the motion code's own rules. Held to screens: paper always gets the inked drawing. ----- */
+  @media screen {
+    :is([data-inked="false"] .mk, .mk[data-inked="false"]) {
+      color: var(--text-faint);
+      background-color: transparent;
+      box-shadow: inset 0 0 0 1px currentColor;
+      opacity: 1;
+    }
+    /* A person's solid mark keeps its cut edge in pencil. */
+    :is([data-inked="false"] .mk-H, .mk-H[data-inked="false"]) {
+      background-image: linear-gradient(
+        to top right,
+        transparent calc(50% - 0.75px),
+        currentColor calc(50% - 0.75px) calc(50% + 0.75px),
+        transparent calc(50% + 0.75px)
+      );
+      background-size: var(--cut) var(--cut);
+      background-position: top right;
+      background-repeat: no-repeat;
+    }
+    :is([data-inked="false"] .stamp, .stamp[data-inked="false"]) {
+      border-color: var(--text-faint);
+      color: var(--text-faint);
+      opacity: 1;
+    }
+    :is([data-inked="false"] .outcome, .outcome[data-inked="false"]),
+    :is([data-inked="false"] .outcome, .outcome[data-inked="false"]) > :first-child {
+      color: var(--text-faint);
+      opacity: 1;
+    }
+    :is([data-inked="false"] .refused-badge, .refused-badge[data-inked="false"]) {
+      color: var(--text-faint);
+      opacity: 1;
+    }
+  }
+
+  /* A drawable SVG stroke: pathLength="1" and data-draw on the shape (or data-draw on its
+     svg), and --draw draws it. Zero specificity, so a timeline's own values win. */
+  :where(svg [data-draw][pathLength], svg[data-draw] [pathLength]) {
+    stroke-dasharray: 1 2;
+    stroke-dashoffset: calc(1 - var(--draw, 1));
+  }
+
+  /* ----- Buttons: primary filled, secondary outlined, quiet text. Square (2 px). At least
+     44 px tall where it is tapped; 40 px (32 px small) from 768 px. ----- */
+  .btn {
+    @apply type-label;
+    display: inline-flex;
+    min-height: 2.75rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius-control);
+    padding: 0 1rem;
+    white-space: nowrap;
+    text-decoration: none;
+    transition:
+      background-color var(--dur-1) var(--ease-out),
+      border-color var(--dur-1) var(--ease-out),
+      color var(--dur-1) var(--ease-out);
+  }
+  .btn--sm {
+    padding: 0 0.75rem;
+  }
+  @media (min-width: 768px) {
+    .btn {
+      min-height: 2.5rem;
+    }
+    .btn--sm {
+      min-height: 2rem;
+    }
+  }
+  .btn--primary {
+    border-color: var(--text);
+    background-color: var(--text);
+    color: var(--accent-ink);
+  }
+  .btn--secondary {
+    border-color: var(--line-bold);
+    background-color: transparent;
+    color: var(--text);
+  }
+  .btn--quiet {
+    padding-inline: 0.5rem;
+    background-color: transparent;
+    color: var(--text);
+  }
+  @media (hover: hover) {
+    .btn--primary:hover {
+      border-color: var(--fill-hover);
+      background-color: var(--fill-hover);
+    }
+    .btn--secondary:hover {
+      border-color: var(--text-faint);
+      background-color: var(--bg-tile);
+    }
+    .btn--quiet:hover {
+      background-color: var(--bg-tile);
+    }
+  }
+  .btn--primary:active {
+    border-color: var(--text-muted);
+    background-color: var(--text-muted);
+  }
+  .btn--secondary:active,
+  .btn--quiet:active {
+    background-color: var(--bg-panel);
+  }
+  .btn[aria-current="page"] {
+    border-color: var(--accent-strong);
+  }
+  .btn:disabled,
+  .btn[aria-disabled="true"] {
+    cursor: not-allowed;
+    border-color: var(--line-strong);
+    background-color: transparent;
+    color: var(--text-faint);
+  }
+
+  /* ----- The theme switch (components/ui/theme-toggle.tsx): a quiet button that names the theme
+     it turns to, after an arrow and a small sheet in the ink of the text (light on Night, dark
+     on Paper: the paper it turns to). Both names are in the markup and share one cell, and the
+     theme shows one of them (--show-on-night, --show-on-paper): the word is right before any
+     script runs, the button keeps one width, and nothing moves when React arrives. With scripts
+     off the system setting decides and the switch is not drawn, whatever a utility on it says. ----- */
+  html:not(.js) .theme-toggle {
+    display: none !important;
+  }
+  .theme-toggle-faces {
+    display: inline-grid;
+  }
+  .theme-toggle-faces > * {
+    grid-area: 1 / 1;
+  }
+  .theme-toggle-faces > [data-face="night"] {
+    visibility: var(--show-on-night);
+  }
+  .theme-toggle-faces > [data-face="paper"] {
+    visibility: var(--show-on-paper);
+  }
+  /* The sheet: portrait, with one clear rule across its foot for the title block. */
+  .theme-sheet {
+    display: block;
+    flex: none;
+    width: 0.625rem;
+    height: 0.8125rem;
+    background-color: currentColor;
+    mask-image: linear-gradient(to top, black 0 3px, transparent 3px 4px, black 4px);
+  }
+  /* While the theme changes nothing eases: every color lands together, not the marks a beat late. */
+  html[data-theme-turning] *,
+  html[data-theme-turning] *::before,
+  html[data-theme-turning] *::after {
+    transition: none !important;
+  }
+
+  /* ----- Links in running text: the ink of the text, a drafting-blue underline. ----- */
+  .link {
+    color: var(--text);
+    text-decoration-line: underline;
+    text-decoration-color: var(--accent);
+    transition:
+      color var(--dur-1) var(--ease-out),
+      text-decoration-color var(--dur-1) var(--ease-out);
+  }
+  .link--accent {
+    color: var(--accent-strong);
+  }
+  .link--muted {
+    color: var(--text-muted);
+    text-decoration-color: var(--line-bold);
+  }
+  /* A URL or an id inside a sentence: mono, a touch smaller so it sits with the words. */
+  .link--mono {
+    font-family: var(--font-mono);
+    font-size: 0.92em;
+  }
+  @media (hover: hover) {
+    .link:hover {
+      color: var(--accent-strong);
+      text-decoration-color: var(--accent-strong);
+    }
+    .link--accent:hover {
+      color: var(--text);
+    }
+    .link--muted:hover {
+      color: var(--text);
+      text-decoration-color: var(--accent);
+    }
+  }
+
+  /* ----- Chips: a fact or a state in a ruled 2 px chip, sentence case. The frame and the
+     square carry the color; the word is neutral ink. Dashed is "not yet". ----- */
+  .tag {
+    @apply type-label;
+    --tag-ink: var(--line-bold);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    border: 1px solid var(--tag-ink);
+    border-radius: var(--radius-chip);
+    padding: 0.125rem 0.5rem;
+    white-space: nowrap;
+    color: var(--text);
+  }
+  .tag--dashed {
+    border-style: dashed;
+  }
+  .tag--muted {
+    color: var(--text-muted);
+  }
+  .tag--accent {
+    --tag-ink: var(--accent);
+  }
+  .tag--agent {
+    --tag-ink: var(--agent);
+  }
+  .tag--human {
+    --tag-ink: var(--human);
+  }
+  .tag--danger {
+    --tag-ink: var(--danger);
+  }
+  .tag--warn {
+    --tag-ink: var(--warn);
+  }
+  .tag-dot {
+    display: inline-block;
+    flex: none;
+    width: 0.4375rem;
+    height: 0.4375rem;
+    background-color: var(--tag-ink);
+  }
+  .tag--muted > .tag-dot {
+    background-color: var(--text-faint);
+  }
+
+  /* ----- A callout: an icon and what it says. No side stripe, no box. ----- */
+  .callout {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+    gap: 0 0.75rem;
+    color: var(--text-muted);
+  }
+  /* The icon sits on the first line of text: the body's, or the title's when there is one. */
+  .callout-icon {
+    display: grid;
+    height: 1.6rem;
+    place-items: center;
+    color: var(--accent);
+  }
+  .callout:has(.callout-title) > .callout-icon {
+    height: 1.125rem;
+  }
+  .callout--person > .callout-icon {
+    color: var(--human);
+  }
+  .callout--agent > .callout-icon {
+    color: var(--agent);
+  }
+  .callout--risk > .callout-icon {
+    color: var(--danger);
+  }
+  .callout--warn > .callout-icon {
+    color: var(--warn);
+  }
+  .callout-title {
+    @apply type-label;
+    margin: 0 0 0.125rem;
+    color: var(--text);
+  }
+  .callout-body {
+    @apply type-body;
+    min-width: 0;
+  }
+
+  /* ----- The brand's own lettering: the wordmark and a host's two-letter tile. ----- */
+  .wordmark {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    gap: 0.625rem;
+    white-space: nowrap;
+    font-weight: 620;
+    font-stretch: 118%;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    text-decoration: none;
+  }
+  /* The second half of the name, PromptedCRE: the same letters, lighter. */
+  .wordmark-light {
+    font-weight: 400;
+  }
+  .monogram {
+    display: inline-grid;
+    flex: none;
+    place-items: center;
+    border: 1px solid var(--line-bold);
+    background-color: var(--bg-tile);
+    font-weight: 640;
+    font-stretch: 118%;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    color: var(--text);
+  }
+  .monogram--sm {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.75rem;
+  }
+  .monogram--md {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 0.875rem;
+  }
+  .monogram--lg {
+    width: 3.25rem;
+    height: 3.25rem;
+    font-size: 1.1875rem;
+  }
+  /* A tested host: the tile takes the agent's line. */
+  .monogram--active {
+    border-color: var(--agent);
+  }
+
+  /* A company's own icon (Logo, lib/logos.ts), always beside its name. The file is drawn
+     whole, at its own colors; an icon in dark ink on a clear ground sits on a light tile so
+     it reads on Night too. A vendor with no icon gets a letter tile of ours, a government
+     source one neutral glyph. Sizes: 16, 20 and 28 px. */
+  .logo {
+    display: inline-grid;
+    flex: none;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 0.25rem;
+    vertical-align: middle;
+  }
+  .logo > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .logo--light {
+    border: 1px solid var(--line);
+    background-color: var(--logo-ground);
+    padding: 1px;
+  }
+  .logo--tile {
+    border: 1px solid var(--line-bold);
+    background-color: var(--bg-tile);
+    font-weight: 640;
+    font-stretch: 118%;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    color: var(--text-muted);
+  }
+  .logo--sm {
+    width: 1rem;
+    height: 1rem;
+    font-size: 0.75rem;
+  }
+  .logo--md {
+    width: 1.25rem;
+    height: 1.25rem;
+    font-size: 0.75rem;
+  }
+  .logo--lg {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.75rem;
+  }
+
+  /* D224, the owner's BoardUI round: calm motion, CSS-first (components/motion/page-motion.tsx).
+     Every hidden "before" state lives under html.js[data-motion="full"] on screens, so a reader
+     without scripts, with reduced motion or on paper gets the finished page. If the page's
+     motion never starts, the head script sets data-reveal-off and nothing stays hidden. */
+  @media screen {
+    /* Reveals: a section comes into focus once as it enters the screen. */
+    html.js[data-motion="full"]:not([data-reveal-off]) [data-reveal]:not([data-revealed]) {
+      opacity: 0;
+      filter: blur(6px);
+      translate: 0 0.5rem;
+    }
+    html.js[data-motion="full"] [data-reveal] {
+      transition:
+        opacity 520ms var(--ease-out),
+        filter 520ms var(--ease-out),
+        translate 520ms var(--ease-out);
+      transition-delay: calc(var(--reveal-i, 0) * 70ms);
+    }
+    /* A bar inside a reveal fills from its start once revealed. */
+    html.js[data-motion="full"]:not([data-reveal-off]) [data-reveal]:not([data-revealed]) .fill-on-reveal {
+      transform: scaleX(0);
+    }
+    html.js[data-motion="full"] .fill-on-reveal {
+      transform-origin: left center;
+      transition: transform 800ms var(--ease-out) 160ms;
+    }
+    /* Items that arrive one after another inside a reveal (icons in a row). */
+    html.js[data-motion="full"]:not([data-reveal-off]) [data-reveal]:not([data-revealed]) .stagger-in > * {
+      opacity: 0;
+      scale: 0.85;
+    }
+    html.js[data-motion="full"] .stagger-in > * {
+      transition:
+        opacity 360ms var(--ease-out),
+        scale 360ms var(--ease-out);
+      transition-delay: calc(240ms + var(--i, 0) * 80ms);
+    }
+
+    /* A page arriving fades in (app/template.tsx). */
+    html.js[data-motion="full"] .page-in {
+      animation: page-in 220ms var(--ease-out) both;
+    }
+
+    /* The header lifts once the page is scrolled; the wordmark tightens a little. */
+    body > header {
+      transition: box-shadow var(--dur-2) var(--ease-out);
+    }
+    body > header[data-scrolled] {
+      box-shadow: var(--shadow-box);
+    }
+    html.js[data-motion="full"] body > header .wordmark {
+      transform-origin: left center;
+      transition: scale var(--dur-2) var(--ease-out);
+    }
+    html.js[data-motion="full"] body > header[data-scrolled] .wordmark {
+      scale: 0.94;
+    }
+  }
+  @keyframes page-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* A short notice after a copy (toast() in page-motion.tsx), centred at the foot of the screen. */
+  .toast-region {
+    position: fixed;
+    inset-inline: 0;
+    bottom: 1.25rem;
+    z-index: 60;
+    display: flex;
+    justify-content: center;
+    padding-inline: 1rem;
+    pointer-events: none;
+  }
+  .toast {
+    pointer-events: auto;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-control);
+    background-color: var(--bg-raised);
+    padding: 0.625rem 1rem;
+    color: var(--text);
+    box-shadow: var(--shadow-box);
+  }
+  html.js[data-motion="full"] .toast {
+    animation: toast-in 260ms var(--ease-out) both;
+  }
+  @keyframes toast-in {
+    from {
+      opacity: 0;
+      translate: 0 0.5rem;
+    }
+    to {
+      opacity: 1;
+      translate: 0 0;
+    }
+  }
+
+  /* The theme switch's circle (components/ui/theme-toggle.tsx): the browser's own view
+     transition, with the new theme clipped to a growing circle from the click. */
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+  }
+
+  /* Deprecated: the old disclosure chevron, still turned for the folds that have not moved to
+     Disclosure. New code uses <Disclosure> or .disclosure-chevron. */
+  details[open] .chev {
+    transform: rotate(90deg);
+  }
+
+  /* Where the system forces its own colors, a mark keeps its ink and the cloud its line. */
+  @media (forced-colors: active) {
+    .mk,
+    .tag-dot,
+    .theme-sheet {
+      forced-color-adjust: none;
+    }
+    .cloud-ink,
+    .cloud-pencil {
+      display: none;
+    }
+    .rev-cloud {
+      outline: 2px solid CanvasText;
+      outline-offset: -5px;
+    }
+  }
+}
+
+/* ---------- Print ----------
+   A printed page, or one saved as PDF, is a plain document: white paper, dark ink, no
+   site header, footer, status line or drafting grid, and every fold open. The tokens
+   are redrawn for paper below, so every component prints in ink without a rule of its
+   own. Mark what belongs to the screen only with Tailwind's `print:hidden` (switches,
+   filters, prompt boxes, the step strip, drawings), and what belongs to paper only with
+   `hidden print:block`. Tuned on the playbook page; /audit and a rule card follow the
+   same rules. Closed <details> print open through ::details-content where the browser
+   has it; PrintFolds (components/ui/print-folds.tsx) opens them where it does not.
+   The page is about 700 px wide on paper, so the phone layout is the one that prints. */
+@page {
+  margin: 16mm 15mm 18mm;
+}
+@media print {
+  :root {
+    /* Paper in a printer is the Paper theme, whichever theme was on the screen: its inks, lines
+       and tints are applied first. Under them is only what a printed page needs and a screen
+       does not. There is one sheet, the page itself, so the table, the selected state and a
+       control's fill are plain white and the grid is not drawn. A browser drops fills on paper
+       unless a rule asks for them, so the ink written on a fill must read with the fill gone:
+       it is the dark ink, and the agent's green is lifted until that ink holds 4.5:1 on it. */
+    @apply theme-paper;
+    --bg: #ffffff;
+    --bg-raised: #ffffff;
+    --bg-panel: #ffffff;
+    --bg-tile: #ffffff;
+    --grid-minor: transparent;
+    --grid-major: transparent;
+    --accent-ink: #070d18;
+    --agent: #1f905e;
+  }
+  html,
+  body {
+    background: #ffffff !important;
+  }
+  body {
+    font-size: 10.5pt;
+  }
+
+  /* The site around the page, and anything that only works on a screen. */
+  body > a[href="#main"],
+  body > header,
+  body > footer,
+  section[aria-labelledby="status-line-h"],
+  nextjs-portal,
+  dialog,
+  .theme-toggle {
+    display: none !important;
+  }
+  main {
+    padding: 0 !important;
+  }
+
+  /* On paper every drawing is finished: whatever a sequence had drawn so far, the whole
+     line prints, and the pencil under the revision cloud does not. */
+  *,
+  *::before,
+  *::after {
+    --draw: 1 !important;
+  }
+  .cloud-pencil {
+    display: none !important;
+  }
+
+  /* Ink, not glow: sheets lose their dark paper and the grid. The notation keeps its ink: a
+     browser drops backgrounds on paper, and the marks, the hatching, a dimension's ticks, the
+     property line and the cut edge are drawn with them. (The revision cloud asks for the same
+     where it is drawn.) */
+  .sheet,
+  .sheet-grid {
+    background: none !important;
+  }
+  .mk,
+  .hatch,
+  .hatch-agent,
+  .hatch-human,
+  .hatch-unverified,
+  .cut-corner-ruled,
+  .tag-dot,
+  .dim-tick,
+  .pline::before,
+  .stamp {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  /* A button on paper is its words in a ruled box. */
+  .btn {
+    border-color: var(--line-bold) !important;
+    background: none !important;
+    color: var(--text) !important;
+  }
+  a {
+    color: inherit;
+  }
+  /* On paper a link cannot be followed, so an outside address is printed after it. */
+  main a[href^="http"]::after {
+    content: " " attr(href);
+    font: 9pt/1.4 var(--font-mono);
+    color: var(--text-faint);
+    word-break: break-all;
+  }
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+    break-inside: avoid;
+  }
+
+  /* Every fold prints open, so its chevron goes. */
+  .chev,
+  .sl-c,
+  .fold-chev,
+  .disclosure-chevron {
+    display: none !important;
+  }
+
+  /* The playbook page: every step open, in order, with who does it in words. */
+  .sl > details,
+  .sl > details[open] {
+    background: none !important;
+    box-shadow: none !important;
+  }
+  .sl > details > summary {
+    padding: 9pt 0 3pt !important;
+    break-inside: avoid;
+    break-after: avoid;
+  }
+  .sl-p {
+    display: none !important;
+  }
+  .sl-body {
+    gap: 10pt !important;
+    padding: 2pt 0 12pt 2rem !important;
+  }
+  .sl-why,
+  .sl-f,
+  .sl-note {
+    break-inside: avoid;
+    background: none !important;
+  }
+  .sl-f {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+  .sl-src {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  /* A step's sources carry the numbers of the page's source list, which prints the addresses. */
+  main .sl-src a[href^="http"]::after {
+    content: none;
+  }
+  /* A person's step: a line to sign and one to date. */
+  .sl-sign {
+    display: grid !important;
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: 24pt;
+    margin: 18pt 0 0;
+    font: 500 9pt/1.3 var(--font-sans);
+    color: var(--text-faint);
+    break-inside: avoid;
+  }
+  .sl-sign > span {
+    border-top: 1px solid var(--text);
+    padding-top: 3pt;
+  }
+}
+@supports selector(::details-content) {
+  @media print {
+    details::details-content {
+      display: contents;
+      content-visibility: visible;
+    }
+  }
+}

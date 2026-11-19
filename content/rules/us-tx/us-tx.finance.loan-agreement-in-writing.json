@@ -1,0 +1,25 @@
+{
+  "id": "us-tx.finance.loan-agreement-in-writing",
+  "jurisdiction": "us-tx",
+  "title": "Texas loan agreements over $50,000 with a financial institution: a signed writing, once notice is given",
+  "rule": "A loan agreement with a financial institution (a bank, savings bank, savings and loan association or credit union, its holding company, subsidiary or affiliate, or a HUD-approved mortgage lender) in which the amount involved exceeds $50,000 in value is not enforceable unless it is in writing and signed by the party to be bound or that party's authorized representative. It covers commitments to lend or to delay repayment. The parties' rights come solely from the writing; earlier or contemporaneous oral agreements cannot vary it. The section applies only if the institution gave a conspicuous notice of it on or before signing; without that notice the loan stays enforceable.",
+  "citation": {
+    "authority": "Tex. Bus. & Com. Code 26.02",
+    "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.26.htm"
+  },
+  "asOf": "2026-11-13",
+  "lastVerified": "2026-11-13",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Business and Commerce Code 26.02 (last amended in 1999; the $50,000 threshold is a fixed amount, not indexed), and changes to the posted-notice language the Finance Commission of Texas prescribes.",
+  "sources": [
+    {
+      "id": "tx-bc-code-26-02",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.26.htm",
+      "title": "Texas Business and Commerce Code, Chapter 26 (Section 26.02, Loan agreement must be in writing)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "exceeds $50,000 in value is not enforceable unless the agreement is in writing and signed by the party to be bound",
+      "tier": "primary"
+    }
+  ]
+}

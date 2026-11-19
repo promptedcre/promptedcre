@@ -1,0 +1,153 @@
+{
+  "vendor": "argus-enterprise",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "f18c98fa4abcf14cd565e97d6d2f2c60e61f64f87800eaf77c41feb158e8b580",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "partial",
+      "quality": 3,
+      "evidence": [
+        "c3"
+      ],
+      "rationale": "The ARGUS Enterprise downloads page lists an 'ARGUS API fair usage policy' (c3), which signals an API exists, but the coverage check found no public API reference or developer portal and the old API pages now redirect elsewhere.",
+      "missing": "The pack shows no API reference, endpoints or developer portal, so it does not show what the API covers, whether it reads and changes core records, or how customers get access; the only evidence is a policy title."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c11"
+      ],
+      "rationale": "The pack shows no MCP server; the only agent-related item is ARGUS Assist (c11), an in-app assistant with no external agent access described.",
+      "missing": "Any vendor-maintained MCP server, with or without setup steps."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no official CLI, SDK, package or public code repository for ARGUS Enterprise.",
+      "missing": "Any vendor-maintained SDK or CLI, code samples, or a library the vendor points to."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c8"
+      ],
+      "rationale": "The only integration mechanism in the pack is scheduled imports and exports delivered by Altus professional services (c8), which is not a webhook or event subscription.",
+      "missing": "Any documented webhooks or event subscriptions, directly or through a third-party automation platform."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no API keys, tokens or OAuth clients, and nothing about scopes, roles or permissions for credentials.",
+      "missing": "How API credentials are issued and whether they can be limited to specific records or actions."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No OpenAPI, Swagger, GraphQL or other machine-readable API specification appears in the pack, and the coverage check found no public API reference at all.",
+      "missing": "Any machine-readable API specification, public or behind login."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c12"
+      ],
+      "rationale": "The pack shows a public downloads page of release notes and guides plus a Knowledge Base behind a client login (c12), with no llms.txt file or Markdown documentation pages.",
+      "missing": "An llms.txt file or Markdown versions of the documentation pages."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no sandbox, test mode or developer environment, either self-serve or on request.",
+      "missing": "Any sandbox or test environment where an agent could work before touching live records."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "full",
+      "quality": 6,
+      "evidence": [
+        "c9",
+        "c1"
+      ],
+      "rationale": "An October 9, 2026 release note (c9) says ARGUS Intelligence users, a platform ARGUS Enterprise is now part of (c1), can download their lease, property, asset, cashflow, tenant and Summary of Assumptions data directly into Excel in one click, a self-serve export in an open format.",
+      "missing": "The evidence is a release announcement, not a how-to guide; it does not show whether ARGUS Enterprise model files and every record type are covered, whether there are size or portfolio limits, or what format the 40+ exportable reports on the ARGUS Enterprise page (c10) use."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c5",
+        "c12"
+      ],
+      "rationale": "The pack shows only a 'contact us' route in the pricing copy (c5) and a client login on the support page (c12), with no self-serve sign-up or free trial.",
+      "missing": "Any sign-up page, free trial or way to start using the product without talking to sales."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c5",
+        "c6"
+      ],
+      "rationale": "The ARGUS Enterprise page describes flexible tiered pricing and says to contact Altus (c5), the ARGUS Intelligence page describes tiered pricing without figures (c6), and the coverage check found no published prices.",
+      "missing": "Any published price, starting price or plan fee a small sponsor would pay."
+    },
+    {
+      "story": "dp-deal-record",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no public API documentation and nothing about deal records or stages, so it does not show an agent creating a deal or moving its stage.",
+      "missing": "API documentation for creating deals and updating their stage or status, or even reading deals."
+    },
+    {
+      "story": "dp-load-financials",
+      "verdict": "partial",
+      "quality": 4,
+      "evidence": [
+        "c7",
+        "c1"
+      ],
+      "rationale": "The vendor says ARGUS Intelligence Platform, which ARGUS Enterprise is now part of (c1), lets customers upload rent rolls and manage models held in Excel files (c7), which describes an in-app rent roll upload with no API endpoint and no operating statement intake.",
+      "missing": "No API or upload endpoint is shown, nothing shows operating statements being accepted, and the claim does not say what structured data comes back after a rent roll upload."
+    },
+    {
+      "story": "dp-model-outputs",
+      "verdict": "partial",
+      "quality": 6,
+      "evidence": [
+        "c9",
+        "c10",
+        "c1"
+      ],
+      "rationale": "ARGUS Intelligence, which ARGUS Enterprise is now part of (c1), lets users download cashflow and Summary of Assumptions data into Excel in one click (c9), and the ARGUS Enterprise page lists 40+ exportable reports (c10), which is a manual in-app export of some outputs rather than API access.",
+      "missing": "No API endpoints for outputs are shown, nothing confirms returns or valuation results are in the export, the layout of the exported files is not described, and the scheduled exports in c8 run through Altus professional services rather than an agent-usable interface."
+    },
+    {
+      "story": "dp-documents",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no API or feature for attaching documents to a deal or reading them back.",
+      "missing": "API documentation for uploading documents to a deal and listing or downloading them."
+    }
+  ]
+}

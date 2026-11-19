@@ -1,0 +1,514 @@
+{
+  "id": "review-title-and-survey",
+  "slug": "review-title-and-survey",
+  "kind": "process",
+  "title": "Review title and survey",
+  "summary": "Read the title commitment and the survey together inside the contract's review period: vesting, legal description, every exception document and survey matter, sorted into cure, accept, insure over or fix. Send written objections on time, track the seller's answers and check the pro forma owner's policy before closing.",
+  "phase": "acquire",
+  "order": 255,
+  "featured": false,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-13",
+  "requires": [
+    "negotiate-purchase-contract",
+    "order-third-party-reports"
+  ],
+  "consumes": [
+    "purchase-and-sale-agreement",
+    "title-commitment",
+    "survey",
+    "deed",
+    "jv-agreement"
+  ],
+  "produces": [
+    "title-objection-letter"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "tdi-form-t7",
+      "url": "https://www.tdi.texas.gov/title/documents/form_t-07.pdf",
+      "title": "Form T-7, Commitment for Title Insurance (effective January 3, 2014)",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-13",
+      "quote": "Schedule C of the Commitment lists these requirements that must be satisfied or the Company will refuse to cover them.",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-procedural-p1-p5",
+      "url": "https://www.tdi.texas.gov/title/titlem4a.html",
+      "title": "Basic Manual Section IV, Procedural Rules P-1 to P-5.1 (definitions, area and boundaries, parties in possession, restrictive covenants, special exceptions, minerals)",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-13",
+      "quote": "The survey must be acceptable to the Company.",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-procedural-p20",
+      "url": "https://www.tdi.texas.gov/title/titlem4c.html",
+      "title": "Basic Manual Section IV, Procedural Rule P-20: Standard Exception Relating to Taxes",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-13",
+      "quote": "an exception must be shown on Schedule B to taxes and assessments for the current tax year by any taxing authority",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-procedural-p37-p39",
+      "url": "https://www.tdi.texas.gov/title/titlem4g.html",
+      "title": "Basic Manual Section IV, Procedural Rules P-37 (Lack of a Right of Access) and P-39 (Express Insurance)",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-13",
+      "quote": "If the company is not satisfied as to the insurability of access to and from the land",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-procedural-p50-p56",
+      "url": "https://www.tdi.texas.gov/title/titlem4l.html",
+      "title": "Basic Manual Section IV, Procedural Rules P-50 to P-56 (T-19.1, pro forma policies, T-23 access, T-25 contiguity)",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-13",
+      "quote": "the land is not residential real property and the proposed amount of insurance is $500,000 or more",
+      "tier": "primary"
+    },
+    {
+      "id": "alta-nsps-2026",
+      "url": "https://www.alta.org/policies-and-standards/policy-forms/download.cfm?formID=721&type=pdf",
+      "title": "Minimum Standard Detail Requirements for ALTA/NSPS Land Title Surveys (effective February 23, 2026)",
+      "publisher": "American Land Title Association and National Society of Professional Surveyors",
+      "accessed": "2026-11-13",
+      "quote": "A summary of all rights of way, easements, and other survey-related matters burdening the surveyed property and identified in the title evidence",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-5",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.5.htm",
+      "title": "Texas Property Code, Chapter 5 (Sections 5.022, Form, and 5.023, Implied covenants)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "A covenant of warranty is not required in a conveyance.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-13",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.13.htm",
+      "title": "Texas Property Code, Chapter 13 (Sections 13.002, Effect of recorded instrument, and 13.004, Effect of recording lis pendens)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "A recorded lis pendens is notice to the world of its contents.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-31",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.31.htm",
+      "title": "Texas Tax Code, Chapter 31 (Section 31.08, Tax certificate)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "At the request of any person, a collector for a taxing unit shall issue a certificate showing the amount of delinquent taxes",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bc-26",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.26.htm",
+      "title": "Texas Business and Commerce Code, Chapter 26 (Section 26.01, Promise or agreement must be in writing)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "a contract for the sale of real estate",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "log-title-deliveries",
+      "title": "Log what arrived and start the objection clock",
+      "instruction": "Record the date the title commitment, a legible copy of every document listed in Schedule B, and the survey each reached the buyer, and list anything missing; ask the title company and the surveyor in writing for the gaps the same day. Read the contract's title and survey clause for what starts the objection period, often delivery of the last of these items, and how it counts days and gives notice. Enter the objection deadline, the seller's response period, the buyer's deadline to act after a refusal to cure, and the commitment's effective date in the deadline calendar. Send the dates to counsel and, once a loan is in view, to the lender's counsel.",
+      "mode": "agent",
+      "modeBasis": "Receipt dates and contract periods come from the deal file and the signed contract, which an agent can read and calendar.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "title-commitment",
+        "survey"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "check-schedule-a",
+      "title": "Check Schedule A against the contract",
+      "instruction": "Read Schedule A of the commitment line by line. The Texas commitment is not valid unless the proposed insured's name and the policy amount appear on it and it is countersigned. The policies listed should be the owner's policy (Form T-1) and, if there is a loan, the loan policy (Form T-2). The proposed insured should be the entity that will take title after any assignment of the contract; if that entity is not formed yet, tell the title company now. Compare the policy amount with the price, and the interest covered with what is being bought: fee simple, a leasehold or an easement. The owner of record must match the seller named in the contract, and the legal description must match the contract's exhibit and the survey.",
+      "mode": "agent",
+      "modeBasis": "Schedule A and the contract are documents an agent can read and compare field by field.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "log-title-deliveries"
+      ],
+      "rules": [
+        "us-tx.title.promulgated-rates-forms"
+      ],
+      "consumes": [
+        "title-commitment",
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tdi-form-t7"
+      ]
+    },
+    {
+      "id": "trace-vesting-deed",
+      "title": "Read the vesting deed and what the seller will convey",
+      "instruction": "From the county clerk's public records, or from the title company, get the deed that vested title in the seller and every later instrument that changes it: a correction deed, a merger or name change, a partial release or a sale of part of the land. Confirm the grantee in that deed is the seller exactly as the contract names it and the description matches Schedule A. Note anything the grantor reserved, such as minerals or an access easement. Then read the deed form the contract requires at closing and compare it with what the lender asks for. Texas law requires no covenant of warranty in a conveyance, and the words grant or convey in a fee conveyance imply only two covenants unless the deed says otherwise: no earlier conveyance of the estate, and freedom from encumbrances.",
+      "mode": "agent-browser",
+      "modeBasis": "County clerk records are searchable on public websites; the title company sends copies on request.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-schedule-a"
+      ],
+      "rules": [
+        "us-tx.property.conveyance-recording"
+      ],
+      "consumes": [
+        "title-commitment",
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-5"
+      ]
+    },
+    {
+      "id": "read-exception-documents",
+      "title": "Read every Schedule B document and log what it does",
+      "instruction": "Read each document behind Schedule B and log in one table its item number, type, recording data, parties, what it burdens or benefits, where it lies, any duties or shared costs it imposes, any use limits, approval rights or purchase options, and any sign it has expired or been released. On the Texas form, the restrictive covenants exception must list each covenant's recording data or be deleted, and a special exception must describe the particular item, not speak in general terms; ask the title company to correct a general one. Note any minerals exception or exclusion: the policy is not an abstract of title, and the company has no duty to determine who owns the minerals. A recorded lis pendens is notice to the world of the lawsuit it describes.",
+      "mode": "agent",
+      "modeBasis": "The recorded documents are text an agent can read, summarize and tabulate.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "log-title-deliveries"
+      ],
+      "rules": [
+        "us-tx.title.promulgated-rates-forms",
+        "us-tx.property.conveyance-recording"
+      ],
+      "consumes": [
+        "title-commitment"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tdi-form-t7",
+        "tdi-procedural-p1-p5",
+        "tx-prop-13"
+      ]
+    },
+    {
+      "id": "read-schedule-c-and-taxes",
+      "title": "Sort the Schedule C requirements and check taxes",
+      "instruction": "List each Schedule C requirement and who must meet it: the seller (payoffs, releases, its authority documents), the buyer (its formation and signing documents) or the title company. On the Texas form, a requirement not disposed of before the policy issues becomes an exception. The printed requirements ask for evidence that no occupant claims an interest, that taxes are paid, that recent work is complete and its contractors paid, and that there is a legal right of access; matters filed after the effective date are added. If the company doubts access is insurable, it may except lack of access and delete that coverage. Compare recent work with the mechanic's lien filing deadlines. Ask for each collector's tax certificate showing delinquent taxes; current-year taxes stay excepted unless the company has evidence they are paid or collects them at closing.",
+      "mode": "agent",
+      "modeBasis": "Sorting requirements and reading tax certificates is document work; the title company orders certificates on request.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-schedule-a"
+      ],
+      "rules": [
+        "us-tx.title.promulgated-rates-forms",
+        "us-tx.property.mechanics-liens"
+      ],
+      "calculators": [
+        "property-tax"
+      ],
+      "consumes": [
+        "title-commitment"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tdi-form-t7",
+        "tdi-procedural-p20",
+        "tdi-procedural-p37-p39",
+        "tx-tax-31"
+      ]
+    },
+    {
+      "id": "check-survey-against-commitment",
+      "title": "Check the survey against the commitment",
+      "instruction": "Read the survey against the commitment, not only against the land. Under the 2026 ALTA/NSPS standards the plat names the commitment it relied on, with its effective date and insurer, and summarizes each easement and survey-related matter in the title evidence: whether it lies within or crosses the property, and whether it is shown, blanket, or cannot be located from the record. Confirm every Schedule B item is in that summary and the commitment cited is the current one. Check the surveyed description against Schedule A; a significant difference must be explained on the plat. Read the notes on gaps or overlaps, on no observed access to a street or way, and on any recorded easement the commitment missed, and the encroachment table if Table A item 20 was ordered. Check who the survey is certified to.",
+      "mode": "agent",
+      "modeBasis": "The plat, its notes and the commitment are documents an agent can compare item by item.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-exception-documents"
+      ],
+      "rules": [
+        "us-fed.alta-nsps.survey-standards"
+      ],
+      "consumes": [
+        "survey",
+        "title-commitment"
+      ],
+      "basis": "cited",
+      "sources": [
+        "alta-nsps-2026"
+      ]
+    },
+    {
+      "id": "map-and-sort-matters",
+      "title": "Map each matter on the site and sort it",
+      "instruction": "Put every Schedule B item, Schedule C requirement and survey finding in one list and mark each on a site plan against the buildings, parking, drives, access points, utility lines and any planned expansion. Note what each does to the business plan, the loan and a later sale. Sort each into one group: cure (the seller removes, releases or pays it), accept (a permitted exception the plan can live with), insure over (an endorsement or affirmative coverage would make it acceptable), or fix the survey (an error or omission on the plat). An easement or encroachment under a building, required parking or the only access is rarely acceptable; one along a back line often is. Send the sorted list to counsel and the principal.",
+      "mode": "agent",
+      "modeBasis": "Plotting recorded matters on the survey and grouping them is analysis of documents already in the file.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "trace-vesting-deed",
+        "read-schedule-c-and-taxes",
+        "check-survey-against-commitment"
+      ],
+      "consumes": [
+        "title-commitment",
+        "survey"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "industrial": "Mark the truck court, dock doors, trailer parking, yard and any rail spur; an easement, setback or encroachment across one of them can stop the operation the building is leased for.",
+        "multifamily": "Mark parking against the count the zoning requires, utility and drainage easements near buildings, and any recorded declaration that sets assessments or use limits.",
+        "office": "Mark parking held under recorded parking or reciprocal easements, and any shared garage or access agreement and its cost-sharing terms.",
+        "retail": "Read every recorded reciprocal easement agreement and declaration for parking, cross-access, signage, and use restrictions or exclusives that bind future tenants."
+      }
+    },
+    {
+      "id": "request-coverage-and-survey-fixes",
+      "title": "Ask the title company for coverage and the surveyor for fixes",
+      "instruction": "Draft two requests. To the title company: amend the area-and-boundary exception to read shortages in area, which needs a survey the company accepts and, on the owner's policy, an added premium; ask whether it will take an existing survey with an affidavit. Ask what it needs to issue the restrictions, encroachments and minerals endorsement (T-19.1), the access endorsement (T-23) on improved non-residential land, and the contiguity endorsement (T-25) where the land is several tracts; each turns on the company's underwriting. Ask for affirmative coverage over specific encroachments it excepts. Tell it in writing of any matter the buyer knows affects title that Schedule B omits; under the commitment's conditions, silence can end or reduce its liability. To the surveyor: list each correction. A person approves both before they go.",
+      "mode": "agent",
+      "modeBasis": "Drafting requests from the sorted list is agent work; the messages speak for the buyer, so a person approves each.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "map-and-sort-matters"
+      ],
+      "rules": [
+        "us-tx.title.promulgated-rates-forms"
+      ],
+      "consumes": [
+        "title-commitment",
+        "survey"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tdi-form-t7",
+        "tdi-procedural-p1-p5",
+        "tdi-procedural-p37-p39",
+        "tdi-procedural-p50-p56"
+      ]
+    },
+    {
+      "id": "draft-objection-letter",
+      "title": "Draft the title objection letter",
+      "instruction": "Draft the objection letter for counsel from the sorted list. Name each objection by its Schedule B or C number or survey finding, say what it is and how it affects use, financing or value, and state the cure asked for: a recorded release, a payoff at closing, deletion from the policy, an endorsement or a corrected survey. List the endorsements requested, the matters accepted, the seller's response deadline, what the contract says a silent seller has chosen, and the buyer's right to terminate. Reserve the right to object to new matters in an updated commitment or revised survey. Where the contract treats anything not objected to as accepted, check that nothing on the cure list was left out.",
+      "mode": "agent",
+      "modeBasis": "The letter is drafted from the sorted list and the contract; counsel finalizes and sends it.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "map-and-sort-matters"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "title-commitment",
+        "survey"
+      ],
+      "produces": [
+        "title-objection-letter"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "jv-partner-consent",
+      "title": "Get the capital partner's consent where the JV agreement needs it",
+      "instruction": "Check the JV agreement's list of major decisions. Accepting title exceptions, waiving objections or moving contract dates may need the capital partner's written consent. Send the partner the sorted list and the draft letter early enough for its review to finish before the objection deadline, and get its answer in writing.",
+      "mode": "human-online",
+      "modeBasis": "The consent is the capital partner's own decision under the JV agreement.",
+      "actor": "investor",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "draft-objection-letter"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement",
+        "title-objection-letter"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "send-objections",
+      "title": "Send the objections before the deadline",
+      "instruction": "Counsel finalizes the letter and delivers it by the method and to the addresses the contract's notice clause names, before the objection deadline, and keeps proof of delivery. Copy the title company and the escrow agent. Under many contracts a late or informal objection counts as acceptance of the matter. Texas makes a contract for the sale of real estate unenforceable unless it, or a memorandum of it, is in writing and signed by the person to be charged, so put any agreed cure, price change or new date in an amendment both sides sign, not in an email or a call.",
+      "mode": "human-online",
+      "modeBasis": "A contract notice binds the buyer, and its form and timing are a legal judgment for counsel.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "draft-objection-letter",
+        "jv-partner-consent"
+      ],
+      "rules": [
+        "us-tx.contracts.statute-of-frauds"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "title-objection-letter"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-bc-26"
+      ]
+    },
+    {
+      "id": "track-seller-response",
+      "title": "Track the seller's answer to each objection",
+      "instruction": "Log the seller's written answer to each objection in the letter's tracking fields: will cure, will not cure or cure in part, with the date. If the seller is silent, apply what the contract says silence means. Re-run the deadline calendar for the buyer's election date and any extension. For each promised cure, name the evidence that will prove it: a recorded release, the title company's written agreement to delete the exception, an endorsement quote or a revised survey. Review each updated commitment and survey revision the same way as the first, and object to new matters within any right the contract gives. A lien the seller cannot clear in time goes to the situation for an unexpected lien on the commitment.",
+      "mode": "agent",
+      "modeBasis": "Tracking answers, dates and revised documents is record-keeping an agent can do from the file.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "send-objections"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "title-objection-letter",
+        "title-commitment",
+        "survey",
+        "purchase-and-sale-agreement"
+      ],
+      "produces": [
+        "title-objection-letter"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "decide-uncured-matters",
+      "title": "Decide on each matter the seller will not cure",
+      "instruction": "Before the buyer's election deadline, the principal decides each objection the seller refused or left uncured: accept it as a permitted exception, negotiate a price change, a cure at closing or more time in an amendment both sides sign, or terminate by the contract's notice method and recover the deposit as the contract allows. Counsel sends any notice. Send the cost of each accepted matter to the underwriting, and the outcome to whoever runs the go or no-go decision in due diligence.",
+      "mode": "human-online",
+      "modeBasis": "Accepting title risk or ending the contract is the principal's decision, and the notice binds the buyer.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "track-seller-response"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "title-objection-letter",
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "check-pro-forma-policy",
+      "title": "Check the pro forma owner's policy before closing",
+      "instruction": "Ask the title company for a pro forma owner's policy. A Texas company may deliver one only for land that is not residential real property (one-to-four family improvements) and a proposed amount of $500,000 or more, and it is marked for discussion only, not a commitment to insure; otherwise review an updated commitment. Compare Schedule A with the contract and the draft deed: insured, amount, estate and legal description. Check Schedule B against the agreed permitted exceptions: each cured item gone, each accepted item listed with its recording data, the area-and-boundary exception amended if agreed, and each endorsement attached. Confirm the draft deed's permitted exceptions match. Send any difference to the title company and counsel, and hand the checked pro forma to the closing team.",
+      "mode": "agent",
+      "modeBasis": "The pro forma, the objection record and the draft deed are documents an agent can compare line by line.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-uncured-matters",
+        "request-coverage-and-survey-fixes"
+      ],
+      "rules": [
+        "us-tx.title.promulgated-rates-forms"
+      ],
+      "consumes": [
+        "title-commitment",
+        "title-objection-letter",
+        "deed",
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tdi-procedural-p50-p56",
+        "tdi-procedural-p1-p5"
+      ]
+    }
+  ],
+  "outlineSteps": []
+}

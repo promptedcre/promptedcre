@@ -1,0 +1,25 @@
+{
+  "market": "market-property-data",
+  "cells": [
+    { "vendor": "yardi-matrix", "story": "public-pricing", "verdict": "full", "why": "Plan prices are published, from $199 per asset class per user per month.", "checked": "2026-11-12", "evidence": ["c4"] },
+    { "vendor": "yardi-matrix", "story": "self-serve", "verdict": "full", "why": "Plans can be bought online and cancelled from account settings.", "checked": "2026-11-12", "evidence": ["c3", "c5"] },
+    { "vendor": "yardi-matrix", "story": "public-api", "verdict": "none", "why": "No API page; data leaves by Excel export or the Claude connector.", "checked": "2026-11-12", "evidence": [] },
+    { "vendor": "regrid", "story": "agent-docs", "verdict": "full", "why": "The documentation publishes an llms.txt index and Markdown versions of its pages.", "checked": "2026-11-12", "evidence": ["c3", "p1"] },
+    { "vendor": "regrid", "story": "mcp-server", "verdict": "full", "why": "The docs explain how to connect to Regrid's MCP server with the same API token.", "checked": "2026-11-12", "evidence": ["c1", "c2"] },
+    { "vendor": "regrid", "story": "md-bulk-area", "verdict": "full", "why": "County files and state licenses can be bought in a self-serve data store; bulk files are offered in any format.", "checked": "2026-11-12", "evidence": ["c9", "c13"] },
+    { "vendor": "placer-ai", "story": "public-pricing", "verdict": "none", "why": "The pricing page shows Contact Sales and no prices.", "checked": "2026-11-12", "evidence": ["c11"] },
+    { "vendor": "placer-ai", "story": "agent-docs", "verdict": "full", "why": "The docs have an llms.txt index, and every page has a Markdown version.", "checked": "2026-11-12", "evidence": ["c1", "p1"] },
+    { "vendor": "propertyreach", "story": "self-serve", "verdict": "full", "why": "API accounts are created through a public checkout, and keys are made with one click.", "checked": "2026-11-12", "evidence": ["c3", "c4"] },
+    { "vendor": "propertyreach", "story": "public-pricing", "verdict": "full", "why": "API access is $30 a month and credits are priced per block on a public page.", "checked": "2026-11-12", "evidence": ["c2", "c5"] },
+    { "vendor": "costar", "story": "public-pricing", "verdict": "none", "why": "No pricing page; products lead to a demo request.", "checked": "2026-11-12", "evidence": ["c7"] },
+    { "vendor": "costar", "story": "public-api", "verdict": "partial", "why": "An API exists only for Debt Solutions, enabled under an order form, with no public documentation.", "checked": "2026-11-12", "evidence": ["c1", "c4"] },
+    { "vendor": "costar", "story": "bulk-export", "verdict": "partial", "why": "Excel export covers only the comps a user created, not CoStar's data.", "checked": "2026-11-12", "evidence": ["c9"] },
+    { "vendor": "reonomy", "story": "public-pricing", "verdict": "none", "why": "Plans are listed without dollar amounts; API and bulk plans say talk to an expert.", "checked": "2026-11-12", "evidence": ["c10"] },
+    { "vendor": "trepp", "story": "mcp-server", "verdict": "partial", "why": "Its MCP servers and tools are described, but the page offers a demo and no setup steps.", "checked": "2026-11-12", "evidence": ["c1", "c2", "c3"] },
+    { "vendor": "cherre", "story": "public-api", "verdict": "partial", "why": "The platform page describes an API, with no public documentation.", "checked": "2026-11-12", "evidence": ["c1", "c2"] },
+    { "vendor": "attom", "story": "self-serve", "verdict": "full", "why": "Anyone can create a free trial account and get an API key, or sign up for a start-up plan.", "checked": "2026-11-12", "evidence": ["c3", "c5"] },
+    { "vendor": "census-bureau", "story": "public-pricing", "verdict": "full", "why": "The API key is free of charge, and no paid plans exist.", "checked": "2026-11-12", "evidence": ["c3"] },
+    { "vendor": "census-bureau", "story": "md-owner", "verdict": "na", "why": "The Census Bureau publishes area statistics, not individual properties, and its terms bar identifying owners.", "checked": "2026-11-12", "evidence": ["c8"] },
+    { "vendor": "harris-cad", "story": "public-api", "verdict": "none", "why": "Data comes as downloadable files and a search site; no API.", "checked": "2026-11-12", "evidence": [] }
+  ]
+}

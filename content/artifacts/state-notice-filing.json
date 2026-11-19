@@ -1,0 +1,113 @@
+{
+  "id": "state-notice-filing",
+  "name": "State notice filing",
+  "what": "A state's copy of the Form D notice for a Rule 506 offering, with any fee and consent to service the state requires, usually filed through NASAA's EFD system.",
+  "fields": [
+    {
+      "key": "state",
+      "label": "State",
+      "type": "string",
+      "definition": "The state the notice is filed in, and the regulator that receives it, such as the Texas Securities Commissioner. One record per state."
+    },
+    {
+      "key": "filingKind",
+      "label": "Kind of filing",
+      "type": "enum",
+      "definition": "Initial notice, amendment, renewal where the state requires one, or a late initial notice. Read it from the filing confirmation."
+    },
+    {
+      "key": "formDReference",
+      "label": "Form D it copies",
+      "type": "string",
+      "definition": "The SEC file number and filing date of the Form D or Form D/A the state notice is based on, read from the EDGAR filing."
+    },
+    {
+      "key": "firstSaleInState",
+      "label": "First sale in the state",
+      "type": "date",
+      "definition": "The date of the first sale to an investor in this state, from the investor register. In Texas it sets the latest date for the notice.",
+      "authority": "7 Tex. Admin. Code 114.4(b)(1)"
+    },
+    {
+      "key": "dueDate",
+      "label": "Due date",
+      "type": "date",
+      "definition": "The date the state wants the notice. In Texas it is due when the Form D is filed with the SEC, and no later than 15 days after the first sale in Texas. For any other state, take the date from that state's settings in EFD or its regulator's instructions; leave it empty until read.",
+      "authority": "7 Tex. Admin. Code 114.4(b)(1)"
+    },
+    {
+      "key": "filedDate",
+      "label": "Date filed",
+      "type": "date",
+      "definition": "The date the filing system shows the notice as submitted, read from its confirmation."
+    },
+    {
+      "key": "filingSystem",
+      "label": "Filed through",
+      "type": "string",
+      "definition": "NASAA's Electronic Filing Depository (EFD) or the state's own method. Texas requires the Rule 506 notice and fee to go through EFD.",
+      "authority": "7 Tex. Admin. Code 114.4(b)(1)(C)"
+    },
+    {
+      "key": "filingReference",
+      "label": "Filing confirmation number",
+      "type": "string",
+      "definition": "The confirmation or filing number the system issued, read from the receipt."
+    },
+    {
+      "key": "offeringAmount",
+      "label": "Offering amount the fee is based on",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The offering amount the notice states and the state fee is computed on. If the issuer later offers more than this, Texas requires an amended Form D and a payment of three times the fee shortfall plus interest, unless the maximum fee was paid.",
+      "authority": "7 Tex. Admin. Code 114.4(d)(2)"
+    },
+    {
+      "key": "stateFee",
+      "label": "State fee paid",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The state's filing fee as charged on the receipt. Texas sets its fee by statute, which its rule cites.",
+      "authority": "7 Tex. Admin. Code 114.4(b)(1)(B)"
+    },
+    {
+      "key": "systemFee",
+      "label": "EFD system fee paid",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The filing system's own fee, as charged on the receipt, recorded apart from the state fee."
+    },
+    {
+      "key": "paidBy",
+      "label": "Payment method and approver",
+      "type": "string",
+      "definition": "How the fees were paid, such as ACH through EFD, and the person who approved the payment. Never the bank account details."
+    },
+    {
+      "key": "consentToService",
+      "label": "Consent to service of process",
+      "type": "text",
+      "definition": "Whether this state requires a separate consent to service of process with the notice and, if so, whether one is on file and where. Texas's rule for a Rule 506 notice asks for the Form D and the fee.",
+      "authority": "7 Tex. Admin. Code 114.4(b)(1)"
+    },
+    {
+      "key": "effectivePeriod",
+      "label": "How long the notice stays effective",
+      "type": "string",
+      "definition": "The period the state gives the notice. In Texas a Rule 506 notice stays effective until the offering is completed or terminated, so there is no annual renewal. For another state, read the period in EFD or its rules.",
+      "authority": "7 Tex. Admin. Code 114.4(f)(5)"
+    },
+    {
+      "key": "renewalDue",
+      "label": "Renewal due",
+      "type": "date",
+      "definition": "The next renewal date where the state requires one. Empty for Texas Rule 506 notices and for any state not yet researched."
+    },
+    {
+      "key": "storageLocation",
+      "label": "Where the receipt is kept",
+      "type": "string",
+      "definition": "Where the firm keeps the filed notice, the fee receipt and any consent to service."
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "vendor": "costar",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "23dda660f96563117ce276365a81a4757996a793d7bc6594a50b305d9d38208b",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "partial",
+      "quality": 7,
+      "evidence": [
+        "c1",
+        "c3",
+        "c4",
+        "c8"
+      ],
+      "rationale": "Debt Solutions terms and product copy say an API exists but only when CoStar enables it under an order form (c1, c3, c4), the coverage check found no public developer or API page, and the only other API mention is STR hotel-data submission to CoStar (c8).",
+      "missing": "No public API documentation, no statement of which records the API reads or changes, and no API shown for CoStar's core property, comp or listing data."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Nothing in the pack mentions an MCP server for any CoStar product.",
+      "missing": "No official MCP server and no setup steps for one."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no CLI, SDK, package-registry listing or public code repository from CoStar.",
+      "missing": "No vendor-maintained CLI or SDK, partner-only SDK, unofficial library or code samples."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no webhooks or event subscriptions for any CoStar records, and na does not apply because the pack shows records customers create, such as My Data lease comps.",
+      "missing": "No webhooks, event subscriptions or change notifications, documented or otherwise."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "partial",
+      "quality": 4,
+      "evidence": [
+        "c2"
+      ],
+      "rationale": "The Debt Solutions terms say API access runs only through credentials or authentication methods that CoStar provides, enables or approves (c2), but nothing in the pack documents scopes, roles or permissions for those credentials.",
+      "missing": "No documentation of key or OAuth client types, scopes, roles or permissions, whether an agent can be issued its own credential, or credentials for anything beyond the order-form Debt Solutions API."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no OpenAPI, Swagger, GraphQL or other machine-readable API description, and the coverage check found no public API page at all.",
+      "missing": "No machine-readable API specification, public or behind a login."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The only documentation the coverage check found is the Marketing Center help desk, and the pack shows no llms.txt file or Markdown versions of any documentation pages.",
+      "missing": "No llms.txt file and no Markdown documentation pages."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no sandbox, test mode or developer environment, and na is not established because nothing in the pack shows that CoStar's API only reads published data.",
+      "missing": "No self-serve or on-request sandbox, test mode or developer environment."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "partial",
+      "quality": 7,
+      "evidence": [
+        "c9",
+        "c6"
+      ],
+      "rationale": "A Lease Comps help page documents a self-serve Excel export, but only of the My Data lease comps the user created, not CoStar's licensed data (c9), and the public record page describes no bulk download (c6).",
+      "missing": "No self-serve bulk export of CoStar's licensed property, sale-comp or lease-comp data or of other customer records, and no CSV or JSON export shown."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c7",
+        "c10"
+      ],
+      "rationale": "The products overview offers only REQUEST DEMO and the Debt Solutions page a demo-request form (c7, c10), with no sign-up or free trial shown anywhere in the pack.",
+      "missing": "No self-serve sign-up, paid-plan checkout or free trial for any CoStar product."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c7"
+      ],
+      "rationale": "The coverage check found no pricing page (costar.com/pricing returns 404) and the products overview shows a demo request with no prices (c7).",
+      "missing": "No published prices, starting prices or plan fees for any CoStar product."
+    },
+    {
+      "story": "md-property-lookup",
+      "verdict": "partial",
+      "quality": 4,
+      "evidence": [
+        "c6"
+      ],
+      "rationale": "The public record page claims 42M commercial real estate records searchable in the app, with no API or data service described (c6).",
+      "missing": "No documented API or data service for address or parcel lookup, and no list of returned attributes such as size, year built or use."
+    },
+    {
+      "story": "md-comps",
+      "verdict": "partial",
+      "quality": 4,
+      "evidence": [
+        "c9"
+      ],
+      "rationale": "A Lease Comps help page shows lease comparables handled in the CoStar app, with only a manual Excel export limited to the user's own My Data comps (c9) and no API or filtered query shown.",
+      "missing": "No documented API or data service for sale or lease comps, no filters by place, type, size or date, and no evidence on sale comps."
+    },
+    {
+      "story": "md-owner",
+      "verdict": "partial",
+      "quality": 5,
+      "evidence": [
+        "c5",
+        "c6"
+      ],
+      "rationale": "The public record page says users can identify the recorded owner and last buyer for a property, but only through in-app search with no API or bulk download described (c5, c6).",
+      "missing": "No owner mailing address, no documented API or data service, and no structured output for owner data."
+    },
+    {
+      "story": "md-bulk-area",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c6"
+      ],
+      "rationale": "The pack shows no bulk download, bulk API or area query, and the public record page describes no API or bulk download (c6).",
+      "missing": "No county, drawn-shape or radius query and no bulk file, by separate order or otherwise."
+    }
+  ]
+}

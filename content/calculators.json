@@ -1,0 +1,308 @@
+{
+  "calculators": [
+    {
+      "id": "deadline-calendar",
+      "name": "Deadline calendar",
+      "what": "Dates that follow from rule cards: the Form D and Texas notice deadlines, the 1031 periods, the Texas protest deadline, the Texas franchise tax report date, and contract periods you enter. Each date cites its rule and is flagged for review.",
+      "status": "live",
+      "method": [
+        "Days are calendar days. A deadline moves to the next day that counts only when its rule says so.",
+        "Form D moves past Saturdays, Sundays, federal legal public holidays and the weekdays OPM observes for them. The Texas protest deadline moves past Saturdays, Sundays and the national and state holidays Texas lists. The Texas notice and the 1031 periods do not move.",
+        "The Texas franchise tax report date, May 15, moves past a Saturday or Sunday. The law also moves it off a legal holiday on a list the Comptroller publishes each year; that list is not applied here.",
+        "Where a rule is unclear about a holiday, the calendar keeps the earlier date, so a deadline is never shown later than it might be.",
+        "A date that is not on the calendar, such as February 30, a thirteenth month or a year written with two digits, is refused with a message naming it; it is never rolled into another day."
+      ],
+      "rules": [
+        "us-fed.reg-d.form-d-filing",
+        "us-fed.holidays.federal",
+        "us-tx.securities.rule-506-notice",
+        "us-fed.irc.1031-periods",
+        "us-tx.tax.protest-deadline",
+        "us-tx.franchise-tax.due-date-extension"
+      ]
+    },
+    {
+      "id": "waterfall-promote",
+      "name": "Waterfall and promote",
+      "what": "Preferred return, return of capital, catch-up and tiered promote, deal by deal or whole fund, with cash to each party by year, the return before the promote, and the same deal at other endings.",
+      "status": "live",
+      "method": [
+        "Hurdles are measured on the investor class: all contributed capital, including the sponsor's co-invest, which is paid pro rata with the investors.",
+        "A compounding pref and each IRR hurdle are tracked as an account that grows at the hurdle rate, adds contributions and subtracts investor cash. A tier is met when its account reaches zero, which is the same as the investors reaching that IRR.",
+        "A simple pref accrues on unreturned capital only; investor cash pays accrued pref first, then capital.",
+        "Deal by deal runs each deal on its own and adds the results. Whole fund adds the deals first, so every deal's capital and pref come back before any promote.",
+        "The outcome rows run the same deal at seven endings: every deal's final-year cash is moved by -100, -75, -50, -25, 0, +25 and +50 percent and the waterfall is run again, with contributions and earlier years unchanged. The steps are arithmetic for comparison, not a forecast and not a market level. In whole-fund order with deals that end in different years, a better ending can lower the investors' total cash or the promote, because more cash from the deal that ends first leaves less preferred return and less of each hurdle to accrue.",
+        "A break-even is stated as final-year cash, with everything earlier unchanged: the first final-year cash, rising from zero, at which the investors have their capital back, and the first at which capital is back and nothing is owed in the first tier, so the preferred return is paid. Capital back counts all capital together; deal by deal, the preferred return counts as paid only when nothing is owed in any deal's own first tier. There is none when no capital was contributed, when no deal has final-year cash, or when the point is not reached by 64 times the cash entered.",
+        "For one deal, and deal by deal, the break-even found is the least. In whole-fund order with several deals the search walks upward in steps of 1/64 of the cash entered and reports the first crossing, so a narrower stretch can be missed and a better ending can lose the point again. When capital is called after cash has been paid out, an IRR is not unique, so no gap between the return before the promote and the investors' return is stated: compare the multiples.",
+        "Fees are outside this calculator: enter distributable cash after any fees the deal pays, so the return before the promote is a return after fees and the sponsor's total is co-investment cash plus promote. To see the return before fees, run the present value and IRR calculator on the cash before fees. No giveback of promote is modeled, and every rate, share and hurdle is an input; none is a market level."
+      ],
+      "rules": []
+    },
+    {
+      "id": "debt-sizing",
+      "name": "Debt sizing",
+      "what": "The largest loan under coverage, loan-to-value and debt-yield limits, which limit binds, and the payment schedule.",
+      "status": "live",
+      "method": [
+        "Each limit gives a loan amount; the largest loan that meets every limit is the smallest of them.",
+        "Coverage is sized on the amortizing payment, so it still holds after any interest-only period. A fully interest-only loan is sized on the interest payment.",
+        "Payments are monthly. Amortization starts after the interest-only months and runs over the full amortization period. PMT, PV and FV follow Excel's definitions.",
+        "Loan-to-value runs on the value entered and takes no account of senior liens. The interagency guidelines banks follow take value, for a loan to buy an existing property, as the lesser of the actual acquisition cost and the appraised or evaluated value, so enter the lower of the two to match them; the limit levels are inputs, not anyone's lending policy."
+      ],
+      "rules": [
+        "us-fed.banking.ltv-value-definition"
+      ]
+    },
+    {
+      "id": "returns-sensitivity",
+      "name": "Returns and sensitivity",
+      "what": "IRR, equity multiple and cash-on-cash, levered and unlevered, with a two-way table over exit cap rate and NOI growth.",
+      "status": "live",
+      "method": [
+        "Years are the period. The sale price is the next year's NOI divided by the exit cap rate, less sale costs; the loan is paid off from the proceeds.",
+        "IRR solves for the rate that sets the net present value of the yearly cash flows to zero, the same definition as Excel's IRR.",
+        "NOI growth stands in for rent growth. The sensitivity table re-runs the levered IRR at exit caps 25 and 50 basis points either side of yours and growth rates 0.5 and 1 point either side.",
+        "Interest-only years are year 1 through the interest-only period you enter, capped at the hold; with no amortization every year of the hold is interest only, and with no loan none is. The year-1 cash-on-cash is marked when that year's payment was interest only and so paid down no principal."
+      ],
+      "rules": []
+    },
+    {
+      "id": "income-value",
+      "name": "Income and value",
+      "what": "Potential gross income to effective gross income to NOI; value by direct capitalization; gross income multiplier, expense ratio, value per square foot.",
+      "status": "live",
+      "method": [
+        "It works one stabilized year with no growth: vacancy and collection loss is a share of potential gross income only, other income is added after that loss, and NOI is effective gross income less the operating expense lines you enter, then less replacement reserves when you enter them.",
+        "Value is the NOI you choose to capitalize (after reserves or before them, printed beside the value) divided by your cap rate; when that NOI is zero or less there is no value, and the result says so instead of showing a number.",
+        "The expense ratio is operating expenses over effective gross income, shown again with reserves added; the gross income multiplier is the price over potential gross income, and the implied cap rate is the capitalized NOI over the price; value less price under half a cent either way counts as no gap.",
+        "A small table shows the value at your cap rate and 25 and 50 basis points either side, skipping any rate at or below zero.",
+        "Every figure is computed unrounded and rounded only for display; the cap rate, vacancy, expenses and reserves are your assumptions, and the worked example's are made up."
+      ],
+      "rules": []
+    },
+    {
+      "id": "cap-rate",
+      "name": "Cap rate build-up",
+      "what": "A cap rate three ways: extracted from comparable sales, band of investment (loan constant and equity dividend rate), and the lender's coverage formula; the range they give.",
+      "status": "live",
+      "method": [
+        "Extraction divides each sale's first-year NOI by its price, then reports the mean, the median and the price-weighted rate (total NOI over total price); the mean is the figure carried into the range.",
+        "The loan constant is a year's debt service per dollar of loan: twelve times the monthly level payment on one dollar at the annual rate over the amortization, paid in arrears, or the rate itself for an interest-only loan.",
+        "The band of investment adds the debt part (loan-to-value times the loan constant) to the equity part (the equity share times the equity dividend rate, a first-year cash-on-cash rate, not an IRR).",
+        "The lender's formula multiplies the minimum coverage, the loan constant and the loan-to-value: the cap rate at which a loan of that size exactly meets that coverage.",
+        "A method whose inputs are left blank does not run and at least one must; the range is the lowest and highest of the methods that ran, every figure is computed unrounded and rounded only for display, and the rates entered are the user's own, not market levels."
+      ],
+      "rules": []
+    },
+    {
+      "id": "loan-payments",
+      "name": "Loan payment structures",
+      "what": "Level-payment, equal-principal, interest-only and stepped-payment loans side by side: payment, interest and principal by year, loan constant, balance due at maturity, negative-amortization flag; plus the effective annual rate and, between two dates, the interest and a day's interest on the loan's day-count basis.",
+      "status": "live",
+      "method": [
+        "Payments are monthly, in arrears, at the annual rate divided by 12; interest each month is that rate times the balance at the start of the month, and nothing is rounded until it is shown.",
+        "The level payment is the annuity payment over the amortization, and its balance at maturity is the closed form, which equals the value of the payments left; equal principal repays the loan divided by the amortization months each month, so its payment falls; interest only pays the interest and leaves the full loan due.",
+        "The stepped payment is the year-1 payment raised by the step on each loan anniversary; a year is flagged when any month pays less than its interest, because that is when the balance grows, and a payment larger than what is owed pays the loan off and stops.",
+        "The loan constant is the year-1 payments over the loan, the effective annual rate is one plus the monthly rate, to the twelfth power, less one, a term longer than the amortization is refused, and the example's rate, terms, payments, dates and day-count basis are illustrations, not market quotes.",
+        "Interest between two dates is simple interest on a balance that does not move, counting the first day and not the last. On actual/360 it runs on the actual days over 360, and on actual/365 on the actual days over 365, in a leap year too; 30/360 counts 360 days for each year, 30 for each month and the difference in days, with a 31st counted as a 30th and February left as it is, over 360. A day's interest is the balance times the rate over the same 360 or 365. Other thirty-day-month rules differ at month ends and the loan documents control, so this checks a lender's figure and is not a payoff quote."
+      ],
+      "rules": []
+    },
+    {
+      "id": "rate-reset",
+      "name": "Floating-rate stress",
+      "what": "A floating or resetting rate path: the payment re-amortized on the actual balance at each reset, coverage by year against NOI, the payment shock.",
+      "status": "live",
+      "method": [
+        "Each year's all-in rate is that year's index plus the spread, raised to the floor and lowered to the cap where they are set; the index path is the user's own stress case, not a forecast, and no index level is built in.",
+        "The rate resets once a year, at the start of each loan year, and the monthly payment is then re-set as the level payment on the actual balance over the months of amortization left (Excel's PMT, payments monthly in arrears, the monthly rate the annual rate over 12); with zero amortization the payment is the balance times the rate over 12 and the balance never falls.",
+        "Within the year, each month's interest is the opening balance times the monthly rate and principal is the payment less interest; debt service is the year's twelve payments, and once an amortizing loan is paid off later years show no payment and no coverage.",
+        "NOI grows from the year-1 figure at a constant yearly rate; coverage is that year's NOI over that year's debt service, the payment shock is a year's payment over year 1's less one, and the first year below the minimum is flagged only when a minimum is given.",
+        "Every figure is computed unrounded and rounded only for display; the horizon is the length of the path, and the balance at its end is what would still be owed."
+      ],
+      "rules": []
+    },
+    {
+      "id": "leverage",
+      "name": "Leverage test",
+      "what": "Whether debt helps or hurts: cap rate against the loan constant, cash-on-cash across loan-to-value levels, break-even occupancy, coverage and debt yield.",
+      "status": "live",
+      "method": [
+        "NOI is potential gross income less vacancy less operating expenses for one stabilized year, and the cap rate is NOI over the price; the loan constant is a year of level monthly payments (in arrears, at the annual rate divided by 12) over the loan, or the rate itself when the loan is interest only.",
+        "Leverage is positive when the cap rate is above the loan constant: then cash-on-cash, the cash flow after debt service over the equity, equals the cap rate plus the spread times loan over equity, so it rises with every step up in loan-to-value; below the constant it falls.",
+        "At each loan-to-value level the loan is that share of the price and the equity is the rest (closing costs and reserves left out); coverage is NOI over debt service and debt yield NOI over the loan, and both are left blank when there is no loan or no debt service.",
+        "Break-even occupancy is expenses plus debt service over potential gross income, treating every expense as fixed, and the break-even share of rent is the same costs over the income after vacancy.",
+        "With two loan quotes, the cost of the larger loan's extra dollars is the monthly rate that makes the extra cash at closing, after each quote's fees, equal to the extra payments and the extra balance at the end of the hold, quoted nominal (times 12) and effective; the example's rents, rates and quotes are illustrations, not market figures."
+      ],
+      "rules": []
+    },
+    {
+      "id": "npv-irr",
+      "name": "Present value and IRR partition",
+      "what": "NPV at a required return, IRR, and how much of the return comes from operations and how much from the sale; payback and profitability index.",
+      "status": "live",
+      "method": [
+        "Periods are years and every flow falls at the end of its year: the equity is paid at year 0, the operating cash flows you enter (to equity, after debt service) arrive in years 1 to N, and the net sale proceeds (after selling costs and the loan payoff) are added to year N, entered apart from that year's operating flow because that split sets the partition; an empty sale means no sale.",
+        "NPV discounts every flow at your required return, and the profitability index is the present value of years 1 to N over the equity (one plus NPV over equity); the IRR is the rate that makes NPV zero, found by Newton's method with a bisection fallback between -99.99% and 1,000%, and there is none when the flows never change sign or when no rate in that range makes NPV zero.",
+        "The partition discounts the operating flows and the sale separately at the IRR: the two present values add to the equity, so their shares of it sum to one; the same split is shown at the required return as shares of the total present value.",
+        "Payback is the first year the undiscounted cumulative cash, sale included, reaches zero or more (a sum within a millionth of a dollar of zero counts as zero, as does such an NPV); the modified IRR, computed only when both rates are entered, carries each positive year's net flow to year N at the reinvestment rate and brings each negative year's net flow to year 0 at the finance rate.",
+        "When the flows change sign more than once the result says the IRR may not be unique; figures are computed unrounded and rounded only for display, and the required return and both rates are your assumptions, the worked example's made up."
+      ],
+      "rules": []
+    },
+    {
+      "id": "after-tax",
+      "name": "After-tax return",
+      "what": "Taxable income by year (NOI less interest and depreciation), tax, after-tax cash flow, tax on sale including unrecaptured section 1250 gain, and the after-tax IRR beside the pre-tax IRR.",
+      "status": "live",
+      "method": [
+        "Taxable income each year is NOI less the year's loan interest (monthly payments at the annual rate divided by 12, interest only first if set) less straight-line depreciation on the building share of the cost basis, which is the price plus closing costs less the land share; depreciation is taken in full years with no mid-month convention, bonus depreciation or cost segregation, and stops once the basis is used up.",
+        "Yearly tax is that income times the ordinary rate plus the net investment income rate; a year's loss pays no tax and is carried forward against this property's later income and then its gain on sale, the rest of the gain first and the depreciation part second, and neither a loss on sale nor a loss left over is set against other income, the conservative reading for a passive investor.",
+        "The sale is at the end of the last year at the next year's NOI over the exit cap; the gain is the price less sale costs less the adjusted basis (cost basis less depreciation taken), the part of it up to the depreciation taken is unrecaptured section 1250 gain taxed at its rate plus the net investment income rate, and the rest is taxed at the capital gain rate plus the same.",
+        "The pre-tax and after-tax IRRs are yearly IRRs on the equity (cost basis less the loan), each year's cash flow before or after tax, and in the last year the sale proceeds after the loan payoff before or after tax; an IRR is left blank when the flows never change sign.",
+        "Every rate is an input and the example's figures and rates are illustrations, not defaults; the result is arithmetic on the inputs, not tax advice, and it leaves out state tax, loan fees and any limit on deductions.",
+        "Left out on the sale: the netting of the year's other section 1231 gains and losses, the look-back that makes net section 1231 gain ordinary income up to the net section 1231 losses of the five years before, and the cap the year's net section 1231 gain puts on the unrecaptured section 1250 part; the gain is priced as if all of it were long-term."
+      ],
+      "rules": [
+        "us-fed.irc.depreciation-recovery-periods",
+        "us-fed.irc.bonus-depreciation",
+        "us-fed.irc.unrecaptured-section-1250-gain",
+        "us-fed.irc.net-investment-income-tax",
+        "us-fed.irc.individual-income-tax-rates",
+        "us-fed.irc.section-1231-gains-and-losses"
+      ]
+    },
+    {
+      "id": "exchange-1031",
+      "name": "Like-kind exchange math",
+      "what": "Realized gain, boot received, recognized gain, deferred gain and the basis of the replacement property.",
+      "status": "live",
+      "method": [
+        "The amount realized is the sale price less selling and exchange costs, each cost taken as paid out of the proceeds so the cash taken out is what is left, and the realized gain is that amount less the adjusted basis; this follows Form 8824, which adds exchange expenses to the basis given up, and the replacement's basis comes out the same as if the exchange costs were added to its price instead.",
+        "Debt paid off counts as cash received; new debt on the replacement and then cash added offset it, as in 26 CFR 1.1031(d)-2 example 2, and neither offsets cash or other property taken out. Boot is cash taken plus other property plus the debt relief left over, and the recognized gain is the lesser of boot and the realized gain; a loss is never recognized.",
+        "The replacement's basis is the basis given up, plus new debt and cash added, less cash taken and debt paid off, plus gain recognized, less other property (which takes its fair market value); it is checked against the replacement price less the deferred gain, and the two agree whenever the money in equals the money out.",
+        "Tax is priced at the rates entered: gain up to the depreciation taken at the unrecaptured section 1250 rate, the rest at the capital gain rate, the net investment income rate added to both, and recognized gain taken from the depreciation part first. The tax deferred is the tax on the whole gain less the tax now.",
+        "The example's rates are the federal maximums the rule cards state, not anyone's own rates, and the result is arithmetic on the inputs, not tax advice.",
+        "Left out: the netting of the year's other section 1231 gains and losses, the look-back that makes net section 1231 gain ordinary income up to the net section 1231 losses of the five years before, and the cap the year's net section 1231 gain puts on the unrecaptured section 1250 part; recognized gain and the tax on the whole gain are priced as if all of it were long-term."
+      ],
+      "rules": [
+        "us-fed.irc.1031-boot-and-basis",
+        "us-fed.irc.1031-like-kind-real-property",
+        "us-fed.irc.unrecaptured-section-1250-gain",
+        "us-fed.irc.net-investment-income-tax",
+        "us-fed.irc.section-1231-gains-and-losses",
+        "us-fed.irc.gain-and-adjusted-basis"
+      ]
+    },
+    {
+      "id": "sale-proceeds",
+      "name": "Sale proceeds and gain",
+      "what": "What a sale leaves at closing, before tax and after: selling costs, the payoffs, the adjusted basis, the gain and the part of it that is depreciation, the lowest price that clears the debts, and the same sale at five prices.",
+      "status": "live",
+      "method": [
+        "Selling costs are the price times the selling cost rate plus the fixed costs. They reduce the amount realized, so they lower the gain as well as the cash; they are not added to basis. The adjusted basis is cost plus capital improvements less depreciation allowed or allowable, whether or not it was claimed, and the gain or loss is the amount realized less the adjusted basis.",
+        "Cash at closing before tax is the amount realized less the loan payoff and the other payoffs, which reduce cash, not gain; a loan the buyer takes over counts in the amount realized, so it goes in the price and in the payoffs. The clearing price is the payoffs plus the fixed selling costs, divided by one less the selling cost rate; below it the seller must bring cash to closing.",
+        "When the three rates are entered, the whole gain is priced as long-term capital gain: the part up to the depreciation taken at the unrecaptured section 1250 rate, the rest at the capital gain rate, and the net investment income rate added to both as if all of the gain were above its threshold. That is the same pricing the like-kind exchange calculator uses for the tax on the whole gain. A loss is not priced, so what it may save in tax is not figured, and with all three rates blank no tax is figured.",
+        "The ladder runs the same sale at the price and at 5 and 10 percent either side, holding the fixed costs, the payoffs and the basis. Nothing is rounded until it is shown.",
+        "Left out: state tax, a sale of property held one year or less, depreciation on equipment and other personal property, depreciation beyond straight line on the building or its improvements (section 1250 makes gain up to that amount ordinary income), the netting of the year's other section 1231 gains and losses and the look-back to the five years before, suspended passive losses, installment reporting, tax at the entity level and a sale by a dealer in property. Every rate is an input, the example's rates are the top federal rates the rule cards state, not anyone's own rates, and the result is arithmetic on the inputs, not tax advice."
+      ],
+      "rules": [
+        "us-fed.irc.gain-and-adjusted-basis",
+        "us-fed.irc.section-1231-gains-and-losses",
+        "us-fed.irc.unrecaptured-section-1250-gain",
+        "us-fed.irc.net-investment-income-tax"
+      ]
+    },
+    {
+      "id": "lease-rent",
+      "name": "Lease rent and effective rent",
+      "what": "A lease's rent by year with steps, free rent, tenant improvements and commissions; total rent, average rent and net effective rent per square foot.",
+      "status": "live",
+      "method": [
+        "Rent is figured month by month and paid in advance; the rate changes on each lease anniversary by a fixed percent (compounding), a fixed dollar step per square foot, or an assumed index change held between an optional floor and cap, and a term that is not whole years ends with a partial lease year.",
+        "Free rent abates the full base rent of the first months of the term; the improvement allowance (per square foot times the area) and the leasing commission (the share entered times the rent payable after free rent) are paid at signing.",
+        "Average rent is total base rent divided by the area and the years of the term; the simple net effective rent does the same with the rent payable less the allowance and the commission.",
+        "The present-value net effective rent discounts the rent payable at the monthly equivalent of the effective annual discount rate entered, subtracts the allowance and the commission, and turns the result into the level monthly rent, paid in advance, with the same present value, shown per square foot per year.",
+        "Base rent only: no expense recoveries; the escalation, concessions, commission and discount rate are the inputs you enter, and the worked example's values are examples, not market terms."
+      ],
+      "rules": []
+    },
+    {
+      "id": "expense-recovery",
+      "name": "Expense recoveries and percentage rent",
+      "what": "What a tenant reimburses under net, base-year and expense-stop leases with a pro rata share and a cap; percentage rent over a breakpoint.",
+      "status": "live",
+      "method": [
+        "The pro rata share is the tenant's rentable area over the building's, and the tenant's share of each year's expenses is that share times the building's recoverable expenses as you enter them, with no gross-up for vacancy.",
+        "On a net lease the tenant reimburses its share of the expenses; on a base-year lease, its share of the amount over the base year (year 1 unless you enter another); on an expense-stop lease, the expenses per square foot of building area above the stop, times its area; on a gross lease, nothing. A reimbursement is never below zero.",
+        "A cap limits the expenses passed through: each year may grow at most the cap over the year before, as capped. The cap is not cumulative, so a year that grows less than the cap does not save the unused room for a later year. The effect of the cap is the reimbursement without it less the reimbursement with it. What the landlord bears is the tenant's share less what the tenant reimburses.",
+        "Percentage rent is the percentage times the sales above the breakpoint, and zero below it; the breakpoint is the one the lease states, or else the natural breakpoint, the base rent divided by the percentage.",
+        "Every figure is computed unrounded and rounded only for display; the lease terms are what you read off the lease, and the worked example's areas, expenses, cap and sales are made up."
+      ],
+      "rules": []
+    },
+    {
+      "id": "lease-rollover",
+      "name": "Lease rollover exposure",
+      "what": "From a rent roll: expirations by year by area and by rent, weighted average lease term, largest-tenant share, in-place against market rent, and an optional downtime check: the rent lost if expiring tenants leave, weighted by your own renewal odds, set against a flat vacancy allowance.",
+      "status": "live",
+      "method": [
+        "The rent roll is read as of an analysis date you enter, never today's date: a row with no lease end and no rent is vacant and every other row is occupied (a lease end with no rent, as in free rent, included), a row with no lease end and rent is month-to-month, a lease that ended before the analysis date is a holdover, and the month-to-month and holdover rows count as expiring now, in their own bucket ahead of the calendar years.",
+        "Each lease's remaining term is the whole days from the analysis date to its last day, divided by 365; the weighted average lease term weights those terms by rent and, separately, by area, over occupied rows only.",
+        "Expirations are summed by the calendar year of the lease end, as a share of the building's whole area (vacant space included) and of the in-place rent, with running totals; a lease counts as inside the hold when it ends before the same month and day the hold's number of years after the analysis date.",
+        "Concentration groups rows with the same tenant name and divides the largest tenant's rent, and the three largest tenants' rent, by the in-place rent; a share with no rent to divide by is shown as none.",
+        "Market less in-place rent is the market rent per square foot you enter times the area, less the in-place rent, on occupied rows that carry a market rent, so a total above zero means the rents are below market; the worked example's rents and market rents are made-up examples, not market data.",
+        "An optional downtime check takes, for each row with rent whose lease ends before the hold's last day (month-to-month and holdover rows included), your own renewal probability and your own downtime in whole months; both are your judgment, not forecasts, the calculator supplies no default for either and refuses such a row left without them, and a zero-rent row or a lease ending on the hold's last day needs none because it can lose nothing inside the hold.",
+        "Vacancy starts the day after the lease end, or on the analysis date for a month-to-month or holdover row, and runs the downtime to the same day of the month, or a shorter month's last day; each lease rolls once, its in-place rent is held flat, a vacant day costs the annual rent divided by the days in its hold year (anniversary to anniversary), days after the hold ends are not counted, and the expected loss is that rent times one minus the renewal probability.",
+        "Potential rent is the occupied rows' in-place rent for every hold year, with space vacant at the analysis date adding nothing; the expected loss divided by it is the flat vacancy that would take out the same dollars, a flat allowance you enter is applied to the same potential rent and compared in dollars, above zero meaning the flat figure covers more, and the example's probabilities, downtimes and 5% allowance are made-up examples, not market figures."
+      ],
+      "rules": []
+    },
+    {
+      "id": "scenario-risk",
+      "name": "Scenario risk",
+      "what": "Probability-weighted scenarios: expected return, variance, standard deviation, coefficient of variation, and two options compared.",
+      "status": "live",
+      "method": [
+        "Each option is a list of scenarios with a probability and a yearly return, both decimals; the probabilities must sum to 1 within 0.000001 and are used as given, not rescaled, and the scenarios and odds are the user's own, never a default set.",
+        "The expected return is the sum of each probability times its return; the variance is the population variance, the sum of each probability times the squared gap between its return and the expected return, and the standard deviation is its square root.",
+        "The coefficient of variation is the standard deviation over the expected return, the risk carried per unit of return, and is not defined (null) when the expected return is zero or less; the range runs from the lowest to the highest return, zero-probability scenarios included, and the one-sigma band is the expected return plus and minus one standard deviation, a description of spread, not a probability unless returns are normally distributed.",
+        "Given a threshold, the chance below it is the summed probability of the scenarios whose return is strictly less than the threshold.",
+        "With two options it names the one with the higher expected return and the one with the lower coefficient of variation, and says one dominates when its expected return is at least the other's and its standard deviation at most the other's, one of the two strictly; figures within 1e-12 count as equal, an expected return within 1e-12 of zero counts as zero, and every figure is computed unrounded and rounded only for display."
+      ],
+      "rules": []
+    },
+    {
+      "id": "replacement-reserves",
+      "name": "Replacement reserves",
+      "what": "Building components with cost, life and age: the annual reserve, per square foot or unit, with cost inflation, and the years a reserve runs short.",
+      "status": "live",
+      "method": [
+        "Each component's straight-line reserve is its cost to replace today divided by its useful life; the total is divided by the area for a figure per square foot and by the unit count for a figure per unit, and a blank area or unit count gives no figure.",
+        "Each component is entered with its age, which is its life less its remaining life when a reserve table lists remaining life; it is replaced in the year its age reaches its life, year max(1, life minus age) counted from today, and again every life after that inside the horizon, so one already at or past its life is replaced in year 1.",
+        "A replacement in year t costs today's cost times (1 + inflation) to the power t minus 1, so year 1 is priced at today's cost; inflation is an input, and the example's rate is an example, not a forecast.",
+        "Each year the balance is last year's balance plus the contribution less that year's spending, read at year end with no interest earned; the reserve runs short in the first year the balance is below zero by half a cent or more.",
+        "The level contribution that never runs short is the largest, over every year t, of the spending through year t less today's balance, divided by t, and zero when the balance covers every replacement; nothing is rounded until it is shown."
+      ],
+      "rules": []
+    },
+    {
+      "id": "property-tax",
+      "name": "Property tax estimate",
+      "what": "Annual tax from appraised value and the rates of each taxing unit, the tax after a purchase resets the value, what a protest reduction saves, and the closing-day proration.",
+      "status": "live",
+      "method": [
+        "The taxable value is the appraised value times the assessment ratio you enter (1 where the full value is taxed), and each taxing unit's tax is the taxable value times its rate, a percent of value that is the same figure as its rate per $100 ($0.55 per $100 is 0.55%, or 0.0055 as a decimal); the year's tax is the sum, and the effective rate is that tax divided by the appraised value.",
+        "The purchase-price line re-runs the same rates on the price times the ratio, as if the appraised value were reset to the price, and the protest line takes the reduction off the appraised value (never below zero) and re-runs the rates; the saving is the tax before less the tax after.",
+        "The closing proration splits the year's estimated tax at the roll value by days in the closing date's calendar year (365, or 366 in a leap year): the seller has the days from January 1 up to the closing day, plus the closing day when you say the seller owns it, and the buyer has the rest.",
+        "When the tax is unpaid at closing the seller credits the buyer the seller's share, and when it was paid before closing the buyer credits the seller the buyer's share; nothing is rounded until it is shown.",
+        "Every rate is an input and the worked example's units and rates are made up; exemptions, appraisal caps (including the non-homestead circuit breaker, which expires December 31, 2026 as Tax Code 23.231 reads on 2026-11-14) and rollbacks are not modeled, and the result is arithmetic on the inputs, not tax advice."
+      ],
+      "rules": [
+        "us-tx.tax.market-value",
+        "us-tx.tax.protest-deadline",
+        "us-tx.tax.appraisal-increase-limit"
+      ]
+    }
+  ]
+}

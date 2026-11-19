@@ -1,0 +1,162 @@
+{
+  "vendor": "yardi-matrix",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "a7042f4a4dfcebddd14190f4845dead90c90dc5f80e0bc5b0dd643cba76e42c2",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The coverage check found no public API page, and the industrial product page and FAQ mention only an Excel export and a Claude connector, not an API.",
+      "missing": "Any API documentation, endpoints or vendor statement that a public API exists for reading or querying Yardi Matrix data."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "partial",
+      "quality": 7,
+      "evidence": [
+        "c1",
+        "c2",
+        "c3",
+        "p1"
+      ],
+      "rationale": "Yardi Matrix says its AI connector uses MCP and comes with a subscription (Claude only today), and the probe confirms the connector page resolves, but that page is marketing with no setup steps.",
+      "missing": "Setup steps, the server endpoint, which data or tools the server exposes, and whether MCP clients other than Claude can connect; the probe checked only that the page loads, not the server itself."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no SDK, CLI, package registry listing, public repository or code samples.",
+      "missing": "Any vendor-maintained SDK or CLI on a package registry or public repository, or even code samples."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "na",
+      "quality": 6,
+      "evidence": [
+        "c7",
+        "c9",
+        "c10"
+      ],
+      "rationale": "The pack shows Yardi Matrix is a vendor-published market data set (property data, rents, sales history and ownership on buildings of 25,000 SF and up) with no records that change on a customer's behalf.",
+      "missing": "The pack does not state outright that subscribers keep no records of their own in the product (such as saved lists or alerts), and it shows no event or alert feature either way."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows a required subscription and Enterprise SSO but no API keys, tokens or OAuth clients, let alone scoped ones.",
+      "missing": "Any API keys, tokens or OAuth clients, documented scopes or roles, and how the Claude connector authenticates."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No public API page was found and the pack shows no OpenAPI, Swagger, GraphQL or other machine-readable specification.",
+      "missing": "Any machine-readable API specification, public or behind a login."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The docs check found no public documentation or help center, and the pack shows no llms.txt file or Markdown documentation pages.",
+      "missing": "An llms.txt file or Markdown versions of documentation pages."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "na",
+      "quality": 5,
+      "evidence": [
+        "c1",
+        "c3",
+        "c9",
+        "c10"
+      ],
+      "rationale": "The only programmatic access shown is the Claude connector to Yardi Matrix's published market data, with no customer records or write actions shown, so there is nothing to protect by testing first.",
+      "missing": "No API is documented and the pack does not list the connector's tools, so read-only access is inferred from the product being a market data subscription rather than shown directly."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "partial",
+      "quality": 7,
+      "evidence": [
+        "c7"
+      ],
+      "rationale": "The industrial product page says users can export property data, reports and maps directly into Excel, but no documentation of the export was found.",
+      "missing": "Export documentation, whether an export can cover all licensed records in bulk or only one view at a time, any row limits, and CSV or JSON options."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c3",
+        "c4",
+        "c5",
+        "c6"
+      ],
+      "rationale": "The buy-now page says Yardi Matrix, including the portal and Claude connector, can be bought online on monthly per-user plans up to nationwide coverage and cancelled from account settings, with only the Enterprise tier going through Sales.",
+      "missing": "The sign-up and checkout flow was not tested, so buying without any call rests on the vendor's statement."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "full",
+      "quality": 10,
+      "evidence": [
+        "c4",
+        "c6"
+      ],
+      "rationale": "The buy-now page lists per-user monthly prices for every self-serve plan: $199 per asset class for one metro, $699 for five metros, $999 for ten and $1,999 nationwide, with only Enterprise priced through Sales."
+    },
+    {
+      "story": "md-property-lookup",
+      "verdict": "partial",
+      "quality": 5,
+      "evidence": [
+        "c7",
+        "c9",
+        "c10"
+      ],
+      "rationale": "The product page says users can compare properties by characteristics in the app and export property data to Excel for buildings of 25,000 SF and up, but shows no documented lookup service.",
+      "missing": "A documented API or data service, lookup by address or parcel, which attributes (size, year built, use) are returned, and any coverage of buildings under 25,000 SF."
+    },
+    {
+      "story": "md-comps",
+      "verdict": "partial",
+      "quality": 5,
+      "evidence": [
+        "c7",
+        "c9"
+      ],
+      "rationale": "The product page says users can compare properties on asking rents, leased space and sales history in the app and export data to Excel, but shows no documented comps query with filters.",
+      "missing": "A documented API or data service for sale or lease comparables, filters by place, type, size or date, and whether signed lease transactions rather than only asking rents are included."
+    },
+    {
+      "story": "md-owner",
+      "verdict": "partial",
+      "quality": 5,
+      "evidence": [
+        "c8",
+        "c9"
+      ],
+      "rationale": "The product page says Matrix gives access to real owners (not the LLC), key contacts and ownership information in the app, but shows no mailing address and no documented data service.",
+      "missing": "The owner of record as recorded (c8 stresses the real owner rather than the LLC), a mailing address, a documented API or data service, and lookup by parcel."
+    },
+    {
+      "story": "md-bulk-area",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows metro-based subscription plans and an Excel export but nothing showing a bulk download, bulk API or area query that returns all records for a county, drawn shape or radius.",
+      "missing": "Any bulk download, bulk API or area query, and whether the Excel export (c7) can cover every property in a licensed metro (c4)."
+    }
+  ]
+}

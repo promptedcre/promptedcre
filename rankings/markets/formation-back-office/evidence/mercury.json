@@ -1,0 +1,184 @@
+{
+  "vendor": "mercury",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://docs.mercury.com/docs/welcome",
+      "found": true
+    },
+    "api": {
+      "url": "https://mercury.com/api",
+      "found": true
+    },
+    "pricing": {
+      "url": "https://mercury.com/pricing",
+      "found": true
+    },
+    "changelog": {
+      "url": "https://docs.mercury.com/changelog",
+      "found": true
+    }
+  },
+  "links": {
+    "docs": "https://docs.mercury.com/docs/welcome",
+    "api": "https://docs.mercury.com/reference/welcome-to-mercury-api",
+    "mcp": "https://docs.mercury.com/docs/what-is-mercury-mcp",
+    "cli": "https://github.com/MercuryTechnologies/mercury-cli"
+  },
+  "packages": [],
+  "repos": [
+    "https://github.com/MercuryTechnologies/mercury-cli"
+  ],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://mercury.com/api",
+      "excerpt": "Automate your financial operations with a full banking API, terminal-native CLI, and AI-ready MCP server.",
+      "fetched": "2026-11-12",
+      "hash": "09f9a53688bc4d726762bf0403612c0734d23720702569b14b6cc35b343e8ae2"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://mercury.com/api",
+      "excerpt": "Pull balances, list transactions, and initiate ACH transfers — all through a single REST API",
+      "fetched": "2026-11-12",
+      "hash": "6dec156f78467a10b4d59e3826ce410f0c0399771069957a739d3c5f158ac698"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://mercury.com/api",
+      "excerpt": "Test safely in the sandbox, then swap one URL for production",
+      "fetched": "2026-11-12",
+      "hash": "4a2bba75b139bb10d2746490b4d1d6bcec417c384ce2acd1e26a98a5b6124da8"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://mercury.com/api",
+      "excerpt": "You're always in control — money movement requires a quick tap for approval in the Mercury app",
+      "fetched": "2026-11-12",
+      "hash": "73d0a145a0da1168fb52c6d68fb8b9a6287997b002e95561067ce290bb81f6b1"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://docs.mercury.com/docs/api-token-security-policies",
+      "excerpt": "Scopes allow the API user to specify the level of access an API Token has.",
+      "fetched": "2026-11-12",
+      "hash": "8cd3ae73647c4ce3dd505fd29a4dabeb39cb683d4023aa900169eb9a2ce0236a"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://docs.mercury.com/docs/using-mercury-sandbox",
+      "excerpt": "Unlike signing for Mercury, when you log into a sandbox environment, it skips the normal onboarding process.",
+      "fetched": "2026-11-12",
+      "hash": "e0340cb4e7de2fe94d29a7796ebf4d0ba8ce1eec09c14f1fee18e5864652e08b"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://docs.mercury.com/llms.txt",
+      "excerpt": "Receive real-time notifications when resources in your Mercury account change by configuring webhook endpoints to listen for specific events.",
+      "fetched": "2026-11-12",
+      "hash": "926eec448bec928d2f1fa310757c5b5d21fdbe9ed613a1601bdb4fe8930fc33e"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://docs.mercury.com/llms.txt",
+      "excerpt": "Retrieve a paginated list of monthly statements for a depository account.",
+      "fetched": "2026-11-12",
+      "note": "Get account statements endpoint",
+      "hash": "49dfa3c86dbe0a98a9be3324c6be522a6f0098078286b4c998a576584193a230"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://docs.mercury.com/llms.txt",
+      "excerpt": "Retrieve a paginated list of transactions for a specific account. Supports filtering by date range, status, and search terms.",
+      "fetched": "2026-11-12",
+      "hash": "c7ea90cfa648165c9aaa9970c33698d8ba0c927ed924e7dd6b636a8ec59aece2"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://docs.mercury.com/docs/what-is-mercury-mcp",
+      "excerpt": "Prepare payments - request a payment to an existing recipient, then review and approve it in Mercury",
+      "fetched": "2026-11-12",
+      "note": "MCP section is labeled Beta in the docs index",
+      "hash": "9badc780a14f69e8bbc03a5a7b6ee567c223f48fb6b2eaa847eb05de32dfebfc"
+    },
+    {
+      "id": "c11",
+      "tier": "code",
+      "url": "https://github.com/MercuryTechnologies/mercury-cli",
+      "excerpt": "Download statements and SAFE documents ( mercury statements , mercury safes )",
+      "fetched": "2026-11-12",
+      "hash": "4e901001912feae14efc8382c6bf59607373d41ba6e01a95d510ec1f65e4ea08"
+    },
+    {
+      "id": "c12",
+      "tier": "vendor-claim",
+      "url": "https://mercury.com/pricing",
+      "excerpt": "Banking services and essential tools are always $0/mo — with more plans available as your business grows.",
+      "fetched": "2026-11-12",
+      "hash": "c3330a51c30377cc1ad4ce46d3ae61baababfbbcb09b6b2e5171c9191b8c755a"
+    },
+    {
+      "id": "c13",
+      "tier": "vendor-claim",
+      "url": "https://docs.mercury.com/changelog",
+      "excerpt": "Vault API: Retrieve agent card credentials",
+      "fetched": "2026-11-12",
+      "hash": "e7bfcf0873320c1a7ef9fe196dde5908519ae30e067c868fc0a33b6253ba800a"
+    },
+    {
+      "id": "c14",
+      "tier": "vendor-claim",
+      "url": "https://docs.mercury.com/llms.txt",
+      "excerpt": "Learn how to authenticate, set up API tokens, and make your first API call to Mercury",
+      "fetched": "2026-11-12",
+      "hash": "8c468e79b4984344c79379195b9370278f4f6886f30a8c5f98bc3d618d0a641a"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://docs.mercury.com/llms.txt",
+      "excerpt": "# Mercury API Documentation",
+      "note": "llms.txt: GET 200, 22917 bytes",
+      "fetched": "2026-11-12",
+      "hash": "52516bd4c986a648ddee569d5e288730feef88bc102d71870630b1c53352b535"
+    },
+    {
+      "id": "p2",
+      "tier": "probe",
+      "url": "https://docs.mercury.com/docs/what-is-mercury-mcp",
+      "excerpt": "What is Mercury MCP?",
+      "note": "MCP page resolves: GET 200 (page title)",
+      "fetched": "2026-11-12",
+      "hash": "824e53f7365abffdf9f60bb9bc2efb22e78f6aafb2e6d42c78e230eae636234f"
+    },
+    {
+      "id": "p3",
+      "tier": "probe",
+      "url": "https://github.com/MercuryTechnologies/mercury-cli",
+      "excerpt": "GitHub - MercuryTechnologies/mercury-cli · GitHub",
+      "note": "CLI or SDK page resolves: GET 200 (page title)",
+      "fetched": "2026-11-12",
+      "hash": "09d4c62ec6bc437dc7b4756253def10fff34b2d9d0963fcd1ddd2ce0bae3d2c4"
+    },
+    {
+      "id": "p4",
+      "tier": "code",
+      "url": "https://github.com/MercuryTechnologies/mercury-cli",
+      "excerpt": "MercuryTechnologies/mercury-cli:",
+      "note": "GitHub: not archived, last push 2026-11-10",
+      "fetched": "2026-11-12",
+      "hash": "73d6e67c138a339ee9cc7cead43e69e3fc11c07b7ec184c57f4c5e80d599f32e"
+    }
+  ]
+}

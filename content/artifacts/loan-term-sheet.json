@@ -1,0 +1,105 @@
+{
+  "id": "loan-term-sheet",
+  "name": "Loan term sheet",
+  "what": "A lender's summary of proposed loan terms: amount, rate, amortization, term, fees, reserves, covenants and conditions.",
+  "fields": [
+    {
+      "key": "lender",
+      "label": "Lender",
+      "type": "string",
+      "definition": "The lender making the proposal, and the mortgage broker or correspondent if one placed the loan."
+    },
+    {
+      "key": "borrower",
+      "label": "Borrower",
+      "type": "string",
+      "definition": "The proposed borrower, often a single-purpose entity still to be formed, and the principals the sheet names behind it."
+    },
+    {
+      "key": "loanAmount",
+      "label": "Loan amount",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The proposed loan amount. Where the sheet sets it by formula, record the dollar cap and the formula, such as the lesser of a stated amount and what the loan-to-value and coverage limits allow."
+    },
+    {
+      "key": "sizingLimits",
+      "label": "Sizing limits",
+      "type": "text",
+      "definition": "Each limit that can shrink the loan before closing: maximum loan-to-value or loan-to-cost, minimum debt service coverage and minimum debt yield, with the value, income and rate each one is measured on."
+    },
+    {
+      "key": "interestRate",
+      "label": "Interest rate",
+      "type": "string",
+      "definition": "The rate as written: a fixed rate, or the index, the spread over it and any floor. Note whether the rate is only quoted or is locked, and the date or event that sets it."
+    },
+    {
+      "key": "termMonths",
+      "label": "Term",
+      "type": "integer",
+      "unit": "months",
+      "definition": "Months from closing to maturity. Record any extension options separately with their conditions and fees."
+    },
+    {
+      "key": "amortization",
+      "label": "Amortization",
+      "type": "string",
+      "definition": "How principal is repaid: the amortization period in years, any interest-only months, or another structure such as stepped payments. When the term is shorter than the amortization, a balance remains due at maturity."
+    },
+    {
+      "key": "prepayment",
+      "label": "Prepayment terms",
+      "type": "text",
+      "definition": "The cost of paying the loan off early or releasing part of the collateral: any lockout, a declining percentage, yield maintenance, defeasance or swap breakage, and any open period before maturity."
+    },
+    {
+      "key": "recourse",
+      "label": "Recourse",
+      "type": "text",
+      "definition": "Whether the loan is full recourse, partial recourse, or nonrecourse with carve-outs, and who must sign a guaranty and for what."
+    },
+    {
+      "key": "guarantorRequirements",
+      "label": "Guarantor requirements",
+      "type": "text",
+      "definition": "The net worth, liquidity and financial reporting the lender says it will require of each guarantor."
+    },
+    {
+      "key": "financialCovenants",
+      "label": "Financial covenants",
+      "type": "text",
+      "definition": "The tests the borrower must keep meeting after closing, such as minimum coverage or debt yield, how and how often each is measured, and what a miss sets off, such as cash management."
+    },
+    {
+      "key": "reserves",
+      "label": "Reserves and escrows",
+      "type": "list",
+      "definition": "Each reserve the lender will hold, such as taxes, insurance, replacements, tenant improvements and leasing commissions or interest, with the upfront deposit and the monthly amount."
+    },
+    {
+      "key": "fees",
+      "label": "Fees and costs",
+      "type": "list",
+      "definition": "Each charge to the borrower: origination, application or good-faith deposit, exit and extension fees, third-party reports and lender's counsel, with whether each is refundable if the loan does not close."
+    },
+    {
+      "key": "conditions",
+      "label": "Conditions",
+      "type": "list",
+      "definition": "What must happen before the lender commits or funds, such as an appraisal at a stated value, acceptable reports, estoppels and SNDAs, and credit committee approval."
+    },
+    {
+      "key": "binding",
+      "label": "Binding",
+      "type": "boolean",
+      "definition": "Whether the sheet says it is a binding commitment. Most say they are not; list separately any provisions that bind on signing, such as deposits, exclusivity or break-up fees."
+    },
+    {
+      "key": "expiresOn",
+      "label": "Proposal expires",
+      "type": "date",
+      "definition": "The date the proposal lapses if it is not accepted, and any outside date for closing the loan."
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "vendor": "attom",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "c85616e3efbc0f362ba52407c92636da26cf2092c6a9ec4b0b8f07d7ec1cd4bb",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c3",
+        "c4",
+        "c8",
+        "c9",
+        "c10",
+        "c12"
+      ],
+      "rationale": "The pack shows public API documentation at api.developer.attomdata.com/docs with an endpoint reference, key-authenticated REST requests returning JSON or XML, and documented query parameters for ATTOM's property data, which meets the data-product case.",
+      "missing": "The pack does not list the documented endpoints, so it does not show one by one that the docs cover each data type (property detail, sales history, comps, ownership), and the newest release note shown is October 2025."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "partial",
+      "quality": 7,
+      "evidence": [
+        "c1",
+        "c2",
+        "p2"
+      ],
+      "rationale": "ATTOM's MCP Server page, confirmed live by probe, and its FAQ say ATTOM runs a centrally managed MCP server with key-based authentication, but the pack shows no setup steps.",
+      "missing": "Setup steps (the help-center setup articles that opened showed little text), the server address or client configuration, release status, and which data or tools the server exposes."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item in the pack shows an ATTOM SDK, CLI, package-registry listing or public code repository.",
+      "missing": "Any vendor-maintained SDK or CLI on a public package registry or in a public repository."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "na",
+      "quality": 7,
+      "evidence": [
+        "c1",
+        "c9",
+        "c11"
+      ],
+      "rationale": "The pack shows ATTOM as licensed property data (nationwide real estate data sets with ownership, sales history and comps) that customers query rather than change, so the published-data-set exception applies.",
+      "missing": "The pack does not state outright that no records change on a customer's behalf, and it shows no webhook or change feed for data updates."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "partial",
+      "quality": 7,
+      "evidence": [
+        "c3",
+        "c4"
+      ],
+      "rationale": "The docs show that a free trial account yields a unique API key that every request to every endpoint must carry, with no scopes, roles or permissions described.",
+      "missing": "Whether a key can be limited to particular endpoints or data, or whether several restricted keys can be issued per account; scopes were checked only on the docs page."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows HTML API docs with an endpoint reference and release notes but no OpenAPI, Swagger, GraphQL or other machine-readable specification.",
+      "missing": "Any published or downloadable machine-readable API specification."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "partial",
+      "quality": 5,
+      "evidence": [
+        "p1"
+      ],
+      "rationale": "The probe found a 9,853-byte llms.txt on the www.attomdata.com site that hosts the marketing pages, but the pack does not show that it covers the API docs on api.developer.attomdata.com or that Markdown versions of the docs exist.",
+      "missing": "The contents of the llms.txt and whether it links the developer documentation, any llms.txt on the docs domain, and Markdown versions of documentation pages."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "na",
+      "quality": 7,
+      "evidence": [
+        "c7",
+        "c8",
+        "c9",
+        "c11"
+      ],
+      "rationale": "The pack shows an API that serves ATTOM's licensed property data for querying, with no customer records to change, so there is nothing to protect by testing first; ATTOM also mentions a developer sandbox reached through a test drive.",
+      "missing": "The pack does not state outright that the API is read-only, and it does not show whether the developer sandbox test drive is self-serve or arranged on request."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "partial",
+      "quality": 6,
+      "evidence": [
+        "c11"
+      ],
+      "rationale": "ATTOM's Bulk Property Data Licensing lets a customer host its nationwide data sets on its own servers, but it is arranged by contacting ATTOM and the pack shows no self-serve download or file formats.",
+      "missing": "Bulk file formats, delivery documentation, and any self-serve bulk download or export."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c3",
+        "c5",
+        "c6"
+      ],
+      "rationale": "The developer platform lets a user sign up for a free trial API key or a start-up plan and start calling the API with no call, with a call needed only for enterprise-level usage.",
+      "missing": "Whether the start-up plan can be bought online with no contact and what it includes; enterprise usage and bulk licensing need a call."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c5",
+        "c6"
+      ],
+      "rationale": "The developer home page's pricing section names a free key, a start-up plan and enterprise options but gives no price figures, and the /pricing paths return 404.",
+      "missing": "Prices or fees for the start-up plan or any other plan a small sponsor would buy."
+    },
+    {
+      "story": "md-property-lookup",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "c8",
+        "c9",
+        "c10"
+      ],
+      "rationale": "The Property Data API returns property data such as ownership, lat/long and square footage as JSON or XML, and the docs show queries taking an address or latitude/longitude input.",
+      "missing": "The pack does not show a specific address or parcel (APN) lookup endpoint or its field list, such as year built and property use."
+    },
+    {
+      "story": "md-comps",
+      "verdict": "full",
+      "quality": 5,
+      "evidence": [
+        "c8",
+        "c9",
+        "c10"
+      ],
+      "rationale": "The Property Data API page lists sales comps among the data it returns as JSON or XML, and the docs show a radius filter usable with an address or latitude/longitude input.",
+      "missing": "The pack does not show the comps endpoint's documentation or which filters (place, type, size, date) apply to comps; the radius parameter is not tied to comps in the pack, and lease comps are not shown."
+    },
+    {
+      "story": "md-owner",
+      "verdict": "partial",
+      "quality": 5,
+      "evidence": [
+        "c8",
+        "c9"
+      ],
+      "rationale": "The Property Data API page lists ownership information among the data it returns as JSON or XML, but the pack does not show the owner's mailing address.",
+      "missing": "Owner-of-record and mailing-address fields, and a documented endpoint that returns them for a parcel."
+    },
+    {
+      "story": "md-bulk-area",
+      "verdict": "partial",
+      "quality": 6,
+      "evidence": [
+        "c10",
+        "c11"
+      ],
+      "rationale": "The docs show a radius search parameter for area queries and ATTOM licenses nationwide bulk data sets, but bulk files are arranged by contact as a separate order and the pack does not show that radius queries return every record in an area.",
+      "missing": "Record caps or paging on radius queries, county or drawn-shape queries, and the terms and formats of bulk files."
+    }
+  ]
+}

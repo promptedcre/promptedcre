@@ -1,0 +1,25 @@
+{
+  "id": "us-tx.property.commercial-security-deposit",
+  "jurisdiction": "us-tx",
+  "title": "Texas commercial security deposit: the 60-day refund and the itemized list",
+  "rule": "A Texas commercial landlord must refund the security deposit by the 60th day after the tenant surrenders the premises and gives a written forwarding address. It may deduct damages and charges the tenant owes under the lease or from a breach, but not normal wear and tear, and must send the balance with a written description and itemized list of deductions, unless the tenant owes rent at surrender and the amount is undisputed. Bad-faith retention costs $100, three times the amount wrongfully withheld, and attorney's fees; missing the 60th day is presumed bad faith. A new owner is liable for the deposit, except a mortgage lienholder taking title by foreclosure.",
+  "citation": {
+    "authority": "Tex. Prop. Code 93.005 to 93.011",
+    "url": "https://statutes.capitol.texas.gov/Docs/PR/htm/PR.93.htm"
+  },
+  "asOf": "2026-11-13",
+  "lastVerified": "2026-11-13",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Property Code 93.004 to 93.011 (93.005 and 93.011 last amended effective September 1, 2003). The Legislature's text, which carries 2025 amendments elsewhere in the Property Code (chapter 24), lists no later amendment to these sections; watch bills in the regular session that starts in 2027.",
+  "sources": [
+    {
+      "id": "tx-prop-code-93",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.93.htm",
+      "title": "Texas Property Code, Chapter 93 (Commercial tenancies), Sections 93.004 to 93.011",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "not later than the 60th day after the date the tenant surrenders the premises",
+      "tier": "primary"
+    }
+  ]
+}

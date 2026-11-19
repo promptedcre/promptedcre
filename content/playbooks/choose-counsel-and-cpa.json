@@ -1,0 +1,23 @@
+{
+  "id": "choose-counsel-and-cpa",
+  "slug": "choose-counsel-and-cpa",
+  "kind": "process",
+  "title": "Choose counsel and a CPA",
+  "summary": "Pick the securities lawyer, real estate lawyer and tax adviser the sponsor will lean on, before the first deal needs them.",
+  "phase": "stand-up",
+  "order": 15,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": []
+}

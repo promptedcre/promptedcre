@@ -1,0 +1,34 @@
+{
+  "id": "meet-loan-covenants",
+  "slug": "meet-loan-covenants",
+  "kind": "process",
+  "title": "Meet loan covenants and reporting",
+  "summary": "Track the loan's financial tests, reserves and reporting dates and deliver what the lender needs.",
+  "phase": "operate",
+  "order": 340,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "List every covenant, test date and reporting due date in the loan documents",
+    "Add the guarantor's own reporting and financial tests",
+    "Compute coverage on the lender's NOI definition each test period",
+    "Project coverage from the rent roll to see a breach coming",
+    "Track rate exposure, caps and swaps on floating debt",
+    "Fund and draw reserves as the loan requires",
+    "Assemble and deliver the reporting package on time",
+    "Get lender consent before lease changes that need it",
+    "Tell the lender early if a test may fail",
+    "File what was sent and the lender's acknowledgments"
+  ]
+}

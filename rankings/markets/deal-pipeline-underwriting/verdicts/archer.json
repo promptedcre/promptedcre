@@ -1,0 +1,169 @@
+{
+  "vendor": "archer",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "dd9701efb9acc6c17e5b31fa8e8545a4c4790d5415f75c81ea83dc1de661dfb1",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "partial",
+      "quality": 9,
+      "evidence": [
+        "c6",
+        "c15",
+        "p2"
+      ],
+      "rationale": "A public OpenAPI-documented API (p2) gives read-only GET access to the deal pipeline, underwrites, rent rolls and TTMs (c6), so customers cannot change the pipeline and other records they manage in the app (c15).",
+      "missing": "No create, update or delete endpoint for any core record is shown, and the pack summarizes rather than reproduces the spec's endpoint list."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "p3",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5"
+      ],
+      "rationale": "Archer documents its own MCP connector on its docs site (p3) with a setup command, OAuth sign-in and scope-approval steps (c2, c3, c4) and fifteen read-only tools (c1).",
+      "missing": "The pack does not list what the fifteen read-only tools cover or say whether the connector is beta or generally available."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no Archer SDK, CLI or client library; the only command shown is Claude's own 'claude mcp add' for connecting the MCP server.",
+      "missing": "No vendor SDK or CLI on a package registry or public repository, and no API code samples, appear in the pack."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no webhooks, event subscriptions or automation-platform triggers for any record.",
+      "missing": "No webhook or event documentation for deals, underwrites, rent rolls or any other record appears in the pack."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "partial",
+      "quality": 8,
+      "evidence": [
+        "c7",
+        "c3",
+        "c4"
+      ],
+      "rationale": "API access uses a single bearer token tied to the whole client account with no documented scoping (c7), and the MCP's OAuth flow offers only one read-only scope, mcp:read (c3, c4).",
+      "missing": "No scopes, roles or permissions that narrow a credential to particular records, endpoints or actions are shown."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "full",
+      "quality": 10,
+      "evidence": [
+        "p2",
+        "c6"
+      ],
+      "rationale": "A script downloaded the public OpenAPI 3.0.3 spec file (133,251 bytes) from app-api.archer.re/external_api/docs without logging in (p2, c6)."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "p1",
+        "c10"
+      ],
+      "rationale": "Archer serves an llms.txt file (p1) that covers its help center alongside marketing and blog pages and links the API docs (c10).",
+      "missing": "Only one site-wide llms.txt on the marketing domain is shown, linking the API reference rather than indexing its pages; no llms.txt on docs.archer.re and no Markdown versions of documentation pages are shown."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no sandbox, test mode or developer environment, and because the read-only API serves customers' own deal records rather than published data, 'na' does not apply.",
+      "missing": "No self-serve or on-request sandbox, test mode or developer environment appears in the pack."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no export or bulk-download feature for records in CSV, JSON, Excel or any other format.",
+      "missing": "No self-serve bulk export or download is documented or mentioned; the read-only API is not presented as an export, and its tokens are issued by Archer rather than self-serve."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "partial",
+      "quality": 5,
+      "evidence": [
+        "c11",
+        "c13"
+      ],
+      "rationale": "The llms.txt describes a free trial (credit card required) and a paid trial ahead of contracts (c11), while the pricing page routes contract pricing through a custom quote (c13), so self-serve appears limited to the trial stages.",
+      "missing": "The pack shows no sign-up page and no statement that the trial or a paid plan can start without a call; the self-serve trial is inferred from 'credit card required' and the sales step from the quote form."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "partial",
+      "quality": 9,
+      "evidence": [
+        "c12",
+        "c11",
+        "c13"
+      ],
+      "rationale": "Only a starting price is public, 'From $500/Month' in the pricing page title (c12) and 'contracts from $500/month' in llms.txt (c11), while the page body asks for a custom quote (c13).",
+      "missing": "No price table or per-plan prices, including for the Pro plan the API and MCP require, are shown."
+    },
+    {
+      "story": "dp-deal-record",
+      "verdict": "partial",
+      "quality": 9,
+      "evidence": [
+        "c6",
+        "c15",
+        "c1"
+      ],
+      "rationale": "The deal pipeline is exposed only through read-only GET endpoints (c6, c15) and the MCP never modifies data (c1), so deals can be read but not created or moved between stages.",
+      "missing": "No create or stage-update endpoint is shown, and the pack does not reproduce the deal_pipeline endpoint's fields."
+    },
+    {
+      "story": "dp-load-financials",
+      "verdict": "partial",
+      "quality": 7,
+      "evidence": [
+        "c14",
+        "c6"
+      ],
+      "rationale": "Rent roll and T-12 extraction is an in-app feature with no API upload endpoint (c14), and the API only reads rent rolls and TTMs back through GET endpoints (c6).",
+      "missing": "The in-app parsing is shown only in marketing copy, not the upload screen itself, and the pack does not show the structured fields the rentrolls and ttm endpoints return."
+    },
+    {
+      "story": "dp-model-outputs",
+      "verdict": "full",
+      "quality": 6,
+      "evidence": [
+        "c6",
+        "p2"
+      ],
+      "rationale": "The public OpenAPI-documented API (p2) includes a read-only underwrites endpoint giving programmatic access to Archer's underwriting models (c6).",
+      "missing": "The pack does not show the underwrites endpoint's fields, so it does not confirm that cash flows, returns or valuation results come back as structured data."
+    },
+    {
+      "story": "dp-documents",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c6",
+        "c14"
+      ],
+      "rationale": "The API is GET-only with no upload endpoint (c6, c14), and the pack shows no endpoint that lists or downloads deal documents.",
+      "missing": "No document upload, list or download endpoint is shown, and the pack does not say whether the rentrolls or ttm endpoints return the source files."
+    }
+  ]
+}

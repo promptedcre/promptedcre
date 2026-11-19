@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "artifact": "certificate-of-formation",
+      "path": "Formation/certificate-of-formation.pdf",
+      "date": "2026-01-15",
+      "note": null
+    },
+    {
+      "artifact": "ein-confirmation",
+      "path": "Tax/ein-confirmation.pdf",
+      "date": "2026-01-20",
+      "note": "Stored as a file; the number itself is never copied here."
+    }
+  ]
+}

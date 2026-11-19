@@ -1,0 +1,25 @@
+{
+  "market": "deal-pipeline-underwriting",
+  "cells": [
+    { "vendor": "archer", "story": "mcp-server", "verdict": "full", "why": "The docs site documents a read-only MCP connector with its setup command.", "checked": "2026-11-12", "evidence": ["c1", "c2", "p3"] },
+    { "vendor": "archer", "story": "api-spec", "verdict": "full", "why": "A public OpenAPI 3.0.3 file downloads from the API host; the probe fetched it.", "checked": "2026-11-12", "evidence": ["c6", "p2"] },
+    { "vendor": "archer", "story": "public-api", "verdict": "partial", "why": "The public API reference covers read-only endpoints; nothing writes.", "checked": "2026-11-12", "evidence": ["c6", "c8"] },
+    { "vendor": "archer", "story": "public-pricing", "verdict": "partial", "why": "Only a starting price ('From $500/Month'); the page body is a quote form.", "checked": "2026-11-12", "evidence": ["c12", "c13"] },
+    { "vendor": "cactus", "story": "public-api", "verdict": "partial", "why": "An API is offered to companies but is scoped per integration, with no public reference.", "checked": "2026-11-12", "evidence": ["c5", "c6", "c7"] },
+    { "vendor": "cactus", "story": "api-spec", "verdict": "none", "why": "The API page says it is an example, not an API specification.", "checked": "2026-11-12", "evidence": ["c7"] },
+    { "vendor": "cactus", "story": "mcp-server", "verdict": "none", "why": "No MCP server is mentioned; the pack shows only a ChatGPT entry point.", "checked": "2026-11-12", "evidence": [] },
+    { "vendor": "clik-ai", "story": "public-pricing", "verdict": "none", "why": "No prices anywhere; the pricing address is a 404 and plans lead to a demo.", "checked": "2026-11-12", "evidence": ["c6"] },
+    { "vendor": "clik-ai", "story": "public-api", "verdict": "partial", "why": "Product pages say API access exists, with no public reference.", "checked": "2026-11-12", "evidence": ["c2", "c3"] },
+    { "vendor": "dealpath", "story": "public-pricing", "verdict": "none", "why": "The plans page shows no prices and asks visitors to contact the company.", "checked": "2026-11-12", "evidence": ["c7"] },
+    { "vendor": "dealpath", "story": "mcp-server", "verdict": "partial", "why": "An MCP server is described for Enterprise clients, but the pack shows no setup steps.", "checked": "2026-11-12", "evidence": ["c1", "c2", "c3"] },
+    { "vendor": "dealpath", "story": "sandbox", "verdict": "partial", "why": "Sandbox environments are listed only as an Enterprise plan feature.", "checked": "2026-11-12", "evidence": ["c6"] },
+    { "vendor": "dealpath", "story": "agent-docs", "verdict": "partial", "why": "The llms.txt file lists site pages and blog posts, not documentation.", "checked": "2026-11-12", "evidence": ["c13", "p1"] },
+    { "vendor": "intellcre", "story": "mcp-server", "verdict": "full", "why": "A documented hosted MCP server with 40 tools, OAuth and scopes.", "checked": "2026-11-12", "evidence": ["c4", "c5", "c6", "c10"] },
+    { "vendor": "intellcre", "story": "scoped-credentials", "verdict": "full", "why": "Read and write scopes are granted separately and listed by resource.", "checked": "2026-11-12", "evidence": ["c7", "c8"] },
+    { "vendor": "keyway", "story": "public-pricing", "verdict": "none", "why": "No pricing page (404) and no prices shown.", "checked": "2026-11-12", "evidence": ["c11"] },
+    { "vendor": "microsoft-excel", "story": "public-api", "verdict": "full", "why": "Microsoft Graph documents REST create, read, update and delete on Excel workbooks.", "checked": "2026-11-12", "evidence": ["c1", "c2"] },
+    { "vendor": "microsoft-excel", "story": "scoped-credentials", "verdict": "full", "why": "Graph permissions are documented scopes, with read-only and read-write variants.", "checked": "2026-11-12", "evidence": ["c4"] },
+    { "vendor": "radix-underwriting", "story": "self-serve", "verdict": "none", "why": "Every call to action is Get a Demo or Log In.", "checked": "2026-11-12", "evidence": ["c6"] },
+    { "vendor": "rockport-val", "story": "public-api", "verdict": "partial", "why": "The vendor says it has REST APIs and a two-way open API, with no public documentation.", "checked": "2026-11-12", "evidence": ["c2", "c3", "c4"] }
+  ]
+}

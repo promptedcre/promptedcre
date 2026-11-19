@@ -1,0 +1,51 @@
+{
+  "id": "us-fed.irc.firpta",
+  "jurisdiction": "us-federal",
+  "title": "FIRPTA: the buyer withholds 15% when a foreign person sells U.S. real property",
+  "rule": "When a foreign person disposes of a U.S. real property interest, the buyer generally must withhold 15% of the amount realized, counting cash, other property at market value, and debt assumed or taken subject to. No withholding is needed if the seller certifies under penalty of perjury its U.S. taxpayer identification number and non-foreign status, unless the buyer knows otherwise. A buyer that fails to withhold can be liable; Form 8288 is generally due by the 20th day after transfer.",
+  "citation": {
+    "authority": "26 U.S.C. 1445(a), (b)(2) and (b)(7)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/1445"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-12",
+  "review": "ai-drafted",
+  "changeWatch": "Changes to section 1445 or its regulations, and to IRS Forms 8288 and 8288-A or their filing rules.",
+  "sources": [
+    {
+      "id": "usc-26-1445",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1445",
+      "title": "26 U.S.C. 1445, Withholding of tax on dispositions of United States real property interests",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "quote": "the transferee shall be required to deduct and withhold a tax equal to 15 percent of the amount realized on the disposition",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-firpta",
+      "url": "https://www.irs.gov/individuals/international-taxpayers/firpta-withholding",
+      "title": "FIRPTA withholding",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-12",
+      "quote": "If the transferor is a foreign person and the transferee fails to withhold, the transferee may be held liable for the tax.",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-firpta-exceptions",
+      "url": "https://www.irs.gov/individuals/international-taxpayers/exceptions-from-firpta-withholding",
+      "title": "Exceptions from FIRPTA withholding",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-firpta-reporting",
+      "url": "https://www.irs.gov/individuals/international-taxpayers/reporting-and-paying-tax-on-us-real-property-interests",
+      "title": "Reporting and paying tax on U.S. real property interests",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-12",
+      "quote": "Generally, transferees must file Form 8288 by the 20th day after the date of the disposition.",
+      "tier": "primary"
+    }
+  ]
+}

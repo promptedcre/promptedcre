@@ -1,0 +1,144 @@
+{
+  "vendor": "covercy",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "5c15e8b081b524fd4c97bb68e6bea7290affe0a2bd64ca0bec3fd05874ac2458",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c3",
+        "c4",
+        "c5"
+      ],
+      "rationale": "The coverage check found no public API or developer page, the integrations page (c3, c4) lists only built-in connectors, and the in-account 'Integration' or 'API' section in c5 holds a portal embed snippet rather than an API for reading or changing records.",
+      "missing": "Any API documentation, public or behind a login, for reading or changing investors, entities, distributions, capital calls or other core records."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Nothing in the pack mentions an MCP server for Covercy.",
+      "missing": "Any official MCP server, its documentation or its setup steps."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Nothing in the pack shows an official SDK, CLI, code samples or public code repository for Covercy.",
+      "missing": "Any vendor-maintained SDK or CLI on a public package registry or repository, or even code samples."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c3",
+        "c4"
+      ],
+      "rationale": "No webhook or event documentation appears, c4's integrations page is noted as having no API or webhook page, and c3's automatic syncs are built-in connectors rather than events an agent can subscribe to.",
+      "missing": "Any webhooks, event subscriptions or third-party automation-platform triggers for Covercy records."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no API keys, tokens or OAuth clients, let alone scopes or roles that limit them.",
+      "missing": "Any API credentials an agent could obtain, and any documented scopes, roles or permissions for them."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no OpenAPI, Swagger, GraphQL or other machine-readable API specification, and no public API to describe.",
+      "missing": "Any machine-readable API description, public or behind a login."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "partial",
+      "quality": 7,
+      "evidence": [
+        "p1",
+        "c7"
+      ],
+      "rationale": "The probe confirms an llms.txt file exists (GET 200, 9511 bytes), but c7 shows it lists marketing and product pages rather than the documentation.",
+      "missing": "Whether the llms.txt covers the Help Center documentation at help.covercy.com, and whether any documentation pages are published as Markdown."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Nothing in the pack shows a sandbox, test mode or developer environment for Covercy.",
+      "missing": "Any developer sandbox or test environment, self-serve or on request; the 14-day product trial is not shown to be a developer environment."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Nothing in the pack mentions exporting or downloading records in bulk in CSV, JSON, Excel or another open format.",
+      "missing": "Any documented self-serve export of investor, entity, transaction or report data and its formats; the automatic syncs to QuickBooks, Rent Manager and Yardi are not shown to be exports."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "c2"
+      ],
+      "rationale": "The public pricing page offers a 'Start 14-day Trial' button as an alternative to 'Talk to sales', showing a trial a sponsor can start from the page without a sales call.",
+      "missing": "The trial sign-up flow itself (whether it is free and needs no call, card or approval) and whether the trial is offered on the Standard and Professional tiers as well as Fundraising Starter."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "full",
+      "quality": 9,
+      "evidence": [
+        "c1",
+        "c2"
+      ],
+      "rationale": "The public pricing page prices plans per legal entity, showing Fundraising Starter at $249 per entity per month ($498 per month at two entities) and listing Standard at $566 and Professional at $812 per month.",
+      "missing": "Prices are shown only at the two-entity setting, and the pack does not show whether onboarding, payment-processing or other fees apply."
+    },
+    {
+      "story": "ip-create-investor",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no API, so there is no documented way to create investor records or send subscription documents through one.",
+      "missing": "Any API endpoint or documentation for creating investors or starting subscription documents, directly or through a third-party integration."
+    },
+    {
+      "story": "ip-distribution",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Nothing in the pack shows an API for creating or reading distributions or for generating investor notices.",
+      "missing": "Any API documentation for posting distributions or generating or sending distribution notices."
+    },
+    {
+      "story": "ip-register",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Nothing in the pack shows API endpoints or a documented export that returns investors, commitments and contributions as JSON or CSV.",
+      "missing": "Any API or documented export of the investor register, even a manual in-app one; the investor portal's Cash Flows page is shown only as an on-screen view."
+    },
+    {
+      "story": "ip-capital-call",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Nothing in the pack shows an API for issuing capital calls or reading each investor's funding status.",
+      "missing": "Any API documentation for creating capital calls or reading funding status; the changelog shows funding status only in the investor portal's Payment Due tile."
+    }
+  ]
+}

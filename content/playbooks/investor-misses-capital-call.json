@@ -1,0 +1,350 @@
+{
+  "id": "investor-misses-capital-call",
+  "slug": "investor-misses-capital-call",
+  "kind": "situation",
+  "title": "An investor fails to fund a capital call",
+  "summary": "Follow the remedies in the governing documents and close the funding gap before the closing needs the money.",
+  "phase": "raise",
+  "order": 104,
+  "featured": true,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-12",
+  "situation": {
+    "trigger": "An investor does not wire a called amount by the deadline in the notice.",
+    "urgency": "days"
+  },
+  "requires": [
+    "call-capital-fund-closing"
+  ],
+  "consumes": [
+    "deal-entity-agreement",
+    "subscription-agreement",
+    "capital-call-notice",
+    "investor-register",
+    "purchase-and-sale-agreement",
+    "loan-term-sheet",
+    "jv-agreement"
+  ],
+  "produces": [
+    "investor-register"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "tx-boc-101",
+      "url": "https://statutes.capitol.texas.gov/Docs/BO/htm/BO.101.htm",
+      "title": "Texas Business Organizations Code, Chapter 101 (Sections 101.151 to 101.156, contributions)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-153",
+      "url": "https://statutes.capitol.texas.gov/Docs/BO/htm/BO.153.htm",
+      "title": "Texas Business Organizations Code, Chapter 153 (Sections 153.202 to 153.205, contributions)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-502",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.502",
+      "title": "17 CFR 230.502, General conditions to be met",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-503",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.503",
+      "title": "17 CFR 230.503, Filing of notice of sales",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "confirm-the-miss",
+      "title": "Confirm the investor actually missed the deadline",
+      "instruction": "Before treating it as a default, rule out the ordinary causes: a wire still in transit, a payment that arrived but was not matched, a notice that was not delivered the way the agreement requires, or a misread due date. Check the receiving account, the delivery log and any wire confirmation the investor sent, and ask the investor in writing for the wire reference. Record what you found and when.",
+      "mode": "agent",
+      "modeBasis": "The checks run on bank records, the delivery log and the mailbox; nothing is decided yet.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "consumes": [
+        "investor-register",
+        "capital-call-notice"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "read-default-terms",
+      "title": "Read the default terms in the governing agreement",
+      "instruction": "List what the agreement says happens when an investor does not fund: the default notice and any cure period, interest or fees, and the remedies. Texas lets an LLC's company agreement, or a limited partnership's partnership agreement, provide that a defaulting interest is reduced, subordinated, forfeited, sold in a forced sale, or redeemed at an appraised or formula value, or that the other members or partners lend the amount. Texas law also lets the company or partnership require the investor to pay the unpaid agreed value of the promised contribution in cash. Enter each deadline in the deadline calendar.",
+      "mode": "agent",
+      "modeBasis": "Reading the agreement against the statute is document work; counsel confirms the result in a later step.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-the-miss"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "subscription-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "tx-boc-153"
+      ]
+    },
+    {
+      "id": "fund-default-provisions",
+      "title": "For a fund, read the fund-level default tools",
+      "instruction": "A fund's partnership agreement usually adds tools beyond the single call: calling the shortfall from the other limited partners within limits it sets, drawing on a subscription credit line if the fund has one, and remedies that reach the defaulting partner's remaining commitment as well as this call. Note how much more any partner can be called, whether a credit-line lender must be told of the default, and what notice the other partners get. Counsel confirms before any extra call goes out.",
+      "mode": "agent",
+      "modeBasis": "The limits and notices are written in the fund's agreements, which an agent can read and summarize.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-default-terms"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "consumes": [
+        "deal-entity-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "jv-default-provisions",
+      "title": "For a JV, read the JV agreement's funding-default mechanics",
+      "instruction": "With one capital partner, a missed contribution usually triggers the JV agreement's own mechanics: the other member may fund in its place as a loan at a stated rate, or as an extra contribution that dilutes the defaulting member under a formula, and a large or repeated default may shift control or open a buy-sell. Texas law expressly allows a company agreement to provide for a loan from the other members and other consequences. Model each choice before electing one, and make the election in the form the agreement requires.",
+      "mode": "agent",
+      "modeBasis": "Reading the mechanics and modeling each choice is analysis; the election itself is the manager's, made with counsel.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-default-terms"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "tx-boc-153"
+      ]
+    },
+    {
+      "id": "counsel-review-enforceability",
+      "title": "Have counsel confirm the obligation and the remedy",
+      "instruction": "Counsel confirms the obligation can be enforced and which remedy fits. Under Texas law the promise must be in writing and signed by the investor, and a contribution payable on a discretionary call is conditional until the call is properly made. Releasing or settling the obligation takes the consent of every member of an LLC, or of every partner of a limited partnership unless its agreement says otherwise. Counsel also reviews the notice and cure language before anything goes to the investor.",
+      "mode": "human-online",
+      "modeBasis": "Whether the obligation is enforceable and which remedy to use are legal judgments.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-default-terms",
+        "fund-default-provisions",
+        "jv-default-provisions"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "tx-boc-153"
+      ]
+    },
+    {
+      "id": "send-default-notice",
+      "title": "Send the default notice the agreement requires",
+      "instruction": "If the agreement calls for a default notice, send it in the form and by the method it specifies, signed by the manager or general partner, and record when it was delivered, since cure periods and remedies usually run from delivery. Keep it factual: the amount, the due date that passed, the cure deadline and the consequence the agreement provides. Call the investor as well, to learn whether the money is coming.",
+      "mode": "human-online",
+      "modeBasis": "The notice is signed by the manager or general partner and starts the agreement's clocks.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-review-enforceability"
+      ],
+      "consumes": [
+        "deal-entity-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "size-the-gap",
+      "title": "Size the gap and the time left",
+      "instruction": "Work out the shortfall: the called amount still missing, net of anything received. Then list the dates that limit the options: the closing date and any extension right in the purchase contract, the lender's equity condition and rate-lock expiry, and the cure period in the governing agreement. Put them in the deadline calendar. The size of the gap and the days left decide which options are realistic.",
+      "mode": "agent",
+      "modeBasis": "The gap and the dates come from the register, the contract and the loan terms.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-the-miss"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "investor-register",
+        "purchase-and-sale-agreement",
+        "loan-term-sheet"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "choose-gap-option",
+      "title": "Decide how to close the gap",
+      "instruction": "The manager picks among the options the agreement allows: other investors fund the shortfall, as extra contributions or as loans covering the defaulting investor where the agreement provides for them, which Texas law permits; the sponsor or an affiliate funds it; a new investor joins the offering; or the sponsor asks the seller for more time or the lender for changed terms. Check each option with counsel for consent requirements and conflicts of interest, especially when the sponsor or an affiliate steps in.",
+      "mode": "human-online",
+      "modeBasis": "Choosing how to fund the gap commits the deal entity and may need investor consent, so the manager decides.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "size-the-gap",
+        "counsel-review-enforceability"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "tx-boc-153"
+      ]
+    },
+    {
+      "id": "admit-replacement-investor",
+      "title": "Admit any new investor under the same exemption",
+      "instruction": "A replacement investor buys in the same offering under the same exemption and goes through full onboarding: questionnaire, accreditation and subscription documents. Under Rule 506(b) the offering cannot use general solicitation, so look first to people already reached without it. A new investor alone does not require a Form D amendment: changes only in the amount sold or the number of investors are exempt, as is an increase in the offering amount of 10% or less, but a larger increase requires one. If the investor lives in a state not yet on the notice list, file that state's notice.",
+      "mode": "agent",
+      "modeBasis": "Checking the replacement against the exemption and Rule 503 is rule reading on the offering's records; onboarding follows its own playbook.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-gap-option"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "rules": [
+        "us-fed.reg-d.form-d-amendments"
+      ],
+      "consumes": [
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-502",
+        "ecfr-230-503"
+      ]
+    },
+    {
+      "id": "apply-remedy",
+      "title": "Apply the remedy and document it",
+      "instruction": "Once any cure period ends, apply the remedy the agreement provides, in the way it provides, and document it: a written notice of the remedy, a revised schedule of members or partners and their interests, and any loan or transfer papers. Counsel prepares or reviews each document, and the manager signs. If the investor pays late and the agreement allows a late cure, collect the default interest or fees it sets.",
+      "mode": "human-online",
+      "modeBasis": "Applying a remedy changes an investor's legal rights, so counsel papers it and the manager signs.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "send-default-notice"
+      ],
+      "consumes": [
+        "deal-entity-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "update-register-and-investors",
+      "title": "Update the register and tell the other investors",
+      "instruction": "Update the investor register: the default, the remedy applied, each investor's revised interest and contributions, and any replacement investor. Recheck the ownership percentages that distributions will use. Then tell the other investors what the agreement requires them to know, such as a request to fund more or a change in their percentage, in plain terms and in writing.",
+      "mode": "agent",
+      "modeBasis": "Updating records is clerical; a person approves each message before it goes to investors.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "apply-remedy",
+        "admit-replacement-investor"
+      ],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register"
+      ],
+      "produces": [
+        "investor-register"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    }
+  ],
+  "outlineSteps": []
+}

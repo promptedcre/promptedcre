@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "date": "2026-02-01",
+      "decision": "Raise the first deal as a single-asset syndication under Rule 506(b).",
+      "by": "Alex Example",
+      "playbook": "choose-structure-and-exemption",
+      "note": "Counsel confirmed the exemption."
+    }
+  ]
+}

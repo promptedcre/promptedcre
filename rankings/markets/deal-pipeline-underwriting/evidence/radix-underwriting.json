@@ -1,0 +1,110 @@
+{
+  "vendor": "radix-underwriting",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://help.radix.com/",
+      "found": false,
+      "note": "Help center redirects to a login page; no public documentation found."
+    },
+    "api": {
+      "url": "https://radix.com/radix-underwriting/",
+      "found": false,
+      "note": "No API or developer page; radix.com/api returns 404 and the product page mentions none."
+    },
+    "pricing": {
+      "url": "https://radix.com/radix-underwriting/",
+      "found": false,
+      "note": "No pricing page (radix.com/pricing returns 404); only Get a Demo buttons."
+    },
+    "changelog": {
+      "url": "https://radix.com/blog/",
+      "found": false,
+      "note": "No changelog or release notes page found; product news appears only as blog posts."
+    }
+  },
+  "links": {},
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://radix.com/rediq-is-becoming-radix-underwriting/",
+      "excerpt": "The redIQ name is becoming Radix Underwriting, but the underwriting foundation users rely on is being carried forward.",
+      "fetched": "2026-11-12",
+      "note": "rediq.io redirects to rediq.com, which points to Radix Underwriting on radix.com.",
+      "hash": "f67e9bec03af3e12b7514011b5f74519d019188a0729719f16d4cb17f59fcfef"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://www.rediq.com/",
+      "excerpt": "We spent the last several months rebuilding the platform from the ground up to make it faster, cleaner, and more intuitive.",
+      "fetched": "2026-11-12",
+      "hash": "fa6f0b779b5dee9766e0fba9814332f913714f2e15eecb6b07e8b4e2885ea140"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://radix.com/radix-underwriting/",
+      "excerpt": "Upload any rent roll, operating statement, or financial document and get back clean, structured data in seconds through AI automation.",
+      "fetched": "2026-11-12",
+      "note": "Describes the in-app upload; no API for it is documented.",
+      "hash": "f362a8a62b2fcc39fc85179da24681406674722d15a8e5045a9b34c26d6310ab"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://radix.com/radix-underwriting/",
+      "excerpt": "Radix Underwriting combines AI-driven models, dynamic scenario testing, and Excel-ready exports to let you underwrite at the speed of opportunity.",
+      "fetched": "2026-11-12",
+      "hash": "08872aa7b69eb6d786d597ebe465f72cf6ca72a273c82e958a450085d87929d4"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://radix.com/rediq-is-becoming-radix-underwriting/",
+      "excerpt": "A stronger technical foundation designed to support future integrations, automation, and data connectivity.",
+      "fetched": "2026-11-12",
+      "note": "Integrations are described as future work.",
+      "hash": "1a9f4fa75cd2785fe5beb5fd12114d66f1ca01aeb4267f71d40114c3cf37abcd"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://radix.com/radix-underwriting/",
+      "excerpt": "Get a Demo",
+      "fetched": "2026-11-12",
+      "note": "Every call to action is Get a Demo or Log In; no prices or self-serve sign-up shown.",
+      "hash": "afead0b2b0b4ce2c289e5eab6a5eaf0eee5ec59e3ba7c8b217bb9c59111df915"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://radix.com/radix-intelligence/",
+      "excerpt": "export what you need to PDF or Excel, with a click.",
+      "fetched": "2026-11-12",
+      "note": "Radix Intelligence (comps) workspace export.",
+      "hash": "c25dbd08918b70298b17c3486c2c590e01e35dd73312fe8233674e66c7ecd896"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://radix.com/blog/rebuilt-with-ai-radix-underwriting-reinvents-rent-roll-processing-again/",
+      "excerpt": "This improved processor has greater flexibility, allowing it to assist even with uncommon rent roll formats",
+      "fetched": "2026-11-12",
+      "note": "Blog post dated Oct 16, 2025.",
+      "hash": "a29df97c0e8c9e0ff23ebc977a666bbebce640ad934436321345995747cea558"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://help.radix.com/",
+      "excerpt": "Login",
+      "fetched": "2026-11-12",
+      "note": "Help center URL redirects to an identity login page.",
+      "hash": "a73c761d9a2fb8466b4bacb50f2e87c219737c7068b984aa27fefd42b3cc5027"
+    }
+  ]
+}

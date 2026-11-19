@@ -1,0 +1,58 @@
+{
+  "id": "us-fed.firrea.appraisal-thresholds",
+  "jurisdiction": "us-federal",
+  "title": "Federal appraisal threshold for commercial real estate loans: $500,000",
+  "rule": "Institutions regulated by the OCC, the Federal Reserve and the FDIC need an appraisal by a state certified or licensed appraiser for real estate-related financial transactions, with exceptions. A commercial real estate transaction of $500,000 or less is excepted; the institution obtains an evaluation instead. Above $500,000, a commercial real estate transaction needs a state certified appraiser. Commercial means not secured by a single one-to-four family residence, so multifamily counts; for a loan, transaction value is the loan amount.",
+  "citation": {
+    "authority": "12 CFR 34.42, 34.43(a)(13), (b) and (d)(2); 12 CFR 225.63; 12 CFR 323.3 (implementing title XI of FIRREA)",
+    "url": "https://www.ecfr.gov/current/title-12/chapter-I/part-34/subpart-C/section-34.43"
+  },
+  "asOf": "2026-11-09",
+  "lastVerified": "2026-11-12",
+  "review": "ai-drafted",
+  "changeWatch": "A joint rule by the OCC, Federal Reserve and FDIC changing the appraisal thresholds; 12 CFR 34.43 was last amended in 2019.",
+  "sources": [
+    {
+      "id": "ecfr-12-34-43",
+      "url": "https://www.ecfr.gov/current/title-12/chapter-I/part-34/subpart-C/section-34.43",
+      "title": "12 CFR 34.43, Appraisals required; transactions requiring a State certified or licensed appraiser",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "quote": "The transaction is a commercial real estate transaction that has a transaction value of $500,000 or less",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-12-34-42",
+      "url": "https://www.ecfr.gov/current/title-12/chapter-I/part-34/subpart-C/section-34.42",
+      "title": "12 CFR 34.42, Definitions",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "quote": "a real estate-related financial transaction that is not secured by a single 1-to-4 family residential property",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-12-34-41",
+      "url": "https://www.ecfr.gov/current/title-12/chapter-I/part-34/subpart-C/section-34.41",
+      "title": "12 CFR 34.41, Authority, purpose, and scope",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-12-225-63",
+      "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-225/subpart-G/section-225.63",
+      "title": "12 CFR 225.63, Appraisals required; transactions requiring a State certified or licensed appraiser (Federal Reserve)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-12-323-3",
+      "url": "https://www.ecfr.gov/current/title-12/chapter-III/subchapter-B/part-323/subpart-A/section-323.3",
+      "title": "12 CFR 323.3, Appraisals required; transactions requiring a State certified or licensed appraiser (FDIC)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    }
+  ]
+}

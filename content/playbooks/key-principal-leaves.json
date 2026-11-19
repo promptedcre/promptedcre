@@ -1,0 +1,37 @@
+{
+  "id": "key-principal-leaves",
+  "slug": "key-principal-leaves",
+  "kind": "situation",
+  "title": "A sponsor principal leaves",
+  "summary": "Apply the partner agreement, check key-person terms with lenders and investors, and reassign duties.",
+  "phase": "stand-up",
+  "order": 130,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "situation": {
+    "trigger": "A principal resigns, becomes unable to work or dies.",
+    "urgency": "weeks"
+  },
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Confirm the departure terms and the effective date",
+    "Read the partner agreement's departure and buyout terms",
+    "Check key-person clauses in loans, fund documents and JV agreements",
+    "List each role, signing authority and account the principal held",
+    "Reassign duties and update bank signers and system access",
+    "Notify lenders, partners and investors as their documents require",
+    "Update entity filings where the principal was named",
+    "Settle the departing principal's ownership and promote",
+    "Record the changes in the firm file"
+  ]
+}

@@ -1,0 +1,517 @@
+{
+  "id": "source-acquisition-debt",
+  "slug": "source-acquisition-debt",
+  "kind": "process",
+  "title": "Source acquisition debt",
+  "summary": "Set what the business plan needs from the loan, size the request, shop it with several kinds of lender and compare the quotes on the same footing, with the floating options stressed. A principal chooses the lender and signs the term sheet; the loan documents come next.",
+  "phase": "acquire",
+  "order": 265,
+  "featured": false,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-13",
+  "requires": [
+    "underwrite-a-deal"
+  ],
+  "consumes": [
+    "underwriting-model",
+    "ic-memo",
+    "buy-box",
+    "purchase-and-sale-agreement",
+    "rent-roll",
+    "trailing-12",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "loan-term-sheet"
+  ],
+  "produces": [
+    "loan-term-sheet",
+    "underwriting-model"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "ecfr-34-subpart-d",
+      "url": "https://www.ecfr.gov/current/title-12/part-34/subpart-D",
+      "title": "12 CFR Part 34, Subpart D, Real Estate Lending Standards, and Appendix A, Interagency Guidelines for Real Estate Lending",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "For loans to purchase an existing property, the term “value” means the lesser of the actual acquisition cost or the estimate of value.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-365",
+      "url": "https://www.ecfr.gov/current/title-12/part-365",
+      "title": "12 CFR Part 365, Real Estate Lending Standards, and Appendix A, Interagency Guidelines for Real Estate Lending Policies",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "Institutions should establish their own internal loan-to-value limits for real estate loans. These internal limits should not exceed the following supervisory limits",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-1002-7",
+      "url": "https://www.ecfr.gov/current/title-12/section-1002.7",
+      "title": "12 CFR 1002.7, Rules concerning extensions of credit (Regulation B)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "The applicant's spouse may serve as an additional party, but the creditor shall not require that the spouse be the additional party.",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-42-4012a",
+      "url": "https://www.law.cornell.edu/uscode/text/42/4012a",
+      "title": "42 U.S.C. 4012a, Flood insurance purchase and compliance requirements and escrow accounts",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "covered for the term of the loan by flood insurance in an amount at least equal to the outstanding principal balance of the loan",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-323-5",
+      "url": "https://www.ecfr.gov/current/title-12/section-323.5",
+      "title": "12 CFR 323.5, Appraiser independence (FDIC)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "the appraiser shall be engaged directly by the regulated institution or its agent",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-34-45",
+      "url": "https://www.ecfr.gov/current/title-12/section-34.45",
+      "title": "12 CFR 34.45, Appraiser independence (OCC)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "A regulated institution also may accept an appraisal that was prepared by an appraiser engaged directly by another financial services institution",
+      "tier": "primary"
+    },
+    {
+      "id": "fhfa-2026-multifamily-caps",
+      "url": "https://www.fhfa.gov/news/news-release/u.s.-federal-housing-announces-2026-multifamily-loan-purchase-caps-for-fannie-mae-and-freddie-mac",
+      "title": "U.S. Federal Housing Announces 2026 Multifamily Loan Purchase Caps for Fannie Mae and Freddie Mac",
+      "publisher": "Federal Housing Finance Agency",
+      "accessed": "2026-11-13",
+      "quote": "the 2026 multifamily loan purchase caps for Fannie Mae and Freddie Mac (the Enterprises) will be $88 billion for each Enterprise",
+      "tier": "primary"
+    },
+    {
+      "id": "nyfed-sofr",
+      "url": "https://www.newyorkfed.org/markets/reference-rates/sofr",
+      "title": "Secured Overnight Financing Rate Data",
+      "publisher": "Federal Reserve Bank of New York",
+      "accessed": "2026-11-13",
+      "quote": "The Secured Overnight Financing Rate (SOFR) is a broad measure of the cost of borrowing cash overnight collateralized by Treasury securities.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bc-26",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.26.htm",
+      "title": "Texas Business and Commerce Code, Chapter 26 (Section 26.02, Loan agreement must be in writing)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "A loan agreement in which the amount involved in the loan agreement exceeds $50,000 in value is not enforceable unless the agreement is in writing",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "write-financing-brief",
+      "title": "Write down what the business plan needs from the loan",
+      "instruction": "From the approved underwriting and investment memo, write a one-page financing brief. State the hold period, the planned exit by sale or refinance and when it may come, and a loan term that covers the hold with room to spare. Say whether the plan can carry floating-rate risk, how freely the loan must prepay for the planned exit, and any interest-only period or future funding needed for leasing or capital work. Record the recourse and guaranties the principals will consider, the proceeds the sources and uses require, and the date a commitment is needed under the purchase contract's financing or feasibility deadline. A principal reads and confirms the brief; every later step measures quotes against it.",
+      "mode": "agent",
+      "modeBasis": "Drafting from the approved model and the signed contract is writing work; the preferences it records are the principal's to confirm.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "ic-memo",
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "size-the-request",
+      "title": "Size the loan request before talking to lenders",
+      "instruction": "Run the debt-sizing calculator on the underwritten net operating income at two or three sets of coverage, loan-to-value and debt-yield limits, labeled as assumptions until quotes arrive, and record which limit binds. National banks and FDIC-supervised banks must keep written real estate lending policies, and the interagency guidelines tell them to set internal loan-to-value limits no higher than the supervisory limits, 85% for improved property. For a loan to buy an existing property, value under those guidelines is the lesser of the actual acquisition cost and the appraised or evaluated value; enter that lesser figure as the calculator's value. Run the loan-payments calculator for amortizing and interest-only versions and record each balance due at maturity. In the leverage calculator, compare the cap rate with each loan constant and note break-even occupancy. Set the request at what the sources and uses need, and record the range the limits allow.",
+      "mode": "agent",
+      "modeBasis": "Three live calculators size and test the loan from recorded inputs; the limits are labeled assumptions until lenders quote.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "write-financing-brief"
+      ],
+      "calculators": [
+        "debt-sizing",
+        "loan-payments",
+        "leverage"
+      ],
+      "rules": [
+        "us-fed.banking.ltv-value-definition"
+      ],
+      "consumes": [
+        "underwriting-model"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-34-subpart-d",
+        "ecfr-365"
+      ]
+    },
+    {
+      "id": "prepare-guarantor-profile",
+      "title": "Prepare the borrower and guarantor profile",
+      "instruction": "Set out who will borrow and who may stand behind the loan: the single-purpose borrowing entity and its owners, and for each possible guarantor a current financial statement, a schedule of real estate owned with its debt, liquidity, net worth and guaranties already given. The interagency guidelines tell banks' lending policies to address nonrecourse lending and guarantor support, so expect the request. Under Regulation B a lender may not require a spouse's signature when the applicant qualifies alone; if it needs an additional party it may ask for a guarantor, but may not require that it be the spouse. For secured credit it may require a spouse's signature on documents state law needs to reach the collateral. Keep the profile confidential; a principal decides who offers to guarantee and approves each release.",
+      "mode": "agent",
+      "modeBasis": "Compiling the statements is document work; who guarantees binds the principals personally, so a principal decides and approves each release.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "write-financing-brief"
+      ],
+      "consumes": [
+        "deal-entity-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-1002-7",
+        "ecfr-365"
+      ]
+    },
+    {
+      "id": "assemble-request-package",
+      "title": "Assemble the loan request package",
+      "instruction": "Build one package every lender receives: a short memorandum with the request (amount, term, rate type, recourse sought, closing date), the property and market, sources and uses, the business plan and the sponsor's experience; then the rent roll, trailing-12 and prior years' statements, the underwriting summary, the signed contract, photos, site plan and any reports in hand. Add the FEMA flood zone: a regulated lender may not lend on a building in a special flood hazard area where federal flood insurance is available unless it is insured against flood for the loan's term. An appraisal the buyer orders cannot serve as a regulated bank's appraisal: a fee appraiser must be engaged directly by the bank or its agent, though the bank may accept one engaged directly by another financial services institution. Hold guarantor statements back until a lender asks. Tie every figure to the model.",
+      "mode": "agent",
+      "modeBasis": "Assembling and checking the package is document work from the deal file.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "size-the-request",
+        "prepare-guarantor-profile"
+      ],
+      "rules": [
+        "us-fed.flood.mandatory-purchase",
+        "us-fed.firrea.appraisal-thresholds"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "rent-roll",
+        "trailing-12",
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-42-4012a",
+        "ecfr-323-5",
+        "ecfr-34-45"
+      ],
+      "typeNotes": {
+        "industrial": "For a single-tenant building, include the lease, any tenant financial statements the lease delivers, and the remaining lease term against the loan term; a lease ending before the loan matures is the first question a lender asks.",
+        "multifamily": "Add the unit mix, a current rent roll showing concessions and delinquency, and monthly occupancy history; agency lenders often ask for their own templates.",
+        "office": "Add a lease abstract and the tenant improvement and leasing commission exposure at each expiration inside the loan term.",
+        "retail": "Add tenant sales reports where leases require them, and any co-tenancy, exclusive-use or go-dark clauses that could cut income during the loan term."
+      }
+    },
+    {
+      "id": "list-lenders",
+      "title": "List the lenders to approach, by kind",
+      "instruction": "List lenders that make loans of this size, property type and location, and include more than one kind. Banks and credit unions often lend with recourse, shorter terms and floating or short fixed rates, and can be flexible later because they usually keep the loan. Life insurance companies tend to lend at lower leverage on stabilized property, with long fixed rates. Conduit lenders make fixed-rate loans for securitization, usually nonrecourse except for carve-outs; after closing a servicer runs the loan under the trust's rules, so consents to transfers, prepayment and changes are slower and narrower. Debt funds lend floating, often interest-only and on transitional property, at a higher cost. Decide whether to use a mortgage broker; a principal signs any engagement. Record each lender's contact, typical terms and why it is on the list.",
+      "mode": "agent-browser",
+      "modeBasis": "Lender programs and contacts are on public websites; engaging a mortgage broker is a contract a principal signs.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "write-financing-brief"
+      ],
+      "basis": "practitioner",
+      "sources": [
+        "fhfa-2026-multifamily-caps"
+      ],
+      "typeNotes": {
+        "multifamily": "Fannie Mae and Freddie Mac buy apartment loans made through their approved lenders, under yearly caps the Federal Housing Finance Agency sets: $88 billion each for 2026. Ask each agency lender which program fits and how long it takes."
+      }
+    },
+    {
+      "id": "request-quotes",
+      "title": "Send the package and ask for written quotes",
+      "instruction": "Send each lender the package with a cover note: the request, closing date and quote deadline. Ask every lender to quote in writing on the same points: proceeds and each limit that sizes them; index, spread and any floor, or the fixed rate and how it is set; amortization and interest-only months; term and extensions; coverage, loan-to-value and debt-yield tests at closing and after; fees; reserves; prepayment terms; recourse and guaranties; financial covenants; conditions; and how far up its approval chain the quote has gone. Ask what income and value the lender will underwrite; which owners, from what ownership share, it will underwrite or want as guarantors; whom it treats as the key principal; and what replacing that person or admitting a large investor would require. A person approves each send; guarantor statements go only to a lender that asks, with a principal's approval. Log every quote against the deadline.",
+      "mode": "agent",
+      "modeBasis": "Sending and tracking requests is agent work; each send speaks for the sponsor, so a person approves it.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "assemble-request-package",
+        "list-lenders"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "rent-roll",
+        "trailing-12"
+      ],
+      "produces": [
+        "loan-term-sheet"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "compare-quotes",
+      "title": "Put the quotes side by side on the same footing",
+      "instruction": "Enter each quote in the loan term sheet's fields. Re-size every quote with the debt-sizing calculator on the sponsor's underwritten income and that lender's own tests, since a lender's income or value can come in below what the quote assumes. With the loan-payments calculator, compute each payment and the balance at the planned exit and at maturity. Turn fees and points into cash at closing and an effective cost over the expected hold. Price prepayment at the planned exit date under each formula: a step-down percentage, yield maintenance, defeasance or swap breakage. Add reserves and escrows to cash at closing. Where one quote lends more, use the leverage calculator to find what the extra dollars cost. Note recourse, covenants, conditions and how likely each lender is to close on time.",
+      "mode": "agent",
+      "modeBasis": "Normalizing written quotes and running live calculators is document and spreadsheet work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "request-quotes"
+      ],
+      "calculators": [
+        "debt-sizing",
+        "loan-payments",
+        "leverage"
+      ],
+      "consumes": [
+        "loan-term-sheet",
+        "underwriting-model"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "stress-floating-quotes",
+      "title": "Stress each floating-rate quote",
+      "instruction": "For each floating quote, record the index, often SOFR, which the New York Fed publishes each business day as a measure of overnight borrowing secured by Treasury securities, or a term rate built from it; then the spread, any floor, and any interest rate cap or swap the lender requires, with its term and who pays. Run the rate-reset calculator on two or three index paths chosen as stress cases, not forecasts, including one that stays high for the whole term. Record coverage by year against underwritten income, the first year it falls below the lender's test, and the payment shock. Price any required cap or swap, and its replacement at each extension. Compare the result with the fixed-rate quotes at the planned exit.",
+      "mode": "agent",
+      "modeBasis": "The live calculator runs each path from the quote's own terms; the paths are labeled stress cases.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "compare-quotes"
+      ],
+      "calculators": [
+        "rate-reset"
+      ],
+      "consumes": [
+        "loan-term-sheet",
+        "underwriting-model"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner",
+      "sources": [
+        "nyfed-sofr"
+      ]
+    },
+    {
+      "id": "rerun-returns-by-quote",
+      "title": "Re-run returns with each finalist quote",
+      "instruction": "For the two or three quotes that best fit the financing brief, run the returns-sensitivity calculator with each quote's proceeds, payment, fees, reserves and balance at exit, and the floating quotes on their stress paths. Record levered IRR, equity multiple, cash-on-cash and the equity each needs at closing. In the leverage calculator, check whether each loan constant sits below the going-in cap rate, and record coverage, debt yield and break-even occupancy. Write a one-page comparison: each quote against each point in the brief, the cost of prepaying at the planned exit, recourse, timing and certainty, and the terms to negotiate. A principal reads it before talks start.",
+      "mode": "agent",
+      "modeBasis": "Both calculators are live and run from the normalized quotes; the comparison is writing from their results.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "compare-quotes",
+        "stress-floating-quotes"
+      ],
+      "calculators": [
+        "returns-sensitivity",
+        "leverage"
+      ],
+      "market": "deal-pipeline-underwriting",
+      "consumes": [
+        "underwriting-model",
+        "loan-term-sheet",
+        "buy-box"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "negotiate-with-finalists",
+      "title": "Negotiate the open terms with the finalists",
+      "instruction": "A principal, or a mortgage broker on the principal's instructions, takes the comparison's list to each finalist: proceeds and the tests that size them, spread and floor, interest-only months, prepayment terms that fit the planned exit, extension conditions, recourse and its carve-outs, guarantor net worth and liquidity tests, reserves, and which fees come back if the loan does not close. Ask each lender to put every change in a revised written quote or term sheet; a conversation is not a term. An agent re-runs the comparison on each revision. Keep each lender's terms confidential from the others unless it has agreed otherwise.",
+      "mode": "human-offline",
+      "modeBasis": "Negotiation happens on calls and in meetings and commits the sponsor's position; an agent prepares the asks and re-runs the numbers.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "rerun-returns-by-quote"
+      ],
+      "calculators": [
+        "debt-sizing",
+        "returns-sensitivity"
+      ],
+      "consumes": [
+        "loan-term-sheet"
+      ],
+      "produces": [
+        "loan-term-sheet"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "counsel-reviews-term-sheet",
+      "title": "Have counsel read the leading term sheet before signing",
+      "instruction": "Send counsel the leading term sheet, the comparison and the purchase contract. Counsel identifies the provisions that bind on signing, such as a deposit, exclusivity, break-up or expense reimbursement and confidentiality, and what the lender keeps if the loan does not close. In Texas, a loan agreement over $50,000 with a bank, savings bank, savings and loan association or credit union, a holding company, subsidiary or affiliate of one, or a HUD-approved mortgage insurance lender is not enforceable unless it is in writing and signed by the party to be bound, where the lender gives the conspicuous notice the statute requires; treat only signed writings as commitments. Counsel checks that the lender's conditions and timeline fit the contract's financing and closing dates, and flags terms that will be hard to change in the loan documents.",
+      "mode": "human-online",
+      "modeBasis": "Which provisions bind, and how the term sheet fits the purchase contract, is a legal judgment.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "negotiate-with-finalists"
+      ],
+      "rules": [
+        "us-tx.finance.loan-agreement-in-writing"
+      ],
+      "consumes": [
+        "loan-term-sheet",
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-bc-26"
+      ]
+    },
+    {
+      "id": "fund-committee-approves-debt",
+      "title": "Check the fund's borrowing limits and get the committee's approval",
+      "instruction": "Read the fund agreement's limits on borrowing: leverage caps for one asset and across the fund, rules on floating rates and hedging, whether the fund itself may guarantee or give credit support, and cross-default with any fund credit facility. Present the chosen quote and the comparison to the investment committee the documents establish, in the form they require, and record the vote and any conditions. If the terms fall outside a limit, get the advisory committee or investor consent the documents require before anyone signs.",
+      "mode": "human-online",
+      "modeBasis": "Committee approval is a vote under the fund documents; an agent prepares the materials and records the result.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-reviews-term-sheet"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "consumes": [
+        "deal-entity-agreement",
+        "ic-memo",
+        "loan-term-sheet"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "partner-approves-financing",
+      "title": "Get the capital partner's written approval of the financing",
+      "instruction": "Financing is usually a major decision a JV agreement reserves for the capital partner. Send it the financing brief, the comparison and the leading term sheet, and get its written approval of the lender and the terms before signing. Settle who signs the guaranties and any environmental indemnity, whether the partner shares that exposure or indemnifies the guarantors for its share, and how any added equity from a smaller loan is split.",
+      "mode": "human-online",
+      "modeBasis": "The partner's approval is its own decision under the JV agreement; an agent prepares the materials.",
+      "actor": "investor",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-reviews-term-sheet"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement",
+        "loan-term-sheet",
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "sign-term-sheet",
+      "title": "Choose the lender and sign the term sheet",
+      "instruction": "A principal chooses the lender, signs the term sheet or application, and pays any good-faith deposit after reading what it covers and what comes back if the loan does not close. Record the choice, the reasons and the runner-up in the firm file, and keep the runner-up informed until the commitment issues. Calendar the lender's conditions, any rate lock or expiry date and each fee due date against the contract's deadlines. Tell the other lenders in writing. Hand the signed sheet to the loan application and closing work, and to counsel for the loan documents; a lender that later changes terms is its own situation.",
+      "mode": "human-online",
+      "modeBasis": "A signed term sheet commits the sponsor to its fees and binding provisions, and the deposit is a payment.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-reviews-term-sheet",
+        "fund-committee-approves-debt",
+        "partner-approves-financing"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "loan-term-sheet",
+        "purchase-and-sale-agreement"
+      ],
+      "produces": [
+        "loan-term-sheet"
+      ],
+      "basis": "practitioner"
+    }
+  ],
+  "outlineSteps": []
+}

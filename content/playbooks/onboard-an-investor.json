@@ -1,0 +1,592 @@
+{
+  "id": "onboard-an-investor",
+  "slug": "onboard-an-investor",
+  "kind": "process",
+  "title": "Onboard an investor",
+  "summary": "Take an investor from first interest to an accepted, funded subscription: documents, questionnaire, Rule 506(c) verification, signatures, a sanctions screen, wire instructions confirmed by phone, and the register. Agents check and record; investors and the sponsor sign and move money.",
+  "phase": "raise",
+  "order": 130,
+  "featured": true,
+  "depth": "full",
+  "review": "practitioner-reviewed",
+  "lastVerified": "2026-11-12",
+  "requires": [
+    "prepare-offering-documents"
+  ],
+  "consumes": [
+    "private-placement-memorandum",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "subscription-agreement",
+    "investor-questionnaire",
+    "wire-instructions"
+  ],
+  "produces": [
+    "subscription-agreement",
+    "investor-questionnaire",
+    "accreditation-verification-letter",
+    "investor-register"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "ecfr-230-501",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.501",
+      "title": "17 CFR 230.501, Definitions and terms used in Regulation D",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "quote": "joint net worth with that person's spouse or spousal equivalent, exceeds $1,000,000",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-502",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.502",
+      "title": "17 CFR 230.502, General conditions to be met",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "quote": "the issuer shall furnish the information specified in paragraph (b)(2) of this section to such purchaser a reasonable time prior to sale",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-503",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.503",
+      "title": "17 CFR 230.503, Filing of notice of sales",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "quote": "no later than 15 calendar days after the first sale of securities in the offering",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-506",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.506",
+      "title": "17 CFR 230.506, Exemption for limited offers and sales without regard to dollar amount of offering",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "quote": "The issuer shall take reasonable steps to verify that purchasers of securities sold in any offering under paragraph (c) of this section are accredited investors.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-cdi-securities-act-rules",
+      "url": "https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/securities-act-rules",
+      "title": "Securities Act Rules: Compliance and Disclosure Interpretations (Sections 255 to 260)",
+      "publisher": "U.S. Securities and Exchange Commission, Division of Corporation Finance",
+      "accessed": "2026-11-12",
+      "quote": "Self-certification alone (by checking a box) without any other knowledge of a person’s financial circumstances or sophistication is not sufficient",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-506b-page",
+      "url": "https://www.sec.gov/resources-small-businesses/exempt-offerings/private-placements-rule-506b",
+      "title": "Private Placements - Rule 506(b)",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-12",
+      "quote": "have access to the type of information normally provided in a prospectus for a registered securities offering",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-506c-no-action",
+      "url": "https://www.sec.gov/rules-regulations/no-action-interpretive-exemptive-letters/division-corporation-finance-no-action/latham-watkins-503c-031225",
+      "title": "No-action letter on Rule 506(c) verification through minimum investment amounts (March 12, 2025)",
+      "publisher": "U.S. Securities and Exchange Commission, Division of Corporation Finance",
+      "accessed": "2026-11-12",
+      "quote": "This letter, like all staff statements, has no legal force or effect",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-506c-incoming",
+      "url": "https://www.sec.gov/files/corpfin/no-action/latham-watkins506c-031225-incoming.pdf",
+      "title": "Request for Rule 506(c) interpretive guidance (incoming letter, March 6, 2025)",
+      "publisher": "U.S. Securities and Exchange Commission (no-action file)",
+      "accessed": "2026-11-12",
+      "quote": "of at least $200,000 for natural persons and at least $1,000,000 for legal entities",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-form-d",
+      "url": "https://www.sec.gov/files/formd.pdf",
+      "title": "Form D, Notice of Exempt Offering of Securities, with instructions (OMB 3235-0076)",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-12",
+      "quote": "the date on which the first investor is irrevocably contractually committed to invest",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-7001",
+      "url": "https://www.law.cornell.edu/uscode/text/15/7001",
+      "title": "15 U.S.C. 7001, General rule of validity",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "quote": "may not be denied legal effect, validity, or enforceability solely because it is in electronic form",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-80a-2",
+      "url": "https://www.law.cornell.edu/uscode/text/15/80a-2",
+      "title": "15 U.S.C. 80a-2, Definitions; applicability; rulemaking considerations",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-80a-3",
+      "url": "https://www.law.cornell.edu/uscode/text/15/80a-3",
+      "title": "15 U.S.C. 80a-3, Definition of investment company",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "quote": "beneficially owned by not more than one hundred persons",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bus-com-code-322",
+      "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.322.htm",
+      "title": "Texas Business and Commerce Code, Chapter 322 (Uniform Electronic Transactions Act)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "This chapter applies only to transactions between parties each of which has agreed to conduct transactions by electronic means.",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-114-4",
+      "url": "https://www.law.cornell.edu/regulations/texas/7-Tex-Admin-Code-SS-114-4",
+      "title": "7 Tex. Admin. Code 114.4, Filings and Fees",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-12",
+      "quote": "no later than 15 days after the first sale of the federal covered securities in this state",
+      "tier": "primary"
+    },
+    {
+      "id": "ofac-faq-11",
+      "url": "https://ofac.treasury.gov/faqs/11",
+      "title": "OFAC FAQ 11: Who must comply with OFAC sanctions?",
+      "publisher": "U.S. Department of the Treasury, Office of Foreign Assets Control",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "ofac-sls",
+      "url": "https://ofac.treasury.gov/sanctions-list-search-tool",
+      "title": "Sanctions List Search Tool",
+      "publisher": "U.S. Department of the Treasury, Office of Foreign Assets Control",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-w9",
+      "url": "https://www.irs.gov/forms-pubs/about-form-w-9",
+      "title": "About Form W-9",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-w8ben",
+      "url": "https://www.irs.gov/forms-pubs/about-form-w-8-ben",
+      "title": "About Form W-8 BEN",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "ic3-bec-psa",
+      "url": "https://www.ic3.gov/PSA/2024/PSA240911",
+      "title": "Business Email Compromise: The $55 Billion Scam (Alert I-091124-PSA)",
+      "publisher": "Federal Bureau of Investigation, Internet Crime Complaint Center",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "log-the-prospect",
+      "title": "Log the prospect and how the relationship began",
+      "instruction": "Open an investor register entry for each prospect: name, contact details, state of residence and how they came to the offering. In a Rule 506(b) offering, also record when the relationship began and what the sponsor knew of the prospect's finances and experience before the offering started. SEC staff counts a pre-existing, substantive relationship as one way to show there was no general solicitation, and a self-certification checkbox alone does not create one. If a prospect arrived through public marketing, flag it for counsel before sending anything, because a Rule 506(b) offering cannot use general solicitation.",
+      "mode": "agent",
+      "modeBasis": "Recording intake facts from the inquiry and the sponsor's notes is data entry.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-fed.reg-d.general-solicitation",
+        "us-fed.reg-d.rule-506b"
+      ],
+      "market": "investor-portals-fund-admin",
+      "produces": [
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "sec-cdi-securities-act-rules",
+        "ecfr-230-502"
+      ]
+    },
+    {
+      "id": "deliver-offering-documents",
+      "title": "Send the locked offering documents",
+      "instruction": "Send the current locked set through the investor portal or another channel that records delivery: the memorandum or partner package, the entity or joint venture agreement, the subscription agreement and the questionnaire. A non-accredited buyer in a Rule 506(b) offering must have the Rule 502(b) information a reasonable time before buying, and every buyer must get any written description of pre-2013 bad-actor events before the sale, so record delivery dates. Electronic delivery is allowed. Log the version each person received.",
+      "mode": "agent",
+      "modeBasis": "Sending a package the sponsor already approved, through a portal that logs delivery, is routine.",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "log-the-prospect"
+      ],
+      "rules": [
+        "us-fed.reg-d.information-requirements",
+        "us-fed.reg-d.bad-actor"
+      ],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "private-placement-memorandum",
+        "deal-entity-agreement",
+        "jv-agreement",
+        "subscription-agreement",
+        "investor-questionnaire"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-502",
+        "sec-cdi-securities-act-rules",
+        "ecfr-230-506"
+      ]
+    },
+    {
+      "id": "answer-investor-questions",
+      "title": "Answer the investor's questions",
+      "instruction": "The sponsor answers questions about the terms and provides additional information the sponsor has, or can get without unreasonable effort, that is needed to check what the documents say; Rule 502(b) requires this opportunity for non-accredited buyers in Rule 506(b). An agent can draft answers from the memorandum and source documents, but the sponsor decides what is said. Answers must match the documents; a new material fact goes to counsel, who decides whether everyone gets a supplement. Keep written answers in the investor's file.",
+      "mode": "human-online",
+      "modeBasis": "Answers are the sponsor's statements in a securities sale; an agent drafts and the sponsor decides what is said.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "deliver-offering-documents"
+      ],
+      "rules": [
+        "us-fed.reg-d.information-requirements",
+        "us-fed.exchange-act.rule-10b-5"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-502",
+        "ecfr-240-10b-5"
+      ]
+    },
+    {
+      "id": "investor-signs-package",
+      "title": "The investor completes and signs the subscription package",
+      "instruction": "The investor completes the questionnaire and signs the subscription agreement, or the joint venture agreement, through the e-signature tool, and provides a Form W-9 so the entity has the correct taxpayer identification number for its information returns; a foreign investor gives a Form W-8 BEN instead, and the CPA reviews foreign investors. Electronic signatures carry the same effect as ink when both sides agreed to transact electronically, and no one has to accept them, so offer paper on request. Keep the platform's audit trail, which can help show whose act a signature was.",
+      "mode": "human-online",
+      "modeBasis": "Only the investor can complete and sign the package; the sponsor's tools only collect it.",
+      "actor": "investor",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "answer-investor-questions"
+      ],
+      "rules": [
+        "us-fed.esign",
+        "us-tx.ueta"
+      ],
+      "market": "investor-portals-fund-admin",
+      "produces": [
+        "subscription-agreement",
+        "investor-questionnaire"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-15-7001",
+        "tx-bus-com-code-322",
+        "irs-w9",
+        "irs-w8ben"
+      ]
+    },
+    {
+      "id": "review-package",
+      "title": "Check the package before anyone accepts it",
+      "instruction": "Check that every blank is filled and every signature is present, then test the questionnaire against Rule 501(a): the category claimed, the thresholds, and for an entity, whether it was formed to make this investment and whether it relies on all of its equity owners being accredited. For Rule 506(b), count non-accredited purchasers against the limit of 35 in any 90-calendar-day period and confirm each can evaluate the risks, alone or with a purchaser representative. Resolve any conflict with what the sponsor already knows before relying on the answers. Never copy the taxpayer number into the firm file; record only that the form is on file.",
+      "mode": "agent",
+      "modeBasis": "Completeness and threshold checks are rule-based document review.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "investor-signs-package"
+      ],
+      "rules": [
+        "us-fed.reg-d.accredited-investor",
+        "us-fed.reg-d.rule-506b"
+      ],
+      "consumes": [
+        "investor-questionnaire",
+        "subscription-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-501",
+        "ecfr-230-506"
+      ]
+    },
+    {
+      "id": "verify-accredited-status",
+      "title": "Verify accredited status in a Rule 506(c) offering",
+      "instruction": "In a Rule 506(c) offering, take reasonable steps to verify every buyer, even one who plainly qualifies, and record the method; methods may differ by buyer. Options: IRS income forms for the two most recent years plus a representation about this year; asset statements and a consumer credit report dated within three months plus a liabilities representation; a written confirmation, from the prior three months, by a registered broker-dealer, SEC-registered adviser, licensed attorney or CPA; or, under the SEC staff's 2025 position, a minimum investment of at least $200,000 for an individual or $1,000,000 for an entity, with written representations of accredited status and no third-party financing, and no contrary knowledge. The sponsor approves each file.",
+      "mode": "agent",
+      "modeBasis": "Checking documents against the rule's methods is document review; the sponsor signs off on each verification.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "review-package"
+      ],
+      "rules": [
+        "us-fed.reg-d.rule-506c",
+        "us-fed.reg-d.accredited-investor"
+      ],
+      "market": "formation-back-office",
+      "produces": [
+        "accreditation-verification-letter"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-506",
+        "sec-cdi-securities-act-rules",
+        "sec-506c-no-action",
+        "sec-506c-incoming"
+      ]
+    },
+    {
+      "id": "fund-investor-limits",
+      "title": "Check the fund's holder count or qualified purchaser status",
+      "instruction": "Before the fund accepts a subscription, test it against the exclusion counsel chose. Under Section 3(c)(1), add the investor to the beneficial-owner count, looking through an investing company that holds 10% or more of the voting securities and is itself an investment company, or would be but for Section 3(c)(1) or 3(c)(7); the count must stay at 100 or fewer. Under Section 3(c)(7), confirm the investor was a qualified purchaser when it acquired the interest. A subscription that would break the limit goes back to counsel.",
+      "mode": "agent",
+      "modeBasis": "The count and the qualified purchaser test apply statutory text to the register.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "review-package"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "rules": [
+        "us-fed.ica.fund-exclusions"
+      ],
+      "consumes": [
+        "investor-questionnaire"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-15-80a-3",
+        "usc-15-80a-2"
+      ]
+    },
+    {
+      "id": "jv-partner-checks",
+      "title": "Confirm the capital partner's authority and the private-offering record",
+      "instruction": "For a joint venture partner, collect the partner entity's formation documents and evidence of who may sign for it. If the sale relies on Section 4(a)(2) alone, keep the record that supports it: the partner's experience in comparable deals and its ability to bear the risk, the information it received and asked for, and its agreement not to resell or distribute the interest. List the partner's signers and principal owners for the sanctions screen.",
+      "mode": "agent",
+      "modeBasis": "Collecting and filing the partner's documents and the offering record is document work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "review-package"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "rules": [],
+      "consumes": [
+        "jv-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "sec-506b-page"
+      ]
+    },
+    {
+      "id": "screen-sanctions",
+      "title": "Screen the investor against OFAC sanctions lists",
+      "instruction": "U.S. persons must comply with OFAC sanctions, so search each investor, and for an entity its signers and principal owners, in OFAC's Sanctions List Search, which covers the SDN List and the consolidated non-SDN lists. Save the search date, the names searched and the result in the investor's file. A possible match is not a conclusion: stop, accept no subscription and no money, and send it to counsel.",
+      "mode": "agent-browser",
+      "modeBasis": "OFAC's search tool is a public website that needs no account.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "review-package",
+        "jv-partner-checks"
+      ],
+      "rules": [],
+      "basis": "cited",
+      "sources": [
+        "ofac-faq-11",
+        "ofac-sls"
+      ]
+    },
+    {
+      "id": "accept-subscription",
+      "title": "Accept or reject the subscription",
+      "instruction": "The sponsor reviews the completed checks, then countersigns to accept the subscription or declines it. Depending on the agreement's terms, the investor may be irrevocably committed when the issuer receives the signed agreement or check, or on acceptance. For the first investor, that date is the Form D first sale, and the notice is due 15 calendar days later, or the next business day after a weekend or holiday. Texas runs its own 15-day clock from the first sale to a Texas investor. Put both dates on the calendar the same day.",
+      "mode": "human-online",
+      "modeBasis": "Accepting a subscription binds the issuer and needs an authorized signer.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "verify-accredited-status",
+        "fund-investor-limits",
+        "screen-sanctions"
+      ],
+      "rules": [
+        "us-fed.reg-d.form-d-filing",
+        "us-tx.securities.rule-506-notice"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "produces": [
+        "subscription-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "sec-form-d",
+        "ecfr-230-503",
+        "tac-114-4"
+      ]
+    },
+    {
+      "id": "confirm-funding-instructions",
+      "title": "Send wiring instructions and confirm them by phone",
+      "instruction": "Send the entity's wiring instructions through the portal or another secure channel, and ask the investor to confirm them by calling the sponsor at a number the investor already has, before sending money. Treat any message that changes the instructions as fraud until it is confirmed the same way; the FBI advises verifying requests to change account information through a second channel. The sponsor never accepts changed instructions by email alone. Record who confirmed, when and how, never the account numbers.",
+      "mode": "human-offline",
+      "modeBasis": "The control is a live phone call between people who already know each other's numbers; an agent cannot be the second channel.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "accept-subscription"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "jv"
+        ]
+      },
+      "rules": [],
+      "consumes": [
+        "wire-instructions"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ic3-bec-psa"
+      ]
+    },
+    {
+      "id": "confirm-funds-received",
+      "title": "Confirm the money arrived and matches",
+      "instruction": "The sponsor checks the entity's bank account for the deposit and matches the amount, sender and date to the accepted subscription. Money from someone other than the investor, or an amount that does not match, is resolved with the investor before the interest is issued. Give the agent the funding date and amount, not the account details.",
+      "mode": "human-online",
+      "modeBasis": "Seeing the bank account needs the sponsor's own bank login.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-funding-instructions"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "jv"
+        ]
+      },
+      "rules": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "update-investor-register",
+      "title": "Update the investor register",
+      "instruction": "Record the accepted investor: name, state of residence, amount committed and funded, commitment and funding dates, accredited category, the Rule 506(c) verification method and date, non-accredited status and the running count for Rule 506(b), the sanctions check date, and that the tax form and signed documents are on file. The register supplies Form D's amounts sold and investor counts, the state notice list and later amendments. For a fund, record the commitment now; Form D counts committed capital, and funding follows each capital call.",
+      "mode": "agent",
+      "modeBasis": "Updating the register from the accepted documents is data entry.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "accept-subscription",
+        "confirm-funds-received"
+      ],
+      "rules": [
+        "us-fed.reg-d.form-d-filing",
+        "us-fed.reg-d.form-d-amendments"
+      ],
+      "market": "investor-portals-fund-admin",
+      "produces": [
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "sec-form-d",
+        "ecfr-230-503"
+      ]
+    }
+  ],
+  "outlineSteps": []
+}

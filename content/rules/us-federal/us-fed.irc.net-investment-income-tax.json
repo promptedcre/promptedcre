@@ -1,0 +1,43 @@
+{
+  "id": "us-fed.irc.net-investment-income-tax",
+  "jurisdiction": "us-federal",
+  "title": "Net investment income tax: 3.8 percent on rents and gains above a threshold",
+  "rule": "An individual owes 3.8 percent tax on the lesser of net investment income or modified adjusted gross income above $250,000 (joint return or surviving spouse), $125,000 (married filing separately) or $200,000 (otherwise); the thresholds are not indexed. Net investment income includes rents and net gain from selling property, less allocable deductions, unless earned in the ordinary course of a nonpassive trade or business. A regulatory safe harbor deems a real estate professional's rents and gains from a rental real estate activity in which they participate over 500 hours in the year, or in five of the ten prior years, to arise in a trade or business.",
+  "citation": {
+    "authority": "26 U.S.C. 1411(a), (b) and (c); 26 CFR 1.1411-4(a), (b) and (g)(7)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/1411"
+  },
+  "asOf": "2026-11-13",
+  "lastVerified": "2026-11-13",
+  "review": "ai-drafted",
+  "changeWatch": "Any amendment to section 1411 (the dollar thresholds are not indexed, so they change only by statute) or to the regulations at 26 CFR 1.1411-4; estates and trusts use a different threshold, the amount at which the top bracket in section 1(e) begins.",
+  "sources": [
+    {
+      "id": "usc-26-1411",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1411",
+      "title": "26 U.S.C. 1411, Imposition of tax",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "gross income from interest, dividends, annuities, royalties, and rents, other than such income which is derived in the ordinary course of a trade or business",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-1-1411-4",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.1411-4",
+      "title": "26 CFR 1.1411-4, Definition of net investment income",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "participates in a rental real estate activity for more than 500 hours during such year",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-niit-qa",
+      "url": "https://www.irs.gov/newsroom/questions-and-answers-on-the-net-investment-income-tax",
+      "title": "Questions and answers on the Net Investment Income Tax",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-13",
+      "quote": "Taxpayers should be aware that these threshold amounts are not indexed for inflation.",
+      "tier": "primary"
+    }
+  ]
+}

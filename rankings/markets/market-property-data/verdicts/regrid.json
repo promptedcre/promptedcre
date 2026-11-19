@@ -1,0 +1,171 @@
+{
+  "vendor": "regrid",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "2e4c84904cd9af2addab46f5c4363cf34c175d5c101eeee7715eb6393dfcf86c",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c10",
+        "c14",
+        "c5"
+      ],
+      "rationale": "Public reference pages on support.regrid.com document the Parcel API, including an owner-name parcel endpoint (c10) and per-record billing guidance (c14), with self-serve token generation (c5), and the coverage check lists address, APN, point and query-by-field endpoints.",
+      "missing": "Only the owner-name endpoint page is quoted; the address, APN, point and query-by-field endpoints and their response fields are known only from the coverage summary."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "c1",
+        "c2"
+      ],
+      "rationale": "A vendor docs page on connecting to the Regrid MCP Server gives the server endpoint (c1), and the vendor's MCP page says it uses the same API token as the REST API with permissions inherited from the account tier (c2).",
+      "missing": "The pack does not show step-by-step client configuration, which tools or data the server exposes, or its release status."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item in the pack mentions an official SDK, CLI, package-registry listing or public code repository.",
+      "missing": "Any vendor-maintained SDK or CLI on a public registry or repository, or even code samples."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "na",
+      "quality": 6,
+      "evidence": [
+        "c9",
+        "c13"
+      ],
+      "rationale": "The pack shows Regrid as a licensed parcel data set sold as county and state files and delivered by file, API and feature service (c9, c13), refreshed by the vendor in monthly releases, and shows no records that change on a customer's behalf.",
+      "missing": "The pack does not state outright that customers cannot create or edit records, and shows no notification feature for county data refreshes."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "full",
+      "quality": 6,
+      "evidence": [
+        "c6",
+        "c5"
+      ],
+      "rationale": "The access-token management docs say each API token can be provisioned to access all data or limited to specific datasets (c6), and customers generate their own tokens (c5).",
+      "missing": "Scoping is shown only by dataset and only for accounts with premium add-on datasets; no per-endpoint, record-volume or spend limits per token are shown, and MCP use inherits the account tier (c2)."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows HTML and Markdown API reference pages but no OpenAPI, Swagger, GraphQL or other machine-readable specification.",
+      "missing": "A public, downloadable OpenAPI, Swagger, GraphQL or similar specification file."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "full",
+      "quality": 10,
+      "evidence": [
+        "p1",
+        "c3",
+        "c10"
+      ],
+      "rationale": "The probe fetched a 30,700-byte llms.txt titled 'Regrid Support Documentation' (p1, c3), and documentation pages such as the owner-endpoint reference are served as .md files (c10)."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "full",
+      "quality": 6,
+      "evidence": [
+        "c4",
+        "c5"
+      ],
+      "rationale": "The API page offers a secure testing environment to preview live responses, explore endpoints and validate workflows free for 30 days (c4), alongside self-serve account and token creation (c5).",
+      "missing": "The testing environment is described only in marketing copy on the API page, previews live data rather than a separate test data set, lasts 30 days, and no developer documentation for it is shown."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "partial",
+      "quality": 6,
+      "evidence": [
+        "c9",
+        "c13"
+      ],
+      "rationale": "The self-serve Data Store sells individual county files and statewide licences (c9) and the vendor claims bulk files 'in any format' via SFTP and cloud delivery (c13), but the pack documents no specific open format for the self-serve downloads.",
+      "missing": "Documentation naming the file formats (such as CSV, JSON or Excel) of Data Store downloads, and evidence that the any-format SFTP or cloud delivery is self-serve."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c5",
+        "c7",
+        "c4",
+        "c9"
+      ],
+      "rationale": "Customers can create an account and generate an API token to start immediately (c5), begin a self-serve plan at 2,000 parcel records a month (c7), use a 30-day free testing environment (c4), or buy county files by card or ACH in the Data Store (c9).",
+      "missing": "The sign-up flow itself is not shown, and volumes above 10,000 records a month need an Enterprise licence through a contact form (c8)."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c7",
+        "c8"
+      ],
+      "rationale": "The plan-options page describes a 2,000-record monthly start with per-record pricing and an Enterprise licence via contact form (c7, c8), but the pricing check found no dollar amounts on the plans page or the Data Store.",
+      "missing": "Any dollar price or fee for the self-serve API plan, per-record charges or Data Store county files."
+    },
+    {
+      "story": "md-property-lookup",
+      "verdict": "full",
+      "quality": 6,
+      "evidence": [
+        "c14",
+        "c12"
+      ],
+      "rationale": "The Parcel API returns parcel records (c14) carrying documented assessor-sourced fields such as last sale price (c12), and the coverage check lists address and APN lookup endpoints.",
+      "missing": "No item quotes the address or APN endpoint pages or shows building size, year built or land-use fields in the parcel schema."
+    },
+    {
+      "story": "md-comps",
+      "verdict": "partial",
+      "quality": 4,
+      "evidence": [
+        "c12"
+      ],
+      "rationale": "Sale data appears only as an assessor-sourced last-sale-price field on each parcel record (c12), not as a comparables query filtered by place, type, size or date.",
+      "missing": "No comps endpoint or filters by place, type, size or date, no sale-date field, and no lease data are shown."
+    },
+    {
+      "story": "md-owner",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "c11",
+        "c10"
+      ],
+      "rationale": "The API page says the Enhanced Ownership add-on supplies owner names, mailing addresses and deeded ownership details (c11), and the API reference documents a parcel endpoint keyed on owner name (c10).",
+      "missing": "Mailing addresses are described in API-page marketing copy as a paid add-on; the API field definitions for owner of record and mailing address, and whether base plans include them, are not shown."
+    },
+    {
+      "story": "md-bulk-area",
+      "verdict": "partial",
+      "quality": 7,
+      "evidence": [
+        "c9",
+        "c7",
+        "c8"
+      ],
+      "rationale": "Whole counties and states come as files bought separately in the Data Store (c9), while self-serve API plans meter records from 2,000 a month and need an Enterprise licence above 10,000 (c7, c8).",
+      "missing": "No API area, radius or drawn-shape query is shown, nor the contents or formats of county files, and the SFTP and cloud bulk delivery (c13) is not shown to be self-serve."
+    }
+  ]
+}

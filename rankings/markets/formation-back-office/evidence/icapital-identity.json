@@ -1,0 +1,156 @@
+{
+  "vendor": "icapital-identity",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://developer.parallelmarkets.com/",
+      "found": true
+    },
+    "api": {
+      "url": "https://developer.parallelmarkets.com/docs/server",
+      "found": true
+    },
+    "pricing": {
+      "url": "https://parallelmarkets.com/",
+      "found": false,
+      "note": "No pricing page (/pricing returns 404); the site shows only a Contact Sales button"
+    },
+    "changelog": {
+      "url": "https://developer.parallelmarkets.com/docs/changelog",
+      "found": true
+    }
+  },
+  "links": {
+    "docs": "https://developer.parallelmarkets.com/",
+    "api": "https://developer.parallelmarkets.com/docs/server",
+    "cli": "https://developer.parallelmarkets.com/docs/javascript"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://parallelmarkets.com/",
+      "excerpt": "Parallel Markets is now iCapital Identity Solutions",
+      "fetched": "2026-11-12",
+      "note": "Homepage banner; text joined from two lines",
+      "hash": "581ed2f27c1d0598eec12857dc41960987b07642cf5f86f430689e4fde1caaf9"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://parallelmarkets.com/",
+      "excerpt": "This site will soon be retired. Please visit iCapital for all future updates and services.",
+      "fetched": "2026-11-12",
+      "hash": "c84e3baf947ca4c8d28a399345c6bc43be43c39ef255016b221a93e8a269b236"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://parallelmarkets.com/",
+      "excerpt": "Contact Sales",
+      "fetched": "2026-11-12",
+      "note": "Only commercial call to action on the homepage; no prices shown",
+      "hash": "4f23cac7aabcd3e75405622eec37c3c410f3154e60a9254bf77c83d607e0db3a"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://developer.parallelmarkets.com/docs/server",
+      "excerpt": "Download parallel-api.swagger.yml and import it into your tool of choice or the Swagger Editor.",
+      "fetched": "2026-11-12",
+      "hash": "c8fca11d481792b6fd64763255d67c02ad87e3ab7a86394a04fe7a7559d4b1ce"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://developer.parallelmarkets.com/docs/server/api-keys",
+      "excerpt": "You must send an Authorization header with a value of Bearer {apiKey}",
+      "fetched": "2026-11-12",
+      "hash": "f5524cd91c8aeaf633eb8c6faa7991c8d732a20eeb0652433849838af9b7c290"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://developer.parallelmarkets.com/docs/server/api-keys",
+      "excerpt": "Only company users with the \"admin\" or \"controller\" role can create new API Keys.",
+      "fetched": "2026-11-12",
+      "hash": "b10e62931590f96216e2dffe82b93b59b754867c17376030996ac0c250516eb8"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://developer.parallelmarkets.com/docs/javascript",
+      "excerpt": "The Parallel JavaScript Software Development Kit (SDK) helps partners quickly and easily integrate the Parallel API into an existing website frontend.",
+      "fetched": "2026-11-12",
+      "hash": "3145d026f9beb3cbea16986e488bd12f8d59ed298daeb013ca74ec655c51ccc3"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://developer.parallelmarkets.com/docs/webhooks",
+      "excerpt": "You can easily trigger automated downstream actions from your backend by listening to webhooks from your Case Management account.",
+      "fetched": "2026-11-12",
+      "hash": "642e2cd23b88fad403149e39dcde4675dbe1091f12c908ba0b833c0da0567281"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://developer.parallelmarkets.com/docs/webhooks",
+      "excerpt": "Any configured webhook URL must accept a JSON POST request and return HTTP status 200 OK within 5 seconds.",
+      "fetched": "2026-11-12",
+      "hash": "dfe04e62f92934c22fe9c07bfecbc7df9712eab939adb0ab3c483ee7d9a768cc"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://developer.parallelmarkets.com/docs/sandbox-quickstart",
+      "excerpt": "If you do not have a sandbox account, please reach out to your iCapital Identity Solutions sales representative",
+      "fetched": "2026-11-12",
+      "note": "Sandbox is not self-serve",
+      "hash": "a94943e8200376beb43d68de8b257a1d296b77224220a575ca83ecf2e7442905"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://developer.parallelmarkets.com/docs/sandbox-quickstart",
+      "excerpt": "For partners with production access, any records created in the production environment are billable.",
+      "fetched": "2026-11-12",
+      "hash": "167d2a7e5a9e507798fb9eda60f8b8840c8b1147c3c5d9b4f967e0d540dd064d"
+    },
+    {
+      "id": "c12",
+      "tier": "vendor-claim",
+      "url": "https://developer.parallelmarkets.com/docs/sandbox-quickstart",
+      "excerpt": "Accreditations can be auto-approved or rejected, at your request.",
+      "fetched": "2026-11-12",
+      "hash": "a393eeb438d8abc07983071e8c42f28f4d779395a09a454f2665227be2fe290d"
+    },
+    {
+      "id": "c13",
+      "tier": "vendor-claim",
+      "url": "https://developer.parallelmarkets.com/docs/changelog",
+      "excerpt": "Update the site and documentation branding to iCapital Identity Solutions. Existing API hostnames, SDK identifiers, and hosted button labels are unchanged.",
+      "fetched": "2026-11-12",
+      "hash": "3be5db9774beeb28eecfff10b55892ae9a42ed37d773d6180f9f663966e2beaf"
+    },
+    {
+      "id": "c14",
+      "tier": "vendor-claim",
+      "url": "https://developer.parallelmarkets.com/docs/changelog",
+      "excerpt": "Add list CDD requirements endpoint for retrieving applicable due diligence requirements by jurisdiction and investor type.",
+      "fetched": "2026-11-12",
+      "hash": "506dfb513b5b4d5d47becf28681f5368b3d62b85fb9e0a5c25d39d93d0ad3e47"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://developer.parallelmarkets.com/docs/javascript/",
+      "excerpt": "JavaScript SDK | iCapital Identity Solutions Developer Documentation",
+      "note": "CLI or SDK page resolves: GET 200 (page title)",
+      "fetched": "2026-11-12",
+      "hash": "9815a80ee54c98c1603e8b6d418832e6345e18ee1cbe37be77ddfcdb247026e8"
+    }
+  ]
+}

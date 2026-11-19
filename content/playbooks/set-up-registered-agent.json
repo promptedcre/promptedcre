@@ -1,0 +1,23 @@
+{
+  "id": "set-up-registered-agent",
+  "slug": "set-up-registered-agent",
+  "kind": "process",
+  "title": "Set up a registered agent",
+  "summary": "Name the agent and office that receive legal notices for each entity, and keep the record current.",
+  "phase": "stand-up",
+  "order": 30,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": []
+}

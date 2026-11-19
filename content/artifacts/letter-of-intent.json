@@ -1,0 +1,77 @@
+{
+  "id": "letter-of-intent",
+  "name": "Letter of intent",
+  "what": "A short letter that proposes the main deal terms before a contract is drafted, usually non-binding except for named provisions.",
+  "fields": [
+    {
+      "key": "buyer",
+      "label": "Buyer",
+      "type": "string",
+      "definition": "The proposed buyer, often an entity to be formed."
+    },
+    {
+      "key": "seller",
+      "label": "Seller",
+      "type": "string",
+      "definition": "The owner of record."
+    },
+    {
+      "key": "property",
+      "label": "Property",
+      "type": "text",
+      "definition": "Address and a short description of what is being bought."
+    },
+    {
+      "key": "price",
+      "label": "Price",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The proposed purchase price."
+    },
+    {
+      "key": "earnestMoney",
+      "label": "Earnest money",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The deposit and when it goes hard."
+    },
+    {
+      "key": "feasibilityDays",
+      "label": "Feasibility period",
+      "type": "integer",
+      "unit": "days",
+      "definition": "Days the buyer has to investigate and terminate."
+    },
+    {
+      "key": "closingDays",
+      "label": "Closing",
+      "type": "integer",
+      "unit": "days",
+      "definition": "Days from the effective date, or from the end of feasibility, to closing."
+    },
+    {
+      "key": "financing",
+      "label": "Financing",
+      "type": "text",
+      "definition": "Whether closing depends on a loan, and on what terms."
+    },
+    {
+      "key": "titleAndSurvey",
+      "label": "Title and survey",
+      "type": "text",
+      "definition": "Who orders and pays for the title policy and survey."
+    },
+    {
+      "key": "bindingProvisions",
+      "label": "Binding provisions",
+      "type": "text",
+      "definition": "The provisions meant to bind the parties, such as confidentiality or exclusivity."
+    },
+    {
+      "key": "expiration",
+      "label": "Offer expires",
+      "type": "date",
+      "definition": "The date the proposal lapses if not accepted."
+    }
+  ]
+}

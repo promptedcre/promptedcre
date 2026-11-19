@@ -1,0 +1,118 @@
+{
+  "vendor": "appfolio-investment-manager",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://help.appfolio.com/s/",
+      "found": true,
+      "note": "Help center exists (GET 200) but renders only in the browser; its content is unread"
+    },
+    "api": {
+      "url": "https://www.appfolio.com/blog/appfolio-investment-manager-premier",
+      "found": true,
+      "note": "API described only in marketing copy; no public Investment Manager API reference found. developer.appfolio.com renders a 'Developer Space' title with no readable text"
+    },
+    "pricing": {
+      "url": "https://www.appfolio.com/markets/investment-manager",
+      "found": true
+    },
+    "changelog": {
+      "url": "https://www.appfolio.com/release-notes",
+      "found": false,
+      "note": "Guessed release-notes and product-updates URLs return 404; none linked from the product pages"
+    }
+  },
+  "links": {
+    "api": "https://www.appfolio.com/blog/appfolio-investment-manager-premier"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://www.appfolio.com/markets/investment-manager",
+      "excerpt": "Core ... Starting at $650 Per Month Get a Quote",
+      "fetched": "2026-11-12",
+      "note": "Page text lists Core features then 'Starting at', '$650', 'Per Month', 'Get a Quote' on separate lines",
+      "hash": "51b602ce375d84750e4c2738ffb3dfe176ad325eb9b06d957876fec996f24e8f"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://www.appfolio.com/markets/investment-manager",
+      "excerpt": "Everything in Core SQL Export for Data Warehouse Full API Access Zapier Integration",
+      "fetched": "2026-11-12",
+      "note": "Premier plan feature list (separate lines); Premier price shown as 'Custom' with Get a Quote",
+      "hash": "48f45c037d5b2df776086f01fa9562af30c7f31341fee06e565e5392da730e1d"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://www.appfolio.com/blog/appfolio-investment-manager-premier",
+      "excerpt": "Granting comprehensive API access to all investor, investment, and financial information within your account allows you to leverage your data to its fullest potential.",
+      "fetched": "2026-11-12",
+      "hash": "70b9eb653c9a8974a240929cfb4a05406979279864fb337fb5fa6dd00a3fdcde"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://www.appfolio.com/blog/appfolio-investment-manager-premier",
+      "excerpt": "SQL export for data warehousing, API access, Zapier integrations, and custom investor attributes",
+      "fetched": "2026-11-12",
+      "hash": "30405e7e131aed9928c20c2dcb958f215be0e41336ef9ede862e860f61b6a576"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://www.appfolio.com/blog/appfolio-investment-manager-premier",
+      "excerpt": "And with an automatic nightly export of your entire database, as well as a daily backup of your data",
+      "fetched": "2026-11-12",
+      "hash": "e600c3df8a23256ae7ee5501996e89729c0e3d637e901cd688856e142bd17cf7"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://www.appfolio.com/blog/appfolio-investment-manager-premier",
+      "excerpt": "Zapier is compatible with more than 5,000 apps, including Claude, ChatGPT, Granola, Salesforce, Hubspot, Mailchimp and Google Sheets",
+      "fetched": "2026-11-12",
+      "hash": "90a142baeca43e89fa13e291f1e3302618df7084548c7ad3b84f5a55faf3e7e2"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://www.appfolio.com/blog/appfolio-investment-manager-premier",
+      "excerpt": "sign up now for a free customized product demo",
+      "fetched": "2026-11-12",
+      "note": "Entry is a demo; no self-serve sign-up shown",
+      "hash": "bc3458a56a45c99995e3ed57ef0bf5bb8bdec5d3bf6c1ba4eb31fdf34847dbd9"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://www.appfolio.com/blog/appfolio-investment-manager-premier",
+      "excerpt": "This functionality is exclusively for our AppFolio Investment Manager Premier customers",
+      "fetched": "2026-11-12",
+      "note": "Refers to a reporting add-in that complements the SQL and API tools",
+      "hash": "6b7051bea2b346126409e3733668ba6726d3295d88903553a6f76b6f3fffa99c"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://www.appfolio.com/llms.txt",
+      "excerpt": "AI-Usage: This content is provided to help AI systems accurately understand AppFolio's products, platform, and category position.",
+      "fetched": "2026-11-12",
+      "note": "llms.txt covers marketing pages, not API docs",
+      "hash": "0aad0465f9fbcd08a2cb9a5a675d6ff1fa7803fb3e49a1a559a3beb2e80d0af8"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://www.appfolio.com/llms.txt",
+      "excerpt": "# AppFolio.com",
+      "note": "llms.txt: GET 200, 20040 bytes",
+      "fetched": "2026-11-12",
+      "hash": "192f60a1da12fddb3a67c5944eb7ad4888d9079a4613b602746878842f3926a8"
+    }
+  ]
+}

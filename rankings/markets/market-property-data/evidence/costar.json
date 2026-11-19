@@ -1,0 +1,117 @@
+{
+  "vendor": "costar",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://www.costar.com/marketingcenter/help-desk",
+      "found": true,
+      "note": "Help Desk exists only for the Marketing Center (listings) product; no general CoStar documentation home found on public pages."
+    },
+    "api": {
+      "url": "https://www.costar.com/CoStarTerms-and-Conditions/debt-solutions",
+      "found": false,
+      "note": "No public developer or API page. An API is mentioned only for Debt Solutions, in product terms, enabled by CoStar under an order form."
+    },
+    "pricing": {
+      "url": "https://www.costar.com/products",
+      "found": false,
+      "note": "No pricing page (costar.com/pricing returns 404); products page shows REQUEST DEMO only."
+    },
+    "changelog": {
+      "url": "https://www.costar.com/about/release-notes",
+      "found": false,
+      "note": "Returns 404; no public release notes or changelog found."
+    }
+  },
+  "links": {
+    "docs": "https://www.costar.com/marketingcenter/help-desk"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://www.costar.com/CoStarTerms-and-Conditions/debt-solutions",
+      "excerpt": "The API may be accessed and used by Licensee only if enabled by CoStar and authorized under the applicable Order Form",
+      "fetched": "2026-11-12",
+      "hash": "ffe72c49fcb0faca8ae108c1815c50b6ab5126023fb238980ec0245616d32eb4"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://www.costar.com/CoStarTerms-and-Conditions/debt-solutions",
+      "excerpt": "Licensee may access the API only through credentials or other authentication methods provided, enabled, or approved by CoStar.",
+      "fetched": "2026-11-12",
+      "hash": "14bf24166ce6ce8374e25dfcdaaee2be58c032daa9fbd3157e1e06e6c308f48a"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://www.costar.com/CoStarTerms-and-Conditions/debt-solutions",
+      "excerpt": "CoStar reserves the right to charge for APIs, incorporate standard security features or rate limits",
+      "fetched": "2026-11-12",
+      "hash": "bbcc9b68a521dab2b7d970c428c95422ee1b6b1991f0694cef9d88b6bf5f0a92"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://www.costar.com/products/debt-solutions",
+      "excerpt": "Access your portfolio data through secure APIs and extend CoStar Debt Solutions’ intelligence into existing reporting, analytics, and risk management workflows.",
+      "fetched": "2026-11-12",
+      "hash": "91fa04e283cd95643da32185fc65c7829949d0dbb31cc9843eb476e526880d10"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://www.costar.com/products/public-record",
+      "excerpt": "Identify the recorded owner and last buyer for the property.",
+      "fetched": "2026-11-12",
+      "hash": "8f9e3965a1c16404e932902a2656bfabb8827d051d2077dcc12494b4b66059ef"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://www.costar.com/products/public-record",
+      "excerpt": "CoStar public record puts 42M commercial real estate records at your fingertips",
+      "fetched": "2026-11-12",
+      "note": "Search in the app; no API or bulk download described on the page.",
+      "hash": "44f9fb1ef7e247aac776fa122a24a9a18215054a2352ad3834e2d04bf0248ead"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://www.costar.com/products",
+      "excerpt": "REQUEST DEMO",
+      "fetched": "2026-11-12",
+      "note": "Products overview shows demo request and no prices.",
+      "hash": "3b7f23642bf0cca2494f6989993e08b7e6f5fbdb8431ed07c995fdb0a64ac809"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://www.costar.com/products/str-benchmark/resources/faqs",
+      "excerpt": "Data can be sent via e-mail, SFTP or API.",
+      "fetched": "2026-11-12",
+      "note": "STR Benchmark (hotel) data submission to CoStar, not CoStar data retrieval.",
+      "hash": "10d6844c1496d842d0d55a7375c14a40e6b4cf46c99829051d0417382286b931"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://product.costar.com/LeaseComps/Help/en-US/Export_to_Excel.htm",
+      "excerpt": "Selecting Export My Data will create an Excel file of all the My Data Lease Comps that you have created",
+      "fetched": "2026-11-12",
+      "note": "Export covers only the user's own created comps, not CoStar's data.",
+      "hash": "5d819bbd3293c1fccf00a9823af14b8d3306727d44a0192a47d0869a1a6e7673"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://www.costar.com/products/debt-solutions",
+      "excerpt": "Submit this form to request a demo.",
+      "fetched": "2026-11-12",
+      "hash": "d4d9e29d731bf8575212559552668186a1bc2aeb1f1541032607a08a90646265"
+    }
+  ]
+}

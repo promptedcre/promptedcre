@@ -1,0 +1,35 @@
+{
+  "id": "formation-back-office",
+  "name": "Formation and back office",
+  "what": "Formation services, registered agents, banking, e-signature, accounting, accreditation checks, and the government filing systems sponsors use.",
+  "order": 4,
+  "tasks": [
+    {
+      "id": "fb-start",
+      "group": "task",
+      "title": "Start the core transaction",
+      "question": "Can an agent start the product's core transaction, such as a filing, an envelope, a payment, a verification or an invoice, through an API, leaving signatures and approvals to a person?",
+      "weight": 2,
+      "full": "API documentation shows the core transaction can be created programmatically.",
+      "partial": "Only drafts or prefilled forms can be created, or only through a partner integration."
+    },
+    {
+      "id": "fb-status",
+      "group": "task",
+      "title": "Check status",
+      "question": "Can an agent check the status of an order, filing, envelope, payment or verification through an API or structured feed?",
+      "weight": 2,
+      "full": "A documented API or structured feed returns the status of the customer's transactions.",
+      "partial": "Status only by email notices, or only for some transaction types."
+    },
+    {
+      "id": "fb-records",
+      "group": "task",
+      "title": "Retrieve finished records",
+      "question": "Can an agent retrieve finished documents and records, such as filed documents, signed envelopes, statements or verification letters, programmatically?",
+      "weight": 2,
+      "full": "A documented API returns the finished documents or records.",
+      "partial": "Only some document types, or only by download links sent by email."
+    }
+  ]
+}

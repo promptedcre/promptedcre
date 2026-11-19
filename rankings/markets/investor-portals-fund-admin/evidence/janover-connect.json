@@ -1,0 +1,120 @@
+{
+  "vendor": "janover-connect",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://support.groundbreaker.co/en/",
+      "found": true,
+      "note": "Help Center with two collections, Manager Platform Guide and Investor Portal Guide; user guides, no developer section seen"
+    },
+    "api": {
+      "url": "https://connect.janover.co/features/",
+      "found": false,
+      "note": "No API or developer page; features pages cover CRM, portal, distributions, K-1s, fundraising, reporting; nav and footer have no developer link"
+    },
+    "pricing": {
+      "url": "https://connect.janover.co/plans/",
+      "found": false,
+      "note": "Pricing page shows no prices, only Join the Waitlist and Schedule a Demo buttons"
+    },
+    "changelog": {
+      "url": "https://connect.janover.co/blog",
+      "found": false,
+      "note": "No changelog or release notes page found; only a blog"
+    }
+  },
+  "links": {
+    "docs": "https://support.groundbreaker.co/en/"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://connect.janover.co/",
+      "excerpt": "Groundbreaker is now Janover Connect. Read the press release →",
+      "fetched": "2026-11-12",
+      "note": "www.groundbreaker.co redirects to connect.janover.co",
+      "hash": "02b129b1b0e09e2f8235df52bee580495303cf1af400d6a3df1012fc76a01f26"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://connect.janover.co/plans/",
+      "excerpt": "© 2025 Groundbreaker Technologies Inc., DBA Janover Connect",
+      "fetched": "2026-11-12",
+      "note": "Footer of the pricing page",
+      "hash": "1809d93e04d37b3154af39cea7e1f6856fac41800a6c37f54b920e946fe95687"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://connect.janover.co/plans/",
+      "excerpt": "Join the Waitlist",
+      "fetched": "2026-11-12",
+      "note": "Pricing page shows no price figures; calls to action are 'Join the Waitlist' and 'Schedule a Demo'",
+      "hash": "8b2fb04cb04142674128e2427bdca96e8f2f852a9e18531b1a50c825832fd8a6"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://connect.janover.co/",
+      "excerpt": "Automatically calculate and post distributions, notify investors, and transfer ACH funds in minutes.",
+      "fetched": "2026-11-12",
+      "hash": "0863ef552e95e15d1b7658dfe975cc64f060ea802a763942cfda6a54197cee33"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://connect.janover.co/features/distribution-automation/",
+      "excerpt": "Once confirmed, an authorized person can send distribution notices and bulk ACH payments with a few clicks.",
+      "fetched": "2026-11-12",
+      "note": "Distributions run in the app; no API route shown",
+      "hash": "3840104a75e5257fa02981630225bd7b87db9c9ec4b0a549f660ff4d31c7a487"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://connect.janover.co/features/investor-portal/",
+      "excerpt": "Streamline every part of the subscription process, from publishing offerings to funding.",
+      "fetched": "2026-11-12",
+      "hash": "006376455bc8b6ef187176257134efb58704a79db04dc7f221caa7efba11888e"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://connect.janover.co/features/investor-portal/",
+      "excerpt": "Quickly download and manage documents from the Investor Dashboard.",
+      "fetched": "2026-11-12",
+      "note": "Document download for investors; no bulk data export described",
+      "hash": "b59e2a7827b1350fd933e462c5b4051ac519ba45d8493d5d966ec51739df0ce4"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://support.groundbreaker.co/en/",
+      "excerpt": "Advice and answers from the Janover Connect Team",
+      "fetched": "2026-11-12",
+      "hash": "ae52c5dae1f719cbcdeef34888a93d2dd6a33132073668af8af8ce4e764bd399"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://connect.janover.co/features/",
+      "excerpt": "Stay connected with your investors through integrated communication features.",
+      "fetched": "2026-11-12",
+      "note": "Features index lists no API, webhook or integration page",
+      "hash": "24a7dbda9ba6599bd59b4c5a353e93c0c9882a21b087d73cc79cfc99e932c761"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://support.groundbreaker.co/llms.txt",
+      "excerpt": "# Groundbreaker | Help Center",
+      "note": "llms.txt: GET 200, 44437 bytes",
+      "fetched": "2026-11-12",
+      "hash": "e4cc90afcdeb0af56a8c0b0d303a95b4e6590d85ba67166e595299fda40bbc31"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "id": "exchange-agreement",
+  "name": "Exchange agreement",
+  "what": "The agreement with a qualified intermediary under which a like-kind exchange is carried out.",
+  "fields": [
+    {
+      "key": "taxpayer",
+      "label": "Exchanging taxpayer",
+      "type": "string",
+      "definition": "The taxpayer exchanging, exactly as it holds title to the relinquished property; compare it with the name that will take title to the replacement."
+    },
+    {
+      "key": "qualifiedIntermediary",
+      "label": "Qualified intermediary",
+      "type": "string",
+      "definition": "The intermediary that signs the agreement, any parent or affiliate that stands behind it, and any fidelity bond or insurance the agreement says it carries.",
+      "authority": "26 CFR 1.1031(k)-1(g)(4)(iii)"
+    },
+    {
+      "key": "exchangeType",
+      "label": "Exchange type",
+      "type": "enum",
+      "definition": "Delayed, simultaneous, reverse or improvement, as the agreement sets it up."
+    },
+    {
+      "key": "agreementDate",
+      "label": "Agreement date",
+      "type": "date",
+      "definition": "The date the agreement was signed; compare it with the relinquished property's closing date."
+    },
+    {
+      "key": "relinquishedProperty",
+      "label": "Relinquished property",
+      "type": "text",
+      "definition": "The property being sold, its buyer, and the sale contract assigned to the intermediary."
+    },
+    {
+      "key": "relinquishedTransferDate",
+      "label": "Relinquished property transfer date",
+      "type": "date",
+      "definition": "The date the relinquished property was transferred, from which both exchange periods run.",
+      "authority": "26 CFR 1.1031(k)-1(b)(2)"
+    },
+    {
+      "key": "identificationDeadline",
+      "label": "Identification deadline",
+      "type": "date",
+      "definition": "The last day to identify replacement property, as the agreement computes it.",
+      "authority": "26 CFR 1.1031(k)-1(b)(2)(i)"
+    },
+    {
+      "key": "exchangeDeadline",
+      "label": "Exchange deadline",
+      "type": "date",
+      "definition": "The last day to receive replacement property, as the agreement computes it, with a note if the tax return due date makes it earlier.",
+      "authority": "26 CFR 1.1031(k)-1(b)(2)(ii)"
+    },
+    {
+      "key": "exchangeProceeds",
+      "label": "Exchange proceeds",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The net sale proceeds the intermediary received at the relinquished closing, matched to the seller's side of the settlement statement."
+    },
+    {
+      "key": "fundsHolding",
+      "label": "Where the funds are held",
+      "type": "text",
+      "definition": "How the intermediary holds the proceeds: a segregated, qualified escrow or trust account or a pooled account, who can move them, and who earns the interest."
+    },
+    {
+      "key": "restrictionsOnReceipt",
+      "label": "Limits on the taxpayer's access to funds",
+      "type": "text",
+      "definition": "The clause limiting the taxpayer's right to receive, pledge or borrow against the proceeds before the exchange ends, and each stated event that releases them.",
+      "authority": "26 CFR 1.1031(k)-1(g)(6)"
+    },
+    {
+      "key": "assignedContracts",
+      "label": "Contracts assigned",
+      "type": "list",
+      "definition": "Each sale or purchase contract assigned to the intermediary, with the date the other party was notified of the assignment."
+    },
+    {
+      "key": "identificationRecipient",
+      "label": "Who receives the identification",
+      "type": "string",
+      "definition": "The party the agreement names to receive the signed identification of replacement property, and the delivery methods it accepts."
+    },
+    {
+      "key": "fees",
+      "label": "Fees",
+      "type": "list",
+      "definition": "The intermediary's fees, any interest it keeps, and added charges for a reverse or improvement exchange."
+    }
+  ]
+}

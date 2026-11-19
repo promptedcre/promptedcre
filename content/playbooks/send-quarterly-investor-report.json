@@ -1,0 +1,35 @@
+{
+  "id": "send-quarterly-investor-report",
+  "slug": "send-quarterly-investor-report",
+  "kind": "process",
+  "title": "Send the quarterly investor report",
+  "summary": "Report performance, cash, leasing and capital spending to investors on a fixed schedule.",
+  "phase": "report",
+  "order": 400,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Close the quarter's books and the rent roll",
+    "Report occupancy, leasing and tenant credit",
+    "Report remaining lease term and the rollover ahead",
+    "Report NOI and cash against budget",
+    "Show cash rent apart from straight-line rent",
+    "Show leasing costs and capital spending against plan",
+    "Report loan coverage and covenant headroom",
+    "Report distributions paid and cash held",
+    "Write a plain account of what changed and why",
+    "Check the report's figures before release",
+    "Send the report and file a copy"
+  ]
+}

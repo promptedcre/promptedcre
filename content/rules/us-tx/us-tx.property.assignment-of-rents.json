@@ -1,0 +1,25 @@
+{
+  "id": "us-tx.property.assignment-of-rents",
+  "jurisdiction": "us-tx",
+  "title": "Texas assignment of rents: the lender's security interest and how it is enforced",
+  "rule": "An enforceable deed of trust creates an assignment of rents unless it says otherwise. Any assignment of rents is a presently effective security interest in accrued and unaccrued rents, perfected on recording. After default, or as agreed, the lender may enforce by notice to the borrower, who must turn over collected rents within 30 days unless otherwise agreed, or by a signed notice to tenants in substantially the statutory form, copied to the borrower. Unless a tenant agreed otherwise in a signed document, rent accruing within 30 days after its notice is not in default until the earlier of 10 days after the due date or 30 days after receipt.",
+  "citation": {
+    "authority": "Tex. Prop. Code 64.051 to 64.056 and 64.060",
+    "url": "https://statutes.capitol.texas.gov/Docs/PR/htm/PR.64.htm"
+  },
+  "asOf": "2026-11-13",
+  "lastVerified": "2026-11-13",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Property Code chapter 64 (enacted 2011, last amended effective June 14, 2013), including the tenant notice form in Section 64.056, and bills in the next regular session in 2027.",
+  "sources": [
+    {
+      "id": "tx-prop-code-64",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.64.htm",
+      "title": "Texas Property Code, Chapter 64 (Assignment of rents to lienholder)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "creates a presently effective security interest in all accrued and unaccrued rents arising from the real property described in the security instrument",
+      "tier": "primary"
+    }
+  ]
+}

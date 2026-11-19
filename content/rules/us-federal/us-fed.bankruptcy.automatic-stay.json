@@ -1,0 +1,34 @@
+{
+  "id": "us-fed.bankruptcy.automatic-stay",
+  "jurisdiction": "us-federal",
+  "title": "Bankruptcy automatic stay: what a filing stops and its main limits",
+  "rule": "A bankruptcy petition stays, as to all entities: starting or continuing a proceeding against the debtor that was or could have been started before the case, or to recover a prepetition claim; enforcing a prepetition judgment; taking possession or control of estate property; creating, perfecting or enforcing a lien against estate property; collecting a prepetition claim; and setting off a prepetition debt owed to the debtor. The stay does not bar a lessor from recovering nonresidential real property under a lease whose stated term expired before or during the case. After notice and a hearing, the court grants relief from the stay for cause, including lack of adequate protection.",
+  "citation": {
+    "authority": "11 U.S.C. 362(a), (b)(10) and (d)(1)",
+    "url": "https://www.law.cornell.edu/uscode/text/11/362"
+  },
+  "asOf": "2026-11-13",
+  "lastVerified": "2026-11-13",
+  "review": "ai-drafted",
+  "changeWatch": "Pub. L. 119-27 (July 18, 2025) adds a stablecoin-redemption item to 362(a) and a relief ground as 362(d)(5), effective 18 months after enactment (January 18, 2027) or 120 days after final implementing regulations, whichever is earlier; any other amendment to section 362.",
+  "sources": [
+    {
+      "id": "usc-11-362-a",
+      "url": "https://www.law.cornell.edu/uscode/text/11/362",
+      "title": "11 U.S.C. 362, Automatic stay (subsection (a))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "any act to obtain possession of property of the estate or of property from the estate or to exercise control over property of the estate",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-11-362-b-10",
+      "url": "https://www.law.cornell.edu/uscode/text/11/362",
+      "title": "11 U.S.C. 362(b)(10), Nonresidential lease ended by expiration of its term",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "any act by a lessor to the debtor under a lease of nonresidential real property that has terminated by the expiration of the stated term",
+      "tier": "primary"
+    }
+  ]
+}

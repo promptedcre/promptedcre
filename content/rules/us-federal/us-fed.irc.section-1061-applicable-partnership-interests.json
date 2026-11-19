@@ -1,0 +1,43 @@
+{
+  "id": "us-fed.irc.section-1061-applicable-partnership-interests",
+  "jurisdiction": "us-federal",
+  "title": "Gain on a promote interest: the three-year holding period (section 1061)",
+  "rule": "A taxpayer's net long-term capital gain on an applicable partnership interest is short-term to the extent it exceeds that gain figured using three years, not one, despite any section 83(b) election. It covers interests held in connection with substantial services by the taxpayer or a related person, in a business raising or returning capital and investing in or developing specified assets such as rental or investment real estate. Excluded: interests held by a corporation (under the regulations, not an S corporation) and capital interests sharing capital commensurate with capital contributed or value taxed under section 83. The regulations exclude section 1231 long-term gain and loss from the holder's distributive share.",
+  "citation": {
+    "authority": "26 U.S.C. 1061(a) and (c); 26 CFR 1.1061-3(b) and 1.1061-4(a)(1) and (b)(7)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/1061"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to section 1061, including the three-year period in 1061(a), the definitions and exceptions in 1061(c) and the related-person transfer rule in 1061(d), or Treasury changes to 26 CFR 1.1061-1 through 1.1061-6, including the S corporation rule in 1.1061-3(b)(2) and the excluded items in 1.1061-4(b)(7).",
+  "sources": [
+    {
+      "id": "usc-26-1061",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1061",
+      "title": "26 U.S.C. 1061, Partnership interests held in connection with performance of services (subsections (a) and (c))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "shall be treated as short-term capital gain, notwithstanding section 83 or any election in effect under section 83(b).",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-1-1061-3",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.1061-3",
+      "title": "26 CFR 1.1061-3, Exceptions to the definition of an API (paragraph (b), interests held by a corporation)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-14",
+      "quote": "An S corporation for which an election under section 1362(a) is in effect",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-1-1061-4",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.1061-4",
+      "title": "26 CFR 1.1061-4, Section 1061 computations (paragraphs (a)(1) and (b)(7))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-14",
+      "quote": "Long-term capital gain and long-term capital loss determined under section 1231",
+      "tier": "primary"
+    }
+  ]
+}

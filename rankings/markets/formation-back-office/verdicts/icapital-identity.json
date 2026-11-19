@@ -1,0 +1,155 @@
+{
+  "vendor": "icapital-identity",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "ffbb0c17476a5b036418bdc6bcea107226d1ef7dd1f0d7adf4f294c1acf813d0",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "full",
+      "quality": 6,
+      "evidence": [
+        "c4",
+        "c5",
+        "c11",
+        "c14"
+      ],
+      "rationale": "The public developer site documents a server API with Bearer API-key authentication and a downloadable Swagger file, the changelog adds endpoints, and the sandbox guide notes that records partners create in production are billable.",
+      "missing": "The pack does not list the API's endpoints, so it does not directly show that the API reads and changes the core records (accreditations, identity verifications, cases)."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Nothing in the pack mentions an MCP server.",
+      "missing": "No official MCP server, announcement or setup steps appear in the pack."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "full",
+      "quality": 5,
+      "evidence": [
+        "c7",
+        "p1",
+        "c13"
+      ],
+      "rationale": "The vendor documents its own JavaScript SDK on a public page that the probe confirmed resolves, and the changelog says existing SDK identifiers are unchanged after the rebrand.",
+      "missing": "The pack does not show the SDK on a public package registry or repository, and shows no CLI or server-side SDK, only a frontend JavaScript SDK described as helping partners integrate."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "full",
+      "quality": 6,
+      "evidence": [
+        "c8",
+        "c9"
+      ],
+      "rationale": "The developer docs describe webhooks from the Case Management account that POST JSON to a configured URL, so a backend can trigger downstream actions instead of polling.",
+      "missing": "The pack does not list the webhook event types, so it does not show which record changes trigger a webhook."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "partial",
+      "quality": 6,
+      "evidence": [
+        "c5",
+        "c6"
+      ],
+      "rationale": "API keys exist and are sent as Bearer tokens, but the only role rule shown governs which users (admin or controller) can create keys, not what a key can do.",
+      "missing": "The pack shows no scopes, roles or permissions that limit an individual API key, so it does not show whether each key carries the whole company account's access."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c4"
+      ],
+      "rationale": "The public server API page offers parallel-api.swagger.yml for download and import into the Swagger Editor or other tools.",
+      "missing": "No probe confirms the Swagger file downloads without a login, and the pack does not show whether it covers the whole API."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no llms.txt file or Markdown versions of the documentation pages.",
+      "missing": "No llms.txt, Markdown doc pages or other agent-oriented documentation format appears in the pack."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "partial",
+      "quality": 9,
+      "evidence": [
+        "c10",
+        "c11",
+        "c12"
+      ],
+      "rationale": "A documented sandbox exists for testing (accreditations can be auto-approved or rejected), but accounts come from an iCapital Identity Solutions sales representative rather than self-serve sign-up.",
+      "missing": "The pack does not show what the sandbox supports beyond accreditation outcomes or on what terms sales grants a sandbox account."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no bulk export or download of customer records in any format.",
+      "missing": "No export feature, export file format or export documentation appears in the pack."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c3",
+        "c10"
+      ],
+      "rationale": "The homepage's only commercial call to action is Contact Sales and even sandbox accounts come through a sales representative, so no self-serve sign-up is shown.",
+      "missing": "No sign-up page, free trial or self-serve plan appears in the pack, and the pack does not include the iCapital site the homepage says will replace this one."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c3",
+        "c11"
+      ],
+      "rationale": "No prices appear anywhere: the coverage check found no pricing page (/pricing returns 404) and the homepage offers only Contact Sales.",
+      "missing": "No plan prices, per-record fees or starting prices appear in the pack (the sandbox guide says production records are billable but gives no rate), and the pack does not include the iCapital site the homepage points to."
+    },
+    {
+      "story": "fb-start",
+      "verdict": "partial",
+      "quality": 3,
+      "evidence": [
+        "c11",
+        "c12"
+      ],
+      "rationale": "The sandbox guide implies integrations create billable records and test accreditations that can be auto-approved or rejected, but the pack shows no API documentation for a call that starts a verification.",
+      "missing": "No endpoint or doc page shows that an accreditation or identity verification can be created through the server API; the only flow pieces the pack names are a frontend JavaScript SDK and hosted buttons."
+    },
+    {
+      "story": "fb-status",
+      "verdict": "partial",
+      "quality": 3,
+      "evidence": [
+        "c8",
+        "c9",
+        "c12"
+      ],
+      "rationale": "Webhooks from the Case Management account deliver JSON events and accreditations have approve or reject outcomes, but the pack shows no endpoint, field or payload that returns a transaction's status.",
+      "missing": "No documented status endpoint, status field or webhook payload showing a verification's or accreditation's status appears in the pack."
+    },
+    {
+      "story": "fb-records",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no API or feed that returns finished records such as completed accreditations, verification letters or documents.",
+      "missing": "No endpoint, feed or download for retrieving completed accreditations, verification letters or supporting documents appears in the pack."
+    }
+  ]
+}

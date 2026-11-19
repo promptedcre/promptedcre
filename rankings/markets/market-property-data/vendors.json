@@ -1,0 +1,103 @@
+{
+  "market": "market-property-data",
+  "vendors": [
+    {
+      "id": "costar",
+      "name": "CoStar",
+      "kind": "product",
+      "what": "Commercial real estate listings, comparables, analytics and property data.",
+      "homepage": "https://www.costar.com/"
+    },
+    {
+      "id": "crexi",
+      "name": "Crexi",
+      "kind": "product",
+      "what": "Commercial real estate listings marketplace with property records and analytics.",
+      "homepage": "https://www.crexi.com/"
+    },
+    {
+      "id": "reonomy",
+      "name": "Reonomy",
+      "kind": "product",
+      "what": "Commercial property and ownership data; an Altus Group business.",
+      "homepage": "https://www.reonomy.com/"
+    },
+    {
+      "id": "cherre",
+      "name": "Cherre",
+      "kind": "product",
+      "what": "Real estate data platform that connects and standardizes property data sets, with AI agents built on it.",
+      "homepage": "https://cherre.com/"
+    },
+    {
+      "id": "compstak",
+      "name": "CompStak",
+      "kind": "product",
+      "what": "Crowdsourced commercial lease and sale comparables.",
+      "homepage": "https://compstak.com/"
+    },
+    {
+      "id": "placer-ai",
+      "name": "Placer.ai",
+      "kind": "product",
+      "what": "Foot traffic and location analytics.",
+      "homepage": "https://www.placer.ai/"
+    },
+    {
+      "id": "trepp",
+      "name": "Trepp",
+      "kind": "product",
+      "what": "Commercial real estate loan, CMBS and property performance data.",
+      "homepage": "https://www.trepp.com/"
+    },
+    {
+      "id": "yardi-matrix",
+      "name": "Yardi Matrix",
+      "kind": "product",
+      "what": "Market research and property data for multifamily, office, industrial and self storage.",
+      "homepage": "https://www.yardimatrix.com/"
+    },
+    {
+      "id": "regrid",
+      "name": "Regrid",
+      "kind": "product",
+      "what": "Nationwide parcel boundaries and property data.",
+      "homepage": "https://regrid.com/"
+    },
+    {
+      "id": "attom",
+      "name": "ATTOM",
+      "kind": "product",
+      "what": "Nationwide property, ownership, tax and transaction data.",
+      "homepage": "https://www.attomdata.com/"
+    },
+    {
+      "id": "propertyreach",
+      "name": "PropertyReach",
+      "kind": "product",
+      "what": "Property and owner data with an API.",
+      "homepage": "https://www.propertyreach.com/"
+    },
+    {
+      "id": "harris-cad",
+      "name": "Harris Central Appraisal District",
+      "kind": "government",
+      "what": "Appraisal district for Harris County, Texas: property records, values and owners of record.",
+      "homepage": "https://hcad.org/"
+    },
+    {
+      "id": "bexar-cad",
+      "name": "Bexar Central Appraisal District",
+      "kind": "government",
+      "what": "Appraisal district for Bexar County, Texas: property records, values and owners of record.",
+      "homepage": "https://bcad.org/"
+    },
+    {
+      "id": "census-bureau",
+      "name": "U.S. Census Bureau",
+      "kind": "government",
+      "what": "Population, housing and business statistics by area, with a public data API; no property-level records.",
+      "homepage": "https://www.census.gov/"
+    }
+  ]
+}

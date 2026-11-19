@@ -1,0 +1,146 @@
+{
+  "vendor": "janover-connect",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "33fa81d939bada71f36d761f9c2848d0908bff3bd38b929a8f4a011017067a3e",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c9"
+      ],
+      "rationale": "The API check found no API or developer page on the features pages, nav or footer, and the features index lists no API page (c9), so no API is shown.",
+      "missing": "Any public API documentation, developer portal or even a claim of an API for investors, offerings, distributions or documents."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item mentions an MCP server, and neither the site nor the Help Center has a developer section where one would be documented.",
+      "missing": "Any official MCP server, its documentation or setup steps."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item shows an SDK, CLI, package or public repository, and no API or developer page was found.",
+      "missing": "Any vendor-maintained SDK or CLI on a public package registry or repository, or even code samples."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c9"
+      ],
+      "rationale": "The features index lists no API, webhook or integration page (c9), and no item describes webhooks or event subscriptions.",
+      "missing": "Any documented webhooks or event subscriptions for investors, offerings, distributions or documents, including through a third-party automation platform."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No API was found, and no item shows API keys, tokens or OAuth clients, scoped or otherwise.",
+      "missing": "Any API credential an agent could obtain and documentation of scopes, roles or permissions that limit it."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item shows an OpenAPI, Swagger, GraphQL or other machine-readable spec, and no API documentation was found to carry one.",
+      "missing": "Any machine-readable API specification, public or behind a login."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "p1"
+      ],
+      "rationale": "A probe fetched an llms.txt for the Help Center, the product's documentation, which returned 200 with 44,437 bytes under the heading 'Groundbreaker | Help Center' (p1).",
+      "missing": "Only the file's title line and size are shown, not which Help Center articles it lists or whether it covers both the Manager Platform Guide and Investor Portal Guide collections."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item shows a sandbox, test mode or developer environment, and no API or developer page was found.",
+      "missing": "Any self-serve or on-request sandbox, test mode or developer environment."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c7"
+      ],
+      "rationale": "The only download shown is investors downloading documents from the Investor Dashboard (c7), and no bulk export of the sponsor's records in an open format is described.",
+      "missing": "Any self-serve export of investors, commitments, distributions or other records in CSV, Excel or JSON, and documentation of it."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c3"
+      ],
+      "rationale": "The plans page offers only 'Join the Waitlist' and 'Schedule a Demo' (c3), so no self-serve sign-up or free trial is shown.",
+      "missing": "Any self-serve sign-up, paid-plan checkout or free trial that needs no call."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c3"
+      ],
+      "rationale": "The plans page shows no price figures, only waitlist and demo buttons (c3).",
+      "missing": "Any plan prices, fees or even a starting price."
+    },
+    {
+      "story": "ip-create-investor",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c6"
+      ],
+      "rationale": "The subscription process appears only as an app feature (c6), and no item shows an API or integration for creating investors or sending subscription documents.",
+      "missing": "API documentation for creating investor records and for sending or starting subscription documents, directly or through a third-party integration."
+    },
+    {
+      "story": "ip-distribution",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c4",
+        "c5"
+      ],
+      "rationale": "Distributions and notices appear only as in-app actions an authorized person completes 'with a few clicks' (c4, c5), with no API route to read or create distributions or generate notices.",
+      "missing": "Any API endpoint to read or create distributions or to generate or send investor notices."
+    },
+    {
+      "story": "ip-register",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item shows an API endpoint or any export, documented or manual, that returns investors, commitments or contributions.",
+      "missing": "Any API or export (JSON or CSV) of the investor register, including commitments and contributions."
+    },
+    {
+      "story": "ip-capital-call",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item mentions capital calls, and no API was found to create calls or read each investor's funding status.",
+      "missing": "Any capital-call feature or API to create calls and read each investor's funding status."
+    }
+  ]
+}

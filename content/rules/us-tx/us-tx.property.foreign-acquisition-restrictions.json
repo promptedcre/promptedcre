@@ -1,0 +1,60 @@
+{
+  "id": "us-tx.property.foreign-acquisition-restrictions",
+  "jurisdiction": "us-tx",
+  "title": "Texas bars certain foreign governments, companies and individuals from acquiring real property",
+  "rule": "From September 1, 2025, none of these may acquire an interest in Texas real property: a designated country's government; a company headquartered there, controlled by that government, or majority owned by barred persons; or certain individuals tied to such a country by domicile, citizenship, agency or party membership. Excluded: U.S. citizens, lawful permanent residents, companies they own or control with no barred owner, and leases under one year. Designated countries come from U.S. intelligence threat assessments or the governor.",
+  "citation": {
+    "authority": "Tex. Prop. Code 5.251-5.259 (added by S.B. 17, 89th Leg., R.S., 2025)",
+    "url": "https://statutes.capitol.texas.gov/Docs/PR/htm/PR.5.htm"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Check current status before relying on this card. In the December 2025 decisions read, federal courts dismissed challengers or denied preliminary relief without ruling on the law's validity, and one challenge remained pending. The attorney general proposed implementing rules (1 TAC chapter 67) in March 2026; check whether they were adopted. The governor may designate further countries or entities.",
+  "sources": [
+    {
+      "id": "tx-prop-code-5",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.5.htm",
+      "title": "Texas Property Code, Chapter 5, Subchapter H (Sections 5.251-5.259, purchase or acquisition of real property by certain foreign individuals or entities)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "may not purchase or otherwise acquire an interest in real property in this state",
+      "tier": "primary"
+    },
+    {
+      "id": "sb17-enrolled",
+      "url": "https://capitol.texas.gov/tlodocs/89R/billtext/html/SB00017F.htm",
+      "title": "S.B. 17, 89th Legislature, Regular Session (2025), enrolled text",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "This Act takes effect September 1, 2025.",
+      "tier": "primary"
+    },
+    {
+      "id": "fifth-cir-25-20354",
+      "url": "https://caselaw.findlaw.com/court/us-5th-circuit/118018551.html",
+      "title": "U.S. Court of Appeals for the Fifth Circuit, No. 25-20354, opinion of December 11, 2025 (dismissal of an S.B. 17 challenge affirmed for lack of standing)",
+      "publisher": "FindLaw (opinion text)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "wdtx-1-25-cv-01509",
+      "url": "https://www.courtlistener.com/opinion/10776300/min-huang-qiong-dai-and-jiayin-dong-v-ken-paxton-attorney-general-of/",
+      "title": "U.S. District Court, Western District of Texas, No. 1:25-cv-01509, order of December 9, 2025",
+      "publisher": "CourtListener, Free Law Project (order text)",
+      "accessed": "2026-11-12",
+      "quote": "The Motion for Preliminary Injunction (ECF No. 3) is DENIED.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-register-ag-rules",
+      "url": "https://www.sos.texas.gov/texreg/archive/March272026/Proposed%20Rules/1.ADMINISTRATION.html",
+      "title": "Texas Register, March 27, 2026: proposed 1 TAC Chapter 67, Foreign Ownership Enforcement",
+      "publisher": "Texas Secretary of State (Texas Register)",
+      "accessed": "2026-11-14",
+      "quote": "proposes new Chapter 67 in Title 1, Part 3 of the Texas Administrative Code (TAC), relating to foreign ownership enforcement",
+      "tier": "primary"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "vendor": "radix-underwriting",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "936a8752e62c2f7bde58f20ef499d24c1c9096da21af9d6167d3835010d9521e",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c5"
+      ],
+      "rationale": "The API check found no API or developer page (radix.com/api returns 404), and the vendor describes integrations and data connectivity only as future work (c5).",
+      "missing": "Any public API documentation, developer page or statement that an API exists for reading or changing deals, models or rent rolls."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Nothing in the pack mentions an MCP server for Radix Underwriting.",
+      "missing": "Any official MCP server, announcement or setup steps."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no CLI, SDK, code samples, package-registry listing or public repository from the vendor.",
+      "missing": "Any vendor-maintained CLI or SDK on a public registry or repository, or even code samples."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No webhooks or event subscriptions are shown, and the checks found no API or developer documentation that could offer them.",
+      "missing": "Any documented webhooks, event subscriptions or third-party automation triggers; na does not apply because customers upload and change their own deal data."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "With no API shown, the pack shows no API keys, OAuth clients or credential scopes.",
+      "missing": "Any API keys, OAuth clients, or documented scopes, roles or permissions for agent credentials; na does not apply because no credential-free API is shown."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No OpenAPI, Swagger, GraphQL or other machine-readable spec is shown, and no API was found.",
+      "missing": "Any machine-readable API specification, public or behind login."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c9"
+      ],
+      "rationale": "The help center redirects to a login page (c9) and no public documentation was found, so there is no llms.txt file or Markdown documentation.",
+      "missing": "Any public documentation, llms.txt file or Markdown versions of documentation pages."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no sandbox, test mode or developer environment, whether self-serve or on request.",
+      "missing": "Any sandbox, test mode or developer environment; na does not apply because there is no read-only published-data API."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "partial",
+      "quality": 4,
+      "evidence": [
+        "c4"
+      ],
+      "rationale": "The Radix Underwriting product page mentions 'Excel-ready exports' (c4), but the pack shows no documentation of what can be exported or whether it can be done in bulk.",
+      "missing": "Documentation of a self-serve bulk export, which records it covers and its formats; help docs are behind a login, and the PDF/Excel export in c7 belongs to the separate Radix Intelligence comps product."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c6"
+      ],
+      "rationale": "Every call to action on the product page is Get a Demo or Log In (c6), with no self-serve sign-up or free trial shown.",
+      "missing": "Any self-serve sign-up, paid-plan checkout or free trial without a sales call."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c6"
+      ],
+      "rationale": "No pricing page exists (radix.com/pricing returns 404) and the product page offers only Get a Demo (c6).",
+      "missing": "Any published prices, starting price or plan fees."
+    },
+    {
+      "story": "dp-deal-record",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No API is shown, so there is no evidence that deals can be created, read or moved between stages programmatically.",
+      "missing": "API documentation for creating deals and updating their stage or status, or any third-party integration that does so."
+    },
+    {
+      "story": "dp-load-financials",
+      "verdict": "partial",
+      "quality": 6,
+      "evidence": [
+        "c3",
+        "c8"
+      ],
+      "rationale": "The product page says users can upload rent rolls and operating statements and get structured data back (c3, with c8 on the rent roll processor), but only through the in-app upload, since no API or upload endpoint is documented.",
+      "missing": "A documented API or upload endpoint, the structured output format, and any test of the extraction; the evidence is vendor marketing, and c8 dates from October 2025."
+    },
+    {
+      "story": "dp-model-outputs",
+      "verdict": "partial",
+      "quality": 3,
+      "evidence": [
+        "c4"
+      ],
+      "rationale": "The product page pairs AI-driven models and scenario testing with 'Excel-ready exports' (c4), which points to a manual in-app export of underwriting results, with no API shown.",
+      "missing": "Confirmation that exports include cash flows, returns or valuation results, documentation of the export, and any API endpoint for outputs."
+    },
+    {
+      "story": "dp-documents",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No API is shown, so there is no evidence that documents can be attached to a deal or read back programmatically.",
+      "missing": "API documentation for uploading documents to a deal and listing or downloading them; c3 describes only in-app upload of financial documents for extraction."
+    }
+  ]
+}

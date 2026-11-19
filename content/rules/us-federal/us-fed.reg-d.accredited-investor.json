@@ -1,0 +1,33 @@
+{
+  "id": "us-fed.reg-d.accredited-investor",
+  "jurisdiction": "us-federal",
+  "title": "Who is an accredited investor (Rule 501(a))",
+  "rule": "Accredited investors include natural persons with net worth over $1,000,000, alone or with a spouse or spousal equivalent, excluding the primary residence, or income over $200,000, or $300,000 jointly, in each of the last two years and expected this year; Series 7, 65 or 82 holders in good standing; the issuer's directors, executive officers and general partners; entities over $5,000,000 in assets or investments not formed to buy the securities; and entities whose equity owners are all accredited.",
+  "citation": {
+    "authority": "17 CFR 230.501(a)",
+    "url": "https://www.ecfr.gov/current/title-17/section-230.501"
+  },
+  "asOf": "2026-11-09",
+  "lastVerified": "2026-11-12",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Rule 501(a), new SEC orders designating professional credentials, or legislation changing the definition.",
+  "sources": [
+    {
+      "id": "ecfr-230-501",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.501",
+      "title": "17 CFR 230.501, Definitions and terms used in Regulation D",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "quote": "joint net worth with that person's spouse or spousal equivalent, exceeds $1,000,000",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-exempt-faq",
+      "url": "https://www.sec.gov/resources-small-businesses/exempt-offerings/frequently-asked-questions-about-exempt-offerings",
+      "title": "Frequently Asked Questions About Exempt Offerings",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    }
+  ]
+}

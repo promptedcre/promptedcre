@@ -1,0 +1,556 @@
+{
+  "id": "run-due-diligence",
+  "slug": "run-due-diligence",
+  "kind": "process",
+  "title": "Run due diligence",
+  "summary": "Confirm the property is what was underwritten before the deposit goes hard: title and survey, environmental, physical condition, zoning, flood, leases and contracts. Agents read, compare and calendar; licensed professionals inspect, and a principal makes the go or no-go call in time.",
+  "phase": "acquire",
+  "order": 250,
+  "featured": true,
+  "depth": "full",
+  "review": "practitioner-reviewed",
+  "lastVerified": "2026-11-12",
+  "requires": [
+    "negotiate-purchase-contract"
+  ],
+  "consumes": [
+    "purchase-and-sale-agreement",
+    "rent-roll",
+    "trailing-12",
+    "underwriting-model",
+    "tenant-estoppel",
+    "snda"
+  ],
+  "produces": [
+    "title-commitment",
+    "survey",
+    "phase-i-esa",
+    "property-condition-assessment",
+    "zoning-report",
+    "lease-abstract",
+    "underwriting-model",
+    "ic-memo"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "ecfr-40-312",
+      "url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-J/part-312",
+      "title": "40 CFR Part 312, Innocent Landowners, Standards for Conducting All Appropriate Inquiries",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "quote": "must be conducted within one year prior to the date of acquisition of the subject property",
+      "tier": "primary"
+    },
+    {
+      "id": "epa-aai",
+      "url": "https://www.epa.gov/brownfields/brownfields-all-appropriate-inquiries",
+      "title": "Brownfields All Appropriate Inquiries",
+      "publisher": "U.S. Environmental Protection Agency",
+      "accessed": "2026-11-12",
+      "quote": "must conduct AAI before acquiring the property and comply with all continuing obligations after acquiring the property",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-form-t7",
+      "url": "https://www.tdi.texas.gov/title/documents/form_t-07.pdf",
+      "title": "Form T-7, Commitment for Title Insurance (effective January 3, 2014)",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-12",
+      "quote": "This Commitment ends ninety (90) days from the effective date, unless the Policy is issued sooner",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-p2",
+      "url": "https://www.tdi.texas.gov/title/titlem4a.html",
+      "title": "Basic Manual Section IV, Procedural Rule P-2: Amendment of Exception to Area and Boundaries",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-12",
+      "quote": "The survey must be acceptable to the Company.",
+      "tier": "primary"
+    },
+    {
+      "id": "alta-survey-standards",
+      "url": "https://www.alta.org/topics/topic-land-survey-standards",
+      "title": "ALTA/NSPS Land Title Survey Standards",
+      "publisher": "American Land Title Association",
+      "accessed": "2026-11-12",
+      "quote": "The updated standards go into effect February 23, 2026, and will replace the 2021 version as of that date.",
+      "tier": "primary"
+    },
+    {
+      "id": "nsps-2026-alta",
+      "url": "https://nsps.us.com/page/2026ALTA",
+      "title": "2026 ALTA/NSPS Standards",
+      "publisher": "National Society of Professional Surveyors",
+      "accessed": "2026-11-12",
+      "quote": "Contracts signed on or after February 23, 2026: The survey must be done to the 2026 ALTA/NSPS Standards, with only very limited exceptions.",
+      "tier": "primary"
+    },
+    {
+      "id": "astm-e2018-24",
+      "url": "https://store.astm.org/e2018-24.html",
+      "title": "ASTM E2018-24, Standard Guide for Property Condition Assessments: Baseline Property Condition Assessment Process",
+      "publisher": "ASTM International",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "fema-msc",
+      "url": "https://msc.fema.gov/portal/home",
+      "title": "FEMA Flood Map Service Center",
+      "publisher": "Federal Emergency Management Agency",
+      "accessed": "2026-11-12",
+      "quote": "the official public source for flood hazard information produced in support of the National Flood Insurance Program (NFIP)",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-42-4012a",
+      "url": "https://www.law.cornell.edu/uscode/text/42/4012a",
+      "title": "42 U.S.C. 4012a, Flood insurance purchase and compliance requirements and escrow accounts",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "fws-wetlands-mapper",
+      "url": "https://www.fws.gov/program/national-wetlands-inventory/wetlands-mapper",
+      "title": "Wetlands Mapper",
+      "publisher": "U.S. Fish and Wildlife Service",
+      "accessed": "2026-11-12",
+      "quote": "or to establish the geographical scope of the regulatory programs of government agencies",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-93",
+      "url": "https://statutes.capitol.texas.gov/Docs/PR/htm/PR.93.htm",
+      "title": "Texas Property Code, Chapter 93 (Section 93.007, Cessation of owner's interest)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "the new owner is liable for the return of the security deposit",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-92",
+      "url": "https://statutes.capitol.texas.gov/Docs/PR/htm/PR.92.htm",
+      "title": "Texas Property Code, Chapter 92 (Section 92.105, Cessation of owner's interest)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "calendar-dd-deadlines",
+      "title": "Calendar the contract's diligence deadlines",
+      "instruction": "Read the signed contract and list every date it sets: seller deliveries, the title and survey objection periods, the feasibility period, when the deposit goes hard, extension options and closing. Enter them in the deadline calendar, counting from the effective date exactly as the contract defines days and notice. Add the Phase I's own limits: all appropriate inquiries must fall within one year before acquisition, and the interviews, cleanup-lien search, records review, site visit and the professional's declaration within 180 days. A Texas-form title commitment ends 90 days after its effective date unless the policy issues sooner.",
+      "mode": "agent",
+      "modeBasis": "The dates come from the signed contract and fixed day counts, which an agent can read and calendar.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-fed.epa.all-appropriate-inquiries"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-40-312",
+        "tdi-form-t7"
+      ]
+    },
+    {
+      "id": "engage-third-party-reports",
+      "title": "Order title, survey, environmental and condition reports",
+      "instruction": "On day one, order the title commitment from the title company the contract names and engage the surveyor, the environmental professional and the property condition consultant. Ask for a 2026 ALTA/NSPS Land Title Survey, name the Table A items wanted, and list who it is certified to, adding the lender once known. The Phase I must be done by, or under the supervision of, an environmental professional as 40 CFR 312.10 defines one; ASTM E1527-21 is the recognized practice. Ask for the condition report to ASTM E2018-24. If a lender is lined up, ask which firms and scopes it accepts so the reports are not redone.",
+      "mode": "human-online",
+      "modeBasis": "Engagement letters are contracts a principal signs, and the buyer pays the fees.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "calendar-dd-deadlines"
+      ],
+      "rules": [
+        "us-fed.alta-nsps.survey-standards",
+        "us-fed.epa.all-appropriate-inquiries"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "alta-survey-standards",
+        "nsps-2026-alta",
+        "ecfr-40-312",
+        "astm-e2018-24"
+      ]
+    },
+    {
+      "id": "complete-buyer-aai-tasks",
+      "title": "Do the buyer's own all-appropriate-inquiries tasks",
+      "instruction": "The rule puts some inquiries on the buyer, not the consultant. Search for environmental cleanup liens recorded against the property, or confirm someone is running that search. Write down what the buyer's people know about the site, its past uses and its neighbors. Record whether the price reasonably reflects what the property would be worth uncontaminated and, if not, whether contamination explains the gap. Send all of it to the environmental professional before the site visit; the inquiry is not complete until it takes the buyer's knowledge into account.",
+      "mode": "agent",
+      "modeBasis": "Each task is a records search or a written answer drawn from the deal file, for a principal to confirm.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "engage-third-party-reports"
+      ],
+      "rules": [
+        "us-fed.epa.all-appropriate-inquiries"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-40-312",
+        "epa-aai"
+      ]
+    },
+    {
+      "id": "phase-i-site-assessment",
+      "title": "Get the Phase I environmental site assessment",
+      "instruction": "The environmental professional interviews owners and occupants, reviews historical sources and government records for the site and nearby properties, and inspects the site and adjoining land. A voluntary seller's refusal of access does not excuse the site visit, so use the contract's access clause early. The signed report must give an opinion on whether conditions indicating releases were found, list data gaps and their significance, carry the professional's declaration, and include any opinion on further investigation. If it reports a recognized environmental condition, follow the situation for that finding.",
+      "mode": "human-offline",
+      "modeBasis": "The rule requires the inquiry and the site visit to be done by, or under the supervision of, an environmental professional.",
+      "actor": "consultant",
+      "licensed": "environmental-professional",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "complete-buyer-aai-tasks"
+      ],
+      "rules": [
+        "us-fed.epa.all-appropriate-inquiries"
+      ],
+      "produces": [
+        "phase-i-esa"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-40-312",
+        "epa-aai"
+      ]
+    },
+    {
+      "id": "property-condition-assessment",
+      "title": "Get the property condition assessment",
+      "instruction": "The consultant walks through the property, reviews its documents, interviews the people who run it, and reports material physical deficiencies with opinions of the cost to remedy them. ASTM E2018-24 is the current baseline guide; it is a paid standard, so ask the consultant in writing what its scope covers and excludes. Give the consultant the warranties, permits, service records and recent capital work the seller delivered. Send the immediate and near-term costs to the underwriting.",
+      "mode": "human-offline",
+      "modeBasis": "The assessment needs an on-site walk-through by a consultant, typically an engineer.",
+      "actor": "consultant",
+      "licensed": "engineer",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "engage-third-party-reports"
+      ],
+      "produces": [
+        "property-condition-assessment"
+      ],
+      "basis": "cited",
+      "sources": [
+        "astm-e2018-24"
+      ],
+      "typeNotes": {
+        "industrial": "Have the scope cover the roof, slab, dock doors and levelers, fire sprinklers and any cranes or heavy power the tenant relies on; the lease's repair clauses decide who pays.",
+        "multifamily": "Agree how many units, vacant and occupied, the consultant will enter besides roofs and building systems; unit entry follows the leases' notice terms.",
+        "office": "Have the scope cover elevators, HVAC, life-safety systems and common areas; the leases' operating-expense terms decide what can be recovered.",
+        "retail": "Have the scope cover roofs, parking, lighting and storefronts; the leases decide which repairs pass through to tenants."
+      }
+    },
+    {
+      "id": "survey-the-property",
+      "title": "Survey the property to the 2026 ALTA/NSPS standards",
+      "instruction": "Send the surveyor the title commitment and copies of every recorded exception as soon as they arrive. An ALTA/NSPS survey is a boundary survey; it shows boundary issues, easements, encroachments and access that affect insurable title. Under the 2026 standards the surveyor notes evidence of possession along the whole perimeter and records what owners or occupants say about the boundary. In Texas, the owner's policy can amend the area-and-boundary exception only on a survey the title company accepts, so send the draft to the title examiner before it is final.",
+      "mode": "human-offline",
+      "modeBasis": "Only a licensed surveyor can locate and certify the boundary in the field.",
+      "actor": "consultant",
+      "licensed": "surveyor",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "engage-third-party-reports"
+      ],
+      "rules": [
+        "us-fed.alta-nsps.survey-standards",
+        "us-tx.title.promulgated-rates-forms"
+      ],
+      "consumes": [
+        "title-commitment"
+      ],
+      "produces": [
+        "survey"
+      ],
+      "basis": "cited",
+      "sources": [
+        "nsps-2026-alta",
+        "alta-survey-standards",
+        "tdi-form-t7",
+        "tdi-p2"
+      ]
+    },
+    {
+      "id": "review-title-and-survey",
+      "title": "Review the commitment and survey and list objections",
+      "instruction": "Check Schedule A against the contract: proposed insured, policy amount, the interest insured, the vested owner and a legal description that matches the survey. Pull every recorded document behind Schedule B and note what each does to use, access and value. Read Schedule C: requirements that become exceptions unless cleared, such as payoffs, releases, proof that recent work is paid, and the buyer's own entity documents. Match the survey's easements and encroachments to Schedule B. Draft the objection list with the cure asked for each item. An unexpected lien has its own situation.",
+      "mode": "agent",
+      "modeBasis": "The commitment, the recorded documents and the survey are documents an agent can read and compare.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "survey-the-property"
+      ],
+      "rules": [
+        "us-tx.title.promulgated-rates-forms"
+      ],
+      "consumes": [
+        "title-commitment",
+        "survey",
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tdi-form-t7"
+      ]
+    },
+    {
+      "id": "send-title-objections",
+      "title": "Send title and survey objections before the deadline",
+      "instruction": "Counsel turns the objection list into the notice the contract requires and delivers it by the contract's notice method before the objection deadline, copying the title company with a request for what it needs to delete or amend each item. Calendar the seller's response period and the contract's outcome if the seller does not cure, usually a choice to waive, extend or terminate. A late objection may count as a waiver under the contract.",
+      "mode": "human-online",
+      "modeBasis": "A contract notice binds the buyer, and its form and timing are a legal judgment for counsel.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "review-title-and-survey"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "title-commitment",
+        "survey"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "confirm-zoning-and-use",
+      "title": "Confirm zoning, permitted use and code status",
+      "instruction": "From the city's public zoning map and ordinance, find the district and whether the current use is permitted, conditional or nonconforming. Look up certificates of occupancy, open permits and code cases on the city's portals. Where a city has no zoning, read the recorded deed restrictions listed in the commitment. If the lender or the deal needs written confirmation, a person orders a zoning verification letter from the city or a zoning report from a vendor. A nonconforming use may not be rebuildable after a casualty; flag one for counsel and the lender.",
+      "mode": "agent-browser",
+      "modeBasis": "Zoning maps, ordinances and permit records are public websites; a paid letter or report is ordered by a person.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "calendar-dd-deadlines"
+      ],
+      "consumes": [
+        "title-commitment"
+      ],
+      "produces": [
+        "zoning-report"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "check-flood-and-wetlands",
+      "title": "Check the flood zone and mapped wetlands",
+      "instruction": "Search the address on FEMA's Flood Map Service Center, the official public source for National Flood Insurance Program flood hazard data, and save the current panel, zone and effective date; maps change. If a building is in a special flood hazard area where federal flood insurance is available, a regulated lender may not make the loan unless the building is insured against flood for the loan's term, so tell the lender and insurance broker now. Then view the site on the Fish and Wildlife Service's Wetlands Mapper. Its maps do not set regulatory boundaries; a mapped wetland on land to be built on goes to an expert and the Army Corps of Engineers.",
+      "mode": "agent-browser",
+      "modeBasis": "FEMA's map service and the Wetlands Mapper are public websites that need no sign-in.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "calendar-dd-deadlines"
+      ],
+      "rules": [
+        "us-fed.flood.mandatory-purchase"
+      ],
+      "basis": "cited",
+      "sources": [
+        "fema-msc",
+        "usc-42-4012a",
+        "fws-wetlands-mapper"
+      ]
+    },
+    {
+      "id": "review-leases-and-contracts",
+      "title": "Review leases, estoppels and service contracts",
+      "instruction": "Abstract every lease and amendment and tie the rent roll to it: rent, term, options, recoveries, deposits, defaults and any right to buy the property. Check each returned estoppel against its lease and the rent roll and list every difference. In Texas, the buyer becomes liable for tenants' security deposits from the day it takes title, so confirm the amounts now. Note which leases are subordinate to a mortgage and which SNDAs exist. List service contracts with their termination notice periods, mark which to keep, and check what the contract says the seller must terminate.",
+      "mode": "agent",
+      "modeBasis": "Leases, estoppels, the rent roll and service contracts are documents an agent can abstract and compare.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "calendar-dd-deadlines"
+      ],
+      "consumes": [
+        "rent-roll",
+        "tenant-estoppel",
+        "snda",
+        "purchase-and-sale-agreement"
+      ],
+      "produces": [
+        "lease-abstract"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-93",
+        "tx-prop-92"
+      ],
+      "typeNotes": {
+        "industrial": "With a single tenant, its lease and estoppel carry the deal; read its renewal, expansion, purchase and termination rights closely.",
+        "multifamily": "Residential leases fall under Property Code chapter 92, which makes the new owner give each resident a signed statement of the deposit it holds. A lease-file audit against the rent roll often stands in for resident estoppels; the contract says which.",
+        "office": "Read operating-expense caps, base years and audit rights; they decide how much of the expenses the leases actually recover.",
+        "retail": "Read co-tenancy, exclusive-use and radius clauses and any percentage rent; they change the income when tenants change."
+      }
+    },
+    {
+      "id": "update-underwriting",
+      "title": "Re-run the underwriting with what diligence found",
+      "instruction": "Put the findings into the model: repair and replacement costs from the condition report, rents and recoveries as the leases and estoppels actually read, current tax and insurance quotes, and the cost of curing any title, survey, zoning or environmental issue. Re-run returns and debt sizing and compare them with the approved underwriting. Write a short memo listing each finding, its cost and the ask: a price credit, a seller repair, an extension or no change.",
+      "mode": "agent",
+      "modeBasis": "This is modeling and writing from reports already in the deal file.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "phase-i-site-assessment",
+        "property-condition-assessment",
+        "send-title-objections",
+        "confirm-zoning-and-use",
+        "check-flood-and-wetlands",
+        "review-leases-and-contracts"
+      ],
+      "calculators": [
+        "returns-sensitivity",
+        "debt-sizing"
+      ],
+      "market": "deal-pipeline-underwriting",
+      "consumes": [
+        "underwriting-model",
+        "phase-i-esa",
+        "property-condition-assessment",
+        "lease-abstract",
+        "title-commitment",
+        "survey",
+        "zoning-report"
+      ],
+      "produces": [
+        "underwriting-model",
+        "ic-memo"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "jv-partner-approval",
+      "title": "Get the JV partner's approval before the deposit goes hard",
+      "instruction": "Check the JV agreement's list of major decisions; going hard on the deposit, waiving diligence items and changing the price commonly need the capital partner's written consent. Send the partner the diligence memo and the updated model early enough for its own review to finish before the deadline, and get the consent in writing.",
+      "mode": "human-online",
+      "modeBasis": "The consent is the capital partner's own decision under the JV agreement.",
+      "actor": "investor",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "update-underwriting"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement",
+        "ic-memo"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "decide-go-no-go",
+      "title": "Decide go or no-go before the deposit goes hard",
+      "instruction": "A principal decides with the memo in hand, before the feasibility deadline. Go: let the period run or send any approval notice the contract requires, and confirm the deposit's status with the escrow agent. Renegotiate: counsel puts any price or term change, or an extension, in an amendment both sides sign before the deadline. No-go: counsel delivers the termination notice by the contract's method before the deadline and asks the escrow agent to return the deposit. Never rely on a verbal extension.",
+      "mode": "human-online",
+      "modeBasis": "Committing or releasing the deposit is the principal's decision, and the notice binds the buyer.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "update-underwriting",
+        "jv-partner-approval"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "ic-memo",
+        "purchase-and-sale-agreement",
+        "earnest-money-receipt"
+      ],
+      "basis": "practitioner"
+    }
+  ],
+  "outlineSteps": []
+}

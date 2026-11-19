@@ -1,0 +1,34 @@
+{
+  "id": "hire-property-manager",
+  "slug": "hire-property-manager",
+  "kind": "process",
+  "title": "Hire and oversee the property manager",
+  "summary": "Choose a manager, sign the management agreement and set the reporting and approval rules.",
+  "phase": "operate",
+  "order": 305,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Decide whether to self-manage or hire a manager",
+    "Write down the services the property needs",
+    "Budget the management fee at a market rate",
+    "Ask candidates for proposals",
+    "Interview candidates on leasing, collections, maintenance and reporting",
+    "Check references and test the manager's market data",
+    "Set the reporting package and approval limits",
+    "Negotiate and sign the management agreement",
+    "Hand over records, accounts and keys",
+    "Review the manager's performance each year"
+  ]
+}

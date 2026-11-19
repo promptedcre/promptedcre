@@ -1,0 +1,34 @@
+{
+  "id": "keep-investor-register-current",
+  "slug": "keep-investor-register-current",
+  "kind": "process",
+  "title": "Keep the investor register current",
+  "summary": "Record transfers, address changes and tax form updates so distributions and notices reach the right people.",
+  "phase": "report",
+  "order": 430,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Keep one register as the record for every investor",
+    "Record each investor's legal name, ownership and contact details",
+    "Record payment instructions and confirm any change by phone",
+    "Collect and file each investor's tax form",
+    "Read the transfer terms before recording any transfer",
+    "Record each transfer with the approvals and documents behind it",
+    "Reconcile the register to capital accounts and distributions",
+    "Log every change with its date and source",
+    "Limit who can change the register",
+    "Ask investors to confirm their details on a set schedule"
+  ]
+}

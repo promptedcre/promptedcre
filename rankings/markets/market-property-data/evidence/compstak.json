@@ -1,0 +1,35 @@
+{
+  "vendor": "compstak",
+  "collected": "2026-11-12",
+  "coverage": {},
+  "links": {},
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://compstak.com/",
+      "excerpt": "Introducing CompStak One Connect: Access trusted CRE intelligence anywhere your team works.",
+      "fetched": "2026-11-12",
+      "note": "Homepage was readable on first request only; later requests to compstak.com returned a bot challenge or 403, so no further pages were recorded.",
+      "hash": "8d930abfce09c412fa251b871f11d2f3f77f905e3fe7565f1d75c40994b0185e"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://compstak.com/",
+      "excerpt": "Commercial real estate data crowdsourcing platform for brokers, appraisers, and researchers. Contribute the comps you have to unlock the comps you need.",
+      "fetched": "2026-11-12",
+      "hash": "3cf7fe3c003a2e1b3e122c245b37ab925d4434291c19d2a003061904edb774ef"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://compstak.com/",
+      "excerpt": "Verified lease, sale, loan, and property data, delivered anywhere your team already works.",
+      "fetched": "2026-11-12",
+      "hash": "ecc49ebba3610b413979e7d8592970900980705fc21b30b54a82972cfb120346"
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "vendor": "tx-sosportal",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "6c40aab31a2b83789f3131653a405163a339452fe27ae3192411c00e7d4544e2",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The coverage check looked for a developer or API page and found none, noting that the portal and forms pages describe browser use only.",
+      "missing": "No API documentation, developer page or vendor claim of an API for filings, orders or searches."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Nothing in the pack mentions an MCP server.",
+      "missing": "No MCP server, setup steps or announcement of one."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Nothing in the pack mentions a CLI, an SDK, code samples or a public code repository.",
+      "missing": "No vendor-maintained CLI or SDK on a package registry or public repository, and no code samples."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No webhooks or event subscriptions appear, and the only sign-up shown is an email list for modernization news rather than events on a customer's filings.",
+      "missing": "No webhook or event subscription for filings, orders or searches; na does not apply because filings change on the customer's behalf."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The only credentials described are portal logins protected by multi-factor authentication, with no API keys, tokens or OAuth clients.",
+      "missing": "No API keys, tokens or OAuth clients and no documented scopes, roles or permissions; na does not apply because the pack shows no API that works without credentials."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No OpenAPI, Swagger, GraphQL or other machine-readable spec appears, and the coverage check found no API at all.",
+      "missing": "No machine-readable API specification, public or behind a login."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows only HTML pages and PDF forms, with no llms.txt file or Markdown versions of the documentation.",
+      "missing": "No llms.txt file and no Markdown documentation pages."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No sandbox, test mode or developer environment appears, and saving filings as drafts is a feature of the live portal rather than a test environment.",
+      "missing": "No self-serve or on-request sandbox; na does not apply because the portal submits filings rather than only reading published data."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No bulk export or download in an open format appears, as the pack only describes retrieving individual filings from the My Submissions page.",
+      "missing": "No documented bulk export of filings or entity records in CSV, JSON, Excel or another open format, and no file format is stated for retrieved filings."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "full",
+      "quality": 6,
+      "evidence": [
+        "c7",
+        "c8",
+        "c9",
+        "c11"
+      ],
+      "rationale": "The portal is described as available 24/7 with a fee per search, accepting ACH and credit card, and taking business filings online, with no sales call or demo mentioned anywhere.",
+      "missing": "The pack does not show the account registration page or steps directly, and does not explain what the discontinued Client Accounts were."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c8",
+        "c12",
+        "c13"
+      ],
+      "rationale": "The Form 806 fee schedule linked from the public forms page lists a $300 certificate of formation fee and $1 per search, and the current SOSPortal page confirms the $1 search fee.",
+      "missing": "The fee schedule PDF still names SOSDirect, so the pack does not confirm it was updated for SOSPortal, and the $300 formation fee comes from a collector's note rather than a quoted line."
+    },
+    {
+      "story": "fb-start",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows filings started only by people in the browser portal, and the coverage check found no API or developer page through which an agent could create one.",
+      "missing": "No API documentation for creating filings, no programmatic creation of drafts or prefilled forms, and no partner integration."
+    },
+    {
+      "story": "fb-status",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Status can be checked only on the browser-based My Submissions page, and the coverage check found no API or structured feed.",
+      "missing": "No API or structured feed returning filing or order status, and no email status notices."
+    },
+    {
+      "story": "fb-records",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Filed documents can be retrieved only from the browser-based My Submissions page, and the coverage check found no API that returns them.",
+      "missing": "No API returning filed documents or certificates, and no download links sent by email."
+    }
+  ]
+}

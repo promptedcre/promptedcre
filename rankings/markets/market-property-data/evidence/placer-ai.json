@@ -1,0 +1,136 @@
+{
+  "vendor": "placer-ai",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://docs.placer.ai/docs",
+      "found": true,
+      "note": "Public documentation for Data Feeds, the Placer API and the Placer MCP, with an llms.txt index."
+    },
+    "api": {
+      "url": "https://docs.placer.ai/reference/getting-started.md",
+      "found": true,
+      "note": "Public Placer API (PAPI) reference; access needs a paying account with the API add-on."
+    },
+    "pricing": {
+      "url": "https://www.placer.ai/pricing",
+      "found": false,
+      "note": "Page titled customized subscription packages; shows Contact Sales and no prices."
+    },
+    "changelog": {
+      "url": "https://docs.placer.ai/changelog",
+      "found": true,
+      "note": "Newest entry is labelled over 1 year ago."
+    }
+  },
+  "links": {
+    "docs": "https://docs.placer.ai/docs",
+    "api": "https://docs.placer.ai/reference/welcome-to-papi",
+    "mcp": "https://docs.placer.ai/page/placer-mcp"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://docs.placer.ai/docs",
+      "excerpt": "For AI agents: the docs index is at https://docs.placer.ai/llms.txt. Append .md to any documentation page URL to get its markdown version.",
+      "fetched": "2026-11-12",
+      "hash": "64ea3440938355536fcd8a4a3945df9ac4e3b77c75e9c42ec6287e5182f80e86"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://docs.placer.ai/reference/getting-started.md",
+      "excerpt": "To use PAPI, you need a paying Placer account and have the Placer API add-on enabled.",
+      "fetched": "2026-11-12",
+      "hash": "c234a2f01e7afec2204fe9ed1497a0be6280a346e5db0b8cb40952c982cd25c8"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://docs.placer.ai/reference/getting-started.md",
+      "excerpt": "Contact your customer success manager to provide you with an API Key.",
+      "fetched": "2026-11-12",
+      "hash": "470026fa5dc2340a064b1722ab1477756ca3757a8d33e665d05b0a1c83f3c0c6"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://docs.placer.ai/reference/getting-started.md",
+      "excerpt": "Each Placer account has its own usage plan, including the costs of issuing API calls, and the maximum weekly quota.",
+      "fetched": "2026-11-12",
+      "hash": "33b7cf2ea273916fb3a69f010311a12528cd821bd6da0b6bee89d5972c6d0ea4"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://docs.placer.ai/reference/welcome-to-papi.md",
+      "excerpt": "The Placer API allows developers and data analysts to extract Placer’s location analytics programmatically for use in a variety of 3rd party applications.",
+      "fetched": "2026-11-12",
+      "hash": "853efedb879c864348771d5af80880d6cfea5b8e768121cb19ce41159ede94bb"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://docs.placer.ai/llms.txt",
+      "excerpt": "This service returns a list of Placer managed entities in a particular area.",
+      "fetched": "2026-11-12",
+      "note": "Search for Placer Entities endpoint (POI search by area); endpoint list also includes custom POI create, update and delete.",
+      "hash": "c27eb61e603e7c808241f30269f60bc34cab1d19aad5af2d088cb194026e56cc"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://docs.placer.ai/page/placer-mcp",
+      "excerpt": "Placer MCP is an enterprise feature and must be enabled per account to access.",
+      "fetched": "2026-11-12",
+      "hash": "86fb5d8072c257ca515f05254c678946a3c83f77435c237f2099d39b9de75cbc"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://docs.placer.ai/page/placer-mcp",
+      "excerpt": "An AI assistant that supports remote MCP servers over streamable HTTP with OAuth (Claude, ChatGPT, GitHub Copilot, Cursor, and others).",
+      "fetched": "2026-11-12",
+      "hash": "a246b7fd61d368db6b8076d7fc7515cb1e13eff74295ac5b974df0a27ea617cb"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://docs.placer.ai/llms.txt",
+      "excerpt": "Access feeds via Snowflake",
+      "fetched": "2026-11-12",
+      "note": "Data Feeds docs list Snowflake and Amazon SNS setup pages.",
+      "hash": "2145c20da83dad2e09e175801d19b61e7d2442fe93badaf848f2ea2e713e4586"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://docs.placer.ai/changelog",
+      "excerpt": "Latest Demographic Data: U.S. Census ACS 2023 & STI Popstats 2024 Available",
+      "fetched": "2026-11-12",
+      "note": "Second newest changelog entry, dated over 1 year ago.",
+      "hash": "6c742395549c0aec46775a6046fa1d36cd70e69b35941f5e341e9bda05a4a36e"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://www.placer.ai/pricing",
+      "excerpt": "Placer.ai Pricing & Cost | Customized Subscription Packages",
+      "fetched": "2026-11-12",
+      "note": "Page title; the page text shows Contact Sales and no prices.",
+      "hash": "258d9c9e273b603bb32aefa68c9644e227e37a6cf64c078e79930f7f8ddb7af4"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://docs.placer.ai/llms.txt",
+      "excerpt": "# Placer Documentation",
+      "note": "llms.txt: GET 200, 13220 bytes",
+      "fetched": "2026-11-12",
+      "hash": "1b44db4027bac38465c2448dd2fff793ae6c79d9638b928ec68c1310cf229fce"
+    }
+  ]
+}

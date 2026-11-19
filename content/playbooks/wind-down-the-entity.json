@@ -1,0 +1,35 @@
+{
+  "id": "wind-down-the-entity",
+  "slug": "wind-down-the-entity",
+  "kind": "process",
+  "title": "Wind down the deal entity",
+  "summary": "File final returns, close accounts, terminate the entity and keep the records the law requires.",
+  "phase": "exit",
+  "order": 535,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Read the governing agreement's dissolution terms",
+    "Confirm the sale has closed and the final distribution has gone out",
+    "Pay or reserve for remaining liabilities and claims",
+    "Cancel contracts, insurance and utility accounts no longer needed",
+    "File the final federal return and final K-1s",
+    "File the final state tax reports",
+    "Release any remaining holdback to investors",
+    "Close the bank accounts",
+    "File the entity's termination with the state",
+    "Tell investors the entity is closed",
+    "Set a retention schedule and store the records"
+  ]
+}

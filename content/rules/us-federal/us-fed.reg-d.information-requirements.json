@@ -1,0 +1,41 @@
+{
+  "id": "us-fed.reg-d.information-requirements",
+  "jurisdiction": "us-federal",
+  "title": "What non-accredited buyers must receive in a Rule 506(b) offering (Rule 502(b))",
+  "rule": "If a Rule 506(b) issuer sells to any non-accredited investor, it must give that buyer, a reasonable time before sale and to the extent material, the information Rule 502(b)(2) lists: for a non-reporting issuer, the kind of disclosure Form 1-A Part II requires (or a registration form's Part I if Regulation A is unavailable) and Form 1-A financial statements, plus a description of written material given to accredited investors, the resale limits, and a chance to ask questions.",
+  "citation": {
+    "authority": "17 CFR 230.502(b)",
+    "url": "https://www.ecfr.gov/current/title-17/section-230.502"
+  },
+  "asOf": "2026-11-09",
+  "lastVerified": "2026-11-12",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Rule 502(b) or to the Form 1-A financial statement requirements it points to.",
+  "sources": [
+    {
+      "id": "ecfr-230-502",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.502",
+      "title": "17 CFR 230.502, General conditions to be met",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "quote": "the issuer shall furnish the information specified in paragraph (b)(2) of this section to such purchaser a reasonable time prior to sale",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-506b-page",
+      "url": "https://www.sec.gov/resources-small-businesses/exempt-offerings/private-placements-rule-506b",
+      "title": "Private Placements - Rule 506(b)",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-cdi-securities-act-rules",
+      "url": "https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/securities-act-rules",
+      "title": "Securities Act Rules: Compliance and Disclosure Interpretations (Sections 255 to 260)",
+      "publisher": "U.S. Securities and Exchange Commission, Division of Corporation Finance",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    }
+  ]
+}

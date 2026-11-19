@@ -1,0 +1,101 @@
+{
+  "id": "offering-memorandum",
+  "name": "Offering memorandum (sale)",
+  "what": "The seller's or listing broker's marketing package for a property: description, rent roll summary, operating history and pricing guidance.",
+  "fields": [
+    {
+      "key": "listingBroker",
+      "label": "Listing broker",
+      "type": "string",
+      "definition": "The brokerage and the agents named as the contacts for the offering."
+    },
+    {
+      "key": "receivedDate",
+      "label": "Date received",
+      "type": "date",
+      "definition": "The date the package was received, and the issue date printed on it if there is one."
+    },
+    {
+      "key": "property",
+      "label": "Property",
+      "type": "text",
+      "definition": "The address, property type and a short description of the buildings and land as the memorandum presents them."
+    },
+    {
+      "key": "buildingArea",
+      "label": "Building area",
+      "type": "integer",
+      "unit": "SF",
+      "definition": "The building square feet stated; note whether it is rentable or gross area and check it against the rent roll."
+    },
+    {
+      "key": "landArea",
+      "label": "Land area",
+      "type": "string",
+      "definition": "The site size as stated, in acres or square feet, with the unit."
+    },
+    {
+      "key": "yearBuilt",
+      "label": "Year built",
+      "type": "integer",
+      "definition": "The year built, and any renovation year the memorandum gives."
+    },
+    {
+      "key": "askingPrice",
+      "label": "Asking price",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The stated asking price; null when the offering is unpriced."
+    },
+    {
+      "key": "pricingGuidance",
+      "label": "Pricing guidance",
+      "type": "text",
+      "definition": "Any price, cap rate or per-square-foot guidance given in place of an asking price, and where it was given."
+    },
+    {
+      "key": "occupancy",
+      "label": "Occupancy",
+      "type": "integer",
+      "unit": "percent",
+      "definition": "The share of the building stated as leased or occupied, and the date it speaks to."
+    },
+    {
+      "key": "statedNoi",
+      "label": "Stated net operating income",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The net operating income the memorandum headlines."
+    },
+    {
+      "key": "noiBasis",
+      "label": "Basis of stated NOI",
+      "type": "enum",
+      "definition": "What the stated income is: trailing actual, in-place annualized, year-one projected or stabilized pro forma, read from the table's heading and notes."
+    },
+    {
+      "key": "statedCapRate",
+      "label": "Stated cap rate",
+      "type": "string",
+      "definition": "The cap rate the memorandum shows, with the income and price it is figured on."
+    },
+    {
+      "key": "tenantSummary",
+      "label": "Tenant summary",
+      "type": "list",
+      "definition": "Each tenant the memorandum lists with its area, rent, expense basis and lease expiration, marked with the page it came from."
+    },
+    {
+      "key": "presentedUpside",
+      "label": "Upside presented",
+      "type": "text",
+      "definition": "What the broker presents as upside, such as rents below market, vacant space or excess land; treat it as the seller's claim until tested."
+    },
+    {
+      "key": "offerProcess",
+      "label": "Offer process",
+      "type": "text",
+      "definition": "Tour dates, the call-for-offers date, what an offer must include, and any confidentiality agreement the package requires."
+    }
+  ]
+}

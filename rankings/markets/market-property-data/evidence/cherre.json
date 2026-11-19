@@ -1,0 +1,107 @@
+{
+  "vendor": "cherre",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://cherre.com/",
+      "found": false,
+      "note": "No public documentation site found; homepage links only to a support service desk portal (cherre.atlassian.net) and status page. docs.cherre.com does not resolve."
+    },
+    "api": {
+      "url": "https://cherre.com/products/platform/",
+      "found": false,
+      "note": "Platform page describes the API in marketing text only; no public developer or API reference page found."
+    },
+    "pricing": {
+      "url": "https://cherre.com/request-info/",
+      "found": false,
+      "note": "No pricing page (cherre.com/pricing returns 404); site offers Request a Demo and Request Info forms."
+    },
+    "changelog": {
+      "url": "https://blog.cherre.com/",
+      "found": false,
+      "note": "No changelog or release notes found; the blog carries announcements and press only."
+    }
+  },
+  "links": {},
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://cherre.com/products/platform/",
+      "excerpt": "Search Across Your Data - Cherre’s API allows you to retrieve data from every connected data set in a single query.",
+      "fetched": "2026-11-12",
+      "hash": "231d07d12d67d61c8ef335eaf43c4c2f174f20c42a2946de01f701051b923ed6"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://cherre.com/products/platform/",
+      "excerpt": "Large Data Pulls - Cherre’s API can sit on top of a BigQuery data warehouse, enabling you to pull thousands of records at a time",
+      "fetched": "2026-11-12",
+      "hash": "6dc33217131ee04527e76905e251c2ead7cad191b6cc56e9b5a7fa9cfe8ebb54"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://cherre.com/products/platform/",
+      "excerpt": "Geospatial Queries - The API offers out-of-the-box geospatial queries for all common PostGIS functions to power your custom searches.",
+      "fetched": "2026-11-12",
+      "hash": "9b4cd3504bcfc42646d68689dc753941dd47e9b2f43701c38621fa9e0642316f"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://cherre.com/products/platform/",
+      "excerpt": "Cherre can egress to your existing data warehouse, BI tools, deal management systems, valuation system, and more.",
+      "fetched": "2026-11-12",
+      "hash": "400efd00c37bb8789326125dbdf84dc1897ec0f43d15df5c9517afb5107d3913"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://cherre.com/products/agent-studio/",
+      "excerpt": "Define access controls for your agents, and ensure every interaction meets your security and compliance standards.",
+      "fetched": "2026-11-12",
+      "hash": "8e290e75eb80154612b294194c751d74d813cccae66bcd8f49d206cb1de933c0"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://blog.cherre.com/2026/06/26/end-of-the-closed-stack/",
+      "excerpt": "If your knowledge graph is MCP-compliant, any agent can query it.",
+      "fetched": "2026-11-12",
+      "note": "Opinion post about MCP; does not announce a Cherre MCP server or give setup steps.",
+      "hash": "e1baf5d6e00fc51e9fb6a90689148d2b71cae330d09d9b9ae9df6f1e2a81c3dc"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://cherre.com/products/agent-studio/",
+      "excerpt": "Build and Deploy Powerful AI Agents Leveraging All Your Connected Data.",
+      "fetched": "2026-11-12",
+      "note": "Page offers Talk to Our Team; no self-serve sign-up or pricing.",
+      "hash": "4f00bbe88c938e4677f92c83d8bc4f9c66c525da8f3337f89238d945a4f21a88"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://blog.cherre.com/2026/07/14/realpage-acquires-cherre",
+      "excerpt": "RealPage, Inc. ... today announced it has completed its acquisition of Cherre",
+      "fetched": "2026-11-12",
+      "note": "Posted Jul 14, 2026; Cherre is now part of RealPage.",
+      "hash": "5cea45fd88e00cb17aec935ed132bcb35bc130a1791fd42939953d599f370afd"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://cherre.com/",
+      "excerpt": "Request a Demo",
+      "fetched": "2026-11-12",
+      "note": "Homepage calls to action are demo requests; no pricing or free trial.",
+      "hash": "f030feecfd47a73eae4368f56d0385362ac4f2a8a9b98084fdc69bb0081fd158"
+    }
+  ]
+}

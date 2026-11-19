@@ -1,0 +1,58 @@
+{
+  "id": "us-tx.franchise-tax.basics",
+  "jurisdiction": "us-tx",
+  "title": "Texas franchise tax: who is taxable, when reports are due, and the no-tax-due threshold",
+  "rule": "Texas franchise tax applies to taxable entities formed in Texas or doing business there, including LLCs and limited partnerships; a general partnership owned directly and entirely by natural persons, without limited liability, is not taxable. Reports are due May 15, starting the year after the entity becomes subject to the tax. For reports due in 2026 and 2027, an entity with revenue at or below $2.65 million owes no tax and files only a Public Information or Ownership Information Report.",
+  "citation": {
+    "authority": "Tex. Tax Code 171.0002, 171.001, 171.002(d) and 171.202; 34 Tex. Admin. Code 3.584(c)",
+    "url": "https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "The no-tax-due threshold is adjusted on January 1 of each even-numbered year (next in 2028); also watch amendments to Tax Code chapter 171 and Comptroller Rule 3.584.",
+  "sources": [
+    {
+      "id": "tx-tax-code-171",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.171.htm",
+      "title": "Texas Tax Code, Chapter 171 (Sections 171.0002, 171.001, 171.002, 171.006, 171.202 and 171.203)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-34-3-584",
+      "url": "https://www.law.cornell.edu/regulations/texas/34-Tex-Admin-Code-SS-3-584",
+      "title": "34 Tex. Admin. Code 3.584, Margin: Reports and Payments",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-14",
+      "quote": "due no later than May 15 of the year following the year the entity became subject to the tax",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-franchise",
+      "url": "https://comptroller.texas.gov/taxes/franchise/",
+      "title": "Franchise Tax (due dates, and rates and thresholds for 2026 and 2027)",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-14",
+      "quote": "The annual franchise tax report is due May 15.",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-filing-requirements",
+      "url": "https://comptroller.texas.gov/taxes/franchise/filing-requirements.php",
+      "title": "Requirements for Reporting and Paying Franchise Tax",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-14",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-98-806",
+      "url": "https://comptroller.texas.gov/taxes/publications/98-806.php",
+      "title": "Franchise Tax Overview (Publication 98-806)",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-14",
+      "tier": "primary"
+    }
+  ]
+}

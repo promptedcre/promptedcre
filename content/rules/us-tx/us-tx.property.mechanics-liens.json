@@ -1,0 +1,25 @@
+{
+  "id": "us-tx.property.mechanics-liens",
+  "jurisdiction": "us-tx",
+  "title": "Texas mechanic's liens on commercial property: the affidavit deadline",
+  "rule": "On a project other than residential construction, an original contractor claiming a mechanic's lien files its affidavit with the county clerk by the 15th day of the fourth month after the month its work was completed, terminated or abandoned. Other claimants file by the 15th day of the fourth month after the month they last furnished labor or materials; retainage claims follow a separate deadline. A lien's inception is generally the start of visible construction or delivery of materials; a lien for design, survey, landscaping or demolition work begins when its affidavit is recorded and is not enforceable against a grantee or purchaser who acquired an interest before then.",
+  "citation": {
+    "authority": "Tex. Prop. Code 53.003(e) (as amended by S.B. 929, effective May 21, 2025), 53.021, 53.052 (as amended by H.B. 2237, effective January 1, 2022) and 53.124 (as amended by S.B. 929, effective May 21, 2025)",
+    "url": "https://statutes.capitol.texas.gov/Docs/PR/htm/PR.53.htm"
+  },
+  "asOf": "2026-11-14",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Property Code chapter 53, rewritten by H.B. 2237 effective January 1, 2022; S.B. 929 amended section 53.124 effective May 21, 2025, so liens of architects, engineers, surveyors, landscapers and demolition workers date from recording of the affidavit. Since S.B. 929, a chapter 53 deadline that falls on a Saturday, Sunday or legal holiday moves to the next day that is none of those (53.003(e)). Residential construction projects run on shorter deadlines.",
+  "sources": [
+    {
+      "id": "tx-prop-53",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.53.htm",
+      "title": "Texas Property Code, Chapter 53 (Mechanic's, contractor's, or materialman's lien)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "not later than the 15th day of the fourth month after the month in which the original contractor's work was completed, terminated, or abandoned",
+      "tier": "primary"
+    }
+  ]
+}

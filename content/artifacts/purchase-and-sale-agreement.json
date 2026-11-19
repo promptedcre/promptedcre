@@ -1,0 +1,106 @@
+{
+  "id": "purchase-and-sale-agreement",
+  "name": "Purchase and sale agreement",
+  "what": "The signed contract to buy the property: price, deposits, deadlines, conditions, representations and remedies.",
+  "fields": [
+    {
+      "key": "effectiveDate",
+      "label": "Effective date",
+      "type": "date",
+      "definition": "The date every contract period runs from, as the contract defines it, such as the last signature or the escrow agent's receipt of the signed contract."
+    },
+    {
+      "key": "buyer",
+      "label": "Buyer",
+      "type": "string",
+      "definition": "The buying entity, and whether and to whom it may assign the contract, with any notice the assignment needs."
+    },
+    {
+      "key": "seller",
+      "label": "Seller",
+      "type": "string",
+      "definition": "The selling entity; compare it with the owner of record on the title commitment."
+    },
+    {
+      "key": "property",
+      "label": "Property",
+      "type": "text",
+      "definition": "What is sold: the land by legal description or exhibit, the improvements, personal property, leases, service contracts and intangibles."
+    },
+    {
+      "key": "purchasePrice",
+      "label": "Purchase price",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The price, and any part of it paid other than in cash at closing."
+    },
+    {
+      "key": "earnestMoney",
+      "label": "Earnest money",
+      "type": "list",
+      "definition": "Each deposit: amount, the escrow agent holding it, the date it is due, the date it becomes non-refundable, and the events that return it."
+    },
+    {
+      "key": "feasibilityDays",
+      "label": "Feasibility period",
+      "type": "integer",
+      "unit": "days",
+      "definition": "Days the buyer has to investigate and terminate, with how the period ends and how notice of termination must be given."
+    },
+    {
+      "key": "titleAndSurveyPeriods",
+      "label": "Title and survey periods",
+      "type": "text",
+      "definition": "When the commitment and survey are due, the buyer's objection period, the seller's cure period, and what happens if the seller does not cure."
+    },
+    {
+      "key": "financingCondition",
+      "label": "Financing condition",
+      "type": "text",
+      "definition": "Whether closing depends on the buyer getting a loan, the deadline, and how the buyer exercises it; none if the contract has no such condition."
+    },
+    {
+      "key": "closingDate",
+      "label": "Closing date",
+      "type": "date",
+      "definition": "The scheduled closing date, or the formula that sets it, and each extension right with its cost and notice deadline."
+    },
+    {
+      "key": "sellerDeliverables",
+      "label": "Seller deliverables",
+      "type": "list",
+      "definition": "What the seller must deliver during diligence and at closing, such as leases, operating statements, service contracts, estoppels, SNDAs, the deed, assignments and certificates, each with its due date."
+    },
+    {
+      "key": "representations",
+      "label": "Seller representations",
+      "type": "list",
+      "definition": "Each seller representation, how long it survives closing, and any cap or minimum on a claim for its breach."
+    },
+    {
+      "key": "closingConditions",
+      "label": "Closing conditions",
+      "type": "list",
+      "definition": "Conditions to each side's duty to close, such as estoppels, issuance of the title policy and representations still being true."
+    },
+    {
+      "key": "remedies",
+      "label": "Default remedies",
+      "type": "text",
+      "definition": "What each side can do if the other defaults: keep or recover the deposit, seek specific performance or damages, and any cap on recovery."
+    },
+    {
+      "key": "casualtyAndCondemnation",
+      "label": "Casualty and condemnation",
+      "type": "text",
+      "definition": "What happens if the property is damaged or taken before closing: the size thresholds, termination rights, and who gets insurance proceeds or the award."
+    },
+    {
+      "key": "nonForeignCertification",
+      "label": "Seller's non-foreign certification",
+      "type": "boolean",
+      "definition": "Whether the contract requires the seller to deliver at closing a signed certification that it is not a foreign person, or provides for withholding instead.",
+      "authority": "26 CFR 1.1445-2(b)(2)"
+    }
+  ]
+}

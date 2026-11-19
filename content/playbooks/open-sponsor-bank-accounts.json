@@ -1,0 +1,23 @@
+{
+  "id": "open-sponsor-bank-accounts",
+  "slug": "open-sponsor-bank-accounts",
+  "kind": "process",
+  "title": "Open the sponsor's bank accounts",
+  "summary": "Open operating accounts for the sponsor entity and set up who can approve payments and wires.",
+  "phase": "stand-up",
+  "order": 25,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": []
+}

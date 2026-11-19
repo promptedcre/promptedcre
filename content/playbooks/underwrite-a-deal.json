@@ -1,0 +1,508 @@
+{
+  "id": "underwrite-a-deal",
+  "slug": "underwrite-a-deal",
+  "kind": "process",
+  "title": "Underwrite a deal",
+  "summary": "Build the cash flow, the debt and the returns from the rent roll and operating statements, and test what has to go right.",
+  "phase": "acquire",
+  "order": 220,
+  "featured": true,
+  "depth": "full",
+  "review": "practitioner-reviewed",
+  "lastVerified": "2026-11-12",
+  "requires": [
+    "screen-deal-buy-box"
+  ],
+  "consumes": [
+    "deal-screen",
+    "buy-box",
+    "offering-memorandum",
+    "rent-roll",
+    "trailing-12",
+    "loan-term-sheet"
+  ],
+  "produces": [
+    "lease-abstract",
+    "underwriting-model",
+    "ic-memo"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "tx-tax-code-23",
+      "url": "https://statutes.capitol.texas.gov/Docs/TX/htm/TX.23.htm",
+      "title": "Texas Tax Code, Chapter 23 (Sections 23.01, 23.0101 and 23.231)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "all taxable property is appraised at its market value as of January 1",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-1",
+      "url": "https://statutes.capitol.texas.gov/Docs/TX/htm/TX.1.htm",
+      "title": "Texas Tax Code, Chapter 1 (Section 1.04, Definitions)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "the price at which a property would transfer for cash or its equivalent under prevailing market conditions",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-25",
+      "url": "https://statutes.capitol.texas.gov/Docs/TX/htm/TX.25.htm",
+      "title": "Texas Tax Code, Chapter 25 (Section 25.18, Periodic reappraisals)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "at least once every three years",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-26",
+      "url": "https://statutes.capitol.texas.gov/Docs/TX/htm/TX.26.htm",
+      "title": "Texas Tax Code, Chapter 26 (Sections 26.09, 26.16 and 26.17)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "shall post on the Internet website maintained by the county the following information for the most recent five tax years",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-42-4012a",
+      "url": "https://www.law.cornell.edu/uscode/text/42/4012a",
+      "title": "42 U.S.C. 4012a, Flood insurance purchase and compliance requirements and escrow accounts",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "quote": "covered for the term of the loan by flood insurance in an amount at least equal to the outstanding principal balance of the loan",
+      "tier": "primary"
+    },
+    {
+      "id": "floodsmart-coverage",
+      "url": "https://agents.floodsmart.gov/topics/selling-flood-insurance/coverage",
+      "title": "Types of Coverage (National Flood Insurance Program limits)",
+      "publisher": "FEMA National Flood Insurance Program (FloodSmart for agents)",
+      "accessed": "2026-11-12",
+      "quote": "You can insure your client’s non-residential building for up to $500,000.",
+      "tier": "primary"
+    },
+    {
+      "id": "twia-overview",
+      "url": "https://www.twia.org/about-us/overview/",
+      "title": "TWIA Overview: coverage and eligibility",
+      "publisher": "Texas Windstorm Insurance Association",
+      "accessed": "2026-11-12",
+      "quote": "Applicants must have been denied coverage by at least one insurer in the private market",
+      "tier": "secondary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "quote": "To make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "request-full-data",
+      "title": "Request the full operating data",
+      "instruction": "Draft the request to the broker for what underwriting needs beyond the offering: the current rent roll, every lease and amendment, monthly operating statements for the trailing 12 months and the prior two years, the latest tax bills and appraisal notices, insurance policies and loss runs, utility bills, service contracts, and the capital spending history. Ask for the general ledger if the statements look summarized. A person approves the request before it goes out; log what arrives and what is still missing.",
+      "mode": "agent",
+      "modeBasis": "Drafting and tracking a document request is agent work; sending it speaks for the sponsor, so a person approves each one.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "consumes": [
+        "deal-screen"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "abstract-and-tie-leases",
+      "title": "Abstract the leases and tie them to the rent roll",
+      "instruction": "Abstract each lease: parties, premises, term, rent and scheduled increases, expense recoveries, security deposit, options to renew, expand, terminate or purchase, rights of first refusal, assignment rights, and any free rent or allowance still owed. Tie every rent roll line to its lease, and every lease to deposits in the operating statements. List each mismatch, such as a rent the lease does not support, a lease missing from the roll, or a tenant paying late.",
+      "mode": "agent",
+      "modeBasis": "Lease abstraction and reconciliation are document work an agent can do from the files.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "request-full-data"
+      ],
+      "consumes": [
+        "rent-roll",
+        "trailing-12"
+      ],
+      "produces": [
+        "lease-abstract"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "industrial": "Single-tenant and few-tenant buildings turn on one lease: read the renewal and termination options, the tenant's maintenance and restoration duties, and any purchase option or right of first refusal closely.",
+        "multifamily": "Leases are usually on a standard form: abstract the form once, then test a sample of files against the rent roll and look at concessions, delinquency and units not producing rent.",
+        "office": "Record expense stops or base years, allowances and leasing commissions still owed, and any early termination right.",
+        "retail": "Record percentage rent and sales reporting, co-tenancy, exclusive use and go-dark clauses, and each tenant's share of common area costs."
+      }
+    },
+    {
+      "id": "normalize-operating-statement",
+      "title": "Normalize the trailing-12",
+      "instruction": "Rebuild the trailing-12 as the statement the sponsor would run. Remove one-time income and expense, and separate capital items from repairs. Replace the seller's management fee and payroll with what the sponsor will pay. Annualize items booked for only part of the year and put each item in the month it belongs. Compare income with the rent roll and expenses with the bills. Keep a line-by-line bridge from the seller's net operating income to the normalized figure.",
+      "mode": "agent",
+      "modeBasis": "Reclassifying and reconciling ledger lines is spreadsheet work; each replacement assumption is recorded for review.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "abstract-and-tie-leases"
+      ],
+      "consumes": [
+        "trailing-12",
+        "rent-roll"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "multifamily": "Compare a recent quarter, annualized, with the full year, since apartment rents and concessions move faster than commercial leases.",
+        "retail": "Reconcile common area billings to actual costs; under- or over-billed recoveries change net income."
+      }
+    },
+    {
+      "id": "project-income",
+      "title": "Project rent lease by lease",
+      "instruction": "Project income from the leases, not from a growth rate on the total. Carry contract rent and scheduled increases to each expiration. At each expiration, assume a renewal probability, months of downtime, market rent and re-leasing costs, and record where each assumption comes from, such as lease comparables or a broker's opinion. Add a general vacancy and credit loss allowance on top of known vacancies. Compare the result with the offering's pro forma and explain the difference.",
+      "mode": "agent",
+      "modeBasis": "The projection follows from the lease abstracts and sourced assumptions; a person reviews the assumptions before approval.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "normalize-operating-statement"
+      ],
+      "market": "market-property-data",
+      "consumes": [
+        "lease-abstract",
+        "offering-memorandum"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "industrial": "In a single-tenant deal one expiration can decide the outcome: model the tenant leaving as well as renewing, with downtime and re-leasing costs.",
+        "multifamily": "Model rent by unit type: new-lease and renewal pricing, any renovation premium, and the cost of turning each unit.",
+        "office": "Tenant improvement allowances and leasing commissions at each rollover are large cash costs; carry them below net operating income.",
+        "retail": "Model any percentage rent from reported sales, and what an anchor leaving would trigger under co-tenancy clauses."
+      }
+    },
+    {
+      "id": "reset-property-taxes",
+      "title": "Re-underwrite property taxes for a new owner",
+      "instruction": "Do not carry the seller's tax bill forward. Texas appraises property at market value as of January 1, appraisal districts must reappraise all property at least every three years, and a recent sale price is evidence of value. Estimate the value the district may set after the sale and multiply it by the combined rate of every taxing unit on the appraisal record; each county posts the units' adopted rates for five years. If the seller's value was held down by the temporary 20% cap on yearly increases for non-homestead property under a value threshold, the cap ends the January 1 after the sale, and the section expires December 31, 2026. Treat a later protest as upside.",
+      "mode": "agent",
+      "modeBasis": "Values and rates are public records and the arithmetic is fixed; the value estimate is an assumption a person reviews.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "normalize-operating-statement"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.tax.market-value",
+        "us-tx.tax.protest-deadline"
+      ],
+      "consumes": [
+        "deal-screen"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-23",
+        "tx-tax-code-1",
+        "tx-tax-code-25",
+        "tx-tax-code-26"
+      ],
+      "typeNotes": {
+        "industrial": "Where net leases pass taxes through, check each lease for caps or exclusions before assuming tenants absorb the increase.",
+        "multifamily": "Apartment leases rarely pass taxes through, so the whole increase comes out of net operating income.",
+        "office": "Leases with a base year or expense stop pass through only increases above the base; the owner carries the rest.",
+        "retail": "Check each tenant's share of taxes and any cap on recoverable expenses; anchors often have fixed or capped contributions."
+      }
+    },
+    {
+      "id": "set-insurance-costs",
+      "title": "Price insurance, including flood and wind",
+      "instruction": "Request an indication from an insurance broker for property, liability and any coverage the lender will require, giving the building's construction, age, roof and location; a person approves what is sent. In a special flood hazard area, a federally regulated lender will require flood insurance for the loan's term of at least the lesser of the loan balance and the program maximum; the National Flood Insurance Program covers a non-residential building up to $500,000, and qualifying private policies count. On the Texas coast, wind and hail cover may come from the Texas Windstorm Insurance Association, which requires a private insurer's denial and, with limited exceptions, certification that the building meets applicable codes.",
+      "mode": "agent",
+      "modeBasis": "An agent can assemble the property data and read the indication; the request speaks for the sponsor, so a person approves it.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "normalize-operating-statement"
+      ],
+      "rules": [
+        "us-fed.flood.mandatory-purchase"
+      ],
+      "consumes": [
+        "deal-screen"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-42-4012a",
+        "floodsmart-coverage",
+        "twia-overview"
+      ],
+      "typeNotes": {
+        "multifamily": "Loans Fannie Mae or Freddie Mac buy carry the same flood requirement; check FEMA's coverage limits for the policy type that fits the building."
+      }
+    },
+    {
+      "id": "plan-capital-and-reserves",
+      "title": "Plan capital spending and reserves",
+      "instruction": "List the capital work the property will need over the hold: roofs, paving, building systems, unit or suite upgrades, and anything the screen or a tour flagged. Price each item from bids, the seller's history or a consultant, and say which. Add the replacement reserve a lender's term sheet requires, or a placeholder marked as an assumption until there is one. Mark the plan preliminary until the property condition assessment arrives in due diligence, then update it.",
+      "mode": "agent",
+      "modeBasis": "Building the capital plan from bids, history and the screen is spreadsheet work; the estimates are assumptions a person reviews.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "normalize-operating-statement"
+      ],
+      "consumes": [
+        "deal-screen"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "size-the-debt",
+      "title": "Size the debt",
+      "instruction": "Run the debt-sizing calculator on the underwritten net operating income with the limits from a lender quote or term sheet: minimum coverage, maximum loan-to-value and minimum debt yield, plus the rate, amortization, term and any interest-only period. Record which limit binds, the loan amount, the payment and the balance due at maturity. Run it again at a higher rate or lower income to see how far the loan shrinks. Note lender reserves, fees and recourse terms that change the cash needed at closing.",
+      "mode": "agent",
+      "modeBasis": "The live calculator sizes the loan from recorded inputs; the lender's limits come from its own quote.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "project-income",
+        "reset-property-taxes",
+        "set-insurance-costs",
+        "plan-capital-and-reserves"
+      ],
+      "calculators": [
+        "debt-sizing"
+      ],
+      "consumes": [
+        "loan-term-sheet"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "run-returns",
+      "title": "Run returns and the sensitivity table",
+      "instruction": "Run the returns-sensitivity calculator with the price, closing costs, underwritten net operating income, growth, hold period, exit cap rate, sale costs and the sized loan. Record levered and unlevered IRR, equity multiple and cash-on-cash, and read the table that moves the exit cap and growth. For investor-level returns, run the waterfall-promote calculator on the levered cash flows with the deal's preferred return and promote. Compare each result with the buy box targets and name the assumption that moves the answer most.",
+      "mode": "agent",
+      "modeBasis": "Both calculators are live and run from recorded inputs; no judgment is added beyond the inputs.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "size-the-debt"
+      ],
+      "calculators": [
+        "returns-sensitivity",
+        "waterfall-promote"
+      ],
+      "market": "deal-pipeline-underwriting",
+      "consumes": [
+        "buy-box"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "write-ic-memo",
+      "title": "Write the investment committee memo",
+      "instruction": "Draft the memo: the thesis in two sentences, the property and market facts, the underwritten numbers with their sources, the debt, the returns and sensitivity, the risks and what must go right, the diligence items still open, and the recommended maximum price with the terms that matter most. Attach the model. Show where the underwriting departs from the offering memorandum and why. Keep every figure traceable to a file.",
+      "mode": "agent",
+      "modeBasis": "Drafting from the model and the files is writing work; the recommendation is for a person to accept or reject.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "run-returns"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "deal-screen"
+      ],
+      "produces": [
+        "ic-memo"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "tie-offering-projections",
+      "title": "Tie the offering's projections to the underwriting",
+      "instruction": "In a single-asset syndication the underwriting usually becomes the projections investors see. Keep one source of truth: the offering documents use the approved model's figures and disclose the assumptions and risks behind them. Federal securities law makes it unlawful, in connection with selling a security, to make an untrue statement of a material fact or to omit one needed to keep what is said from misleading. Send counsel every change to the model made after the offering documents are drafted.",
+      "mode": "agent",
+      "modeBasis": "Keeping the offering's figures matched to the model is document control; disclosure judgments go to counsel.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "write-ic-memo"
+      ],
+      "when": {
+        "structure": [
+          "syndication"
+        ]
+      },
+      "consumes": [
+        "underwriting-model",
+        "private-placement-memorandum"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5"
+      ]
+    },
+    {
+      "id": "approve-underwriting",
+      "title": "Approve the underwriting and set the maximum price",
+      "instruction": "Read the memo and the model, challenge the assumptions that move the result most, and decide: proceed, change assumptions, or pass. If proceeding, set the maximum price and the terms a letter of intent must carry, such as the deposit, the feasibility period and any financing condition. Record the decision and the approved figures in the firm file; later steps work from these numbers, not from drafts.",
+      "mode": "human-online",
+      "modeBasis": "Price is a sponsor decision, and it sets the limits for every later step.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "write-ic-memo",
+        "tie-offering-projections"
+      ],
+      "consumes": [
+        "ic-memo",
+        "underwriting-model"
+      ],
+      "produces": [
+        "ic-memo"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "fund-committee-approval",
+      "title": "Get the fund's investment committee approval",
+      "instruction": "Present the memo to the investment committee the fund's documents establish, in the form and with the quorum they require. Record the vote, any conditions and the approved price range. If the documents also need advisory committee or investor consent for this deal, for example because of a conflict or an exception to a limit, get it before a letter of intent commits the fund to exclusivity or costs.",
+      "mode": "human-online",
+      "modeBasis": "Committee members vote under the fund documents; an agent prepares the materials and records the result.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "approve-underwriting"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "consumes": [
+        "ic-memo",
+        "deal-entity-agreement"
+      ],
+      "produces": [
+        "ic-memo"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "partner-review",
+      "title": "Take the deal to the capital partner",
+      "instruction": "Send the capital partner the memo and the model, and ask for the approvals the JV agreement or term sheet gives it at this stage. Put its comments, changed assumptions and conditions into the model, and re-run the calculators if anything changes. Do not send a letter of intent the partner must approve until it has approved, in writing where the agreement requires.",
+      "mode": "human-online",
+      "modeBasis": "The capital partner's approval is its own decision; an agent prepares and tracks the materials.",
+      "actor": "investor",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "approve-underwriting"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "ic-memo",
+        "underwriting-model",
+        "jv-agreement"
+      ],
+      "basis": "practitioner"
+    }
+  ],
+  "outlineSteps": []
+}

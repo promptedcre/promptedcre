@@ -1,0 +1,47 @@
+{
+  "id": "market-property-data",
+  "name": "Market and property data",
+  "what": "Listing, comparable sale and lease, ownership and analytics data providers, plus the public sources sponsors check first.",
+  "order": 3,
+  "tasks": [
+    {
+      "id": "md-property-lookup",
+      "group": "task",
+      "title": "Look up a property",
+      "question": "Can an agent look up a property by address or parcel and get structured attributes such as size, year built and use?",
+      "weight": 2,
+      "full": "A documented API or data service returns property attributes for an address or parcel as structured data.",
+      "partial": "Only some attributes, or only through the app's search screen or a manual export.",
+      "na": "The source does not describe individual properties."
+    },
+    {
+      "id": "md-comps",
+      "group": "task",
+      "title": "Query comparables",
+      "question": "Can an agent query sale or lease comparables with filters and get structured results?",
+      "weight": 2,
+      "full": "A documented API or data service returns sale or lease comparables filtered by place, type, size or date.",
+      "partial": "Comparables only through the app or a manual export, or without filters.",
+      "na": "The source does not cover sale or lease transactions."
+    },
+    {
+      "id": "md-owner",
+      "group": "task",
+      "title": "Find the owner of record",
+      "question": "Can an agent get the owner of record and mailing address for a parcel as structured data?",
+      "weight": 2,
+      "full": "A documented API or data service returns the owner of record and mailing address for a parcel.",
+      "partial": "The owner name only, or only through the app's search screen.",
+      "na": "The source does not describe individual properties."
+    },
+    {
+      "id": "md-bulk-area",
+      "group": "task",
+      "title": "Pull an area in bulk",
+      "question": "Can an agent pull records for a whole area, such as a county, a drawn shape or a radius, in bulk?",
+      "weight": 2,
+      "full": "A documented bulk download, bulk API or area query returns all records for an area.",
+      "partial": "Area queries are capped at a small number of records, or bulk files need a separate order."
+    }
+  ]
+}

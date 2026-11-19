@@ -1,0 +1,34 @@
+{
+  "id": "sign-nda-for-offering-memorandum",
+  "slug": "sign-nda-for-offering-memorandum",
+  "kind": "process",
+  "title": "Sign an NDA for the offering memorandum",
+  "summary": "Review and sign the seller's confidentiality agreement so the full marketing package can be released.",
+  "phase": "acquire",
+  "order": 205,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Confirm who is asking and for which property",
+    "Read the confidentiality agreement in full",
+    "Check which entity signs and who signs for it",
+    "Check what counts as confidential and the permitted uses",
+    "Check the no-contact terms for tenants, staff and lenders",
+    "Check the non-solicitation terms and how long the agreement lasts",
+    "Check who may receive the materials, including lenders and partners",
+    "Mark up the terms the sponsor cannot meet",
+    "Sign and return the agreement",
+    "File the signed copy and track its obligations"
+  ]
+}

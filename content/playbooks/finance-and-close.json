@@ -1,0 +1,669 @@
+{
+  "id": "finance-and-close",
+  "slug": "finance-and-close",
+  "kind": "process",
+  "title": "Finance and close the acquisition",
+  "summary": "Line up the loan, insurance and equity, clear the title company's requirements, then sign, fund and record. Agents assemble packages and check the numbers; signatures, wires and recording stay with people.",
+  "phase": "acquire",
+  "order": 280,
+  "featured": true,
+  "depth": "full",
+  "review": "practitioner-reviewed",
+  "lastVerified": "2026-11-12",
+  "requires": [
+    "run-due-diligence"
+  ],
+  "consumes": [
+    "loan-term-sheet",
+    "purchase-and-sale-agreement",
+    "rent-roll",
+    "trailing-12",
+    "underwriting-model",
+    "title-commitment",
+    "survey",
+    "phase-i-esa",
+    "property-condition-assessment",
+    "tenant-estoppel",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "investor-register",
+    "certificate-of-formation",
+    "settlement-statement",
+    "wire-instructions",
+    "earnest-money-receipt",
+    "payoff-letter"
+  ],
+  "produces": [
+    "appraisal",
+    "insurance-binder",
+    "loan-documents",
+    "snda",
+    "capital-call-notice",
+    "deed",
+    "lien-release",
+    "owner-title-policy"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "ecfr-12-34-43",
+      "url": "https://www.ecfr.gov/current/title-12/chapter-I/part-34/subpart-C/section-34.43",
+      "title": "12 CFR 34.43, Appraisals required; transactions requiring a State certified or licensed appraiser",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "quote": "The transaction is a commercial real estate transaction that has a transaction value of $500,000 or less",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-12-34-42",
+      "url": "https://www.ecfr.gov/current/title-12/chapter-I/part-34/subpart-C/section-34.42",
+      "title": "12 CFR 34.42, Definitions",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "quote": "a real estate-related financial transaction that is not secured by a single 1-to-4 family residential property",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-42-4012a",
+      "url": "https://www.law.cornell.edu/uscode/text/42/4012a",
+      "title": "42 U.S.C. 4012a, Flood insurance purchase and compliance requirements and escrow accounts",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "fema-msc",
+      "url": "https://msc.fema.gov/portal/home",
+      "title": "FEMA Flood Map Service Center",
+      "publisher": "Federal Emergency Management Agency",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-form-t7",
+      "url": "https://www.tdi.texas.gov/title/documents/form_t-07.pdf",
+      "title": "Form T-7, Commitment for Title Insurance (effective January 3, 2014)",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-insuring-forms",
+      "url": "https://www.tdi.texas.gov/title/titlemm2.html",
+      "title": "Title Insurance Basic Manual, Section II: Insuring Forms",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-rate-rules",
+      "url": "https://www.tdi.texas.gov/title/titlem3b.html",
+      "title": "Basic Manual Section III, Rate Rules R-5 (simultaneous issuance) to R-16 (amendment of the area and boundaries exception)",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-12",
+      "quote": "the premium for each Loan Policy must be $100.00",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-p1",
+      "url": "https://www.tdi.texas.gov/title/titlem4a.html",
+      "title": "Basic Manual Section IV, Procedural Rule P-1: Definitions (Residential Real Property)",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-12",
+      "quote": "improvements designed primarily for the occupancy of from one to four families",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-rates-2026",
+      "url": "https://www.tdi.texas.gov/title/titlerates2026.html",
+      "title": "Texas Title Insurance Basic Premium Rates (rates effective March 1, 2026)",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-2703",
+      "url": "https://statutes.capitol.texas.gov/Docs/IN/htm/IN.2703.htm",
+      "title": "Texas Insurance Code, Chapter 2703 (Policy forms and premium rates)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "at a rate different than the rate fixed and promulgated by the commissioner",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-2702",
+      "url": "https://statutes.capitol.texas.gov/Docs/IN/htm/IN.2702.htm",
+      "title": "Texas Insurance Code, Chapter 2702 (Closing and settlement)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-6045",
+      "url": "https://www.law.cornell.edu/uscode/text/26/6045",
+      "title": "26 U.S.C. 6045, Returns of brokers (subsection (e), real estate transactions)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-1099s-instructions",
+      "url": "https://www.irs.gov/instructions/i1099s",
+      "title": "Instructions for Form 1099-S (12/2026), Proceeds From Real Estate Transactions",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-firpta",
+      "url": "https://www.irs.gov/individuals/international-taxpayers/firpta-withholding",
+      "title": "FIRPTA withholding",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-firpta-exceptions",
+      "url": "https://www.irs.gov/individuals/international-taxpayers/exceptions-from-firpta-withholding",
+      "title": "Exceptions from FIRPTA withholding",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-5",
+      "url": "https://statutes.capitol.texas.gov/Docs/PR/htm/PR.5.htm",
+      "title": "Texas Property Code, Chapter 5 (Section 5.021, Instrument of conveyance)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-12",
+      "url": "https://statutes.capitol.texas.gov/Docs/PR/htm/PR.12.htm",
+      "title": "Texas Property Code, Chapter 12 (Section 12.001, Instruments concerning property)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-13",
+      "url": "https://statutes.capitol.texas.gov/Docs/PR/htm/PR.13.htm",
+      "title": "Texas Property Code, Chapter 13 (Sections 13.001 and 13.002, Effect of recording)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "is void as to a creditor or to a subsequent purchaser for a valuable consideration without notice",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gov-406",
+      "url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.406.htm",
+      "title": "Texas Government Code, Chapter 406 (Sections 406.016, 406.107 and 406.110, Notary authority and online notarization)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-92",
+      "url": "https://statutes.capitol.texas.gov/Docs/PR/htm/PR.92.htm",
+      "title": "Texas Property Code, Chapter 92 (Section 92.105, Cessation of owner's interest)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-93",
+      "url": "https://statutes.capitol.texas.gov/Docs/PR/htm/PR.93.htm",
+      "title": "Texas Property Code, Chapter 93 (Section 93.007, Cessation of owner's interest)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "ic3-psa-200406",
+      "url": "https://www.ic3.gov/PSA/2020/PSA200406",
+      "title": "Public service announcement I-040620-PSA on business email compromise",
+      "publisher": "FBI Internet Crime Complaint Center",
+      "accessed": "2026-11-12",
+      "quote": "Verify all payment changes and transactions in person or via a known telephone number.",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "assemble-loan-package",
+      "title": "Assemble the loan application package",
+      "instruction": "Build what the term sheet asks for: the signed contract, rent roll, trailing-12 statement, budget and underwriting, leases and estoppels as they arrive, the diligence reports, the buying entity's formation documents and, for each guarantor, the financial statement and schedule of real estate owned the lender requests. Check that every figure matches across documents before anything goes out. Keep a log of what was sent and when; the commitment will list its conditions against it.",
+      "mode": "agent",
+      "modeBasis": "Every item comes from the deal file; an agent assembles and cross-checks it for a principal to send.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "consumes": [
+        "loan-term-sheet",
+        "purchase-and-sale-agreement",
+        "rent-roll",
+        "trailing-12",
+        "underwriting-model",
+        "certificate-of-formation"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "apply-for-loan",
+      "title": "Sign the loan application and pay the report deposit",
+      "instruction": "A principal signs the application or accepts the term sheet and pays any deposit the lender asks for to order its appraisal and reports. Read what the deposit covers and what comes back if the loan does not close. Ask early whether the lender will rely on the buyer's Phase I, condition report and survey with reliance letters, or order its own. If the lender reprices or pulls back, follow the situation for a lender retrade.",
+      "mode": "human-online",
+      "modeBasis": "The application binds the borrower and the deposit is a payment a person authorizes.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "assemble-loan-package"
+      ],
+      "consumes": [
+        "loan-term-sheet"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "lender-appraisal-and-reports",
+      "title": "Get the lender's appraisal and reports done",
+      "instruction": "Lending institutions regulated by the OCC, the Federal Reserve or the FDIC need a state certified appraiser for a commercial real estate loan over $500,000 unless another listed exception applies; at or below that amount, an evaluation can replace the appraisal. Commercial means not secured by a single one-to-four family home, so multifamily counts. Lenders outside those rules set their own requirements. The lender orders the appraisal; the buyer provides access and documents: rent roll, leases, operating statements, budget and the diligence reports. Ask for the appraised value as soon as the lender will share it, because the loan may be sized on it.",
+      "mode": "human-offline",
+      "modeBasis": "The appraiser inspects the property in person, and the lender controls the engagement.",
+      "actor": "lender",
+      "licensed": "appraiser",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "apply-for-loan"
+      ],
+      "rules": [
+        "us-fed.firrea.appraisal-thresholds"
+      ],
+      "calculators": [
+        "debt-sizing"
+      ],
+      "consumes": [
+        "rent-roll",
+        "trailing-12",
+        "phase-i-esa",
+        "property-condition-assessment",
+        "survey"
+      ],
+      "produces": [
+        "appraisal"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-12-34-43",
+        "ecfr-12-34-42"
+      ]
+    },
+    {
+      "id": "accept-loan-commitment",
+      "title": "Accept the loan commitment",
+      "instruction": "Before anyone signs, compare the commitment with the term sheet and the model: amount, rate and index, amortization, interest-only period, term, fees, reserves, prepayment terms, guaranties, covenants and each condition to closing. Re-run debt sizing at the committed terms. A principal signs only when every difference is understood and every condition can be met by closing. Calendar the commitment's expiry and any fee due dates.",
+      "mode": "human-online",
+      "modeBasis": "Accepting the commitment binds the borrower and is signed by a principal.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "lender-appraisal-and-reports"
+      ],
+      "calculators": [
+        "debt-sizing",
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "loan-term-sheet",
+        "appraisal",
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "bind-insurance",
+      "title": "Bind property and liability insurance from closing",
+      "instruction": "Get quotes early using the condition report, the flood determination and the lender's insurance requirements: property, general liability, and any flood, wind or other coverage the lender lists, naming the lender as the commitment requires. If a building is in a special flood hazard area where federal flood insurance is available, a regulated lender may not make the loan unless flood coverage is in place for the loan's term, in at least the lesser of the loan balance and the maximum available. Bind coverage effective at closing and send the binder to the lender and the title company.",
+      "mode": "human-online",
+      "modeBasis": "Binding coverage commits the buyer to a premium, which a person authorizes with the insurer or agent.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "accept-loan-commitment"
+      ],
+      "rules": [
+        "us-fed.flood.mandatory-purchase"
+      ],
+      "consumes": [
+        "property-condition-assessment",
+        "loan-term-sheet",
+        "survey"
+      ],
+      "produces": [
+        "insurance-binder"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-42-4012a",
+        "fema-msc"
+      ]
+    },
+    {
+      "id": "negotiate-loan-documents",
+      "title": "Negotiate the loan documents with counsel",
+      "instruction": "The lender's counsel drafts the loan agreement, note, deed of trust, guaranties and assignment of leases and rents; the buyer's counsel negotiates them against the commitment. Watch the recourse carve-outs and who guarantees them, reserves and cash management, transfer and change-of-control limits that affect investors and the sponsor, reporting duties, and default and cure periods. Line up with the seller the SNDAs and estoppels the lender requires. Keep every closing condition on one checklist.",
+      "mode": "human-online",
+      "modeBasis": "Negotiating loan documents is legal work that binds the borrower and the guarantors.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "accept-loan-commitment"
+      ],
+      "consumes": [
+        "loan-term-sheet",
+        "tenant-estoppel",
+        "snda",
+        "deal-entity-agreement"
+      ],
+      "produces": [
+        "loan-documents",
+        "snda"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "call-capital-for-closing",
+      "title": "Call capital for the closing",
+      "instruction": "Issue the capital call early enough for the fund agreement's notice period to run before the funding date, stating the amount and purpose, with payment instructions sent through the channel investors already know. Track receipts against commitments daily and count only cleared funds toward the closing wire. If an investor misses the call, the fund agreement's default remedies apply; see the situation for that. The playbook Call capital and fund a closing covers the mechanics.",
+      "mode": "human-online",
+      "modeBasis": "The general partner issues the call under the fund agreement, and investors fund it themselves.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "accept-loan-commitment"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "deal-entity-agreement",
+        "investor-register"
+      ],
+      "produces": [
+        "capital-call-notice"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "partner-funds-contribution",
+      "title": "Have the JV partner approve the loan and fund its share",
+      "instruction": "Send the capital partner the funding request the JV agreement calls for, with the final settlement statement and closing date, and confirm the sponsor's own share is ready. The loan documents and guaranties are often major decisions under a JV agreement, so get the partner's written approval of them in the same round. Confirm wire details with the partner by phone, never by email alone.",
+      "mode": "human-online",
+      "modeBasis": "The approval and the contribution are the capital partner's own acts under the JV agreement.",
+      "actor": "investor",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "negotiate-loan-documents"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement",
+        "settlement-statement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "clear-title-requirements",
+      "title": "Clear Schedule C and settle the title policy terms",
+      "instruction": "Work through every Schedule C requirement with the title company: payoffs and releases of the seller's liens, proof that recent work is paid, both sides' authority documents and any affidavits it asks for. Confirm the owner's policy on Form T-1 and the loan policy on Form T-2 with the lender's endorsements. Texas premiums are promulgated: check the owner's premium against TDI's chart, a $100 loan policy when Rate Rule R-5's conditions for simultaneous issue are met, and 15% of the basic premium to amend the area-and-boundary exception on an owner's policy when the land is not residential real property, which TDI ties to one-to-four family improvements. Agree a pro forma policy before closing.",
+      "mode": "agent",
+      "modeBasis": "Schedule C, the promulgated forms and the rate chart are documents an agent can track and check; the title company clears the items.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "cost": {
+        "text": "Owner's policy basic premium on TDI's chart effective March 1, 2026: $9,286 for a $2,000,000 policy, $66,866 for a $20,000,000 policy",
+        "usdMin": 9286,
+        "usdMax": 66866,
+        "sourceId": "tdi-rates-2026"
+      },
+      "after": [
+        "negotiate-loan-documents"
+      ],
+      "rules": [
+        "us-tx.title.promulgated-rates-forms"
+      ],
+      "consumes": [
+        "title-commitment",
+        "survey",
+        "payoff-letter",
+        "certificate-of-formation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tdi-form-t7",
+        "tdi-insuring-forms",
+        "tdi-rate-rules",
+        "tdi-p1",
+        "tdi-rates-2026",
+        "tx-ins-2703"
+      ]
+    },
+    {
+      "id": "review-settlement-statement",
+      "title": "Review the settlement statement line by line",
+      "instruction": "Check the title company's statement against the contract, the loan documents and the lender's funding figures: price, deposit credit, prorated taxes and rents, tenants' security deposits credited to the buyer, payoffs, title premiums, loan fees and reserves. In Texas the statement must name each person receiving a party's money and itemize that party's charges. Get the seller's certification that it is not a foreign person; if the seller is foreign, the buyer generally must withhold 15% of the amount realized. Confirm the settlement agent named on the statement will file Form 1099-S for the sale. Reconcile the buyer's cash to close to the cent.",
+      "mode": "agent",
+      "modeBasis": "The statement, the contract and the loan figures are documents an agent can reconcile line by line.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "clear-title-requirements"
+      ],
+      "rules": [
+        "us-fed.irc.6045e-reporting",
+        "us-fed.irc.firpta"
+      ],
+      "consumes": [
+        "settlement-statement",
+        "purchase-and-sale-agreement",
+        "loan-documents",
+        "rent-roll",
+        "earnest-money-receipt"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-ins-2702",
+        "irs-1099s-instructions",
+        "usc-26-6045",
+        "irs-firpta",
+        "irs-firpta-exceptions",
+        "tx-prop-93",
+        "tx-prop-92"
+      ]
+    },
+    {
+      "id": "sign-closing-documents",
+      "title": "Sign the closing documents before a notary",
+      "instruction": "The seller signs the deed; the buyer's authorized signers sign the loan documents, guaranties, settlement statement and closing certificates. A Texas deed must be in writing, signed and delivered, and to be recorded it must be acknowledged or sworn to before an officer such as a notary, or signed before two credible subscribing witnesses. Texas online notaries can take acknowledgments over two-way audio and video after verifying the signer's identity; confirm the lender and title company accept them. The new owner also signs a statement to each tenant acknowledging the security deposit it holds and its exact amount.",
+      "mode": "human-offline",
+      "modeBasis": "Signatures bind the signers and need a notary present, in person or by live audio and video.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "review-settlement-statement",
+        "bind-insurance",
+        "call-capital-for-closing",
+        "partner-funds-contribution"
+      ],
+      "rules": [
+        "us-tx.property.conveyance-recording"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "loan-documents",
+        "settlement-statement"
+      ],
+      "produces": [
+        "deed"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-5",
+        "tx-prop-12",
+        "tx-gov-406",
+        "tx-prop-92",
+        "tx-prop-93"
+      ]
+    },
+    {
+      "id": "verify-wire-and-fund",
+      "title": "Verify the wire instructions and fund the closing",
+      "instruction": "Confirm the equity is in the buyer's account as cleared funds: investor subscriptions in a syndication, the capital call in a fund, the partner's contribution in a JV. Before any wire, call the title company at a number already on file, never one from an email, and confirm the account details; the FBI's complaint center advises verifying payment changes in person or by a known telephone number. Treat any change in instructions as fraud until proven otherwise and follow that situation. Send the wire, then confirm receipt with the escrow officer by phone. The lender funds the loan separately.",
+      "mode": "human-online",
+      "modeBasis": "Releasing a wire is a bank authorization only a person can give, and a sent wire is hard to recall.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-closing-documents"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "wire-instructions",
+        "settlement-statement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ic3-psa-200406"
+      ]
+    },
+    {
+      "id": "record-the-deed",
+      "title": "Record the deed and deed of trust and the lien releases",
+      "instruction": "After funding, the title company records the deed, the new deed of trust and the releases of the seller's liens with the county clerk where the land lies. Recording protects the buyer: in Texas an unrecorded deed binds the parties but is void against a creditor or a later buyer for value without notice, and a properly recorded instrument is notice to everyone. Anyone presenting a deed in person for recording must show photo identification. Get the recording information for each instrument and follow up until every promised release is of record.",
+      "mode": "human-online",
+      "modeBasis": "The title company submits the instruments to the county clerk, often by electronic recording.",
+      "actor": "title",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "verify-wire-and-fund"
+      ],
+      "rules": [
+        "us-tx.property.conveyance-recording"
+      ],
+      "consumes": [
+        "deed",
+        "loan-documents",
+        "payoff-letter"
+      ],
+      "produces": [
+        "lien-release"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-13",
+        "tx-prop-12"
+      ]
+    },
+    {
+      "id": "build-post-closing-file",
+      "title": "Send tenant notices and build the post-closing file",
+      "instruction": "Collect the recorded documents, the final settlement statement, the signed loan documents, the insurance binder and policies, and the diligence reports with their reliance letters. Track the owner's policy until it issues and check its Schedule B against the agreed pro forma. Send each tenant the new owner's signed deposit statement and notice of where to pay rent; for commercial tenants, the seller stays liable for deposits until that statement is delivered. Calendar the loan's reporting, reserve and insurance renewal dates. Record where each document is stored in the firm file.",
+      "mode": "agent",
+      "modeBasis": "Filing, tracking and sending prepared letters are document tasks an agent can do with file and mailbox access.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-the-deed"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "deed",
+        "loan-documents",
+        "settlement-statement",
+        "insurance-binder"
+      ],
+      "produces": [
+        "owner-title-policy"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-93",
+        "tx-prop-92"
+      ]
+    }
+  ],
+  "outlineSteps": []
+}

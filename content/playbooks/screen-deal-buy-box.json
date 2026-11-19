@@ -1,0 +1,536 @@
+{
+  "id": "screen-deal-buy-box",
+  "slug": "screen-deal-buy-box",
+  "kind": "process",
+  "title": "Screen a deal against the buy box",
+  "summary": "Decide quickly whether a deal deserves underwriting: size, location, tenancy and price against the criteria the sponsor has written down.",
+  "phase": "acquire",
+  "order": 200,
+  "featured": true,
+  "depth": "full",
+  "review": "practitioner-reviewed",
+  "lastVerified": "2026-11-12",
+  "requires": [],
+  "consumes": [
+    "buy-box",
+    "offering-memorandum",
+    "rent-roll",
+    "trailing-12"
+  ],
+  "produces": [
+    "deal-screen"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "fema-msc",
+      "url": "https://msc.fema.gov/portal/home",
+      "title": "FEMA Flood Map Service Center",
+      "publisher": "Federal Emergency Management Agency",
+      "accessed": "2026-11-12",
+      "quote": "the official public source for flood hazard information produced in support of the National Flood Insurance Program (NFIP)",
+      "tier": "primary"
+    },
+    {
+      "id": "fema-flood-zones",
+      "url": "https://www.fema.gov/about/glossary/flood-zones",
+      "title": "Flood Zones (glossary)",
+      "publisher": "Federal Emergency Management Agency",
+      "accessed": "2026-11-12",
+      "quote": "The 1-percent annual chance flood is also referred to as the base flood or 100-year flood.",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-42-4012a",
+      "url": "https://www.law.cornell.edu/uscode/text/42/4012a",
+      "title": "42 U.S.C. 4012a, Flood insurance purchase and compliance requirements and escrow accounts",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "quote": "covered for the term of the loan by flood insurance in an amount at least equal to the outstanding principal balance of the loan",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-6",
+      "url": "https://statutes.capitol.texas.gov/Docs/TX/htm/TX.6.htm",
+      "title": "Texas Tax Code, Chapter 6 (Section 6.01, Appraisal districts established)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "An appraisal district is established in each county.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-25",
+      "url": "https://statutes.capitol.texas.gov/Docs/TX/htm/TX.25.htm",
+      "title": "Texas Tax Code, Chapter 25 (Sections 25.01 and 25.02, appraisal records)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "an identification of each taxing unit in which the property is taxable",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-26",
+      "url": "https://statutes.capitol.texas.gov/Docs/TX/htm/TX.26.htm",
+      "title": "Texas Tax Code, Chapter 26 (Section 26.17, Database of property-tax-related information)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "is searchable by property address and owner",
+      "tier": "primary"
+    },
+    {
+      "id": "comptroller-directory",
+      "url": "https://comptroller.texas.gov/taxes/property-tax/county-directory/",
+      "title": "Local Property Appraisal and Tax Information (county directory)",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-12",
+      "quote": "This directory contains contact information for appraisal districts and county tax offices and includes a listing of the taxing units each serves.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-lgc-211",
+      "url": "https://statutes.capitol.texas.gov/Docs/LG/htm/LG.211.htm",
+      "title": "Texas Local Government Code, Chapter 211 (Sections 211.003 and 211.005, municipal zoning)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "the location and use of buildings, other structures, and land for business, industrial, residential, or other purposes",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-lgc-218",
+      "url": "https://statutes.capitol.texas.gov/Docs/LG/htm/LG.218.htm",
+      "title": "Texas Local Government Code, Chapter 218 (Sections 218.002 and 218.101, mixed-use and multifamily residential use)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "shall allow mixed-use residential use and development or multifamily residential use and development in a zoning classification that allows office, commercial, retail, warehouse",
+      "tier": "primary"
+    },
+    {
+      "id": "epa-cimc",
+      "url": "https://www.epa.gov/cleanups/cleanups-my-community",
+      "title": "Cleanups in My Community",
+      "publisher": "U.S. Environmental Protection Agency",
+      "accessed": "2026-11-12",
+      "quote": "Cleanups in My Community enables you to map and list hazardous waste cleanup locations and grant areas",
+      "tier": "primary"
+    },
+    {
+      "id": "epa-echo",
+      "url": "https://echo.epa.gov/",
+      "title": "Enforcement and Compliance History Online (ECHO)",
+      "publisher": "U.S. Environmental Protection Agency",
+      "accessed": "2026-11-12",
+      "quote": "search for facilities in your community to assess their compliance with environmental regulations",
+      "tier": "primary"
+    },
+    {
+      "id": "epa-envirofacts",
+      "url": "https://enviro.epa.gov/",
+      "title": "Envirofacts",
+      "publisher": "U.S. Environmental Protection Agency",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "tceq-permit-data",
+      "url": "https://www.tceq.texas.gov/permitting/permit_data.html",
+      "title": "Status of Permits and Registrations (Central Registry, petroleum storage tank registrations, registered dry-cleaning facilities)",
+      "publisher": "Texas Commission on Environmental Quality",
+      "accessed": "2026-11-12",
+      "quote": "Find out whether a facility with petroleum storage tanks is registered with the TCEQ.",
+      "tier": "primary"
+    },
+    {
+      "id": "rrc-gis",
+      "url": "https://www.rrc.texas.gov/resource-center/research/gis-viewer/",
+      "title": "Public GIS Viewer (Map)",
+      "publisher": "Railroad Commission of Texas",
+      "accessed": "2026-11-12",
+      "quote": "The Public GIS Viewer allows users to view oil, gas and pipeline data in a map view.",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "log-lead-collect-package",
+      "title": "Log the lead and collect the package",
+      "instruction": "Record the lead in the firm file: address, property type, who brought it, the asking price or pricing guidance, and any offer or tour dates. Collect what the broker provides: the offering memorandum, rent roll, operating statements and any listing data, each saved with the date received. If the package is released only after a confidentiality agreement is signed, summarize the agreement for the person who signs: what is confidential, for how long, any no-contact or non-solicitation clause, and what must be returned or destroyed.",
+      "mode": "agent",
+      "modeBasis": "Recording a lead and filing what the broker sends is file and inbox work; the agreement itself is signed by a person in the next step.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "market": "deal-pipeline-underwriting",
+      "consumes": [
+        "offering-memorandum"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "sign-confidentiality-agreement",
+      "title": "Sign the confidentiality agreement if the broker requires one",
+      "instruction": "Read the summary, then sign the confidentiality agreement for the firm entity that will evaluate the deal. List anyone outside the firm who will see the package, such as a lender, a capital partner or counsel, and confirm the agreement allows sharing with them. Keep the signed copy in the firm file. Skip this step when the package is public.",
+      "mode": "human-online",
+      "modeBasis": "A signature binds the firm to the agreement, so a person signs; an agent prepares the summary.",
+      "actor": "principal",
+      "risk": "low",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "log-lead-collect-package"
+      ],
+      "market": "formation-back-office",
+      "basis": "practitioner"
+    },
+    {
+      "id": "extract-package-facts",
+      "title": "Pull the facts from the package into the deal screen",
+      "instruction": "Start the deal screen. From the offering memorandum, rent roll and operating statements, record size, year built, occupancy, the stated net operating income, the largest tenants and their lease expirations, and anything the broker presents as upside. Mark each figure with its source page. Where the memorandum disagrees with the rent roll or the statements, record both figures and add the gap to the open questions. Treat pro forma figures as the seller's projection, not history.",
+      "mode": "agent",
+      "modeBasis": "Reading documents and moving figures into a record is document work.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-confidentiality-agreement"
+      ],
+      "consumes": [
+        "offering-memorandum",
+        "rent-roll",
+        "trailing-12"
+      ],
+      "produces": [
+        "deal-screen"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "industrial": "Also record clear height, dock-high and grade-level doors, site area and any outdoor storage, and whether the leases are net.",
+        "multifamily": "Also record the unit mix, in-place rent by unit type, concessions, and any units that are down or not producing rent.",
+        "office": "Also record each tenant's rentable area, expirations by year, and who pays increases in operating expenses.",
+        "retail": "Also record the anchors, any co-tenancy or go-dark terms the memorandum mentions, and whether tenants report sales."
+      }
+    },
+    {
+      "id": "check-buy-box",
+      "title": "Check the deal against the written buy box",
+      "instruction": "Compare each recorded fact with each criterion in the buy box: property type, size, location, price, tenancy and return targets. Mark every criterion pass, fail or unknown, with the fact behind the mark. An unknown is a question for the broker, not a pass. If the deal fails a criterion the buy box treats as firm, say so at the top of the screen; the person deciding may still look, but the record shows the exception.",
+      "mode": "agent",
+      "modeBasis": "The comparison is mechanical once the buy box is written down; changing the buy box is a person's call.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "extract-package-facts"
+      ],
+      "consumes": [
+        "buy-box",
+        "deal-screen"
+      ],
+      "produces": [
+        "deal-screen"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "check-fund-limits",
+      "title": "Check the fund's investment limits",
+      "instruction": "Read the fund's governing documents for limits that reach this deal, such as allowed property types and locations, the share of commitments one investment may use, leverage caps, and deals that need investor or advisory committee consent. Record each limit and whether this deal meets it. A deal outside a limit needs the consent the documents require before more money is spent on it. Ask counsel how the documents read where a limit is unclear.",
+      "mode": "agent",
+      "modeBasis": "The limits are written in the fund documents and can be checked against the screen; reading an unclear limit is counsel's call.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-buy-box"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "consumes": [
+        "deal-entity-agreement",
+        "deal-screen"
+      ],
+      "produces": [
+        "deal-screen"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "check-partner-criteria",
+      "title": "Check the capital partner's criteria and approval rights",
+      "instruction": "Compare the deal with the capital partner's stated criteria: property type, market, deal size, hold period and return targets. Read the JV agreement, or the term sheet if the partnership is not yet signed, for what the partner must approve and when, such as pursuing a deal, signing a letter of intent or posting a deposit. Record each approval the partner holds so later steps ask for it at the right time.",
+      "mode": "agent",
+      "modeBasis": "The criteria and approval rights are written terms an agent can read and track.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-buy-box"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement",
+        "deal-screen"
+      ],
+      "produces": [
+        "deal-screen"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "run-quick-math",
+      "title": "Run the quick price and yield math",
+      "instruction": "Compute the going-in cap rate (stated net operating income divided by price) and the price per square foot or per unit. Run the debt-sizing calculator with the coverage, loan-to-value and debt-yield limits the sponsor expects lenders to apply, and record the loan the income supports. Equity needed is price plus closing costs less that loan. Then redo the cap rate with any obvious corrections, such as a vacancy the statements omit or a tax bill reset to the price. Record every formula and input.",
+      "mode": "agent",
+      "modeBasis": "Arithmetic on recorded figures and a live calculator; the lender limits are inputs the sponsor supplies.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-buy-box"
+      ],
+      "calculators": [
+        "debt-sizing"
+      ],
+      "market": "deal-pipeline-underwriting",
+      "consumes": [
+        "deal-screen"
+      ],
+      "produces": [
+        "deal-screen"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "check-flood-zone",
+      "title": "Look up the flood zone on FEMA's map service",
+      "instruction": "Search the address in FEMA's Flood Map Service Center, the official public source for National Flood Insurance Program flood hazard maps. Record the zone, the map panel and its effective date, and check Search All Products for newer map products, since effective maps can be superseded. Zones beginning with A or V are special flood hazard areas, mapped for the 1-percent-annual-chance flood. Where federal flood insurance is available, a federally regulated loan on a building there requires flood insurance for the loan's term, so carry that cost into underwriting. Note it when only part of the parcel is mapped in the zone.",
+      "mode": "agent-browser",
+      "modeBasis": "FEMA's map service is public and searchable by address without an account.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "extract-package-facts"
+      ],
+      "rules": [
+        "us-fed.flood.mandatory-purchase"
+      ],
+      "produces": [
+        "deal-screen"
+      ],
+      "basis": "cited",
+      "sources": [
+        "fema-msc",
+        "fema-flood-zones",
+        "usc-42-4012a"
+      ]
+    },
+    {
+      "id": "pull-appraisal-record",
+      "title": "Pull the appraisal district record",
+      "instruction": "Texas has an appraisal district in each county; the Comptroller's directory lists them with the taxing units each serves. Search the district's records by address or owner. Record the account number, owner of record and mailing address, appraised land and improvement values, the tax year, and every taxing unit that taxes the property. Districts in counties of 120,000 or more must post their appraisal records online, and every district keeps a public tax database showing market value, taxable value and rates. Flag it when the owner of record is not the seller the offering names.",
+      "mode": "agent-browser",
+      "modeBasis": "Appraisal records and each district's property tax database are public and searchable by address or owner without an account.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "extract-package-facts"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.tax.market-value"
+      ],
+      "market": "market-property-data",
+      "produces": [
+        "deal-screen"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-6",
+        "tx-tax-code-25",
+        "tx-tax-code-26",
+        "comptroller-directory"
+      ]
+    },
+    {
+      "id": "check-zoning",
+      "title": "Check the zoning",
+      "instruction": "Find which city, if any, has jurisdiction, then read its zoning map and the use table for the district. Texas cities zone under Local Government Code chapter 211, which lets them regulate the use of land and buildings, height, lot coverage, yards and density by district. Record the district, whether the current use is allowed outright, by permit, or only as a nonconforming use, and any overlay. Nonconforming status often limits expansion or rebuilding under the local ordinance, so add it to the open questions; a zoning report can confirm it in due diligence.",
+      "mode": "agent-browser",
+      "modeBasis": "City zoning maps and codes are usually public web pages; a formal zoning letter, if needed later, is a request a person makes.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "extract-package-facts"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "produces": [
+        "deal-screen"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-lgc-211",
+        "tx-lgc-218"
+      ],
+      "typeNotes": {
+        "industrial": "Confirm the district allows the specific use, outdoor storage and truck traffic the tenant or plan needs, not just industrial use in general.",
+        "multifamily": "In a Texas city of more than 150,000 people in a county of more than 300,000, Local Government Code chapter 218 (2025) requires zoning that allows office, commercial, retail, warehouse or mixed use to allow multifamily and mixed-use residential too, with exceptions near heavy industry, airports and military bases. Read it if the plan depends on residential use."
+      }
+    },
+    {
+      "id": "screen-federal-environmental-records",
+      "title": "Screen EPA's public environmental records",
+      "instruction": "Search the address and a radius around it in EPA's Cleanups in My Community, which maps Superfund, Brownfields, RCRA corrective action and removal sites and can add a layer of underground storage tank releases. Search the site and its neighbors in ECHO for regulated facilities and their compliance and enforcement history, and run the Envirofacts multisystem search for permits and toxic release reports. Record each hit on or next to the site with a link. This is a screen, not a Phase I environmental site assessment; it decides whether the deal is worth one.",
+      "mode": "agent-browser",
+      "modeBasis": "EPA's search tools are public web pages that take an address without an account.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "extract-package-facts"
+      ],
+      "produces": [
+        "deal-screen"
+      ],
+      "basis": "cited",
+      "sources": [
+        "epa-cimc",
+        "epa-echo",
+        "epa-envirofacts"
+      ],
+      "typeNotes": {
+        "industrial": "If the current or past occupant held environmental permits, expect the site itself in ECHO or the toxic release reports; record the programs and any enforcement.",
+        "retail": "Look for current or former dry cleaners and fuel stations in the center and next door."
+      }
+    },
+    {
+      "id": "screen-texas-agency-records",
+      "title": "Screen the Texas agency records",
+      "instruction": "Search TCEQ's Central Registry for regulated entities at the address, its petroleum storage tank registrations for tanks on or near the site, and its registered dry-cleaning facilities and drop stations. Open the Railroad Commission's Public GIS Viewer to check for oil and gas wells and pipelines on or near the parcel. Record each hit with a link, and add anything on the site itself to the open questions.",
+      "mode": "agent-browser",
+      "modeBasis": "TCEQ's lookups and the Railroad Commission's map viewer are public; TCEQ's query site can throttle repeated automated requests.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "extract-package-facts"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "produces": [
+        "deal-screen"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tceq-permit-data",
+        "rrc-gis"
+      ]
+    },
+    {
+      "id": "write-screen",
+      "title": "Write up the screen",
+      "instruction": "Finish the deal screen on one page: the buy-box marks, the quick math with formulas, the flood zone, the appraisal record, the zoning, the environmental hits with links, and the open questions for the broker. Lead with the three facts most likely to decide the deal, and say plainly what was not checked. Recommend underwrite, ask first, or pass, with the reason in one sentence.",
+      "mode": "agent",
+      "modeBasis": "Summarizing recorded findings is writing work; the recommendation is advisory and a person decides in the next step.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-fund-limits",
+        "check-partner-criteria",
+        "run-quick-math",
+        "check-flood-zone",
+        "pull-appraisal-record",
+        "check-zoning",
+        "screen-federal-environmental-records",
+        "screen-texas-agency-records"
+      ],
+      "consumes": [
+        "deal-screen"
+      ],
+      "produces": [
+        "deal-screen"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "decide-underwrite-or-pass",
+      "title": "Decide whether to underwrite",
+      "instruction": "Read the screen and decide: underwrite, send the broker the open questions first, or pass. Record the decision, the reason and the date in the firm file, and tell the broker when passing. A pass with a reason is useful data later, when you test whether the buy box is too tight or too loose.",
+      "mode": "human-online",
+      "modeBasis": "Committing time and money to a deal is a sponsor decision.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "write-screen"
+      ],
+      "consumes": [
+        "deal-screen"
+      ],
+      "produces": [
+        "deal-screen"
+      ],
+      "basis": "practitioner"
+    }
+  ],
+  "outlineSteps": []
+}

@@ -1,0 +1,158 @@
+{
+  "vendor": "appfolio-investment-manager",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "8546955e82ed0018fb3cb459e5dd45108b67561d65370154f4eb7ab826159966",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "partial",
+      "quality": 7,
+      "evidence": [
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "rationale": "AppFolio claims 'Full API Access' and comprehensive API access to all investor, investment and financial information on the Premier plan (c2, c3, c4), but the pack shows no public API documentation.",
+      "missing": "No public API reference content is shown (developer.appfolio.com rendered no readable text), so which core records the API can read or change is unverified."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c6"
+      ],
+      "rationale": "Nothing in the pack mentions an MCP server; the only AI-tool connection shown is Zapier's app list naming Claude and ChatGPT (c6), which is a third-party integration, not an MCP server.",
+      "missing": "No vendor-maintained MCP server or setup steps are shown."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no official CLI, SDK, package or public repository.",
+      "missing": "No vendor-maintained SDK or CLI on a package registry or public repository, nor any code samples, is shown."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "partial",
+      "quality": 3,
+      "evidence": [
+        "c2",
+        "c4",
+        "c6"
+      ],
+      "rationale": "The only event-related capability shown is a Premier-plan Zapier integration (c2, c4, c6), a third-party automation platform, with no native webhooks or event subscriptions documented.",
+      "missing": "The pack does not show which triggers or events, if any, the Zapier integration exposes or for which records, and shows no native webhooks or event subscriptions."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no API keys, tokens or OAuth clients and nothing about limiting what a credential can do.",
+      "missing": "How API credentials are issued, and whether scopes, roles or permissions limit them, is not shown."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no OpenAPI, Swagger, GraphQL or other machine-readable API specification.",
+      "missing": "No machine-readable API spec, public or behind a login, is shown."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "partial",
+      "quality": 8,
+      "evidence": [
+        "p1",
+        "c9"
+      ],
+      "rationale": "A probe confirms an llms.txt at appfolio.com (p1), but it covers marketing pages rather than API or help-center documentation (c9).",
+      "missing": "No docs-specific llms.txt or Markdown versions of the help center or API documentation are shown, and the llms.txt content beyond its header is not shown."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no sandbox, test mode or developer environment.",
+      "missing": "No sandbox or test environment, self-serve or on request, is shown."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "partial",
+      "quality": 6,
+      "evidence": [
+        "c2",
+        "c4",
+        "c5"
+      ],
+      "rationale": "The vendor mentions a SQL export for data warehousing and an automatic nightly export of the entire database on the Premier plan (c2, c4, c5), but shows no documentation of it.",
+      "missing": "No export documentation is shown: not the file format (CSV, JSON, Excel or SQL), how a customer retrieves it, or whether it is self-serve."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c7",
+        "c1"
+      ],
+      "rationale": "The only entry points shown are a free customized product demo (c7) and 'Get a Quote' (c1), with no self-serve sign-up or trial.",
+      "missing": "No self-serve sign-up, free trial or online purchase for any plan is shown."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "partial",
+      "quality": 8,
+      "evidence": [
+        "c1",
+        "c2"
+      ],
+      "rationale": "The Core plan shows only a starting price, 'Starting at $650 Per Month' with 'Get a Quote' (c1), and Premier is priced as 'Custom' (c2).",
+      "missing": "The full Core price (what moves it above the $650 starting point) is not shown, and Premier pricing is quote-only."
+    },
+    {
+      "story": "ip-create-investor",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c3"
+      ],
+      "rationale": "The pack shows no API documentation for creating investors or sending subscription documents; c3 claims only general API access to investor information.",
+      "missing": "No API endpoint or documentation for creating investor records or sending or starting subscription documents is shown, nor a third-party integration doing either."
+    },
+    {
+      "story": "ip-distribution",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Nothing in the pack mentions distributions or investor notices, through the API or otherwise.",
+      "missing": "No API documentation for creating distributions or generating or sending investor notices is shown."
+    },
+    {
+      "story": "ip-register",
+      "verdict": "partial",
+      "quality": 4,
+      "evidence": [
+        "c3",
+        "c5",
+        "c2"
+      ],
+      "rationale": "The vendor claims API access to investor, investment and financial information and a SQL and nightly export of the entire database (c2, c3, c5), but only investor data is named and no endpoint or export is documented.",
+      "missing": "No API endpoints or documented export are shown returning investors, commitments and contributions as JSON or CSV; commitments and contributions are not named, and the export format is not shown."
+    },
+    {
+      "story": "ip-capital-call",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Nothing in the pack mentions capital calls or investor funding status, through the API or otherwise.",
+      "missing": "No API documentation for creating capital calls or reading each investor's funding status is shown."
+    }
+  ]
+}

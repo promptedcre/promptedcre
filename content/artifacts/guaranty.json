@@ -1,0 +1,112 @@
+{
+  "id": "guaranty",
+  "name": "Guaranty",
+  "what": "A promise by a principal or parent to pay or perform another party's obligations: a borrower's loan, in full, in part or only on stated bad acts, or a tenant's lease.",
+  "fields": [
+    {
+      "key": "guarantors",
+      "label": "Guarantors",
+      "type": "list",
+      "definition": "Each person or entity that signs, and the capacity in which each signs."
+    },
+    {
+      "key": "lender",
+      "label": "Lender or landlord",
+      "type": "string",
+      "definition": "The party the guaranty runs to: the lender for a loan guaranty, the landlord for a lease guaranty; and whether it extends to that party's successors and assigns, which matters when the loan or the property is sold."
+    },
+    {
+      "key": "borrower",
+      "label": "Borrower or tenant",
+      "type": "string",
+      "definition": "The borrower or tenant whose obligations are guaranteed, by its legal name as it signed the loan or lease."
+    },
+    {
+      "key": "guaranteedLoan",
+      "label": "Loan guaranteed",
+      "type": "string",
+      "definition": "For a loan guaranty, the loan the guaranty supports, identified by note amount, date and loan agreement; null for a lease guaranty."
+    },
+    {
+      "key": "guaranteedLease",
+      "label": "Lease guaranteed",
+      "type": "string",
+      "definition": "For a lease guaranty, the lease the guaranty supports, identified by its date, the premises and each amendment the guaranty covers, and whether the guaranty extends to later amendments, renewals and assignments without the guarantor's consent; null for a loan guaranty."
+    },
+    {
+      "key": "guarantyType",
+      "label": "Guaranty type",
+      "type": "enum",
+      "definition": "For a loan: full payment, limited or pro rata payment, completion, nonrecourse carve-out, or a combination. For a lease: payment of rent only, payment and performance of every tenant obligation, or a capped or good-guy guaranty that ends when the tenant leaves on stated terms. Read it from the operative guaranty clause, not the title."
+    },
+    {
+      "key": "liabilityCap",
+      "label": "Liability cap",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The most the guarantor can owe, or null if uncapped. Where the cap is a share of the balance or a formula, record the formula, and note whether enforcement costs and interest sit outside the cap."
+    },
+    {
+      "key": "triggeringEvents",
+      "label": "Triggering events",
+      "type": "list",
+      "definition": "For a carve-out guaranty, each act or event that creates liability, marked as making the guarantor liable for the lender's losses or for the whole debt."
+    },
+    {
+      "key": "paymentOrCollection",
+      "label": "Payment or collection",
+      "type": "enum",
+      "definition": "Whether the lender may pursue the guarantor before the borrower and the collateral (payment) or only after them (collection), as the guaranty states it."
+    },
+    {
+      "key": "jointAndSeveral",
+      "label": "Joint and several",
+      "type": "boolean",
+      "definition": "Whether each guarantor is liable for the whole guaranteed amount, rather than only its own share."
+    },
+    {
+      "key": "burnOff",
+      "label": "Reduction or release",
+      "type": "text",
+      "definition": "Any step-down or release of the guaranty, such as on reaching a coverage level, finishing construction or paying the loan down, with its conditions."
+    },
+    {
+      "key": "netWorthCovenant",
+      "label": "Net worth covenant",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The minimum net worth the guarantor must keep, with how the guaranty defines net worth."
+    },
+    {
+      "key": "liquidityCovenant",
+      "label": "Liquidity covenant",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The minimum cash and marketable securities the guarantor must keep, with what counts toward it."
+    },
+    {
+      "key": "reportingDuties",
+      "label": "Reporting duties",
+      "type": "list",
+      "definition": "The financial statements, tax returns, schedules of real estate owned and compliance certificates the guarantor must deliver, each with its deadline."
+    },
+    {
+      "key": "waivers",
+      "label": "Waivers",
+      "type": "list",
+      "definition": "Each defense or right the guarantor gives up, such as notice of default, requiring the lender to pursue the borrower first, or offsets."
+    },
+    {
+      "key": "consideration",
+      "label": "Consideration recited",
+      "type": "string",
+      "definition": "The benefit the guaranty says the guarantor receives, such as the loan made to an entity the guarantor owns."
+    },
+    {
+      "key": "survival",
+      "label": "Survival",
+      "type": "text",
+      "definition": "Whether liability continues after foreclosure, a deed in lieu, a transfer of the property or repayment, and for how long."
+    }
+  ]
+}

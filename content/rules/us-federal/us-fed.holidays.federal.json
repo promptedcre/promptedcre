@@ -1,0 +1,32 @@
+{
+  "id": "us-fed.holidays.federal",
+  "jurisdiction": "us-federal",
+  "title": "Federal legal public holidays and the days they are observed",
+  "rule": "Federal law lists eleven legal public holidays: New Year's Day, Martin Luther King Jr.'s Birthday, Washington's Birthday, Memorial Day, Juneteenth, Independence Day, Labor Day, Columbus Day, Veterans Day, Thanksgiving Day and Christmas Day. When one falls on a Saturday, most federal employees observe it on the Friday before; when it falls on a Sunday, on the Monday after.",
+  "citation": {
+    "authority": "5 U.S.C. 6103",
+    "url": "https://www.law.cornell.edu/uscode/text/5/6103"
+  },
+  "asOf": "2026-11-11",
+  "lastVerified": "2026-11-11",
+  "review": "ai-drafted",
+  "changeWatch": "A new federal holiday or a change to the observance rules.",
+  "sources": [
+    {
+      "id": "usc-5-6103",
+      "url": "https://www.law.cornell.edu/uscode/text/5/6103",
+      "title": "5 U.S.C. 6103, Holidays",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-11",
+      "tier": "primary"
+    },
+    {
+      "id": "opm-federal-holidays",
+      "url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+      "title": "Federal Holidays",
+      "publisher": "U.S. Office of Personnel Management",
+      "accessed": "2026-11-11",
+      "tier": "primary"
+    }
+  ]
+}

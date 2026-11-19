@@ -1,0 +1,34 @@
+{
+  "id": "us-tx.property.deficiency-after-foreclosure",
+  "jurisdiction": "us-tx",
+  "title": "Texas deficiency suit after foreclosure: two-year deadline and fair market value offset",
+  "rule": "If a Texas trustee's sale brings less than the unpaid secured debt, a deficiency suit must be brought within two years. A defendant may ask the court to find the property's fair market value on the sale date; if that value, less liens the sale left in place, exceeds the price, the deficiency is reduced by the excess. Without that request or competent evidence of value, the sale price governs. Where no value motion or suit was filed, a guarantor under a judgment on the debt may sue for that finding within 90 days after the sale or its actual notice of it, whichever is later.",
+  "citation": {
+    "authority": "Tex. Prop. Code 51.003 and 51.005",
+    "url": "https://statutes.capitol.texas.gov/Docs/PR/htm/PR.51.htm"
+  },
+  "asOf": "2026-11-13",
+  "lastVerified": "2026-11-13",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Property Code 51.003 (unchanged since it was added in 1991) or 51.005 (added 1991), and bills in the next regular session in 2027.",
+  "sources": [
+    {
+      "id": "tx-prop-code-51-003",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.51.htm",
+      "title": "Texas Property Code, Chapter 51 (Section 51.003, Deficiency judgment)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "must be brought within two years of the foreclosure sale and is governed by this section",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-code-51-005",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.51.htm",
+      "title": "Texas Property Code, Chapter 51 (Section 51.005, Foreclosure after judgment against guarantor)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "The suit must be brought not later than the 90th day after the date of the foreclosure sale",
+      "tier": "primary"
+    }
+  ]
+}

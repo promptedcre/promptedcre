@@ -1,0 +1,101 @@
+{
+  "id": "buy-box",
+  "name": "Buy box",
+  "what": "The written criteria a deal must meet before it gets underwritten: property type, size, location, price, tenancy and return targets.",
+  "fields": [
+    {
+      "key": "owner",
+      "label": "Whose criteria",
+      "type": "string",
+      "definition": "The sponsor, fund or capital partner whose criteria these are."
+    },
+    {
+      "key": "effectiveDate",
+      "label": "Effective date",
+      "type": "date",
+      "definition": "The date this version was adopted, so a screen can name the version it was checked against."
+    },
+    {
+      "key": "propertyTypes",
+      "label": "Property types",
+      "type": "list",
+      "definition": "The property types and subtypes the box accepts, and any it names as excluded."
+    },
+    {
+      "key": "markets",
+      "label": "Markets",
+      "type": "list",
+      "definition": "The metro areas, submarkets or radius the box accepts."
+    },
+    {
+      "key": "minBuildingArea",
+      "label": "Minimum building size",
+      "type": "integer",
+      "unit": "SF",
+      "definition": "The smallest building area accepted; null for no minimum."
+    },
+    {
+      "key": "maxBuildingArea",
+      "label": "Maximum building size",
+      "type": "integer",
+      "unit": "SF",
+      "definition": "The largest building area accepted; null for no maximum."
+    },
+    {
+      "key": "minPrice",
+      "label": "Minimum price",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The lowest total price accepted; null for no minimum."
+    },
+    {
+      "key": "maxPrice",
+      "label": "Maximum price",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The highest total price accepted; null for no maximum."
+    },
+    {
+      "key": "physicalCriteria",
+      "label": "Physical criteria",
+      "type": "text",
+      "definition": "Building and site requirements such as year built, construction, clear height, loading, office share, parking or land coverage."
+    },
+    {
+      "key": "tenancyCriteria",
+      "label": "Tenancy criteria",
+      "type": "text",
+      "definition": "Requirements on occupancy, number of tenants, remaining lease term, tenant credit and expense structure."
+    },
+    {
+      "key": "returnTargets",
+      "label": "Return targets",
+      "type": "list",
+      "definition": "Each return measure the box sets, such as going-in cap rate, levered IRR, equity multiple or cash-on-cash, with its target and whether it is levered."
+    },
+    {
+      "key": "leverageLimits",
+      "label": "Leverage limits",
+      "type": "text",
+      "definition": "The maximum loan-to-value or minimum coverage the box allows, and whether recourse is acceptable."
+    },
+    {
+      "key": "holdPeriod",
+      "label": "Hold period",
+      "type": "string",
+      "definition": "The intended range of years from purchase to sale."
+    },
+    {
+      "key": "firmCriteria",
+      "label": "Firm criteria",
+      "type": "list",
+      "definition": "The criteria the box treats as firm rather than preferences; a deal that fails one is shown as an exception at the top of the screen."
+    },
+    {
+      "key": "exclusions",
+      "label": "Exclusions",
+      "type": "list",
+      "definition": "Situations the box rules out regardless of the other criteria, such as ground leases, special-purpose buildings or known contamination."
+    }
+  ]
+}

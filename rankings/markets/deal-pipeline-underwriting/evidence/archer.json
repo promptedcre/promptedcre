@@ -1,0 +1,190 @@
+{
+  "vendor": "archer",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://www.help.archer.re/",
+      "found": true,
+      "note": "Public help center with getting started, parsing, underwriting and pipeline guides."
+    },
+    "api": {
+      "url": "https://docs.archer.re/",
+      "found": true,
+      "note": "Public Archer API Reference marked BETA; renders from an OpenAPI spec. Keys are requested from the docs page, Pro plan only."
+    },
+    "pricing": {
+      "url": "https://www.archer.re/pricing",
+      "found": false,
+      "note": "Page title says 'From $500/Month' but the page body shows only plan structure and a Get a Custom Quote form; no price table."
+    },
+    "changelog": {
+      "url": "https://www.archer.re/blog",
+      "found": false,
+      "note": "No changelog or release notes page (/changelog and /release-notes return 404); product launches appear as blog posts."
+    }
+  },
+  "links": {
+    "docs": "https://www.help.archer.re/",
+    "api": "https://docs.archer.re/",
+    "openapi": "https://app-api.archer.re/external_api/docs",
+    "mcp": "https://docs.archer.re/mcp.html"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://docs.archer.re/mcp.html",
+      "excerpt": "Fifteen read-only tools. The connector never modifies your data.",
+      "fetched": "2026-11-12",
+      "hash": "1d296a83470d2c0214bd74800afdfe894d2997c517621ec5eccdb3b545fc35e2"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://docs.archer.re/mcp.html",
+      "excerpt": "claude mcp add --transport http --scope user archer https://app-api.archer.re/mcp",
+      "fetched": "2026-11-12",
+      "hash": "90044b8f21358b879191df007da4ad7005287cac94dbd65963fb839681d66f1e"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://docs.archer.re/mcp.html",
+      "excerpt": "OAuth 2.1 with PKCE. Supports Dynamic Client Registration and Client ID",
+      "fetched": "2026-11-12",
+      "note": "Sentence continues on the next line: 'Metadata Documents.'",
+      "hash": "fa257b5b9b437962d55376c5721916d291940ba2a05de57640ec8302534d9131"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://docs.archer.re/mcp.html",
+      "excerpt": "Approve One read-only scope, mcp:read .",
+      "fetched": "2026-11-12",
+      "hash": "8e3355619451cae9601e35aa67368d4d15215908f2f78844cb0918c32a3592d7"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://docs.archer.re/mcp.html",
+      "excerpt": "Available with the Archer Pro plan.",
+      "fetched": "2026-11-12",
+      "hash": "c147eafbb2099bd42fb1ed26fd27a7087d9378387688fd28064791b5115ac97e"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://app-api.archer.re/external_api/docs",
+      "excerpt": "developers programmatic, read-only access to the same property data and underwriting models that",
+      "fetched": "2026-11-12",
+      "note": "OpenAPI 3.0.3 spec, publicly downloadable; GET endpoints only, including deal_pipeline, underwrites, rentrolls and ttm.",
+      "hash": "9291d4b08e32a3e03c3c7d0adf23e72f2f9874d65d6473dc58b7e56f47bab29d"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://app-api.archer.re/external_api/docs",
+      "excerpt": "API tokens are issued by Archer directly — there is no self-serve signup yet.",
+      "fetched": "2026-11-12",
+      "note": "Single bearer scheme; each token is tied to one client account.",
+      "hash": "48e5cec92de6169caf6f7b2958291e91ffd148441db4b7edd6fea5b5a6815b38"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://app-api.archer.re/external_api/docs",
+      "excerpt": "The External API is a Pro plan feature — every endpoint requires an account on the Pro plan.",
+      "fetched": "2026-11-12",
+      "hash": "8ff4e58153d9feb590ef9e22601c9082e508af91353d40803b44fd72de177602"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://www.archer.re/blog/archer-public-api",
+      "excerpt": "Are there rate limits? Yes: 10 requests per minute during the beta, documented at docs.archer.re",
+      "fetched": "2026-11-12",
+      "hash": "24caff26351f4264eabd3b82ae15695a0e8cc005b4f408b7ab0bbc1257ec280a"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://www.archer.re/llms.txt",
+      "excerpt": "Archer in Claude / Open API (Pro) / MCP: connect verified deal data to Claude, ChatGPT, Gemini, or Perplexity.",
+      "fetched": "2026-11-12",
+      "note": "llms.txt covers marketing, help center and blog pages and links the API docs.",
+      "hash": "5011c57a301de2a122fd8d36aa22dd3a8b0a6f0741c51a80c977c8431b414334"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://www.archer.re/llms.txt",
+      "excerpt": "How to start: free via a shared deal → free trial (credit card required) → paid trial (BYOM) → contracts from $500/month.",
+      "fetched": "2026-11-12",
+      "hash": "d4016339de085abced591eb715b22c95e4025a0fcd9d9cd0eb674b792857b6e7"
+    },
+    {
+      "id": "c12",
+      "tier": "vendor-claim",
+      "url": "https://www.archer.re/pricing",
+      "excerpt": "Archer Pricing — Multifamily Underwriting From $500/Month",
+      "fetched": "2026-11-12",
+      "note": "Page title; the body asks for a custom quote.",
+      "hash": "3fb97cc86445087c7da65e6694cfdf5dba886122e489ef21b06f9c109e4bb6d9"
+    },
+    {
+      "id": "c13",
+      "tier": "vendor-claim",
+      "url": "https://www.archer.re/pricing",
+      "excerpt": "Archer’s pricing model depends on a few factors specific to your team, so we’ll need some info from you to get you specific pricing.",
+      "fetched": "2026-11-12",
+      "hash": "8584deaddb954942fc67245074fd62ae976932ea313e9647613a0a47cbe40b69"
+    },
+    {
+      "id": "c14",
+      "tier": "vendor-claim",
+      "url": "https://www.archer.re/platform/underwriting-and-parsing",
+      "excerpt": "Extract and map your rent roll or T-12 in seconds using ML",
+      "fetched": "2026-11-12",
+      "note": "Described as an in-app feature; the API spec has no upload endpoint.",
+      "hash": "433c43a89bc25392caa0c7c4602e4d252139ba6e3033f9a7379c1b6cb12ec590"
+    },
+    {
+      "id": "c15",
+      "tier": "vendor-claim",
+      "url": "https://www.help.archer.re/",
+      "excerpt": "Track deals from screening to close. Customize stages, views, and fields.",
+      "fetched": "2026-11-12",
+      "note": "In-app pipeline; the API exposes it read-only.",
+      "hash": "0a82b1483d30c72307bbffc1665c28dc526486c09c3e36fe7d3ee239fc2ba148"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://www.archer.re/hubfs/llms.txt",
+      "excerpt": "# Archer",
+      "note": "llms.txt: GET 200, 8300 bytes",
+      "fetched": "2026-11-12",
+      "hash": "53b5677d739f635a4b61e33a00ca519f8b8d63a060c5a37e6b9b3156852c06fe"
+    },
+    {
+      "id": "p2",
+      "tier": "probe",
+      "url": "https://app-api.archer.re/external_api/docs",
+      "excerpt": "{\"openapi\":\"3.0.3\"",
+      "note": "API spec file: GET 200, 133251 bytes",
+      "fetched": "2026-11-12",
+      "hash": "b9d8ba09d2b5de6c4d1bc3dcf1c633b217efd3a2c84e8cf72c8d72dda6cb8785"
+    },
+    {
+      "id": "p3",
+      "tier": "probe",
+      "url": "https://docs.archer.re/mcp.html",
+      "excerpt": "Archer MCP Connector",
+      "note": "MCP page resolves: GET 200 (page title)",
+      "fetched": "2026-11-12",
+      "hash": "a60740f993e3aaa6184997dcbd2bed695e606174a6d074350feb8dd698477d15"
+    }
+  ]
+}

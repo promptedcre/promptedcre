@@ -1,0 +1,40 @@
+{
+  "id": "environmental-release-on-site",
+  "slug": "environmental-release-on-site",
+  "kind": "situation",
+  "title": "A spill or release happens on site",
+  "summary": "Stop and contain it, make the reports the law requires on time, and bring in environmental counsel and consultants.",
+  "phase": "operate",
+  "order": 124,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "situation": {
+    "trigger": "A tenant, contractor or neighbor reports a chemical spill or release at the property.",
+    "urgency": "hours"
+  },
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Make sure people are safe and call emergency services if needed",
+    "Stop the source and contain the release",
+    "Find out what was released, how much and whose operation caused it",
+    "Have counsel confirm which reports must be made and when",
+    "Make the required reports to the agencies",
+    "Notify the insurer and the lender",
+    "Engage an environmental consultant",
+    "Document the release and every step of the response",
+    "Read the tenant's lease for use, compliance and indemnity terms",
+    "Oversee the cleanup and the consultant's assessment",
+    "Estimate the effect on value and the loan",
+    "Tell investors and record the reports, results and costs"
+  ]
+}

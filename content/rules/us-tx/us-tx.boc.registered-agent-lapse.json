@@ -1,0 +1,34 @@
+{
+  "id": "us-tx.boc.registered-agent-lapse",
+  "jurisdiction": "us-tx",
+  "title": "Texas registered agent: resignation, duties, and what happens when there is none",
+  "rule": "A registered agent may resign by notifying the entity and, within 10 days after that, the Secretary of State; the appointment ends on the 31st day after the Secretary of State receives the notice. The agent's only duty is to forward process, notices and demands to the address the entity last gave it. If the entity keeps no registered agent, or the agent cannot with reasonable diligence be found at the registered office, the Secretary of State becomes its agent for service. The Secretary of State may terminate a filing entity that lacks a registered agent or office and does not fix it within 90 days after notice is mailed.",
+  "citation": {
+    "authority": "Tex. Bus. Orgs. Code 5.204, 5.206, 5.251 and 11.251",
+    "url": "https://statutes.capitol.texas.gov/Docs/BO/htm/BO.5.htm"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Business Organizations Code chapter 5, subchapters E and F, or to section 11.251.",
+  "sources": [
+    {
+      "id": "tx-boc-5",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.5.htm",
+      "title": "Texas Business Organizations Code, Chapter 5 (Sections 5.204, 5.206 and 5.251)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "The termination is effective on the 31st day after the date the secretary of state receives the notice.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-11",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.11.htm",
+      "title": "Texas Business Organizations Code, Chapter 11 (Section 11.251, termination by the Secretary of State)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "maintain a registered agent or registered office in this state as required by law",
+      "tier": "primary"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "id": "bad-actor-questionnaire",
+  "name": "Bad-actor questionnaire",
+  "what": "A covered person's signed answers about the disqualifying events listed in Rule 506(d), kept as evidence of the issuer's factual inquiry.",
+  "fields": [
+    {
+      "key": "respondent",
+      "label": "Respondent",
+      "type": "string",
+      "definition": "The covered person answering, by full legal name. For an entity, also the individual signing for it and that person's title."
+    },
+    {
+      "key": "coveredRoles",
+      "label": "Covered roles",
+      "type": "list",
+      "definition": "Each role that makes the respondent a covered person for this offering: the issuer, a predecessor or affiliated issuer; a director, executive officer, other officer in the offering, general partner or managing member; a holder of 20% or more of the voting equity by voting power; a promoter; a fund's investment manager; a paid solicitor; or a principal of a manager or solicitor.",
+      "authority": "17 CFR 230.506(d)(1)"
+    },
+    {
+      "key": "offering",
+      "label": "Offering",
+      "type": "string",
+      "definition": "The issuer and offering the answers are given for, by name."
+    },
+    {
+      "key": "criminalConviction",
+      "label": "Securities-related conviction",
+      "type": "boolean",
+      "definition": "Whether the respondent was convicted of a felony or misdemeanor in connection with a securities sale, a false SEC filing, or the business of an underwriter, broker, dealer, adviser or paid solicitor, within ten years before the sale (five for an issuer, its predecessors and affiliated issuers).",
+      "authority": "17 CFR 230.506(d)(1)(i)"
+    },
+    {
+      "key": "courtInjunction",
+      "label": "Court injunction",
+      "type": "boolean",
+      "definition": "Whether a court order entered within five years before the sale still restrains or enjoins the respondent from that same securities-related conduct.",
+      "authority": "17 CFR 230.506(d)(1)(ii)"
+    },
+    {
+      "key": "regulatorFinalOrder",
+      "label": "Final order of a regulator",
+      "type": "boolean",
+      "definition": "Whether the respondent is subject to a final order of a state securities, banking or insurance regulator, a federal banking agency, the CFTC or the NCUA that now bars it from the regulated business, or that rests on a fraud-based violation and was entered within ten years before the sale.",
+      "authority": "17 CFR 230.506(d)(1)(iii); 17 CFR 230.501(g)"
+    },
+    {
+      "key": "secDisciplinaryOrder",
+      "label": "SEC disciplinary order",
+      "type": "boolean",
+      "definition": "Whether an SEC order under the Exchange Act or Advisers Act provisions the rule lists now suspends or revokes the respondent's registration, limits its activities, or bars it from association or from penny stock offerings.",
+      "authority": "17 CFR 230.506(d)(1)(iv)"
+    },
+    {
+      "key": "secCeaseAndDesist",
+      "label": "SEC cease-and-desist order",
+      "type": "boolean",
+      "definition": "Whether an SEC order entered within five years before the sale now orders the respondent to cease and desist from violating a scienter-based antifraud provision or Section 5 of the Securities Act.",
+      "authority": "17 CFR 230.506(d)(1)(v)"
+    },
+    {
+      "key": "sroSuspension",
+      "label": "Exchange or association suspension",
+      "type": "boolean",
+      "definition": "Whether the respondent is suspended or expelled from, or barred from association with a member of, a registered securities exchange or securities association for conduct inconsistent with just and equitable principles of trade.",
+      "authority": "17 CFR 230.506(d)(1)(vi)"
+    },
+    {
+      "key": "stopOrder",
+      "label": "Stop order or Regulation A suspension",
+      "type": "boolean",
+      "definition": "Whether a registration statement or Regulation A offering statement the respondent filed or was named underwriter in was the subject of a refusal, stop or suspension order within five years before the sale, or is now under investigation or proceeding for one.",
+      "authority": "17 CFR 230.506(d)(1)(vii)"
+    },
+    {
+      "key": "postalOrder",
+      "label": "Postal false-representation order",
+      "type": "boolean",
+      "definition": "Whether the respondent is subject to a U.S. Postal Service false representation order entered within five years before the sale, or now to a temporary restraining order or preliminary injunction over conduct the Postal Service alleges is a mail scheme of that kind.",
+      "authority": "17 CFR 230.506(d)(1)(viii)"
+    },
+    {
+      "key": "eventDetails",
+      "label": "Details of any yes answer",
+      "type": "list",
+      "definition": "For each yes or unclear answer, the event, the court or agency, the date and the current status, as the respondent wrote it. Every such answer goes to counsel before the offering opens."
+    },
+    {
+      "key": "preSeptember2013Events",
+      "label": "Events before September 23, 2013",
+      "type": "list",
+      "definition": "Each event of a listed kind that occurred before September 23, 2013. These do not disqualify, but the issuer must describe them in writing to each purchaser a reasonable time before sale.",
+      "authority": "17 CFR 230.506(d)(2)(i); 17 CFR 230.506(e)"
+    },
+    {
+      "key": "waiverOrAdvice",
+      "label": "Waiver or regulator's advice",
+      "type": "text",
+      "definition": "Any SEC waiver for good cause, or any written advice from the court or authority that entered an order that disqualification should not arise from it, with its date and where it is kept; null if none.",
+      "authority": "17 CFR 230.506(d)(2)(ii) and (iii)"
+    },
+    {
+      "key": "agreesToReportNewEvents",
+      "label": "Agrees to report new events",
+      "type": "boolean",
+      "definition": "Whether the respondent agrees to tell the issuer promptly of any new event while the offering stays open."
+    },
+    {
+      "key": "signatureDate",
+      "label": "Signed",
+      "type": "date",
+      "definition": "The date the respondent signed the answers. The respondent answers and signs for itself."
+    },
+    {
+      "key": "bringDowns",
+      "label": "Bring-down certifications",
+      "type": "list",
+      "definition": "Each later date on which the respondent confirmed the answers are still true, such as before a later closing, with any change reported."
+    }
+  ]
+}

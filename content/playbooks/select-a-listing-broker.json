@@ -1,0 +1,34 @@
+{
+  "id": "select-a-listing-broker",
+  "slug": "select-a-listing-broker",
+  "kind": "process",
+  "title": "Select a listing broker",
+  "summary": "Interview brokers, compare pricing opinions and marketing plans, and sign the listing agreement.",
+  "phase": "exit",
+  "order": 505,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Write down what the sale needs from a broker",
+    "List brokers active in the property type and submarket",
+    "Send each broker the same property package and request",
+    "Interview each broker on buyers, marketing plan and team",
+    "Compare pricing opinions against the sponsor's own valuation",
+    "Check references from recent sellers",
+    "Compare fee, term, exclusions and buyer-broker terms",
+    "Negotiate the listing agreement with counsel",
+    "Sign the listing agreement",
+    "Tell the brokers not chosen and record the choice"
+  ]
+}

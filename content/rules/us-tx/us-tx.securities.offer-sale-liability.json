@@ -1,0 +1,25 @@
+{
+  "id": "us-tx.securities.offer-sale-liability",
+  "jurisdiction": "us-tx",
+  "title": "Texas liability for untrue statements and omissions when selling securities",
+  "rule": "Whoever offers or sells a security by an untrue statement of material fact, or omission making its statements misleading, is liable to the buyer, exempt or not, for rescission, or damages if the buyer no longer owns it. Defenses (seller's burden): the buyer knew, or the seller did not and with reasonable care could not have known; an issuer loses the second for writings it prepared and delivered in selling. Whoever controls the seller or issuer, even indirectly, is jointly and severally liable unless it proves that lack of knowledge, as is anyone materially aiding with intent to deceive or defraud or reckless disregard for the truth or the law.",
+  "citation": {
+    "authority": "Tex. Gov't Code 4008.052 and 4008.055",
+    "url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.4008.htm"
+  },
+  "asOf": "2026-11-14",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Government Code sections 4008.052 and 4008.055, the rescission-offer rules in section 4008.058, and the limitations periods in section 4008.062.",
+  "sources": [
+    {
+      "id": "tx-gov-code-4008",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.4008.htm",
+      "title": "Texas Government Code, Chapter 4008 (Securities Act private rights of action; Sections 4008.052, 4008.055 and 4008.062)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "regardless of whether the security or transaction is exempt under Chapter 4005",
+      "tier": "primary"
+    }
+  ]
+}

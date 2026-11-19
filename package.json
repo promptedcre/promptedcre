@@ -1,0 +1,65 @@
+{
+  "name": "promptedcre-v3",
+  "version": "0.1.0",
+  "private": true,
+  "license": "Apache-2.0",
+  "engines": {
+    "node": "24.x"
+  },
+  "bin": {
+    "pcre": "bin/pcre.mjs",
+    "pcre-mcp": "bin/pcre-mcp.mjs"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "vitest run",
+    "validate": "tsx tools/validate.ts",
+    "citations": "tsx tools/citations.ts",
+    "citations:live": "tsx tools/citations.ts --live",
+    "leakcheck": "node tools/leakcheck/check.mjs && node tools/leakcheck/selftest.mjs",
+    "leakcheck:generate": "node tools/leakcheck/generate.mjs",
+    "leakcheck:hook": "node tools/leakcheck/install-hook.mjs",
+    "rank:probe": "tsx tools/rankings/probe.ts",
+    "rank:seal": "tsx tools/rankings/seal.ts",
+    "rank:validate": "tsx tools/rankings/validate.ts",
+    "rank:calibrate": "tsx tools/rankings/calibrate.ts",
+    "rank:excerpts": "tsx tools/rankings/excerpts.ts",
+    "pcre": "tsx cli/pcre.ts",
+    "pcre:mcp": "tsx cli/mcp.ts",
+    "processmap": "tsx tools/process-map.ts",
+    "demo:record": "tsx tools/demo-run.ts",
+    "demo:record-llc": "tsx tools/demo-llc.ts",
+    "design:lint": "node tools/design-lint.mjs",
+    "verify": "npm run typecheck && npm run lint && npm run test && npm run validate && npm run rank:validate && npm run citations && npm run leakcheck && npm run build"
+  },
+  "dependencies": {
+    "@fontsource-variable/archivo": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@gsap/react": "2.1.2",
+    "@modelcontextprotocol/server": "2.4.0",
+    "@vercel/analytics": "2.0.1",
+    "gsap": "3.15.0",
+    "mcp-handler": "2.3.0",
+    "next": "16.4.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "tsx": "^4.23.15",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "2.4.0",
+    "@tailwindcss/turbopack": "4.3.3",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.6",
+    "tailwindcss": "4.3.3",
+    "typescript": "^5",
+    "vitest": "^5.1.0"
+  }
+}

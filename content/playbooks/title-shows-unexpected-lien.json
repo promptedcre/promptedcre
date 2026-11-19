@@ -1,0 +1,351 @@
+{
+  "id": "title-shows-unexpected-lien",
+  "slug": "title-shows-unexpected-lien",
+  "kind": "situation",
+  "title": "The title commitment shows an unexpected lien or exception",
+  "summary": "Object inside the contract's title review period, identify what the lien is, and get it paid, released or bonded before closing. If the cure cannot be finished in time, make it a closing condition or extend in writing.",
+  "phase": "acquire",
+  "order": 105,
+  "featured": true,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-12",
+  "situation": {
+    "trigger": "The title commitment lists a lien, judgment or exception the contract did not anticipate.",
+    "urgency": "days"
+  },
+  "requires": [
+    "negotiate-purchase-contract"
+  ],
+  "consumes": [
+    "title-commitment",
+    "purchase-and-sale-agreement",
+    "payoff-letter",
+    "settlement-statement"
+  ],
+  "produces": [
+    "lien-release"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "tdi-form-t7",
+      "url": "https://www.tdi.texas.gov/title/documents/form_t-07.pdf",
+      "title": "Form T-7, Commitment for Title Insurance (effective January 3, 2014)",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-12",
+      "quote": "This Commitment ends ninety (90) days from the effective date, unless the Policy is issued sooner",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-2502",
+      "url": "https://statutes.capitol.texas.gov/Docs/IN/htm/IN.2502.htm",
+      "title": "Texas Insurance Code, Chapter 2502 (Section 2502.003, Insuring around defined; prohibitions and exceptions)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-p11",
+      "url": "https://www.tdi.texas.gov/title/titlem4c.html",
+      "title": "Basic Manual Section IV, Procedural Rule P-11: Insuring Around",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-52",
+      "url": "https://statutes.capitol.texas.gov/Docs/PR/htm/PR.52.htm",
+      "title": "Texas Property Code, Chapter 52 (Judgment liens)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "constitutes a lien on and attaches to any real property of the defendant",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-53",
+      "url": "https://statutes.capitol.texas.gov/Docs/PR/htm/PR.53.htm",
+      "title": "Texas Property Code, Chapter 53 (Mechanic's, contractor's, or materialman's lien)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-32",
+      "url": "https://statutes.capitol.texas.gov/Docs/TX/htm/TX.32.htm",
+      "title": "Texas Tax Code, Chapter 32 (Section 32.01, Tax lien)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "On January 1 of each year, a tax lien attaches to property",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-6321",
+      "url": "https://www.law.cornell.edu/uscode/text/26/6321",
+      "title": "26 U.S.C. 6321, Lien for taxes",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-6323",
+      "url": "https://www.law.cornell.edu/uscode/text/26/6323",
+      "title": "26 U.S.C. 6323, Validity and priority against certain persons",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-federal-tax-lien",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/understanding-a-federal-tax-lien",
+      "title": "Understanding a federal tax lien",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "calendar-objection-deadline",
+      "title": "Calendar the objection deadline now",
+      "instruction": "Find the contract's title objection period, the seller's cure period and what happens if the seller does not cure, and calendar them from the date the commitment and its documents arrived, counted the way the contract counts. Note the commitment's effective date: a Texas-form commitment ends 90 days after it unless the policy issues sooner, and any lien filed after that date becomes a Schedule C requirement.",
+      "mode": "agent",
+      "modeBasis": "The periods come from the contract and the commitment and follow fixed day counts.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "title-commitment"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tdi-form-t7"
+      ]
+    },
+    {
+      "id": "identify-the-lien",
+      "title": "Pull the instrument and identify the lien",
+      "instruction": "Get the recorded instrument from the title company or the county records and note the kind of lien, the holder, the amount, the debtor's name and the recording date. A prior deed of trust secures the seller's loan. A recorded and indexed abstract of judgment is a lien on the debtor's non-exempt land in that county, generally for 10 years unless the judgment goes dormant; confirm the debtor is the seller and not a similar name. A mechanic's lien affidavit claims payment for work on the property. Property taxes become a lien each January 1. A federal tax lien is not valid against a buyer until the IRS files its notice in the office state law designates.",
+      "mode": "agent",
+      "modeBasis": "The instrument and the statutes are documents an agent can read, and county records are public.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "calendar-objection-deadline"
+      ],
+      "rules": [
+        "us-tx.property.judgment-liens",
+        "us-tx.property.mechanics-liens"
+      ],
+      "consumes": [
+        "title-commitment"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-52",
+        "tx-prop-53",
+        "tx-tax-32",
+        "usc-26-6323"
+      ]
+    },
+    {
+      "id": "send-objection",
+      "title": "Object in writing before the deadline",
+      "instruction": "Counsel sends the title objection under the contract's notice clause, naming the lien and the cure required: a payoff and recorded release, a bond, or removal from the policy. Copy the title company. If the buyer knows of anything else affecting title that the commitment does not show, such as unpaid contractors, the Texas commitment's conditions require telling the title company in writing, or its liability can end or shrink.",
+      "mode": "human-online",
+      "modeBasis": "A contract notice binds the buyer, and its form and timing are a legal judgment for counsel.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "identify-the-lien"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "title-commitment"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tdi-form-t7"
+      ]
+    },
+    {
+      "id": "agree-the-cure-with-title",
+      "title": "Agree the cure with the title company",
+      "instruction": "Ask the title company what it needs to issue the policies without the lien as an exception. A Texas title company may not knowingly issue a policy showing no enforceable recorded lien when one exists, except where the commissioner's rules allow. Those include a lien paid with proof in the file but not yet released, payoff funds held in escrow with a recordable release on the way, and a contested mechanic's lien covered by sufficient indemnity from a regulated financial institution or by deposited funds, with the owner's and lender's written consent.",
+      "mode": "human-online",
+      "modeBasis": "What the title company will insure is its underwriter's decision.",
+      "actor": "title",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "send-objection"
+      ],
+      "rules": [
+        "us-tx.title.promulgated-rates-forms"
+      ],
+      "consumes": [
+        "title-commitment"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-ins-2502",
+        "tdi-p11"
+      ]
+    },
+    {
+      "id": "pay-off-deed-of-trust-or-taxes",
+      "title": "Deed of trust or tax lien: payoff and release",
+      "instruction": "For the seller's deed of trust, the title company gets a payoff letter good through the closing date, pays it from the seller's proceeds and obtains the recorded release. Property taxes for the current year are a lien from January 1 even before they are due, so delinquent taxes are paid at closing and current ones are usually prorated. For a federal tax lien, the seller pays it or applies to the IRS for a certificate discharging this property from the lien; IRS Publication 783 explains how.",
+      "mode": "agent",
+      "modeBasis": "An agent can check payoff letters and track releases; the title company and the seller act on them.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "agree-the-cure-with-title"
+      ],
+      "consumes": [
+        "payoff-letter",
+        "title-commitment"
+      ],
+      "produces": [
+        "lien-release"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-32",
+        "usc-26-6321",
+        "irs-federal-tax-lien"
+      ]
+    },
+    {
+      "id": "mechanics-lien-cure",
+      "title": "Mechanic's lien: release, bond or challenge",
+      "instruction": "If the claim is owed, the seller pays it; once paid, the claimant must furnish a recordable release within 10 days after a written request. If the seller disputes it, any person may discharge the lien claim from the property with a bond from a licensed corporate surety for double the claims or, when the claims exceed $40,000, the greater of one and a half times the claims or the claims plus $40,000; filing, the clerk's notice and recording complete the discharge. Counsel also checks whether the affidavit was filed on time and whether the period to sue has run.",
+      "mode": "human-online",
+      "modeBasis": "Whether to pay, bond or contest a lien is a legal and commercial judgment for counsel and the seller.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "agree-the-cure-with-title"
+      ],
+      "rules": [
+        "us-tx.property.mechanics-liens"
+      ],
+      "produces": [
+        "lien-release"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-53"
+      ]
+    },
+    {
+      "id": "judgment-lien-cure",
+      "title": "Judgment lien: confirm the debtor, then pay or release",
+      "instruction": "Compare the abstract's debtor name and identifying details with the seller's. If the judgment is against someone else with a similar name, ask the title company what it accepts to clear it, often an identity affidavit. If it is the seller's, the judgment must be paid or settled and a release recorded, or the creditor must release this property. Check the recording date and whether the judgment has gone dormant, which ends the lien.",
+      "mode": "agent",
+      "modeBasis": "Comparing names, dates and the judgment record is document work; the payoff is the seller's.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "agree-the-cure-with-title"
+      ],
+      "rules": [
+        "us-tx.property.judgment-liens"
+      ],
+      "consumes": [
+        "title-commitment"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-52"
+      ]
+    },
+    {
+      "id": "make-cure-a-condition",
+      "title": "Make the cure a closing condition, or extend",
+      "instruction": "If the cure cannot be finished before the objection or feasibility deadline, counsel documents it in a signed amendment: the seller's duty to remove the lien, the evidence required (a recorded release, a filed bond with notice, or the title company's agreement to delete the exception), the buyer's right to terminate and recover the deposit if it is not done, and any extension of closing. Do not let a deadline pass on an oral promise.",
+      "mode": "human-online",
+      "modeBasis": "Amending the contract is a legal act counsel drafts and the parties sign.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "pay-off-deed-of-trust-or-taxes",
+        "mechanics-lien-cure",
+        "judgment-lien-cure"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "confirm-lien-cleared",
+      "title": "Confirm the lien is gone from the policy",
+      "instruction": "Before funding, check that the settlement statement pays the lien, or funds the escrow the title company required, and that the pro forma owner's and loan policies leave it out of Schedule B. After closing, confirm the release or bond is of record and file the recording information with the policy.",
+      "mode": "agent",
+      "modeBasis": "The settlement statement, the pro forma policies and the county records are documents an agent can check.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "make-cure-a-condition"
+      ],
+      "consumes": [
+        "settlement-statement",
+        "lien-release"
+      ],
+      "basis": "practitioner"
+    }
+  ],
+  "outlineSteps": []
+}

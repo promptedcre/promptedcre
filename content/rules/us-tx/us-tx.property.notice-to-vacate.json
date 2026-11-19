@@ -1,0 +1,25 @@
+{
+  "id": "us-tx.property.notice-to-vacate",
+  "jurisdiction": "us-tx",
+  "title": "Texas notice to vacate before an eviction suit",
+  "rule": "Before filing a forcible detainer suit, a Texas landlord must give a tenant who defaults or holds over at least three days' written notice to vacate, unless a written lease or agreement sets a shorter or longer period. If possession ends solely for nonpayment and the tenant was not late before that month, it must be a notice to pay rent or vacate. Under the text effective January 1, 2026, notice goes by mail or delivery service, delivery inside the premises in a conspicuous place, hand delivery to a tenant 16 or older, or electronic means agreed in writing; actual receipt also suffices. Holdover suits also need Section 91.001 termination.",
+  "citation": {
+    "authority": "Tex. Prop. Code 24.005(a), (f-3) and (f-4)",
+    "url": "https://statutes.capitol.texas.gov/Docs/PR/htm/PR.24.htm"
+  },
+  "asOf": "2026-11-13",
+  "lastVerified": "2026-11-13",
+  "review": "ai-drafted",
+  "changeWatch": "Senate Bill 38 (89th Legislature, 2025) amended and repealed parts of 24.005 effective January 1, 2026, and added 24.00505 and 24.00506 on eviction petitions and local court rules; watch the Texas Rules of Civil Procedure eviction rules adopted to match, and bills in the regular session that starts in 2027. Commercial premises used for listed unlawful purposes follow Section 93.013 instead.",
+  "sources": [
+    {
+      "id": "tx-prop-code-24",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.24.htm",
+      "title": "Texas Property Code, Chapter 24 (Forcible entry and detainer), Section 24.005",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "at least three days' written notice to vacate the premises before the landlord files a forcible detainer suit",
+      "tier": "primary"
+    }
+  ]
+}

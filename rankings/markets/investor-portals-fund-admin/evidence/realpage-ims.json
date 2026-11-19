@@ -1,0 +1,128 @@
+{
+  "vendor": "realpage-ims",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://developer.realpage.com/",
+      "found": true,
+      "note": "RealPage Developer Portal exists but renders only in the browser; text tools and a web fetch returned only its title, so its content is unread. help.realpage.com redirects to an access-denied page"
+    },
+    "api": {
+      "url": "https://www.realpage.com/investment-management/aim/",
+      "found": true,
+      "note": "AIM product page claims a data-extraction API; RPX marketplace page claims standard APIs across RealPage products; no public API reference for IMS seen"
+    },
+    "pricing": {
+      "url": "https://www.realpage.com/investment-management/investor-management-services/",
+      "found": false,
+      "note": "No pricing page; /pricing is a 404; IMS page offers only Contact Sales"
+    },
+    "changelog": {
+      "url": "https://www.realpage.com/investment-management/investor-management-services/",
+      "found": false,
+      "note": "No changelog or release notes page found for investment management products"
+    }
+  },
+  "links": {
+    "docs": "https://developer.realpage.com/"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://www.realpage.com/investment-management/investor-management-services/",
+      "excerpt": "Streamline investor communications, speed capital raises and gain insights to outperform the market.",
+      "fetched": "2026-11-12",
+      "note": "Investor Management Services (IMS) is the investor portal and administration product in this market",
+      "hash": "a4aca78ee2ddfaf195646c0d007c0778c6f3d01c32e2e16c9659e02d92259d00"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://www.realpage.com/investment-management/investor-management-services/",
+      "excerpt": "Automated waterfall calculations and custom statement generation",
+      "fetched": "2026-11-12",
+      "hash": "a888c49d46dcaf8792404b7708d08221b582e224cc444e5fbaef507cd46a393b"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://www.realpage.com/investment-management/investor-management-services/",
+      "excerpt": "NEW Integration of entity structures, contributions and distributions with the Realpage Financial Suite",
+      "fetched": "2026-11-12",
+      "hash": "2d82de9851df636e0f2092f7ced3f851e340b4239dc1aa55639fd9411dd65be9"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://www.realpage.com/investment-management/investor-management-services/",
+      "excerpt": "IMS makes planning, requesting and collecting commitments for new capital raises",
+      "fetched": "2026-11-12",
+      "note": "Capital call text continues: 'notify investors of current capital needs, track incoming funding'; described as in-app features",
+      "hash": "9a4a92e7a16be9767efc835943b0a26a4c6d4638706698803aeeea19eae70f5b"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://www.realpage.com/investment-management/investor-management-services/",
+      "excerpt": "notify investors of current capital needs, track incoming funding and quickly",
+      "fetched": "2026-11-12",
+      "hash": "e845edfdb3a8b5855c1e5b491e1013193817243504f99ce2725e5c040479ea47"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://www.realpage.com/investment-management/investor-management-services/",
+      "excerpt": "Contact Sales",
+      "fetched": "2026-11-12",
+      "note": "Only call to action on the IMS page; no price or trial",
+      "hash": "d5d34aaa9877f1e21900a3dbb35c8ee14497413e234ffa158c1039d732a6a8ad"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://www.realpage.com/investment-management/aim/",
+      "excerpt": "A robust API for data extraction supports all your data consolidation needs.",
+      "fetched": "2026-11-12",
+      "note": "Asset Investment Management (AIM) product, not the investor portal; no API documentation linked",
+      "hash": "3266db2ac3c40b6c562091ade13d9adaaf5f3b4a9e05c68dd6242feda5813520"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://www.realpage.com/investment-management/aim/",
+      "excerpt": "we offer an Excel Add-In and self-service Power BI for easy creation of analytics tailored to your reporting needs",
+      "fetched": "2026-11-12",
+      "hash": "80cc01af2ddcc2cd042a70b18ab07964755d76a4e1bd0044ff52a97802d78340"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://www.realpage.com/investment-management/aim/",
+      "excerpt": "RPX is our best-in-class Integration Marketplace, offering secure, standardized APIs across all Realpage products.",
+      "fetched": "2026-11-12",
+      "note": "Site-wide marketplace blurb; does not say IMS is covered",
+      "hash": "16c28f98fe7fc49ab5f4600af5e5969fbc289cfb4e73679bdc143509eb312b9a"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://www.realpage.com/investment-management/",
+      "excerpt": "Enable reliable insights and portfolio-wide visibility to help you make more informed decisions, streamline the capital-raising process, and improve investor interactions.",
+      "fetched": "2026-11-12",
+      "note": "Investment management landing page lists Asset Investment Management, Data Management Services and Investor Management Services",
+      "hash": "c81d0da4cdcddaee2526586884d4bd3265ba21ff9c4b23b06cdade25ac6a98d5"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://developer.realpage.com/",
+      "excerpt": "RealPage Developer Portal",
+      "fetched": "2026-11-12",
+      "note": "Only the page title is readable; content renders in the browser",
+      "hash": "b4409e28ae6749840925a7dbd8badfc3b7dbdcb0175ff2d733978867e7951199"
+    }
+  ]
+}

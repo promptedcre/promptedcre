@@ -1,0 +1,565 @@
+{
+  "id": "negotiate-loan-documents",
+  "slug": "negotiate-loan-documents",
+  "kind": "process",
+  "title": "Negotiate the loan documents",
+  "summary": "From the signed term sheet to loan documents ready to sign: check the drafts against the terms, then work through the deed of trust, note, covenants, transfer limits, guaranty, rents and cure periods. Agents read, compare and run the numbers; counsel negotiates and a principal decides the business points.",
+  "phase": "acquire",
+  "order": 268,
+  "featured": false,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-13",
+  "requires": [
+    "source-acquisition-debt"
+  ],
+  "consumes": [
+    "loan-term-sheet",
+    "loan-documents",
+    "title-commitment",
+    "survey",
+    "rent-roll",
+    "lease-abstract",
+    "underwriting-model",
+    "property-condition-assessment",
+    "tenant-estoppel",
+    "snda",
+    "purchase-and-sale-agreement",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "ic-memo",
+    "insurance-binder"
+  ],
+  "produces": [
+    "loan-documents",
+    "guaranty"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "tx-bc-26",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.26.htm",
+      "title": "Texas Business and Commerce Code, Chapter 26 (Sections 26.01 and 26.02, Statute of frauds; loan agreement must be in writing)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "may not be varied by any oral agreements or discussions that occur before or contemporaneously with the execution of the agreement",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-51",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.51.htm",
+      "title": "Texas Property Code, Chapter 51 (Sections 51.002 to 51.005, Sale under a contract lien and deficiencies)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "a deed of trust or other contract lien on real property used as the debtor's residence",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-fin-306",
+      "url": "https://tcss.legis.texas.gov/resources/FI/htm/FI.306.htm",
+      "title": "Texas Finance Code, Chapter 306 (Sections 306.002, 306.003 and 306.006, Commercial loans)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "a rate or amount of interest that does not exceed the applicable ceilings computed in accordance with Chapter 303",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-fin-303",
+      "url": "https://tcss.legis.texas.gov/resources/FI/htm/FI.303.htm",
+      "title": "Texas Finance Code, Chapter 303 (Section 303.009, Maximum and minimum ceilings)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "the limitation on the ceilings determined by those computations is 28 percent a year",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-7-1a",
+      "url": "https://www.law.cornell.edu/uscode/text/7/1a",
+      "title": "7 U.S.C. 1a(18), Eligible contract participant",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "that has total assets exceeding $10,000,000;",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-7-2",
+      "url": "https://www.law.cornell.edu/uscode/text/7/2",
+      "title": "7 U.S.C. 2(e), Limitation on participation in swaps",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "It shall be unlawful for any person, other than an eligible contract participant, to enter into a swap unless",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-12-1701j-3",
+      "url": "https://www.law.cornell.edu/uscode/text/12/1701j-3",
+      "title": "12 U.S.C. 1701j-3, Preemption of due-on-sale prohibitions",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "a lender may, subject to subsection (c), enter into or enforce a contract containing a due-on-sale clause with respect to a real property loan",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-12-1002-7",
+      "url": "https://www.ecfr.gov/current/title-12/section-1002.7",
+      "title": "12 CFR 1002.7, Rules concerning extensions of credit (paragraph (d), Signature of spouse or other person)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "The applicant's spouse may serve as an additional party, but the creditor shall not require that the spouse be the additional party.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-12-1002-2",
+      "url": "https://www.ecfr.gov/current/title-12/section-1002.2",
+      "title": "12 CFR 1002.2, Definitions (paragraph (e), Applicant)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "the term includes guarantors, sureties, endorsers, and similar parties",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-64",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.64.htm",
+      "title": "Texas Property Code, Chapter 64 (Assignment of rents to lienholder)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "creates a presently effective security interest in all accrued and unaccrued rents arising from the real property described in the security instrument",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-12",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.12.htm",
+      "title": "Texas Property Code, Chapter 12 (Section 12.001, Instruments concerning property)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "may be recorded if it has been acknowledged, sworn to with a proper jurat, or proved according to law",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-13",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.13.htm",
+      "title": "Texas Property Code, Chapter 13 (Sections 13.001 and 13.002, Effect of recording)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "is void as to a creditor or to a subsequent purchaser for a valuable consideration without notice",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-42-4012a",
+      "url": "https://www.law.cornell.edu/uscode/text/42/4012a",
+      "title": "42 U.S.C. 4012a, Flood insurance purchase and compliance requirements and escrow accounts",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "to accept private flood insurance as satisfaction of the flood insurance coverage requirement",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "check-drafts-against-terms",
+      "title": "Check the first drafts against the signed term sheet",
+      "instruction": "When the lender's counsel sends the first drafts, list every document in the set: loan agreement, note, deed of trust, guaranty, environmental indemnity, assignment of leases and rents, and any reserve, cash management or hedge agreement. Compare each term with the signed term sheet and any commitment: amount, rate, term, amortization, fees, reserves, recourse, guarantors, covenants and conditions. Log every difference, and every term the term sheet never mentioned, in one issues list with the document and section, for counsel. In Texas, once a bank, other covered financial institution or HUD-approved lender gives the conspicuous notice the statute requires on or before signing, a loan agreement over $50,000 is read only from the signed writing, and earlier or simultaneous oral agreements cannot vary it. Anything promised on calls or in emails has to appear in the documents.",
+      "mode": "agent",
+      "modeBasis": "The drafts and the term sheet are documents an agent can read and compare line by line.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-tx.finance.loan-agreement-in-writing"
+      ],
+      "consumes": [
+        "loan-term-sheet",
+        "loan-documents"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-bc-26"
+      ]
+    },
+    {
+      "id": "read-deed-of-trust",
+      "title": "Read what the deed of trust pledges and promises",
+      "instruction": "Check that the borrower, the legal description and the property match the title commitment and the survey. List what the lien covers besides land and buildings: fixtures, equipment, leases and rents, insurance and condemnation proceeds, accounts, and any UCC financing statement filed with it. Confirm tenants' trade fixtures and equipment are not pledged where the leases let tenants remove them. List the borrower's promises: upkeep, taxes, insurance, no other liens or junior financing, limits on alterations and leasing, and any future-advance clause. A Texas deed of trust with a power of sale is enforced by a public auction at the county courthouse, or a nearby place the commissioners court designates, between 10 a.m. and 4 p.m. on the first Tuesday of a month, after notice is posted, filed with the county clerk and sent by certified mail at least 21 days before. Add each concern to the issues list.",
+      "mode": "agent",
+      "modeBasis": "The deed of trust, the title commitment and the survey are documents an agent can read and compare.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-drafts-against-terms"
+      ],
+      "rules": [
+        "us-tx.property.foreclosure-sale-notice"
+      ],
+      "consumes": [
+        "loan-documents",
+        "title-commitment",
+        "survey",
+        "lease-abstract"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-51"
+      ]
+    },
+    {
+      "id": "check-rate-and-payments",
+      "title": "Check the note's rate, payments and balloon",
+      "instruction": "Read the note's interest terms: a fixed rate, or an index plus a spread with any floor; for a floating loan, which SOFR rate applies, when it resets, and what replaces it if it stops being published. Check the day count: Texas lets the parties to a commercial loan compute interest on a 365/360 basis, which charges slightly more per year than the stated rate. Run the loan-payments calculator on the note's terms to confirm the payment, any interest-only period and the balance at maturity. For a floating loan, run rate-reset on a rising index path and test coverage each year. If the lender requires a swap, federal law bars a party that is not an eligible contract participant from entering one off a designated contract market; an entity qualifies with, for example, total assets over $10 million, or net worth over $1 million when hedging its own business.",
+      "mode": "agent",
+      "modeBasis": "The note's terms are in the drafts, and the live calculators compute the payments, the balloon and the rate path.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-drafts-against-terms"
+      ],
+      "calculators": [
+        "loan-payments",
+        "rate-reset"
+      ],
+      "consumes": [
+        "loan-documents",
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-fin-306",
+        "usc-7-1a",
+        "usc-7-2"
+      ]
+    },
+    {
+      "id": "check-default-rate-and-prepayment",
+      "title": "Check the default rate, late charges and prepayment terms",
+      "instruction": "List what a default costs: the default interest rate and when it starts, late charges, and whether acceleration makes a prepayment premium due. Texas lets a creditor charge interest on a commercial loan up to the Chapter 303 ceilings; the computed ceiling is never below 18 percent a year and, for credit extended for business, commercial or investment purposes, never above 28 percent. Separately, the parties may agree to a delinquency charge of up to 5 percent of an installment that has been in default for at least 10 days. Ask counsel to confirm the default rate and charges fit those limits. Then read the prepayment terms: any lockout, the premium formula, open periods before maturity, and the release price for any part of the property. Use loan-payments to price a payoff in the year the business plan expects a sale or refinance.",
+      "mode": "agent",
+      "modeBasis": "The charges and the prepayment formula are in the note, and the statute's limits are public text an agent can compare against.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-rate-and-payments"
+      ],
+      "calculators": [
+        "loan-payments"
+      ],
+      "consumes": [
+        "loan-documents",
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-fin-306",
+        "tx-fin-303"
+      ]
+    },
+    {
+      "id": "test-covenants-and-cash-triggers",
+      "title": "Test the covenants, reserves and cash management triggers",
+      "instruction": "From the loan agreement, write down each financial test: coverage, debt yield or loan-to-value; how it defines net operating income and debt service (actual payments, or a stated rate or constant); the period measured; the first test date; and what a miss starts. Run the leverage and debt-sizing calculators on the underwriting at closing and on the downside case, and record the headroom at each test date. List every reserve with its upfront deposit, monthly amount, cap and release conditions, and compare them with the condition report and the leasing plan. List the cash management terms: whether a lockbox runs from closing or springs on a trigger, what starts a cash sweep, and how a trigger is cured. List the reporting package and its deadlines. Flag any test the deal could fail in its first year.",
+      "mode": "agent",
+      "modeBasis": "The covenants are in the loan agreement, and the live calculators measure the headroom from the model's inputs.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-rate-and-payments"
+      ],
+      "calculators": [
+        "leverage",
+        "debt-sizing",
+        "lease-rollover"
+      ],
+      "consumes": [
+        "loan-documents",
+        "underwriting-model",
+        "property-condition-assessment",
+        "rent-roll",
+        "lease-abstract"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "industrial": "With one tenant, look for triggers tied to that tenant: a lease expiring before the loan matures, a renewal notice not given, the tenant going dark or filing for bankruptcy. Each can start a cash sweep while coverage is still fine.",
+        "office": "Rollover reserves for tenant improvements and leasing commissions, and triggers tied to a large tenant's expiry, usually hold the most cash; compare them with the lease rollover schedule.",
+        "retail": "Look for triggers tied to an anchor going dark or a co-tenancy failure, and for leasing-cost reserves sized for the in-line space."
+      }
+    },
+    {
+      "id": "check-transfer-provisions",
+      "title": "Check the due-on-sale and transfer limits against the deal's structure",
+      "instruction": "Read what the loan treats as a transfer: a sale of the property, and transfers of interests in the borrower or any owner above it, changes of control or manager, admissions of new investors, and pledges of ownership interests. Federal law lets a lender enforce a due-on-sale clause in a loan secured by real property despite contrary state law, and the loan contract then governs the lender's option, so the permitted transfers written into the documents are all the borrower can count on. List what the governing documents allow without the lender: investor transfers and admissions in a syndication or fund, and a capital partner's buy-sell, removal or forced-sale rights in a JV. Ask for each as a permitted transfer, with any condition on who keeps control. Note any assumption right, its fee and conditions, and any ban on mezzanine debt or preferred equity.",
+      "mode": "agent",
+      "modeBasis": "The transfer clauses and the governing agreements are documents an agent can compare.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-drafts-against-terms"
+      ],
+      "consumes": [
+        "loan-documents",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-12-1701j-3"
+      ]
+    },
+    {
+      "id": "read-guaranty-and-carve-outs",
+      "title": "Read the guaranty and its carve-outs",
+      "instruction": "Abstract the guaranty into the guaranty record: who signs, its type, any cap or burn-off, survival, waivers, and the net worth, liquidity and reporting covenants. Sort the carve-out triggers into those that make the guarantor liable for the lender's loss and those that make it liable for the whole debt, such as a voluntary bankruptcy or an unpermitted transfer or lien, and mark any trigger the borrower does not fully control. In Texas, a promise to answer for another person's debt must be in writing and signed. Under Regulation B a lender may ask for a guarantor when its credit standards need one, but may not require that the guarantor be an applicant's spouse, and guarantors count as applicants under that rule. List any waiver of a guarantor's right to have a court set the property's fair market value against a deficiency after foreclosure, for counsel.",
+      "mode": "agent",
+      "modeBasis": "The guaranty is a document an agent can abstract; what to concede is for counsel and the guarantors.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-drafts-against-terms"
+      ],
+      "rules": [
+        "us-tx.property.deficiency-after-foreclosure"
+      ],
+      "consumes": [
+        "loan-documents",
+        "loan-term-sheet"
+      ],
+      "produces": [
+        "guaranty"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-bc-26",
+        "ecfr-12-1002-7",
+        "ecfr-12-1002-2",
+        "tx-prop-51"
+      ]
+    },
+    {
+      "id": "check-rents-and-tenant-documents",
+      "title": "Check the assignment of rents, SNDAs and estoppels the lender requires",
+      "instruction": "In Texas an enforceable deed of trust creates an assignment of rents unless it says otherwise, and any assignment of rents is a present security interest in the rents, perfected when the instrument is recorded. After default, or as agreed, the lender may demand the rents from the borrower, who must turn over rents it collects within 30 days unless the documents set another period, or may notify tenants to pay the lender directly. Read what the documents add: the borrower's license to collect until default, lender consent to new leases, amendments and terminations, and where termination payments go. List which tenants must deliver SNDAs and estoppels, on whose form, by when, and which lease terms the lender will not accept. Hand that list to the work in Collect estoppels and SNDAs and match it with the seller's duties under the contract.",
+      "mode": "agent",
+      "modeBasis": "The assignment, the leases and the contract are documents an agent can read and reconcile.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-deed-of-trust"
+      ],
+      "rules": [
+        "us-tx.property.assignment-of-rents"
+      ],
+      "consumes": [
+        "loan-documents",
+        "lease-abstract",
+        "tenant-estoppel",
+        "snda",
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-64"
+      ],
+      "typeNotes": {
+        "industrial": "With one tenant, the lender leans on that tenant's estoppel and SNDA; a purchase option or right of first refusal in the lease needs an agreed treatment in the SNDA."
+      }
+    },
+    {
+      "id": "map-defaults-notice-and-cure",
+      "title": "Map the events of default, notice and cure periods",
+      "instruction": "List every event of default across the documents with the notice the lender must give, if any, and the cure period: missed payments, covenant breaches, untrue statements, unpermitted transfers or liens, insurance lapses, guarantor defaults such as late financial statements, and cross-defaults to other loans. Mark the defaults with no notice or cure, and ask for written notice and a cure period on the non-monetary ones, with more time while a cure is pursued diligently. Confirm the notice clause: addresses, methods, copies to counsel, and that notices to the borrower also reach each guarantor. Texas requires a 20-day cure notice before notice of a foreclosure sale only where the property is the debtor's residence, so on commercial property the negotiated periods are the borrower's protection. Record what will apply after closing for the covenant tracking.",
+      "mode": "agent",
+      "modeBasis": "The default and notice provisions are in the documents, which an agent can collect into one table.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-deed-of-trust",
+        "check-default-rate-and-prepayment",
+        "test-covenants-and-cash-triggers",
+        "read-guaranty-and-carve-outs"
+      ],
+      "rules": [
+        "us-tx.property.foreclosure-sale-notice"
+      ],
+      "consumes": [
+        "loan-documents"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-51"
+      ]
+    },
+    {
+      "id": "counsel-negotiates-issues",
+      "title": "Negotiate the issues list with the lender's counsel",
+      "instruction": "The borrower's counsel turns the issues list into comments and marked drafts and negotiates them with the lender's counsel in rounds, starting with what departs from the term sheet. Counsel also settles what the lender needs from the borrower's side: entity authority documents, any legal opinion, and the forms of SNDA and estoppel. Keep one tracking list showing each point, the lender's answer and whether it is agreed, open or waiting on a principal. Everything agreed is written into the documents. Send business points, such as recourse, reserves, prepayment, covenant levels and fees, to a principal with what each choice costs.",
+      "mode": "human-online",
+      "modeBasis": "Negotiating loan documents is legal work that binds the borrower and the guarantors.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-transfer-provisions",
+        "check-rents-and-tenant-documents",
+        "map-defaults-notice-and-cure"
+      ],
+      "consumes": [
+        "loan-documents",
+        "loan-term-sheet",
+        "deal-entity-agreement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "principal-decides-open-points",
+      "title": "Decide the open business points",
+      "instruction": "A principal decides each point counsel sends up: accept it, trade it for another term, or hold. Weigh each against the business plan: whether the prepayment terms allow the planned sale or refinance, whether reserves and sweeps leave enough cash for the leasing plan, and what the guarantors take on personally. In a syndication still raising money, send counsel any term that differs from what the offering documents describe. If the lender will not move on a point that breaks the plan, the situation for a lender retrade covers re-sizing and replacement debt. Record each decision and its reason in the firm file.",
+      "mode": "human-online",
+      "modeBasis": "Recourse, cost and risk on the firm's loan are the principal's decisions.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-negotiates-issues"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "loan-documents"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "fund-committee-confirms-terms",
+      "title": "Confirm changed loan terms with the investment committee",
+      "instruction": "If the negotiated terms move the deal outside what the investment committee approved, such as a smaller loan, more recourse, larger reserves or a costlier prepayment, present the changes with the re-run model and get a new vote before the documents are final. Check the fund agreement's limits on borrowing and on any guaranty or other credit support the fund itself gives.",
+      "mode": "human-online",
+      "modeBasis": "Committee approval is a vote under the fund documents; an agent prepares the materials.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "principal-decides-open-points"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "consumes": [
+        "ic-memo",
+        "underwriting-model",
+        "deal-entity-agreement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "jv-partner-consents-to-loan",
+      "title": "Get the capital partner's consent to the loan terms and guaranty",
+      "instruction": "Loan terms and guaranties are commonly major decisions under a JV agreement. Send the capital partner the negotiated terms, the guaranty and the transfer provisions, and get its written consent before the documents are final. Agree in writing how the partners share any guaranty liability, including a carve-out triggered by one partner's own act, and any fee paid to the guarantors. The final set goes back to the partner with its funding request in finance and close.",
+      "mode": "human-online",
+      "modeBasis": "The consent is the capital partner's own decision under the JV agreement.",
+      "actor": "investor",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "principal-decides-open-points"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement",
+        "guaranty",
+        "loan-documents"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "build-closing-checklist",
+      "title": "Confirm the execution set and build the closing checklist",
+      "instruction": "When counsel reports the documents final, compare the execution versions with the last agreed drafts and the tracking list, and confirm each agreed change is in. Build the closing checklist from the loan's conditions: loan title policy and endorsements, survey, insurance evidence naming the lender, SNDAs and estoppels, entity authority documents, reserves and fees to fund, and any legal opinion. A regulated lender may not make a loan on a building in a special flood hazard area where federal flood insurance is available unless flood coverage is in place, so confirm the determination. List who signs each document and in what capacity. In Texas a deed of trust is recorded only if acknowledged, sworn to or proved, and unrecorded it is void against later creditors and buyers for value without notice. Hand the set and the checklist to finance and close.",
+      "mode": "agent",
+      "modeBasis": "Comparing versions and building the checklist from the loan's conditions are document tasks an agent can do.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "principal-decides-open-points",
+        "fund-committee-confirms-terms",
+        "jv-partner-consents-to-loan"
+      ],
+      "rules": [
+        "us-tx.property.conveyance-recording",
+        "us-fed.flood.mandatory-purchase"
+      ],
+      "consumes": [
+        "loan-documents",
+        "title-commitment",
+        "survey",
+        "insurance-binder",
+        "snda",
+        "tenant-estoppel"
+      ],
+      "produces": [
+        "loan-documents"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-12",
+        "tx-prop-13",
+        "usc-42-4012a"
+      ]
+    }
+  ],
+  "outlineSteps": []
+}

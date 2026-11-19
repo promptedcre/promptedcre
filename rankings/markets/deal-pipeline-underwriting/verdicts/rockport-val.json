@@ -1,0 +1,146 @@
+{
+  "vendor": "rockport-val",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "168532c74518f92922c363c62925369da21d0fd66a2259edc8bace0824381606",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "partial",
+      "quality": 5,
+      "evidence": [
+        "c4",
+        "c2",
+        "c3",
+        "c10",
+        "c11"
+      ],
+      "rationale": "VAL's page lists a '2-way Open API' (c4) and the separate Rockport ENGINE page claims RESTful APIs to its calc engine (c2, c3), but the pack shows no public API documentation, and the only integration paths shown are a partner program (c10) and vendor-assisted custom work (c11).",
+      "missing": "No public API documentation, reference or endpoint list; which VAL records the API reads or changes is not shown; the ENGINE APIs are not shown to cover VAL's core records."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Nothing in the pack mentions an MCP server.",
+      "missing": "No official MCP server, setup steps or beta/waitlist announcement is shown."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no SDK, CLI, package-registry listing, public repository or code samples.",
+      "missing": "No vendor-maintained SDK or CLI, and no code samples or partner-only SDK, is shown."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no webhooks, event subscriptions or change notifications for VAL's records.",
+      "missing": "No webhook or event-subscription documentation, even for a narrow set of events or through a third-party automation platform."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no API keys, OAuth clients, tokens or permission scopes.",
+      "missing": "No credential types, scopes, roles or permissions documentation."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The coverage check found no public API reference or spec, and no item shows an OpenAPI, Swagger or GraphQL file.",
+      "missing": "No machine-readable API specification, public, gated or partial."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no llms.txt or Markdown documentation, only a training page with manuals and no documentation site.",
+      "missing": "No llms.txt file or Markdown versions of documentation pages."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no sandbox, test mode or developer environment.",
+      "missing": "No self-serve, on-request or partner sandbox or test environment."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "partial",
+      "quality": 3,
+      "evidence": [
+        "c7"
+      ],
+      "rationale": "The VAL page says users can export professional-grade reports (c7), but gives no documentation, formats or bulk export of the underlying records.",
+      "missing": "No documented self-serve bulk export, no open export formats (CSV, JSON, Excel) named, and nothing showing records beyond reports can be exported."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no sign-up or free trial, and the coverage check found only Contact Sales and Contact Us links on the VAL page.",
+      "missing": "No self-serve sign-up, free trial or paid-plan checkout."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c5"
+      ],
+      "rationale": "The VAL page claims transparent, predictable pricing (c5) but shows no prices, and the coverage check found only Contact Sales and Contact Us links.",
+      "missing": "No plan prices, fees or starting price for any plan."
+    },
+    {
+      "story": "dp-deal-record",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no deal records and no API for creating deals or changing their stage.",
+      "missing": "No deal object, stage or status field, or API documentation for creating or updating deals."
+    },
+    {
+      "story": "dp-load-financials",
+      "verdict": "partial",
+      "quality": 4,
+      "evidence": [
+        "c8"
+      ],
+      "rationale": "VAL's training page offers a Multifamily Excel Rent Roll Import file for the manual (c8), pointing to an in-app rent roll import with no API or upload endpoint and nothing for operating statements.",
+      "missing": "No API or upload endpoint; no operating statement import; the import screen and any structured data returned are not shown, and the file covers multifamily rent rolls only."
+    },
+    {
+      "story": "dp-model-outputs",
+      "verdict": "partial",
+      "quality": 3,
+      "evidence": [
+        "c7",
+        "c4"
+      ],
+      "rationale": "VAL's page says users can export professional-grade reports from their valuation models (c7) and lists report packages under a '2-way Open API' (c4), but no documented endpoint or structured export of cash flows, returns or value is shown.",
+      "missing": "No API endpoint or documented export format for cash flows, returns or valuation results; whether exported reports are structured data is not shown; the API claim has no documentation, and the ENGINE calc-engine APIs (c2, c3) are not shown to return these outputs."
+    },
+    {
+      "story": "dp-documents",
+      "verdict": "partial",
+      "quality": 2,
+      "evidence": [
+        "c4"
+      ],
+      "rationale": "VAL's page lists report packages, PMs and OMs under a '2-way Open API' feature (c4), a bare claim with no documentation of uploading, listing or downloading documents or of attaching them to a deal.",
+      "missing": "No API documentation for document upload, listing or download; no deal record to attach documents to is shown; c4 is a feature label with no detail."
+    }
+  ]
+}

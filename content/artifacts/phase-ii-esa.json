@@ -1,0 +1,115 @@
+{
+  "id": "phase-ii-esa",
+  "name": "Phase II environmental site assessment",
+  "what": "Sampling of soil, groundwater or vapor to test a concern raised by a Phase I.",
+  "fields": [
+    {
+      "key": "environmentalProfessional",
+      "label": "Environmental professional",
+      "type": "string",
+      "definition": "The professional and firm who signed the report, with the qualifications the report states."
+    },
+    {
+      "key": "client",
+      "label": "Client and reliance parties",
+      "type": "list",
+      "definition": "Who the report was prepared for and every party it says may rely on it, such as the buyer, the deal entity and the lender."
+    },
+    {
+      "key": "reportDate",
+      "label": "Report date",
+      "type": "date",
+      "definition": "The date on the signed report."
+    },
+    {
+      "key": "fieldworkDates",
+      "label": "Fieldwork dates",
+      "type": "string",
+      "definition": "The dates samples were collected, from the field section of the report."
+    },
+    {
+      "key": "phaseIConditions",
+      "label": "Phase I conditions investigated",
+      "type": "list",
+      "definition": "Each condition from the Phase I the sampling was designed to test, with the Phase I's date. A Phase II is planned from the Phase I's results."
+    },
+    {
+      "key": "practiceFollowed",
+      "label": "Practice followed",
+      "type": "string",
+      "definition": "The practice or guidance the report says it follows, by name as the report gives it."
+    },
+    {
+      "key": "workPlan",
+      "label": "Sampling and quality plan",
+      "type": "text",
+      "definition": "Whether the report includes or refers to a field sampling plan and a quality assurance plan, and where the firm holds them. EPA describes both as parts of a site investigation work plan."
+    },
+    {
+      "key": "mediaSampled",
+      "label": "Media sampled",
+      "type": "list",
+      "definition": "What was sampled, such as soil, soil gas, groundwater, surface water, sediment, indoor air or building materials."
+    },
+    {
+      "key": "sampleLocations",
+      "label": "Sample locations",
+      "type": "list",
+      "definition": "Each boring, well or sample point with its location on the site figure, the depth and the medium, as the report tabulates them."
+    },
+    {
+      "key": "analyses",
+      "label": "Analyses and laboratory",
+      "type": "list",
+      "definition": "The substances each sample was analyzed for, the laboratory that ran them and where the laboratory reports are attached."
+    },
+    {
+      "key": "comparisonLevels",
+      "label": "Levels compared against",
+      "type": "text",
+      "definition": "The screening or cleanup levels the results are compared with and whose they are, such as levels under the Texas Risk Reduction Program rule where the professional applies it, with the land use those levels assume."
+    },
+    {
+      "key": "results",
+      "label": "Results above those levels",
+      "type": "list",
+      "definition": "Each substance found above a comparison level, with the medium, location, measured value and the level it exceeded, read from the results tables, not only the summary."
+    },
+    {
+      "key": "extentDefined",
+      "label": "Extent defined",
+      "type": "text",
+      "definition": "Whether the report says the source, nature and extent of any contamination are defined, or that more sampling is needed to define them, and whether it addresses migration such as vapor reaching buildings or groundwater leaving the site."
+    },
+    {
+      "key": "conclusions",
+      "label": "Conclusions",
+      "type": "text",
+      "definition": "The professional's conclusions on each Phase I condition tested: confirmed, not confirmed or not resolved."
+    },
+    {
+      "key": "recommendations",
+      "label": "Recommendations",
+      "type": "text",
+      "definition": "What the professional recommends next, such as no further action, more investigation, a cleanup or a state program like the Texas Voluntary Cleanup Program."
+    },
+    {
+      "key": "costRange",
+      "label": "Professional's cost and time range",
+      "type": "text",
+      "definition": "The cost range and timeline the professional gives for any further investigation, cleanup, monitoring and program fees, as written in the report or a separate letter. Empty if the professional gave none; never estimated by the sponsor or an agent."
+    },
+    {
+      "key": "reportingQuestions",
+      "label": "Reporting questions for counsel",
+      "type": "text",
+      "definition": "Anything in the report that may raise a duty to report to an agency, noted for counsel to decide."
+    },
+    {
+      "key": "limitations",
+      "label": "Limitations",
+      "type": "list",
+      "definition": "Areas not sampled, access limits and other limitations the report states."
+    }
+  ]
+}

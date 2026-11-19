@@ -1,0 +1,500 @@
+{
+  "id": "abstract-the-leases",
+  "slug": "abstract-the-leases",
+  "kind": "process",
+  "title": "Abstract and review the leases",
+  "summary": "Read every lease, amendment, guaranty and side letter and abstract what drives cash flow and risk: rent, recoveries, options, exit rights, security and the landlord's duties. Reconcile the abstracts to the rent roll and the operating statement, build the rollover schedule, and hand underwriting every difference.",
+  "phase": "acquire",
+  "order": 258,
+  "featured": false,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-13",
+  "requires": [
+    "negotiate-purchase-contract"
+  ],
+  "consumes": [
+    "purchase-and-sale-agreement",
+    "lease",
+    "guaranty",
+    "rent-roll",
+    "trailing-12",
+    "tenant-estoppel",
+    "snda",
+    "comp-set",
+    "underwriting-model"
+  ],
+  "produces": [
+    "lease-abstract",
+    "underwriting-model"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "bc-26",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.26.htm",
+      "title": "Texas Business and Commerce Code, Chapter 26, Statute of Frauds (Section 26.01(b)(5))",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "a lease of real estate for a term longer than one year",
+      "tier": "primary"
+    },
+    {
+      "id": "bc-26-guaranty",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.26.htm",
+      "title": "Texas Business and Commerce Code, Chapter 26, Statute of Frauds (Section 26.01(b)(2))",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "a promise by one person to answer for the debt, default, or miscarriage of another person",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-93-charges",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.93.htm",
+      "title": "Texas Property Code, Chapter 93 (Section 93.012, Assessment of charges)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "unless the amount of the charge or the method by which the charge is to be computed is stated in the lease",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-93-deposit",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.93.htm",
+      "title": "Texas Property Code, Chapter 93 (Sections 93.005 and 93.007, Security deposits)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "the new owner is liable for the return of the security deposit according to this chapter from the date title to the premises is acquired",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-93-lockout",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.93.htm",
+      "title": "Texas Property Code, Chapter 93 (Section 93.002, Exclusion of commercial tenant)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "A lease supersedes this section to the extent of any conflict.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-54",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.54.htm",
+      "title": "Texas Property Code, Chapter 54, Subchapter B (Section 54.021, Building landlord's lien)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "has a preference lien on the property of the tenant or subtenant in the building for rent that is due",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-92",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.92.htm",
+      "title": "Texas Property Code, Chapter 92 (Section 92.105, Cessation of owner's interest)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "the new owner is liable for the return of security deposits according to this subchapter from the date title to the premises is acquired",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-11-502",
+      "url": "https://www.law.cornell.edu/uscode/text/11/502",
+      "title": "11 U.S.C. 502, Allowance of claims or interests (subsection (b)(6))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "for the greater of one year, or 15 percent, not to exceed three years, of the remaining term of such lease",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "gather-the-lease-file",
+      "title": "Gather and index every lease document",
+      "instruction": "From the data room or the seller deliveries the purchase contract requires, collect for each tenant the lease, every amendment, side letter and commencement memorandum, any guaranty, assignment or sublease with its consent, letters of credit, and any earlier estoppel or SNDA. Index them by tenant and date, mark whether each copy carries every party's signature and its exhibits, and list what is missing, including rent roll tenants with no lease and leases with no rent roll line. In Texas, a lease of real estate for longer than one year is unenforceable unless it, or a memorandum of it, is in writing and signed by the party to be charged, so an unsigned amendment or an oral side deal goes on the missing list, not into the abstract. Draft the request to the seller for the gaps; a person approves it before it goes.",
+      "mode": "agent",
+      "modeBasis": "The lease file is a set of documents an agent can index and compare; the request goes to the seller only after a person approves it.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-tx.contracts.statute-of-frauds"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "rent-roll",
+        "lease",
+        "guaranty",
+        "tenant-estoppel",
+        "snda"
+      ],
+      "basis": "cited",
+      "sources": [
+        "bc-26"
+      ],
+      "typeNotes": {
+        "multifamily": "An apartment property has many short leases on one form. Abstract the form and its addenda once, then audit unit files against the rent roll, every file or a sample as the contract and the lender require."
+      }
+    },
+    {
+      "id": "abstract-parties-premises-dates",
+      "title": "Abstract the parties, premises and dates",
+      "instruction": "Open a lease abstract for each tenant and fill it from the lease as amended, with the section number beside each entry. Parties: the tenant's exact legal name from the signature block, any trade name, and the chain of landlords from the original one to the seller; a landlord other than the seller needs an assignment in the file. Premises: suite, rentable area, the measurement basis and whether either side may remeasure, and any exclusive yard, parking or storage. Dates: the lease date, commencement and what triggers it, rent commencement if different, expiration after every extension, and the holdover rent. Where an amendment and the lease conflict, record both and which one controls by its own terms.",
+      "mode": "agent",
+      "modeBasis": "Reading a signed lease and its amendments into a fixed set of fields is document work an agent can do.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "gather-the-lease-file"
+      ],
+      "consumes": [
+        "lease"
+      ],
+      "produces": [
+        "lease-abstract"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "abstract-options-and-exit-rights",
+      "title": "Abstract options, exit rights and the earliest exit date",
+      "instruction": "List every right that changes how long the tenant stays or how much space it holds: renewals (how many, how long, the notice window, how the rent is set, and whether the right is personal to the original tenant or lapses on default); expansion, first offer and first refusal rights on other space; contraction and early termination rights with the notice date, effective date, any fee and how it is paid; and any landlord right to relocate the tenant. Set the earliest exit date: the first date the tenant could stop paying rent by giving the notices its rights allow. Record separately any tenant right of first refusal, first offer or option to buy the property; this sale may trigger one, so send it to counsel the same day.",
+      "mode": "agent",
+      "modeBasis": "Options and their notice terms are written in the lease, which an agent can read and list.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "abstract-parties-premises-dates"
+      ],
+      "consumes": [
+        "lease"
+      ],
+      "produces": [
+        "lease-abstract"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "abstract-rent-and-concessions",
+      "title": "Abstract base rent, escalations and concessions still owed",
+      "instruction": "Copy the rent table as written: each period's dates and monthly rent, and how each change is set: a fixed step, a percentage increase, or an index with its name, base month, floor and cap. Place each step from the commencement date and its anniversaries, not from the sponsor's hold years. List what the landlord still owes at the expected closing date: free or abated rent not yet used, improvement allowances not yet paid, landlord work not finished and leasing commissions still due, each with its amount, due date and the section that promises it. Run the lease-rent calculator on each lease for rent by year, total and average rent and net effective rent per square foot. Keep the cash schedule even where the seller's books spread rent on a straight-line basis.",
+      "mode": "agent",
+      "modeBasis": "The rent table and the concession clauses are in the lease, and the rent math runs in a calculator.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "abstract-parties-premises-dates"
+      ],
+      "calculators": [
+        "lease-rent"
+      ],
+      "consumes": [
+        "lease"
+      ],
+      "produces": [
+        "lease-abstract"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "abstract-expense-recoveries",
+      "title": "Abstract expense recoveries, caps and percentage rent",
+      "instruction": "Fill an expense grid for each lease: for taxes, insurance, common area maintenance, utilities, management, roof and structure, building systems and capital replacements, who pays and how: full pass-through, pro rata share, base year or expense stop. Record the share and the area it is figured on, any gross-up for occupancy, caps (on which expenses, cumulative or not, from what base), exclusions, administrative fees, estimate and reconciliation dates, and the tenant's audit right. For percentage rent, record the rate, the breakpoint, how sales are defined and when sales reports are due. The clause decides, not the lease's label. For commercial property, Texas bars a landlord from assessing a charge other than rent or physical damage unless the lease, an exhibit or an amendment states its amount or how it is computed. Run the expense-recovery calculator for what each lease actually recovers.",
+      "mode": "agent",
+      "modeBasis": "The expense clauses are in the lease, and the recovery math runs in a calculator.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "abstract-parties-premises-dates"
+      ],
+      "calculators": [
+        "expense-recovery"
+      ],
+      "consumes": [
+        "lease"
+      ],
+      "produces": [
+        "lease-abstract"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-93-charges"
+      ],
+      "typeNotes": {
+        "industrial": "Single-tenant leases are often called net, but read who pays for the roof, structure, paving and capital replacements; a net label can still leave those with the landlord.",
+        "multifamily": "Resident leases rarely share operating expenses. Abstract utility reimbursements and fees from the lease form and its addenda, unit type by unit type.",
+        "office": "Office leases often recover only the increase over a base year, with a gross-up for occupancy; check that the base year was a full, normal year and how the gross-up is figured.",
+        "retail": "Common area charges, caps and anchor exclusions can shift costs to smaller tenants or back to the landlord, and percentage rent depends on the sales reports the lease requires."
+      }
+    },
+    {
+      "id": "abstract-security-and-guaranties",
+      "title": "Abstract deposits, letters of credit and guaranties",
+      "instruction": "Record the deposit the lease requires: amount, cash or letter of credit, any reduction schedule, and for a letter of credit its issuer, expiry, beneficiary and whether it can be transferred to the buyer. In Texas, the buyer of commercial property is liable for tenants' deposits from the date it takes title, so the abstract's figure must be right. Record each guaranty: the guarantor, whether it is signed, any cap or burn-off, and what ends it. A promise to answer for another's debt is unenforceable in Texas unless it, or a memorandum of it, is written and signed by the guarantor. Note any duty to deliver financial statements and pull the latest. In a tenant's bankruptcy, an objected-to claim for lease termination damages is capped at rent for the greater of one year or 15 percent of the remaining term, not over three years, plus unpaid rent.",
+      "mode": "agent",
+      "modeBasis": "Deposit, letter of credit and guaranty terms are written documents an agent can read and compare.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "abstract-parties-premises-dates"
+      ],
+      "rules": [
+        "us-tx.property.commercial-security-deposit",
+        "us-tx.contracts.statute-of-frauds",
+        "us-fed.bankruptcy.lease-rejection-claim-cap"
+      ],
+      "consumes": [
+        "lease",
+        "guaranty"
+      ],
+      "produces": [
+        "lease-abstract"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-93-deposit",
+        "bc-26-guaranty",
+        "usc-11-502",
+        "tx-prop-92"
+      ],
+      "typeNotes": {
+        "multifamily": "Residential deposits fall under Property Code chapter 92: the new owner is liable for them from the date it takes title and must give each resident a signed statement of the exact amount, so tie the deposit ledger to the unit files."
+      }
+    },
+    {
+      "id": "abstract-use-and-transfers",
+      "title": "Abstract use, exclusives, assignment and subletting",
+      "instruction": "Record the permitted use and whether it is narrow enough to limit re-leasing; any exclusive the lease grants and which other spaces it binds; any radius, co-tenancy, continuous operation or go-dark right; and signage rights. For assignment and subletting, record the consent standard, transfers allowed without consent (such as to an affiliate or a buyer of the business), any landlord recapture right, any sharing of sublease profit, and whether the original tenant and any guarantor stay liable after a transfer. List each assignment and sublease in place with its consent. Check every exclusive against the other leases' permitted uses and list each conflict.",
+      "mode": "agent",
+      "modeBasis": "Use and transfer clauses are lease text an agent can read and cross-check against the other leases.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "abstract-parties-premises-dates"
+      ],
+      "consumes": [
+        "lease"
+      ],
+      "produces": [
+        "lease-abstract"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "industrial": "Read the use and environmental clauses together: what the tenant may store or handle, its compliance duties, and what it must remove or clean up when the lease ends.",
+        "retail": "Read every lease, not a sample: an anchor's closing can let other tenants cut rent or leave under co-tenancy clauses, and exclusives limit who can fill vacant space."
+      }
+    },
+    {
+      "id": "abstract-landlord-duties-and-remedies",
+      "title": "Abstract the landlord's duties, defaults and remedies",
+      "instruction": "Record what the landlord must do and pay for: repair and replacement of the roof, structure, paving and building systems, services, the insurance it must carry, and any waiver of subrogation. Record casualty and condemnation terms: rent abatement, rebuilding deadlines and who may terminate. Record each side's defaults, notice and cure periods, and the landlord's remedies. In Texas, a commercial landlord may change the locks of a tenant delinquent in rent, posting a notice of where to get the new key, and a lease overrides that section where they conflict, so note what the lease says. A landlord of a nonresidential building has a statutory lien on the tenant's property in it for rent; record whether the lease waives or subordinates it. Record the subordination, estoppel and SNDA duties and the notice addresses for Collect estoppels and SNDAs.",
+      "mode": "agent",
+      "modeBasis": "The landlord's covenants and the remedies are lease text an agent can read and record.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "abstract-parties-premises-dates"
+      ],
+      "rules": [
+        "us-tx.property.commercial-lockout",
+        "us-tx.property.commercial-landlord-lien"
+      ],
+      "consumes": [
+        "lease"
+      ],
+      "produces": [
+        "lease-abstract"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-93-lockout",
+        "tx-prop-54"
+      ]
+    },
+    {
+      "id": "flag-gaps-and-unusual-terms",
+      "title": "Flag gaps, conflicts and unusual terms",
+      "instruction": "Read each finished abstract against its lease for what is missing, unclear or unusual, and list each item in the abstract's unusual-clauses field with its section number. Missing: default and remedy terms, holdover, a deposit, estoppel or subordination duties. Unclear: notice periods with no unit, cross-references that point nowhere, amendments that conflict, a commencement date never confirmed in writing. Unusual: purchase options and first refusal rights on the property, termination rights tied to a sale, most-favored-tenant clauses, rent set with a related party, caps on the landlord's liability, and anything else that lets a tenant cut rent or leave early. Mark each item for the seller, counsel, the estoppel or the underwriting.",
+      "mode": "agent",
+      "modeBasis": "Comparing each abstract with its lease and sorting the findings is document review an agent can do.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "abstract-options-and-exit-rights",
+        "abstract-rent-and-concessions",
+        "abstract-expense-recoveries",
+        "abstract-security-and-guaranties",
+        "abstract-use-and-transfers",
+        "abstract-landlord-duties-and-remedies"
+      ],
+      "consumes": [
+        "lease",
+        "lease-abstract"
+      ],
+      "produces": [
+        "lease-abstract"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "reconcile-to-rent-roll",
+      "title": "Reconcile the abstracts to the rent roll",
+      "instruction": "Tie the rent roll to the abstracts line by line: tenant name, suite, area, commencement and expiration, monthly base rent, recovery type, deposit, options and status. Recompute annual rent per square foot from the monthly figure and the area. List every difference with both values and the document behind each. Flag space shown as leased with no signed lease, rent the lease does not support, tenants in holdover or month to month, expirations inside twelve months, related-party leases, and any seller master lease on vacant space, which is a seller obligation, not tenant income. Draft a request for the seller to explain each difference in writing; a person approves it before it goes.",
+      "mode": "agent",
+      "modeBasis": "The rent roll and the abstracts are documents an agent can compare line by line; the request goes out after a person approves it.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "flag-gaps-and-unusual-terms"
+      ],
+      "market": "deal-pipeline-underwriting",
+      "consumes": [
+        "rent-roll",
+        "lease-abstract"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "reconcile-to-operating-statement",
+      "title": "Reconcile the abstracts to the operating statement",
+      "instruction": "Compare what the leases say each tenant owes with what the trailing-12 and the general ledger show it was billed and paid: base rent by month, recoveries, percentage rent and other charges. Rebuild last year's recovery reconciliation with the expense-recovery calculator and the actual expenses: if the seller billed more than a lease allows, a refund may be owed to the tenant; if less, the income shown understates what the lease supports. Pull the receivables aging and list arrears by tenant and age. Note free rent and abatements that make collected rent lower than face rent, and any straight-line rent booked in place of cash. Send open true-ups and arrears to the list of closing prorations and credits.",
+      "mode": "agent",
+      "modeBasis": "The operating statement, ledger and abstracts are financial documents an agent can compare and recompute.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "reconcile-to-rent-roll"
+      ],
+      "calculators": [
+        "expense-recovery"
+      ],
+      "consumes": [
+        "trailing-12",
+        "lease-abstract",
+        "rent-roll"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "build-rollover-schedule",
+      "title": "Build the rollover schedule",
+      "instruction": "Run the lease-rollover calculator on the reconciled rent roll, using each lease's earliest exit date instead of its stated expiration where a termination right exists. Read expirations by year by area and by rent, vacant and month-to-month space as their own lines, the weighted average lease term and the largest tenant's share. Add market rent from the comp set to show each lease's in-place rent against market. Set the schedule against the planned hold and the loan term, and mark each year where expirations cluster or a large tenant can leave before the loan matures. For each expiring lease, carry the renewal terms the abstract found, so underwriting does not assume a renewal rent the lease already fixes.",
+      "mode": "agent",
+      "modeBasis": "The schedule is computed from the reconciled rent roll and the abstracts with a calculator.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "reconcile-to-rent-roll"
+      ],
+      "calculators": [
+        "lease-rollover"
+      ],
+      "consumes": [
+        "rent-roll",
+        "lease-abstract",
+        "comp-set"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "industrial": "A single-tenant building rolls all at once, so one expiration carries all the downtime, improvement and commission risk; read the tenant's investment in the space and its expansion needs against the remaining term.",
+        "multifamily": "Resident leases roll month by month; read expirations by month, the share on month-to-month terms and in-place rent against market by unit type instead of tenant by tenant."
+      }
+    },
+    {
+      "id": "counsel-reviews-flagged-terms",
+      "title": "Counsel reviews the flagged legal terms",
+      "instruction": "Counsel reads the items the review marked as legal: tenant purchase options and first refusal or first offer rights on the property and whether this sale triggers them, unsigned or conflicting amendments, claimed oral side deals, guaranties and their enforceability, the chain of assignments from the original landlord to the seller, transfers made without a required consent, and leases subordinate to a mortgage with no non-disturbance agreement. For each, counsel says whether it needs a waiver, an estoppel statement, a seller cure or a contract change, and the date the purchase contract sets for it.",
+      "mode": "human-online",
+      "modeBasis": "Whether a lease right binds the buyer, and what clears it, is a legal judgment for counsel.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "flag-gaps-and-unusual-terms"
+      ],
+      "rules": [
+        "us-tx.contracts.statute-of-frauds"
+      ],
+      "consumes": [
+        "lease",
+        "lease-abstract",
+        "guaranty",
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "hand-differences-to-underwriting",
+      "title": "Hand underwriting the differences",
+      "instruction": "Write the lease review memo: for each tenant, the abstract, the differences against the rent roll and the trailing-12 with their dollar effect, the earliest exit date, concessions and landlord money still owed, the deposit, and counsel's notes. Put the results into the underwriting model's lease assumptions and NOI bridge, with the source of each change. Send the open questions to Collect estoppels and SNDAs so each certificate asks what the review raised, and the money items (unpaid allowances, free rent still owed, deposits, recovery true-ups and arrears) to the closing credit list. File the abstracts in the firm file; Run due diligence and the investment committee memo work from them.",
+      "mode": "agent",
+      "modeBasis": "This is writing and modeling from abstracts and reconciliations already in the deal file.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "reconcile-to-operating-statement",
+        "build-rollover-schedule",
+        "counsel-reviews-flagged-terms"
+      ],
+      "market": "deal-pipeline-underwriting",
+      "consumes": [
+        "lease-abstract",
+        "underwriting-model"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    }
+  ],
+  "outlineSteps": []
+}

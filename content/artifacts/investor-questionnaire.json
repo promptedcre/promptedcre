@@ -1,0 +1,112 @@
+{
+  "id": "investor-questionnaire",
+  "name": "Investor questionnaire",
+  "what": "The investor's answers about identity, residence and accredited status that the issuer relies on to admit the investor to the offering.",
+  "fields": [
+    {
+      "key": "investorName",
+      "label": "Investor",
+      "type": "string",
+      "definition": "The investor's full legal name as written in the questionnaire. For an entity or trust, also the person completing it and that person's title or role."
+    },
+    {
+      "key": "investorType",
+      "label": "Investor type",
+      "type": "enum",
+      "definition": "The form of investor the questionnaire records: individual, joint with a spouse or spousal equivalent, trust, corporation, partnership, limited liability company, retirement account through a custodian, or other entity."
+    },
+    {
+      "key": "stateOfResidence",
+      "label": "State of residence",
+      "type": "string",
+      "definition": "The state the individual lives in or, for an entity, the state the questionnaire asks it to give, such as its principal place of business. The investor register copies this answer, and it decides which state notice filings the offering needs."
+    },
+    {
+      "key": "citizenshipOrDomicile",
+      "label": "Citizenship or domicile",
+      "type": "string",
+      "definition": "As the investor answered: for an individual, whether a U.S. citizen, a lawful permanent resident or neither, and the country; for an entity or trust, its country of formation, the country of its headquarters, and who owns or controls it. The investor register copies this answer, and it decides whether the investor gives a Form W-8 in place of a Form W-9 and what ownership facts counsel reviews before a Texas property is bought. Record no passport, alien registration or other identification number."
+    },
+    {
+      "key": "entityFormation",
+      "label": "Entity formation",
+      "type": "text",
+      "definition": "For an entity or trust, its state of formation, the date it was formed, and its answer on whether it was formed for the specific purpose of acquiring these securities. Several Rule 501(a) entity categories are unavailable to an entity formed for that purpose.",
+      "authority": "17 CFR 230.501(a)(3), (7), (9) and (12)"
+    },
+    {
+      "key": "accreditedCategories",
+      "label": "Accredited categories claimed",
+      "type": "list",
+      "definition": "Each Rule 501(a) paragraph the investor checks, read off the questionnaire by paragraph number, or a statement that none applies. Test each answer against the rule's current text when the package is reviewed.",
+      "authority": "17 CFR 230.501(a)"
+    },
+    {
+      "key": "netWorthBasis",
+      "label": "Net worth basis",
+      "type": "text",
+      "definition": "Where the investor claims the net worth category: whether alone or jointly with a spouse or spousal equivalent, and the investor's acknowledgment that the primary residence is left out as an asset and that debt secured by it counts only as the rule describes.",
+      "authority": "17 CFR 230.501(a)(5) and (j)"
+    },
+    {
+      "key": "incomeBasis",
+      "label": "Income basis",
+      "type": "text",
+      "definition": "Where the investor claims the income category: whether individual or joint income, that the test was met in each of the two most recent years, and the investor's statement of a reasonable expectation of reaching the same level this year.",
+      "authority": "17 CFR 230.501(a)(6)"
+    },
+    {
+      "key": "professionalCredential",
+      "label": "Professional credential",
+      "type": "string",
+      "definition": "Where the investor claims the credential category: the designation held and the investor's statement that it is in good standing. Only credentials the SEC has designated by order count.",
+      "authority": "17 CFR 230.501(a)(10)"
+    },
+    {
+      "key": "issuerInsiderRole",
+      "label": "Role at the issuer",
+      "type": "string",
+      "definition": "Where the investor claims the insider category: the investor's position as a director, executive officer or general partner of the issuer, or of the issuer's general partner.",
+      "authority": "17 CFR 230.501(a)(4) and (f)"
+    },
+    {
+      "key": "equityOwnerLookThrough",
+      "label": "Equity owners of an entity investor",
+      "type": "list",
+      "definition": "Where an entity claims accredited status because all its equity owners are accredited: each equity owner and the category each one claims. The rule allows looking through layers of ownership to natural persons.",
+      "authority": "17 CFR 230.501(a)(8)"
+    },
+    {
+      "key": "financialExperience",
+      "label": "Financial and business experience",
+      "type": "text",
+      "definition": "For a non-accredited investor in a Rule 506(b) offering, the investor's description of the knowledge and experience in financial and business matters it relies on to evaluate the investment; null for an accredited investor.",
+      "authority": "17 CFR 230.506(b)(2)(ii)"
+    },
+    {
+      "key": "purchaserRepresentative",
+      "label": "Purchaser representative",
+      "type": "text",
+      "definition": "If a non-accredited investor uses one, the representative's name, the investor's written acknowledgment of the representative for this investment, and the representative's written disclosure of any material relationship with the issuer and the compensation from it.",
+      "authority": "17 CFR 230.501(i)"
+    },
+    {
+      "key": "howHeard",
+      "label": "How the investor heard of the offering",
+      "type": "text",
+      "definition": "The investor's own answer on how it learned of the offering. In a Rule 506(b) offering, compare it with the investor register's record of the relationship."
+    },
+    {
+      "key": "fundInvestorStatus",
+      "label": "Fund holder-count answers",
+      "type": "text",
+      "definition": "For a fund, the answers the sponsor needs for the exclusion counsel chose: whether the investor is itself an investment company or relies on Section 3(c)(1) or 3(c)(7), and what share of the fund's voting securities it will hold; or its qualified purchaser certification. Null for a single-property offering."
+    },
+    {
+      "key": "signatureDate",
+      "label": "Signed",
+      "type": "date",
+      "definition": "The date the investor signed the questionnaire, read off the signature page or the e-signature record."
+    }
+  ]
+}

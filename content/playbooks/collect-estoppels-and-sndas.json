@@ -1,0 +1,453 @@
+{
+  "id": "collect-estoppels-and-sndas",
+  "slug": "collect-estoppels-and-sndas",
+  "kind": "process",
+  "title": "Collect estoppels and SNDAs",
+  "summary": "Get each tenant's signed confirmation of its lease, and the subordination, non-disturbance and attornment agreements the lender needs, before closing. Agents read the leases, prepare the forms and compare what comes back; the seller sends, counsel negotiates, and a principal decides each gap.",
+  "phase": "acquire",
+  "order": 260,
+  "featured": false,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-13",
+  "requires": [
+    "negotiate-purchase-contract",
+    "abstract-the-leases"
+  ],
+  "consumes": [
+    "purchase-and-sale-agreement",
+    "loan-term-sheet",
+    "lease",
+    "lease-abstract",
+    "rent-roll"
+  ],
+  "produces": [
+    "tenant-estoppel",
+    "snda"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "tx-prop-93",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.93.htm",
+      "title": "Texas Property Code, Chapter 93 (Section 93.007, Cessation of owner's interest)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "the amount provided in an estoppel certificate prepared by the owner at the time the lease was executed or prepared by the new owner",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-92",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.92.htm",
+      "title": "Texas Property Code, Chapter 92 (Section 92.105, Cessation of owner's interest)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "The new owner shall deliver to the tenant a signed statement acknowledging that the new owner has acquired the property",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-7001",
+      "url": "https://www.law.cornell.edu/uscode/text/15/7001",
+      "title": "15 U.S.C. 7001, General rule of validity",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "may not be denied legal effect, validity, or enforceability solely because it is in electronic form",
+      "tier": "primary"
+    },
+    {
+      "id": "bc-322",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.322.htm",
+      "title": "Texas Business and Commerce Code, Chapter 322 (Uniform Electronic Transactions Act, Sections 322.005 and 322.007)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "This chapter applies only to transactions between parties each of which has agreed to conduct transactions by electronic means.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-12",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.12.htm",
+      "title": "Texas Property Code, Chapter 12 (Section 12.001, Instruments concerning property)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "may be recorded if it has been acknowledged, sworn to with a proper jurat, or proved according to law",
+      "tier": "primary"
+    },
+    {
+      "id": "bc-26",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.26.htm",
+      "title": "Texas Business and Commerce Code, Chapter 26 (Section 26.01, Promise or agreement must be in writing)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "a lease of real estate for a term longer than one year",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "read-lease-delivery-terms",
+      "title": "Read each lease for what the tenant must sign and when",
+      "instruction": "From each lease and its abstract, list what the tenant must deliver on the landlord's request: an estoppel certificate, a subordination agreement, or both; how many days it has to respond and from what event the count starts; what the certificate must cover and whether the lease attaches a form; whether the lease subordinates automatically or only if the lender gives non-disturbance; whether the tenant may charge a fee; and what follows if it does not respond, such as a deemed certification or a default after notice. Record each lease's notice address and method. Mark every lease with no estoppel or subordination clause: that tenant signs only if it chooses to. If the leases are not abstracted yet, do that first under Abstract and review the leases.",
+      "mode": "agent",
+      "modeBasis": "The duties are written in the leases, which an agent can read and tabulate.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "consumes": [
+        "lease",
+        "lease-abstract"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "set-the-required-list",
+      "title": "Set which tenants must sign and by when",
+      "instruction": "Read the purchase contract and the lender's term sheet for what each requires: which tenants (all, named ones, or enough to cover a stated share of area or rent), whose form, how recent each certificate must be at closing, whether a seller certificate may stand in for a missing tenant, and whether delivery is a closing condition, a loan condition or both. Run the lease-rollover calculator on the rent roll for each tenant's share of leased area and rent, and list the tenants that must sign to meet each threshold. If the property sits on a ground lease, add the ground lessor's estoppel. Enter in the deadline calendar the delivery date, the closing date and the latest date to send each request so its lease response period ends in time.",
+      "mode": "agent",
+      "modeBasis": "The requirements are in the signed contract and the term sheet, and the shares come from the rent roll through a calculator.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-lease-delivery-terms"
+      ],
+      "calculators": [
+        "lease-rollover",
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "loan-term-sheet",
+        "rent-roll"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "industrial": "With a single tenant, its estoppel and SNDA are the whole set; there is no share to meet, and nothing closes without them if the contract or lender requires them.",
+        "multifamily": "Resident estoppels are uncommon; read what the contract and the lender accept in their place, such as a lease-file audit against the rent roll, and for which units.",
+        "office": "Thresholds are often stated in rentable area; list first the tenants with free rent remaining or allowances unpaid, since their certificates carry the most money.",
+        "retail": "Contracts and lenders often name anchors and major tenants; check which smaller leases tie their rent or right to stay open to those tenants."
+      }
+    },
+    {
+      "id": "prepare-the-forms",
+      "title": "Prepare the estoppel and SNDA forms from the lease abstracts",
+      "instruction": "Prepare one estoppel certificate per tenant on the form the contract or lender requires, or the form attached to the lease where the lease prescribes one. Pre-fill each statement from the lease abstract and the rent roll: the lease and every amendment by date, premises and area, term dates, current monthly rent and recoveries, rent paid through, deposit, options, and landlord work or allowances still owed. Name the buyer, its lender and their successors and assigns as entitled to rely. Statements beyond what the lease requires invite a refusal, so add them only where the lender insists. Prepare each SNDA on the lender's form with the lease and the loan identified, and an acknowledgment block if the lender will record it. Mark every pre-filled figure the seller's records do not support, and send the drafts to the seller and the lender for comment.",
+      "mode": "agent",
+      "modeBasis": "Filling forms from the abstracts and the rent roll is document work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-the-required-list"
+      ],
+      "consumes": [
+        "lease-abstract",
+        "rent-roll",
+        "loan-term-sheet",
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "send-through-seller",
+      "title": "Send the requests through the seller",
+      "instruction": "The seller is still the landlord, so the requests go out under its name, by the method the contract sets and each lease's notice clause. Send the seller the final forms with a short cover letter for its signature that states the response period the lease gives, where to return the signed form, and whether an electronic signature is acceptable. Ask the seller for a copy of each request as sent and its delivery date, and start each tenant's response period from that date in the deadline calendar. Contact tenants directly only if the contract allows it or the seller agrees in writing. A person approves the package before it goes to the seller.",
+      "mode": "agent",
+      "modeBasis": "Packaging and tracking are agent work; what reaches the seller and tenants speaks for the buyer, so a person approves it.",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "prepare-the-forms"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "lease"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "collect-signed-forms",
+      "title": "Chase and collect the signed forms",
+      "instruction": "Track each tenant against its response date and ask the seller to follow up before the date passes. As forms come back, check that the signer is the tenant the lease names, by exact legal name, with the signer's name and title; that every blank is filled; and that the date falls inside the window the contract or lender allows. Federal law, in transactions affecting interstate commerce, and Texas law each keep a signature from being denied effect solely because it is electronic, but the Texas act applies only between parties that each agreed, as shown by context and conduct, to deal electronically, and a party may refuse. An SNDA the lender will record must be acknowledged, sworn to or proved, so check the notary block before accepting it. Ask the lender and the title company early whether they accept electronic originals.",
+      "mode": "agent",
+      "modeBasis": "Tracking dates and checking returned forms against the lease file is document work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "send-through-seller"
+      ],
+      "rules": [
+        "us-fed.esign",
+        "us-tx.ueta",
+        "us-tx.property.conveyance-recording"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "lease-abstract"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-15-7001",
+        "bc-322",
+        "tx-prop-12"
+      ]
+    },
+    {
+      "id": "compare-returns",
+      "title": "Compare each return with the lease, the rent roll and the lender's form",
+      "instruction": "Read every signed estoppel against the lease abstract and the rent roll, statement by statement, and record each difference in the certificate's differences field with both versions: rent, recoveries, dates, area, the documents listed, deposit, rent paid ahead, options, defaults or offsets claimed, and landlord work still owed. Flag struck or added language and knowledge qualifiers. Re-run the lease-rent calculator on any rent schedule the tenant certifies differently, and the lease-rollover calculator when a term, option or early termination right differs: an exit right the tenant claims moves the modeled end date. Compare each returned SNDA with the lender's form and list every change the tenant made. Send both lists to the deal team, counsel and the underwriting.",
+      "mode": "agent",
+      "modeBasis": "The signed forms, the leases and the rent roll are documents an agent can compare line by line.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "collect-signed-forms"
+      ],
+      "calculators": [
+        "lease-rent",
+        "lease-rollover"
+      ],
+      "consumes": [
+        "lease-abstract",
+        "rent-roll",
+        "tenant-estoppel",
+        "snda"
+      ],
+      "produces": [
+        "tenant-estoppel",
+        "snda"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "industrial": "Confirm any purchase option, first refusal or first offer right the tenant certifies and what it says about this sale; with one tenant, a single difference moves the whole value.",
+        "office": "Check certified free rent remaining and unpaid allowances and leasing commissions against how the contract splits them between buyer and seller.",
+        "retail": "Check co-tenancy, go-dark and exclusive-use statements, and any rent reduction the tenant ties to another tenant closing or leaving."
+      }
+    },
+    {
+      "id": "settle-security-deposits",
+      "title": "Settle each tenant's security deposit",
+      "instruction": "List each deposit three ways: what the lease requires, what the seller's ledger shows and what the tenant certifies, including any letter of credit and its named beneficiary. In Texas, the buyer of commercial property is liable for tenants' deposits from the date it takes title, and the seller stays liable until the new owner gives each tenant a signed statement of the exact amount. Section 93.007 sets the deposit at the greater of the lease amount or the amount in an estoppel certificate the owner prepared when the lease was signed or the new owner prepares at the transfer, so resolve every gap before closing. Send the agreed figures to the settlement statement for the credit the contract provides, and have letters of credit transferred or reissued to the buyer. The signed statements go to tenants after closing under Finance and close the acquisition.",
+      "mode": "agent",
+      "modeBasis": "The lease, the ledger and the certificate are documents an agent can reconcile.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "compare-returns"
+      ],
+      "rules": [
+        "us-tx.property.commercial-security-deposit"
+      ],
+      "consumes": [
+        "tenant-estoppel",
+        "rent-roll",
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-93",
+        "tx-prop-92"
+      ],
+      "typeNotes": {
+        "multifamily": "Residential deposits fall under Property Code chapter 92, which requires the new owner to give each resident a signed statement of the exact deposit, so the seller's deposit schedule carries the weight resident estoppels would."
+      }
+    },
+    {
+      "id": "negotiate-snda-changes",
+      "title": "Negotiate the tenants' SNDA changes with the lender",
+      "instruction": "Counsel takes the list of tenant changes to the lender's counsel. The usual points are the conditions on non-disturbance; what a successor landlord is not bound by, such as rent paid well ahead or offsets for the prior landlord's defaults; the lender's notice and cure period before a tenant may end the lease or offset rent; how a tenant purchase option or first refusal right is treated; and paying rent to the lender on its notice. The lender decides which changes it accepts. Get the agreed form signed by the tenant, with the lender and the buyer as borrower to sign at or before closing. Where the lender will not move and the tenant will not sign the lender's form, add the gap to the open items.",
+      "mode": "human-online",
+      "modeBasis": "Negotiating loan-related agreements with the lender's counsel is legal work, and the lender alone decides what it accepts.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "compare-returns"
+      ],
+      "consumes": [
+        "snda",
+        "loan-term-sheet"
+      ],
+      "produces": [
+        "snda"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "work-out-open-items",
+      "title": "Work out every missing, late or changed estoppel",
+      "instruction": "For each tenant that has not signed, or signed with changes, lay out the options with the documents behind them. A missing tenant: whether its lease makes silence a deemed certification or a default after notice, the seller's remedies as landlord, and whether the contract lets a seller certificate stand in. A change: the tenant is right and the rent roll and model change; the tenant erred and the seller asks for a corrected form; or the claim is real and calls for a cure, a credit or an escrow at closing. Send any claimed unwritten side deal to counsel: in Texas, a lease of real estate for longer than one year is unenforceable unless it, or a memorandum of it, is in writing and signed by the person to be charged. Ask the lender, with a person's approval, which gaps it will waive.",
+      "mode": "agent",
+      "modeBasis": "Laying out options from the leases, the contract and the returns is document work; the request to the lender speaks for the buyer, so a person approves it.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "settle-security-deposits",
+        "negotiate-snda-changes"
+      ],
+      "rules": [
+        "us-tx.contracts.statute-of-frauds"
+      ],
+      "consumes": [
+        "tenant-estoppel",
+        "lease",
+        "purchase-and-sale-agreement",
+        "loan-term-sheet"
+      ],
+      "basis": "cited",
+      "sources": [
+        "bc-26"
+      ]
+    },
+    {
+      "id": "fund-committee-reviews-changes",
+      "title": "Take changed terms back to the investment committee",
+      "instruction": "If a returned estoppel changes the rent, term or cost the investment committee approved, or a gap is to be closed with a price change, credit, waiver or extension outside that approval, present the differences, the options and the re-run model to the committee and get its vote before anything is signed.",
+      "mode": "human-online",
+      "modeBasis": "Committee approval is a vote under the fund documents; an agent prepares the materials.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "work-out-open-items"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "consumes": [
+        "ic-memo",
+        "underwriting-model",
+        "tenant-estoppel"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "jv-partner-consents",
+      "title": "Get the capital partner's consent to waivers and changes",
+      "instruction": "Check the JV agreement's list of major decisions; waiving a closing condition, changing the price and extending the closing commonly need the capital partner's written consent. Send the partner the differences, the options and the re-run model early enough for its review to finish before the contract's deadline, and get its consent in writing before any amendment or waiver is signed.",
+      "mode": "human-online",
+      "modeBasis": "The consent is the capital partner's own decision under the JV agreement.",
+      "actor": "investor",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "work-out-open-items"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement",
+        "tenant-estoppel",
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "decide-open-items",
+      "title": "Decide how to close each gap",
+      "instruction": "A principal decides each open item before the date the contract tests the estoppel condition: accept the qualified or changed statement, take a cure, credit or escrow from the seller, accept a seller certificate where the contract allows one, extend the closing, waive the condition, or terminate if the condition has failed. Counsel puts any price change, extension or waiver in a written amendment both sides sign, or delivers a termination by the contract's notice method before its deadline. Never rely on a verbal extension. Record each decision and its reason in the firm file.",
+      "mode": "human-online",
+      "modeBasis": "Waiving a condition, changing terms or terminating binds the buyer and is the principal's decision.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "work-out-open-items",
+        "fund-committee-reviews-changes",
+        "jv-partner-consents"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "tenant-estoppel"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "deliver-the-set",
+      "title": "Deliver the set to the lender and the title company",
+      "instruction": "Assemble the final set: each signed estoppel with its differences resolved, each SNDA signed by the tenant and ready for the lender and borrower, any seller certificate, and a schedule showing which tenants, and what share of area and rent, the set covers against each threshold. Deliver it to the lender as its conditions require, and to the title company with any SNDA to be recorded, before closing. If closing slips past the age limit the contract or lender sets for certificates, ask the seller for bring-down certificates or fresh forms. Hand the set to the closing checklist under Finance and close the acquisition and file it in the firm file. A person approves each delivery.",
+      "mode": "agent",
+      "modeBasis": "Assembling and sending a document set is agent work; what goes to the lender speaks for the buyer, so a person approves it.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-open-items"
+      ],
+      "calculators": [
+        "lease-rollover"
+      ],
+      "consumes": [
+        "loan-term-sheet",
+        "purchase-and-sale-agreement",
+        "tenant-estoppel",
+        "snda"
+      ],
+      "produces": [
+        "tenant-estoppel",
+        "snda"
+      ],
+      "basis": "practitioner"
+    }
+  ],
+  "outlineSteps": []
+}

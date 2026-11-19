@@ -1,0 +1,149 @@
+{
+  "id": "deal-entity-agreement",
+  "name": "Deal or fund entity agreement",
+  "what": "The operating agreement or limited partnership agreement of the entity that raises money and owns the property: capital, distributions, the waterfall, fees, voting and transfers.",
+  "fields": [
+    {
+      "key": "capitalContributions",
+      "label": "Contributions and commitments",
+      "type": "list",
+      "definition": "Each investor's contribution or commitment as the schedule of members or partners states it, and whether it is paid at signing or on call. Note where the investor's signed promise to contribute sits: in this agreement or in the subscription agreement.",
+      "authority": "Tex. Bus. Orgs. Code 101.151 (LLC); 153.202(a) (limited partnership)"
+    },
+    {
+      "key": "managerContribution",
+      "label": "Manager's own contribution",
+      "type": "text",
+      "definition": "The amount the manager or general partner and its affiliates put in and the class of interest it buys. Record how the agreement says it is paid: new cash, or fees credited or left in the deal."
+    },
+    {
+      "key": "interestClasses",
+      "label": "Classes of interest",
+      "type": "list",
+      "definition": "Each class of interest the agreement creates, what qualifies an investor for it, such as a commitment size or a closing date, and each term on which it differs from the other classes."
+    },
+    {
+      "key": "preferredReturnRate",
+      "label": "Preferred return rate",
+      "type": "string",
+      "unit": "percent per year",
+      "definition": "The preferred return rate as the agreement states it, and the amount it accrues on, such as each investor's unreturned contributions. Null if the agreement has no preferred return."
+    },
+    {
+      "key": "preferredReturnCompounding",
+      "label": "Simple or compounding",
+      "type": "enum",
+      "definition": "Whether the preferred return is simple or compounds, and for a compounding return the period it compounds over. Read it from the defined term in the agreement, not from a summary."
+    },
+    {
+      "key": "preferredReturnCarryForward",
+      "label": "Unpaid preferred return carries forward",
+      "type": "boolean",
+      "definition": "Whether preferred return not paid in a period accumulates and is paid from later distributions, including sale or refinancing proceeds, or lapses at the end of the period."
+    },
+    {
+      "key": "preferredReturnStart",
+      "label": "Accrual start",
+      "type": "string",
+      "definition": "The date or event from which the preferred return accrues on each contribution, such as the day the money is received or the day the property closes."
+    },
+    {
+      "key": "returnOfCapitalOrder",
+      "label": "Order of distributions",
+      "type": "text",
+      "definition": "The order in which the agreement applies distributions: accrued preferred return, return of contributed capital, any catch-up and the tiers. Record operating cash flow and sale or refinancing proceeds separately when the agreement treats them differently."
+    },
+    {
+      "key": "catchUp",
+      "label": "Catch-up",
+      "type": "text",
+      "definition": "The share of distributions that goes to the manager during any catch-up, and the split it catches up to, with the amounts that split is measured on. Null if the agreement has no catch-up."
+    },
+    {
+      "key": "distributionTiers",
+      "label": "Distribution tiers",
+      "type": "list",
+      "definition": "Each tier of the waterfall in order: the hurdle that ends it, the measure the hurdle uses (such as an internal rate of return or an equity multiple, and whose cash flows it counts) and the split between investors and the manager within it."
+    },
+    {
+      "key": "managerFees",
+      "label": "Fees to the manager and related companies",
+      "type": "list",
+      "definition": "Each fee the agreement allows the manager, its principals or related companies to charge: its name, rate, the base it is figured on, who pays it (the entity, the property or the investors) and when it is earned and paid. Note any subordination to investor distributions. Include any commission or fee a principal or related company receives from someone else, such as the seller, a buyer, a tenant or a lender, on the purchase, the loan, leasing or the sale, and whether the agreement requires it to be disclosed or approved."
+    },
+    {
+      "key": "reimbursements",
+      "label": "Reimbursements",
+      "type": "text",
+      "definition": "The costs the manager may be repaid for, such as organizational, offering and pursuit costs or its own overhead, any cap on them, and anything the agreement says is not reimbursable."
+    },
+    {
+      "key": "managerAuthority",
+      "label": "Decisions the manager makes alone",
+      "type": "text",
+      "definition": "The powers the agreement gives the manager or general partner without an investor vote. Read the management section together with the list of matters reserved to investors."
+    },
+    {
+      "key": "investorVotes",
+      "label": "Investor votes",
+      "type": "list",
+      "definition": "Each matter that needs investor approval and the vote it takes: the share of all interests or of a class, and whether interests held by the manager and its affiliates count toward it."
+    },
+    {
+      "key": "managerRemoval",
+      "label": "Removal of the manager",
+      "type": "text",
+      "definition": "The grounds on which investors may remove the manager or general partner, how cause is defined and the vote it takes. Record what removal does to the manager's fees, its promote and its own capital."
+    },
+    {
+      "key": "transferRestrictions",
+      "label": "Transfers",
+      "type": "text",
+      "definition": "Which transfers of an interest need the manager's or other investors' consent and which are permitted without it. Record the statement that the interests are unregistered and cannot be resold without registration or an exemption, and the legend placed on the document evidencing the interest.",
+      "authority": "17 CFR 230.502(d)"
+    },
+    {
+      "key": "investorReports",
+      "label": "Reports owed to investors",
+      "type": "list",
+      "definition": "Each report the manager owes investors, such as financial statements, tax information and property updates, with its frequency, its deadline and whether the statements must be audited or reviewed."
+    },
+    {
+      "key": "capitalCalls",
+      "label": "Capital call terms",
+      "type": "text",
+      "definition": "Who may call capital and for what, the notice owed and how it must be delivered, the time to fund and any cure period. Record each consequence for an investor who does not fund, such as default interest, reduction, subordination, forced sale or a loan from the other investors.",
+      "authority": "Tex. Bus. Orgs. Code 101.153 and 101.156 (LLC); 153.202 and 153.205 (limited partnership)"
+    },
+    {
+      "key": "fundTerm",
+      "label": "Fund term and extensions",
+      "type": "text",
+      "definition": "For a fund, the term the agreement sets, each extension, and who may extend it with what consent. Null for a single-property entity."
+    },
+    {
+      "key": "finalClosingDate",
+      "label": "Final closing",
+      "type": "date",
+      "definition": "For a fund, the last date on which new investors may be admitted, with any extension the agreement allows recorded beside it. Null for a single-property entity."
+    },
+    {
+      "key": "investmentPeriod",
+      "label": "Investment period",
+      "type": "text",
+      "definition": "For a fund, the period in which it may buy new properties and the event that ends it early. Record what the fund may still pay for after it ends, such as costs on properties it already owns."
+    },
+    {
+      "key": "investmentLimits",
+      "label": "Investment limits",
+      "type": "list",
+      "definition": "For a fund, each limit on what it may buy, such as property type, location, development or the share of capital in one property, and whether each one binds the manager or is stated only as a target."
+    },
+    {
+      "key": "borrowingLimits",
+      "label": "Borrowing limits",
+      "type": "text",
+      "definition": "For a fund, the debt limit for each property and for the fund as a whole, with the measure and the value each is figured on. Record whether each one binds the manager or is stated only as a target."
+    }
+  ]
+}

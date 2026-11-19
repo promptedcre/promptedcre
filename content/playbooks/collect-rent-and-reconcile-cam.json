@@ -1,0 +1,36 @@
+{
+  "id": "collect-rent-and-reconcile-cam",
+  "slug": "collect-rent-and-reconcile-cam",
+  "kind": "process",
+  "title": "Collect rent and reconcile operating expenses",
+  "summary": "Bill and collect rent and recoveries, and true up shared operating expenses with tenants each year.",
+  "phase": "operate",
+  "order": 320,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Bill base rent from each lease's rent schedule",
+    "Bill estimated expense recoveries each month",
+    "Post receipts and track arrears by tenant",
+    "Follow up on late rent under the lease's late-fee and default terms",
+    "Pool the year's recoverable expenses by line",
+    "Remove costs the leases exclude from recovery",
+    "Allocate expenses by each tenant's share and recovery method",
+    "Compute percentage rent for tenants that owe it",
+    "Record the owner's share for vacant space",
+    "Send each tenant its reconciliation statement",
+    "Answer tenant questions and audits under the lease",
+    "Reset next year's estimated recovery billings"
+  ]
+}

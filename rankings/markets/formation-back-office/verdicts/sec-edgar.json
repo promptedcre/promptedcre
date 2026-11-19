@@ -1,0 +1,158 @@
+{
+  "vendor": "sec-edgar",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "909e47e646fe9ba5008aada831b0a91c1abbac392f71b8308f740f40dcebbb64",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "c1",
+        "c2",
+        "c3",
+        "c6",
+        "c7"
+      ],
+      "rationale": "SEC's public API pages describe keyless RESTful JSON data APIs for filer submissions history and XBRL financial data (c1, c2, c3) plus filer APIs to make live submissions and check their status (c6, c7), covering both reading and changing filings.",
+      "missing": "The pack quotes descriptions rather than endpoint-level reference documentation, especially for the filer submission and status APIs, and the data APIs are stated to cover only submissions history and XBRL data."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item in the pack mentions an MCP server.",
+      "missing": "The pack shows no official or unofficial MCP server for EDGAR."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item in the pack mentions an official CLI, SDK, package or public code repository.",
+      "missing": "The pack shows no vendor-maintained CLI or SDK on a package registry or public repository, and no code samples."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no webhooks or event subscriptions, and na does not apply because filers submit records through EDGAR's submission API.",
+      "missing": "The pack shows no webhook, push notification or event-subscription mechanism for submissions, status changes or new filings."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "partial",
+      "quality": 6,
+      "evidence": [
+        "c8",
+        "c9",
+        "c2"
+      ],
+      "rationale": "Filer APIs require a filer API token and at least two technical administrators (c8, c9), but the pack documents no scopes or permissions limiting what a token can do, and na does not apply because only the public data APIs are keyless (c2).",
+      "missing": "The pack does not show token scopes, per-user or per-function permission limits, or whether a filer API token carries the filer account's full access."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows JSON-formatted data and bulk JSON files but no OpenAPI, Swagger, GraphQL or other machine-readable API specification.",
+      "missing": "The pack shows no machine-readable spec for either the data APIs or the filer submission and status APIs."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item in the pack mentions an llms.txt file or Markdown versions of the documentation.",
+      "missing": "The pack shows no llms.txt file or Markdown documentation pages."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "c6",
+        "c10",
+        "c11"
+      ],
+      "rationale": "The SEC documents test submissions through the submission API and an EDGAR Next Beta where all optional APIs can be tested, signed into with individual Login.gov credentials (c6, c10, c11).",
+      "missing": "The pack does not state outright that Beta access needs no request or approval, and shows no developer-level documentation of how test submissions work."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c4",
+        "c2",
+        "c12"
+      ],
+      "rationale": "The API page documents a nightly-republished bulk ZIP of all the APIs' JSON structures, free to download with no authentication (c4, c2, c12).",
+      "missing": "The bulk JSON shown covers only the data APIs' submissions history and XBRL data; the pack does not show bulk download of full filed documents."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "full",
+      "quality": 6,
+      "evidence": [
+        "c12",
+        "c2",
+        "c5",
+        "c11"
+      ],
+      "rationale": "Anyone can access and download EDGAR data free with no authentication or API keys (c12, c2), and filer API access runs through EDGAR Next enrollment and individual Login.gov credentials with no sales call shown (c5, c11).",
+      "missing": "The pack does not show the filer sign-up steps or whether the Form ID grant mentioned in c5 involves an SEC review that delays access."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "partial",
+      "quality": 5,
+      "evidence": [
+        "c12",
+        "c14"
+      ],
+      "rationale": "Data access is stated to be free (c12) and filing fees are paid through EDGAR under a public fee page (c14), but the pack shows no fee amounts for a sponsor's filings.",
+      "missing": "The pack does not show filing fee rates or amounts, or which filings a small sponsor would owe fees on."
+    },
+    {
+      "story": "fb-start",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "c6",
+        "c5",
+        "c8"
+      ],
+      "rationale": "The SEC's API guide describes a submission API that lets enrolled filers make live and test EDGAR submissions with a filer API token (c6, c5, c8).",
+      "missing": "The pack gives a one-line description only, without endpoint reference docs, supported form types, or how signatures and approvals are handled."
+    },
+    {
+      "story": "fb-status",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "c7",
+        "c5"
+      ],
+      "rationale": "The SEC's API guide describes a submission status API that lets filers enrolled in EDGAR Next check the status of an EDGAR submission (c7, c5).",
+      "missing": "The pack does not show the status endpoint's reference documentation, the status values returned, or the response format."
+    },
+    {
+      "story": "fb-records",
+      "verdict": "partial",
+      "quality": 6,
+      "evidence": [
+        "c1",
+        "c3",
+        "c4"
+      ],
+      "rationale": "The public data APIs return JSON submissions history by filer and XBRL financial-statement data, also as a nightly bulk ZIP (c1, c3, c4), but the pack shows no API returning the filed documents themselves.",
+      "missing": "The pack does not show a documented API that returns full filed documents or acceptance records; coverage shown is limited to submissions history and XBRL data."
+    }
+  ]
+}

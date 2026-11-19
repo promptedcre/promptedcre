@@ -1,0 +1,127 @@
+{
+  "vendor": "trepp",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://www.trepp.com/",
+      "found": false,
+      "note": "No public documentation or help center found; support.trepp.com, help.trepp.com and developer.trepp.com do not resolve."
+    },
+    "api": {
+      "url": "https://www.trepp.com/trepp-data-feed",
+      "found": false,
+      "note": "TreppData Feed is a marketing page with demo and brochure requests; no public API reference. trepp.com/api returns 404."
+    },
+    "pricing": {
+      "url": "https://www.trepp.com/request-free-trial",
+      "found": false,
+      "note": "No pricing page (trepp.com/pricing returns 404); the trial page is a contact form."
+    },
+    "changelog": {
+      "url": "https://www.trepp.com/release-notes",
+      "found": false,
+      "note": "Returns 404; no changelog or release notes page found."
+    }
+  },
+  "links": {
+    "mcp": "https://www.trepp.com/agent-optimized-mcp-servers-treppai"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://www.trepp.com/",
+      "excerpt": "Bring Trepp's CRE Finance Intelligence Directly Into Your AI Workflows with TreppMCP Servers.",
+      "fetched": "2026-11-12",
+      "hash": "ea062058f191091bce32e3102e8c2d4fff7c33add959783338ff97cb1e0b7f9a"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://www.trepp.com/agent-optimized-mcp-servers-treppai",
+      "excerpt": "Agents connect to the TreppMCP server, which exposes a suite of tools and resources they can access in real time.",
+      "fetched": "2026-11-12",
+      "note": "Page offers Request a Demo and Book a demo; no setup steps or pricing.",
+      "hash": "d1dd545974447b8a6c2e87a9d653c3788c42f30f826b2d1615c809036e58d36d"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://www.trepp.com/agent-optimized-mcp-servers-treppai",
+      "excerpt": "get_entity : Resolves property addresses into unique TreppRealIDs for consistent identification across the platform.",
+      "fetched": "2026-11-12",
+      "hash": "361520715cfa52bf055029ba363f069950dc35279c32d72d905c4d71acce5a69"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://www.trepp.com/agent-optimized-mcp-servers-treppai",
+      "excerpt": "get_comparables : Returns pre-identified comparables for a property, along with summary financial data for the comps.",
+      "fetched": "2026-11-12",
+      "hash": "db08cf664d88d165d777126d85da7d7e33e7acc279d7353744bdd185bb68c28e"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://www.trepp.com/agent-optimized-mcp-servers-treppai",
+      "excerpt": "Enables flexible property and loan screening using filters such as property type, financial metrics, delinquency status, servicing status, maturity timeline, and deal attributes.",
+      "fetched": "2026-11-12",
+      "note": "Description of the search_properties_loans tool; cut at a word boundary.",
+      "hash": "ecbed0e7fd5e0defd12a9d831dbed0e9fdb5d212aea84803f3a6d4340718ba0a"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://www.trepp.com/agent-optimized-mcp-servers-treppai",
+      "excerpt": "Centralize Trepp access without ETL pipelines or data warehousing.",
+      "fetched": "2026-11-12",
+      "hash": "57b21c4a4fc533880acc0a4782545815eaf60cdfb8ee29691bce7b178b699ce2"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://www.trepp.com/trepp-data-feed",
+      "excerpt": "Trepp’s Data Feed integrates the best of various information sources to provide CRE analysts with a single supply of high quality, easy to use data.",
+      "fetched": "2026-11-12",
+      "note": "Feed is delivered daily per the page; access is by demo request.",
+      "hash": "65e9f4059efca5d8820cfdaf59fc4058a30fad4ba1fbb6ae2991e16849ddf351"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://www.trepp.com/trepp-cre",
+      "excerpt": "TreppCRE brings together the largest available database of securitized commercial properties combined with sales transaction, lease and tax assessment data.",
+      "fetched": "2026-11-12",
+      "hash": "b4db7462f10107e04cc043d3bb7fc492d4358efae9d2aad4aee10d2c07b85eb2"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://www.trepp.com/request-free-trial",
+      "excerpt": "Trial availability varies by solution.",
+      "fetched": "2026-11-12",
+      "note": "Form asks for needs and says the team will follow up; no self-serve sign-up.",
+      "hash": "7ae0c9c7650444bd032a3bccd96df044671628c50e28beecbb32c2f143a9353a"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://www.trepp.com/cre-direct",
+      "excerpt": "Property Sales Database",
+      "fetched": "2026-11-12",
+      "note": "CRE Direct (Trepp subsidiary) offers a database of large property transactions; subscription is via Subscribe link.",
+      "hash": "4d82f0bc0643cf76e3d11566ba92813e6cf3822a1f575aa882fe35e67dc85768"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://www.trepp.com/agent-optimized-mcp-servers-treppai",
+      "excerpt": "Agent-Optimized MCP Servers, Powered by TreppAI",
+      "note": "MCP page resolves: GET 200 (page title)",
+      "fetched": "2026-11-12",
+      "hash": "063f63533e5285094b6449fe41aa3c8071ebfd3d8b3cecb995cfaacc97149908"
+    }
+  ]
+}

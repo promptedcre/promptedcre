@@ -1,0 +1,34 @@
+{
+  "id": "us-fed.irc.depreciation-recovery-periods",
+  "jurisdiction": "us-federal",
+  "title": "Depreciation of buildings: recovery period, method and convention",
+  "rule": "Under the general depreciation system, a building that is residential rental property is recovered over 27.5 years and one that is nonresidential real property over 39 years, both by the straight line method with salvage value treated as zero. Both use the mid-month convention: a building placed in service or disposed of during a month is treated as placed in service or disposed of at the midpoint of that month. A building is residential rental property if 80 percent or more of its gross rental income for the year comes from dwelling units. Land is not depreciable, so only the cost allocated to the building and other improvements is recovered.",
+  "citation": {
+    "authority": "26 U.S.C. 168(b)(3), (b)(4), (c), (d)(2), (d)(4)(B) and (e)(2)(A); IRS Publication 946",
+    "url": "https://www.law.cornell.edu/uscode/text/26/168"
+  },
+  "asOf": "2026-11-13",
+  "lastVerified": "2026-11-13",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to the recovery periods in section 168(c) or the real property convention in 168(d)(2); the IRS reissues Publication 946 each year (the 2025 edition, last updated April 30, 2026, was current on 2026-11-13).",
+  "sources": [
+    {
+      "id": "usc-26-168",
+      "url": "https://www.law.cornell.edu/uscode/text/26/168",
+      "title": "26 U.S.C. 168, Accelerated cost recovery system (subsections (b), (c) and (d))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "the applicable convention is the mid-month convention.",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-pub-946",
+      "url": "https://www.irs.gov/publications/p946",
+      "title": "Publication 946 (2025), How To Depreciate Property",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-13",
+      "quote": "You cannot depreciate the cost of land because land does not wear out, become obsolete, or get used up.",
+      "tier": "primary"
+    }
+  ]
+}

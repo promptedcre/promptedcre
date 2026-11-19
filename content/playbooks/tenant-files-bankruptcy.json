@@ -1,0 +1,631 @@
+{
+  "id": "tenant-files-bankruptcy",
+  "slug": "tenant-files-bankruptcy",
+  "kind": "situation",
+  "title": "A tenant files for bankruptcy",
+  "summary": "Stop every collection step the filing stays, confirm the case and calendar its deadlines, and keep rent owed before the filing apart from rent due after it. With counsel, file the claim, answer an assumption or take back a rejected space, and plan the re-leasing.",
+  "phase": "operate",
+  "order": 121,
+  "featured": false,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-13",
+  "situation": {
+    "trigger": "Notice arrives that a tenant has filed a bankruptcy case.",
+    "urgency": "days"
+  },
+  "requires": [],
+  "consumes": [
+    "lease",
+    "lease-abstract",
+    "rent-roll",
+    "default-notice",
+    "loan-documents",
+    "jv-agreement",
+    "underwriting-model",
+    "investor-register"
+  ],
+  "produces": [
+    "proof-of-claim",
+    "rent-roll",
+    "underwriting-model"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "usc-11-362",
+      "url": "https://www.law.cornell.edu/uscode/text/11/362",
+      "title": "11 U.S.C. 362, Automatic stay",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "any act to collect, assess, or recover a claim against the debtor that arose before the commencement of the case under this title",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-11-301",
+      "url": "https://www.law.cornell.edu/uscode/text/11/301",
+      "title": "11 U.S.C. 301, Voluntary cases",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "The commencement of a voluntary case under a chapter of this title constitutes an order for relief under such chapter.",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-11-365-d",
+      "url": "https://www.law.cornell.edu/uscode/text/11/365",
+      "title": "11 U.S.C. 365(d)(4), Deadline to assume or reject a nonresidential lease",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "the date that is 120 days after the date of the order for relief",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-11-365-d3",
+      "url": "https://www.law.cornell.edu/uscode/text/11/365",
+      "title": "11 U.S.C. 365(d)(3), Performance of lease obligations until assumption or rejection",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "Acceptance of any such performance does not constitute waiver or relinquishment",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-11-365-d4-surrender",
+      "url": "https://www.law.cornell.edu/uscode/text/11/365",
+      "title": "11 U.S.C. 365(d)(4)(A), Deemed rejection and surrender",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "the trustee shall immediately surrender that nonresidential real property to the lessor",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-11-365-b",
+      "url": "https://www.law.cornell.edu/uscode/text/11/365",
+      "title": "11 U.S.C. 365(b), (e) and (f), Cure, adequate assurance, and assignment of an unexpired lease",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "provides adequate assurance of future performance under such contract or lease",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-11-365-g",
+      "url": "https://www.law.cornell.edu/uscode/text/11/365",
+      "title": "11 U.S.C. 365(g), Rejection as a breach",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "immediately before the date of the filing of the petition",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-11-502",
+      "url": "https://www.law.cornell.edu/uscode/text/11/502",
+      "title": "11 U.S.C. 502(b)(6), Limit on a lessor's claim for lease termination damages",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "for the greater of one year, or 15 percent, not to exceed three years, of the remaining term of such lease",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-11-1111",
+      "url": "https://www.law.cornell.edu/uscode/text/11/1111",
+      "title": "11 U.S.C. 1111(a), Claims scheduled in a Chapter 11 case",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "is deemed filed under section 501 of this title for any claim or interest that appears in the schedules",
+      "tier": "primary"
+    },
+    {
+      "id": "frbp-2003",
+      "url": "https://www.law.cornell.edu/rules/frbp/rule_2003",
+      "title": "Federal Rule of Bankruptcy Procedure 2003, Meeting of creditors or equity security holders",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-13",
+      "quote": "in a Chapter 7 or 11 case, no fewer than 21 days and no more than 40 days after the order for relief",
+      "tier": "primary"
+    },
+    {
+      "id": "frbp-3001",
+      "url": "https://www.law.cornell.edu/rules/frbp/rule_3001",
+      "title": "Federal Rule of Bankruptcy Procedure 3001, Proof of claim",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-13",
+      "quote": "the creditor must file a copy with the proof of claim",
+      "tier": "primary"
+    },
+    {
+      "id": "frbp-3002",
+      "url": "https://www.law.cornell.edu/rules/frbp/rule_3002",
+      "title": "Federal Rule of Bankruptcy Procedure 3002, Filing proof of claim or interest",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-13",
+      "quote": "the proof of claim is timely if filed within 70 days after the order for relief",
+      "tier": "primary"
+    },
+    {
+      "id": "frbp-3003",
+      "url": "https://www.law.cornell.edu/rules/frbp/rule_3003",
+      "title": "Federal Rule of Bankruptcy Procedure 3003, Chapter 9 or 11: filing a proof of claim or equity interest",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-13",
+      "quote": "The court must set the time to file a proof of claim or interest and may, for cause, extend the time.",
+      "tier": "primary"
+    },
+    {
+      "id": "uscourts-form-410",
+      "url": "https://www.uscourts.gov/forms-rules/forms/proof-claim-0",
+      "title": "Proof of Claim (Official Form B 410)",
+      "publisher": "Administrative Office of the U.S. Courts",
+      "accessed": "2026-11-13",
+      "quote": "Official Bankruptcy Forms are approved by the Judicial Conference and must be used under Bankruptcy Rule 9009.",
+      "tier": "primary"
+    },
+    {
+      "id": "uscourts-ch11-basics",
+      "url": "https://www.uscourts.gov/court-programs/bankruptcy/bankruptcy-basics/chapter-11-bankruptcy-basics",
+      "title": "Chapter 11 - Bankruptcy Basics",
+      "publisher": "Administrative Office of the U.S. Courts",
+      "accessed": "2026-11-13",
+      "quote": "The appointment or election of a trustee occurs only in a small number of cases.",
+      "tier": "secondary"
+    },
+    {
+      "id": "pacer",
+      "url": "https://pacer.uscourts.gov/",
+      "title": "Public Access to Court Electronic Records (PACER)",
+      "publisher": "Administrative Office of the U.S. Courts",
+      "accessed": "2026-11-13",
+      "quote": "Register for a PACER account to begin searching for or filing federal court records online.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-14",
+      "quote": "To make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "stop-collection",
+      "title": "Stop every collection step the stay bars",
+      "instruction": "The filing stays any suit on a claim from before the case, any act to obtain possession of or control over estate property, any act to enforce a lien against it, any act to collect a pre-filing claim, and setoff of a pre-filing debt (11 U.S.C. 362(a)). Write hold instructions to the property manager and the bookkeeper: no reminders, late notices or default notices, no lockout, no landlord's lien or distress warrant, no eviction filing, no automatic debit of past-due amounts, and no draw on the deposit or a letter of credit until counsel clears it. List every step already under way, including any begun when the tenant stopped paying, and send the list to counsel, who stops any pending suit. A person approves the instructions before they go.",
+      "mode": "agent",
+      "modeBasis": "Writing hold instructions and listing open steps is document work; stopping a pending suit is counsel's, and a person approves the instructions.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-fed.bankruptcy.automatic-stay",
+        "us-tx.property.commercial-lockout",
+        "us-tx.property.commercial-landlord-lien"
+      ],
+      "consumes": [
+        "lease",
+        "default-notice"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-11-362"
+      ]
+    },
+    {
+      "id": "confirm-the-case",
+      "title": "Confirm the case and its chapter on the court's records",
+      "instruction": "Log in to the federal courts' electronic records and find the case. Record the court and district, case number, debtor name, chapter (7, 11 or 13, and whether a Chapter 11 case is under Subchapter V), petition date, whether the case is voluntary or involuntary, any trustee appointed, and the debtor's lawyer. Compare the debtor's name with the tenant and any guarantor named in the lease: a guarantor's or parent's case is not the tenant's case. Save the notice of the case, the petition, the docket and, once filed, the schedule of leases to the firm file.",
+      "mode": "human-online",
+      "modeBasis": "The court's electronic records need an account login, so a person or counsel searches them.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "consumes": [
+        "lease",
+        "lease-abstract"
+      ],
+      "basis": "cited",
+      "sources": [
+        "pacer"
+      ]
+    },
+    {
+      "id": "engage-bankruptcy-counsel",
+      "title": "Engage bankruptcy counsel",
+      "instruction": "Hire a lawyer who practices bankruptcy law in the district where the case is pending. Send counsel the lease and amendments, any guaranty, the tenant ledger, the deposit and any letter of credit held, the hold list and the case details. Ask counsel to enter an appearance so the court's notices reach it, and to say who signs and files the claim. Sign the engagement letter.",
+      "mode": "human-online",
+      "modeBasis": "Engaging counsel commits the owning entity to fees and a scope of work under a signed letter.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-the-case"
+      ],
+      "consumes": [
+        "lease",
+        "lease-abstract"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "calendar-the-dates",
+      "title": "Calendar the deadlines that run from the filing",
+      "instruction": "A voluntary petition is itself the order for relief (11 U.S.C. 301(b)); in an involuntary case, use the date the order is entered. Enter in the deadline-calendar: the date 120 days after the order for relief, when a nonresidential lease not yet assumed or rejected is deemed rejected, unless the court extends it 90 days for cause before then; later extensions need the landlord's prior written consent (365(d)(4)). The claims deadline: 70 days after the order for relief in a voluntary Chapter 7 case or a Chapter 13 case, 90 days in an involuntary Chapter 7 case, and the date the court sets in Chapter 11 (Rules 3002(c), 3003(c)(3)). The meeting of creditors: 21 to 40 days after the order for relief in Chapter 7 or 11 (Rule 2003(a)). Where the court's notices and orders state a date, use it, and have counsel confirm each.",
+      "mode": "agent",
+      "modeBasis": "The dates follow from the case record and the calculator counts them.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-the-case"
+      ],
+      "rules": [
+        "us-fed.bankruptcy.nonresidential-lease-deadlines"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-11-301",
+        "usc-11-365-d",
+        "frbp-3002",
+        "frbp-3003",
+        "frbp-2003"
+      ],
+      "typeNotes": {
+        "multifamily": "The 120-day rule covers nonresidential leases. A residential lease follows section 365(d)(1) in Chapter 7 and 365(d)(2) in other chapters; ask counsel which dates apply."
+      }
+    },
+    {
+      "id": "split-the-ledger",
+      "title": "Split what was owed before the filing from what comes due after",
+      "instruction": "From the lease, the abstract and the tenant ledger, build a statement as of the petition date. Before the filing: each unpaid charge by type and due date (base rent, recoveries, late charges, interest, any other charge the lease calls rent), with recovery true-ups for periods that ended before the filing shown separately. After the filing: every charge the lease makes due from the petition date forward, by month. Show the deposit and any letter of credit held without applying them. Flag the month the filing fell in and any charge that covers time on both sides of the petition date; counsel decides how those are split. Hand the statement to counsel and the bookkeeper.",
+      "mode": "agent",
+      "modeBasis": "The split is arithmetic on the lease and the ledger; how straddling charges are allocated is counsel's call.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-the-case"
+      ],
+      "rules": [
+        "us-fed.bankruptcy.lease-rejection-claim-cap"
+      ],
+      "consumes": [
+        "lease",
+        "lease-abstract",
+        "rent-roll"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "bill-post-filing-rent",
+      "title": "Bill and track rent that comes due after the filing",
+      "instruction": "Until the lease is assumed or rejected, the trustee, which in most Chapter 11 cases is the debtor in possession, must timely perform the lease obligations arising from and after the order for relief; the court may extend time only for obligations arising in the first 60 days, and accepting payment does not waive the landlord's rights (11 U.S.C. 365(d)(3)). Send invoices for post-filing charges only, never pre-filing arrears, addressed as counsel directs, and apply each payment to the post-filing charge it names. Update the rent roll status. Report any missed post-filing payment to counsel the day it is late; counsel decides whether to ask the court to compel payment or lift the stay.",
+      "mode": "agent",
+      "modeBasis": "Invoicing and payment tracking run from the ledger; what to ask the court for is counsel's decision.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "engage-bankruptcy-counsel",
+        "split-the-ledger"
+      ],
+      "rules": [
+        "us-fed.bankruptcy.nonresidential-lease-deadlines"
+      ],
+      "consumes": [
+        "lease",
+        "rent-roll"
+      ],
+      "produces": [
+        "rent-roll"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-11-365-d3",
+        "uscourts-ch11-basics"
+      ]
+    },
+    {
+      "id": "tell-the-lender",
+      "title": "Tell the lender what the loan documents require",
+      "instruction": "Read the loan documents for notice duties on a tenant default or bankruptcy, the lender's consent rights over lease amendments, terminations and assignments, and any cash management or reserve that a major tenant's filing triggers. Draft the notice the documents require, to the notice address and by the method they name, with the case details and the calendared deadlines. List every later decision in the case that needs the lender's consent, such as agreeing to a cure amount, an assignment or a lease termination. A person approves the notice before it goes.",
+      "mode": "agent",
+      "modeBasis": "Reading the loan documents and drafting the notice is document work; the notice speaks for the borrower, so a person approves it.",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "calendar-the-dates"
+      ],
+      "consumes": [
+        "loan-documents"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "tell-the-partner",
+      "title": "Tell the capital partner and line up its consents",
+      "instruction": "Read the JV agreement for the partner's rights over lease decisions: amendments, terminations, consent to an assignment and settlements with the debtor. Send the partner the case details, the deadlines and the ledger statement, and name each coming decision that needs its written consent and the date by which it must answer. A person approves the update before it goes.",
+      "mode": "agent",
+      "modeBasis": "Reading the agreement and drafting the update is document work; the partner's consent is its own decision.",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "calendar-the-dates",
+        "split-the-ledger"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "prepare-proof-of-claim",
+      "title": "Prepare the proof of claim",
+      "instruction": "Fill the current Official Form 410 from the uscourts.gov page with the case caption, the creditor as the owning entity is named in the lease, the pre-filing amount from the ledger statement and the basis (the lease). Attach a copy of the lease and any other writing the claim rests on (Rule 3001(c)(1)) and an itemized statement of account, redacted as counsel directs. In Chapter 11, check the debtor's schedules: a scheduled claim not marked disputed, contingent or unliquidated is deemed filed (11 U.S.C. 1111(a)); a claim not scheduled, or so marked, must be filed, and a filed claim supersedes the schedule (Rule 3003(c)). Damages from a later rejection are claimed by the date the court sets (Rule 3002(c)(4)). Hand the draft to counsel.",
+      "mode": "agent",
+      "modeBasis": "Filling the official form from the ledger and the lease is document work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "engage-bankruptcy-counsel",
+        "split-the-ledger"
+      ],
+      "consumes": [
+        "lease",
+        "lease-abstract",
+        "rent-roll"
+      ],
+      "produces": [
+        "proof-of-claim"
+      ],
+      "basis": "cited",
+      "sources": [
+        "uscourts-form-410",
+        "frbp-3001",
+        "usc-11-1111",
+        "frbp-3003",
+        "frbp-3002"
+      ]
+    },
+    {
+      "id": "file-the-claim",
+      "title": "Sign and file the claim before the deadline",
+      "instruction": "Counsel reviews the draft, and the owning entity or counsel as its agent signs it: only a creditor or the creditor's agent may sign a proof of claim (Rule 3001(b)). File it in the district where the case is pending, by the route the court's notice names, before the claims deadline on the calendar. Save the filed copy and its claim number from the claims register to the firm file.",
+      "mode": "human-online",
+      "modeBasis": "Signing and filing a claim is a statement to the court made for the owning entity.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "calendar-the-dates",
+        "prepare-proof-of-claim"
+      ],
+      "consumes": [
+        "proof-of-claim"
+      ],
+      "produces": [
+        "proof-of-claim"
+      ],
+      "basis": "cited",
+      "sources": [
+        "frbp-3001",
+        "frbp-3002",
+        "frbp-3003"
+      ]
+    },
+    {
+      "id": "answer-an-assumption",
+      "title": "Answer a motion to assume or assign the lease",
+      "instruction": "To assume a lease in default, the trustee or debtor in possession must cure or adequately assure a prompt cure, compensate the landlord's actual pecuniary loss or adequately assure it, and give adequate assurance of future performance (11 U.S.C. 365(b)(1)). After the case starts, the lease cannot be ended or changed solely because of a clause keyed to the filing or the tenant's financial condition (365(e)(1)). An assignment needs assumption plus adequate assurance of future performance by the assignee, even where the lease prohibits or conditions assignment, subject to the exceptions in 365(b) and (c) (365(f)). Counsel compares the proposed cure with the ledger statement, asks for the assignee's financial information and recommends whether to object; the principal decides, with any consent the lender or a partner holds, before the objection deadline in the notice.",
+      "mode": "human-online",
+      "modeBasis": "Whether to object and on what grounds is a legal judgment and a decision for the owning entity.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "engage-bankruptcy-counsel",
+        "split-the-ledger",
+        "tell-the-lender"
+      ],
+      "consumes": [
+        "lease",
+        "proof-of-claim"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-11-365-b"
+      ],
+      "typeNotes": {
+        "retail": "For a lease in a shopping center, adequate assurance includes the source of rent, that any percentage rent will not decline substantially, that radius, location, use and exclusivity provisions still apply, and that tenant mix is not disrupted (365(b)(3))."
+      }
+    },
+    {
+      "id": "take-back-the-space",
+      "title": "Take back the space after rejection",
+      "instruction": "When the lease is deemed rejected at the deadline, the trustee must surrender the premises immediately (11 U.S.C. 365(d)(4)(A)); when it is rejected by order, counsel confirms the surrender date. A lease that ended by expiration of its stated term can be recovered without stay relief (362(b)(10)). Do not change locks or remove property until counsel confirms the rejection date and the court's terms for property left behind. Then walk the space with the manager: take keys and access devices, photograph and record its condition, list what was left, read the meters, and put utilities, insurance and security in the owner's name. Give counsel the surrender date and the condition record.",
+      "mode": "human-offline",
+      "modeBasis": "Walking the space and taking possession happen on site.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "engage-bankruptcy-counsel",
+        "calendar-the-dates"
+      ],
+      "rules": [
+        "us-fed.bankruptcy.nonresidential-lease-deadlines",
+        "us-fed.bankruptcy.automatic-stay"
+      ],
+      "consumes": [
+        "lease"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-11-365-d4-surrender",
+        "usc-11-362"
+      ],
+      "typeNotes": {
+        "industrial": "List any equipment, stored materials or containers left behind and give the list to counsel before anything is moved or disposed of."
+      }
+    },
+    {
+      "id": "compute-rejection-claim",
+      "title": "Compute the capped rejection damages claim",
+      "instruction": "Rejecting a lease never assumed is a breach as of immediately before the petition (11 U.S.C. 365(g)(1)). If the claim is objected to, damages for termination of the lease are allowed only up to the rent reserved, without acceleration, for the greater of one year or 15 percent of the remaining term, not over three years, after the earlier of the petition date or the date the landlord repossessed or the tenant surrendered, plus unpaid rent due on that earlier date (502(b)(6)). Build the rent schedule in the lease-rent calculator from that earlier date, compute both measures and the cap, and show the full lease damages beside it. Show the deposit and any letter of credit held; counsel decides how they apply, how 15 percent is measured and which charges count as rent reserved. Hand the amended claim to counsel to file by the date the court sets.",
+      "mode": "agent",
+      "modeBasis": "The cap is arithmetic on the lease's rent schedule; which charges count is counsel's call.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "file-the-claim",
+        "take-back-the-space"
+      ],
+      "rules": [
+        "us-fed.bankruptcy.lease-rejection-claim-cap"
+      ],
+      "calculators": [
+        "lease-rent"
+      ],
+      "consumes": [
+        "lease",
+        "lease-abstract",
+        "proof-of-claim"
+      ],
+      "produces": [
+        "proof-of-claim"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-11-365-g",
+        "usc-11-502"
+      ]
+    },
+    {
+      "id": "plan-the-releasing",
+      "title": "Plan the re-leasing and re-run the numbers",
+      "instruction": "Treat the space as at risk now. Re-run the lease-rollover calculator on the rent roll with the space vacant from the earliest date it could come back: the 120-day date or an earlier rejection. Price a replacement lease in the lease-rent calculator with downtime, free rent, improvements and commissions at market terms the sponsor's comps support. Run the leverage calculator for coverage and break-even occupancy with the space dark. Put both cases, assumption and rejection, in the underwriting model, show which loan tests each one touches, and hand the result to the principal and the leasing broker so marketing can start the day the space comes back.",
+      "mode": "agent",
+      "modeBasis": "The three calculators run from the rent roll and the recorded lease terms.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "calendar-the-dates",
+        "split-the-ledger"
+      ],
+      "calculators": [
+        "lease-rollover",
+        "lease-rent",
+        "leverage"
+      ],
+      "consumes": [
+        "rent-roll",
+        "underwriting-model",
+        "loan-documents"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "retail": "Check the other tenants' leases for co-tenancy or go-dark rights that a dark space could trigger, and add any rent reduction to the dark case."
+      }
+    },
+    {
+      "id": "tell-investors",
+      "title": "Tell investors what is known and what comes next",
+      "instruction": "Once the numbers are re-run, or sooner if the governing documents require, draft the investor update from established facts: the case, chapter and deadlines; the tenant's share of rent; pre-filing arrears and whether post-filing rent is paid; the deposit or letter of credit held; what the lender was told and any reserve or cash management triggered; and the assumption and rejection cases, with their effect on distributions and projected returns. Say what is known, what is not, such as whether the lease is assumed, and what happens next. Rule 10b-5 bars untrue statements of material fact, and omissions that make what is said misleading, in connection with buying or selling securities; where an offering is open, interests are changing hands or more capital is sought, counsel decides what must be said. Tie every figure to the ledger statement and the model. A principal approves it before it goes out.",
+      "mode": "agent",
+      "modeBasis": "Drafting from the ledger statement and the model is writing work; investor communications go out only with a person's approval.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "calendar-the-dates",
+        "split-the-ledger",
+        "tell-the-lender",
+        "plan-the-releasing"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "market": "investor-portals-fund-admin",
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5"
+      ],
+      "consumes": [
+        "rent-roll",
+        "underwriting-model",
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5"
+      ]
+    }
+  ],
+  "outlineSteps": []
+}

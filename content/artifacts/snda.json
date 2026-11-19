@@ -1,0 +1,85 @@
+{
+  "id": "snda",
+  "name": "Subordination, non-disturbance and attornment agreement",
+  "what": "An agreement among lender, tenant and landlord that ranks the lease behind the loan while protecting the tenant if the lender forecloses.",
+  "fields": [
+    {
+      "key": "lender",
+      "label": "Lender",
+      "type": "string",
+      "definition": "The lender the agreement protects, and whether its successors and any buyer at foreclosure are covered."
+    },
+    {
+      "key": "tenant",
+      "label": "Tenant",
+      "type": "string",
+      "definition": "The tenant that signed, by legal name."
+    },
+    {
+      "key": "landlord",
+      "label": "Landlord",
+      "type": "string",
+      "definition": "The landlord and borrower that signed or consented."
+    },
+    {
+      "key": "agreementDate",
+      "label": "Agreement date",
+      "type": "date",
+      "definition": "The date of the agreement, read from its first page or the last signature."
+    },
+    {
+      "key": "leaseIdentified",
+      "label": "Lease identified",
+      "type": "text",
+      "definition": "The lease and amendments the agreement names by date; compare them with the lease file."
+    },
+    {
+      "key": "loanIdentified",
+      "label": "Loan identified",
+      "type": "text",
+      "definition": "The deed of trust or mortgage the lease is subordinated to, by date, amount and recording information if given."
+    },
+    {
+      "key": "subordination",
+      "label": "Subordination",
+      "type": "text",
+      "definition": "What the lease becomes subordinate to, including whether renewals, increases and replacements of the loan are covered."
+    },
+    {
+      "key": "nonDisturbance",
+      "label": "Non-disturbance",
+      "type": "text",
+      "definition": "The lender's promise not to end the lease or disturb the tenant at foreclosure, and the conditions on it, usually that the tenant is not in default past any cure period."
+    },
+    {
+      "key": "attornment",
+      "label": "Attornment",
+      "type": "text",
+      "definition": "The tenant's promise to recognize the lender or a foreclosure buyer as landlord, and when it takes effect."
+    },
+    {
+      "key": "successorNotBoundBy",
+      "label": "What a successor is not bound by",
+      "type": "list",
+      "definition": "The listed exceptions for a successor landlord, such as rent paid far in advance, offsets for a prior landlord's defaults, amendments made without the lender's consent, or unpaid allowances."
+    },
+    {
+      "key": "lenderNoticeAndCure",
+      "label": "Lender notice and cure right",
+      "type": "text",
+      "definition": "Whether the tenant must notify the lender of a landlord default before ending the lease or offsetting rent, and how long the lender then has to cure."
+    },
+    {
+      "key": "optionsTreatment",
+      "label": "Treatment of purchase options",
+      "type": "text",
+      "definition": "How the agreement treats any tenant purchase option or first refusal right at foreclosure; null if the agreement is silent."
+    },
+    {
+      "key": "recording",
+      "label": "Recording",
+      "type": "string",
+      "definition": "The county recording number and date if the agreement was recorded, or a note that it was not."
+    }
+  ]
+}

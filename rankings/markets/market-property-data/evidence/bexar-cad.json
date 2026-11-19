@@ -1,0 +1,124 @@
+{
+  "vendor": "bexar-cad",
+  "collected": "2026-11-12",
+  "coverage": {
+    "api": {
+      "url": "https://maps.bexar.org/arcgis/rest/services/Parcels/MapServer",
+      "found": true,
+      "note": "Bexar County (not BCAD) ArcGIS REST Parcels service built from BCAD data; public service directory. No BCAD-run API."
+    },
+    "pricing": {
+      "url": "https://bcad.org/wp-content/uploads/2026/04/BCAD-Public-Information-Act-Request.pdf",
+      "found": false,
+      "note": "No fee schedule published; request form says electronic data costs come by written request."
+    },
+    "changelog": {
+      "url": "https://bcad.org/public-notices/",
+      "found": false,
+      "note": "Only public notices and news releases; no data release notes. The county parcel service lists its own last and next update dates."
+    }
+  },
+  "links": {
+    "api": "https://maps.bexar.org/arcgis/rest/services/Parcels/MapServer"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://bcad.org/",
+      "excerpt": "Search Property by Name, Address, or Property ID",
+      "fetched": "2026-11-12",
+      "note": "Property search now links to a hosted search site that did not render for a plain fetch.",
+      "hash": "5692900a6d59bad304eea04964d4613099eb2e253102a3d6c4a49eb505e95bb7"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://bcad.org/wp-content/uploads/2026/04/BCAD-Public-Information-Act-Request.pdf",
+      "excerpt": "The Bexar Central Appraisal District provides electronic administrative and geographic information on CD, DVD and FTP server access.",
+      "fetched": "2026-11-12",
+      "hash": "3ac9db3f0252d7131ba388196c868ebec0fa9f09ec6cab6b400868ba5e5a23cf"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://bcad.org/wp-content/uploads/2026/04/BCAD-Public-Information-Act-Request.pdf",
+      "excerpt": "may offer access to the most recent data products for the appraisal data export, property summary export or GIS data through our FTP server.",
+      "fetched": "2026-11-12",
+      "note": "Bulk data is obtained through a written request, not a self-serve download page.",
+      "hash": "ce94fb73985e6b0f7da5f5d75177dec4684ae45f1cae8d9979bfff9b375aa4c3"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://bcad.org/wp-content/uploads/2026/04/BCAD-Public-Information-Act-Request.pdf",
+      "excerpt": "Further information regarding electronic data costs can be obtained by submitting a written request.",
+      "fetched": "2026-11-12",
+      "hash": "14fc73b818f3e27c7aaff5823554281564c38d738816c3c837e019aa18d22bb6"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://bcad.org/wp-content/uploads/2026/04/BCAD-Public-Information-Act-Request.pdf",
+      "excerpt": "All completed transactions are final and non-refundable.",
+      "fetched": "2026-11-12",
+      "hash": "84b4fe262b8f504e1ac4e94af8c700e9118f8af69a832c1739bca3490eb8e5c0"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://bcad.org/reports/",
+      "excerpt": "Open Records Request",
+      "fetched": "2026-11-12",
+      "note": "Link label on the Reports page; the page lists totals and district reports, no data downloads.",
+      "hash": "4e60afae44a6bc6bcc6c00a85bd5d7bded33db1e455d4e0ac9e0b5c29dadd4c8"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://maps.bexar.org/arcgis/rest/services/Parcels/MapServer",
+      "excerpt": "This dataset provides identification and location information about any structures on the parcel, the parcel owner, and the assessed value",
+      "fetched": "2026-11-12",
+      "note": "Bexar County GIS service description.",
+      "hash": "83d62e8134dd1e3074300fb9c2e975f6ded68fa7413bc612278d74231a2be63a"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://maps.bexar.org/arcgis/rest/services/Parcels/MapServer",
+      "excerpt": "Bexar County Appraisal District - http://www.bcad.org/ (from BCAD FTP as of October 2022)",
+      "fetched": "2026-11-12",
+      "note": "Credits line.",
+      "hash": "20ca31132a5788c5e40ddfc19149c6215590966593f7b41ef03105ae000a4a54"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://maps.bexar.org/arcgis/rest/services/Parcels/MapServer",
+      "excerpt": "Last update: October 2021",
+      "fetched": "2026-11-12",
+      "note": "Service also states next update September/October 2023; the listed dates are stale.",
+      "hash": "755d8c1c89a8edd7d28d86f01142a0bba0093bf21d7921e4e517096a4b78ca34"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://maps.bexar.org/arcgis/rest/services/Parcels/MapServer",
+      "excerpt": "MaxRecordCount: 1000",
+      "fetched": "2026-11-12",
+      "note": "Queries return JSON, geoJSON or PBF; the directory shows a Get Token login link but no key was needed to view it.",
+      "hash": "77e725c14abad6864aed80f21de47aeacf4b256e2d608612fadade93d8e48323"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://bcad.org/online-portal/",
+      "excerpt": "The Online Services Portal is available to ALL owners",
+      "fetched": "2026-11-12",
+      "note": "Portal is for owners and agents filing exemptions and protests, not for data access.",
+      "hash": "c6c4460c007880d0ef8ea78eb86d7c6f95a8d1da0dfef46036a452075294dbad"
+    }
+  ]
+}

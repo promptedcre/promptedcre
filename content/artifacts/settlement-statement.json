@@ -1,0 +1,104 @@
+{
+  "id": "settlement-statement",
+  "name": "Settlement statement",
+  "what": "The closing statement showing every charge and credit to buyer and seller and where the money goes.",
+  "fields": [
+    {
+      "key": "settlementAgent",
+      "label": "Settlement agent",
+      "type": "string",
+      "definition": "The title company or escrow agent named as settlement agent, and the escrow officer handling the file."
+    },
+    {
+      "key": "reportingPerson",
+      "label": "Files the sale report",
+      "type": "string",
+      "definition": "The party the closing file names as responsible for filing the information return that reports the sale.",
+      "authority": "26 CFR 1.6045-4(e)"
+    },
+    {
+      "key": "statementVersion",
+      "label": "Version",
+      "type": "string",
+      "definition": "Estimated, draft or final, with the date and time printed on it; compare each version line by line with the one before."
+    },
+    {
+      "key": "settlementDate",
+      "label": "Settlement date",
+      "type": "date",
+      "definition": "The closing date, with the disbursement date noted if funds go out on a different day."
+    },
+    {
+      "key": "purchasePrice",
+      "label": "Purchase price",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The contract price charged to the buyer and credited to the seller."
+    },
+    {
+      "key": "earnestMoneyCredit",
+      "label": "Earnest money credit",
+      "type": "money",
+      "unit": "USD",
+      "definition": "Deposits credited to the buyer, which should match the escrow agent's receipts."
+    },
+    {
+      "key": "prorations",
+      "label": "Prorations",
+      "type": "list",
+      "definition": "Each item split at closing, such as property taxes, collected rents and operating expenses, with the period, the daily or monthly amount and which side is credited."
+    },
+    {
+      "key": "tenantDepositsCredit",
+      "label": "Tenant deposits and prepaid rent",
+      "type": "money",
+      "unit": "USD",
+      "definition": "Tenant security deposits and prepaid rents credited to the buyer; match them to the rent roll and the estoppels."
+    },
+    {
+      "key": "newLoan",
+      "label": "New loan",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The loan proceeds funded for the buyer, with the lender fees, interest and reserves withheld from them listed separately."
+    },
+    {
+      "key": "payoffs",
+      "label": "Payoffs",
+      "type": "list",
+      "definition": "Each existing lien paid at closing, with payee and amount; match each one to its payoff letter."
+    },
+    {
+      "key": "titleCharges",
+      "label": "Title and escrow charges",
+      "type": "list",
+      "definition": "Title premiums, endorsements, escrow fees, tax certificates and recording charges, each with who pays it."
+    },
+    {
+      "key": "commissions",
+      "label": "Commissions",
+      "type": "list",
+      "definition": "Each brokerage commission with its payee and amount."
+    },
+    {
+      "key": "otherCharges",
+      "label": "Other charges",
+      "type": "list",
+      "definition": "Every other charge, such as survey, legal, inspection or courier fees, each with payee, amount and which side pays."
+    },
+    {
+      "key": "buyerCashToClose",
+      "label": "Buyer's cash to close",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The amount the buyer must deliver after all charges and credits; reconcile it to the cent before any wire."
+    },
+    {
+      "key": "sellerNetProceeds",
+      "label": "Seller's net proceeds",
+      "type": "money",
+      "unit": "USD",
+      "definition": "What the seller receives after all charges, credits and payoffs."
+    }
+  ]
+}

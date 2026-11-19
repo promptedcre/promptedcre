@@ -1,0 +1,37 @@
+{
+  "id": "deal-entity-sued",
+  "slug": "deal-entity-sued",
+  "kind": "situation",
+  "title": "The deal entity is sued",
+  "summary": "Calendar the answer deadline, notify insurers, preserve documents and engage counsel.",
+  "phase": "operate",
+  "order": 133,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "situation": {
+    "trigger": "The deal entity is served with a lawsuit.",
+    "urgency": "days"
+  },
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Record the date and manner of service",
+    "Calendar the answer deadline",
+    "Send the suit to every insurer that may cover it",
+    "Engage litigation counsel",
+    "Preserve documents, emails and files tied to the claim",
+    "Tell the lender if the loan requires notice of litigation",
+    "Assess the claim and the exposure with counsel",
+    "Decide the response with counsel",
+    "Tell investors and record the suit and its status"
+  ]
+}

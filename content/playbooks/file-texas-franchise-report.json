@@ -1,0 +1,34 @@
+{
+  "id": "file-texas-franchise-report",
+  "slug": "file-texas-franchise-report",
+  "kind": "process",
+  "title": "File the Texas franchise tax report",
+  "summary": "File each Texas entity's annual franchise tax and information reports by the due date.",
+  "phase": "report",
+  "order": 415,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "List each Texas entity and its taxpayer number",
+    "Confirm each entity's due date and filing status",
+    "Gather the year's revenue and the ownership details the reports ask for",
+    "Decide the report type with the tax preparer",
+    "Update officer, manager and registered agent information",
+    "Prepare the franchise tax report and the information report",
+    "Review and approve each filing",
+    "File each report and pay any tax due",
+    "Confirm each entity shows in good standing with the state",
+    "Record the filings and set next year's reminders"
+  ]
+}

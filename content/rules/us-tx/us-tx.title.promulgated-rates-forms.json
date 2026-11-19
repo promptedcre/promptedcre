@@ -1,0 +1,41 @@
+{
+  "id": "us-tx.title.promulgated-rates-forms",
+  "jurisdiction": "us-tx",
+  "title": "Texas title insurance: promulgated rates and forms",
+  "rule": "Texas's commissioner of insurance fixes and promulgates title insurance premium rates, and no premium may be charged at a different rate, except for reinsurance between title companies. A title company or agent may use a form the law requires to be prescribed or approved only after the commissioner does so. Rates, forms and procedural rules are published in TDI's Basic Manual; the basic premium chart in effect since March 1, 2026 sets the premium by policy amount.",
+  "citation": {
+    "authority": "Tex. Ins. Code 2703.002, 2703.151 and 2703.208",
+    "url": "https://statutes.capitol.texas.gov/Docs/IN/htm/IN.2703.htm"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "A new rate order or form adoption by the commissioner; basic premium rates changed March 1, 2026.",
+  "sources": [
+    {
+      "id": "tx-ins-2703",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.2703.htm",
+      "title": "Texas Insurance Code, Chapter 2703 (Policy forms and premium rates)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "at a rate different than the rate fixed and promulgated by the commissioner",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-basic-manual",
+      "url": "https://www.tdi.texas.gov/title/titleman.html",
+      "title": "Title Insurance Basic Manual",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-14",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-rates-2026",
+      "url": "https://www.tdi.texas.gov/title/titlerates2026.html",
+      "title": "Texas Title Insurance Basic Premium Rates (rates effective March 1, 2026)",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-14",
+      "tier": "primary"
+    }
+  ]
+}

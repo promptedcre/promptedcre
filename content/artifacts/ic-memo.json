@@ -1,0 +1,314 @@
+{
+  "id": "ic-memo",
+  "name": "Investment committee memo",
+  "what": "The written case for or against a deal: the thesis, the numbers, the risks and the recommendation.",
+  "fields": [
+    {
+      "key": "memoDate",
+      "label": "Memo date",
+      "type": "date",
+      "definition": "The date of this version of the memo."
+    },
+    {
+      "key": "author",
+      "label": "Prepared by",
+      "type": "string",
+      "definition": "Who wrote the memo."
+    },
+    {
+      "key": "modelVersion",
+      "label": "Model version",
+      "type": "string",
+      "definition": "The version and date of the underwriting model the memo's figures come from."
+    },
+    {
+      "key": "thesis",
+      "label": "Thesis",
+      "type": "text",
+      "definition": "Why the deal makes money, in two or three sentences: what the sponsor buys, what it does, and what has to be true."
+    },
+    {
+      "key": "propertyFacts",
+      "label": "Property and market facts",
+      "type": "text",
+      "definition": "Size, age, occupancy, tenants and the market facts that bear on rent and exit, each with its source."
+    },
+    {
+      "key": "underwrittenNoi",
+      "label": "Underwritten NOI",
+      "type": "money",
+      "unit": "USD",
+      "definition": "Year-one net operating income as underwritten, and how it differs from the offering's figure."
+    },
+    {
+      "key": "returnsSummary",
+      "label": "Returns",
+      "type": "text",
+      "definition": "Unlevered and levered IRR, equity multiple and year-one cash-on-cash, set beside the buy box targets."
+    },
+    {
+      "key": "debtSummary",
+      "label": "Debt",
+      "type": "text",
+      "definition": "The loan amount, terms, which sizing limit binds, and the source quote or term sheet."
+    },
+    {
+      "key": "capRateBasis",
+      "label": "Cap rate: which cap rate and which income",
+      "type": "list",
+      "definition": "One entry per cap rate the memo quotes, naming which it is: a going-in cap rate on in-place income from the current rent roll and trailing statements, a going-in cap rate on underwritten income from the model, or the exit cap rate the model applies at sale. Each cap rate field below holds one entry for each entry here, in the same order."
+    },
+    {
+      "key": "capRateDefinition",
+      "label": "Cap rate: definition used",
+      "type": "list",
+      "definition": "For each cap rate in the basis list, in the same order, how the memo figures it: net operating income divided by the value stated, with whether that income is before or after reserves, leasing costs and capital items, and whether vacancy and credit loss are deducted."
+    },
+    {
+      "key": "capRateIncome",
+      "label": "Cap rate: income figure",
+      "type": "list",
+      "unit": "USD",
+      "definition": "For each cap rate in the basis list, in the same order, the net operating income it divides, in dollars, read from the source the memo names, such as the trailing statement or a model cell."
+    },
+    {
+      "key": "capRateIncomePeriod",
+      "label": "Cap rate: period the income covers",
+      "type": "list",
+      "definition": "For each cap rate in the basis list, in the same order, the twelve months the income covers, by start and end date, and whether it is actual trailing income, an annualized partial period, the first projected year, or for an exit cap the year the model capitalizes at sale."
+    },
+    {
+      "key": "capRateValue",
+      "label": "Cap rate: value divided by",
+      "type": "list",
+      "unit": "USD",
+      "definition": "For each cap rate in the basis list, in the same order, the value the income is divided by, in dollars, and which value it is: the purchase price, the price plus closing and capital costs, an appraised value with its date, or for an exit cap the sale price the model derives."
+    },
+    {
+      "key": "cashOnCashDefinition",
+      "label": "Cash-on-cash: definition used",
+      "type": "list",
+      "definition": "One entry per cash-on-cash figure the memo quotes, one for each year reported and each levered case, saying how it is figured: cash flow after debt service for the year divided by the equity stated, with whether the cash flow is before or after reserves and capital items, and whether it is before tax. Each cash-on-cash field below holds one entry for each entry here, in the same order."
+    },
+    {
+      "key": "cashOnCashCashFlow",
+      "label": "Cash-on-cash: cash flow figure",
+      "type": "list",
+      "unit": "USD",
+      "definition": "For each cash-on-cash entry, in the same order, the cash flow after debt service the ratio divides, in dollars, read from the model."
+    },
+    {
+      "key": "cashOnCashPeriod",
+      "label": "Cash-on-cash: period the cash flow covers",
+      "type": "list",
+      "definition": "For each cash-on-cash entry, in the same order, the year the cash flow covers, such as the first twelve months after closing or a stated calendar year, by start and end date."
+    },
+    {
+      "key": "cashOnCashEquity",
+      "label": "Cash-on-cash: equity divided by",
+      "type": "list",
+      "unit": "USD",
+      "definition": "For each cash-on-cash entry, in the same order, the equity the cash flow is divided by, in dollars, and what it includes, such as the down payment alone or all cash invested including closing costs, loan fees and reserves funded at closing."
+    },
+    {
+      "key": "cashOnCashInterestOnly",
+      "label": "Cash-on-cash: interest-only debt service",
+      "type": "list",
+      "definition": "For each cash-on-cash entry, in the same order, whether the debt service in the cash flow is interest-only, amortizing, or interest-only for stated months and then amortizing, and the months of each that fall in the year."
+    },
+    {
+      "key": "dscrDefinition",
+      "label": "Debt service coverage: definition used",
+      "type": "list",
+      "definition": "One entry per coverage figure the memo quotes, such as each year reported, the lender's sizing figure or a downside case, saying how it is figured: the income stated divided by the annual debt service stated, with whether the income is net operating income or net cash flow after reserves and leasing costs, and whether it is the memo's own measure or the lender's. Each coverage field below holds one entry for each entry here, in the same order."
+    },
+    {
+      "key": "dscrIncome",
+      "label": "Debt service coverage: income figure",
+      "type": "list",
+      "unit": "USD",
+      "definition": "For each coverage entry, in the same order, the income the ratio divides, in dollars, read from the model or the lender's sizing."
+    },
+    {
+      "key": "dscrPeriod",
+      "label": "Debt service coverage: period the income covers",
+      "type": "list",
+      "definition": "For each coverage entry, in the same order, the twelve months the income covers, by start and end date, and whether it is in-place, trailing or projected."
+    },
+    {
+      "key": "dscrDebtService",
+      "label": "Debt service coverage: debt service divided by",
+      "type": "list",
+      "unit": "USD",
+      "definition": "For each coverage entry, in the same order, the annual debt service the income is divided by, in dollars, and the rate it was figured at, such as the note rate, a quoted rate on a stated date or a lender's stressed rate."
+    },
+    {
+      "key": "dscrInterestOnly",
+      "label": "Debt service coverage: interest-only debt service",
+      "type": "list",
+      "definition": "For each coverage entry, in the same order, whether the debt service in the ratio is interest-only or includes principal on a stated amortization, and the months of interest-only that fall in the period."
+    },
+    {
+      "key": "debtYieldDefinition",
+      "label": "Debt yield: definition used",
+      "type": "list",
+      "definition": "One entry per debt yield the memo quotes, such as at closing, at full funding or at a refinancing test, saying how it is figured: the income stated divided by the loan amount stated, with whether the income is net operating income or net cash flow, and whether it is the memo's own measure or the lender's. Each debt yield field below holds one entry for each entry here, in the same order."
+    },
+    {
+      "key": "debtYieldIncome",
+      "label": "Debt yield: income figure",
+      "type": "list",
+      "unit": "USD",
+      "definition": "For each debt yield entry, in the same order, the income the debt yield divides, in dollars, read from the model or the lender's sizing."
+    },
+    {
+      "key": "debtYieldPeriod",
+      "label": "Debt yield: period the income covers",
+      "type": "list",
+      "definition": "For each debt yield entry, in the same order, the twelve months the income covers, by start and end date, and whether it is in-place, trailing or projected."
+    },
+    {
+      "key": "debtYieldLoanAmount",
+      "label": "Debt yield: loan amount divided by",
+      "type": "list",
+      "unit": "USD",
+      "definition": "For each debt yield entry, in the same order, the loan amount the income is divided by, in dollars, and whether it is the amount funded at closing or the full amount including any later funding."
+    },
+    {
+      "key": "irrDefinition",
+      "label": "IRR: definition used",
+      "type": "list",
+      "definition": "One entry per IRR the memo quotes, such as unlevered, levered, and the investor's IRR after the promote, saying how each is figured: unlevered or levered, before or after fees and promote, before or after tax, the cash flow interval (monthly, quarterly or annual) and whether the result is an annual rate, and what the sale proceeds are net of. Each IRR field below holds one entry for each entry here, in the same order."
+    },
+    {
+      "key": "irrCashFlows",
+      "label": "IRR: cash flows and period",
+      "type": "list",
+      "definition": "For each IRR entry, in the same order, the cash flows it runs on, read from the model by row or tab: the start and end dates of the hold, the operating cash flow in each period and the net sale proceeds in the last one."
+    },
+    {
+      "key": "irrInitialInvestment",
+      "label": "IRR: initial investment",
+      "type": "list",
+      "unit": "USD",
+      "definition": "For each IRR entry, in the same order, the outflow at the start of its cash flows, in dollars: the all-in cost for an unlevered IRR, or the equity invested for a levered one, with what it includes."
+    },
+    {
+      "key": "irrInterestOnly",
+      "label": "IRR: interest-only debt service",
+      "type": "list",
+      "definition": "For each IRR entry, in the same order: for a levered IRR, whether the debt service in the cash flows is interest-only, amortizing, or interest-only for stated months and then amortizing; for an unlevered IRR, the word unlevered."
+    },
+    {
+      "key": "equityMultipleDefinition",
+      "label": "Equity multiple: definition used",
+      "type": "list",
+      "definition": "One entry per equity multiple the memo quotes, such as unlevered, levered, and the investor's multiple after the promote, saying how each is figured: total cash returned to equity over the hold, including net sale proceeds, divided by the equity invested, with whether it is before or after fees and promote and whether it is levered or unlevered. Each equity multiple field below holds one entry for each entry here, in the same order."
+    },
+    {
+      "key": "equityMultipleDistributions",
+      "label": "Equity multiple: cash returned",
+      "type": "list",
+      "unit": "USD",
+      "definition": "For each equity multiple entry, in the same order, the total cash returned to equity it divides, in dollars, read from the model."
+    },
+    {
+      "key": "equityMultiplePeriod",
+      "label": "Equity multiple: period covered",
+      "type": "list",
+      "definition": "For each equity multiple entry, in the same order, the hold the cash returned covers, by start and end date."
+    },
+    {
+      "key": "equityMultipleEquity",
+      "label": "Equity multiple: equity divided by",
+      "type": "list",
+      "unit": "USD",
+      "definition": "For each equity multiple entry, in the same order, the equity invested the cash returned is divided by, in dollars, and what it includes, matching the initial investment of the corresponding IRR entry or stating why not."
+    },
+    {
+      "key": "equityMultipleInterestOnly",
+      "label": "Equity multiple: interest-only debt service",
+      "type": "list",
+      "definition": "For each equity multiple entry, in the same order: for a levered multiple, whether the debt service behind the cash returned is interest-only, amortizing, or interest-only for stated months and then amortizing; for an unlevered multiple, the word unlevered."
+    },
+    {
+      "key": "hurdleRate",
+      "label": "Required return",
+      "type": "string",
+      "definition": "The return the deal must clear, as a yearly rate, and how it was set: a dated risk-free reference such as a Treasury yield for a term like the hold plus a stated risk premium, or the buy box target; the net present value in the memo is figured at this rate."
+    },
+    {
+      "key": "saleShareOfValue",
+      "label": "Share of value from the sale",
+      "type": "string",
+      "definition": "The share of the present value at the required return that comes from the sale proceeds rather than the operating cash flows, as a percent, with the exit cap and going-in cap beside it; a high share means the case rests on the exit."
+    },
+    {
+      "key": "sourcesAndUses",
+      "label": "Sources and uses",
+      "type": "list",
+      "definition": "Each source of money (loan, sponsor equity, investor or partner equity) and each use (price, closing costs, loan fees, reserves, immediate repairs, capital plan) with its amount; the two totals are equal."
+    },
+    {
+      "key": "afterTaxView",
+      "label": "After-tax view",
+      "type": "text",
+      "definition": "Before-tax and after-tax IRR side by side, every tax rate and the land and building split stated as inputs, labeled arithmetic on stated inputs and not tax advice; null where no investor is taxable or none was run."
+    },
+    {
+      "key": "scenarioStatistics",
+      "label": "Scenario statistics",
+      "type": "text",
+      "definition": "Each case (at least downside, base and upside) with its weight, IRR, coverage and loan-to-value, and the expected return, standard deviation and coefficient of variation across them, with a note that the weights are judgment."
+    },
+    {
+      "key": "risks",
+      "label": "Risks and what must go right",
+      "type": "list",
+      "definition": "Each material risk, such as rollover, tenant credit, concentration, condition, environmental, rate and exit, with its effect on the numbers and how it is reduced or priced."
+    },
+    {
+      "key": "departuresFromOffering",
+      "label": "Departures from the offering",
+      "type": "list",
+      "definition": "Each place the underwriting differs from the offering memorandum, with the reason."
+    },
+    {
+      "key": "openItems",
+      "label": "Open diligence items",
+      "type": "list",
+      "definition": "What is not yet known or verified, and the step that will answer it."
+    },
+    {
+      "key": "recommendedMaxPrice",
+      "label": "Recommended maximum price",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The highest price the author recommends, with the terms that matter most to it."
+    },
+    {
+      "key": "recommendation",
+      "label": "Recommendation",
+      "type": "enum",
+      "definition": "The author's recommendation: proceed, proceed with changed assumptions, or pass."
+    },
+    {
+      "key": "decision",
+      "label": "Decision",
+      "type": "enum",
+      "definition": "What the approvers decided: proceed, change assumptions, or pass; null until they decide."
+    },
+    {
+      "key": "approvedTerms",
+      "label": "Approved price and conditions",
+      "type": "text",
+      "definition": "The approved maximum price or range and any conditions, such as the deposit, feasibility period or a financing condition a letter of intent must carry."
+    },
+    {
+      "key": "approvers",
+      "label": "Approved by",
+      "type": "list",
+      "definition": "Who approved and on what date, including any committee vote, capital partner or investor consent the governing documents require."
+    }
+  ]
+}

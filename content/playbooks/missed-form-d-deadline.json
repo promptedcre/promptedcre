@@ -1,0 +1,480 @@
+{
+  "id": "missed-form-d-deadline",
+  "slug": "missed-form-d-deadline",
+  "kind": "situation",
+  "title": "The Form D deadline was missed",
+  "summary": "File the Form D now with honest dates, file the Texas and other state notices that also came due, and have counsel check the exposure. A late filing does not by itself cost the Rule 506 exemption, but a court order for not filing can bar later Rule 506 offerings.",
+  "phase": "raise",
+  "order": 106,
+  "featured": true,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-12",
+  "situation": {
+    "trigger": "Fifteen days have passed since the first sale and no Form D was filed.",
+    "urgency": "weeks"
+  },
+  "requires": [
+    "file-form-d-and-state-notices"
+  ],
+  "consumes": [
+    "investor-register",
+    "subscription-agreement",
+    "private-placement-memorandum",
+    "bad-actor-questionnaire"
+  ],
+  "produces": [
+    "form-d",
+    "state-notice-filing"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "ecfr-230-503",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.503",
+      "title": "17 CFR 230.503, Filing of notice of sales",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "quote": "no later than 15 calendar days after the first sale of securities in the offering",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-506",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.506",
+      "title": "17 CFR 230.506, Exemption for limited offers and sales without regard to dollar amount of offering",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-507",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.507",
+      "title": "17 CFR 230.507, Disqualifying provision relating to exemptions under Rules 504 and 506",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "quote": "enjoining such person for failure to comply with § 230.503",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-cdi-securities-act-rules",
+      "url": "https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/securities-act-rules",
+      "title": "Securities Act Rules: Compliance and Disclosure Interpretations (Sections 255 to 260)",
+      "publisher": "U.S. Securities and Exchange Commission, Division of Corporation Finance",
+      "accessed": "2026-11-12",
+      "quote": "it is not a condition to the availability of the exemption pursuant to Rule 504 or 506 of Regulation D",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-form-d",
+      "url": "https://www.sec.gov/files/formd.pdf",
+      "title": "Form D, Notice of Exempt Offering of Securities, with instructions (OMB 3235-0076)",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-12",
+      "quote": "Intentional misstatements or omissions of fact constitute federal criminal violations.",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-form-d-notice",
+      "url": "https://www.sec.gov/resources-small-businesses/exempt-offerings/filing-form-d-notice",
+      "title": "Filing a Form D Notice",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-form-id-guide",
+      "url": "https://www.sec.gov/submit-filings/filer-support-resources/how-do-i-guides/prepare-submit-my-form-id-application",
+      "title": "Prepare and Submit My Form ID Application for EDGAR Access",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-edgar-search",
+      "url": "https://www.sec.gov/search-filings",
+      "title": "Search Filings (EDGAR)",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-exempt-faq",
+      "url": "https://www.sec.gov/resources-small-businesses/exempt-offerings/frequently-asked-questions-about-exempt-offerings",
+      "title": "Frequently Asked Questions About Exempt Offerings",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-12",
+      "quote": "The failure to file, or pay filing fees regarding, any such materials may cause state securities regulators to suspend the offer or sale",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-77r",
+      "url": "https://www.law.cornell.edu/uscode/text/15/77r",
+      "title": "15 U.S.C. 77r, Exemption from State regulation of securities offerings",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-114-4",
+      "url": "https://www.law.cornell.edu/regulations/texas/7-Tex-Admin-Code-SS-114-4",
+      "title": "7 Tex. Admin. Code 114.4, Filings and Fees",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-12",
+      "quote": "no later than 15 days after the first sale of the federal covered securities in this state",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gov-code-4006",
+      "url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.4006.htm",
+      "title": "Texas Government Code, Chapter 4006 (Securities Act fees)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "three times the difference between the fee initially paid and the fee that should have been paid",
+      "tier": "primary"
+    },
+    {
+      "id": "efd-home",
+      "url": "https://nasaaefd.org/",
+      "title": "NASAA Electronic Filing Depository",
+      "publisher": "North American Securities Administrators Association",
+      "accessed": "2026-11-12",
+      "tier": "secondary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "confirm-dates-and-status",
+      "title": "Confirm the first-sale date and that nothing was filed",
+      "instruction": "From the subscription records, find the date the first investor became irrevocably committed; where subscriptions go into escrow, SEC staff dates it from the first subscription received into escrow. Count 15 calendar days, moving past a weekend or holiday, to get the missed due date. Search EDGAR's free company search for the issuer and any former name to confirm no Form D was filed. For Texas, find the first sale to a Texas investor; the notice was due 15 days after it. Record both dates and how late each filing is.",
+      "mode": "agent-browser",
+      "modeBasis": "The subscription records are documents, and EDGAR's company search is a free public website.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-fed.reg-d.form-d-filing",
+        "us-tx.securities.rule-506-notice"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "subscription-agreement",
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-503",
+        "sec-cdi-securities-act-rules",
+        "sec-edgar-search",
+        "tac-114-4"
+      ]
+    },
+    {
+      "id": "fund-first-sale",
+      "title": "Date a fund's first sale from the first binding commitment",
+      "instruction": "In a fund, the first sale is the first investor's irrevocable commitment, not the first capital call; a mandatory capital call is made under the original offering and does not start a new one. If the fund held several closings in one offering, the 15 days ran from the first sale, not the latest closing. Use the commitment date in the deadline count and in Item 7.",
+      "mode": "agent",
+      "modeBasis": "The commitment dates are in the subscription records; the rule for dating them is in the Form D instructions.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-dates-and-status"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "rules": [
+        "us-fed.reg-d.form-d-filing"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "basis": "cited",
+      "sources": [
+        "sec-form-d",
+        "ecfr-230-503"
+      ]
+    },
+    {
+      "id": "jv-check-exemption",
+      "title": "Check whether the joint venture relied on Rule 506 at all",
+      "instruction": "Read counsel's exemption decision. Form D is required for sales under Regulation D or Section 4(a)(5); if the joint venture interest was sold under Section 4(a)(2) alone, or counsel concluded it is not a security, no Form D was due and the federal filing steps here do not apply. A Section 4(a)(2) sale gets no protection from state registration, so ask counsel to confirm which Texas exemption the sale used.",
+      "mode": "agent",
+      "modeBasis": "The answer is in counsel's written decision and the filing rule's scope.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-dates-and-status"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "rules": [
+        "us-fed.reg-d.form-d-filing",
+        "us-fed.securities-act.covered-securities"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-503",
+        "sec-form-d",
+        "sec-exempt-faq",
+        "usc-15-77r"
+      ]
+    },
+    {
+      "id": "brief-counsel",
+      "title": "Get counsel's read on the exposure",
+      "instruction": "Send counsel the dates, the investor register and the offering documents. For counsel's review: SEC staff says the Form D filing is required by Rule 503 but is not a condition of the Rule 506 exemption, and the interests remain covered securities; but if a court enjoins the issuer, a predecessor or an affiliate for failing to file, Rules 504 and 506 become unavailable to it unless the SEC finds good cause to lift the bar. Ask counsel to check the conditions that do decide the exemption, such as solicitation, investor status, verification and paid solicitors, and each state's position.",
+      "mode": "human-online",
+      "modeBasis": "Weighing the federal and state exposure is legal judgment.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-dates-and-status",
+        "fund-first-sale",
+        "jv-check-exemption"
+      ],
+      "rules": [
+        "us-fed.reg-d.rule-507",
+        "us-fed.securities-act.covered-securities"
+      ],
+      "consumes": [
+        "investor-register",
+        "private-placement-memorandum"
+      ],
+      "basis": "cited",
+      "sources": [
+        "sec-cdi-securities-act-rules",
+        "ecfr-230-507"
+      ]
+    },
+    {
+      "id": "get-edgar-access",
+      "title": "Start EDGAR access now if the issuer has none",
+      "instruction": "If the issuer has never filed on EDGAR, or has lost access, it needs Form ID before any Form D can go in. An authorized individual signs in with personal Login.gov credentials, completes the application and uploads a notarized authenticating document; SEC staff currently cites an average of two business days for review. Start the same day, following the Form ID steps in the Form D filing playbook, without waiting for counsel's full review.",
+      "mode": "human-offline",
+      "modeBasis": "Form ID needs a notarized signature and a submission under the signer's own Login.gov session.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": {
+        "min": 2,
+        "max": 2,
+        "unit": "business-days",
+        "basis": "cited",
+        "sourceId": "sec-form-id-guide",
+        "note": "The SEC's stated average for Form ID review; not a guarantee."
+      },
+      "after": [
+        "confirm-dates-and-status"
+      ],
+      "rules": [
+        "us-fed.edgar.access"
+      ],
+      "market": "formation-back-office",
+      "basis": "cited",
+      "sources": [
+        "sec-form-d-notice",
+        "sec-form-id-guide"
+      ]
+    },
+    {
+      "id": "draft-late-form-d",
+      "title": "Draft the Form D with the true dates",
+      "instruction": "Draft every Form D item from the records, as the Form D filing playbook describes, with one rule above all: Item 7 gives the actual date of first sale, however long ago, not the filing date. Intentional misstatements or omissions on Form D are federal crimes. Items 13 and 14 report amounts sold and investors as of the filing date. Item 3 covers promoters from the five years before the later of the first sale or the date the filing was due. Confirm a completed bad-actor questionnaire is on file for every covered person, because signing certifies that no disqualification applies.",
+      "mode": "agent",
+      "modeBasis": "Every item is answered from the records the sponsor already holds.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-dates-and-status",
+        "fund-first-sale"
+      ],
+      "rules": [
+        "us-fed.reg-d.form-d-filing",
+        "us-fed.reg-d.bad-actor"
+      ],
+      "consumes": [
+        "investor-register",
+        "subscription-agreement",
+        "private-placement-memorandum",
+        "bad-actor-questionnaire"
+      ],
+      "produces": [
+        "form-d"
+      ],
+      "basis": "cited",
+      "sources": [
+        "sec-form-d",
+        "ecfr-230-506"
+      ]
+    },
+    {
+      "id": "file-form-d-now",
+      "title": "Sign and file the Form D now",
+      "instruction": "As soon as EDGAR access is in place, a person the issuer has authorized reviews the draft, signs and files it on EDGAR. There is no federal filing fee. Do not hold the notice for more sales or a better moment; it is already late, and every answer must be true as of the filing date. Mistakes found later are corrected by amendment as soon as practicable.",
+      "mode": "human-online",
+      "modeBasis": "EDGAR takes the filing from an authorized individual signed in under their own credentials, and the signature binds the issuer.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "cost": {
+        "text": "No federal filing fee",
+        "usdMin": 0,
+        "usdMax": 0,
+        "sourceId": "sec-form-d"
+      },
+      "after": [
+        "brief-counsel",
+        "get-edgar-access",
+        "draft-late-form-d"
+      ],
+      "rules": [
+        "us-fed.reg-d.form-d-filing",
+        "us-fed.reg-d.rule-507",
+        "us-fed.reg-d.form-d-amendments"
+      ],
+      "market": "formation-back-office",
+      "produces": [
+        "form-d"
+      ],
+      "basis": "cited",
+      "sources": [
+        "sec-form-d",
+        "ecfr-230-503",
+        "sec-form-d-notice"
+      ]
+    },
+    {
+      "id": "file-texas-notice-now",
+      "title": "File the late Texas notice through EFD",
+      "instruction": "If any investor is in Texas, file the Form D notice and fee with the Texas Securities Commissioner through EFD now; Texas wanted both with the SEC filing and within 15 days of the first Texas sale. The fee is one-tenth of 1% of the offering amount, capped at $500, paid by ACH through EFD. Texas's fee chapter and Rule 114.4 set no separate late fee for a Rule 506 notice, though an issuer that offers more than its notice covered owes three times the fee shortfall plus interest. Counsel advises on how the State Securities Board views the delay.",
+      "mode": "human-online",
+      "modeBasis": "EFD needs a registered filer account and an ACH payment a person authorizes.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "cost": {
+        "text": "One-tenth of 1% of the offering amount, up to $500",
+        "usdMax": 500,
+        "sourceId": "tx-gov-code-4006"
+      },
+      "after": [
+        "file-form-d-now"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.securities.rule-506-notice"
+      ],
+      "market": "formation-back-office",
+      "produces": [
+        "state-notice-filing"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tac-114-4",
+        "tx-gov-code-4006",
+        "efd-home"
+      ]
+    },
+    {
+      "id": "file-other-state-notices",
+      "title": "File the overdue notices in other investor states",
+      "instruction": "List every other state where an investor lives, then read each state's notice requirement, deadline and fee in EFD before filing. A state regulator may suspend the offer or sale of the securities in its state if the issuer fails to file or pay a required fee, so do not wait. Requirements outside Texas are not researched here.",
+      "mode": "human-online",
+      "modeBasis": "Each filing runs through an EFD account and a payment a person authorizes.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "file-form-d-now"
+      ],
+      "rules": [
+        "us-fed.securities-act.covered-securities"
+      ],
+      "market": "formation-back-office",
+      "produces": [
+        "state-notice-filing"
+      ],
+      "basis": "cited",
+      "sources": [
+        "sec-exempt-faq",
+        "usc-15-77r",
+        "efd-home"
+      ]
+    },
+    {
+      "id": "reset-the-calendar",
+      "title": "Reset the calendar so it does not happen again",
+      "instruction": "Calendar the next amendment, due on or before the first anniversary of this filing if the offering is still open, and amend sooner for material changes. Then close the gap that caused the miss: make acceptance of the first subscription in any new offering trigger the Form D and state deadlines automatically, and record each first-sale date in the firm file the day it happens.",
+      "mode": "agent",
+      "modeBasis": "The amendment triggers are fixed by Rule 503 and the dates come from the filing record.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "file-form-d-now"
+      ],
+      "rules": [
+        "us-fed.reg-d.form-d-amendments"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-503"
+      ]
+    }
+  ],
+  "outlineSteps": []
+}

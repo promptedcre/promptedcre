@@ -1,0 +1,25 @@
+{
+  "id": "us-tx.property.foreclosure-sale-notice",
+  "jurisdiction": "us-tx",
+  "title": "Texas nonjudicial foreclosure: sale day, place and 21-day notice",
+  "rule": "A deed of trust sale is a public auction from 10 a.m. to 4 p.m. on the first Tuesday of a month (Wednesday if that Tuesday is January 1 or July 4) in the county where the land lies, at the courthouse area or nearby public place the commissioners court designates. At least 21 days before, notice stating the earliest start time is posted at the courthouse door, filed with the county clerk and sent by certified mail to each obligated debtor; the sale begins within three hours of that time. On a debtor's residence only, the servicer must first mail a notice giving at least 20 days to cure.",
+  "citation": {
+    "authority": "Tex. Prop. Code 51.002",
+    "url": "https://statutes.capitol.texas.gov/Docs/PR/htm/PR.51.htm"
+  },
+  "asOf": "2026-11-13",
+  "lastVerified": "2026-11-13",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Property Code 51.002 (last amended effective September 1, 2023, when counties were required to post filed sale notices on their websites) or to the chapter 51 definitions (amended May 19, 2025), and bills in the next regular session in 2027.",
+  "sources": [
+    {
+      "id": "tx-prop-code-51",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.51.htm",
+      "title": "Texas Property Code, Chapter 51 (Section 51.002, Sale of real property under contract lien)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "must be given at least 21 days before the date of the sale by:",
+      "tier": "primary"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "market": "formation-back-office",
+  "cells": [
+    { "vendor": "docusign", "story": "mcp-server", "verdict": "full", "why": "The developer site documents Docusign's MCP server, with prerequisites.", "checked": "2026-11-12", "evidence": ["c9", "c10", "p2"] },
+    { "vendor": "docusign", "story": "api-spec", "verdict": "full", "why": "Docusign publishes OpenAPI files, and the GitHub repository holding them is public.", "checked": "2026-11-12", "evidence": ["c7", "p3"] },
+    { "vendor": "docusign", "story": "webhooks", "verdict": "full", "why": "Docusign Connect is documented as a webhook service for eSignature events.", "checked": "2026-11-12", "evidence": ["c5"] },
+    { "vendor": "dropbox-sign", "story": "sandbox", "verdict": "full", "why": "Every endpoint can be tested in test mode, even from a free account.", "checked": "2026-11-12", "evidence": ["c1", "c11"] },
+    { "vendor": "dropbox-sign", "story": "public-pricing", "verdict": "full", "why": "API and app plan prices are published ($75 and $15 a month tiers).", "checked": "2026-11-12", "evidence": ["c9", "c10"] },
+    { "vendor": "relay", "story": "public-api", "verdict": "none", "why": "A help article says Relay does not offer a public API.", "checked": "2026-11-12", "evidence": ["c1", "c2"] },
+    { "vendor": "relay", "story": "mcp-server", "verdict": "partial", "why": "A read-only AI connector exists but is in beta for a small group of customers.", "checked": "2026-11-12", "evidence": ["c3", "c4"] },
+    { "vendor": "mercury", "story": "scoped-credentials", "verdict": "full", "why": "API tokens carry documented scopes that set their level of access.", "checked": "2026-11-12", "evidence": ["c5"] },
+    { "vendor": "mercury", "story": "mcp-server", "verdict": "partial", "why": "The MCP server is documented but labeled beta.", "checked": "2026-11-12", "evidence": ["c10", "p2"] },
+    { "vendor": "quickbooks-online", "story": "sandbox", "verdict": "full", "why": "Every developer profile gets a sandbox company automatically.", "checked": "2026-11-12", "evidence": ["c5"] },
+    { "vendor": "quickbooks-online", "story": "public-pricing", "verdict": "full", "why": "The pricing page lists monthly prices for each plan.", "checked": "2026-11-12", "evidence": ["c13"] },
+    { "vendor": "icapital-identity", "story": "sandbox", "verdict": "partial", "why": "A sandbox exists, but access comes through a sales representative.", "checked": "2026-11-12", "evidence": ["c10"] },
+    { "vendor": "icapital-identity", "story": "public-pricing", "verdict": "none", "why": "No pricing page; the only call to action is Contact Sales.", "checked": "2026-11-12", "evidence": ["c3"] },
+    { "vendor": "irs-ein", "story": "public-api", "verdict": "none", "why": "The EIN application is a browser tool; no API is documented.", "checked": "2026-11-12", "evidence": [] },
+    { "vendor": "irs-ein", "story": "self-serve", "verdict": "full", "why": "Anyone eligible applies online and gets an EIN in minutes, with no call.", "checked": "2026-11-12", "evidence": ["c1", "c3"] },
+    { "vendor": "tx-sosportal", "story": "public-api", "verdict": "none", "why": "The filing system is browser-only; no API page exists.", "checked": "2026-11-12", "evidence": [] },
+    { "vendor": "de-corporations", "story": "public-api", "verdict": "none", "why": "Filing is by upload or browser services; no API is offered.", "checked": "2026-11-12", "evidence": ["c1"] },
+    { "vendor": "csc", "story": "public-pricing", "verdict": "none", "why": "The page claims a flat fee but shows no amount.", "checked": "2026-11-12", "evidence": ["c2"] },
+    { "vendor": "csc", "story": "public-api", "verdict": "partial", "why": "The vendor says it offers APIs for integrations but shows no public documentation.", "checked": "2026-11-12", "evidence": ["c1"] },
+    { "vendor": "legalzoom", "story": "mcp-server", "verdict": "full", "why": "A public MCP tool directory with a catalog and connection steps.", "checked": "2026-11-12", "evidence": ["c1", "c2", "c3", "p3"] }
+  ]
+}

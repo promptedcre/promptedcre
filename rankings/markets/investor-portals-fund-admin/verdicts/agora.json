@@ -1,0 +1,157 @@
+{
+  "vendor": "agora",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "0edee8679f7f80ec39b116320ee6f59873939b3bf222b0a12438bdd9d2d2ed62",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "partial",
+      "quality": 7,
+      "evidence": [
+        "c5",
+        "c6",
+        "p2"
+      ],
+      "rationale": "The integrations page claims an API built for developers that keeps your own systems current with Agora data, such as distributions and capital calls flowing out to the GL, but no public API reference was found and /developers and /api return 404.",
+      "missing": "Any public API documentation, the endpoints and records it covers, and whether it can create or change records rather than only send data out of Agora."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "partial",
+      "quality": 7,
+      "evidence": [
+        "c3",
+        "c4",
+        "p2"
+      ],
+      "rationale": "The vendor says the Agora MCP gives Pro account holders read access to their Agora data, with write access only on the roadmap, and the pack shows no setup steps.",
+      "missing": "Setup steps or configuration, which records the MCP exposes, and documentation of the server beyond a marketing page."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no SDK, CLI, code samples or public repository, and no developer documentation was found (/developers and /api return 404).",
+      "missing": "Any vendor-maintained SDK or CLI on a public package registry or repository."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "partial",
+      "quality": 3,
+      "evidence": [
+        "c2"
+      ],
+      "rationale": "The only event-style path in the pack is a vendor claim of a Zapier integration, a third-party automation platform, and no native webhooks or event subscriptions are shown.",
+      "missing": "Native webhook or event-subscription documentation, and whether the Zapier integration actually offers triggers on core records such as investors, distributions or capital calls."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no API keys, tokens, OAuth clients or documented scopes for either the API or the MCP.",
+      "missing": "How API and MCP access is authenticated and whether a credential can be limited by scope, role or permission."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No OpenAPI, Swagger, GraphQL or other machine-readable spec appears in the pack, and no public API reference was found.",
+      "missing": "Any machine-readable API specification, public or behind a login."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "partial",
+      "quality": 8,
+      "evidence": [
+        "p1",
+        "c10"
+      ],
+      "rationale": "A probe confirms agorareal.com/llms.txt exists, but it is a Yoast SEO-generated file listing marketing pages and blog posts rather than product or API documentation.",
+      "missing": "The full llms.txt contents and any Markdown versions of pages; there is no product documentation for the file to cover."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no sandbox, test mode or developer environment, and na does not apply because Agora holds the firm's own records rather than a published data set.",
+      "missing": "Any sandbox, test mode or developer environment, whether self-serve or on request."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "partial",
+      "quality": 4,
+      "evidence": [
+        "c9"
+      ],
+      "rationale": "The pricing page lists Data Warehouse Exports as a plan feature, but nothing shows what is exported, in what format, or whether customers can run it themselves.",
+      "missing": "Export documentation, file formats, which records are covered, which plan includes it, and whether it works without vendor help."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c1"
+      ],
+      "rationale": "The pack shows no self-serve sign-up or free trial, and the pricing page puts the Pro plan behind 'Book a demo' without showing how the Essential plan is bought.",
+      "missing": "Whether the Essential plan can be bought online without a call, and whether any free trial exists."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "partial",
+      "quality": 8,
+      "evidence": [
+        "c1"
+      ],
+      "rationale": "The pricing page shows only a starting price, 'Starts from $749/month' for the Essential plan, and the Pro plan has no price, only 'Book a demo'.",
+      "missing": "The full Essential fee schedule beyond the starting price and any price for the Pro plan."
+    },
+    {
+      "story": "ip-create-investor",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c3",
+        "c5"
+      ],
+      "rationale": "No item shows creating investors or sending subscription documents through the API, which is described only as keeping your own systems current with Agora data, and the MCP is read-only.",
+      "missing": "Any API endpoint or documentation for creating investor records or sending or starting subscription documents."
+    },
+    {
+      "story": "ip-distribution",
+      "verdict": "partial",
+      "quality": 4,
+      "evidence": [
+        "c6",
+        "c5"
+      ],
+      "rationale": "The vendor lists distributions among the data its API sends out of Agora into your GL, a read-direction claim, and the pack shows no API way to create distributions or generate investor notices.",
+      "missing": "API documentation for reading or creating distributions and for generating or sending investor notices."
+    },
+    {
+      "story": "ip-register",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item names investors, commitments or contributions as available through the API, the MCP or an export, and the pack's read-access and Data Warehouse Exports claims are generic.",
+      "missing": "Any API endpoint or documented export that returns investors, commitments and contributions as JSON or CSV."
+    },
+    {
+      "story": "ip-capital-call",
+      "verdict": "partial",
+      "quality": 3,
+      "evidence": [
+        "c6",
+        "c8"
+      ],
+      "rationale": "The vendor lists capital calls among the data its API sends out to your GL, but funded and unfunded status is described only as an in-app view and creating calls through the API is not shown.",
+      "missing": "API documentation for creating capital calls and for reading each investor's funding status through the API."
+    }
+  ]
+}

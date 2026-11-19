@@ -1,0 +1,42 @@
+{
+  "id": "us-fed.banking.ltv-value-definition",
+  "jurisdiction": "us-federal",
+  "title": "Bank loan-to-value limits: the value the ratio runs on",
+  "rule": "National banks, FDIC-supervised banks and state member banks must keep written real estate lending policies with loan-to-value limits, considering interagency guidelines. The guidelines tell each bank to set internal limits no higher than supervisory limits (85 percent for improved property), list excluded transactions, and allow exception loans within aggregate caps. The ratio, set at origination, is the loan plus senior liens over the property's value plus other acceptable collateral. Value is market value estimated in an appraisal or evaluation; for a loan to buy an existing property, it is the lesser of the actual acquisition cost and that estimate. An appraisal above the contract price does not raise the base.",
+  "citation": {
+    "authority": "12 CFR 34.62 and Appendix A to Subpart D of Part 34; 12 CFR 365.2 and Appendix A to Subpart A of Part 365; 12 CFR 208.51 and Appendix C to Part 208 (implementing 12 U.S.C. 1828(o))",
+    "url": "https://www.ecfr.gov/current/title-12/chapter-I/part-34/subpart-D"
+  },
+  "asOf": "2026-11-14",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Interagency amendments to the real estate lending guidelines, including the supervisory loan-to-value table, the aggregate exception caps or the definition of value.",
+  "sources": [
+    {
+      "id": "ecfr-34-subpart-d",
+      "url": "https://www.ecfr.gov/current/title-12/chapter-I/part-34/subpart-D",
+      "title": "12 CFR Part 34, Subpart D, Real Estate Lending Standards, with Appendix A, Interagency Guidelines for Real Estate Lending",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-14",
+      "quote": "For loans to purchase an existing property, the term “value” means the lesser of the actual acquisition cost or the estimate of value.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-365",
+      "url": "https://www.ecfr.gov/current/title-12/chapter-III/subchapter-B/part-365",
+      "title": "12 CFR Part 365, Real Estate Lending Standards (FDIC-supervised institutions), with Appendix A",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-14",
+      "quote": "Institutions should establish their own internal loan-to-value limits for real estate loans. These internal limits should not exceed the following supervisory limits",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-208-appendix-c",
+      "url": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-208/appendix-Appendix%20C%20to%20Part%20208",
+      "title": "12 CFR Part 208, Appendix C, Interagency Guidelines for Real Estate Lending Policies (state member banks; policy rule at 12 CFR 208.51)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-14",
+      "tier": "primary"
+    }
+  ]
+}

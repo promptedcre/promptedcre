@@ -1,0 +1,32 @@
+{
+  "id": "us-fed.securities-act.covered-securities",
+  "jurisdiction": "us-federal",
+  "title": "Rule 506 interests are federal covered securities",
+  "rule": "Securities sold under the SEC's rules made under Section 4(a)(2), which is Rule 506, are covered securities, so states cannot require their registration. States may still require a copy of the Form D, a consent to service of process and a fee, for notice purposes, and they keep their anti-fraud authority. A sale relying on Section 4(a)(2) alone gets no such preemption, so state exemption rules apply in full.",
+  "citation": {
+    "authority": "15 U.S.C. 77r(b)(4)(F) and (c)",
+    "url": "https://www.law.cornell.edu/uscode/text/15/77r"
+  },
+  "asOf": "2026-11-11",
+  "lastVerified": "2026-11-11",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Securities Act Section 18.",
+  "sources": [
+    {
+      "id": "usc-15-77r",
+      "url": "https://www.law.cornell.edu/uscode/text/15/77r",
+      "title": "15 U.S.C. 77r, Exemption from State regulation of securities offerings",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-11",
+      "tier": "primary"
+    },
+    {
+      "id": "ssb-exemptions",
+      "url": "https://www.ssb.texas.gov/securities-professionals/regulation-securities/exemptions-registration",
+      "title": "Exemptions from Registration",
+      "publisher": "Texas State Securities Board",
+      "accessed": "2026-11-11",
+      "tier": "primary"
+    }
+  ]
+}

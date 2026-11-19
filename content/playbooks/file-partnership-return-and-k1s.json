@@ -1,0 +1,35 @@
+{
+  "id": "file-partnership-return-and-k1s",
+  "slug": "file-partnership-return-and-k1s",
+  "kind": "process",
+  "title": "File the partnership return and K-1s",
+  "summary": "Close the year's books, file the entity's tax return and deliver each investor's K-1.",
+  "phase": "report",
+  "order": 410,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Close the year's books and reconcile them to the bank statements",
+    "Book the year's depreciation and amortization",
+    "Compute taxable income apart from cash flow",
+    "Allocate income, loss and distributions under the governing agreement",
+    "Update each partner's capital account",
+    "Collect investor tax information and address changes",
+    "Send the year-end package to the tax preparer",
+    "Review the draft return and K-1s",
+    "Approve and file the return or an extension",
+    "Deliver each investor's K-1",
+    "Answer investor questions and file the copies"
+  ]
+}

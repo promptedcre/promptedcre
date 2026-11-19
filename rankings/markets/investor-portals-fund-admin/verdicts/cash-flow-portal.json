@@ -1,0 +1,155 @@
+{
+  "vendor": "cash-flow-portal",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "e5e8463f3ffb61f394d5062d3deaca3f5c3bc74d7af08d2185ab3d946466a9b7",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c7"
+      ],
+      "rationale": "The coverage check found no developer or API page (/api and api.cashflowportal.com return 404), and the Zapier integration claim (c7) does not show a public API.",
+      "missing": "Any public API documentation for reading and changing core records such as investors, raises and distributions; the MCP server is judged under its own story."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "partial",
+      "quality": 7,
+      "evidence": [
+        "p1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6"
+      ],
+      "rationale": "The vendor's MCP page resolves (p1), says Claude or ChatGPT can answer questions from live investor, distribution and waterfall data (c3) with a sample reply that sets up a waterfall (c5), and pricing lists an 'AI Native / MCP' item in the Syndication Suite (c2), but the page is marketing with no setup steps or tool list and its call to action is a demo request (c4, c6).",
+      "missing": "Setup steps, a list of MCP tools, the server endpoint and authentication method, and whether the server is generally available rather than offered through a demo; the support site's content was unread."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no official SDK or command-line tool on any package registry or public repository.",
+      "missing": "Any vendor-maintained SDK or CLI, on a package registry or in a public repository."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "partial",
+      "quality": 3,
+      "evidence": [
+        "c7"
+      ],
+      "rationale": "The only event path shown is a Zapier integration advertising two-way sync with over 5,000 apps (c7), and no native webhook or event documentation was found.",
+      "missing": "Native webhooks or event subscriptions, and which Zapier triggers exist for which records; the integration claim is marketing copy with no trigger list."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "partial",
+      "quality": 3,
+      "evidence": [
+        "c4",
+        "c11"
+      ],
+      "rationale": "The MCP page says CFP MCP only surfaces data the user is already authorized to see with no new access controls to set up (c4), and the app offers role-based access for co-GPs (c11), but no API keys, tokens or credential scopes are documented.",
+      "missing": "How an agent authenticates (API key, token or OAuth client), whether an agent can get a credential of its own, and documented scopes or permissions that limit a credential; c11 covers co-GP user roles in the app, not credentials."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No API was found, and the pack shows no OpenAPI, Swagger, GraphQL or other machine-readable specification.",
+      "missing": "Any OpenAPI, Swagger, GraphQL or similar specification, downloadable or shown in docs."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The support site renders only in a browser and its content is unread, and the pack shows no llms.txt file or Markdown documentation pages.",
+      "missing": "An llms.txt file or Markdown versions of the documentation pages."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no sandbox, test mode or developer environment for working before touching live records.",
+      "missing": "Any self-serve or on-request sandbox, test mode or developer environment documented for developers; the free 'explore the platform' account (c8) is a product sign-up, not a documented test environment."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no export or download of records in any format.",
+      "missing": "Any self-serve bulk export or download of investor, raise or distribution records in CSV, JSON, Excel or another open format, and its documentation."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "c8",
+        "c1"
+      ],
+      "rationale": "The home page offers 'Start for free' with no credit card required and the investor-management page says an account can be created instantly (c8), and the Syndication Suite carries a listed price while only the Fund Admin Suite and Enterprise tiers show a demo button (c1).",
+      "missing": "Whether the free start is a trial of the paid Syndication Suite or a limited free tier, and whether a paid plan can be started without a call; the Fund Admin Suite and Enterprise tiers need a demo."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "partial",
+      "quality": 8,
+      "evidence": [
+        "c1"
+      ],
+      "rationale": "The pricing page gives only a starting price, 'Starts at $699/month' for the Syndication Suite, and no price for the Fund Admin Suite or Enterprise tiers (c1).",
+      "missing": "What the $699/month plan includes and the full price schedule behind 'starts at', and any prices for the Fund Admin Suite and Enterprise tiers."
+    },
+    {
+      "story": "ip-create-investor",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c7"
+      ],
+      "rationale": "No API was found and the Zapier integration (c7) is described only as generic two-way sync, so the pack shows no way for an agent to create investors or send subscription documents.",
+      "missing": "API or integration documentation for creating investor records and for sending or starting subscription documents."
+    },
+    {
+      "story": "ip-distribution",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c9",
+        "c10"
+      ],
+      "rationale": "Distributions appear only as in-app features, the Distribution Engine waterfall builder (c9) and automated LP payments with no API route shown (c10), and the pack shows no API to create distributions or generate notices.",
+      "missing": "Any API route to create or read distributions and to generate or send investor notices; the MCP page's claim that Claude can answer questions about distributions (c3) is not an API and lists no tools."
+    },
+    {
+      "story": "ip-register",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no API endpoint or documented export that returns investors, commitments and contributions as structured data.",
+      "missing": "Any API endpoint or export, even a manual one in the app, returning investors, commitments and contributions as JSON or CSV; the MCP claim of answering questions about investors (c3) shows no structured output."
+    },
+    {
+      "story": "ip-capital-call",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c10"
+      ],
+      "rationale": "The pack shows no capital-call feature or API, and the only funding-tracking claim (c10) concerns distribution payments sent to LPs, not investor contributions.",
+      "missing": "Any API or documentation for creating capital calls and reading each investor's funding status."
+    }
+  ]
+}

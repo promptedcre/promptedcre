@@ -1,0 +1,146 @@
+{
+  "vendor": "de-corporations",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "970699388e29a0928aef3a818022799b1c5a4628fde093706581599cc60deaa1",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The API check found no developer or API page, noting that the online services page lists browser services only, and no item claims an API.",
+      "missing": "No public API documentation, or any claim of an API, for reading or changing entity records or filings."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Nothing in the pack mentions an MCP server, and no API or developer page was found.",
+      "missing": "No official MCP server, setup steps or announcement of one."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Nothing in the pack mentions a CLI, SDK, library or code samples, and no API or developer page was found.",
+      "missing": "No vendor-maintained CLI or SDK on a package registry or public repository, and no code samples or partner SDK."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no webhooks or event subscriptions, and na does not apply because customers submit filings that change entity records rather than reading a published data set.",
+      "missing": "No webhooks, event subscriptions or notification feeds for filings or entity records, directly or through an automation platform."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "With no API found, the pack shows no API keys, OAuth clients or credential scopes, so na (an API that needs no credentials) does not apply.",
+      "missing": "No API credentials of any kind, and no documented scopes, roles or permissions limiting them."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No API or developer page was found, and the pack shows no OpenAPI, Swagger, GraphQL or other machine-readable specification.",
+      "missing": "No machine-readable API specification, public, partial or behind a login."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The docs check found the registration guide web page, but the pack shows no llms.txt file or Markdown versions of any documentation.",
+      "missing": "No llms.txt file and no Markdown versions of the documentation pages."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no sandbox, test mode or developer environment, and na does not apply because there is no read-only API and the online services submit filings that change live entity records.",
+      "missing": "No self-serve or on-request sandbox, test mode or developer environment."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c1",
+        "c7"
+      ],
+      "rationale": "The pack shows no bulk export, only paid per-entity web status checks (c7) and an upload service that does not provide online retrieval of entity documents (c1).",
+      "missing": "No documented self-serve bulk export or download of entity records in CSV, JSON, Excel or any other format, and no export by request."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "full",
+      "quality": 6,
+      "evidence": [
+        "c4",
+        "c6",
+        "c11",
+        "c12"
+      ],
+      "rationale": "Sponsors can submit filings electronically through the Division's online service (c4), reserve names online for $75 (c11), check entity status online (c6) and file annual reports online (c12), with no sales call or demo shown as a gate.",
+      "missing": "The pack does not show an account sign-up or registration step or state that no call is required, and the upload service only submits filings for the Division to process (c1, c2)."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "full",
+      "quality": 6,
+      "evidence": [
+        "c7",
+        "c10",
+        "c11",
+        "c13"
+      ],
+      "rationale": "A fee schedule updated effective August 1, 2024 is published (c13), public pages quote a $75 online name reservation (c11) and $10 or $20 per-entity status checks (c7), and filing fee calculators exist for new stock entities (c10).",
+      "missing": "The pack does not show the fee schedule's contents, so the entity-formation filing fee and annual franchise tax a small sponsor would pay are not quoted, and the schedule sits in linked documents rather than on the page."
+    },
+    {
+      "story": "fb-start",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c1",
+        "c2",
+        "c4"
+      ],
+      "rationale": "The only filing channel shown is the Division's electronic document upload service, which is submission-only and does not provide direct online filing (c1, c2, c4), and the API check found no developer or API page.",
+      "missing": "No API documentation for creating a filing, certificate request or other core transaction programmatically, even as a draft or through a partner integration."
+    },
+    {
+      "story": "fb-status",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c6",
+        "c7",
+        "c8"
+      ],
+      "rationale": "The only status channel shown is a paid per-entity web lookup of entity standing (c6, c7, c8), which is neither an API nor a structured feed and does not report the status of a customer's filing or order.",
+      "missing": "No API or structured feed, and no email notices, for the status of filings, certificate requests or payments."
+    },
+    {
+      "story": "fb-records",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c1",
+        "c8",
+        "c9"
+      ],
+      "rationale": "The pack states the upload service does not provide online retrieval of entity documents and certificates (c1), the status application does not generate an official certificate (c8), and certified certificates are ordered by written request (c9).",
+      "missing": "No API, and no emailed download links, for retrieving filed documents or certificates of good standing; how requested certificates are delivered is not shown."
+    }
+  ]
+}

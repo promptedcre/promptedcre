@@ -1,0 +1,86 @@
+{
+  "id": "title-objection-letter",
+  "name": "Title objection letter",
+  "what": "The buyer's written objections to matters in the title commitment and survey, sent inside the contract's review period.",
+  "fields": [
+    {
+      "key": "sentDate",
+      "label": "Date sent",
+      "type": "date",
+      "definition": "The date the letter was delivered, with the delivery method; compare both with the contract's notice clause."
+    },
+    {
+      "key": "objectionDeadline",
+      "label": "Objection deadline",
+      "type": "date",
+      "definition": "The last day for objections under the contract, counted the way the contract counts days from delivery of the commitment, its documents and the survey."
+    },
+    {
+      "key": "sender",
+      "label": "From",
+      "type": "string",
+      "definition": "The buyer, and the counsel signing for it."
+    },
+    {
+      "key": "recipients",
+      "label": "To and copied",
+      "type": "list",
+      "definition": "Each recipient the notice clause requires, and the title company and escrow agent copied."
+    },
+    {
+      "key": "commitmentReference",
+      "label": "Commitment and survey reviewed",
+      "type": "string",
+      "definition": "The title commitment objected to, by file number and effective date, and the survey by surveyor and date of the last revision."
+    },
+    {
+      "key": "objections",
+      "label": "Objections",
+      "type": "list",
+      "definition": "Each matter objected to: the Schedule B item, Schedule C requirement or survey finding by number, what it is, and how it affects the buyer's use, financing or value."
+    },
+    {
+      "key": "cureRequested",
+      "label": "Cure requested",
+      "type": "list",
+      "definition": "For each objection, the cure the buyer asks for, such as a recorded release, a payoff at closing, deletion from the policy, an endorsement or a corrected survey."
+    },
+    {
+      "key": "acceptedMatters",
+      "label": "Matters accepted",
+      "type": "list",
+      "definition": "Matters the letter accepts or does not object to, which the contract may treat as permitted exceptions."
+    },
+    {
+      "key": "endorsementsRequested",
+      "label": "Endorsements requested",
+      "type": "list",
+      "definition": "Title endorsements and policy amendments the buyer asks for, by form number, such as amendment of the area-and-boundary exception, access (T-23), contiguity (T-25) or restrictions, encroachments and minerals (T-19.1). The Texas Department of Insurance's list of promulgated title forms has no zoning endorsement.",
+      "authority": "Texas Department of Insurance, Title Insurance Basic Manual, Section II (Insuring Forms)"
+    },
+    {
+      "key": "cureDeadline",
+      "label": "Seller's response deadline",
+      "type": "date",
+      "definition": "The date the seller must respond or cure under the contract, and what the contract says a silent seller is deemed to have chosen."
+    },
+    {
+      "key": "terminationRight",
+      "label": "Termination right",
+      "type": "text",
+      "definition": "The buyer's right, as the letter states it, to terminate and recover the deposit if the seller does not cure, and the deadline to use it."
+    },
+    {
+      "key": "reservation",
+      "label": "Reservation for new matters",
+      "type": "text",
+      "definition": "Any reservation of the right to object to matters that first appear in an updated commitment or survey."
+    },
+    {
+      "key": "sellerResponse",
+      "label": "Seller's response",
+      "type": "text",
+      "definition": "The seller's written answer to each objection, will cure, will not cure or cure in part, with the date it arrived."
+    }
+  ]
+}

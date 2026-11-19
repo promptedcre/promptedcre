@@ -1,0 +1,42 @@
+{
+  "id": "us-tx.property.conveyance-recording",
+  "jurisdiction": "us-tx",
+  "title": "Texas conveyances: in writing, and recorded to bind later buyers and creditors",
+  "rule": "A conveyance of a freehold, an estate of inheritance or an estate for more than one year in land must be in writing, signed and delivered by the grantor or an agent authorized in writing. Unless acknowledged, sworn to or proved and filed for record, a conveyance or deed of trust is void against creditors and later purchasers for value without notice, though it binds the parties and later purchasers with notice. Recording in the proper county gives everyone notice.",
+  "citation": {
+    "authority": "Tex. Prop. Code 5.021, 13.001 and 13.002",
+    "url": "https://statutes.capitol.texas.gov/Docs/PR/htm/PR.13.htm"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Property Code chapters 5, 12 or 13. Section 12.001, which sets what an instrument needs to be recorded, was amended effective December 4, 2025 to require photo identification from anyone presenting an instrument in person.",
+  "sources": [
+    {
+      "id": "tx-prop-5",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.5.htm",
+      "title": "Texas Property Code, Chapter 5 (Section 5.021, Instrument of conveyance)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "must be in writing and must be subscribed and delivered by the conveyor",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-13",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.13.htm",
+      "title": "Texas Property Code, Chapter 13 (Sections 13.001 and 13.002, Effect of recording)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "is void as to a creditor or to a subsequent purchaser for a valuable consideration without notice",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-12",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.12.htm",
+      "title": "Texas Property Code, Chapter 12 (Section 12.001, Instruments concerning property)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "tier": "primary"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "id": "loan-documents",
+  "name": "Loan documents",
+  "what": "The signed loan agreement, note, deed of trust, guaranties and related documents.",
+  "fields": [
+    {
+      "key": "documentList",
+      "label": "Documents signed",
+      "type": "list",
+      "definition": "Each signed instrument with its date and signers: loan agreement, promissory note, deed of trust, assignment of leases and rents, guaranties, environmental indemnity, and any cash management, reserve or hedge agreement."
+    },
+    {
+      "key": "noteAmount",
+      "label": "Note amount",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The principal amount stated on the note, with any part to be advanced after closing, such as holdbacks for improvements or leasing, listed separately."
+    },
+    {
+      "key": "maturityDate",
+      "label": "Maturity date",
+      "type": "date",
+      "definition": "The date the unpaid balance is due. Record any extension options separately with their conditions and fees."
+    },
+    {
+      "key": "interestTerms",
+      "label": "Interest terms",
+      "type": "text",
+      "definition": "Rate, index, spread and floor as signed; how interest is computed, such as actual days over a 360-day year; payment dates; and any rate cap or swap the borrower must buy."
+    },
+    {
+      "key": "paymentSchedule",
+      "label": "Payment schedule",
+      "type": "text",
+      "definition": "The scheduled payment, any interest-only months, the amortization period, and the balance scheduled to be owed at maturity."
+    },
+    {
+      "key": "defaultRateAndLateCharge",
+      "label": "Default rate and late charge",
+      "type": "string",
+      "definition": "The added interest charged while a default continues and the late charge on a missed payment, as the note states them."
+    },
+    {
+      "key": "eventsOfDefault",
+      "label": "Events of default",
+      "type": "list",
+      "definition": "The events that let the lender accelerate the loan, such as nonpayment, a covenant breach, an unpermitted transfer or junior lien, or a guarantor's insolvency, with the notice and cure period each one gets."
+    },
+    {
+      "key": "financialCovenants",
+      "label": "Financial covenants",
+      "type": "text",
+      "definition": "Each ongoing test, such as minimum debt service coverage, debt yield or guarantor liquidity, with its level, how it is measured, the test dates and what follows a miss."
+    },
+    {
+      "key": "transferRestrictions",
+      "label": "Transfer restrictions",
+      "type": "text",
+      "definition": "Which transfers of the property, or of ownership interests in the borrower and its owners, need the lender's consent, which are allowed without it, and any assumption fee."
+    },
+    {
+      "key": "recourseCarveOuts",
+      "label": "Recourse carve-outs",
+      "type": "list",
+      "definition": "The acts or events that make the borrower or a guarantor personally liable under an otherwise nonrecourse loan, and whether each one creates liability for the lender's losses or for the whole debt."
+    },
+    {
+      "key": "prepaymentTerms",
+      "label": "Prepayment terms",
+      "type": "text",
+      "definition": "The prepayment premium, yield maintenance or defeasance terms as signed, any lockout or open period, and the price to release part of the collateral."
+    },
+    {
+      "key": "reserves",
+      "label": "Reserves and escrows",
+      "type": "list",
+      "definition": "Each reserve and escrow with its initial deposit, monthly amount and the conditions for drawing on or releasing it."
+    },
+    {
+      "key": "cashManagement",
+      "label": "Cash management",
+      "type": "text",
+      "definition": "Whether rents go to a lender-controlled account from closing or only after a trigger, what the triggers are, and how cash is released back to the borrower."
+    },
+    {
+      "key": "reportingDuties",
+      "label": "Reporting duties",
+      "type": "list",
+      "definition": "The statements, rent rolls, budgets, guarantor financials and compliance certificates the borrower must deliver, each with its deadline."
+    },
+    {
+      "key": "noticeAddresses",
+      "label": "Notice addresses",
+      "type": "text",
+      "definition": "Where notices to the lender and to the borrower must be sent, who gets copies, and the delivery methods the documents allow."
+    }
+  ]
+}

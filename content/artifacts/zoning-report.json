@@ -1,0 +1,109 @@
+{
+  "id": "zoning-report",
+  "name": "Zoning report",
+  "what": "A report or letter confirming the property's zoning, whether the current use is allowed, and any known violations.",
+  "fields": [
+    {
+      "key": "reportType",
+      "label": "Kind of report",
+      "type": "enum",
+      "definition": "A zoning verification letter from the city, a zoning report from a vendor, or the sponsor's own check of the public zoning map and ordinance. Where a lender wants written confirmation, the sponsor's own check does not supply it."
+    },
+    {
+      "key": "preparedBy",
+      "label": "Prepared by",
+      "type": "string",
+      "definition": "The city department or vendor that issued the report, and the person who signed it."
+    },
+    {
+      "key": "reliance",
+      "label": "Prepared for and reliance",
+      "type": "list",
+      "definition": "Who the report is addressed to and every party it says may rely on it, such as the buyer and the lender."
+    },
+    {
+      "key": "reportDate",
+      "label": "Report date",
+      "type": "date",
+      "definition": "The date of the letter or report."
+    },
+    {
+      "key": "property",
+      "label": "Property",
+      "type": "string",
+      "definition": "The address, parcel number and legal description the report covers. Check it against the title commitment and survey."
+    },
+    {
+      "key": "jurisdiction",
+      "label": "Zoning authority",
+      "type": "string",
+      "definition": "The city or county whose rules apply, or a statement that the land is in an area with no zoning."
+    },
+    {
+      "key": "zoningDistrict",
+      "label": "Zoning district",
+      "type": "string",
+      "definition": "The district designation as the report states it, with any overlay district or planned development ordinance that also applies."
+    },
+    {
+      "key": "currentUse",
+      "label": "Use examined",
+      "type": "string",
+      "definition": "The use the report examined, such as warehouse and distribution or light manufacturing, as the report describes it. Compare it with the leases."
+    },
+    {
+      "key": "useStatus",
+      "label": "Use status",
+      "type": "enum",
+      "definition": "Permitted by right, permitted with a specific or conditional use permit, legal nonconforming, not permitted, or no zoning, as the report concludes."
+    },
+    {
+      "key": "rebuildAfterCasualty",
+      "label": "Rebuilding after a casualty",
+      "type": "text",
+      "definition": "For a nonconforming use or structure, what the report says the ordinance allows if the building is damaged or destroyed, with the ordinance section. Flag it for counsel and the lender."
+    },
+    {
+      "key": "siteStandards",
+      "label": "Site standards compared",
+      "type": "text",
+      "definition": "Which standards the report compared with the property, such as setbacks, height, lot coverage and parking, and any shortfall it found."
+    },
+    {
+      "key": "approvals",
+      "label": "Variances and conditions",
+      "type": "list",
+      "definition": "Each variance, special exception, permit condition or zoning case on record for the property, with its number and date."
+    },
+    {
+      "key": "certificatesOfOccupancy",
+      "label": "Certificates of occupancy",
+      "type": "list",
+      "definition": "Each certificate of occupancy the report lists or the city's portal shows, with the space, use and date."
+    },
+    {
+      "key": "openPermits",
+      "label": "Open permits",
+      "type": "list",
+      "definition": "Building permits still open or expired without final inspection, from the report or the city's portal."
+    },
+    {
+      "key": "violations",
+      "label": "Code and zoning violations",
+      "type": "list",
+      "definition": "Each open zoning, building or fire code case, with its number and status. Record none only where the report or the portal says so."
+    },
+    {
+      "key": "deedRestrictions",
+      "label": "Recorded restrictions",
+      "type": "list",
+      "definition": "Where the land has no zoning, or the report addresses them, the recorded deed restrictions on use, from the title commitment's list of recorded documents."
+    },
+    {
+      "key": "limitations",
+      "label": "Limitations",
+      "type": "text",
+      "definition": "What the report says it did not check, and the date of the ordinance and maps it relied on."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "us-fed.irc.individual-income-tax-rates",
+  "jurisdiction": "us-federal",
+  "title": "Federal income tax brackets for individuals: seven rates, a 37 percent top",
+  "rule": "For taxable years beginning after December 31, 2017, section 1(j) replaces the rate tables in section 1(a) to (e) with seven brackets on an individual's taxable income: 10, 12, 22, 24, 32, 35 and 37 percent. In the statute's base tables the 37 percent bracket starts above $600,000 on a joint return, $500,000 for a head of household or single filer, and $300,000 for a married person filing separately; the Treasury adjusts these amounts for inflation each year after 2018. A 2025 amendment removed the end date that limited these tables to 2018 through 2025. Section 1(h) separately caps the tax on net capital gain.",
+  "citation": {
+    "authority": "26 U.S.C. 1(j)(1) to (3)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/1"
+  },
+  "asOf": "2026-11-13",
+  "lastVerified": "2026-11-13",
+  "review": "ai-drafted",
+  "changeWatch": "Any amendment to section 1(j) or 1(h), and the IRS revenue procedure each fall that sets the next year's inflation-adjusted bracket amounts; the rates themselves change only by statute.",
+  "sources": [
+    {
+      "id": "usc-26-1",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1",
+      "title": "26 U.S.C. 1, Tax imposed (subsection (j), Modifications for taxable years beginning after 2017, and the 2025 amendment notes)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "Over $600,000 $161,379, plus 37% of the excess over $600,000.",
+      "tier": "primary"
+    }
+  ]
+}

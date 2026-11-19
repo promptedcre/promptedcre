@@ -1,0 +1,90 @@
+{
+  "id": "accreditation-verification-letter",
+  "name": "Accreditation verification letter",
+  "what": "A written confirmation, typically from a professional or a verification service, that an investor is accredited, used for offerings that require verification.",
+  "fields": [
+    {
+      "key": "purchaserName",
+      "label": "Purchaser",
+      "type": "string",
+      "definition": "The purchaser the letter covers, by full legal name as written in the letter. Check it matches the subscription agreement; for joint status, both spouses or spousal equivalents are named."
+    },
+    {
+      "key": "verificationMethod",
+      "label": "Verification method",
+      "type": "enum",
+      "definition": "The method the file rests on: review of IRS income forms for the two most recent years with a current-year representation; asset statements and a consumer report dated within three months with a liabilities representation; a professional's written confirmation; the certification of a pre-2013 Rule 506(b) holder; a re-verification representation within five years; or other reasonable steps. The listed methods (A) to (E) apply to a natural person; for an entity, record the other reasonable steps taken. Reliance on the SEC staff's minimum-investment position, a staff position and not rule text, is recorded as other reasonable steps.",
+      "authority": "17 CFR 230.506(c)(2)(ii)"
+    },
+    {
+      "key": "verifierName",
+      "label": "Verifier",
+      "type": "string",
+      "definition": "The person or firm that signed the confirmation, and the individual who signed for a firm. Null where the sponsor verified directly."
+    },
+    {
+      "key": "verifierType",
+      "label": "Verifier type",
+      "type": "enum",
+      "definition": "Which kind of confirming party signed: a registered broker-dealer, an investment adviser registered with the SEC, a licensed attorney in good standing where admitted, or a CPA registered and in good standing where the CPA resides or has a principal office. A verification service that is none of these is recorded as other.",
+      "authority": "17 CFR 230.506(c)(2)(ii)(C)"
+    },
+    {
+      "key": "verifierStanding",
+      "label": "How the verifier's standing was checked",
+      "type": "text",
+      "definition": "The registration or license the letter states, and the public register the sponsor checked it against, with the date checked."
+    },
+    {
+      "key": "determinationStatement",
+      "label": "Determination statement",
+      "type": "text",
+      "definition": "The letter's statement that the verifier took reasonable steps to verify the purchaser's accredited status within the prior three months and determined the purchaser is accredited, copied as written.",
+      "authority": "17 CFR 230.506(c)(2)(ii)(C)"
+    },
+    {
+      "key": "determinationDate",
+      "label": "Determination date",
+      "type": "date",
+      "definition": "The date the letter gives for the verifier's determination, or the date of the latest document the sponsor reviewed under another method. Compare it with the sale date: the professional confirmation and the asset documents must fall within the prior three months.",
+      "authority": "17 CFR 230.506(c)(2)(ii)(B) and (C)"
+    },
+    {
+      "key": "saleDate",
+      "label": "Sale relied on for",
+      "type": "date",
+      "definition": "The date of the sale this verification supports, from the investor register."
+    },
+    {
+      "key": "basisStated",
+      "label": "Basis stated",
+      "type": "string",
+      "definition": "The Rule 501(a) category the letter or the reviewed documents support, such as income, net worth or an entity category, and whether it is individual or joint; null if the letter does not say."
+    },
+    {
+      "key": "purchaserRepresentations",
+      "label": "Purchaser's written representations",
+      "type": "list",
+      "definition": "Each written representation the method needs from the purchaser, such as the current-year income expectation, that all liabilities were disclosed, or accredited status and no third-party financing of a minimum investment, with the date signed."
+    },
+    {
+      "key": "contraryInformation",
+      "label": "Contrary information",
+      "type": "text",
+      "definition": "Anything the sponsor knows that suggests the purchaser is not accredited, and how it was resolved. The listed methods give no safe harbor if the issuer knows the person is not accredited.",
+      "authority": "17 CFR 230.506(c)(2)(ii)"
+    },
+    {
+      "key": "documentsHeld",
+      "label": "Where supporting documents are kept",
+      "type": "string",
+      "definition": "Whether the underlying tax forms, statements or credit report stay with the verifier or are held by the sponsor, and where. Record that they exist and where they are kept, never their account or taxpayer numbers."
+    },
+    {
+      "key": "sponsorApproval",
+      "label": "Approved by",
+      "type": "string",
+      "definition": "Who at the sponsor approved the verification file, and the date."
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "id": "us-tx.franchise-tax.due-date-extension",
+  "jurisdiction": "us-tx",
+  "title": "Texas franchise tax: the May 15 due date, weekends and holidays, and extensions",
+  "rule": "The annual franchise tax report is due May 15; an LLC, corporation or limited partnership files its Public Information Report on the same date whether or not it owes tax. A due date falling on a Saturday, Sunday or legal holiday the Comptroller lists moves to the next day that is none of those. An entity not required to pay by electronic funds transfer (EFT) can extend to November 15 by requesting it by May 15 and paying at least 90 percent of this year's tax or 100 percent of last year's tax if that report was filed by May 14. EFT payers extend to August 15, then November 15.",
+  "citation": {
+    "authority": "Tex. Tax Code 111.053, 171.202(b), (c), (e) and (f), and 171.203; 34 Tex. Admin. Code 3.584(i) and 3.585",
+    "url": "https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Tax Code 111.053 or 171.202, Comptroller Rules 3.584 and 3.585, and the Comptroller's yearly list of legal holidays published in the Texas Register.",
+  "sources": [
+    {
+      "id": "tx-tax-code-171",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.171.htm",
+      "title": "Texas Tax Code, Chapter 171 (Sections 171.202 and 171.203, annual and public information reports)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "The taxable entity shall file the report before May 16 of each year after the beginning of the regular annual period.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-111",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.111.htm",
+      "title": "Texas Tax Code, Chapter 111 (Section 111.053, filing dates on weekends and holidays)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "the next day that is not a Saturday, Sunday, or legal holiday included on that list becomes the due date",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-34-3-584",
+      "url": "https://www.law.cornell.edu/regulations/texas/34-Tex-Admin-Code-SS-3-584",
+      "title": "34 Tex. Admin. Code 3.584, Margin: Reports and Payments",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-14",
+      "quote": "is due at the same time each initial and annual, including the first annual, report is due",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-34-3-585",
+      "url": "https://www.law.cornell.edu/regulations/texas/34-Tex-Admin-Code-SS-3-585",
+      "title": "34 Tex. Admin. Code 3.585, Margin: Annual Report Extensions",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-14",
+      "quote": "the due date of the report is extended to the next November 15",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-franchise",
+      "url": "https://comptroller.texas.gov/taxes/franchise/",
+      "title": "Franchise Tax (due dates)",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-14",
+      "quote": "If May 15 falls on a weekend or holiday, the due date will be the next business day.",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-extensions",
+      "url": "https://comptroller.texas.gov/taxes/franchise/filing-extensions.php",
+      "title": "Franchise Tax Extensions of Time to File",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-14",
+      "quote": "Timely means the request is received or postmarked on or before the due date of the original report.",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-pir-oir",
+      "url": "https://comptroller.texas.gov/taxes/franchise/pir-oir-filing-req.php",
+      "title": "Franchise Tax Public Information Report and Ownership Information Report Filing Requirements",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-14",
+      "quote": "The PIR is due on the annual franchise tax report due date.",
+      "tier": "primary"
+    }
+  ]
+}

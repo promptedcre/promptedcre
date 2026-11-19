@@ -1,0 +1,121 @@
+{
+  "id": "proof-of-claim",
+  "name": "Proof of claim",
+  "what": "A creditor's filed statement of what a bankruptcy debtor owes it.",
+  "fields": [
+    {
+      "key": "court",
+      "label": "Court and case number",
+      "type": "string",
+      "definition": "The bankruptcy court and district, and the case number, from the notice of the case.",
+      "authority": "Official Form 410, case caption"
+    },
+    {
+      "key": "debtor",
+      "label": "Debtor",
+      "type": "string",
+      "definition": "The debtor as named in the case, which may differ from the tenant or borrower name on the lease or loan.",
+      "authority": "Official Form 410, case caption"
+    },
+    {
+      "key": "caseChapter",
+      "label": "Chapter",
+      "type": "enum",
+      "definition": "The chapter the case was filed under, 7, 11, 13 or another, from the notice of the case."
+    },
+    {
+      "key": "creditor",
+      "label": "Creditor",
+      "type": "string",
+      "definition": "The creditor to be paid, as the owning entity is named, and where notices and payments go.",
+      "authority": "Official Form 410, Part 1, lines 1 and 3"
+    },
+    {
+      "key": "petitionDate",
+      "label": "Petition date",
+      "type": "date",
+      "definition": "The date the case was filed; every amount on the claim is stated as of this date.",
+      "authority": "Official Form 410, Part 2"
+    },
+    {
+      "key": "barDate",
+      "label": "Filing deadline",
+      "type": "date",
+      "definition": "The last day to file the claim, from the court's notice or order."
+    },
+    {
+      "key": "filing",
+      "label": "Filed on and claim number",
+      "type": "string",
+      "definition": "The date the claim was filed and the number it received on the court's claims register, with any amended claim listed after it."
+    },
+    {
+      "key": "claimAmount",
+      "label": "Amount of claim",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The total claimed, and whether it includes interest, fees or other charges with an itemized statement attached.",
+      "authority": "Official Form 410, Part 2, line 7"
+    },
+    {
+      "key": "basisOfClaim",
+      "label": "Basis of claim",
+      "type": "string",
+      "definition": "What the claim arises from, such as a lease, money loaned or a guaranty.",
+      "authority": "Official Form 410, Part 2, line 8"
+    },
+    {
+      "key": "securedAmount",
+      "label": "Secured amount",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The part of the claim secured by a lien, with the property, its stated value and the basis for perfection, such as a recorded deed of trust.",
+      "authority": "Official Form 410, Part 2, line 9"
+    },
+    {
+      "key": "unsecuredAmount",
+      "label": "Unsecured amount",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The part of the claim not secured; with the secured amount it equals the amount of claim.",
+      "authority": "Official Form 410, Part 2, line 9"
+    },
+    {
+      "key": "cureAmount",
+      "label": "Amount to cure default",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The amount needed to cure any default as of the petition date, for a secured claim or a claim based on a lease.",
+      "authority": "Official Form 410, Part 2, lines 9 and 10"
+    },
+    {
+      "key": "leaseClaimComponents",
+      "label": "Lease claim build-up",
+      "type": "text",
+      "definition": "For a landlord: unpaid rent before the petition or surrender date, and damages for future rent after rejection, with the calculation of the limit applied and the security deposit held.",
+      "authority": "11 U.S.C. 502(b)(6)"
+    },
+    {
+      "key": "setoff",
+      "label": "Right of setoff",
+      "type": "boolean",
+      "definition": "Whether the creditor claims a right of setoff, and the property or funds it identifies.",
+      "authority": "Official Form 410, Part 2, line 11"
+    },
+    {
+      "key": "priorityAmount",
+      "label": "Priority amount",
+      "type": "money",
+      "unit": "USD",
+      "definition": "Any part of the claim stated as entitled to priority, with the category checked, or zero.",
+      "authority": "Official Form 410, Part 2, line 12"
+    },
+    {
+      "key": "supportingDocuments",
+      "label": "Supporting documents",
+      "type": "list",
+      "definition": "The redacted documents attached, such as the lease, note, deed of trust, guaranty and an itemized statement of account.",
+      "authority": "Fed. R. Bankr. P. 3001(c)"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "market": "deal-pipeline-underwriting",
+  "vendors": [
+    {
+      "id": "dealpath",
+      "name": "Dealpath",
+      "kind": "product",
+      "what": "Deal pipeline management software for real estate investors.",
+      "homepage": "https://www.dealpath.com/"
+    },
+    {
+      "id": "argus-enterprise",
+      "name": "ARGUS Enterprise",
+      "kind": "product",
+      "what": "Commercial real estate valuation and cash flow modeling software, now part of Altus Group's ARGUS Intelligence platform.",
+      "homepage": "https://www.altusgroup.com/solutions/argus-enterprise/"
+    },
+    {
+      "id": "rockport-val",
+      "name": "Rockport VAL",
+      "kind": "product",
+      "what": "Commercial real estate valuation and underwriting software from the Rockport group.",
+      "homepage": "https://www.therockportgroup.com/products/rockport-val"
+    },
+    {
+      "id": "radix-underwriting",
+      "name": "Radix Underwriting (formerly redIQ)",
+      "kind": "product",
+      "what": "Multifamily underwriting software that turns rent rolls and operating statements into models; redIQ renamed.",
+      "homepage": "https://radix.com/radix-underwriting/"
+    },
+    {
+      "id": "archer",
+      "name": "Archer",
+      "kind": "product",
+      "what": "AI underwriting, comparables and deal pipeline software for multifamily investors.",
+      "homepage": "https://www.archer.re/"
+    },
+    {
+      "id": "clik-ai",
+      "name": "Clik.ai",
+      "kind": "product",
+      "what": "AI underwriting and lease abstraction software and services for commercial real estate.",
+      "homepage": "https://clik.ai/"
+    },
+    {
+      "id": "cactus",
+      "name": "Cactus",
+      "kind": "product",
+      "what": "AI underwriting software for multifamily and commercial real estate deals.",
+      "homepage": "https://www.trycactus.com/"
+    },
+    {
+      "id": "keyway",
+      "name": "Keyway",
+      "kind": "product",
+      "what": "AI workflows for commercial real estate: document automation, rent comparables and market intelligence.",
+      "homepage": "https://www.keyway.ai/"
+    },
+    {
+      "id": "intellcre",
+      "name": "IntellCRE",
+      "kind": "product",
+      "what": "Commercial real estate marketing and deal-package platform with AI underwriting and an MCP server.",
+      "homepage": "https://www.intellcre.com/"
+    },
+    {
+      "id": "microsoft-excel",
+      "name": "Microsoft Excel (with a general AI assistant)",
+      "kind": "product",
+      "what": "The spreadsheet most sponsors already underwrite in, driven by a general-purpose AI assistant; the baseline the specialist tools compete with.",
+      "homepage": "https://www.microsoft.com/en-us/microsoft-365/excel"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "refinance-the-property",
+  "slug": "refinance-the-property",
+  "kind": "process",
+  "title": "Refinance the property",
+  "summary": "Size and source new debt, pay off the old loan and decide what to do with any proceeds.",
+  "phase": "operate",
+  "order": 345,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Read the current loan's prepayment and breakage terms",
+    "Test whether refinancing pays after its costs",
+    "Size the new loan on current coverage and loan-to-value",
+    "Assemble the lender package",
+    "Request quotes and compare structures side by side",
+    "Choose the lender and sign the term sheet",
+    "Order the appraisal and third-party reports the lender requires",
+    "Negotiate the loan documents",
+    "Get investor or partner approval where the operating agreement requires it",
+    "Close the new loan and pay off the old one",
+    "Decide what to do with any proceeds",
+    "Tell investors what changed"
+  ]
+}

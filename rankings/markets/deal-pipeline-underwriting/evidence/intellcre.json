@@ -1,0 +1,152 @@
+{
+  "vendor": "intellcre",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://help.intellcre.com/en/",
+      "found": true,
+      "note": "Intercom help center for end users; developer-style docs are on the MCP page"
+    },
+    "api": {
+      "url": "https://intellcre.com/mcp/",
+      "found": true,
+      "note": "No REST API page (/api is 404); the documented programmatic surface is the hosted MCP server"
+    },
+    "pricing": {
+      "url": "https://intellcre.com/pricing/",
+      "found": false,
+      "note": "Pricing page lists included features and a savings calculator; no plan prices shown, only Start Now and Book a Call"
+    },
+    "changelog": {
+      "url": "https://intellcre.com/changelog",
+      "found": false,
+      "note": "404; no changelog or release notes found"
+    }
+  },
+  "links": {
+    "docs": "https://help.intellcre.com/en/",
+    "api": "https://intellcre.com/mcp/",
+    "mcp": "https://intellcre.com/mcp/"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://intellcre.com/",
+      "excerpt": "IntellCRE is a commercial real estate marketing platform that automates deal underwriting, property marketing material generation, and deal presentation",
+      "fetched": "2026-11-12",
+      "note": "Sentence continues: from a single source of property and financial data.",
+      "hash": "f43b570a393f21a23ea225a1a1683e2181feec214c7f716334583e0a90cb2d39"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://intellcre.com/",
+      "excerpt": "Bring your own Excel model. IntellCRE ingests it and keeps every document consistent with the numbers you already trust.",
+      "fetched": "2026-11-12",
+      "hash": "63386afd732386fd0ff9b536b3a53c9cb5fd905b81a5761cab70fcce1a6957be"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://intellcre.com/",
+      "excerpt": "You bring your own data: upload rent rolls, T-12s and operating statements, import your own comps, and bring your own Excel model.",
+      "fetched": "2026-11-12",
+      "hash": "68b4f38e3b8b15f6b705df9b1126358315fcf0997b9b3470475848a2acf18eae"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://intellcre.com/mcp/",
+      "excerpt": "The IntellCRE MCP connector gives an AI assistant secure, permissioned access to your pipeline",
+      "fetched": "2026-11-12",
+      "hash": "c2ea49b6b58d1a2a65e962d096ea3142cc4c1f3fafb0a5f4937909a7381b2f34"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://intellcre.com/mcp/",
+      "excerpt": "Live 40 tools OAuth 2.1 + PKCE Streamable HTTP",
+      "fetched": "2026-11-12",
+      "hash": "3d11f1683fd41c2462751ca0a60b550b5624525b6de86fccbdaff56d303641c5"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://intellcre.com/mcp/",
+      "excerpt": "Nothing to install, and no API key to copy. Authorization happens through your normal IntellCRE login.",
+      "fetched": "2026-11-12",
+      "hash": "385a5b580aabd43bef1106a5e4d404b30c769e486eab77daa5243de4550211c7"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://intellcre.com/mcp/",
+      "excerpt": "read and write are granted separately — you can connect an assistant in read-only mode and it will be unable to change anything.",
+      "fetched": "2026-11-12",
+      "hash": "e3743c84452baf516e58a40d1a83660d572ae7421a3dad8910b667796c54d797"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://intellcre.com/mcp/",
+      "excerpt": "properties:write",
+      "fetched": "2026-11-12",
+      "note": "Scope row; grants: Create, update, and delete properties and their related records",
+      "hash": "0c86fa046fc2e6ea8271c0a66a133c4c667f6c750f3805f6fac6f794c56516b9"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://intellcre.com/mcp/",
+      "excerpt": "create_property",
+      "fetched": "2026-11-12",
+      "note": "Tool table lists property, tenant, comparable and image tools plus brochure tools; no tool for deals' stage, rent roll or financial-statement upload, or underwriting outputs",
+      "hash": "a5c3bad0a194da13ac355a9c55e9f882fee491ee7369fd4111ce023efc7f6ca0"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://intellcre.com/mcp/",
+      "excerpt": "IntellCRE MCP connector · 40 tools · Documentation last reviewed 2 September 2026",
+      "fetched": "2026-11-12",
+      "hash": "7c33d084da3902f8b8b0a31af3af0c4a4554786ac79ff85fec287f130c17ef97"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://intellcre.com/underwriting/",
+      "excerpt": "Instantly upload your rents, expenses, and other financial documents in excel or pdf formats with our cutting-edge AI parsing engines.",
+      "fetched": "2026-11-12",
+      "hash": "a5e162917b3cd504d23829c3155a07f10c8acad6ee8434a01dac046588dab4d9"
+    },
+    {
+      "id": "c12",
+      "tier": "vendor-claim",
+      "url": "https://intellcre.com/pipeline-management/",
+      "excerpt": "From new leads to sold or purchased deals, track every step of the process in one platform and keep your pipeline running smoothly.",
+      "fetched": "2026-11-12",
+      "hash": "4ad7cadb195927a9e893882b077fe38e67098f47e5da50558f5ac52107cab97a"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://www.intellcre.com/llms.txt",
+      "excerpt": "# IntellCRE - AI-Powered Commercial Real Estate Platform",
+      "note": "llms.txt: GET 200, 3322 bytes",
+      "fetched": "2026-11-12",
+      "hash": "912d746272360426cfc6c81357fe4739f73f547d83e5d59b9de09b8f9b904aa8"
+    },
+    {
+      "id": "p2",
+      "tier": "probe",
+      "url": "https://intellcre.com/mcp/",
+      "excerpt": "IntellCRE MCP — Run Your Pipeline From ChatGPT or Claude",
+      "note": "MCP page resolves: GET 200 (page title)",
+      "fetched": "2026-11-12",
+      "hash": "8dfe72b63391e542dbe0a848b677c7ce8432184934ada83a02b37f2e83d66653"
+    }
+  ]
+}

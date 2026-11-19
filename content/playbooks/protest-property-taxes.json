@@ -1,0 +1,540 @@
+{
+  "id": "protest-property-taxes",
+  "slug": "protest-property-taxes",
+  "kind": "process",
+  "title": "Protest property taxes",
+  "summary": "Each spring, watch for the notice of appraised value, read it against last year and the property, and compute the tax at stake. Decide whether and on what grounds to protest, file on time, present sourced evidence, and pass the result through to tenants as each lease requires.",
+  "phase": "operate",
+  "order": 330,
+  "featured": false,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-14",
+  "requires": [
+    "abstract-the-leases"
+  ],
+  "consumes": [
+    "lease",
+    "lease-abstract",
+    "rent-roll",
+    "trailing-12",
+    "settlement-statement",
+    "comp-set",
+    "appraisal",
+    "jv-agreement",
+    "loan-documents",
+    "underwriting-model"
+  ],
+  "produces": [
+    "underwriting-model"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "tx-tax-code-25",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.25.htm",
+      "title": "Texas Tax Code, Chapter 25 (Section 25.19, Notice of appraised value)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "by May 1 or as soon thereafter as practicable in connection with any other property",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-41-lessee",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.41.htm",
+      "title": "Texas Tax Code, Chapter 41 (Section 41.413, Protest by person leasing property)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "The property owner must send the notice not later than the 10th day after the date the property owner receives the notice.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-41-grounds",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.41.htm",
+      "title": "Texas Tax Code, Chapter 41 (Section 41.41, Right of protest)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "unequal appraisal of the owner's property",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-41-burden",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.41.htm",
+      "title": "Texas Tax Code, Chapter 41 (Section 41.43, Protest of determination of value or inequality of appraisal)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "the appraisal district has the burden of establishing the value of the property by a preponderance of the evidence presented at the hearing",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-41-notice",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.41.htm",
+      "title": "Texas Tax Code, Chapter 41 (Section 41.44, Notice of protest)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "The notice need not be on an official form",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-41-conference",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.41.htm",
+      "title": "Texas Tax Code, Chapter 41 (Section 41.445, Informal conference before hearing on protest)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "An informal conference must be held before the hearing on the protest.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-41-hearing",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.41.htm",
+      "title": "Texas Tax Code, Chapter 41 (Sections 41.45 and 41.46, Hearing on protest and notice of hearing; Section 41.67(a), Evidence)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "A property owner initiating a protest is entitled to appear to offer evidence or argument.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-41-evidence",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.41.htm",
+      "title": "Texas Tax Code, Chapter 41 (Section 41.461, Delivery of requested information; Section 41.67(d), Evidence)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "may not be used or offered in any form as evidence in the hearing",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-41-order",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.41.htm",
+      "title": "Texas Tax Code, Chapter 41 (Section 41.47, Determination of protest)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "shall determine the protest and make its decision by written order",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-1-delivery",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.1.htm",
+      "title": "Texas Tax Code, Chapter 1 (Section 1.07, Delivery of notice)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "is presumed delivered when it is deposited in the mail. This presumption is rebuttable when evidence of failure to receive notice is provided.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-1-agent",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.1.htm",
+      "title": "Texas Tax Code, Chapter 1 (Section 1.111, Representation of property owner)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "A property owner may not designate more than one agent to represent the property owner in connection with an item of property.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-occ-code-1152",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1152.htm",
+      "title": "Texas Occupations Code, Chapter 1152 (Property tax consultants: Sections 1152.001, 1152.002 and 1152.151)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "A person may not perform property tax consulting services for compensation unless the person holds a certificate of registration issued under this chapter.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-42",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.42.htm",
+      "title": "Texas Tax Code, Chapter 42 (Sections 42.06, 42.08, 42.21, 42.225, 42.226 and 42.43, Judicial review)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "must file a petition for review with the district court within 60 days after the party received notice that a final order has been entered",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-41a",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.41A.htm",
+      "title": "Texas Tax Code, Chapter 41A (Sections 41A.01 and 41A.03, Appeal through binding arbitration)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "As an alternative to filing an appeal under Section 42.01",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-comptroller-pt-forms",
+      "url": "https://comptroller.texas.gov/taxes/property-tax/forms/",
+      "title": "Property Tax Forms (Forms 50-132, Notice of protest, and 50-162, Appointment of agent)",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-14",
+      "quote": "50-162, Appointment of Agent for Property Tax Matters",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "calendar-the-cycle",
+      "title": "Calendar the cycle and watch for the notice",
+      "instruction": "Each January, enter the protest year in the deadline-calendar, which shows May 15 until the notice date is known. For property other than a qualifying homestead, the chief appraiser delivers a notice of appraised value by May 1 or as soon after as practicable if the value rose, exceeds the owner's rendered value, is new to the roll, or an exemption was cut (Tax Code 25.19(a)). Other property gets one if reappraised, sold the year before, or on the owner's or agent's written request (25.19(g)); the text does not say a request carries over, so repeat it yearly or confirm with the district. A missed notice does not void the appraisal or the tax (25.19(d)). A person approves any request before it goes. When a notice comes, record its postmark or printed date and its arrival date: a mailed notice is presumed delivered when mailed (1.07(c)).",
+      "mode": "agent",
+      "modeBasis": "Calendaring and drafting a request are file work; a request to the appraisal district goes only with a person's approval.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-tx.tax.protest-deadline"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-25",
+        "tx-tax-code-1-delivery"
+      ]
+    },
+    {
+      "id": "read-the-notice",
+      "title": "Read the notice and compute the tax at stake",
+      "instruction": "Read the notice against last year's notice, the settlement statement where the property was bought recently, and the property's facts as of January 1, the date market value is set (us-tx.tax.market-value): area, condition, occupancy and damage. The notice gives the taxing units, last year's and this year's values, land and improvements separately, and the protest procedure (Tax Code 25.19(b), (b-1), (f)). Through tax year 2026 it also says whether the circuit breaker limit applies; us-tx.tax.appraisal-increase-limit records that the section expires December 31, 2026. Then run the property-tax calculator at this year's and last year's values, an assessment ratio of 1 unless a unit's records show another, each taxing unit's own published rate (or its last adopted rate, labeled so), with trial reductions on the protest line. It does not model exemptions, caps or rollbacks; note any that apply. Record each rate's source and date and every difference found.",
+      "mode": "agent",
+      "modeBasis": "Comparing the notice with last year's notice and the property file, and running the calculator on published rates, is reading and arithmetic.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "calendar-the-cycle"
+      ],
+      "rules": [
+        "us-tx.tax.market-value",
+        "us-tx.tax.appraisal-increase-limit"
+      ],
+      "consumes": [
+        "settlement-statement",
+        "rent-roll"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-25"
+      ],
+      "calculators": [
+        "property-tax"
+      ]
+    },
+    {
+      "id": "send-tenant-copies",
+      "title": "Send reimbursing tenants a copy of the notice",
+      "instruction": "Where a lease obliges the tenant to reimburse the owner's taxes on real property, the owner must send that tenant a copy of the notice of appraised value within 10 days after receiving it, unless the lease waives that duty or says the tenant will not protest (Tax Code 41.413(d)). Such a tenant may protest the appraised value itself if the owner does not, and only one protest, the owner's or the tenant's, is allowed (41.413(b)). From the lease abstracts, list each reimbursing tenant, the notice address its lease names and any lease clause on tax contests. Draft a short cover letter for each with the notice attached; it does not promise a protest before the principal decides. A person approves each letter before it goes, and the sent copies are saved to the tax file.",
+      "mode": "agent",
+      "modeBasis": "Listing tenants from the abstracts and drafting letters is document work; anything sent to a tenant goes only with a person's approval.",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-the-notice"
+      ],
+      "consumes": [
+        "lease",
+        "lease-abstract"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-41-lessee"
+      ]
+    },
+    {
+      "id": "decide-to-protest",
+      "title": "Decide whether to protest and on what grounds",
+      "instruction": "The principal decides whether to protest and on which grounds, from the notice review, the tax at stake and what the evidence can show. The grounds the statute lists include the appraised value, unequal appraisal, inclusion of the property on the records, denial of a partial exemption, through 2026 a finding that the property does not qualify for the circuit breaker limit, ownership, the taxing units listed, and any other action of the district or board that applies to and adversely affects the owner (Tax Code 41.41(a)). In a value or unequal appraisal protest the district bears the burden of establishing value, by clear and convincing evidence where 41.43(a-1) or (a-3) applies; an owner who failed to deliver a required rendition or an answer to the chief appraiser's information request bears it instead (41.43(a), (d)). Filing costs no fee (41.41(d)). Record the decision and its reasons.",
+      "mode": "human-online",
+      "modeBasis": "Whether to contest the value, and on which grounds, is a judgment that binds the owning entity.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "send-tenant-copies"
+      ],
+      "rules": [
+        "us-tx.tax.market-value",
+        "us-tx.tax.appraisal-increase-limit"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-41-grounds",
+        "tx-tax-code-41-burden"
+      ]
+    },
+    {
+      "id": "get-partner-consent",
+      "title": "Get the capital partner's consent where the agreement requires it",
+      "instruction": "Read the JV agreement for the capital partner's rights over tax contests, settlements with the appraisal district, hiring a consultant and the fee paid. Where it requires the partner's consent or notice, send the partner the notice review, the tax at stake and the recommended grounds and representation, and name the date by which it must answer so the filing deadline on the calendar is not missed. Record the answer. A person approves the request before it goes.",
+      "mode": "agent",
+      "modeBasis": "Reading the agreement and drafting the request is document work; the partner's consent is its own decision.",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-to-protest"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "choose-representation",
+      "title": "Decide who represents the owner",
+      "instruction": "An owner may designate one agent per property on the Comptroller's form, signed by the owner or another authorized person; it takes effect once filed with the appraisal district (Tax Code 1.111(a), (b), (d)). Anyone performing property tax consulting services for compensation, including representing an owner in a protest, must register under Occupations Code chapter 1152 (1152.001(6), 1152.151). The chapter exempts, among others, a Texas lawyer, a certified public accountant, an employee of the owner or an affiliated company acting for the owner, and a lessee designated as agent (1152.002(a)); counsel confirms whether an exemption fits the sponsor's staff. An exempt individual who files without being designated to receive notices attaches a statement giving name and address, that the individual acts for the owner, and the exemption's basis (1.111(j)). If a consultant is hired, the principal confirms its registration, signs the engagement and designation, and records the fee terms.",
+      "mode": "human-online",
+      "modeBasis": "The designation and any engagement commit the owning entity and are signed by a person authorized to act for it.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-to-protest",
+        "get-partner-consent"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-1-agent",
+        "tx-occ-code-1152",
+        "tx-comptroller-pt-forms"
+      ]
+    },
+    {
+      "id": "file-the-protest",
+      "title": "File the notice of protest by the deadline",
+      "instruction": "File a written notice of protest with the appraisal review board by the later of May 15 or the 30th day after the notice was delivered (us-tx.tax.protest-deadline). Enter the protest year and the earlier of the recorded postmark or printed date and the arrival date in the deadline-calendar; a mailed notice is presumed delivered when mailed, and any argument that it arrived late is counsel's (1.07(c)). A notice is sufficient if it identifies the owner and the property and shows dissatisfaction with a determination; it need not be on the Comptroller's form, which asks for more detail (41.44(d)). Ask for an informal conference and say whether the owner will appear by telephone or videoconference (41.445, 41.45(b-1)). A late notice is heard only on good cause, a question for counsel (41.44(b)). The principal or designated agent signs and files it, with any 1.111(j) statement, and keeps proof.",
+      "mode": "human-online",
+      "modeBasis": "The notice of protest is a filing made for the owner, signed by the principal or the designated agent.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-to-protest",
+        "choose-representation"
+      ],
+      "rules": [
+        "us-tx.tax.protest-deadline"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-41-notice",
+        "tx-tax-code-41-conference",
+        "tx-tax-code-41-hearing",
+        "tx-tax-code-1-delivery",
+        "tx-tax-code-1-agent",
+        "tx-comptroller-pt-forms"
+      ]
+    },
+    {
+      "id": "build-the-evidence",
+      "title": "Request the district's evidence and build the owner's",
+      "instruction": "Draft a written request for the chief appraiser's hearing evidence; what is not delivered 14 days before the hearing may be used only in rebuttal (Tax Code 41.461(a)(2), 41.67(d)). A person approves it. Build the owner's package as of January 1, each figure sourced: income (trailing-12, rent roll) in income-value at a cap rate from market evidence the sponsor gathered; sales from the comp set; for unequal appraisal, comparable properties' values, appropriately adjusted (41.43(b)(3)). Where the district's value is $1 million or less, a 41.43(a-2) appraisal by a chapter 1103 certified appraiser, made within 180 days before the first hearing day, raises the district's burden if filed with the board and delivered to the chief appraiser 14 days before that day (41.43(a-1)). So does income or sales data filed and delivered by then where last year's value was lowered, not by agreement (41.43(a-3)). Calendar that day from the hearing notice.",
+      "mode": "agent",
+      "modeBasis": "Assembling sourced figures and running the calculator is file work; the request to the district goes only with a person's approval.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "file-the-protest"
+      ],
+      "rules": [
+        "us-tx.tax.market-value"
+      ],
+      "calculators": [
+        "income-value"
+      ],
+      "consumes": [
+        "trailing-12",
+        "rent-roll",
+        "comp-set",
+        "appraisal"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-41-evidence",
+        "tx-tax-code-41-burden"
+      ]
+    },
+    {
+      "id": "hold-informal-conference",
+      "title": "Meet the appraisal office informally",
+      "instruction": "The appraisal office must hold an informal conference before the hearing with an owner who filed a protest and asked for one (Tax Code 41.445). The principal or the designated agent presents the package and hears the district's reasoning. Any value offered is compared with the owner's evidence and run through the property-tax calculator. An agreement between the owner or its agent and the chief appraiser on a protested matter is final (1.111(e)), so the principal approves any settlement value before it is accepted, after the capital partner's consent where a JV agreement requires it. Record whether the value was set by agreement, because a value set that way does not carry next year's higher burden on the district (41.43(a-3)(2)). Where a value was agreed, skip to record-the-result; with no agreement, prepare for the hearing.",
+      "mode": "human-offline",
+      "modeBasis": "The conference is a meeting with the appraisal office, and accepting a value binds the owner.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-the-evidence"
+      ],
+      "calculators": [
+        "property-tax"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-41-conference",
+        "tx-tax-code-1-agent",
+        "tx-tax-code-41-burden"
+      ]
+    },
+    {
+      "id": "present-at-hearing",
+      "title": "Present the case to the appraisal review board",
+      "instruction": "If no value was agreed, the board delivers written notice of the hearing at least 15 days before it (Tax Code 41.46(a)). The owner may appear to offer evidence or argument, offer evidence by affidavit without appearing, or appear by telephone or videoconference with evidence by affidavit submitted before the hearing begins (41.45(b)); notice of a remote appearance is due 5 days before the hearing, or 10 with a designated agent (41.45(b-1)). An owner without a designated agent is entitled to one postponement without cause (41.45(e)). The chief appraiser appears for the district, and testimony is under oath (41.45(c), 41.67(a)). The owner, its designated agent or an exempt representative presents; a witness for the owner need not register unless designated as agent or mainly engaged in such work (Occupations Code 1152.002(a)(7), (b)). Record who appeared, the evidence offered and what the board said.",
+      "mode": "human-offline",
+      "modeBasis": "The hearing is a proceeding where the owner or its agent appears and testifies.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "hold-informal-conference"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-41-hearing",
+        "tx-occ-code-1152"
+      ]
+    },
+    {
+      "id": "advise-on-remedies",
+      "title": "Have counsel read the order and name the remedies",
+      "instruction": "If no value was agreed, the board issues a written order stating the value in the records and as finally determined, land and improvements separately, delivered by certified mail or electronically (Tax Code 41.47(a), (c-2), (d)). Counsel reads the order and advises in writing on the remedies the text allows: a petition for review in district court within 60 days after notice of the final order (42.21(a)), with no notice of appeal required of an owner (42.06(a)); nonbinding arbitration on the owner's motion, binding arbitration if the district joins, and mediation (42.225, 42.226); or, instead of a court appeal, binding arbitration where the value in the order is $5 million or less, requested from the Comptroller within 60 days after notice of the order with the deposit 41A.03(a) sets; without strict compliance the right is waived (41A.01, 41A.03).",
+      "mode": "human-online",
+      "modeBasis": "Which remedies the text allows, and their deadlines, is a legal judgment for counsel.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "present-at-hearing"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-41-order",
+        "tx-tax-code-42",
+        "tx-tax-code-41a"
+      ]
+    },
+    {
+      "id": "decide-remedy-and-pay",
+      "title": "Decide on a remedy and pay the tax an appeal requires",
+      "instruction": "The principal decides from counsel's advice whether to pursue a remedy, after the capital partner's consent where a JV agreement requires it, and signs or authorizes any petition or request counsel prepares before its deadline. An appeal of the value under chapter 42 waives the chapter 41A arbitration on that value (41A.03(b)). For an appeal under chapter 42, the principal pays, or approves the payment of, the tax 42.08(b) requires before the delinquency date, or the right to a final determination is forfeited: the lesser of the tax on the value not in dispute, the tax under the order, or last year's tax. An owner paying only the undisputed portion files a written statement of that amount with the appeal (42.08(b-1)). Record the decision, each filing and the proof of payment.",
+      "mode": "human-online",
+      "modeBasis": "Pursuing a remedy binds the owning entity, a petition is signed, and a tax payment moves money; each is a person's act.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "advise-on-remedies"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-42",
+        "tx-tax-code-41a"
+      ]
+    },
+    {
+      "id": "record-the-result",
+      "title": "Record the result and update the numbers",
+      "instruction": "Record in the tax file the notice value, the final value from the order or agreement, the land and improvement split, whether it was set by agreement, the grounds argued, the evidence used, who represented the owner and the cost under the engagement. Run the property-tax calculator at the final value with each unit's adopted rate for the year's tax and the saving. Update the budget, the underwriting model and the tax escrow figure. Read the loan documents for any duty to tell the lender about a contest or a changed tax figure and draft that notice, and give the result to whoever writes the next investor report or partner update. A person approves any notice before it goes. Where an appeal lowers a tax already paid, the taxing unit refunds the difference with interest (Tax Code 42.43(a), (b)); log any refund when it arrives.",
+      "mode": "agent",
+      "modeBasis": "Recording the outcome and re-running the numbers is file work; a notice to the lender goes only with a person's approval.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-remedy-and-pay"
+      ],
+      "calculators": [
+        "property-tax"
+      ],
+      "consumes": [
+        "loan-documents",
+        "underwriting-model"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-42"
+      ]
+    },
+    {
+      "id": "pass-through-savings",
+      "title": "Pass the result through to tenants as each lease requires",
+      "instruction": "Once the tax bills are issued, read each lease for how taxes are recovered: net, base year, expense stop or gross, the tenant's share, any cap, whether the cost of a protest is recoverable and how a refund or reduction is credited. Run the expense-recovery calculator for each tenant with the building's tax as billed after the result, alongside the other recoverable expenses the lease covers, and reconcile against the estimates the tenant paid. Credit any refund received later as the lease requires. Draft each tenant's reconciliation with the tax bills and the order attached. A person approves every reconciliation before it is sent to a tenant. Monthly billing and the full year-end expense true-up follow collect-rent-and-reconcile-cam.",
+      "mode": "agent",
+      "modeBasis": "The recovery is arithmetic on the lease terms and the bills; a reconciliation sent to a tenant goes only with a person's approval.",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-the-result"
+      ],
+      "calculators": [
+        "expense-recovery"
+      ],
+      "consumes": [
+        "lease",
+        "lease-abstract",
+        "rent-roll"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    }
+  ],
+  "outlineSteps": []
+}

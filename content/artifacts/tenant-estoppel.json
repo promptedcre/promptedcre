@@ -1,0 +1,94 @@
+{
+  "id": "tenant-estoppel",
+  "name": "Tenant estoppel certificate",
+  "what": "A tenant's signed statement of its lease terms, rent paid and any defaults, which a buyer or lender can rely on.",
+  "fields": [
+    {
+      "key": "tenant",
+      "label": "Tenant",
+      "type": "string",
+      "definition": "The tenant that signed the certificate, and the name and title of the person who signed for it."
+    },
+    {
+      "key": "certificateDate",
+      "label": "Certificate date",
+      "type": "date",
+      "definition": "The date the tenant signed; the statements speak as of this date, so compare it with the closing date and any date the contract or lender requires."
+    },
+    {
+      "key": "relyingParties",
+      "label": "Who may rely",
+      "type": "list",
+      "definition": "The buyer, lender and others the certificate names as entitled to rely on it, including any assignees."
+    },
+    {
+      "key": "leaseDocuments",
+      "label": "Lease documents listed",
+      "type": "list",
+      "definition": "The lease, amendments and side letters the tenant certifies are the whole agreement; any document in the file that is missing from this list is a difference."
+    },
+    {
+      "key": "premisesAndArea",
+      "label": "Premises and area",
+      "type": "text",
+      "definition": "The suite and square feet the tenant certifies it leases."
+    },
+    {
+      "key": "termDates",
+      "label": "Term dates",
+      "type": "text",
+      "definition": "The commencement and expiration dates the tenant certifies for the current term."
+    },
+    {
+      "key": "monthlyBaseRent",
+      "label": "Current monthly base rent",
+      "type": "money",
+      "unit": "USD/month",
+      "definition": "The base rent the tenant certifies it pays now, and any recovery estimate it states."
+    },
+    {
+      "key": "rentPaidThrough",
+      "label": "Rent paid through",
+      "type": "date",
+      "definition": "The date through which the tenant certifies rent is paid."
+    },
+    {
+      "key": "prepaidRent",
+      "label": "Rent paid in advance",
+      "type": "money",
+      "unit": "USD",
+      "definition": "Rent paid more than one period ahead, as the tenant states it; zero when the certificate says none."
+    },
+    {
+      "key": "securityDeposit",
+      "label": "Security deposit",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The deposit or letter of credit the tenant certifies the landlord holds."
+    },
+    {
+      "key": "defaultsClaimed",
+      "label": "Defaults claimed",
+      "type": "text",
+      "definition": "Any default by the landlord or the tenant, and any offset, credit or defense against rent the tenant claims; record the words used, including knowledge qualifiers."
+    },
+    {
+      "key": "landlordObligationsOpen",
+      "label": "Landlord obligations open",
+      "type": "text",
+      "definition": "Improvement work, allowances, free rent or other landlord obligations the tenant says are still unpaid or unfinished."
+    },
+    {
+      "key": "options",
+      "label": "Options and rights",
+      "type": "list",
+      "definition": "The renewal, expansion, termination, purchase and first refusal rights the tenant certifies it holds."
+    },
+    {
+      "key": "differencesFound",
+      "label": "Differences from the lease and rent roll",
+      "type": "list",
+      "definition": "The analyst's list of every statement that does not match the lease file or the rent roll, with both versions side by side."
+    }
+  ]
+}

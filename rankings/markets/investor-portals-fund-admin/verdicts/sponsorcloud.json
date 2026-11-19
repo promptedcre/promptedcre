@@ -1,0 +1,152 @@
+{
+  "vendor": "sponsorcloud",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "e68e1e82d78ee726dda134f38080d423f5002ea8939e8eb21babd9146565336f",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c5"
+      ],
+      "rationale": "Coverage found no developer or API page (syndicationpro.com/api is a 404), and c5 is only a no-code Zapier integration claim, which does not show a public API.",
+      "missing": "Any public API documentation, or any vendor statement that an API exists, for reading and changing investors, deals, distributions or other core records."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack contains no mention of an MCP server, and coverage found no developer, API or documentation pages.",
+      "missing": "Any vendor-maintained MCP server, announcement or setup steps."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no SDK, CLI, package or public repository, and coverage found no developer or API page.",
+      "missing": "Any vendor-maintained SDK or CLI on a package registry or public repository, or even code samples."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "partial",
+      "quality": 3,
+      "evidence": [
+        "c5",
+        "c6"
+      ],
+      "rationale": "c5 and c6 show SponsorCloud connects to 2,000+ apps through Zapier to automate tasks without coding, and the pack found no native webhook documentation, so the only automation path shown runs through a third-party platform and names no specific events.",
+      "missing": "Which SponsorCloud events, if any, the Zapier integration exposes as triggers, and any native webhook or event-subscription documentation for core records."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c11"
+      ],
+      "rationale": "The pack shows no API keys, tokens or OAuth clients, and c11 describes only two-factor authentication for user accounts, not credentials an agent could hold.",
+      "missing": "Any API keys, tokens or OAuth clients, and any documented scopes, roles or permissions that limit them."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Coverage found no API or developer page (syndicationpro.com/api returns 404), and the pack shows no OpenAPI, Swagger, GraphQL or other specification.",
+      "missing": "Any machine-readable API specification, public or behind a login."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Coverage found no documentation site or help center (/support returns Not Found), and the pack shows no llms.txt file or Markdown documentation pages.",
+      "missing": "An llms.txt file or Markdown versions of documentation pages; the pack shows no product documentation of any kind."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no sandbox, test mode or developer environment, and coverage found no developer or API page where one would be documented.",
+      "missing": "Any self-serve or on-request sandbox, test account or developer environment."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "partial",
+      "quality": 5,
+      "evidence": [
+        "c7"
+      ],
+      "rationale": "c7 claims filtered contact lists, investment summaries and audit trails can be exported in multiple formats, but no formats are named, the pack shows no export documentation, and only some record types are listed.",
+      "missing": "The named export formats (CSV, Excel, JSON), documentation of how the export works, and whether all records, such as distributions, documents and capital accounts, can be exported in bulk."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c3",
+        "c4",
+        "c11"
+      ],
+      "rationale": "The pack shows no sign-up flow or free trial, pricing is quoted case by case through a Request Custom Pricing form (c3, c4), and c11's mention of users signing up concerns 2FA security rather than a self-serve plan.",
+      "missing": "Any self-serve sign-up, paid-plan checkout or free trial a sponsor can start without a sales call."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c3",
+        "c4"
+      ],
+      "rationale": "The pricing page says SponsorCloud does not publish a price list and offers only a Request Custom Pricing quote form, which the story scores as none.",
+      "missing": "Any published price, starting price or fee for the plans a small sponsor would buy."
+    },
+    {
+      "story": "ip-create-investor",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c5",
+        "c6"
+      ],
+      "rationale": "The pack shows no API, and the Zapier, HubSpot and Equity Trust integrations in c5 and c6 are described only generically, with nothing on creating investor records or sending subscription documents.",
+      "missing": "API documentation, or a documented third-party integration, for creating investors and for sending or starting subscription documents."
+    },
+    {
+      "story": "ip-distribution",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c9"
+      ],
+      "rationale": "c9 describes ACH payments and distribution processing only as an in-app feature with no API route, so the pack shows no way to read or create distributions or generate notices through an API.",
+      "missing": "API documentation for reading or creating distributions and for generating or sending investor notices."
+    },
+    {
+      "story": "ip-register",
+      "verdict": "partial",
+      "quality": 4,
+      "evidence": [
+        "c7"
+      ],
+      "rationale": "c7 claims filtered contact lists and investment summaries can be exported in multiple formats, which points to a manual export from the CRM covering at least part of the register, with no API and no stated JSON or CSV format.",
+      "missing": "An API or documented export, the export formats, and confirmation that commitments and contributions are included for each investor."
+    },
+    {
+      "story": "ip-capital-call",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack contains no mention of capital calls or investor funding status, in the app or through an API.",
+      "missing": "Any API documentation, or even a product description, for creating capital calls and tracking each investor's funding status."
+    }
+  ]
+}

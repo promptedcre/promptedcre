@@ -1,0 +1,379 @@
+{
+  "id": "set-the-offering-terms",
+  "slug": "set-the-offering-terms",
+  "kind": "process",
+  "title": "Set the offering terms",
+  "summary": "Decide what the sponsor is paid and what investors get before counsel drafts: every payment to the sponsor in dollars, the sponsor's own stake, the waterfall in plain words, a test of the terms from the investor's side across endings, and one term sheet the principals approve in writing.",
+  "phase": "raise",
+  "order": 108,
+  "featured": false,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-14",
+  "requires": [
+    "choose-structure-and-exemption"
+  ],
+  "consumes": [
+    "underwriting-model",
+    "ic-memo",
+    "sponsor-operating-agreement",
+    "loan-term-sheet"
+  ],
+  "produces": [
+    "offering-term-sheet"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-14",
+      "quote": "To make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-502",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.502",
+      "title": "17 CFR 230.502, General conditions to be met (paragraph (d), limitations on resale)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-14",
+      "quote": "cannot be resold without registration under the Act or an exemption therefrom",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gov-code-4008",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.4008.htm",
+      "title": "Texas Government Code, Chapter 4008 (Securities Act civil liability), Sections 4008.052 and 4008.055",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "regardless of whether the security or transaction is exempt under Chapter 4005",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-29-2510-3-101",
+      "url": "https://www.ecfr.gov/current/title-29/section-2510.3-101",
+      "title": "29 CFR 2510.3-101, Definition of \"plan assets\": plan investments",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-14",
+      "quote": "25 percent or more of the value of any class of equity interests in the entity is held by benefit plan investors",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-29-1002",
+      "url": "https://www.law.cornell.edu/uscode/text/29/1002",
+      "title": "29 U.S.C. 1002, Definitions (paragraph (42), plan assets and benefit plan investor)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "held by a person (other than such a benefit plan investor) who has discretionary authority or control with respect to the assets of the entity",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-4975",
+      "url": "https://www.law.cornell.edu/uscode/text/26/4975",
+      "title": "26 U.S.C. 4975, Tax on prohibited transactions (subsections (c)(1), prohibited transaction defined, and (e)(1), plan defined)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "an individual retirement account described in section 408(a)",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-408",
+      "url": "https://www.law.cornell.edu/uscode/text/26/408",
+      "title": "26 U.S.C. 408, Individual retirement accounts (subsection (e)(1))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "any such account is subject to the taxes imposed by section 511",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-512",
+      "url": "https://www.law.cornell.edu/uscode/text/26/512",
+      "title": "26 U.S.C. 512, Unrelated business taxable income (subsections (b)(4) and (c))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "include its share (whether or not distributed) of the gross income of the partnership from such unrelated trade or business",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-514",
+      "url": "https://www.law.cornell.edu/uscode/text/26/514",
+      "title": "26 U.S.C. 514, Unrelated debt-financed income (subsections (a) and (c)(9), including (c)(9)(B)(vi), (C) and (E))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "any trust which constitutes a qualified trust under section 401",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "list-sponsor-payments",
+      "title": "List every payment to the sponsor in dollars",
+      "instruction": "List every payment to the sponsor, its principals and their related companies, at the levels the principals propose: fees at closing, during the hold and at sale; reimbursements; and any commission or fee a principal or related company earns on the purchase, the loan, property management, leasing or the sale. For each, record the rate, the base, the payee, when it is paid, and the dollars over the planned hold in the model's base case. A fund raising before it owns a property uses an illustrative model the principals approve, labeled illustrative wherever its figures appear. Mark each payment to a related company. Mark every payment or interest whose amount depends on equity raised or investors brought in, such as a promote share for raising money, and send each to counsel before the term sheet is assembled. Total the dollars and set the total beside the equity raised.",
+      "mode": "agent",
+      "modeBasis": "The payments come from the model, the loan term sheet and the principals' proposal; listing and totaling them is file work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-fed.exchange-act.broker-registration",
+        "us-tx.securities.rule-506-compensation"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "loan-term-sheet",
+        "ic-memo"
+      ],
+      "produces": [
+        "offering-term-sheet"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "state-sponsor-contribution",
+      "title": "State the sponsor's own contribution",
+      "instruction": "State what the sponsor and its principals put into the deal: the amount, its share of the total equity, the class of interest it buys, and how much is new cash and how much is a fee left in the deal or credited toward the contribution. Then compute the sponsor's net cash on closing day: the new cash it contributes, less every payment on the list that it, its principals or its related companies receive at closing. If the result is negative, the sponsor takes cash out at closing; state the figure and say so in plain words. Show reimbursements of costs the sponsor paid to others on their own line beside the result.",
+      "mode": "agent",
+      "modeBasis": "The contribution and the closing-day payments come from the model and the payment list; the netting is arithmetic.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-sponsor-payments"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "sponsor-operating-agreement"
+      ],
+      "produces": [
+        "offering-term-sheet"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "write-distribution-terms",
+      "title": "Write the distribution terms in full",
+      "instruction": "Write the distribution terms the principals propose, each in a plain sentence. The preferred return: its rate, whether it is simple or compounding, whether an unpaid amount carries forward, the amount it accrues on and the date accrual starts. The order in which cash goes out, from operations and from a sale or refinance, including whether capital comes back before or after the preferred return. Each tier: its hurdle, the return investors must reach before the split changes, measured as an IRR or a multiple, and the split above it; the sponsor's cash beyond its contribution's share is the promote. Any catch-up: what share goes to the sponsor, and until when. Whether the sponsor's own contribution is paid alongside the investors. For a fund, whether the promote is figured deal by deal or on the whole fund, and if deal by deal, whether promote paid early can be taken back.",
+      "mode": "agent",
+      "modeBasis": "Writing proposed terms as plain sentences is drafting from the principals' proposal; setting the levels is theirs.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-fed.irc.section-1061-applicable-partnership-interests"
+      ],
+      "consumes": [
+        "ic-memo"
+      ],
+      "produces": [
+        "offering-term-sheet"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "test-terms-investor-side",
+      "title": "Test the terms from the investor's side",
+      "instruction": "Run the waterfall calculator on the model's base-case cash after every fee on the payment list, since fees are outside it. Its Before the promote row is the return after fees; its To investors, after the promote row is the return after the promote. Run the present value and IRR calculator on the same cash with every fee added back, for the return before any sponsor pay, and record the three returns side by side. Read both sides at each of the seven endings and the two break-even points, capital back and preferred return paid. State fees plus promote as a share of the profit before sponsor pay. List every ending at which investors lose money while the sponsor's fees, co-investment cash and promote exceed its contribution. The calculator pays the contribution alongside the investors and takes no promote back; where the terms differ, say which results do not apply.",
+      "mode": "agent",
+      "modeBasis": "The calculators are live and run on the model's cash flows with the written terms as inputs.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "state-sponsor-contribution",
+        "write-distribution-terms"
+      ],
+      "calculators": [
+        "waterfall-promote",
+        "npv-irr"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "ic-memo"
+      ],
+      "produces": [
+        "offering-term-sheet"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "find-pay-that-grows",
+      "title": "Find pay that grows with the hold or the loan",
+      "instruction": "Check each fee and each tier for pay that rises only because the hold runs longer or the loan is larger. Cases to test include a yearly fee; a fee charged on the purchase price, total cost or asset value rather than on equity; a fee on a loan, a refinance or an extension; and a hurdle measured as a multiple, which does not rise as the hold lengthens. Re-run the model and the waterfall with the hold one year longer, then with a larger loan of an amount the principals choose, everything else unchanged. List each payment that rises, with the change in dollars and the change in the investors' return, for the principals to accept, change or explain.",
+      "mode": "agent",
+      "modeBasis": "The test is re-running the model and the calculator with one input moved at a time; the response is the principals' call.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "test-terms-investor-side"
+      ],
+      "calculators": [
+        "waterfall-promote"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "loan-term-sheet"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "principals-set-levels",
+      "title": "The principals set each level and record its basis",
+      "instruction": "The principals read the payment list, the distribution terms and the test results, and set each level: every fee rate and base, the preferred return, each hurdle, split and catch-up, the sponsor's contribution, the minimum investment and the planned hold. They take each level from the sponsor's own earlier offerings, from what counsel sees in comparable offerings and from what the sponsor already knows its investors have accepted in other offerings, holding any talk with investors about this offering within the guardrails recorded when the exemption was chosen. Beside each level they record where it came from and why it was kept or changed after the tests. A level with no recorded basis goes back to the principals. Any change is run through the calculators again before the term sheet is assembled.",
+      "mode": "human-online",
+      "modeBasis": "A fee or return level binds the firm and is the principals' judgment; an agent records the basis they give.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "find-pay-that-grows"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "decide-terms-with-counsel",
+      "title": "Decide counsel's terms with counsel",
+      "instruction": "Counsel and the principals decide the terms that are counsel's ground, which counsel later drafts. Who bears offering, organizational and pursuit costs, including on a deal that does not close; a changed payment goes back through the calculators. Whether any investor or class gets different terms, and that every material term and conflict, related-company payments included, is disclosed to all investors: Rule 10b-5 reaches misleading omissions in exempt sales, and Texas makes a seller and its control persons liable for them regardless of exemption, subject to narrow defenses. What the sponsor decides alone, what investors vote on, how the manager can be removed and what then happens to its fees and promote. The transfer terms and the resale limit: Rule 506 interests cannot be resold without registration or an exemption. In a joint venture, these control terms also bear on whether the interest is a security.",
+      "mode": "human-online",
+      "modeBasis": "Disclosure, governance and transfer terms are legal judgments for counsel; the business choices within them are the principals'.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "principals-set-levels"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5",
+        "us-tx.securities.offer-sale-liability",
+        "us-fed.securities.jv-interests"
+      ],
+      "consumes": [
+        "sponsor-operating-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5",
+        "tx-gov-code-4008",
+        "ecfr-230-502"
+      ]
+    },
+    {
+      "id": "decide-retirement-money",
+      "title": "Decide whether to accept retirement-account money",
+      "instruction": "With the CPA and counsel, the principals decide whether to accept retirement money, IRAs included. Absent an exception, the entity's assets become plan assets, and the manager may become a plan fiduciary, if benefit plan investors hold 25 percent or more of the value of any class of equity. Holdings of the manager, others with control or paid advice over the assets, and their affiliates are left out only when the holder is not a benefit plan investor; a principal's or family member's IRA, or the sponsor's plan, counts. A principal's own IRA in a deal the principal manages and is paid by goes to counsel as a possible prohibited transaction. An IRA owes tax on debt-financed income; a section 401 trust may be excused on conditions that can limit the distribution terms, which the CPA checks. If accepted, track the plan share at each closing and transfer.",
+      "mode": "human-online",
+      "modeBasis": "Whether to admit plan money is the principals' decision, made on counsel's reading of the plan-asset rule and the CPA's of the tax.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-terms-with-counsel"
+      ],
+      "rules": [
+        "us-fed.erisa.plan-assets",
+        "us-fed.irc.retirement-account-debt-financed-income"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-29-2510-3-101",
+        "usc-29-1002",
+        "usc-26-4975",
+        "usc-26-408",
+        "usc-26-512",
+        "usc-26-514"
+      ]
+    },
+    {
+      "id": "assemble-term-sheet",
+      "title": "Assemble the offering term sheet",
+      "instruction": "Assemble the offering term sheet from the steps above, with the vehicle and the equity sought from the structure decision, the minimum investment and the planned hold as the principals set them, and the exit from the approved memo: each payment to the sponsor, its principals and related companies with its rate, base, payee, timing and dollars; the sponsor's contribution and its net cash at closing; the distribution terms in plain sentences; the three returns, the endings table and the two break-even points; the pay that grows with the hold or the loan and what the principals decided about it; counsel's terms; the retirement-money decision; and where each level came from. Tie every figure to the model version and date it came from, and list the open items. If the model changes, run the calculators again and update every affected figure before approval.",
+      "mode": "agent",
+      "modeBasis": "The term sheet is assembled from records the earlier steps produced; no new judgment enters it.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "principals-set-levels",
+        "decide-terms-with-counsel",
+        "decide-retirement-money"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "ic-memo"
+      ],
+      "produces": [
+        "offering-term-sheet"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "approve-term-sheet",
+      "title": "The principals approve the term sheet in writing",
+      "instruction": "The principals the sponsor's company agreement names for this decision read the term sheet and approve it in writing, each signing or confirming the consent the agreement requires. The approved term sheet then goes to counsel, who drafts the offering documents from it. It goes to no investor or capital partner. In a joint venture, the venture term sheet the partner receives is drafted from it when the joint venture agreement is negotiated; counsel reads that sheet and a principal approves it before it is sent. A later change to any term goes back through the calculators and a new written approval.",
+      "mode": "human-online",
+      "modeBasis": "Approving the terms binds the sponsor and is signed by its principals; an agent routes the consent and files it.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "assemble-term-sheet"
+      ],
+      "consumes": [
+        "offering-term-sheet",
+        "sponsor-operating-agreement"
+      ],
+      "produces": [
+        "offering-term-sheet"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    }
+  ],
+  "outlineSteps": []
+}

@@ -1,0 +1,32 @@
+{
+  "id": "us-fed.reg-d.bad-actor",
+  "jurisdiction": "us-federal",
+  "title": "Bad-actor disqualification under Rule 506(d)",
+  "rule": "Rule 506 is unavailable when the issuer or another covered person has a disqualifying event, such as certain securities convictions or regulatory orders. Covered persons include directors, executive officers, general partners and managing members, owners of 20% or more of the voting equity, promoters, a fund's investment manager, and anyone paid to solicit. Events before September 23, 2013 do not disqualify. An issuer that did not know, and with reasonable care could not have known, keeps the exemption, but reasonable care requires a factual inquiry. Signing Form D certifies that no disqualification applies.",
+  "citation": {
+    "authority": "17 CFR 230.506(d)",
+    "url": "https://www.ecfr.gov/current/title-17/section-230.506"
+  },
+  "asOf": "2026-11-09",
+  "lastVerified": "2026-11-11",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Rule 506(d) or the list of disqualifying events.",
+  "sources": [
+    {
+      "id": "ecfr-230-506",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.506",
+      "title": "17 CFR 230.506, Exemption for limited offers and sales without regard to dollar amount of offering",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-11",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-form-d",
+      "url": "https://www.sec.gov/files/formd.pdf",
+      "title": "Form D, Notice of Exempt Offering of Securities, with instructions",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-11",
+      "tier": "primary"
+    }
+  ]
+}

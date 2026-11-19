@@ -1,0 +1,137 @@
+{
+  "vendor": "de-corporations",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://corp.delaware.gov/regguide/",
+      "found": true
+    },
+    "api": {
+      "url": "https://corp.delaware.gov/services/",
+      "found": false,
+      "note": "Online services page lists browser services only; no developer or API page found"
+    },
+    "pricing": {
+      "url": "https://corp.delaware.gov/fee/",
+      "found": true,
+      "note": "Fee schedule is linked as documents; fee amounts also appear on the how-to-form and accessing-information pages"
+    },
+    "changelog": {
+      "url": "https://corp.delaware.gov/important-updates/",
+      "found": true
+    }
+  },
+  "links": {
+    "docs": "https://corp.delaware.gov/regguide/"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://corp.delaware.gov/document-upload-service-information/",
+      "excerpt": "This service does not provide for direct online filing or retrieval of business entity documents and certificates.",
+      "fetched": "2026-11-12",
+      "hash": "584330030abe681ab04d9e7b26c23060020b0a8ec4306f9b875d66d7fc9693d6"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://corp.delaware.gov/document-upload-service-information/",
+      "excerpt": "This service is for submission only of business entity filings or certificate/document requests.",
+      "fetched": "2026-11-12",
+      "hash": "22b7ba15d241a62769b697122b1d46620d220d4dabf3c68d5b1ce588d323e70f"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://corp.delaware.gov/document-upload-service-information/",
+      "excerpt": "The service does not calculate fees.",
+      "fetched": "2026-11-12",
+      "hash": "f8aaa88cdb5a5673b7cd9f2aedd63d2b21e2e8fcc48765b8291aef6ec3629e32"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://corp.delaware.gov/regguide/",
+      "excerpt": "we strongly recommend using our Document Filing and Certificate Request Service to electronically submit your filing.",
+      "fetched": "2026-11-12",
+      "hash": "c9e17b5d81adca592b56564226b9ac980a57d591380f2b4ac432433b8b97cd69"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://corp.delaware.gov/regguide/",
+      "excerpt": "We will not accept credit cards for mail or walk-in orders.",
+      "fetched": "2026-11-12",
+      "hash": "ad408af824696b11be9e6c246fcac234180c1ead092a73dde7a0baefd4e36cc0"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://corp.delaware.gov/services/",
+      "excerpt": "You may now also reserve names, check status of an entity and corporate history online.",
+      "fetched": "2026-11-12",
+      "hash": "e62a7f7482a1de1e58c3dbd9bb3429cce330bf7d34c7ed9a78d41331078b54e4"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://corp.delaware.gov/directweb/",
+      "excerpt": "You may check corporate/entity status on the web for a fee of $10.00 per entity for status or $20.00 per entity",
+      "fetched": "2026-11-12",
+      "hash": "534e4243a19c138f1a6471c76fefef0d4e59a0b52b2425dfd31a39a4192f65bb"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://corp.delaware.gov/directweb/",
+      "excerpt": "This application will reflect the status of an entity but will not generate an official certificate of good standing",
+      "fetched": "2026-11-12",
+      "hash": "e694697ff2ba5ce150ffa7b7c6fb09ff10b3ca2838897be20def218df3dcbe25"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://corp.delaware.gov/directweb/",
+      "excerpt": "Certified Certificate of Status – You may order a Certificate of Status or Certificate of Good Standing by submitting a request in writing",
+      "fetched": "2026-11-12",
+      "hash": "eec4d3c1bccf1461d159424b32ba4ca20db21db998ab9ba1e49d0fb3e61cfed0"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://corp.delaware.gov/fee/",
+      "excerpt": "The Division of Corporations now has filing fee calculators for stock entities that can be used for new companies.",
+      "fetched": "2026-11-12",
+      "hash": "067b092cbbce0de6e5fbb9a108d63ac93f070e5dfd40be4417c6ace32a9c7e50"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://corp.delaware.gov/howtoform/",
+      "excerpt": "You can reserve your entity name online. The fee is $75.00.",
+      "fetched": "2026-11-12",
+      "note": "Text joined across a link",
+      "hash": "b4ad57c616604109e4ce8663f60ae96976ddebc67088a6f15eb1e907a70b5ba3"
+    },
+    {
+      "id": "c12",
+      "tier": "vendor-claim",
+      "url": "https://corp.delaware.gov/paytaxes/",
+      "excerpt": "required to be filed online",
+      "fetched": "2026-11-12",
+      "note": "Annual reports and franchise taxes for active domestic corporations",
+      "hash": "b5cdbff7a1df203a0ee2a9bcb648bfecd002bc4e59c4f32f20d73851d7ce135a"
+    },
+    {
+      "id": "c13",
+      "tier": "vendor-claim",
+      "url": "https://corp.delaware.gov/important-updates/",
+      "excerpt": "Fee Schedule –The fee schedule has been updated effective August 1, 2024.",
+      "fetched": "2026-11-12",
+      "hash": "4b5157cf845733993cb902c7974999ecaf1128c55fd0b5edf044f8f3aec6f586"
+    }
+  ]
+}

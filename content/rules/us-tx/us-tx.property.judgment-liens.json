@@ -1,0 +1,25 @@
+{
+  "id": "us-tx.property.judgment-liens",
+  "jurisdiction": "us-tx",
+  "title": "Texas judgment liens: when an abstract of judgment becomes a lien",
+  "rule": "Once recorded and indexed, an abstract of a judgment that is not dormant is a lien on the debtor's real property in that county, including property acquired later, except property exempt from forced sale such as a homestead. The lien generally lasts 10 years from recording and indexing and ends sooner if the judgment goes dormant; state judgments last longer. During an appeal, a court finding can keep an abstract from becoming a lien where the debtor has posted, or is excused from posting, security.",
+  "citation": {
+    "authority": "Tex. Prop. Code 52.001, 52.0011 and 52.006",
+    "url": "https://statutes.capitol.texas.gov/Docs/PR/htm/PR.52.htm"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Property Code chapter 52 or to the judgment dormancy rule in Civil Practice and Remedies Code 34.001.",
+  "sources": [
+    {
+      "id": "tx-prop-52",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.52.htm",
+      "title": "Texas Property Code, Chapter 52 (Judgment liens)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "constitutes a lien on and attaches to any real property of the defendant",
+      "tier": "primary"
+    }
+  ]
+}

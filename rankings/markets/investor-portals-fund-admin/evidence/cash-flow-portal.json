@@ -1,0 +1,147 @@
+{
+  "vendor": "cash-flow-portal",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://support.cashflowportal.com/",
+      "found": true,
+      "note": "Support site exists (title 'Support | Investor portal') but renders only in the browser; text tools and a web fetch returned no articles, so its content is unread"
+    },
+    "api": {
+      "url": "https://www.cashflowportal.com/api",
+      "found": false,
+      "note": "No developer or API page; /api and api.cashflowportal.com return 404; the product offers an MCP server page and a Zapier integration"
+    },
+    "pricing": {
+      "url": "https://www.cashflowportal.com/pricing",
+      "found": true
+    },
+    "changelog": {
+      "url": "https://www.cashflowportal.com/updates",
+      "found": true,
+      "note": "Page titled Product updates; entries load in the browser and did not appear in text output, so entries are unread"
+    }
+  },
+  "links": {
+    "docs": "https://support.cashflowportal.com/",
+    "mcp": "https://www.cashflowportal.com/demo/mcp-server"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://www.cashflowportal.com/pricing",
+      "excerpt": "AI native platform for syndicators. Starts at $699/month",
+      "fetched": "2026-11-12",
+      "note": "Syndication Suite tier; Fund Admin Suite and Enterprise show a demo button with no price",
+      "hash": "dc749212dd2fc9b888272eb6463a5a4fae9352fbbea0485448576fe6aef1533b"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://www.cashflowportal.com/pricing",
+      "excerpt": "Use AI to uncover insights from portal data, write emails, and create emails and landing pages.",
+      "fetched": "2026-11-12",
+      "note": "Description of the 'AI Native / MCP' item included in the Syndication Suite",
+      "hash": "7021fc543bce918a789cd0650ed0307daa97b5ba4a1f59be6d06289d54f70baa"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://www.cashflowportal.com/demo/mcp-server",
+      "excerpt": "Ask Claude or ChatGPT anything about investors, raises, distributions, waterfalls, classes, and pipeline activity — all from your live Cash Flow Portal data.",
+      "fetched": "2026-11-12",
+      "hash": "1b2515d4ab39b172308ce768cf36a36ffcbece9d1507c83cff6201516df33344"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://www.cashflowportal.com/demo/mcp-server",
+      "excerpt": "CFP MCP only surfaces data users are already authorized to see. No new access controls to set up.",
+      "fetched": "2026-11-12",
+      "note": "MCP page is marketing with sample chats; no setup steps or tool list found",
+      "hash": "6171a7bf6499618f34a267b668d5cb275a6b0f45bf51edbc2de832cb2cc55ab8"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://www.cashflowportal.com/demo/mcp-server",
+      "excerpt": "Once you confirm, I'll set up the full waterfall structure in Cash Flow Portal.",
+      "fetched": "2026-11-12",
+      "note": "Sample assistant reply in a demo chat; suggests the MCP can write, not only read",
+      "hash": "5a9eda2cc586c79050aea568c63411fa19edc5bb9ad048de40da88b5cc692155"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://www.cashflowportal.com/demo/mcp-server",
+      "excerpt": "See CFP MCP on your real data",
+      "fetched": "2026-11-12",
+      "note": "Call to action on the MCP page is a demo request",
+      "hash": "8f7c23aed08105bf36fdd004f01f76d1348d41a782333b75ff21ccb05ff26b83"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://www.cashflowportal.com/features/integrations",
+      "excerpt": "Connect with over 5,000 applications, featuring seamless 2-way sync for smooth and efficient data flow.",
+      "fetched": "2026-11-12",
+      "note": "Zapier integration; no API or webhook documentation found",
+      "hash": "7bde34696e203e3ef6e74b8b5bebc5f8cc55e957ee3a2b2c613f3413521a34e5"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://www.cashflowportal.com/",
+      "excerpt": "Start for free * No credit card required",
+      "fetched": "2026-11-12",
+      "note": "Home page; the investor-management page also says 'Create an account instantly to explore the platform'",
+      "hash": "2b82ed0dfc2aea7868575327fa3bd23da0a05d04f28fa74e55c73dc0642be12f"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://www.cashflowportal.com/features/investor-management",
+      "excerpt": "Create a waterfall structure for your fund or syndication in minutes with Distribution Engine.",
+      "fetched": "2026-11-12",
+      "hash": "63355affc05a13890c72d71e79da874e2b84589279ec1d3ae2b525d65958f798"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://www.cashflowportal.com/features/investor-management",
+      "excerpt": "Automate sending funds to LPs and track their arrival.",
+      "fetched": "2026-11-12",
+      "note": "Distribution payments described as in-app; no API route shown",
+      "hash": "f6b323378aed2e50af9b0b867df6285ee40e8523a1536fe19c0c910b405fa8f1"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://www.cashflowportal.com/security",
+      "excerpt": "Limit what co-GPs see with role based access control.",
+      "fetched": "2026-11-12",
+      "hash": "0471b6b79386c21bcd15010091b39033ebcdfc08a53e8fbb0f8d2fe57ea7629b"
+    },
+    {
+      "id": "c12",
+      "tier": "vendor-claim",
+      "url": "https://www.cashflowportal.com/updates",
+      "excerpt": "See our latest features, improvements and fixes.",
+      "fetched": "2026-11-12",
+      "note": "Updates page intro; entries not visible in text output",
+      "hash": "733f97739a486cd5443a30b0c933156f05dba00d21377179de6d72fbc720360c"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://www.cashflowportal.com/demo/mcp-server",
+      "excerpt": "Your investor portal, powered by AI | Cash Flow Portal MCP",
+      "note": "MCP page resolves: GET 200 (page title)",
+      "fetched": "2026-11-12",
+      "hash": "008b5f3ad77e772bdaed5dfeb3ad81487436766bb9e775d8eba1d75c8b851017"
+    }
+  ]
+}

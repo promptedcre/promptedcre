@@ -1,0 +1,105 @@
+{
+  "id": "lease-abstract",
+  "name": "Lease abstract",
+  "what": "A short summary of a lease's key terms: parties, dates, rent, recoveries, options, obligations and unusual clauses.",
+  "fields": [
+    {
+      "key": "tenant",
+      "label": "Tenant",
+      "type": "string",
+      "definition": "The tenant's legal name as it appears in the signature block of the lease, and any trade name it operates under."
+    },
+    {
+      "key": "landlord",
+      "label": "Landlord",
+      "type": "string",
+      "definition": "The landlord named in the lease or in the latest assignment of it; compare it with the seller and the owner of record."
+    },
+    {
+      "key": "guarantor",
+      "label": "Guarantor",
+      "type": "string",
+      "definition": "Who guarantees the tenant's obligations, if anyone, and whether the guaranty is limited in amount or time; null when there is none."
+    },
+    {
+      "key": "premises",
+      "label": "Premises",
+      "type": "text",
+      "definition": "The suite or building leased and any exclusive yard, parking or storage areas, as the lease and its exhibits describe them."
+    },
+    {
+      "key": "rentableArea",
+      "label": "Rentable area",
+      "type": "integer",
+      "unit": "SF",
+      "definition": "The square feet the lease charges rent on, and the share of the building used for recoveries if the lease states a different figure."
+    },
+    {
+      "key": "commencementDate",
+      "label": "Commencement",
+      "type": "date",
+      "definition": "The date the current term began, taken from the lease or a signed commencement memorandum rather than the rent roll."
+    },
+    {
+      "key": "expirationDate",
+      "label": "Expiration",
+      "type": "date",
+      "definition": "The last day of the current term, after every amendment that extended or shortened it."
+    },
+    {
+      "key": "earliestExitDate",
+      "label": "Earliest exit",
+      "type": "date",
+      "definition": "The first date the tenant could stop paying rent under the lease, counting termination or kick-out rights and their notice periods; equals the expiration when the tenant has no early exit."
+    },
+    {
+      "key": "baseRentSchedule",
+      "label": "Base rent schedule",
+      "type": "list",
+      "definition": "Each rent period with its start date, monthly rent and annual rent per square foot, including fixed steps, index adjustments with their base month, floor and cap, and any free-rent months."
+    },
+    {
+      "key": "recoveryStructure",
+      "label": "Expense recovery structure",
+      "type": "enum",
+      "definition": "How operating expenses are shared: gross, modified gross, base year, expense stop or triple net, read from the lease's expense clause rather than its title."
+    },
+    {
+      "key": "expenseResponsibilities",
+      "label": "Who pays each expense",
+      "type": "list",
+      "definition": "For taxes, insurance, common area costs, utilities, roof and structure, building systems, management and capital replacements: who pays, and any stop, base year, cap or exclusion that limits the tenant's share."
+    },
+    {
+      "key": "securityDeposit",
+      "label": "Security deposit",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The deposit or letter of credit the lease requires, and any terms for reducing or returning it before the end of the term."
+    },
+    {
+      "key": "landlordObligationsOwed",
+      "label": "Landlord obligations still owed",
+      "type": "text",
+      "definition": "Free rent, improvement allowances, landlord work or commissions the lease promises that are not yet paid or done, with the amount and when each is due."
+    },
+    {
+      "key": "options",
+      "label": "Options and rights",
+      "type": "list",
+      "definition": "Each renewal, expansion, contraction, termination, purchase, first refusal or first offer right: who holds it, the notice window, and how rent or price is set when it is used."
+    },
+    {
+      "key": "assignmentAndUse",
+      "label": "Assignment and use",
+      "type": "text",
+      "definition": "Whether the tenant may assign or sublet and on what consent standard, the permitted use, any exclusive or go-dark right, and whether the original tenant stays liable after an assignment."
+    },
+    {
+      "key": "unusualClauses",
+      "label": "Unusual clauses",
+      "type": "list",
+      "definition": "Anything outside the ordinary run of the lease that could change income or value, such as co-tenancy, relocation, radius, casualty or condemnation terms, with the section number for each."
+    }
+  ]
+}

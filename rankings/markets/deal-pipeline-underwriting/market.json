@@ -1,0 +1,44 @@
+{
+  "id": "deal-pipeline-underwriting",
+  "name": "Deal pipeline and underwriting",
+  "what": "Deal tracking, underwriting and valuation software, including the newer AI underwriting tools.",
+  "order": 2,
+  "tasks": [
+    {
+      "id": "dp-deal-record",
+      "group": "task",
+      "title": "Create a deal and move its stage",
+      "question": "Can an agent create a deal and update its stage through the API?",
+      "weight": 2,
+      "full": "API documentation shows how to create deals and update their stage or status.",
+      "partial": "Deals can be read but not created or updated through the API, or only through a third-party integration."
+    },
+    {
+      "id": "dp-load-financials",
+      "group": "task",
+      "title": "Load a rent roll and operating statement",
+      "question": "Can an agent send a rent roll or operating statement and get structured data back?",
+      "weight": 2,
+      "full": "A documented API or upload endpoint accepts rent rolls or operating statements and returns structured data.",
+      "partial": "Only through the app's upload screen, or for only one of the two documents."
+    },
+    {
+      "id": "dp-model-outputs",
+      "group": "task",
+      "title": "Read underwriting outputs",
+      "question": "Can an agent pull underwriting outputs, such as cash flows, returns or value, as structured data?",
+      "weight": 2,
+      "full": "API endpoints or a documented export return cash flows, returns or valuation results as structured data.",
+      "partial": "Only some outputs, or only through a manual export in the app."
+    },
+    {
+      "id": "dp-documents",
+      "group": "task",
+      "title": "Attach and read deal documents",
+      "question": "Can an agent attach documents to a deal and read them back through the API?",
+      "weight": 2,
+      "full": "API documentation shows how to upload documents to a deal and list or download them.",
+      "partial": "Documents can be read but not uploaded through the API, or the reverse."
+    }
+  ]
+}

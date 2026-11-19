@@ -1,0 +1,33 @@
+{
+  "id": "build-investor-list",
+  "slug": "build-investor-list",
+  "kind": "process",
+  "title": "Build the investor list",
+  "summary": "Gather the people and family offices the sponsor already knows, with how each relationship started, before any offering opens.",
+  "phase": "raise",
+  "order": 105,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Gather the people and family offices the sponsor already knows",
+    "Record how and when each relationship began",
+    "Mark who has invested with the sponsor before",
+    "Note what the sponsor knew of each contact's finances and investing experience",
+    "Record who referred each contact and on what terms",
+    "Keep contacts met through public outreach on a separate list",
+    "Keep deal terms out of conversations until counsel clears the offering",
+    "Limit who can see and change the list",
+    "Date the list before any offering opens"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "set-up-investor-portal",
+  "slug": "set-up-investor-portal",
+  "kind": "process",
+  "title": "Set up the investor portal",
+  "summary": "Choose and configure the portal investors use to sign, fund, see reports and get tax forms.",
+  "phase": "raise",
+  "order": 120,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": []
+}

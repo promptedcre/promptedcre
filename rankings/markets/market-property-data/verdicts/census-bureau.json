@@ -1,0 +1,173 @@
+{
+  "vendor": "census-bureau",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "45bfb16f867c9d821fe92bb5e9c5e96483ad5cec11125230954ff88efbcb38c7",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "full",
+      "quality": 9,
+      "evidence": [
+        "c6",
+        "c2",
+        "c4",
+        "c5",
+        "c7"
+      ],
+      "rationale": "The public Census Data API User Guide documents querying the Bureau's raw statistical data (a key on every query, up to 50 variables per query, JSON output), which meets the full line for a data product.",
+      "missing": "No probe item confirms a live query works, and the pack quotes the guide's general rules rather than showing the per-dataset endpoint and variable reference."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item in the pack mentions a Model Context Protocol server from the Census Bureau.",
+      "missing": "Any mention of an official MCP server, its maintainer or setup steps."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows REST APIs and a user guide but no official SDK, CLI or package-registry listing.",
+      "missing": "Any vendor-maintained SDK or CLI on a public package registry or repository, or even official code samples."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "na",
+      "quality": 9,
+      "evidence": [
+        "c6",
+        "c10",
+        "c11"
+      ],
+      "rationale": "The API gives public access to published statistical data sets with dated releases (c6, c10, c11), not customer records, so the na condition for a published data set applies.",
+      "missing": "The pack does not say outright that no records change on a user's behalf; that rests on the API's description as public statistical data and the coverage note calling it read-only."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "partial",
+      "quality": 8,
+      "evidence": [
+        "c2",
+        "c3"
+      ],
+      "rationale": "An API key is required for every data query and can be registered free, but the pack notes it is a single key type with no scopes.",
+      "missing": "The guide's own wording on scopes is not quoted (the single-key, no-scopes point is a pack note), and nothing shows per-key limits, rotation or revocation."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item shows an OpenAPI, Swagger, GraphQL or other machine-readable specification for the Census APIs.",
+      "missing": "Any downloadable OpenAPI, Swagger, GraphQL or similar spec; the coverage checklist names a Discovery Tool and a dataset catalog at api.census.gov/data.html, but no item shows either is machine-readable or what it contains."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The documentation shown is an HTML user guide page and a PDF guide, with no llms.txt file or Markdown versions in the pack.",
+      "missing": "Any llms.txt file or Markdown versions of the documentation pages."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "na",
+      "quality": 9,
+      "evidence": [
+        "c6",
+        "c7",
+        "c1"
+      ],
+      "rationale": "The Data API, TIGERweb and Geocoder services shown only read published statistical data, boundaries and address coordinates, so there is nothing to protect by testing first.",
+      "missing": "The pack does not state outright that the services have no write operations; read-only status comes from the coverage note and the services' descriptions."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "full",
+      "quality": 6,
+      "evidence": [
+        "c5",
+        "c3",
+        "c4"
+      ],
+      "rationale": "The public user guide documents self-serve API output in JSON, with CSV also described, using a free key, so the data can be pulled in open formats without the Bureau's help.",
+      "missing": "The pack shows only query-based retrieval capped at 50 variables per query; it shows no whole-dataset bulk download file, and the CSV option is a pack note rather than a quoted line."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "full",
+      "quality": 9,
+      "evidence": [
+        "c3",
+        "c2"
+      ],
+      "rationale": "Anyone can register for the required API key free of charge by following the guide's steps, with the key arriving by email and no sales call shown.",
+      "missing": "No probe confirms the registration flow works, and the pack does not show the sign-up page itself."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "full",
+      "quality": 9,
+      "evidence": [
+        "c3"
+      ],
+      "rationale": "The public user guide states the API key is free of charge and the pack shows no paid plans, so what a small sponsor would pay (nothing) is published.",
+      "missing": "There is no dedicated pricing page in the pack, 'no paid plans' is a coverage note, and nothing says whether volume limits or fees apply."
+    },
+    {
+      "story": "md-property-lookup",
+      "verdict": "na",
+      "quality": 9,
+      "evidence": [
+        "c10",
+        "c7",
+        "c8",
+        "c6"
+      ],
+      "rationale": "The source publishes area-level demographic and housing statistics and boundaries, with the Geocoder returning only lat/lon and no parcels, so it does not describe individual properties.",
+      "missing": "The 'not individual properties' and 'no parcels' characterizations come from pack notes rather than quoted vendor text."
+    },
+    {
+      "story": "md-comps",
+      "verdict": "na",
+      "quality": 8,
+      "evidence": [
+        "c8",
+        "c10",
+        "c6"
+      ],
+      "rationale": "The source is aggregate demographic and housing statistics with no sale prices, so it does not cover sale or lease transactions.",
+      "missing": "The absence of sale prices is a pack note rather than vendor text, and the pack does not expressly address lease transactions."
+    },
+    {
+      "story": "md-owner",
+      "verdict": "na",
+      "quality": 9,
+      "evidence": [
+        "c8",
+        "c10",
+        "c7"
+      ],
+      "rationale": "The terms bar using the data to identify any individual, household or business, and the data has no owner names and covers areas rather than parcels, so the source does not describe individual properties.",
+      "missing": "The 'no owner names' and 'not individual properties' points are pack notes rather than quoted vendor text."
+    },
+    {
+      "story": "md-bulk-area",
+      "verdict": "full",
+      "quality": 5,
+      "evidence": [
+        "c6",
+        "c10",
+        "c7",
+        "c4"
+      ],
+      "rationale": "The documented Data API serves statistical data by Census geography down to the block-group level, with area boundaries referenced by FIPS codes, so an agent can query data for a whole area.",
+      "missing": "The pack does not show the area-query syntax or that a single query returns every sub-area record within a county, shape or radius, and each query is capped at 50 variables."
+    }
+  ]
+}

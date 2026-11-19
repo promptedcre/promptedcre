@@ -1,0 +1,124 @@
+{
+  "id": "lease",
+  "name": "Lease",
+  "what": "The signed lease and its amendments: the source document a lease abstract is made from.",
+  "fields": [
+    {
+      "key": "landlord",
+      "label": "Landlord",
+      "type": "string",
+      "definition": "The landlord named in the lease, and each later landlord shown by an assignment in the file."
+    },
+    {
+      "key": "tenant",
+      "label": "Tenant",
+      "type": "string",
+      "definition": "The tenant's legal name as it signed, and the names of any assignee or subtenant the file shows."
+    },
+    {
+      "key": "leaseDate",
+      "label": "Lease date",
+      "type": "date",
+      "definition": "The date the original lease is dated or made effective, read from its first page or signature page."
+    },
+    {
+      "key": "fullySigned",
+      "label": "Signed by all parties",
+      "type": "boolean",
+      "definition": "Whether the copy in hand carries every party's signature on the lease and on each amendment; an unsigned or partly signed copy is recorded as false."
+    },
+    {
+      "key": "amendments",
+      "label": "Amendments",
+      "type": "list",
+      "definition": "Each amendment, extension, side letter and commencement memorandum, with its date and a one-line note of what it changed, in date order."
+    },
+    {
+      "key": "exhibits",
+      "label": "Exhibits",
+      "type": "list",
+      "definition": "The exhibits the lease lists, such as the premises drawing, legal description, landlord work letter and rules, and whether each is attached to the copy in hand."
+    },
+    {
+      "key": "premises",
+      "label": "Premises",
+      "type": "text",
+      "definition": "The space leased as the lease describes it, with the address, suite and any exclusive outdoor area."
+    },
+    {
+      "key": "rentableArea",
+      "label": "Rentable area",
+      "type": "integer",
+      "unit": "SF",
+      "definition": "The square feet stated in the lease for rent, and whether the lease says the figure may be remeasured."
+    },
+    {
+      "key": "termDates",
+      "label": "Term",
+      "type": "text",
+      "definition": "The commencement and expiration dates of the current term as the lease and its latest amendment set them, and how commencement is triggered if it is not a fixed date."
+    },
+    {
+      "key": "baseRent",
+      "label": "Base rent",
+      "type": "list",
+      "definition": "The rent table in the lease and amendments: each period, its monthly rent and the rule for any change during the term."
+    },
+    {
+      "key": "expenseClause",
+      "label": "Expense clause",
+      "type": "text",
+      "definition": "The section that says which operating costs the tenant reimburses, how its share is figured, and when estimates and year-end reconciliations are due."
+    },
+    {
+      "key": "securityDeposit",
+      "label": "Security deposit",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The deposit amount the lease requires and the form it takes, cash or letter of credit."
+    },
+    {
+      "key": "lateChargeAndGrace",
+      "label": "Late charge and grace period",
+      "type": "text",
+      "definition": "The day rent is due, any grace period before it is late, and the late charge or default interest the lease sets: the amount or rate, the day it starts and whether notice must come first, with the section numbers; null where the lease sets none."
+    },
+    {
+      "key": "guaranty",
+      "label": "Guaranty",
+      "type": "text",
+      "definition": "Whether a guaranty supports the lease: each guarantor, the date of the guaranty, whether the copy in hand is signed, and any cap or release the lease or guaranty states. The guaranty itself is recorded as its own guaranty record."
+    },
+    {
+      "key": "landlordLien",
+      "label": "Landlord's lien",
+      "type": "text",
+      "definition": "Whether the lease waives or subordinates the landlord's statutory lien on the tenant's property in the premises, and whether it grants the landlord a contractual lien or security interest in that property, with the section numbers; record the lease's words, not a conclusion about what they do.",
+      "authority": "Tex. Prop. Code 54.021 (building landlord's lien)"
+    },
+    {
+      "key": "defaultAndCure",
+      "label": "Default and cure periods",
+      "type": "text",
+      "definition": "The events of default for each side, the notice each requires, and the cure period for a monetary and a non-monetary default, with the section numbers."
+    },
+    {
+      "key": "noticeProvisions",
+      "label": "Notice addresses and method",
+      "type": "text",
+      "definition": "Where and how notices to each party must be sent and when a notice counts as delivered, as updated by any amendment."
+    },
+    {
+      "key": "subordinationAndEstoppel",
+      "label": "Subordination and estoppel duties",
+      "type": "text",
+      "definition": "Whether the lease is subordinate to present and future mortgages, whether subordination depends on a non-disturbance agreement, and how many days the tenant has to sign an estoppel certificate."
+    },
+    {
+      "key": "memorandumRecorded",
+      "label": "Memorandum recorded",
+      "type": "boolean",
+      "definition": "Whether a memorandum of the lease has been recorded in the county records; null if the title commitment and the file do not say."
+    }
+  ]
+}

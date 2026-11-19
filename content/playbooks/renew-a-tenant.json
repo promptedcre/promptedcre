@@ -1,0 +1,488 @@
+{
+  "id": "renew-a-tenant",
+  "slug": "renew-a-tenant",
+  "kind": "process",
+  "title": "Renew a tenant",
+  "summary": "Calendar every expiration and option date from the leases, read what each side holds, learn the tenant's intent, price renewal against re-letting on the sponsor's own evidence, get the lender's and approvers' consent, and have counsel paper the extension.",
+  "phase": "operate",
+  "order": 315,
+  "featured": false,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-14",
+  "requires": [
+    "abstract-the-leases"
+  ],
+  "consumes": [
+    "lease",
+    "lease-abstract",
+    "rent-roll",
+    "comp-set",
+    "underwriting-model",
+    "loan-documents",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "investor-register"
+  ],
+  "produces": [
+    "lease",
+    "lease-abstract",
+    "rent-roll",
+    "comp-set",
+    "underwriting-model",
+    "tenant-estoppel",
+    "snda"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "tx-pr-91-001",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.91.htm",
+      "title": "Texas Property Code, Section 91.001, Notice for terminating certain tenancies",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "the tenancy terminates on whichever of the following days is the later",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-93-012",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.93.htm",
+      "title": "Texas Property Code, Sections 93.001 and 93.012, Applicability of chapter; assessment of charges",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "A landlord may not assess a charge, excluding a charge for rent or physical damage to the leased premises, to a tenant unless",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-93-008",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.93.htm",
+      "title": "Texas Property Code, Section 93.008, Records of security deposits",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "The landlord shall keep accurate records of all security deposits.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-93-005",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.93.htm",
+      "title": "Texas Property Code, Sections 93.005, 93.006 and 93.009, Refund of a commercial security deposit",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "not later than the 60th day after the date the tenant surrenders the premises",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bc-26-01",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.26.htm",
+      "title": "Texas Business and Commerce Code, Section 26.01, Promise or agreement must be in writing",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "a lease of real estate for a term longer than one year",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-14",
+      "quote": "To make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "build-the-lease-calendar",
+      "title": "Calendar the lease dates and the loan's leasing terms",
+      "instruction": "Starting from the lease abstract, confirm each date against the signed lease and every amendment: the expiration, each renewal option with its first and last notice day, any early termination right, and the notice method and address. The lease governs; correct the abstract where they differ. Then read the loan documents for which lease changes need the lender's consent or must meet stated leasing criteria, what a request must include, and any reserve or cash sweep that a lease expiring or not renewed by a date triggers; calendar those dates too. The deadline-calendar counts days forward and moves a result only to the next federal business day or not at all; dates counted back, or under a lease that defines business days otherwise, are worked by hand and checked by a second reader. Set reminders at a lead time the principal chooses.",
+      "mode": "agent",
+      "modeBasis": "Reading dates and leasing terms off the leases and the loan documents is document work.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "lease",
+        "lease-abstract",
+        "rent-roll",
+        "loan-documents"
+      ],
+      "produces": [
+        "lease-abstract"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "read-the-renewal-terms",
+      "title": "Read what the lease gives each side at expiration",
+      "instruction": "Write a renewal brief from the lease itself. For each option: its length, the conditions on exercise (no default, the tenant still in occupancy, no assignment), whether the notice is irrevocable, and how option rent is set: a fixed schedule, a formula on the prior rent, or a defined market rent with its own procedure. Record what the lease says about allowances in a renewal term, whether a guaranty reaches the renewal, restoration and surrender duties, and the holdover rent and whether a holdover becomes a month-to-month tenancy. In Texas, a month-to-month tenancy with rent paid monthly or longer ends by notice on the later of the date named or one month after notice (Prop. Code 91.001), unless both signed an instrument setting a different notice period or no notice, or there is a breach of contract recognized by law. Counsel says what unclear clauses mean.",
+      "mode": "agent",
+      "modeBasis": "Abstracting the renewal terms is document work; what an unclear clause means is counsel's conclusion.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-the-lease-calendar"
+      ],
+      "rules": [
+        "us-tx.property.notice-to-vacate"
+      ],
+      "consumes": [
+        "lease",
+        "lease-abstract"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-pr-91-001"
+      ],
+      "typeNotes": {
+        "retail": "Read whether the renewal carries forward percentage rent, exclusives, radius limits and any co-tenancy rights, and whether other tenants' leases tie their rights to this tenant staying open.",
+        "industrial": "Read the restoration and removal duties for racking, cranes, equipment and any alterations the tenant made, since they shape both the surrender and the cost of re-letting."
+      }
+    },
+    {
+      "id": "review-tenant-and-building",
+      "title": "Review the tenant's record and what the building needs",
+      "instruction": "From the tenant ledger, list the tenant's payment record over the lease and any open disputes or defaults. Read the financial statements the tenant and any guarantor have delivered under the lease, and list any the lease entitles the landlord to that have not arrived, for the principal to ask for. From the lease and the property file, list the landlord's open obligations to this tenant and the capital work the building needs whichever way the renewal goes, such as roof, mechanical systems or paving, with the estimate and where it came from. Note what a new tenant would likely need done to the space before it could move in, as a list for the principal to price, not a figure.",
+      "mode": "agent",
+      "modeBasis": "Reading the ledger, the statements, the lease and the property file is document work; nothing goes to the tenant from this step.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-the-renewal-terms"
+      ],
+      "consumes": [
+        "lease",
+        "lease-abstract",
+        "rent-roll"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "learn-the-tenants-intent",
+      "title": "Learn the tenant's plans in a conversation",
+      "instruction": "A principal, or the property manager under the principal's direction, meets or calls the tenant's decision maker before the option window opens. Learn whether the tenant intends to stay, whether it needs more space, less space or a different location, what drives its timing, who decides and when, whether it has hired a broker, and whether the building still serves its operation. Ask for any financial statements the lease entitles the landlord to that the tenant has not delivered. Offer no terms the principals have not approved, and do not suggest that a lease notice requirement is waived. Write a dated note of what was said and by whom, and file it with the renewal brief.",
+      "mode": "human-offline",
+      "modeBasis": "The conversation is a person's, held in a meeting or a call.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "review-tenant-and-building"
+      ],
+      "consumes": [
+        "lease-abstract"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "gather-market-evidence",
+      "title": "Gather the sponsor's own evidence for rent and concessions",
+      "instruction": "Collect evidence for the rent and concessions comparable space would command now: leases signed recently in competing buildings, confirmed with a party to the lease where possible; current asking terms; written broker opinions; and the sponsor's own recent leasing. For each figure, record its source, date, who confirmed it, the expense basis (net, gross or modified), the term, free rent, improvement allowance and commission, and put them on one expense basis. Leave out any figure no source supports, and say so where the evidence is thin. Where option rent is a defined market rent, measure each comparable against that definition. Save the set as the comp set for this renewal.",
+      "mode": "agent",
+      "modeBasis": "Gathering and recording comparables from the sponsor's files and data services is research work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-the-renewal-terms"
+      ],
+      "market": "market-property-data",
+      "consumes": [
+        "lease-abstract",
+        "comp-set"
+      ],
+      "produces": [
+        "comp-set"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "compare-renew-and-relet",
+      "title": "Compare the cost of renewing with the cost of re-letting",
+      "instruction": "Run the lease-rent calculator twice: the renewal at the terms under discussion, with any free rent, allowance and commission it carries, and a new lease at the rent and concessions the comp set supports, with its improvements and commission. Each run gives total rent and net effective rent. That calculator does not count downtime, so add the vacant months separately: the rent lost and the costs the owner carries while the space is empty, such as taxes, insurance, utilities and upkeep no tenant reimburses, from the budget. Run the lease-rollover calculator on the rent roll with its downtime check, entering a renewal probability and downtime for each expiring lease as the principal's judgment, with its basis recorded. Run the leverage calculator for coverage and break-even occupancy with the space vacant. Put both cases in the underwriting model for the principal.",
+      "mode": "agent",
+      "modeBasis": "The three calculators run from the rent roll, the comp set and the recorded inputs; the probability and downtime are the principal's.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "learn-the-tenants-intent",
+        "gather-market-evidence"
+      ],
+      "calculators": [
+        "lease-rent",
+        "lease-rollover",
+        "leverage"
+      ],
+      "consumes": [
+        "rent-roll",
+        "comp-set",
+        "underwriting-model",
+        "loan-documents"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "negotiate-the-terms",
+      "title": "Set the position and negotiate the renewal",
+      "instruction": "Before talks, the principal writes the position: the rent and terms to propose, what may be conceded, and the point at which the sponsor prefers to re-let, each tied to the comparison and to what the lender's leasing terms allow. A principal, or a leasing broker under a signed agreement, negotiates within it; a term outside it goes back to the principal first. A proposal sent to the tenant says it binds no one until a signed amendment, in words counsel approves, and a person approves each one before it goes. If the tenant exercises an option by notice instead, record the date and manner of receipt and send the notice to counsel, who says whether it meets the lease. Where option rent is a defined market rent, follow the lease's steps and timetable for setting it. Keep a dated record of each proposal and response.",
+      "mode": "human-online",
+      "modeBasis": "Setting the position and conceding terms bind the firm, so a person does both.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "compare-renew-and-relet"
+      ],
+      "consumes": [
+        "lease",
+        "lease-abstract",
+        "comp-set",
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "ask-for-lender-consent",
+      "title": "Ask for the lender's consent where the loan requires it",
+      "instruction": "From the leasing terms read from the loan documents, draft the consent request with the agreed terms, the draft amendment when ready and everything the documents say a request must include, to the notice address and by the method they name. Where counsel confirms the tenant validly exercised an option on terms the lease fixes, send instead whatever notice or request the documents require for an exercised option. Where no consent is required, record the clause that says so. A person approves the request before it goes, and nothing is signed before any required consent arrives. Calendar any period after which the documents deem consent given, and check that date by hand.",
+      "mode": "agent",
+      "modeBasis": "Drafting the request from the loan documents is document work; the request speaks for the borrower, so a person approves it.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "negotiate-the-terms"
+      ],
+      "consumes": [
+        "loan-documents",
+        "lease"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "approve-the-terms",
+      "title": "Approve the renewal terms",
+      "instruction": "Put the agreed terms, the comparison and the lender's position before the people the governing documents name for a lease decision, and record the approval in writing with its conditions. In a syndication, the manager or principals the deal entity agreement authorizes decide, and that agreement says whether a major lease needs any investor vote. In a fund, the manager decides within the authority the fund agreement gives it, with its investment committee where the agreement requires one, and its advisory committee where the fund agreement requires one for a transaction with a related party. In a joint venture, the capital partner's written consent is obtained where the JV agreement makes the lease a major decision. Where counsel confirms a valid option exercise fixed the terms, the approvers record it instead. Where a document is silent, the principals agree in writing how the decision is made.",
+      "mode": "human-online",
+      "modeBasis": "Approving lease terms commits the owning entity, so the people its documents name decide.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "negotiate-the-terms",
+        "ask-for-lender-consent"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "draft-the-amendment",
+      "title": "Draft the amendment or new lease",
+      "instruction": "Counsel drafts the lease amendment, or a new lease where the terms change too much to amend, from the approved terms and any conditions in the lender's consent; after a valid option exercise, counsel papers a confirmation of the new term and rent instead. The draft states the new term dates, the rent schedule, any allowance and how it is paid, which options are used and which remain, changes to expense provisions, holdover and surrender terms, and the guarantor's agreement where a guaranty must reach the new term. Under Texas law a commercial landlord may not assess a charge other than rent or physical damage unless its amount or computation method is stated in the lease, an exhibit or an amendment (Prop. Code 93.012), so every charge the renewal adds is stated there. The sponsor checks the draft against the approved terms.",
+      "mode": "human-online",
+      "modeBasis": "Drafting a lease amendment is legal drafting, which is counsel's.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "approve-the-terms"
+      ],
+      "consumes": [
+        "lease",
+        "lease-abstract",
+        "loan-documents"
+      ],
+      "produces": [
+        "lease"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-pr-93-012"
+      ],
+      "typeNotes": {
+        "multifamily": "Chapter 93 does not apply to rental property covered by chapter 92; counsel applies the residential rules."
+      }
+    },
+    {
+      "id": "sign-the-amendment",
+      "title": "Sign the amendment",
+      "instruction": "Once the approvals and any lender consent are in hand, the person the owning entity's agreement authorizes signs for the landlord. Confirm who signs for the tenant and that any guarantor signs its agreement. In Texas, a lease of real estate for a term longer than one year is not enforceable unless it, or a memorandum of it, is in writing and signed by the party to be charged or someone lawfully authorized to sign for it (Bus. & Com. Code 26.01). Electronic signatures work where the parties have agreed to deal electronically. Collect the fully signed amendment with every exhibit and save it with the lease. Any allowance or commission the amendment or a signed brokerage agreement creates is paid only when a person approves and releases it, on the conditions that document states.",
+      "mode": "human-online",
+      "modeBasis": "Signing binds the owning entity and releasing a payment moves money, so a person does both.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "ask-for-lender-consent",
+        "draft-the-amendment"
+      ],
+      "rules": [
+        "us-tx.contracts.statute-of-frauds",
+        "us-tx.ueta",
+        "us-fed.esign"
+      ],
+      "consumes": [
+        "lease"
+      ],
+      "produces": [
+        "lease"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-bc-26-01"
+      ]
+    },
+    {
+      "id": "update-the-records",
+      "title": "Update the records and collect the lender's tenant documents",
+      "instruction": "Update the lease abstract from the signed amendment: new term dates, rent schedule, options that remain and their notice windows, which go back into the lease calendar. Update the rent roll and re-run the lease-rollover calculator. Record the security deposit held and any change the amendment makes to it; a Texas commercial landlord must keep accurate records of all security deposits (Prop. Code 93.008). Prepare the tenant estoppel and any subordination, non-disturbance and attornment agreement the lender asks for, on the lender's form, from the amendment and the abstract. A person approves each request before it goes to the tenant. Compare each signed return with the amendment and the rent roll, and send any difference to the principal and counsel.",
+      "mode": "agent",
+      "modeBasis": "Updating records and filling forms from the signed amendment is document work; requests to the tenant go out with a person's approval.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-the-amendment"
+      ],
+      "calculators": [
+        "lease-rollover"
+      ],
+      "consumes": [
+        "lease",
+        "lease-abstract",
+        "rent-roll",
+        "loan-documents"
+      ],
+      "produces": [
+        "lease-abstract",
+        "rent-roll",
+        "tenant-estoppel",
+        "snda"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-pr-93-008"
+      ]
+    },
+    {
+      "id": "tell-lender-and-investors",
+      "title": "Tell the lender and investors what the documents require",
+      "instruction": "Send the lender the signed amendment and whatever else the loan documents require after a lease change, with the signed estoppel and agreement it asked for, to the notice address they name. Read the deal entity agreement, the fund agreement or the JV agreement for what investors or the capital partner must be told about a lease and when, and draft that report from the signed amendment and the updated model: the new term, the rent against the prior rent, the concessions and their cost, and the effect on projected cash flow. Rule 10b-5 bars untrue statements of material fact, and misleading omissions, in connection with buying or selling securities; where an offering is open or interests are changing hands, counsel decides what must be said. Tie every figure to the amendment and the model. A principal approves each item before it goes.",
+      "mode": "agent",
+      "modeBasis": "Drafting from the signed documents is writing work; anything sent to the lender, investors or a partner goes with a person's approval.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "update-the-records"
+      ],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "loan-documents",
+        "deal-entity-agreement",
+        "jv-agreement",
+        "investor-register",
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5"
+      ],
+      "sources": [
+        "ecfr-240-10b-5"
+      ]
+    },
+    {
+      "id": "prepare-for-surrender",
+      "title": "Take back the space if the tenant leaves",
+      "instruction": "If the tenant says it will leave, or the option window closes unused and talks fail, the re-leasing follows the lease-a-vacancy playbook, and the lender and investors are told what their documents require, drafted and approved as in the step above. Before the expiration, the principal sends the tenant its surrender and restoration duties from the lease. Walk the space at surrender with the tenant, record its condition, and collect keys. Holdover follows the lease and the renewal brief; counsel handles any notice to vacate. A Texas commercial landlord refunds the deposit, less lawful deductions and with a written itemized list of them, by the 60th day after the tenant surrenders and gives a written forwarding address (Prop. Code 93.005, 93.006, 93.009). A person approves the refund before it is paid.",
+      "mode": "human-offline",
+      "modeBasis": "The walk-through and taking back the space happen on site, and the refund moves money, so a person does both.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "learn-the-tenants-intent"
+      ],
+      "rules": [
+        "us-tx.property.commercial-security-deposit",
+        "us-tx.property.notice-to-vacate"
+      ],
+      "consumes": [
+        "lease",
+        "lease-abstract",
+        "rent-roll"
+      ],
+      "produces": [
+        "rent-roll"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-pr-93-005"
+      ],
+      "typeNotes": {
+        "industrial": "List any equipment, racking or stored materials left behind and send the list to counsel before anything is moved or disposed of.",
+        "multifamily": "Chapter 93 does not apply to rental property covered by chapter 92; counsel applies the residential rules to the deposit."
+      }
+    }
+  ],
+  "outlineSteps": []
+}

@@ -1,0 +1,362 @@
+{
+  "id": "phase-i-flags-condition",
+  "slug": "phase-i-flags-condition",
+  "kind": "situation",
+  "title": "The Phase I flags a recognized environmental condition",
+  "summary": "Work out what the finding means for the price, the loan and the contract's deadlines while the due diligence period is still open. Read it with the environmental professional, test if needed, and renegotiate, close or terminate in time.",
+  "phase": "acquire",
+  "order": 102,
+  "featured": true,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-12",
+  "situation": {
+    "trigger": "The Phase I environmental site assessment reports a recognized environmental condition during due diligence.",
+    "urgency": "days"
+  },
+  "requires": [
+    "negotiate-purchase-contract"
+  ],
+  "consumes": [
+    "phase-i-esa",
+    "purchase-and-sale-agreement",
+    "underwriting-model",
+    "jv-agreement"
+  ],
+  "produces": [
+    "phase-ii-esa",
+    "underwriting-model"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "ecfr-40-312",
+      "url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-J/part-312",
+      "title": "40 CFR Part 312, Innocent Landowners, Standards for Conducting All Appropriate Inquiries",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "quote": "Sampling and analysis may be conducted to develop information to address data gaps.",
+      "tier": "primary"
+    },
+    {
+      "id": "epa-aai",
+      "url": "https://www.epa.gov/brownfields/brownfields-all-appropriate-inquiries",
+      "title": "Brownfields All Appropriate Inquiries",
+      "publisher": "U.S. Environmental Protection Agency",
+      "accessed": "2026-11-12",
+      "quote": "must conduct AAI before acquiring the property and comply with all continuing obligations after acquiring the property",
+      "tier": "primary"
+    },
+    {
+      "id": "astm-e1903-19",
+      "url": "https://store.astm.org/e1903-19.html",
+      "title": "ASTM E1903-19, Standard Practice for Environmental Site Assessments: Phase II Environmental Site Assessment Process",
+      "publisher": "ASTM International",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-hs-361",
+      "url": "https://statutes.capitol.texas.gov/Docs/HS/htm/HS.361.htm",
+      "title": "Texas Health and Safety Code, Chapter 361, Subchapter S (Voluntary Cleanup Program)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "provide incentive to remediate property by removing liability of lenders and future landowners",
+      "tier": "primary"
+    },
+    {
+      "id": "tceq-vcp",
+      "url": "https://www.tceq.texas.gov/remediation/vcp",
+      "title": "Voluntary Cleanup Program (VCP)",
+      "publisher": "Texas Commission on Environmental Quality",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "tceq-iop",
+      "url": "https://www.tceq.texas.gov/remediation/iop/iop.html",
+      "title": "Innocent Owner/Operator Program (IOP)",
+      "publisher": "Texas Commission on Environmental Quality",
+      "accessed": "2026-11-12",
+      "quote": "the liability immunity acknowledged in IOCs does not cover future owners/operators",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "calendar-remaining-time",
+      "title": "Calendar the time left to act",
+      "instruction": "Put the feasibility deadline, any extension right, the date the deposit goes hard and the closing date beside the Phase I's own limits: the inquiry must fall within one year before acquisition, and the interviews, cleanup-lien search, records review, site visit and declaration within 180 days. A Phase II needs time to scope, sample, analyze and report, so count back from the deadline today and set the date each decision must be made.",
+      "mode": "agent",
+      "modeBasis": "The dates come from the contract and the report and follow fixed day counts.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-fed.epa.all-appropriate-inquiries"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "phase-i-esa"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-40-312"
+      ]
+    },
+    {
+      "id": "read-the-finding",
+      "title": "Read the finding and the professional's opinion",
+      "instruction": "Pin down exactly what the report says: the condition, where it is, the evidence behind it (a former use, a tank, staining, a listed site nearby) and whether the likely source is on the site or migrating from a neighbor. Read the data gaps and how much they matter, and any opinion on additional investigation, which the rule asks the professional to give if it has one. List the questions for the call: how likely contamination is, what sampling would show, and what a response might involve.",
+      "mode": "agent",
+      "modeBasis": "The finding, data gaps and opinion are in the written report an agent can read.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "calendar-remaining-time"
+      ],
+      "rules": [
+        "us-fed.epa.all-appropriate-inquiries"
+      ],
+      "consumes": [
+        "phase-i-esa"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-40-312",
+        "epa-aai"
+      ]
+    },
+    {
+      "id": "talk-with-the-professional",
+      "title": "Talk the finding through with the environmental professional",
+      "instruction": "On a call, have the environmental professional explain the finding in plain terms and, if warranted, propose a Phase II: where to sample, which media (soil, groundwater, soil vapor), which substances, the cost and the time to results. The rule allows sampling to fill data gaps. ASTM E1903-19 is the current Phase II practice; it is a paid standard, so get the proposed scope in writing. Ask whether the lender's environmental reviewer is likely to accept that scope. A principal decides whether to order it.",
+      "mode": "human-offline",
+      "modeBasis": "Interpreting the finding and designing the sampling are the environmental professional's judgment, given in conversation.",
+      "actor": "consultant",
+      "licensed": "environmental-professional",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-the-finding"
+      ],
+      "basis": "cited",
+      "sources": [
+        "astm-e1903-19",
+        "ecfr-40-312"
+      ]
+    },
+    {
+      "id": "secure-access-and-time",
+      "title": "Use the contract's access and extension rights",
+      "instruction": "Invasive testing usually needs the seller's consent under the contract's access clause, along with insurance certificates and a promise to restore the site. Counsel asks in writing for access and, if results cannot arrive before the deadline, for an extension of the feasibility period in a signed amendment. If the seller refuses, the choice narrows to terminating on time or going hard without the data.",
+      "mode": "human-online",
+      "modeBasis": "Requests under the contract and amendments to it are legal acts counsel handles and the parties sign.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "talk-with-the-professional"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "run-phase-ii",
+      "title": "Run the Phase II sampling",
+      "instruction": "The environmental professional samples the agreed locations and media, has a laboratory analyze them and reports what was found against the standards that apply. In Texas, TCEQ lists its Texas Risk Reduction Program rules among the legal authority for the Voluntary Cleanup Program, so ask the professional to report in those terms and to give a cost range and timeline for any response the results call for. Keep the report with the Phase I.",
+      "mode": "human-offline",
+      "modeBasis": "Sampling is fieldwork done by the environmental professional and a laboratory.",
+      "actor": "consultant",
+      "licensed": "environmental-professional",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "secure-access-and-time"
+      ],
+      "produces": [
+        "phase-ii-esa"
+      ],
+      "basis": "cited",
+      "sources": [
+        "astm-e1903-19",
+        "tceq-vcp"
+      ]
+    },
+    {
+      "id": "tell-the-lender",
+      "title": "Tell the lender early",
+      "instruction": "Send the lender the Phase I and the planned Phase II before its own reviewer raises them. Ask what it will need to keep the loan on track: the Phase II, a cleanup plan or cost estimate, a reserve or holdback, enrollment in a state program, or environmental insurance. A lender that reprices or pulls back is its own situation.",
+      "mode": "human-online",
+      "modeBasis": "The lender relationship and what is disclosed in it are a principal's call.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "talk-with-the-professional"
+      ],
+      "consumes": [
+        "phase-i-esa"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "check-texas-programs",
+      "title": "Check TCEQ's cleanup programs for the site",
+      "instruction": "Search TCEQ's public Voluntary Cleanup Program site list and its Central Registry for the property. A buyer that is not a responsible party is released from liability to the state for cleanup of the areas a VCP certificate of completion covers, except releases it causes, and loses that release by changing to a riskier land use. Entry takes an application, a $1,000 fee, an agreement and payment of TCEQ's oversight costs. If the contamination comes from a neighbor, TCEQ's Innocent Owner/Operator Program certifies innocent owners, but a buyer can apply only after it owns the site.",
+      "mode": "agent-browser",
+      "modeBasis": "TCEQ's site lists, registry and program pages are public websites that need no sign-in.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-the-finding"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.tceq.voluntary-cleanup"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-hs-361",
+        "tceq-vcp",
+        "tceq-iop"
+      ]
+    },
+    {
+      "id": "price-the-finding",
+      "title": "Price the finding into the deal",
+      "instruction": "Put the professional's cost range for investigation, cleanup, monitoring and any program fees into the model, with the time it would take and any effect on use, leasing or the loan, then re-run returns. If the price changes because of contamination, record why: the rule asks the buyer to consider whether the price reflects uncontaminated value and, if not, whether contamination explains the gap. Draft the options: a price reduction, a seller cleanup before closing, an escrow or holdback, an indemnity, or walking away.",
+      "mode": "agent",
+      "modeBasis": "This is modeling and drafting from the reports and the contract already in the file.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "run-phase-ii",
+        "tell-the-lender",
+        "check-texas-programs"
+      ],
+      "rules": [
+        "us-fed.epa.all-appropriate-inquiries"
+      ],
+      "calculators": [
+        "returns-sensitivity"
+      ],
+      "market": "deal-pipeline-underwriting",
+      "consumes": [
+        "phase-ii-esa",
+        "underwriting-model"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-40-312"
+      ]
+    },
+    {
+      "id": "jv-partner-consent",
+      "title": "Bring the JV partner into the decision",
+      "instruction": "A price change, an extension or a decision to close over a known condition is likely a major decision under the JV agreement. Share the reports and the priced options with the capital partner and get its written position before anyone sends the seller an offer or a notice.",
+      "mode": "human-online",
+      "modeBasis": "The consent is the capital partner's own decision under the JV agreement.",
+      "actor": "investor",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "price-the-finding"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "renegotiate-close-or-terminate",
+      "title": "Renegotiate, close or terminate before the deadline",
+      "instruction": "A principal decides before the feasibility deadline. Renegotiate: counsel puts any price change, cleanup covenant, escrow or indemnity in a signed amendment. Close: a buyer that proceeds knowing of contamination relies on bona fide prospective purchaser protection, which requires all appropriate inquiries before acquisition and compliance with continuing obligations afterward; ask counsel what those mean for this site. Terminate: deliver the notice by the contract's method before the deadline and request the deposit back. Keep the reports in the deal file either way.",
+      "mode": "human-online",
+      "modeBasis": "Committing to the deal, changing it or ending it is the principal's decision, and the notice binds the buyer.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "price-the-finding",
+        "jv-partner-consent"
+      ],
+      "rules": [
+        "us-fed.epa.all-appropriate-inquiries"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "epa-aai",
+        "ecfr-40-312"
+      ]
+    }
+  ],
+  "outlineSteps": []
+}

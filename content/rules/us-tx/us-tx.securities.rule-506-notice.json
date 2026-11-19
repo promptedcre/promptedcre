@@ -1,0 +1,41 @@
+{
+  "id": "us-tx.securities.rule-506-notice",
+  "jurisdiction": "us-tx",
+  "title": "Texas notice filing for Rule 506 offerings",
+  "rule": "For a Rule 506 offering with sales in Texas, the issuer gives the Texas Securities Commissioner a notice on Form D when it files with the SEC, and no later than 15 days after the first sale in Texas. The fee is one-tenth of 1% of the offering amount, capped at $500. The notice and the fee both go through NASAA's EFD system. The notice stays effective until the offering is completed or terminated.",
+  "citation": {
+    "authority": "7 Tex. Admin. Code 114.4(b)(1) and (f)(5); Tex. Gov't Code 4006.052",
+    "url": "https://www.law.cornell.edu/regulations/texas/7-Tex-Admin-Code-SS-114-4"
+  },
+  "asOf": "2026-11-11",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Texas State Securities Board rule changes to Chapter 114 or fee changes in Chapter 4006.",
+  "sources": [
+    {
+      "id": "tac-114-4",
+      "url": "https://www.law.cornell.edu/regulations/texas/7-Tex-Admin-Code-SS-114-4",
+      "title": "7 Tex. Admin. Code 114.4, Filings and Fees",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-14",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gov-code-4006",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.4006.htm",
+      "title": "Texas Government Code, Chapter 4006 (Securities Act fees)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "A fee charged under this section may not exceed $500.",
+      "tier": "primary"
+    },
+    {
+      "id": "ssb-exemptions",
+      "url": "https://www.ssb.texas.gov/securities-professionals/regulation-securities/exemptions-registration",
+      "title": "Exemptions from Registration",
+      "publisher": "Texas State Securities Board",
+      "accessed": "2026-11-14",
+      "tier": "primary"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "confirm-zoning-and-use",
+  "slug": "confirm-zoning-and-use",
+  "kind": "process",
+  "title": "Confirm zoning and permitted use",
+  "summary": "Confirm the zoning, that the current and planned uses are allowed, and any open code violations.",
+  "phase": "acquire",
+  "order": 262,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Identify the parcel and the jurisdiction that zones it",
+    "Find the zoning district and any overlay",
+    "Read the district's permitted uses against current and planned use",
+    "Check conditions, variances and nonconforming status",
+    "Get the certificate of occupancy and permit history",
+    "Ask the jurisdiction about open code violations",
+    "Check private deed restrictions and covenants",
+    "Check whether another tenant type could reuse the building",
+    "Note pending zoning or regulatory changes",
+    "Order a zoning report if the lender requires one",
+    "Record findings and open items in the diligence file"
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "vendor": "realpage-ims",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "f9816e0f30b477fb903d395f7bd7df247d02437d3b8902c9d9948018085d1cb1",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "partial",
+      "quality": 2,
+      "evidence": [
+        "c9",
+        "c11"
+      ],
+      "rationale": "RealPage's RPX blurb claims standardized APIs across all RealPage products (c9) and a RealPage Developer Portal exists but only its title could be read (c11), so the vendor says there is an API while the pack shows no public API documentation for IMS.",
+      "missing": "No public API reference for IMS and nothing on which investor, commitment, contribution or distribution records an API reads or changes; the developer portal's content was not read; c9 does not name IMS, and the AIM data-extraction API (c7) belongs to a different product."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Nothing in the pack mentions an MCP server for IMS or any other RealPage product.",
+      "missing": "Any official MCP server for IMS, its setup steps or its release status."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c8"
+      ],
+      "rationale": "The pack shows no SDK, CLI, package or public repository, and the only tooling mentioned is an Excel Add-In and Power BI for the separate AIM product (c8).",
+      "missing": "Any vendor-maintained SDK or CLI on a public registry or repository, or even code samples, for IMS."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no webhooks, event subscriptions or event types for IMS records.",
+      "missing": "Any documented webhooks or event subscriptions for investors, commitments, contributions or distributions, directly or through an automation platform."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no API keys, OAuth clients, scopes or permission model for IMS credentials.",
+      "missing": "How API credentials are issued and whether scopes, roles or permissions limit what a credential can do."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no OpenAPI, Swagger, GraphQL or other machine-readable API specification.",
+      "missing": "Any machine-readable API specification for IMS, public or behind a login; the developer portal's content was not read."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c11"
+      ],
+      "rationale": "The developer portal renders only in the browser and text tools read only its title (c11), and the pack shows no llms.txt file or Markdown documentation pages.",
+      "missing": "Whether an llms.txt file or Markdown versions of the documentation exist; no llms.txt check is recorded in the pack."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no sandbox, test mode or developer environment for IMS.",
+      "missing": "Any sandbox or test environment for IMS, self-serve or on request."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c7",
+        "c8"
+      ],
+      "rationale": "The pack shows no bulk export of IMS records, and the data-extraction API, Excel Add-In and Power BI claims (c7, c8) belong to the separate AIM product.",
+      "missing": "Any documented IMS export of investor, commitment, contribution or distribution records in CSV, JSON, Excel or another open format."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c6"
+      ],
+      "rationale": "The IMS page's only call to action is Contact Sales, with no sign-up or trial (c6).",
+      "missing": "Any self-serve sign-up, free trial or limited self-serve tier."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c6"
+      ],
+      "rationale": "No pricing page was found (/pricing is a 404) and the IMS page offers only Contact Sales with no price (c6).",
+      "missing": "Any published price, starting price or fee for an IMS plan."
+    },
+    {
+      "story": "ip-create-investor",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c4"
+      ],
+      "rationale": "The pack shows no API for creating investors or sending subscription documents, and collecting commitments for capital raises is described only as an in-app feature (c4).",
+      "missing": "API documentation for creating investor records and for sending or starting subscription documents, directly or through a third-party integration."
+    },
+    {
+      "story": "ip-distribution",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c2",
+        "c3"
+      ],
+      "rationale": "The pack shows no API for creating or reading distributions or generating notices, only claims of automated waterfall calculations and statement generation (c2) and an integration of distributions with RealPage's own Financial Suite (c3).",
+      "missing": "API documentation for creating or reading distributions and for generating or sending investor notices."
+    },
+    {
+      "story": "ip-register",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c3"
+      ],
+      "rationale": "The pack shows no API endpoint or export that returns investors, commitments and contributions, only an integration of entity structures, contributions and distributions with RealPage's own Financial Suite (c3).",
+      "missing": "Any API endpoint or documented export (JSON or CSV) of investors, commitments and contributions, or even a manual in-app export."
+    },
+    {
+      "story": "ip-capital-call",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c4",
+        "c5"
+      ],
+      "rationale": "Requesting capital and tracking incoming funding are described only as in-app features (c4, c5), and the pack shows no API for creating capital calls or reading funding status.",
+      "missing": "API documentation for creating capital calls and reading each investor's funding status."
+    }
+  ]
+}

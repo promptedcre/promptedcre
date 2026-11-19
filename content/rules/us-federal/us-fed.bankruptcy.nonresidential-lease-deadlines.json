@@ -1,0 +1,34 @@
+{
+  "id": "us-fed.bankruptcy.nonresidential-lease-deadlines",
+  "jurisdiction": "us-federal",
+  "title": "Tenant bankruptcy: performing a nonresidential lease and the deadline to assume or reject it",
+  "rule": "In a tenant's bankruptcy, the trustee must timely perform the tenant's obligations under an unexpired nonresidential real property lease arising from and after the order for relief until the lease is assumed or rejected; for cause, the court may extend time for obligations arising in the first 60 days, but not past that period. The lease is deemed rejected, and the premises surrendered, unless assumed or rejected by the earlier of 120 days after the order for relief or plan confirmation. Before day 120 the court may extend 90 days for cause; further extensions need the landlord's prior written consent. The 2020 temporary 210-day period ended December 27, 2022.",
+  "citation": {
+    "authority": "11 U.S.C. 365(d)(3) and (d)(4)",
+    "url": "https://www.law.cornell.edu/uscode/text/11/365"
+  },
+  "asOf": "2026-11-13",
+  "lastVerified": "2026-11-13",
+  "review": "ai-drafted",
+  "changeWatch": "The 210-day period enacted December 27, 2020 (Pub. L. 116-260) reverted to 120 days on December 27, 2022, surviving only for subchapter V cases filed before that date; watch for any new temporary extension or other amendment to section 365(d).",
+  "sources": [
+    {
+      "id": "usc-11-365-d",
+      "url": "https://www.law.cornell.edu/uscode/text/11/365",
+      "title": "11 U.S.C. 365(d)(3) and (d)(4), Executory contracts and unexpired leases",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "the date that is 120 days after the date of the order for relief",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-11-365-2020-note",
+      "url": "https://www.law.cornell.edu/uscode/text/11/365",
+      "title": "11 U.S.C. 365, Effective Date of 2020 Amendment (statutory note)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "the amendment made by section 1001(f)(2)(A) is effective on the date that is 2 years after Dec. 27, 2020",
+      "tier": "primary"
+    }
+  ]
+}

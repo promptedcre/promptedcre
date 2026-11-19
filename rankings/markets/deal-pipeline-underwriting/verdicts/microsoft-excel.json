@@ -1,0 +1,152 @@
+{
+  "vendor": "microsoft-excel",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "ea467471624b64728376bac96cf16c4696b9245f3ec8f220c995a2f136e6154b",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c1",
+        "c2",
+        "c3",
+        "c5",
+        "c6"
+      ],
+      "rationale": "The public Microsoft Learn page for the Graph Excel API documents REST create, read, update and delete operations on workbooks (c1, c2), and the add-ins docs cover reading and writing worksheets, ranges, tables and named items (c6), though the REST API reaches only Office Open XML files on the business platform (c3, c5).",
+      "missing": "The pack does not show endpoint-level Graph reference for worksheets, tables or ranges, and the REST API does not reach .xls workbooks or files stored outside the business platform, such as workbooks on a user's device."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "partial",
+      "quality": 3,
+      "evidence": [
+        "c10",
+        "p1"
+      ],
+      "rationale": "Microsoft documents its Work IQ MCP server for Microsoft 365 on a page the probe confirms resolves (c10, p1), but the page names no Excel tools and the pack shows no setup steps.",
+      "missing": "The pack shows no setup steps, no Excel-specific tools, nothing showing the server can read or change Excel workbooks, and no Excel-specific official MCP server."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "full",
+      "quality": 5,
+      "evidence": [
+        "c8",
+        "c1"
+      ],
+      "rationale": "Microsoft documents its own Microsoft Graph SDKs for building apps that access Microsoft Graph (c8), the platform that hosts the Excel workbook API (c1).",
+      "missing": "The pack does not show the SDKs on a public package registry or repository, which languages they cover, or any Excel-specific SDK methods; Excel coverage is inferred from Graph hosting the Excel API."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "partial",
+      "quality": 6,
+      "evidence": [
+        "c9"
+      ],
+      "rationale": "Graph change notifications can be subscribed at the OneDrive folder level (driveItem content under /drives/{id}/root), and the resource table lists no workbook ranges or cells (c9).",
+      "missing": "The pack shows no event subscriptions on workbook contents such as worksheets, tables, ranges or cells, so an agent learns only that something in the drive changed and must read the workbook to see what."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "full",
+      "quality": 6,
+      "evidence": [
+        "c4"
+      ],
+      "rationale": "The Graph Excel docs list permission scopes for the Excel resource, Files.ReadWrite for read and write actions with Files.Read as the read-only scope (c4), so a credential can be held to file read or read-write access.",
+      "missing": "Only Files.ReadWrite is quoted (Files.Read comes from the note), the scopes shown are file-wide with nothing narrower such as one workbook, and the pack does not name the credential type or show how an agent registers its own client."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack contains no OpenAPI, Swagger, GraphQL or other machine-readable description of the Graph Excel API or the add-ins API.",
+      "missing": "No machine-readable API specification is shown, downloadable or in the docs."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no llms.txt file and no Markdown versions of the Microsoft Learn Excel or Graph documentation.",
+      "missing": "No llms.txt file or Markdown versions of documentation pages are shown."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no sandbox, test tenant or developer environment for working against the Excel API before touching live workbooks.",
+      "missing": "No self-serve or on-request sandbox, test mode or developer environment is shown."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "full",
+      "quality": 4,
+      "evidence": [
+        "c3",
+        "c14"
+      ],
+      "rationale": "The records are Office Open XML (Excel-format) workbooks (c3) that can be stored on the customer's own device (c14), so the data already sits in an open format the customer holds, although no export feature is documented.",
+      "missing": "The pack documents no export or bulk-download feature, such as downloading many workbooks from OneDrive for Business at once or exporting to CSV or JSON; this verdict rests on the file format and local storage, not an export page."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "full",
+      "quality": 5,
+      "evidence": [
+        "c13"
+      ],
+      "rationale": "The Excel product page lists a public price for Microsoft 365 Personal (now starting from $69.99) and Excel for the web as free (c13), which points to buying or starting without a sales call.",
+      "missing": "The pack does not show the sign-up or checkout flow, a free trial, or self-serve purchase of a business plan; the absence of a sales call is inferred from the published price."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "partial",
+      "quality": 7,
+      "evidence": [
+        "c13"
+      ],
+      "rationale": "The pricing page shows only a 'starting from' price, a first-year $69.99 offer for Microsoft 365 Personal, plus Excel for the web listed as free (c13), with no prices shown for business plans.",
+      "missing": "The pack does not show prices for any Microsoft 365 business plan; the only figures are a first-year 'starting from' price for Microsoft 365 Personal and free Excel for the web."
+    },
+    {
+      "story": "dp-deal-record",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack documents no deal record or stage field; the Excel API is described only as generic workbook read and write, with no deal semantics.",
+      "missing": "No API documentation for creating a deal or updating its stage is shown; a deal would be a user-built row in a workbook with no documented deal or stage operations."
+    },
+    {
+      "story": "dp-load-financials",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Nothing in the pack shows an API or upload endpoint that accepts rent rolls or operating statements and returns structured data.",
+      "missing": "No rent roll or operating statement intake, parsing or extraction is shown, through the API or the app."
+    },
+    {
+      "story": "dp-model-outputs",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no endpoint or documented export for underwriting outputs such as cash flows, returns or valuation; only generic workbook reads are described.",
+      "missing": "No documented way to pull cash flows, returns or valuation results as structured data is shown; any such outputs would be cells in a user-built model with no documented output endpoints."
+    },
+    {
+      "story": "dp-documents",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no API for attaching documents to a deal or for listing and downloading them.",
+      "missing": "No document upload, list or download operations tied to a deal are shown."
+    }
+  ]
+}

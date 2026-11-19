@@ -1,0 +1,487 @@
+{
+  "id": "choose-structure-and-exemption",
+  "slug": "choose-structure-and-exemption",
+  "kind": "process",
+  "title": "Choose the capital structure and offering exemption",
+  "summary": "Pick a single-asset syndication, a blind-pool fund or a joint venture, and the exemption the raise relies on: Rule 506(b), Rule 506(c) or, for one capital partner, Section 4(a)(2) alone. Agents test the investor list and the plan against each rule; counsel makes the call before the first investor conversation.",
+  "phase": "raise",
+  "order": 100,
+  "featured": true,
+  "depth": "full",
+  "review": "practitioner-reviewed",
+  "lastVerified": "2026-11-12",
+  "requires": [
+    "form-sponsor-entity"
+  ],
+  "consumes": [
+    "underwriting-model",
+    "sponsor-operating-agreement"
+  ],
+  "produces": [],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "ecfr-230-501",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.501",
+      "title": "17 CFR 230.501, Definitions and terms used in Regulation D",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-502",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.502",
+      "title": "17 CFR 230.502, General conditions to be met",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-506",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.506",
+      "title": "17 CFR 230.506, Exemption for limited offers and sales without regard to dollar amount of offering",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "quote": "35 purchasers of securities from the issuer in offerings under this section in any 90-calendar-day period",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-3a4-1",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.3a4-1",
+      "title": "17 CFR 240.3a4-1, Associated persons of an issuer deemed not to be brokers",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "quote": "Is not compensated in connection with his participation by the payment of commissions or other remuneration based either directly or indirectly on transactions in securities",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-cdi-securities-act-rules",
+      "url": "https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/securities-act-rules",
+      "title": "Securities Act Rules: Compliance and Disclosure Interpretations (Sections 255 to 260)",
+      "publisher": "U.S. Securities and Exchange Commission, Division of Corporation Finance",
+      "accessed": "2026-11-12",
+      "quote": "The use of general solicitation continues to be incompatible with a claim of exemption under Section 4(a)(2).",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-506b-page",
+      "url": "https://www.sec.gov/resources-small-businesses/exempt-offerings/private-placements-rule-506b",
+      "title": "Private Placements - Rule 506(b)",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-506c-page",
+      "url": "https://www.sec.gov/resources-small-businesses/exempt-offerings/general-solicitation-rule-506c",
+      "title": "General solicitation — Rule 506(c)",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-506c-no-action",
+      "url": "https://www.sec.gov/rules-regulations/no-action-interpretive-exemptive-letters/division-corporation-finance-no-action/latham-watkins-503c-031225",
+      "title": "No-action letter on Rule 506(c) verification through minimum investment amounts (March 12, 2025)",
+      "publisher": "U.S. Securities and Exchange Commission, Division of Corporation Finance",
+      "accessed": "2026-11-12",
+      "quote": "This letter, like all staff statements, has no legal force or effect",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-506c-incoming",
+      "url": "https://www.sec.gov/files/corpfin/no-action/latham-watkins506c-031225-incoming.pdf",
+      "title": "Request for Rule 506(c) interpretive guidance (incoming letter, March 6, 2025)",
+      "publisher": "U.S. Securities and Exchange Commission (no-action file)",
+      "accessed": "2026-11-12",
+      "quote": "of at least $200,000 for natural persons and at least $1,000,000 for legal entities",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-exempt-faq",
+      "url": "https://www.sec.gov/resources-small-businesses/exempt-offerings/frequently-asked-questions-about-exempt-offerings",
+      "title": "Frequently Asked Questions About Exempt Offerings",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-bd-guide",
+      "url": "https://www.sec.gov/divisions/marketreg/bdguide.htm",
+      "title": "Guide to Broker-Dealer Registration (Division of Trading and Markets, April 2008)",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-12",
+      "quote": "a person who sells securities that are exempt from registration under Regulation D of the 1933 Act must nevertheless register as a broker-dealer",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-form-d",
+      "url": "https://www.sec.gov/files/formd.pdf",
+      "title": "Form D, Notice of Exempt Offering of Securities, with instructions (OMB 3235-0076)",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-77d",
+      "url": "https://www.law.cornell.edu/uscode/text/15/77d",
+      "title": "15 U.S.C. 77d, Exempted transactions",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "quote": "transactions by an issuer not involving any public offering",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-77r",
+      "url": "https://www.law.cornell.edu/uscode/text/15/77r",
+      "title": "15 U.S.C. 77r, Exemption from State regulation of securities offerings",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-80a-2",
+      "url": "https://www.law.cornell.edu/uscode/text/15/80a-2",
+      "title": "15 U.S.C. 80a-2, Definitions; applicability; rulemaking considerations",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "quote": "who owns not less than $5,000,000 in investments",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-80a-3",
+      "url": "https://www.law.cornell.edu/uscode/text/15/80a-3",
+      "title": "15 U.S.C. 80a-3, Definition of investment company",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "quote": "beneficially owned by not more than one hundred persons",
+      "tier": "primary"
+    },
+    {
+      "id": "howey",
+      "url": "https://supreme.justia.com/cases/federal/us/328/293/",
+      "title": "SEC v. W.J. Howey Co., 328 U.S. 293 (1946)",
+      "publisher": "Justia (opinion text)",
+      "accessed": "2026-11-12",
+      "quote": "The test is whether the scheme involves an investment of money in a common enterprise with profits to come solely from the efforts of others.",
+      "tier": "primary"
+    },
+    {
+      "id": "williamson",
+      "url": "https://openjurist.org/645/f2d/404",
+      "title": "Williamson v. Tucker, 645 F.2d 404 (5th Cir. 1981)",
+      "publisher": "OpenJurist (opinion text)",
+      "accessed": "2026-11-12",
+      "quote": "an investor who claims his general partnership or joint venture interest is an investment contract has a difficult burden to overcome",
+      "tier": "primary"
+    },
+    {
+      "id": "ssb-exemptions",
+      "url": "https://www.ssb.texas.gov/securities-professionals/regulation-securities/exemptions-registration",
+      "title": "Exemptions from Registration",
+      "publisher": "Texas State Securities Board",
+      "accessed": "2026-11-12",
+      "quote": "are self-executing, and therefore do not require a filing or a fee",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "profile-the-raise",
+      "title": "Write down the raise in one page",
+      "instruction": "From the underwriting model and the sponsor's notes, write down the facts every later step tests: one property or a pool of future deals; the equity needed and the minimum check; how many investors, who they are, whether each is accredited, and how the sponsor knows them; whether the sponsor wants to market the deal publicly; whether anyone will be paid for bringing in investors; and the states where investors live. Mark each answer known or assumed. Unknowns become questions for the sponsor, not guesses.",
+      "mode": "agent",
+      "modeBasis": "The facts come from the model and the sponsor's notes; an agent assembles them and flags the gaps.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "consumes": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "list-investor-relationships",
+      "title": "List prospects and how each relationship began",
+      "instruction": "For each prospective investor, the sponsor states when and how the relationship began and what the sponsor knew about the person's finances and investing experience before any offering started. SEC staff treats a pre-existing, substantive relationship as one way, not the only way, to show that offers were not a general solicitation. Pre-existing means formed before the offering began, or through a registered broker-dealer or adviser before it joined the offering; substantive means the sponsor had enough information to evaluate, and did evaluate, the person's financial circumstances and sophistication. A self-certification checkbox alone does not make a relationship substantive.",
+      "mode": "human-online",
+      "modeBasis": "Only the sponsor knows when and how each relationship formed; an agent can format the list but cannot attest to it.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "profile-the-raise"
+      ],
+      "rules": [
+        "us-fed.reg-d.general-solicitation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "sec-cdi-securities-act-rules"
+      ]
+    },
+    {
+      "id": "confirm-interests-are-securities",
+      "title": "Check whether the interests are securities",
+      "instruction": "Map the planned interest to the Supreme Court's investment-contract test: an investment of money in a common enterprise with profits to come solely from the efforts of others. Passive investors in a syndication or fund who rely on the sponsor to buy, run and sell the property line up with each element, which is why the exemption steps that follow matter. Write a short note tying each element to the deal terms for counsel, who decides. A joint venture with one active capital partner gets its own test in a later step.",
+      "mode": "agent",
+      "modeBasis": "Mapping deal terms to a published test is analysis; the legal conclusion stays with counsel.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "profile-the-raise"
+      ],
+      "rules": [
+        "us-fed.securities.jv-interests"
+      ],
+      "basis": "cited",
+      "sources": [
+        "howey"
+      ]
+    },
+    {
+      "id": "test-rule-506b",
+      "title": "Test the raise against Rule 506(b)",
+      "instruction": "Rule 506(b) suits a raise from people the sponsor already knows. Check the plan against it: no general solicitation or advertising by the sponsor or anyone acting for it; any number of accredited investors; no more than 35 non-accredited purchasers in any 90-calendar-day period, each able to evaluate the merits and risks alone or with a purchaser representative. Selling to even one non-accredited investor requires Rule 502(b) disclosure, including financial statements, so note that cost. Flag every prospect without a documented relationship; whether an offer to them would be a general solicitation depends on the facts, so it goes to counsel.",
+      "mode": "agent",
+      "modeBasis": "The conditions are written rules applied to the prospect list and the marketing plan.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-investor-relationships"
+      ],
+      "rules": [
+        "us-fed.reg-d.rule-506b",
+        "us-fed.reg-d.general-solicitation",
+        "us-fed.reg-d.information-requirements"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-506",
+        "ecfr-230-501",
+        "ecfr-230-502",
+        "sec-506b-page",
+        "sec-cdi-securities-act-rules"
+      ]
+    },
+    {
+      "id": "test-rule-506c",
+      "title": "Test the raise against Rule 506(c)",
+      "instruction": "Rule 506(c) allows public marketing, such as a website or an open webinar, if every buyer is an accredited investor and the sponsor takes reasonable steps to verify each one, even buyers who plainly qualify. Note which verification route fits the investor base: tax forms, recent asset and credit documents, a recent letter from a CPA, attorney, broker-dealer or SEC-registered adviser, or, under the SEC staff position, a minimum investment of at least $200,000 per individual or $1,000,000 per entity with written representations. Once the sponsor has generally solicited, a failed Rule 506(c) offering cannot fall back on Section 4(a)(2).",
+      "mode": "agent",
+      "modeBasis": "The conditions and the staff position are published; matching them to the investor base is analysis.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "profile-the-raise"
+      ],
+      "rules": [
+        "us-fed.reg-d.rule-506c",
+        "us-fed.reg-d.accredited-investor"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-506",
+        "sec-506c-page",
+        "sec-cdi-securities-act-rules",
+        "sec-506c-no-action",
+        "sec-506c-incoming"
+      ]
+    },
+    {
+      "id": "check-paid-solicitors",
+      "title": "Check anyone who will be paid to raise money",
+      "instruction": "List everyone who will be paid for bringing in investors, including the sponsor's own staff and any outside finder. SEC staff names finders who locate investors for issuers among those who may need broker-dealer registration, and asks whether pay depends on the size or outcome of the deal. The sponsor's own people fall within the issuer safe harbor only if, among other conditions, they receive no commissions or other transaction-based pay. Texas bars paying anyone who solicits Texas investors under Rule 506 unless that person is registered in Texas as a dealer or agent. Every paid solicitor is also a bad-actor covered person and is named on Form D.",
+      "mode": "agent",
+      "modeBasis": "Comparing the planned pay arrangements with published rules is document work; any doubtful arrangement goes to counsel.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "profile-the-raise"
+      ],
+      "rules": [
+        "us-fed.exchange-act.broker-registration",
+        "us-tx.securities.rule-506-compensation",
+        "us-fed.reg-d.bad-actor"
+      ],
+      "basis": "cited",
+      "sources": [
+        "sec-bd-guide",
+        "ecfr-240-3a4-1",
+        "ssb-exemptions",
+        "sec-form-d",
+        "ecfr-230-506"
+      ]
+    },
+    {
+      "id": "screen-covered-persons",
+      "title": "List covered persons and screen for bad-actor events",
+      "instruction": "Rule 506 is unavailable if a covered person has a disqualifying event, so screen before relying on it. From the sponsor and entity documents, list the issuer and its affiliated issuers; directors, executive officers, other officers in the offering, general partners and managing members; holders of 20% or more of the voting equity; promoters; paid solicitors and their principals; and, for a fund, the investment manager. Ask each person to flag any securities-related conviction, injunction, order, bar or suspension. Any yes goes to counsel now: it can rule out Rule 506, and events before September 23, 2013 must still be disclosed to buyers.",
+      "mode": "agent",
+      "modeBasis": "Listing covered persons from the documents is document work; each person answers for themselves and counsel reads any yes.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-paid-solicitors"
+      ],
+      "rules": [
+        "us-fed.reg-d.bad-actor"
+      ],
+      "consumes": [
+        "sponsor-operating-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-506",
+        "sec-cdi-securities-act-rules"
+      ]
+    },
+    {
+      "id": "fund-ica-exclusion",
+      "title": "Map the fund to an Investment Company Act exclusion",
+      "instruction": "A fund that invests in securities can be an investment company under the Investment Company Act unless an exclusion applies. Note what the fund will hold: property owned directly or through subsidiaries, interests in other entities, or loans. Then compare the investor plan with the exclusions counsel will weigh: Section 3(c)(1), no more than 100 beneficial owners and no public offering; Section 3(c)(7), qualified purchasers only, such as individuals with at least $5,000,000 in investments; and Section 3(c)(5)(C), for issuers primarily acquiring mortgages, other liens on and interests in real estate. Rule 506 offers are not public offerings because of general solicitation. Form D Item 6 reports the exclusion.",
+      "mode": "agent",
+      "modeBasis": "Comparing the planned holdings and investor base with the statute is analysis; counsel chooses the exclusion.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "profile-the-raise"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "rules": [
+        "us-fed.ica.fund-exclusions"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-15-80a-3",
+        "usc-15-80a-2",
+        "usc-15-77d",
+        "sec-form-d"
+      ]
+    },
+    {
+      "id": "jv-security-and-exemption",
+      "title": "Test the joint venture interest and its exemption",
+      "instruction": "In the Fifth Circuit, which hears appeals from Texas, a general partnership or joint venture interest is ordinarily not a security, because the partner holds real control. It can become one if the agreement leaves the partner little more power than a limited partner, if the partner is too inexperienced to use its powers, or if it depends so heavily on the sponsor's unique skill that it cannot replace the sponsor. If counsel treats the interest as a security, a sale to one sophisticated partner can rely on Section 4(a)(2) alone, with no Form D, but then Texas law needs its own exemption, such as the self-executing private-offering exemptions.",
+      "mode": "agent",
+      "modeBasis": "Testing the draft control terms against the court's factors is analysis; counsel makes the call.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-interests-are-securities"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "rules": [
+        "us-fed.securities.jv-interests",
+        "us-fed.securities-act.covered-securities"
+      ],
+      "basis": "cited",
+      "sources": [
+        "williamson",
+        "usc-15-77d",
+        "sec-506b-page",
+        "sec-form-d",
+        "sec-exempt-faq",
+        "usc-15-77r",
+        "ssb-exemptions"
+      ]
+    },
+    {
+      "id": "decide-with-counsel",
+      "title": "Decide the structure and exemption with counsel",
+      "instruction": "Give counsel the one-page profile, the relationship list and the notes from the tests above. The sponsor chooses the business structure; counsel chooses the exemption and, for a fund, the Investment Company Act exclusion, and says whether a joint venture interest is a security. Ask for the decision in writing with its conditions: who may be contacted and how, whether non-accredited investors may buy, the verification method under Rule 506(c), and who, if anyone, may be paid to solicit.",
+      "mode": "human-online",
+      "modeBasis": "Choosing the exemption is a legal judgment for counsel; choosing the structure is the sponsor's business decision.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "test-rule-506b",
+        "test-rule-506c",
+        "screen-covered-persons",
+        "fund-ica-exclusion",
+        "jv-security-and-exemption"
+      ],
+      "rules": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "record-decision-and-guardrails",
+      "title": "Record the decision and the rules it imposes",
+      "instruction": "Write the decision into the firm file and turn it into rules for everyone who talks to investors. Under Rule 506(b): no offers on a public website, no ads, no open invitations to events, and no impersonal mass outreach to people outside the documented relationships. Under Rule 506(c): the verification method and the records kept for each buyer. Note the exits: an offering can switch from 506(c) to 506(b) only if no general solicitation occurred and every sale met 506(b), and from 506(b) to 506(c) only before any sale; either switch means amending a Form D already filed.",
+      "mode": "agent",
+      "modeBasis": "Turning a written decision into checklists and file entries is document work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-with-counsel"
+      ],
+      "rules": [
+        "us-fed.reg-d.rule-506b",
+        "us-fed.reg-d.rule-506c",
+        "us-fed.reg-d.general-solicitation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "sec-cdi-securities-act-rules",
+        "ecfr-230-502"
+      ]
+    }
+  ],
+  "outlineSteps": []
+}

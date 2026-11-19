@@ -1,0 +1,163 @@
+{
+  "vendor": "placer-ai",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "6a19dcc105d5c8f62d312c04d9320892c6f66530a0e91ce83e62c3b587d99cff",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "c5",
+        "c6"
+      ],
+      "rationale": "Placer's public API reference documents programmatic extraction of its location analytics, and the docs index lists endpoints to search entities by area and to create, update and delete custom POIs.",
+      "missing": "The pack does not itemize the analytics endpoints the reference covers or show any recent API change (the changelog's newest entry is over a year old), and API use needs a paying account with the API add-on."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "full",
+      "quality": 6,
+      "evidence": [
+        "c7",
+        "c8"
+      ],
+      "rationale": "Placer documents its own Placer MCP on a docs page that states the connection requirements, a client supporting remote MCP servers over streamable HTTP with OAuth such as Claude, ChatGPT, GitHub Copilot or Cursor.",
+      "missing": "The pack quotes the client requirements but not the setup steps themselves or the server URL, nor which data or tools the MCP covers, and it is an enterprise feature that must be enabled per account."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no SDK, CLI, client library or code samples from Placer.",
+      "missing": "No vendor-maintained SDK or CLI on a public package registry or repository is shown."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "partial",
+      "quality": 3,
+      "evidence": [
+        "c9",
+        "c6"
+      ],
+      "rationale": "The Data Feeds docs list an Amazon SNS setup page, a notification channel shown only for the data feeds, and the pack shows no webhooks or event subscriptions for API records such as the custom POIs customers create, update and delete.",
+      "missing": "The pack does not show the SNS page's content or which events it sends, and shows no webhooks or event subscriptions for core records."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "partial",
+      "quality": 6,
+      "evidence": [
+        "c3",
+        "c8"
+      ],
+      "rationale": "API keys exist and are issued by a customer success manager, and the MCP signs in with OAuth, but the pack shows no scopes, roles or permissions that limit what a credential can do.",
+      "missing": "No documentation of key or OAuth scopes, per-credential permissions, or whether an agent can get its own separate key."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no OpenAPI, Swagger, GraphQL or similar machine-readable specification for the Placer API.",
+      "missing": "No downloadable or in-docs API specification is shown; the llms.txt index and Markdown pages are prose documentation, not a spec."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "full",
+      "quality": 10,
+      "evidence": [
+        "c1",
+        "p1"
+      ],
+      "rationale": "A probe fetched the documentation's llms.txt (GET 200, 13,220 bytes, headed Placer Documentation), and the docs state that appending .md to any documentation page URL returns its Markdown version."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c6"
+      ],
+      "rationale": "The pack shows no sandbox, test mode or developer environment, and na does not apply because the API includes endpoints to create, update and delete custom POIs.",
+      "missing": "No self-serve or on-request sandbox or test environment is shown."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "partial",
+      "quality": 4,
+      "evidence": [
+        "c9"
+      ],
+      "rationale": "The docs offer Data Feeds delivered through Snowflake, a bulk channel on a proprietary platform, but the pack shows no self-serve download in CSV, JSON, Excel or another open format.",
+      "missing": "The pack does not show the feeds' file formats, whether feeds are self-serve or a separate purchase, or any export of a customer's own records."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c11",
+        "c2",
+        "c3"
+      ],
+      "rationale": "The pricing page offers customized subscription packages through Contact Sales, and API use needs a paying account with the API add-on and a key from a customer success manager, with no self-serve sign-up or trial shown.",
+      "missing": "No self-serve sign-up, free tier or trial is shown."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c11"
+      ],
+      "rationale": "The pricing page is titled customized subscription packages and shows Contact Sales with no prices.",
+      "missing": "No plan prices, starting price or fee schedule is shown."
+    },
+    {
+      "story": "md-property-lookup",
+      "verdict": "partial",
+      "quality": 3,
+      "evidence": [
+        "c6"
+      ],
+      "rationale": "The Search for Placer Entities service returns the Placer-managed places in an area as API results, but the pack shows no lookup by address or parcel and none of the size, year-built or use attributes.",
+      "missing": "The pack does not show which attributes an entity record carries, a lookup by address or parcel, or physical attributes such as size, year built or use."
+    },
+    {
+      "story": "md-comps",
+      "verdict": "na",
+      "quality": 5,
+      "evidence": [
+        "c5",
+        "c10"
+      ],
+      "rationale": "The pack describes Placer's data as location analytics and demographic data, with nothing on sale or lease transactions.",
+      "missing": "The pack has no explicit statement of Placer's data scope that rules out sale or lease transaction data."
+    },
+    {
+      "story": "md-owner",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c6"
+      ],
+      "rationale": "The pack shows no owner-of-record or mailing-address data, and na does not apply because Placer describes individual places through its entity and custom POI endpoints.",
+      "missing": "No API or data service returning the owner of record or mailing address for a parcel is shown."
+    },
+    {
+      "story": "md-bulk-area",
+      "verdict": "full",
+      "quality": 6,
+      "evidence": [
+        "c6",
+        "c9"
+      ],
+      "rationale": "The API documents a Search for Placer Entities service that returns the Placer-managed entities in a particular area, and Data Feeds deliver data in bulk through Snowflake.",
+      "missing": "The pack does not show whether area queries are capped or paginated, which area shapes they accept, or whether Data Feeds cover a chosen area or need a separate order; each account also has a maximum weekly API quota."
+    }
+  ]
+}

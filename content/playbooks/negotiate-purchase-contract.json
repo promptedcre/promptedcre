@@ -1,0 +1,520 @@
+{
+  "id": "negotiate-purchase-contract",
+  "slug": "negotiate-purchase-contract",
+  "kind": "process",
+  "title": "Negotiate and sign the purchase contract",
+  "summary": "Turn the letter of intent into a signed purchase and sale agreement with deposits, deadlines and remedies both sides accept.",
+  "phase": "acquire",
+  "order": 240,
+  "featured": true,
+  "depth": "full",
+  "review": "practitioner-reviewed",
+  "lastVerified": "2026-11-12",
+  "requires": [
+    "submit-letter-of-intent"
+  ],
+  "consumes": [
+    "letter-of-intent",
+    "underwriting-model",
+    "lease-abstract",
+    "deal-screen",
+    "investor-register",
+    "wire-instructions"
+  ],
+  "produces": [
+    "purchase-and-sale-agreement",
+    "earnest-money-receipt"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "bc-26",
+      "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.26.htm",
+      "title": "Texas Business and Commerce Code, Chapter 26 (Statute of Frauds, Section 26.01)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "a contract for the sale of real estate",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-code-5",
+      "url": "https://statutes.capitol.texas.gov/Docs/PR/htm/PR.5.htm",
+      "title": "Texas Property Code, Chapter 5 (Section 5.007, Vendor and Purchaser Risk Act; Subchapter H, Sections 5.251-5.259)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "may not purchase or otherwise acquire an interest in real property in this state",
+      "tier": "primary"
+    },
+    {
+      "id": "wa-49",
+      "url": "https://statutes.capitol.texas.gov/Docs/WA/htm/WA.49.htm",
+      "title": "Texas Water Code, Chapter 49 (Section 49.452, Notice to purchasers)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "the purchaser shall be entitled to terminate the contract",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-25",
+      "url": "https://statutes.capitol.texas.gov/Docs/TX/htm/TX.25.htm",
+      "title": "Texas Tax Code, Chapter 25 (Section 25.02, Form and content of appraisal records)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "an identification of each taxing unit in which the property is taxable",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-1445",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1445",
+      "title": "26 U.S.C. 1445, Withholding of tax on dispositions of United States real property interests",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "quote": "the transferee shall be required to deduct and withhold a tax equal to 15 percent of the amount realized on the disposition",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-firpta",
+      "url": "https://www.irs.gov/individuals/international-taxpayers/firpta-withholding",
+      "title": "FIRPTA withholding",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-12",
+      "quote": "If the transferor is a foreign person and the transferee fails to withhold, the transferee may be held liable for the tax.",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-firpta-exceptions",
+      "url": "https://www.irs.gov/individuals/international-taxpayers/exceptions-from-firpta-withholding",
+      "title": "Exceptions from FIRPTA withholding",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-12",
+      "quote": "The certification should contain the transferor's name, U.S. taxpayer identification number, and home address (or office address, in the case of an entity).",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-firpta-reporting",
+      "url": "https://www.irs.gov/individuals/international-taxpayers/reporting-and-paying-tax-on-us-real-property-interests",
+      "title": "Reporting and paying tax on U.S. real property interests",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-12",
+      "quote": "Generally, transferees must file Form 8288 by the 20th day after the date of the disposition.",
+      "tier": "primary"
+    },
+    {
+      "id": "sb17-enrolled",
+      "url": "https://capitol.texas.gov/tlodocs/89R/billtext/html/SB00017F.htm",
+      "title": "S.B. 17, 89th Legislature, Regular Session (2025), enrolled text",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "This Act takes effect September 1, 2025.",
+      "tier": "primary"
+    },
+    {
+      "id": "fifth-cir-25-20354",
+      "url": "https://caselaw.findlaw.com/court/us-5th-circuit/118018551.html",
+      "title": "U.S. Court of Appeals for the Fifth Circuit, No. 25-20354, opinion of December 11, 2025 (dismissal of an S.B. 17 challenge affirmed for lack of standing)",
+      "publisher": "FindLaw (opinion text)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "wdtx-1-25-cv-01509",
+      "url": "https://www.courtlistener.com/opinion/10776300/min-huang-qiong-dai-and-jiayin-dong-v-ken-paxton-attorney-general-of/",
+      "title": "U.S. District Court, Western District of Texas, No. 1:25-cv-01509, order of December 9, 2025",
+      "publisher": "CourtListener, Free Law Project (order text)",
+      "accessed": "2026-11-12",
+      "quote": "The Motion for Preliminary Injunction (ECF No. 3) is DENIED.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-register-ag-rules",
+      "url": "https://www.sos.texas.gov/texreg/archive/March272026/Proposed%20Rules/1.ADMINISTRATION.html",
+      "title": "Texas Register, March 27, 2026: proposed 1 TAC Chapter 67, Foreign Ownership Enforcement",
+      "publisher": "Texas Secretary of State (Texas Register)",
+      "accessed": "2026-11-12",
+      "quote": "proposes new Chapter 67 in Title 1, Part 3 of the Texas Administrative Code (TAC), relating to foreign ownership enforcement",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "brief-counsel",
+      "title": "Brief counsel and open the issues list",
+      "instruction": "Send counsel the signed letter of intent, the underwriting assumptions that depend on contract terms, and the buyer plan: which entity signs, and that the contract must be assignable to the deal entity before closing. Ask who drafts; if the seller's form will be used, request it early. Start an issues list keyed to the letter: each term, the draft's wording, the gap and who owns it. Work only from drafts counsel provides; never copy a licensed contract form into the file.",
+      "mode": "agent",
+      "modeBasis": "Assembling the brief and the issues list is document work; the drafting is counsel's.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "consumes": [
+        "letter-of-intent",
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "counsel-drafts-psa",
+      "title": "Counsel drafts or marks up the contract",
+      "instruction": "Counsel prepares the purchase and sale agreement, or marks up the seller's draft, to match the letter of intent. In Texas a contract to sell real estate must be in writing and signed by the party to be charged, so everything the buyer relies on belongs in the signed contract or its exhibits, not in emails or the letter. Ask counsel to flag every term that departs from the letter and to keep the issues list current.",
+      "mode": "human-online",
+      "modeBasis": "Drafting and negotiating a contract for a client is legal work.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "brief-counsel"
+      ],
+      "rules": [
+        "us-tx.contracts.statute-of-frauds"
+      ],
+      "consumes": [
+        "letter-of-intent"
+      ],
+      "produces": [
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "bc-26"
+      ]
+    },
+    {
+      "id": "check-deposits-and-periods",
+      "title": "Check the deposits and every contract period",
+      "instruction": "From each draft, list the deposits: the amount, the escrow agent holding them, when each is due, when each becomes non-refundable, and every event that returns it, such as termination within the feasibility period, a failed condition or a seller default. List each period: feasibility, delivery of the title commitment and survey, objection and cure, any financing condition, closing and extensions. Note how the contract counts days and how notices must be given. Enter the periods in the deadline-calendar and compare them with the letter.",
+      "mode": "agent",
+      "modeBasis": "Reading the draft against the letter and computing dates is document and calculator work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-drafts-psa"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "letter-of-intent"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "check-reps-conditions-risk",
+      "title": "Check representations, conditions and risk of loss",
+      "instruction": "Compare the seller's representations with what underwriting relied on: authority, the rent roll and leases, defaults, litigation, environmental matters and service contracts, with how long each survives closing and any cap on recovery. List the closing conditions, such as tenant estoppels, issuance of the title policy and the seller's deliverables. Read the casualty and condemnation clause: in Texas, unless the contract provides otherwise, if a material part of the property is destroyed without the buyer's fault, or condemned, before title or possession passes, the seller cannot enforce the contract and the buyer recovers what it paid. Confirm the buyer may assign to an affiliate.",
+      "mode": "agent",
+      "modeBasis": "Comparing the draft with the underwriting and the letter is document review; trade-offs go to counsel and the principal.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-drafts-psa"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "lease-abstract"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-code-5"
+      ],
+      "typeNotes": {
+        "industrial": "Read the environmental representations and any indemnity closely, and whether the buyer may sample soil or groundwater during feasibility.",
+        "multifamily": "Ask for representations on the rent roll, delinquencies, concessions and security deposits, and a closing condition on an updated rent roll.",
+        "office": "Allocate unpaid tenant allowances and leasing commissions between buyer and seller, and list the estoppels required.",
+        "retail": "Require estoppels from anchors and major tenants, and representations on co-tenancy, exclusives and expense reconciliations."
+      }
+    },
+    {
+      "id": "check-texas-notices",
+      "title": "Check the Texas seller notices",
+      "instruction": "Check the taxing units on the appraisal record for a water, sewer, drainage or management district covered by Water Code 49.452. If the property lies in one, the seller must give the statutory notice before a binding contract is signed, separately or in the contract; a contract signed without it lets the buyer terminate, though closing after a late notice waives that right. The buyer signs the notice, and a copy is recorded at closing. Ask counsel which other statutory notices apply to this property.",
+      "mode": "agent",
+      "modeBasis": "The taxing units are on the public appraisal record and the notice rules are in the statute; whether a notice is correct is counsel's call.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-drafts-psa"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "consumes": [
+        "deal-screen",
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "wa-49",
+        "tx-tax-code-25"
+      ]
+    },
+    {
+      "id": "set-up-firpta",
+      "title": "Set up FIRPTA withholding or the seller's certification",
+      "instruction": "If the seller is a foreign person, the buyer must generally withhold 15% of the amount realized, which includes debt the buyer assumes, and can be held liable if it does not. Have the contract require the seller to deliver at closing a certification, under penalty of perjury, of its name, U.S. taxpayer identification number, address and non-foreign status; the title company closing the deal can hold it as a qualified substitute. If the seller is foreign, plan the withholding at closing and the Form 8288 filing, generally due by the 20th day after the transfer.",
+      "mode": "agent",
+      "modeBasis": "The contract clause and the closing checklist are document work; the certification is signed by the seller.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-drafts-psa"
+      ],
+      "rules": [
+        "us-fed.irc.firpta"
+      ],
+      "produces": [
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-26-1445",
+        "irs-firpta",
+        "irs-firpta-exceptions",
+        "irs-firpta-reporting"
+      ]
+    },
+    {
+      "id": "check-foreign-acquisition-law",
+      "title": "Confirm the buyer is not barred by Texas's foreign acquisition law",
+      "instruction": "Since September 1, 2025, Property Code Subchapter H bars certain buyers from acquiring any interest in Texas real property: governments of designated countries, companies headquartered there or controlled by those governments, companies majority owned by barred individuals or companies, and certain individuals tied to those countries. A company owned or controlled by U.S. citizens or lawful permanent residents, with no barred individual, is excluded. Collect ownership and citizenship facts for the buying entity and its investors, and send counsel anything unclear. The attorney general can sue to force a sale and seek civil penalties. Check current status first: in the decisions read, courts had not ruled on validity, and implementing rules were only proposed.",
+      "mode": "agent",
+      "modeBasis": "Ownership facts come from investor records and questionnaires; applying the statute to an unclear structure is counsel's call.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-drafts-psa"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.property.foreign-acquisition-restrictions"
+      ],
+      "consumes": [
+        "investor-register",
+        "investor-questionnaire"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-code-5",
+        "sb17-enrolled",
+        "fifth-cir-25-20354",
+        "wdtx-1-25-cv-01509",
+        "tx-register-ag-rules"
+      ]
+    },
+    {
+      "id": "map-raise-to-hard-dates",
+      "title": "Map the raise against the hard-deposit date",
+      "instruction": "Put the raise schedule next to the contract calendar: when the offering documents will be ready, when commitments are due, and when the deposit goes hard and closing happens. If the deposit goes hard before enough equity is committed, the sponsor's own money is at risk; flag it and ask whether the contract should carry a later hard date, a staged deposit or an extension right. Recompute after each draft.",
+      "mode": "agent",
+      "modeBasis": "Comparing two schedules is calendar work; changing the terms is negotiated by people.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-deposits-and-periods"
+      ],
+      "when": {
+        "structure": [
+          "syndication"
+        ]
+      },
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "investor-register"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "fund-confirms-approval",
+      "title": "Confirm the committee approval covers the final contract",
+      "instruction": "Compare the final contract with what the investment committee approved: the price, the deposit and when it goes hard, and any conditions the committee set. If anything moved outside the approval, take it back to the committee before signing, and confirm the fund can meet the deposit and the closing from capital it can call in time.",
+      "mode": "human-online",
+      "modeBasis": "Committee approval is a vote under the fund documents; an agent prepares the comparison.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-deposits-and-periods"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "consumes": [
+        "ic-memo",
+        "deal-entity-agreement",
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "partner-approves-contract",
+      "title": "Get the capital partner's approval and deposit share",
+      "instruction": "Send the capital partner the final contract and calendar, and get the written approvals the JV agreement requires before signing. Confirm when and how the partner funds its share of the deposit, and that the buyer is the JV entity or a sponsor entity with the right to assign to it.",
+      "mode": "human-online",
+      "modeBasis": "The partner's approval and funding are its own decisions under the JV agreement.",
+      "actor": "investor",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-deposits-and-periods"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement",
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "negotiate-final-terms",
+      "title": "Negotiate the open issues and finalize",
+      "instruction": "Work the issues list to closure with the seller's counsel: each open term, the buyer's position and the fallback the principal has approved. Counsel confirms the final draft matches the agreed terms, the exhibits are complete, the buyer entity exists or will be formed with signing authority, and the notices and certifications from the earlier checks are provided for.",
+      "mode": "human-online",
+      "modeBasis": "Negotiating for a client and confirming the final contract is legal work; the positions are the principal's.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-deposits-and-periods",
+        "check-reps-conditions-risk",
+        "check-texas-notices",
+        "set-up-firpta",
+        "check-foreign-acquisition-law",
+        "map-raise-to-hard-dates",
+        "fund-confirms-approval",
+        "partner-approves-contract"
+      ],
+      "produces": [
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "sign-contract",
+      "title": "Sign the contract",
+      "instruction": "A person authorized by the buyer entity's documents signs for it, in the entity's name and with the signer's title. Both sides sign. Confirm how the contract defines its effective date, since every period runs from it, and save the fully signed copy with all exhibits to the firm file.",
+      "mode": "human-online",
+      "modeBasis": "Signing commits the buyer to the contract and its deposits.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "negotiate-final-terms"
+      ],
+      "market": "formation-back-office",
+      "produces": [
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "fund-earnest-money",
+      "title": "Wire the earnest money and get the receipt",
+      "instruction": "Deposit the earnest money with the escrow agent named in the contract by the date it requires. Confirm the wire instructions by calling the escrow agent at a number from an independent source, never one from the message carrying the instructions. Get the escrow agent's written receipt showing the amount and date, and save it with the contract.",
+      "mode": "human-online",
+      "modeBasis": "Moving money is a person's act at the bank.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-contract"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "wire-instructions"
+      ],
+      "produces": [
+        "earnest-money-receipt"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "calendar-and-hand-off",
+      "title": "Calendar every date and hand off to due diligence",
+      "instruction": "Enter the effective date and every contract period in the deadline-calendar: feasibility end, title and survey objection dates, any financing deadline, the dates deposits go hard, closing, and extension notice dates. Mark each with its contract section and notice method. Send the calendar to counsel, the lender and whoever runs due diligence, and set reminders well ahead of each date.",
+      "mode": "agent",
+      "modeBasis": "The calendar computes dates from the signed contract; how days are counted is checked against its text.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "fund-earnest-money"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "earnest-money-receipt"
+      ],
+      "basis": "practitioner"
+    }
+  ],
+  "outlineSteps": []
+}

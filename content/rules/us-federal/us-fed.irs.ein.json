@@ -1,0 +1,42 @@
+{
+  "id": "us-fed.irs.ein",
+  "jurisdiction": "us-federal",
+  "title": "Getting an EIN for a new entity",
+  "rule": "An entity gets an employer identification number from the IRS online, or on Form SS-4 by fax or mail, for free. The IRS asks LLCs to form with the state first. The application names a responsible party: an individual, not an entity or nominee, who controls the entity and its funds; applying online takes that person's SSN or ITIN. Online, each responsible party gets one EIN per day. Changes of responsible party go on Form 8822-B within 60 days.",
+  "citation": {
+    "authority": "IRS, Instructions for Form SS-4 (Rev. December 2025), lines 7a to 7b",
+    "url": "https://www.irs.gov/instructions/iss4"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-12",
+  "review": "ai-drafted",
+  "changeWatch": "A new revision of Form SS-4 or its instructions, or changes to the IRS online EIN application.",
+  "sources": [
+    {
+      "id": "irs-ss4-instructions",
+      "url": "https://www.irs.gov/instructions/iss4",
+      "title": "Instructions for Form SS-4 (Rev. December 2025)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-12",
+      "quote": "the responsible party must be an individual (that is, a natural person), not an entity",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-ein",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number",
+      "title": "Get an employer identification number",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-12",
+      "quote": "You can apply for only 1 EIN per responsible party per day.",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-responsible-parties",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/responsible-parties-and-nominees",
+      "title": "Responsible parties and nominees",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "market": "investor-portals-fund-admin",
+  "vendors": [
+    {
+      "id": "juniper-square",
+      "name": "Juniper Square",
+      "kind": "product",
+      "what": "Fund operating system: investor portal, investor CRM and fund administration for private markets sponsors.",
+      "homepage": "https://www.junipersquare.com/"
+    },
+    {
+      "id": "appfolio-investment-manager",
+      "name": "AppFolio Investment Manager",
+      "kind": "product",
+      "what": "Investor portal and investment management software for real estate sponsors.",
+      "homepage": "https://www.appfolio.com/investment-manager"
+    },
+    {
+      "id": "investnext",
+      "name": "InvestNext",
+      "kind": "product",
+      "what": "Investor portal, fundraising and distribution software for real estate sponsors.",
+      "homepage": "https://www.investnext.com/"
+    },
+    {
+      "id": "agora",
+      "name": "Agora",
+      "kind": "product",
+      "what": "Investor portal and investment management software for real estate firms.",
+      "homepage": "https://agorareal.com/"
+    },
+    {
+      "id": "covercy",
+      "name": "Covercy",
+      "kind": "product",
+      "what": "Investor management, banking and distribution platform for real estate sponsors.",
+      "homepage": "https://covercy.com/"
+    },
+    {
+      "id": "sponsorcloud",
+      "name": "SponsorCloud (formerly SyndicationPro)",
+      "kind": "product",
+      "what": "Investor portal and fundraising software for real estate syndicators; SyndicationPro renamed.",
+      "homepage": "https://www.sponsorcloud.io/"
+    },
+    {
+      "id": "cash-flow-portal",
+      "name": "Cash Flow Portal",
+      "kind": "product",
+      "what": "Investor portal and fundraising software for real estate syndicators.",
+      "homepage": "https://www.cashflowportal.com/"
+    },
+    {
+      "id": "janover-connect",
+      "name": "Janover Connect (formerly Groundbreaker)",
+      "kind": "product",
+      "what": "Investment management and investor portal software for real estate sponsors; Groundbreaker renamed.",
+      "homepage": "https://connect.janover.co/"
+    },
+    {
+      "id": "avestor",
+      "name": "Avestor",
+      "kind": "product",
+      "what": "Investor portal and fund administration, sold with fund setup, banking, tax and training services.",
+      "homepage": "https://www.avestorinc.com/"
+    },
+    {
+      "id": "realpage-ims",
+      "name": "RealPage Investor Management Services",
+      "kind": "product",
+      "what": "RealPage's investor portal and administration product: capital raises, waterfalls, statements and investor communications.",
+      "homepage": "https://www.realpage.com/investment-management/investor-management-services/"
+    }
+  ]
+}

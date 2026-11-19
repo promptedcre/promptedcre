@@ -1,0 +1,51 @@
+{
+  "id": "us-tx.boc.registered-agent",
+  "jurisdiction": "us-tx",
+  "title": "Texas registered agent and registered office",
+  "rule": "Every Texas filing entity, and every foreign entity registered in Texas, must keep a registered agent and registered office in Texas at all times. The agent is a Texas resident or an organization authorized to do business in Texas, never the entity itself, and must consent in writing or electronically. The office is a street address where the agent can be served in person, not just a mailbox or answering service. Filing a change of agent or office costs $15, or $5 for a nonprofit corporation or cooperative association.",
+  "citation": {
+    "authority": "Tex. Bus. Orgs. Code 5.201, 5.2011, 5.202, 4.152(6), 4.153(4), 4.154 and 4.161",
+    "url": "https://statutes.capitol.texas.gov/Docs/BO/htm/BO.5.htm"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Business Organizations Code chapter 5, subchapter E, or to the filing fees in sections 4.152 to 4.154 and 4.161, or to the Secretary of State's registered agent forms and fees.",
+  "sources": [
+    {
+      "id": "tx-boc-5",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.5.htm",
+      "title": "Texas Business Organizations Code, Chapter 5 (Sections 5.201 to 5.202, registered agents and offices)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "may not be solely a mailbox service or a telephone answering service",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-4",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.4.htm",
+      "title": "Texas Business Organizations Code, Chapter 4 (Sections 4.152(6), 4.153(4), 4.154 and 4.161, filing fees)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "for filing a statement of change of registered office, registered agent, or both, $15",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-205",
+      "url": "https://www.sos.state.tx.us/corp/instructions/205.shtml",
+      "title": "Form 205, Instructions for Certificate of Formation (Limited Liability Company), revised 09/26",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-14",
+      "quote": "The limited liability company cannot act as its own registered agent",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-806",
+      "url": "https://www.sos.texas.gov/corp/forms/806_boc.pdf",
+      "title": "Form 806, Business Filings and Trademarks Fee Schedule, revised 09/26",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-14",
+      "tier": "primary"
+    }
+  ]
+}

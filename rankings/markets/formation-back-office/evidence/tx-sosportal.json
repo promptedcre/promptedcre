@@ -1,0 +1,141 @@
+{
+  "vendor": "tx-sosportal",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://www.sos.state.tx.us/corp/index.shtml",
+      "found": true
+    },
+    "api": {
+      "url": "https://www.sos.state.tx.us/modernization.shtml",
+      "found": false,
+      "note": "Portal and forms pages describe browser use only; no developer or API page found"
+    },
+    "pricing": {
+      "url": "https://www.sos.state.tx.us/corp/forms_boc.shtml",
+      "found": true,
+      "note": "Fee schedule is Form 806, a PDF linked from this page; it still names SOSDirect Search"
+    },
+    "changelog": {
+      "url": "https://www.sos.state.tx.us/modernization.shtml",
+      "found": true
+    }
+  },
+  "links": {
+    "docs": "https://www.sos.state.tx.us/corp/index.shtml"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://www.sos.state.tx.us/about/newsreleases/2026/092326.shtml",
+      "excerpt": "SOSPortal will replace both SOSDirect and SOSUpload, bringing filing, ordering and searching together into a single, streamlined platform.",
+      "fetched": "2026-11-12",
+      "note": "Dated Sept. 23, 2026; SOSDirect is being replaced",
+      "hash": "96a285509af9472ce6d2f755f70d650e9ffdb610ee6b889ad84ebe484e514ece"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://www.sos.state.tx.us/about/newsreleases/2026/092326.shtml",
+      "excerpt": "We are pleased to announce the launch of SOSPortal, our new Business Filing system, on September 29.",
+      "fetched": "2026-11-12",
+      "hash": "511ea123a0afe4fad14db8f4ac93001b38b78784c3443b36aa72e949c5e63a6d"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://www.sos.state.tx.us/about/newsreleases/2026/092326.shtml",
+      "excerpt": "Ability to check status and retrieve filings from the My Submissions page",
+      "fetched": "2026-11-12",
+      "hash": "0f0f8a429900513a1f33141a8428a8a2f82078a8c54d8979c9584571ff13b234"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://www.sos.state.tx.us/about/newsreleases/2026/092326.shtml",
+      "excerpt": "Option to save filings as drafts",
+      "fetched": "2026-11-12",
+      "hash": "8f4170918f230f90f6133783aca494adbf946fa070dccadfc39f35d90a0cab71"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://www.sos.state.tx.us/about/newsreleases/2026/092326.shtml",
+      "excerpt": "Enhanced security through multi‑factor authentication",
+      "fetched": "2026-11-12",
+      "hash": "0fac54c6ca86b07040253f18386e78ebd759f42953fc43ba9997c2955fea25a6"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://www.sos.state.tx.us/about/newsreleases/2026/092326.shtml",
+      "excerpt": "Client Accounts will not be available in the new system",
+      "fetched": "2026-11-12",
+      "hash": "a7df634df0bf393516a3fff4ea634c44ad2175ae69569016a2d783dc12c6dcaf"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://www.sos.state.tx.us/about/newsreleases/2026/092326.shtml",
+      "excerpt": "Accepted payment methods in SOSPortal will be ACH and credit card",
+      "fetched": "2026-11-12",
+      "hash": "15376db9ecf42b9498b3b27b01ead2e865087c818aa8531df93f0eb5cc85901d"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://www.sos.state.tx.us/corp/sosda/index.shtml",
+      "excerpt": "SOSPortal is available 24/7. There is a $1.00 statutorily authorized fee associated with each search.",
+      "fetched": "2026-11-12",
+      "note": "Page still titled SOSDirect",
+      "hash": "14e9225866e0cbd1c37d6c9292468b385e271adc2a4e0389bff7b30b4db22ecb"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://www.sos.state.tx.us/modernization.shtml",
+      "excerpt": "Business Filings Now Available on the SOSPortal",
+      "fetched": "2026-11-12",
+      "hash": "902af22c830ba04ac9e408eccecb317e22cf1efd2d68c7b7e5ccf2eaa8303c69"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://www.sos.state.tx.us/modernization.shtml",
+      "excerpt": "For updates on SOSPortal and other modernization efforts, sign up here.",
+      "fetched": "2026-11-12",
+      "note": "Release-notes page; updates by email sign-up",
+      "hash": "83adc36583227ad3c3b0bf2c915ca5a1e198fc6b916c4ed657aa6a86019d78d7"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://www.sos.state.tx.us/corp/forms_boc.shtml",
+      "excerpt": "Form 201 - Certificate of Formation for a For-Profit Corporation",
+      "fetched": "2026-11-12",
+      "note": "Forms page has a File Online column, with the note not to attach a PDF form when filing through SOSPortal",
+      "hash": "5877ff258a457eb7b900f234904b5d5bc4b269e00b1051bf6c26fb198cbc2dc9"
+    },
+    {
+      "id": "c12",
+      "tier": "vendor-claim",
+      "url": "https://www.sos.state.tx.us/corp/forms_boc.shtml",
+      "excerpt": "Form 806 - Fee Schedule",
+      "fetched": "2026-11-12",
+      "note": "Fee schedule is a PDF",
+      "hash": "117bbcc3bfc458ac3e6d201dbe6076f971ee58312fb3d4def6b3e9f7920cb299"
+    },
+    {
+      "id": "c13",
+      "tier": "vendor-claim",
+      "url": "https://www.sos.texas.gov/corp/forms/806_boc.pdf",
+      "excerpt": "SOSDirect Search $1 per search*",
+      "fetched": "2026-11-12",
+      "note": "PDF fee schedule; also lists Certificate of formation for a Texas entity at $300",
+      "hash": "bbcbfbdad722a1298b84bf2961fc96552763ecc7aed79e4a17f5639246fb91a3"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "us-tx.tax.appraisal-increase-limit",
+  "jurisdiction": "us-tx",
+  "title": "Texas circuit breaker: the 20 percent cap on non-homestead appraisal increases",
+  "rule": "For real property that is not a residence homestead or specially appraised, the appraised value may not exceed the lesser of market value or the prior year's appraised value plus 20 percent of it plus new improvements at market value. It applies only if appraised value in the property's first qualifying year is at or under a ceiling of $5 million for 2024, adjusted yearly by the Comptroller for inflation: $5,160,000 for 2025 and $5,320,000 for 2026. The cap starts January 1 of the year after the owner first owns the property on January 1 and ends the January 1 after the owner sells. The section expires December 31, 2026.",
+  "citation": {
+    "authority": "Tex. Tax Code 23.231",
+    "url": "https://statutes.capitol.texas.gov/Docs/TX/htm/TX.23.htm"
+  },
+  "asOf": "2026-11-13",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Section 23.231 expires December 31, 2026. As the statute reads on 2026-11-14, it covers tax years 2024 through 2026 only: from tax year 2027 no circuit breaker limit applies, and this property is appraised at market value under section 23.01, unless the Legislature extends or re-enacts the limit. The section text served on 2026-11-14 shows no amendment since its 2023 enactment, and the Comptroller's page gives the same expiration. The eligibility ceiling is indexed and published by the Comptroller each year. Owners who acquired before 2023 are treated as acquiring on January 1, 2023.",
+  "sources": [
+    {
+      "id": "tx-tax-code-23",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.23.htm",
+      "title": "Texas Tax Code, Chapter 23 (Appraisal methods and procedures), Section 23.231",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "This section expires December 31, 2026.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-comptroller-valuing-property",
+      "url": "https://comptroller.texas.gov/taxes/property-tax/valuing-property.php",
+      "title": "Valuing Property (Circuit breaker limitation on non-resident homestead property value increases)",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-14",
+      "quote": "valued at $5,320,000 or less; and",
+      "tier": "primary"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "build-brand-and-website",
+  "slug": "build-brand-and-website",
+  "kind": "process",
+  "title": "Build the brand and website",
+  "summary": "Name, logo and a plain website that says what the sponsor buys and how to reach it, within the limits the offering exemption allows.",
+  "phase": "stand-up",
+  "order": 50,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": []
+}

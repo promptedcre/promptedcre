@@ -1,0 +1,141 @@
+{
+  "vendor": "irs-ein",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "474040ff3c109898a8346cd250c2d7fccfe3db96e376e7edc00956a644b0ad7b",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The coverage check found no developer or API page on irs.gov and describes the EIN application as browser-based only.",
+      "missing": "No public API or API documentation for submitting EIN applications or reading EIN records is shown."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Nothing in the pack mentions an MCP server for the EIN application.",
+      "missing": "No official MCP server, setup steps or announcement is shown."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no CLI, SDK or code samples, and the coverage check found no developer page on irs.gov.",
+      "missing": "No vendor-maintained CLI or SDK on a public package registry or repository is shown."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no webhooks, event subscriptions or API to attach them to, and na does not apply because the source is an EIN application rather than a published data set.",
+      "missing": "No webhook, event subscription or notification feed for EIN applications is shown."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c8"
+      ],
+      "rationale": "The pack shows no API keys, tokens or OAuth clients, and the only delegation it mentions is a third-party designee's signed authorization to apply (c8), which is not an agent credential.",
+      "missing": "No API credentials or documented scopes of any kind are shown, and na does not apply because there is no API that runs without credentials."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No API was found on irs.gov, and the pack shows no OpenAPI, Swagger, GraphQL or other machine-readable specification.",
+      "missing": "No machine-readable API specification, downloadable or otherwise, is shown."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows only the irs.gov EIN pages, with no llms.txt file or Markdown versions of the documentation.",
+      "missing": "No llms.txt file or Markdown documentation pages are shown."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no sandbox, test mode or developer environment, and na does not apply because the source is an application that issues EINs rather than an API that only reads published data.",
+      "missing": "No self-serve or on-request test environment for EIN applications is shown."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "partial",
+      "quality": 4,
+      "evidence": [
+        "c11",
+        "c7"
+      ],
+      "rationale": "Eligible Business Tax Account users can download a digital CP575 EIN verification notice (c11) and applicants can print their confirmation letter (c7), which gets one record out self-serve but is not a bulk export and names no file format.",
+      "missing": "No documented bulk export or stated open file format is shown, and the CP575 download is limited to eligible Business Tax Account users."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "full",
+      "quality": 9,
+      "evidence": [
+        "c1",
+        "c3",
+        "c5",
+        "c9"
+      ],
+      "rationale": "The IRS says applicants can use the online tool to get an EIN directly in minutes for free (c1) and issues approved EINs immediately online (c3), with no call or sales step shown.",
+      "missing": "The online tool requires the responsible party to have an SSN or ITIN (c5), sends other applicants to phone, fax or mail (c9), and the pack does not show whether an account sign-up is needed."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "full",
+      "quality": 10,
+      "evidence": [
+        "c1",
+        "c2"
+      ],
+      "rationale": "The public EIN page says the tool is free (c1) and that you never have to pay a fee for an EIN (c2)."
+    },
+    {
+      "story": "fb-start",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c4",
+        "c9"
+      ],
+      "rationale": "No API was found, and the pack shows only a browser application that must be completed in one session (c4), with phone, fax or mail as the alternatives (c9).",
+      "missing": "No API, partner integration, draft or prefilled form for starting an EIN application is shown, and the application cannot be saved for later (c4)."
+    },
+    {
+      "story": "fb-status",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c3"
+      ],
+      "rationale": "The pack shows no API, structured feed or email notice for application status, only that an approved EIN is issued immediately online (c3).",
+      "missing": "No programmatic or notice-based way to check the status of an EIN application is shown."
+    },
+    {
+      "story": "fb-records",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c7",
+        "c11"
+      ],
+      "rationale": "No API was found, and the only retrieval shown is printing the confirmation letter (c7) and downloading the digital CP575 inside the Business Tax Account for eligible users (c11), neither of which is programmatic or an emailed link.",
+      "missing": "No documented API or emailed download link that returns the EIN confirmation letter or CP575 notice is shown."
+    }
+  ]
+}

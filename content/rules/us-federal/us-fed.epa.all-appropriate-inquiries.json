@@ -1,0 +1,34 @@
+{
+  "id": "us-fed.epa.all-appropriate-inquiries",
+  "jurisdiction": "us-federal",
+  "title": "All appropriate inquiries: what the Phase I must cover and how long it lasts",
+  "rule": "To claim CERCLA's innocent landowner, contiguous owner or bona fide prospective purchaser protection, a buyer conducts all appropriate inquiries before taking title: an environmental professional's inquiry plus the buyer's own cleanup-lien search, specialized knowledge and check of price against uncontaminated value. ASTM E1527-21, or E2247-23 for forestland or rural property, is a recognized way to comply. The inquiry must fall within one year before acquisition, and the interviews, lien search, records review, site visit and declaration within 180 days.",
+  "citation": {
+    "authority": "40 CFR 312.1, 312.11, 312.20, 312.21 and 312.22",
+    "url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-J/part-312"
+  },
+  "asOf": "2026-11-09",
+  "lastVerified": "2026-11-12",
+  "review": "ai-drafted",
+  "changeWatch": "EPA amendments to Part 312 or to the ASTM standards it recognizes; E1527-13 stopped qualifying on February 13, 2024 and E2247-16 on June 24, 2025.",
+  "sources": [
+    {
+      "id": "ecfr-40-312",
+      "url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-J/part-312",
+      "title": "40 CFR Part 312, Innocent Landowners, Standards for Conducting All Appropriate Inquiries",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "quote": "must be conducted within one year prior to the date of acquisition of the subject property",
+      "tier": "primary"
+    },
+    {
+      "id": "epa-aai",
+      "url": "https://www.epa.gov/brownfields/brownfields-all-appropriate-inquiries",
+      "title": "Brownfields All Appropriate Inquiries",
+      "publisher": "U.S. Environmental Protection Agency",
+      "accessed": "2026-11-12",
+      "quote": "must conduct AAI before acquiring the property and comply with all continuing obligations after acquiring the property",
+      "tier": "primary"
+    }
+  ]
+}

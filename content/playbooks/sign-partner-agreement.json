@@ -1,0 +1,23 @@
+{
+  "id": "sign-partner-agreement",
+  "slug": "sign-partner-agreement",
+  "kind": "process",
+  "title": "Sign the partner agreement and split the promote",
+  "summary": "Agree among the principals on ownership, decisions, time commitments, the promote split and what happens if someone leaves.",
+  "phase": "stand-up",
+  "order": 20,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": []
+}

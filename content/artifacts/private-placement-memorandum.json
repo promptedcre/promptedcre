@@ -1,0 +1,87 @@
+{
+  "id": "private-placement-memorandum",
+  "name": "Private placement memorandum",
+  "what": "The disclosure document for a private offering: the deal, the structure, the risks, the fees and the exemption relied on.",
+  "fields": [
+    {
+      "key": "versionAndDate",
+      "label": "Version and date",
+      "type": "string",
+      "definition": "The document's date and the version number the sponsor assigned when the set was locked."
+    },
+    {
+      "key": "exemption",
+      "label": "Exemption relied on",
+      "type": "string",
+      "definition": "The registration exemption the memorandum says the offering relies on, such as Rule 506(b) or Rule 506(c), and whether it says non-accredited investors may buy.",
+      "authority": "17 CFR 230.506(b) and (c)"
+    },
+    {
+      "key": "propertyAndPlan",
+      "label": "Property and business plan",
+      "type": "text",
+      "definition": "The property, or for a fund the kinds of property it will buy, and the business plan the memorandum describes. Record the source document and date the memorandum gives for each figure."
+    },
+    {
+      "key": "sourcesAndUses",
+      "label": "Sources and uses of funds",
+      "type": "list",
+      "definition": "Each source of money, such as investor equity, the sponsor's contribution and the loan, and each use, such as the purchase price, closing costs, reserves and fees, in dollars, with the total of each side."
+    },
+    {
+      "key": "sponsorCompensation",
+      "label": "Payments to the sponsor and related companies",
+      "type": "list",
+      "definition": "Every fee, reimbursement, promote and other payment to the sponsor, its principals or related companies: its rate, base, payer and timing, and any dollar estimate the memorandum gives."
+    },
+    {
+      "key": "conflicts",
+      "label": "Conflicts of interest",
+      "type": "list",
+      "definition": "Each conflict the memorandum discloses, such as a related company paid by the deal or other properties the sponsor manages, each with how the memorandum says it is handled."
+    },
+    {
+      "key": "trackRecord",
+      "label": "Sponsor's track record",
+      "type": "text",
+      "definition": "The prior deals the memorandum presents, the period covered and which are sold or still held. Record the return measures shown, how each is figured, and how the memorandum says the deals shown were chosen."
+    },
+    {
+      "key": "loanSummary",
+      "label": "Loan summary",
+      "type": "text",
+      "definition": "The financing the memorandum describes: lender, amount, rate, term, amortization, recourse and guaranties. Record whether it rests on a term sheet, a commitment or signed loan documents, and that document's date."
+    },
+    {
+      "key": "ratioBasis",
+      "label": "Basis of each ratio",
+      "type": "list",
+      "definition": "Each ratio the memorandum uses, such as a cap rate, loan-to-value or debt service coverage, with the value, the income and the payment it is figured on and the period that income covers."
+    },
+    {
+      "key": "holdAndExit",
+      "label": "Hold period and exit",
+      "type": "text",
+      "definition": "The hold period the memorandum states or projects, the way out it describes, such as a sale or a refinancing, and who decides when to sell."
+    },
+    {
+      "key": "resaleRestriction",
+      "label": "Resale restriction",
+      "type": "text",
+      "definition": "The memorandum's statement that the interests are unregistered and cannot be resold without registration or an exemption, and any further transfer limit it describes.",
+      "authority": "17 CFR 230.502(d)(2)"
+    },
+    {
+      "key": "riskFactors",
+      "label": "Risk factors",
+      "type": "list",
+      "definition": "Each risk factor heading in the memorandum, in its order, so a later supplement can be compared against it."
+    },
+    {
+      "key": "supplements",
+      "label": "Supplements",
+      "type": "list",
+      "definition": "Each supplement issued after the memorandum: its date, what it changed and the investors who received it."
+    }
+  ]
+}

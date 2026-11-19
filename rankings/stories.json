@@ -1,0 +1,107 @@
+{
+  "version": "stories-v1 (2026-11-12)",
+  "stories": [
+    {
+      "id": "public-api",
+      "group": "access",
+      "title": "Documented public API",
+      "question": "Does the product have an API, documented on a public page, that an agent can use to read and change the core records?",
+      "weight": 3,
+      "full": "Public API documentation that covers the product's core records: reading and changing them, or, for a data product, querying its data.",
+      "partial": "The vendor says it has an API but shows no public documentation, or the documentation is behind a login, partner program or request; or the API covers only a small part of the product, or only reads records a customer would need to change."
+    },
+    {
+      "id": "mcp-server",
+      "group": "access",
+      "title": "Official MCP server",
+      "question": "Does the vendor publish an official Model Context Protocol (MCP) server for the product?",
+      "weight": 2,
+      "full": "The vendor documents an MCP server it maintains, with setup steps.",
+      "partial": "The vendor says it has an MCP server but shows no setup steps, or the server is in beta, preview or waitlist, or it covers only a small part of the product."
+    },
+    {
+      "id": "cli-sdk",
+      "group": "access",
+      "title": "Official CLI or SDK",
+      "question": "Does the vendor publish an official command-line tool or software development kit?",
+      "weight": 1,
+      "full": "A vendor-maintained SDK or CLI on a public package registry or in a public repository.",
+      "partial": "Only code samples, an unofficial library the vendor points to, or an SDK available only to partners."
+    },
+    {
+      "id": "webhooks",
+      "group": "access",
+      "title": "Webhooks or events",
+      "question": "Can an agent subscribe to events, such as webhooks, instead of polling for changes?",
+      "weight": 1,
+      "full": "Documented webhooks or event subscriptions for the core records.",
+      "partial": "Events only through a third-party automation platform, or for a narrow set of events.",
+      "na": "The source is a published data set with no records that change on a customer's behalf."
+    },
+    {
+      "id": "scoped-credentials",
+      "group": "access",
+      "title": "Scoped credentials",
+      "question": "Can an agent get its own credentials, limited to what it needs?",
+      "weight": 1,
+      "full": "API keys or OAuth clients with documented scopes, roles or permissions that limit what a credential can do.",
+      "partial": "Keys or tokens exist, but every credential carries the whole account's access, or scoping is not documented.",
+      "na": "The API needs no credentials at all."
+    },
+    {
+      "id": "api-spec",
+      "group": "access",
+      "title": "Machine-readable API spec",
+      "question": "Is there a machine-readable description of the API, such as an OpenAPI or GraphQL schema, that an agent can load?",
+      "weight": 1,
+      "full": "A public, downloadable OpenAPI, Swagger, GraphQL or similar specification.",
+      "partial": "A specification exists but only after login, covers part of the API, or is shown in the docs without a downloadable file."
+    },
+    {
+      "id": "agent-docs",
+      "group": "access",
+      "title": "Docs written for agents",
+      "question": "Is the documentation published in a form meant for agents, such as an llms.txt file or Markdown pages?",
+      "weight": 1,
+      "full": "An llms.txt file for the documentation, or Markdown versions of the documentation pages.",
+      "partial": "An llms.txt file that covers only marketing pages, or Markdown available on only some documentation pages."
+    },
+    {
+      "id": "sandbox",
+      "group": "access",
+      "title": "Sandbox or test environment",
+      "question": "Can an agent work against a sandbox or test environment before touching live records?",
+      "weight": 1,
+      "full": "A self-serve sandbox, test mode or developer environment, documented for developers.",
+      "partial": "A sandbox available only on request or to partners.",
+      "na": "The API only reads published data, so there is nothing to protect by testing first."
+    },
+    {
+      "id": "bulk-export",
+      "group": "openness",
+      "title": "Bulk export in open formats",
+      "question": "Can the customer get its records or licensed data out in bulk, in open formats, without the vendor's help?",
+      "weight": 2,
+      "full": "Documented self-serve bulk export or download in CSV, JSON, Excel or another open format.",
+      "partial": "Export is mentioned without documentation, covers only some records, needs a support request, or uses a proprietary format."
+    },
+    {
+      "id": "self-serve",
+      "group": "openness",
+      "title": "Self-serve access",
+      "question": "Can a sponsor sign up and start using the product without a sales call?",
+      "weight": 3,
+      "full": "Self-serve sign-up for a paid plan or a free trial, with no call required.",
+      "partial": "Self-serve only for a limited tier or trial, with the main product behind a demo or sales call."
+    },
+    {
+      "id": "public-pricing",
+      "group": "openness",
+      "title": "Public pricing",
+      "question": "Are the prices a small sponsor would pay published?",
+      "weight": 3,
+      "full": "Prices or fees for the plans a small sponsor would buy are on a public page.",
+      "partial": "Only a starting price (\"from $X\"), or prices for some plans but not the one a small sponsor would buy, or a calculator that shows prices after asking for contact details. A request-a-quote form alone is none."
+    }
+  ]
+}

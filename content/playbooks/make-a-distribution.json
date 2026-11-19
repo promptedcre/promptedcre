@@ -1,0 +1,434 @@
+{
+  "id": "make-a-distribution",
+  "slug": "make-a-distribution",
+  "kind": "process",
+  "title": "Make a distribution",
+  "summary": "Start from reconciled cash, hold back what the loan, the agreement and known costs require, and run the agreement's waterfall with a second person checking it. The named people approve in writing, a person releases verified payments, and each investor gets a statement.",
+  "phase": "report",
+  "order": 405,
+  "featured": false,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-14",
+  "requires": [
+    "set-up-the-books",
+    "keep-investor-register-current",
+    "meet-loan-covenants"
+  ],
+  "consumes": [
+    "deal-entity-agreement",
+    "jv-agreement",
+    "loan-documents",
+    "rent-roll",
+    "trailing-12",
+    "investor-register",
+    "wire-instructions"
+  ],
+  "produces": [
+    "wire-instructions"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "tx-bo-101",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.101.htm",
+      "title": "Texas Business Organizations Code, Chapter 101 (Section 101.052, Company agreement; Section 101.204, Interim distributions; Section 101.206, Prohibited distribution; duty to return)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "may not make a distribution to a member of the company if, immediately after making the distribution, the company's total liabilities",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bo-153",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.153.htm",
+      "title": "Texas Business Organizations Code, Chapter 153 (Section 153.209, Interim distributions; Section 153.210, Limitation on distribution)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "a limited partnership may not make a distribution to a partner if, immediately after giving effect to the distribution",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-731",
+      "url": "https://www.law.cornell.edu/uscode/text/26/731",
+      "title": "26 U.S.C. 731, Extent of recognition of gain or loss on distribution",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "gain shall not be recognized to such partner, except to the extent that any money distributed exceeds the adjusted basis of such partner’s interest",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-704",
+      "url": "https://www.law.cornell.edu/uscode/text/26/704",
+      "title": "26 U.S.C. 704, Partner's distributive share",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "A partner’s distributive share of income, gain, loss, deduction, or credit shall, except as otherwise provided in this chapter, be determined by the partnership agreement.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-1-702-1",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.702-1",
+      "title": "26 CFR 1.702-1, Income and credits of partner",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-14",
+      "quote": "Each partner is required to take into account separately in his return his distributive share, whether or not distributed,",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-p541",
+      "url": "https://www.irs.gov/publications/p541",
+      "title": "IRS Publication 541, Partnerships (revised December 2025)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-14",
+      "quote": "The partner’s basis is decreased (but never below zero) by the following items.",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "reconcile-cash",
+      "title": "Start from cash in the bank, tied to the books",
+      "instruction": "Take the period-end balance of every account the entity holds: operating, reserve and any account the lender controls. Reconcile each to the general ledger and list the uncleared items. Start the distribution from that cash, not from net income: net income counts rent billed but not collected, straight-line rent and depreciation, and leaves out loan principal and capital spending, so it can sit well above or below the cash that can go out. Mark the cash that is not the entity's to distribute: tenant security deposits, rent paid in advance and expense recoveries billed on estimate that the year's true-up may refund. A figure that does not reconcile goes back to the bookkeeper before any later step runs.",
+      "mode": "agent",
+      "modeBasis": "Reconciling bank statements to the ledger is file work from the entity's own records.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "calculators": [
+        "expense-recovery"
+      ],
+      "consumes": [
+        "rent-roll",
+        "trailing-12"
+      ],
+      "basis": "practitioner",
+      "sources": [],
+      "typeNotes": {
+        "industrial": "On net leases, recoveries collected on estimate are partly the tenants' money until the year is reconciled; run the expense-recovery calculator on the year's expenses to date and compare each tenant's share with what was billed.",
+        "retail": "Recoveries billed on estimate and any percentage rent paid on estimated sales can be refunded at reconciliation; run the expense-recovery calculator to see each tenant's share before counting that cash as distributable."
+      },
+      "rules": [
+        "us-tx.property.commercial-security-deposit"
+      ]
+    },
+    {
+      "id": "read-distribution-terms",
+      "title": "Read the distribution terms from the governing agreement",
+      "instruction": "Open the signed governing agreement with every amendment and side letter, never a summary or memory, and write out each distribution term with its section: who declares and who must consent; timing; the operating reserve; fees and reimbursements paid ahead of investors; any tax distribution; separate orders for operating and sale or refinance cash; the preferred return's rate, compounding, start date, accrual basis and carry-forward; return of capital; any catch-up; each tier's hurdle and split; how sponsor capital is paid; and defaulted or transferred interests. In a fund, add the deal-by-deal or whole-fund order, reinvestment, recall of distributions and any clawback or giveback. In Texas, unless the company agreement provides otherwise, an LLC member may not demand an interim distribution until the governing authority declares one; a limited partner is entitled to one when the partnership agreement specifies. A term that reads two ways goes to counsel.",
+      "mode": "agent",
+      "modeBasis": "Reading the signed agreement and writing out its terms is document work; a disputed reading is counsel's.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-bo-101",
+        "tx-bo-153"
+      ]
+    },
+    {
+      "id": "read-loan-limits",
+      "title": "Read what the loan requires before cash leaves",
+      "instruction": "From the signed loan documents, list each condition on distributions with its section: reserves and escrows the lender requires and their required balances, any cash management or sweep that a coverage or occupancy test switches on, a bar on distributions while a default continues, any notice or consent the lender requires before a distribution, and reporting that must be delivered first. Take the latest covenant test from the covenant tracking under meet-loan-covenants rather than recomputing it here. If a test is failing or a sweep is on, the cash the loan traps is not distributable, the loan's terms control and loan-covenant-breach applies. If a test is near its limit, weigh that in the operating reserve at set-holdbacks. Add any guarantor covenant that looks at the entity's cash.",
+      "mode": "agent",
+      "modeBasis": "Reading the loan documents is document work; any notice to the lender is drafted later and sent only with a person's approval.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "consumes": [
+        "loan-documents"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "set-holdbacks",
+      "title": "Write down each holdback and its source",
+      "instruction": "List what stays in the entity, each line with its amount and the document it comes from: lender-required reserves and trapped cash from the loan reading; the operating reserve the governing agreement sets, or the amount the manager proposes under its authority, with the reason; payables due, property tax and insurance installments the lender does not escrow, and fees owed; leasing commissions, tenant improvements and capital work already committed or in the approved budget; and the refund estimate for recoveries. Where a line rests on the property-tax or replacement-reserves calculator, record the inputs used. In a fund, list holdbacks by deal and for the fund itself. Distributable cash is the reconciled cash less these lines. No line is a round figure without a source. If distributable cash falls short of what the agreement or the last investor report led investors to expect, stop and follow distribution-shortfall.",
+      "mode": "agent",
+      "modeBasis": "Building the schedule from the loan, the agreement and the books is file work; a discretionary reserve is proposed here and decided at approval.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "reconcile-cash",
+        "read-distribution-terms",
+        "read-loan-limits"
+      ],
+      "calculators": [
+        "property-tax",
+        "replacement-reserves"
+      ],
+      "consumes": [
+        "loan-documents",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "check-lawful-distribution",
+      "title": "Check the entity can lawfully make the distribution",
+      "instruction": "Test the payment against the entity's governing law before anyone approves it. A Texas limited liability company may not distribute to a member if, right after the payment, its total liabilities exceed the fair value of its total assets; liabilities to members for their interests and debt whose recourse is limited to specified property are left out, and that property counts only to the extent its value exceeds that debt. A Texas limited partnership is under the same kind of limit. The statute lets the test rest on financial statements, projections or a fair valuation that is reasonable in the circumstances. Prepare it from the balance sheet and a value the sponsor can support, and say which. Where the margin is thin, or the entity was formed in another state, counsel reads the test and decides.",
+      "mode": "agent",
+      "modeBasis": "Laying the balance sheet against the statutory test is arithmetic from the books; a close or out-of-state case is counsel's conclusion.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-holdbacks"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-bo-101",
+        "tx-bo-153"
+      ]
+    },
+    {
+      "id": "run-waterfall",
+      "title": "Run the waterfall on distributable cash",
+      "instruction": "Build a ledger for each investor on the signed agreement's own accrual, contribution dates and orders. The ledger sets the amounts paid: each investor's cash by tier, the split inside each tier, and unreturned capital and preferred return owed after this payment. Then run the same terms through the waterfall-promote calculator, with contributions and distributions by year and this distribution in the current year, to cross-check the tier logic; in a fund, set the agreement's order, deal by deal or whole fund. The calculator works in whole years on the investor class as one, pays sponsor capital pro rata and models no giveback, so expect gaps from accrual timing. A term it cannot model, such as separate operating and sale orders, is computed in the ledger only. Note each unexplained gap for the second-person check. In a joint venture the parties are the partner and the sponsor's entity.",
+      "mode": "agent",
+      "modeBasis": "The ledger and the calculator are arithmetic on the agreement's terms and the register; the levels all come from the signed agreement.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-holdbacks"
+      ],
+      "calculators": [
+        "waterfall-promote"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "investor-register"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "second-person-check",
+      "title": "Have a second person check the run before anything is paid",
+      "instruction": "A person who did not prepare the run checks it against the signed agreement and the investor register: the terms entered, each investor's ownership and funded capital, contribution dates, transfers recorded since the last distribution, any defaulted investor's changed share, the holdback schedule and its sources, every gap noted between the ledger and the calculator, and that the amounts paid out add up to distributable cash to the cent. They recompute by hand the preferred return owed and at least one investor's share. A difference goes back to the preparer and the run is redone, not patched. The checker signs off in writing with the date and the version checked. In a fund, the check covers each deal's cash and the fund-level order; in a joint venture, the partner's share against the JV agreement.",
+      "mode": "human-online",
+      "modeBasis": "An independent check of figures about to be paid is a person's judgment, kept apart from whoever prepared them.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "run-waterfall"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "investor-register"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "cpa-tax-note",
+      "title": "Have the CPA write what the payment means for taxes",
+      "instruction": "Send the CPA the checked schedule and the agreement's definitions, and ask for the tax sentence each statement will carry. For an entity taxed as a partnership, the cash an investor receives and the income taxed to it for the year can differ. Each partner reports its distributive share of the partnership's income whether or not it is distributed, and the partnership agreement sets that share within the Code's limits. Generally, a partner recognizes gain only to the extent money distributed exceeds its adjusted basis in its interest immediately before the distribution, and the distribution lowers that basis, never below zero; the statute's exceptions and what counts as money are the CPA's to apply. The CPA decides what the statements say about tax and answers investors' tax questions; the K-1s follow under file-partnership-return-and-k1s. If the CPA says withholding applies to any investor, it goes into the schedule before approval.",
+      "mode": "human-online",
+      "modeBasis": "What a payment means for an investor's taxes is a tax position, and tax positions are the CPA's.",
+      "actor": "cpa",
+      "licensed": "cpa",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "second-person-check"
+      ],
+      "rules": [
+        "us-fed.irc.section-1061-applicable-partnership-interests"
+      ],
+      "consumes": [
+        "deal-entity-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-26-1-702-1",
+        "usc-26-704",
+        "usc-26-731",
+        "irs-p541"
+      ]
+    },
+    {
+      "id": "request-consents",
+      "title": "Request any consent the loan or partner requires",
+      "instruction": "Where the loan documents or the joint venture agreement call for a notice to, or the consent of, the lender or the partner before a distribution, draft each request from the checked schedule: the section that requires it, the total, the record and payment dates and, for the partner, its share. A person approves each request before it is sent through the notice channel the document names. File each consent received with its date and any conditions for the approval step. If a consent is refused or carries conditions, the people who approve distributions decide what happens next, and any changed figure goes back through the second-person check. Where nothing is required, record that with the sections read.",
+      "mode": "agent",
+      "modeBasis": "Drafting a request from the checked schedule is writing work; nothing goes to a lender or a capital partner without a person's approval.",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "second-person-check"
+      ],
+      "consumes": [
+        "loan-documents",
+        "jv-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "approve-distribution",
+      "title": "Approve the distribution in writing",
+      "instruction": "The people the governing agreement names approve the distribution in writing: its total, the holdbacks including any discretionary reserve, the record date, the payment date and the checked schedule by investor. The approval takes the form the agreement sets, whether a manager's consent, a resolution or the signatures of more than one principal. A Texas company agreement may change the statute's default that an LLC member's right to an interim distribution waits on a declaration; where the agreement does not say whether this approval is that declaration, counsel confirms it. Attach any consent filed under request-consents. File the approval with the checked run, the lawful-distribution test and the CPA's note. A change to any figure after approval goes back through the check and a new approval.",
+      "mode": "human-online",
+      "modeBasis": "Declaring a distribution binds the entity and is signed by the people its agreement names.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-lawful-distribution",
+        "second-person-check",
+        "cpa-tax-note",
+        "request-consents"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "loan-documents"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-bo-101"
+      ]
+    },
+    {
+      "id": "verify-payment-instructions",
+      "title": "Verify each payee's instructions by a known channel",
+      "instruction": "Before release, a person compares each payee's instructions in the batch with the verified record the register points to: who verified them, how and when. Instructions that changed since the last verified payment, or that arrived by email, are not used until the person confirms them by calling the investor at a number already on file, never one given in the request; any change follows wire-instructions-change. Account numbers stay in the bank or the secure store and never enter a message or the deal file. Record each check, with who made it and when, in the wire instructions record.",
+      "mode": "human-offline",
+      "modeBasis": "The confirmation is a call to a known number, judged by a person who knows the investor.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "approve-distribution"
+      ],
+      "consumes": [
+        "wire-instructions",
+        "investor-register"
+      ],
+      "produces": [
+        "wire-instructions"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "release-payments",
+      "title": "Release the payments",
+      "instruction": "A person signs in to the bank and releases the approved payments, in the amounts on the checked schedule and only to verified instructions, with a second approver where the bank's controls provide one. An agent may prepare the payment list but never moves money. After release, compare the bank's confirmation with the schedule line by line and follow up the same day on any payment that is returned or rejected. Payments to the sponsor's own entities, for its co-investment and its promote, go out on the same schedule and are recorded the same way. Fees the agreement pays the sponsor are paid under their own approval, not folded into the distribution.",
+      "mode": "human-online",
+      "modeBasis": "Releasing payments takes a bank sign-in and an authorized approver; an agent never moves money.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "verify-payment-instructions"
+      ],
+      "consumes": [
+        "wire-instructions"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "send-statements",
+      "title": "Send each investor its distribution statement",
+      "instruction": "Draft each investor's statement from the checked schedule: the amount, the payment date and method, and how the payment divides into return of capital, preferred return and profit, each term used as the governing agreement defines it; unreturned capital and preferred return still owed after this payment; the holdbacks in total with their reasons; and the CPA's tax sentence. Tie every figure to the schedule and the bank confirmation. A person approves the statements before they go out, through the portal or the notice channel the agreement names. In a joint venture, the partner receives the distribution report the JV agreement calls for.",
+      "mode": "agent",
+      "modeBasis": "Drafting statements from the checked schedule is writing work; nothing goes to an investor without a person's approval.",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "release-payments"
+      ],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "record-the-distribution",
+      "title": "Update the books, the register and each capital account",
+      "instruction": "Post the distribution to the general ledger by entity and, in a fund, by deal. Record each payment in the per-investor ledger with its date, its character as the agreement defines it and the approval behind it; reduce each investor's capital account and update its unreturned capital and preferred return owed. Keep that ledger and the capital accounts as a separate record the investor register points to, since the register holds commitments and funding, not distributions. Reconcile the ledger's totals to the bank confirmation and the books. File the cash reconciliation, holdback schedule, run, check, consents, approval, verification record and statements together. Carry the figures into the next report under send-quarterly-investor-report and the year-end package under file-partnership-return-and-k1s; changes to an investor's details follow keep-investor-register-current.",
+      "mode": "agent",
+      "modeBasis": "Posting and reconciling records is file work from the approved schedule and the bank's confirmation.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "release-payments"
+      ],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    }
+  ],
+  "outlineSteps": []
+}

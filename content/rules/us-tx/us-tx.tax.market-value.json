@@ -1,0 +1,34 @@
+{
+  "id": "us-tx.tax.market-value",
+  "jurisdiction": "us-tx",
+  "title": "Texas appraises property at market value as of January 1",
+  "rule": "Except as Tax Code chapter 23 provides, all taxable property is appraised at market value as of January 1: the cash-equivalent price it would bring under prevailing conditions after reasonable exposure on the open market, with buyer and seller informed of its uses and restrictions, both seeking to maximize gain, and neither able to exploit the other's urgent needs. The chief appraiser considers cost, income and market data comparison methods and must weigh all available evidence specific to the property.",
+  "citation": {
+    "authority": "Tex. Tax Code 23.01(a)-(b), 23.0101 and 1.04(7)",
+    "url": "https://statutes.capitol.texas.gov/Docs/TX/htm/TX.23.htm"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Tax Code chapter 23 or 1.04. The temporary limit on yearly appraisal increases for non-homestead real property under a set value (23.231) ends the year after the owner sells, and the section expires December 31, 2026.",
+  "sources": [
+    {
+      "id": "tx-tax-code-23",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.23.htm",
+      "title": "Texas Tax Code, Chapter 23 (Sections 23.01, 23.0101 and 23.231)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "all taxable property is appraised at its market value as of January 1",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-1",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.1.htm",
+      "title": "Texas Tax Code, Chapter 1 (Section 1.04, Definitions)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "the price at which a property would transfer for cash or its equivalent under prevailing market conditions",
+      "tier": "primary"
+    }
+  ]
+}

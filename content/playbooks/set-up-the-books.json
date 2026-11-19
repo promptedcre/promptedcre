@@ -1,0 +1,23 @@
+{
+  "id": "set-up-the-books",
+  "slug": "set-up-the-books",
+  "kind": "process",
+  "title": "Set up the books and chart of accounts",
+  "summary": "Choose the accounting system, chart of accounts and month-end routine for the sponsor and each deal entity.",
+  "phase": "stand-up",
+  "order": 35,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": []
+}

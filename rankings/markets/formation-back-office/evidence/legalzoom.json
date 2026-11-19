@@ -1,0 +1,154 @@
+{
+  "vendor": "legalzoom",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://help.legalzoom.com/",
+      "found": true,
+      "note": "End-user knowledge base for Forms & eSign; has llms.txt. Not developer docs."
+    },
+    "api": {
+      "url": "https://www.legalzoom.com/ai",
+      "found": true,
+      "note": "Public MCP tool directory (24 tools) with catalog.json; no public REST API or developer portal found."
+    },
+    "pricing": {
+      "url": "https://www.legalzoom.com/business/business-formation/llc-overview.html",
+      "found": true
+    },
+    "changelog": {
+      "url": "https://www.legalzoom.com/about/release-notes",
+      "found": false,
+      "note": "Page returned 410/404; no public changelog or release notes found."
+    }
+  },
+  "links": {
+    "docs": "https://help.legalzoom.com/",
+    "api": "https://www.legalzoom.com/ai",
+    "mcp": "https://www.legalzoom.com/tools/mcp-docs"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://www.legalzoom.com/ai",
+      "excerpt": "Browse all 24 tools",
+      "fetched": "2026-11-12",
+      "note": "MCP tool directory page",
+      "hash": "d09080ecceb2781dcc5998eb32fc8a35638f62b294b62e8d968144d32b3f89d9"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://www.legalzoom.com/ai",
+      "excerpt": "catalog.json Schemas, annotations, versions, and auth. catalog.txt Compact context for crawlers and agents.",
+      "fetched": "2026-11-12",
+      "hash": "e7c3ec52349c98d3e771d4a617ec487eaf41c11dd02cc12d2f556af81cdd6201"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://www.legalzoom.com/tools/mcp-docs",
+      "excerpt": "Sign in with your LegalZoom account when prompted and review the access request before continuing.",
+      "fetched": "2026-11-12",
+      "hash": "665b7dc07b24ebd30bd8a2591f5ae764a54d9bdad874eef457c640a93f0ca07f"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://www.legalzoom.com/tools/mcp-docs",
+      "excerpt": "Compare entity types, collect LLC formation details, and present formation package options.",
+      "fetched": "2026-11-12",
+      "note": "Formation tools: 6; describes collecting details and presenting options, not filing",
+      "hash": "db0e643885fef490219af0be674a891cbd228bc4fdf7a9a6af3249214ea3515d"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://www.legalzoom.com/tools/mcp-docs",
+      "excerpt": "Every integration exposes a deliberate, versioned tool set.",
+      "fetched": "2026-11-12",
+      "hash": "e2abf98d85ae26e3d12b5a1b4e9ba350dbed34e0c3cf3d4b92e77a59740f1c80"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://www.legalzoom.com/business/business-formation/llc-overview.html",
+      "excerpt": "$249 + state filing fees",
+      "fetched": "2026-11-12",
+      "note": "Mid-tier LLC plan price",
+      "hash": "35fe7e13c029b04e2eae6c1042685caed71d8d5d5d6a827015ea94fde71af898"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://www.legalzoom.com/business/business-formation/llc-overview.html",
+      "excerpt": "$299 + state filing fees",
+      "fetched": "2026-11-12",
+      "note": "Top-tier LLC plan price",
+      "hash": "95e56b4c199c30d0e16c797d1c549549a3da132aede178a24ee9dc2a3ac7711e"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://www.legalzoom.com/business/business-formation/llc-overview.html",
+      "excerpt": "Our LLC plans start at $0 plus filing fees, and you can add more services as your business needs them.",
+      "fetched": "2026-11-12",
+      "hash": "e36987808da5e16eb004b5826e936d1f74f84d676bc6406d5134eba99d9b305d"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://help.legalzoom.com/llms.txt",
+      "excerpt": "Knowledge base documentation for LegalZoom Knowledge Base.",
+      "fetched": "2026-11-12",
+      "note": "llms.txt covers Forms & eSign help articles",
+      "hash": "0d82e074e5084098ab5db55d56f8fa247c4bab5d0f9d1e11d52a6980f7613905"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://help.legalzoom.com/",
+      "excerpt": "Monitor the progress and status of your sent documents",
+      "fetched": "2026-11-12",
+      "hash": "eb1047a201b7eea4db1a1336616e03d9410b6b9367564f6b32a09eaa6363a34d"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://help.legalzoom.com/",
+      "excerpt": "Learn different ways to save and access your signed documents",
+      "fetched": "2026-11-12",
+      "hash": "98af22571180d29ba2e56da41bc37e7be6e806d32471a71f13b4aa15bd6042cc"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://www.legalzoom.com/llms.txt",
+      "excerpt": "# :blue_book: LegalZoom LLMs.txt — Guidance for AI Crawlers & Synthesizers",
+      "note": "llms.txt: GET 200, 4863 bytes",
+      "fetched": "2026-11-12",
+      "hash": "85d85dfcecca071ec80e7785403d778f237dfd692af3f2ddbff42a321ba21b2b"
+    },
+    {
+      "id": "p2",
+      "tier": "probe",
+      "url": "https://help.legalzoom.com/llms.txt",
+      "excerpt": "# LegalZoom Knowledge Base",
+      "note": "llms.txt: GET 200, 6058 bytes",
+      "fetched": "2026-11-12",
+      "hash": "5fd6c580d228b2c70a6dbe54608073aa0f92b598fa30ce77dbc44db1e83cf737"
+    },
+    {
+      "id": "p3",
+      "tier": "probe",
+      "url": "https://www.legalzoom.com/tools/mcp-docs",
+      "excerpt": "Connect LegalZoom to Your AI Assistant | MCP Setup",
+      "note": "MCP page resolves: GET 200 (page title)",
+      "fetched": "2026-11-12",
+      "hash": "d1775ff2a9d430d64134cbd44697b03d87a814bd0f448593f7b0fbeb9037d05a"
+    }
+  ]
+}

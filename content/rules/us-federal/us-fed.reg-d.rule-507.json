@@ -1,0 +1,24 @@
+{
+  "id": "us-fed.reg-d.rule-507",
+  "jurisdiction": "us-federal",
+  "title": "A court order for not filing Form D bars Rules 504 and 506",
+  "rule": "No Rule 504 or Rule 506 exemption is available to an issuer if it, a predecessor or an affiliate has been enjoined by a court for failing to comply with Rule 503, the Form D filing rule. The SEC may lift the bar on a showing of good cause.",
+  "citation": {
+    "authority": "17 CFR 230.507",
+    "url": "https://www.ecfr.gov/current/title-17/section-230.507"
+  },
+  "asOf": "2026-11-09",
+  "lastVerified": "2026-11-11",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Rule 507.",
+  "sources": [
+    {
+      "id": "ecfr-230-507",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.507",
+      "title": "17 CFR 230.507, Disqualifying provision relating to exemptions under Rules 504 and 506",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-11",
+      "tier": "primary"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "us-fed.irc.retirement-account-prohibited-transactions",
+  "jurisdiction": "us-federal",
+  "title": "Retirement accounts and the sponsor: prohibited transactions",
+  "rule": "Section 4975 prohibits direct or indirect sale, exchange or lease, lending, or furnishing of goods, services or facilities between a plan, including an IRA, and a disqualified person; transfer or use of plan assets benefiting one; and fiduciary self-dealing or third-party pay. Disqualified persons include fiduciaries, service providers, their spouses, ancestors, lineal descendants and descendants' spouses, entities 50 percent or more owned by them, and those entities' officers, directors, 10 percent owners and partners. Participating disqualified persons owe 15 percent of the amount involved yearly, 100 percent if uncorrected, except an IRA owner or beneficiary, whose account loses IRA status from that year's first day, as if distributed. Exemptions exist.",
+  "citation": {
+    "authority": "26 U.S.C. 4975(a), (b), (c)(1) to (3), (d) and (e)(1) to (6); 26 U.S.C. 408(e)(1) and (2)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/4975"
+  },
+  "asOf": "2026-11-14",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to the prohibited transaction list or the disqualified person definition in section 4975, to the IRA disqualification rule in section 408(e)(2), or new class exemptions.",
+  "sources": [
+    {
+      "id": "usc-26-4975",
+      "url": "https://www.law.cornell.edu/uscode/text/26/4975",
+      "title": "26 U.S.C. 4975, Tax on prohibited transactions",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "transfer to, or use by or for the benefit of, a disqualified person of the income or assets of a plan",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-408",
+      "url": "https://www.law.cornell.edu/uscode/text/26/408",
+      "title": "26 U.S.C. 408, Individual retirement accounts (subsection (e), Tax treatment of accounts and annuities)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "such account ceases to be an individual retirement account as of the first day of such taxable year",
+      "tier": "primary"
+    }
+  ]
+}

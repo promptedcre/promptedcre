@@ -1,0 +1,35 @@
+{
+  "id": "renew-property-insurance",
+  "slug": "renew-property-insurance",
+  "kind": "process",
+  "title": "Renew property insurance",
+  "summary": "Re-market coverage before expiration and keep the lender's requirements met.",
+  "phase": "operate",
+  "order": 335,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Calendar the policy expiration and start the renewal early",
+    "Refresh the building's replacement cost",
+    "Confirm the flood zone and any flood coverage the lender requires",
+    "Read the loan's insurance requirements",
+    "Read each lease's insurance and waiver of subrogation terms",
+    "Update the property and loss information for the broker",
+    "Market the coverage to carriers",
+    "Compare quotes on limits, deductibles and exclusions",
+    "Bind coverage before the old policy expires",
+    "Send certificates to the lender and tenants",
+    "Bill tenants their share as the leases provide"
+  ]
+}

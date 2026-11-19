@@ -1,0 +1,1198 @@
+{
+  "worked-example": {
+    "input": {
+      "price": 10000000,
+      "closingCostPct": 0.02,
+      "noi": 600000,
+      "noiGrowth": 0.03,
+      "holdYears": 5,
+      "exitCap": 0.065,
+      "saleCostPct": 0.02,
+      "loan": 6000000,
+      "rate": 0.065,
+      "amortYears": 30,
+      "ioYears": 0
+    },
+    "result": {
+      "equity": 4200000,
+      "exitValue": 10700991.455076924,
+      "unleveredFlows": [
+        -10200000,
+        600000,
+        618000,
+        636540,
+        655636.2,
+        11162276.911975386
+      ],
+      "leveredFlows": [
+        -4200000,
+        144911.023085065,
+        162911.02308506495,
+        181451.02308506513,
+        200547.22308506496,
+        5090529.288566616
+      ],
+      "unleveredIrr": 0.06714146861773983,
+      "leveredIrr": 0.0704539607602018,
+      "equityMultiple": 1.3762737097397324,
+      "cashOnCashYear1": 0.034502624544063096,
+      "averageCashOnCash": 0.04333507625834882,
+      "years": [
+        {
+          "year": 1,
+          "noi": 600000,
+          "debtService": 455088.976914935,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 600000,
+          "levered": 144911.023085065
+        },
+        {
+          "year": 2,
+          "noi": 618000,
+          "debtService": 455088.97691493505,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 618000,
+          "levered": 162911.02308506495
+        },
+        {
+          "year": 3,
+          "noi": 636540,
+          "debtService": 455088.9769149349,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 636540,
+          "levered": 181451.02308506513
+        },
+        {
+          "year": 4,
+          "noi": 655636.2,
+          "debtService": 455088.976914935,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 655636.2,
+          "levered": 200547.22308506496
+        },
+        {
+          "year": 5,
+          "noi": 675305.2860000001,
+          "debtService": 455088.97691493493,
+          "saleProceeds": 10486971.625975385,
+          "loanPayoff": 5616658.646493834,
+          "unlevered": 11162276.911975386,
+          "levered": 5090529.288566616
+        }
+      ],
+      "sensitivity": {
+        "exitCaps": [
+          0.06,
+          0.0625,
+          0.065,
+          0.0675,
+          0.07
+        ],
+        "growths": [
+          0.02,
+          0.025,
+          0.03,
+          0.035,
+          0.04
+        ],
+        "irr": [
+          [
+            0.08055290659615173,
+            0.09159018053798051,
+            0.10240224550719425,
+            0.11300502223651337,
+            0.12341282114548337
+          ],
+          [
+            0.0638803248409781,
+            0.07520239384984319,
+            0.08627527704286775,
+            0.09711742927290842,
+            0.10774534627775353
+          ],
+          [
+            0.047466423832044684,
+            0.059098262027809614,
+            0.0704539607602018,
+            0.08155497095270262,
+            0.09242035143273325
+          ],
+          [
+            0.03125419024177499,
+            0.04322344615702252,
+            0.054886122914638666,
+            0.0662672331846796,
+            0.07738885668451008
+          ],
+          [
+            0.015188743526672413,
+            0.02752625159683719,
+            0.039522632261802686,
+            0.05120715793699073,
+            0.06260548779471993
+          ]
+        ]
+      },
+      "trace": [
+        {
+          "label": "All-in cost",
+          "formula": "$10,000,000.00 × (1 + 2.00%)",
+          "value": "$10,200,000.00"
+        },
+        {
+          "label": "Equity",
+          "formula": "$10,200,000.00 − $6,000,000.00 loan",
+          "value": "$4,200,000.00"
+        },
+        {
+          "label": "NOI in year 6",
+          "formula": "$600,000.00 × (1 + 3.00%)^5",
+          "value": "$695,564.44"
+        },
+        {
+          "label": "Sale price",
+          "formula": "year-6 NOI ÷ 6.50% exit cap",
+          "value": "$10,700,991.46"
+        },
+        {
+          "label": "Net sale proceeds",
+          "formula": "$10,700,991.46 × (1 − 2.00%)",
+          "value": "$10,486,971.63"
+        },
+        {
+          "label": "Loan payoff at sale",
+          "formula": "balance after 5 years",
+          "value": "$5,616,658.65"
+        },
+        {
+          "label": "Unlevered IRR",
+          "formula": "IRR(all-in cost, NOI by year, net sale)",
+          "value": "6.71%"
+        },
+        {
+          "label": "Levered IRR",
+          "formula": "IRR(equity, NOI − debt service, net sale − payoff)",
+          "value": "7.05%"
+        },
+        {
+          "label": "Equity multiple",
+          "formula": "$5,780,349.58 ÷ $4,200,000.00",
+          "value": "1.38x"
+        },
+        {
+          "label": "Year-1 cash-on-cash",
+          "formula": "$144,911.02 ÷ $4,200,000.00",
+          "value": "3.45%"
+        }
+      ]
+    }
+  },
+  "io-2-hold-5": {
+    "input": {
+      "price": 10000000,
+      "closingCostPct": 0.02,
+      "noi": 600000,
+      "noiGrowth": 0.03,
+      "holdYears": 5,
+      "exitCap": 0.065,
+      "saleCostPct": 0.02,
+      "loan": 6000000,
+      "rate": 0.065,
+      "amortYears": 30,
+      "ioYears": 2
+    },
+    "result": {
+      "equity": 4200000,
+      "exitValue": 10700991.455076924,
+      "unleveredFlows": [
+        -10200000,
+        600000,
+        618000,
+        636540,
+        655636.2,
+        11162276.911975386
+      ],
+      "leveredFlows": [
+        -4200000,
+        210000,
+        228000,
+        181451.023085065,
+        200547.2230850649,
+        4922153.420795458
+      ],
+      "unleveredIrr": 0.06714146861773983,
+      "leveredIrr": 0.07033179219533582,
+      "equityMultiple": 1.36717896832514,
+      "cashOnCashYear1": 0.05,
+      "averageCashOnCash": 0.04953402644072358,
+      "years": [
+        {
+          "year": 1,
+          "noi": 600000,
+          "debtService": 390000,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 600000,
+          "levered": 210000
+        },
+        {
+          "year": 2,
+          "noi": 618000,
+          "debtService": 390000,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 618000,
+          "levered": 228000
+        },
+        {
+          "year": 3,
+          "noi": 636540,
+          "debtService": 455088.976914935,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 636540,
+          "levered": 181451.023085065
+        },
+        {
+          "year": 4,
+          "noi": 655636.2,
+          "debtService": 455088.97691493505,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 655636.2,
+          "levered": 200547.2230850649
+        },
+        {
+          "year": 5,
+          "noi": 675305.2860000001,
+          "debtService": 455088.9769149349,
+          "saleProceeds": 10486971.625975385,
+          "loanPayoff": 5785034.514264992,
+          "unlevered": 11162276.911975386,
+          "levered": 4922153.420795458
+        }
+      ],
+      "sensitivity": {
+        "exitCaps": [
+          0.06,
+          0.0625,
+          0.065,
+          0.0675,
+          0.07
+        ],
+        "growths": [
+          0.02,
+          0.025,
+          0.03,
+          0.035,
+          0.04
+        ],
+        "irr": [
+          [
+            0.08064730270291572,
+            0.09190818573804048,
+            0.10292734714333204,
+            0.1137224354568845,
+            0.12430925343885552
+          ],
+          [
+            0.06361118319810835,
+            0.07518367527319138,
+            0.08648758635475466,
+            0.09754350675673927,
+            0.10836976185971905
+          ],
+          [
+            0.04680535946679576,
+            0.05871807079667211,
+            0.07033179219533582,
+            0.08167062454109021,
+            0.0927558775065827
+          ],
+          [
+            0.030169146303743455,
+            0.0424540319972361,
+            0.054405320789961055,
+            0.06605132919227051,
+            0.07741691698079539
+          ],
+          [
+            0.013643300756989498,
+            0.026336333302452452,
+            0.03865616072576939,
+            0.050636196796715216,
+            0.06230555020640125
+          ]
+        ]
+      },
+      "trace": [
+        {
+          "label": "All-in cost",
+          "formula": "$10,000,000.00 × (1 + 2.00%)",
+          "value": "$10,200,000.00"
+        },
+        {
+          "label": "Equity",
+          "formula": "$10,200,000.00 − $6,000,000.00 loan",
+          "value": "$4,200,000.00"
+        },
+        {
+          "label": "NOI in year 6",
+          "formula": "$600,000.00 × (1 + 3.00%)^5",
+          "value": "$695,564.44"
+        },
+        {
+          "label": "Sale price",
+          "formula": "year-6 NOI ÷ 6.50% exit cap",
+          "value": "$10,700,991.46"
+        },
+        {
+          "label": "Net sale proceeds",
+          "formula": "$10,700,991.46 × (1 − 2.00%)",
+          "value": "$10,486,971.63"
+        },
+        {
+          "label": "Loan payoff at sale",
+          "formula": "balance after 5 years",
+          "value": "$5,785,034.51"
+        },
+        {
+          "label": "Unlevered IRR",
+          "formula": "IRR(all-in cost, NOI by year, net sale)",
+          "value": "6.71%"
+        },
+        {
+          "label": "Levered IRR",
+          "formula": "IRR(equity, NOI − debt service, net sale − payoff)",
+          "value": "7.03%"
+        },
+        {
+          "label": "Equity multiple",
+          "formula": "$5,742,151.67 ÷ $4,200,000.00",
+          "value": "1.37x"
+        },
+        {
+          "label": "Year-1 cash-on-cash",
+          "formula": "$210,000.00 ÷ $4,200,000.00",
+          "value": "5.00%"
+        }
+      ]
+    }
+  },
+  "io-10-hold-5": {
+    "input": {
+      "price": 10000000,
+      "closingCostPct": 0.02,
+      "noi": 600000,
+      "noiGrowth": 0.03,
+      "holdYears": 5,
+      "exitCap": 0.065,
+      "saleCostPct": 0.02,
+      "loan": 6000000,
+      "rate": 0.065,
+      "amortYears": 30,
+      "ioYears": 10
+    },
+    "result": {
+      "equity": 4200000,
+      "exitValue": 10700991.455076924,
+      "unleveredFlows": [
+        -10200000,
+        600000,
+        618000,
+        636540,
+        655636.2,
+        11162276.911975386
+      ],
+      "leveredFlows": [
+        -4200000,
+        210000,
+        228000,
+        246540,
+        265636.19999999995,
+        4772276.911975386
+      ],
+      "unleveredIrr": 0.06714146861773983,
+      "leveredIrr": 0.07010554982953177,
+      "equityMultiple": 1.3624888361846157,
+      "cashOnCashYear1": 0.05,
+      "averageCashOnCash": 0.058832451714285715,
+      "years": [
+        {
+          "year": 1,
+          "noi": 600000,
+          "debtService": 390000,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 600000,
+          "levered": 210000
+        },
+        {
+          "year": 2,
+          "noi": 618000,
+          "debtService": 390000,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 618000,
+          "levered": 228000
+        },
+        {
+          "year": 3,
+          "noi": 636540,
+          "debtService": 390000,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 636540,
+          "levered": 246540
+        },
+        {
+          "year": 4,
+          "noi": 655636.2,
+          "debtService": 390000,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 655636.2,
+          "levered": 265636.19999999995
+        },
+        {
+          "year": 5,
+          "noi": 675305.2860000001,
+          "debtService": 390000,
+          "saleProceeds": 10486971.625975385,
+          "loanPayoff": 6000000,
+          "unlevered": 11162276.911975386,
+          "levered": 4772276.911975386
+        }
+      ],
+      "sensitivity": {
+        "exitCaps": [
+          0.06,
+          0.0625,
+          0.065,
+          0.0675,
+          0.07
+        ],
+        "growths": [
+          0.02,
+          0.025,
+          0.03,
+          0.035,
+          0.04
+        ],
+        "irr": [
+          [
+            0.08051184544310357,
+            0.09186394106170848,
+            0.10296582733621995,
+            0.11383614059767984,
+            0.1244915269088387
+          ],
+          [
+            0.06332315837093336,
+            0.07500102797223136,
+            0.08640014515610141,
+            0.09754234311240276,
+            0.10844699908184746
+          ],
+          [
+            0.04634779496959846,
+            0.05838228031620128,
+            0.07010554982953177,
+            0.08154327506225167,
+            0.09271808248554836
+          ],
+          [
+            0.029522732522707523,
+            0.041948473206553476,
+            0.05402586748576684,
+            0.0657852270379551,
+            0.07725306726873019
+          ],
+          [
+            0.012785897216276017,
+            0.02564212196771508,
+            0.03810726920684918,
+            0.050217302328632,
+            0.06200342224411626
+          ]
+        ]
+      },
+      "trace": [
+        {
+          "label": "All-in cost",
+          "formula": "$10,000,000.00 × (1 + 2.00%)",
+          "value": "$10,200,000.00"
+        },
+        {
+          "label": "Equity",
+          "formula": "$10,200,000.00 − $6,000,000.00 loan",
+          "value": "$4,200,000.00"
+        },
+        {
+          "label": "NOI in year 6",
+          "formula": "$600,000.00 × (1 + 3.00%)^5",
+          "value": "$695,564.44"
+        },
+        {
+          "label": "Sale price",
+          "formula": "year-6 NOI ÷ 6.50% exit cap",
+          "value": "$10,700,991.46"
+        },
+        {
+          "label": "Net sale proceeds",
+          "formula": "$10,700,991.46 × (1 − 2.00%)",
+          "value": "$10,486,971.63"
+        },
+        {
+          "label": "Loan payoff at sale",
+          "formula": "balance after 5 years",
+          "value": "$6,000,000.00"
+        },
+        {
+          "label": "Unlevered IRR",
+          "formula": "IRR(all-in cost, NOI by year, net sale)",
+          "value": "6.71%"
+        },
+        {
+          "label": "Levered IRR",
+          "formula": "IRR(equity, NOI − debt service, net sale − payoff)",
+          "value": "7.01%"
+        },
+        {
+          "label": "Equity multiple",
+          "formula": "$5,722,453.11 ÷ $4,200,000.00",
+          "value": "1.36x"
+        },
+        {
+          "label": "Year-1 cash-on-cash",
+          "formula": "$210,000.00 ÷ $4,200,000.00",
+          "value": "5.00%"
+        }
+      ]
+    }
+  },
+  "never-amortizes-hold-7": {
+    "input": {
+      "price": 10000000,
+      "closingCostPct": 0.02,
+      "noi": 600000,
+      "noiGrowth": 0.03,
+      "holdYears": 7,
+      "exitCap": 0.065,
+      "saleCostPct": 0.02,
+      "loan": 6000000,
+      "rate": 0.065,
+      "amortYears": 0,
+      "ioYears": 0
+    },
+    "result": {
+      "equity": 4200000,
+      "exitValue": 11352681.83469111,
+      "unleveredFlows": [
+        -10200000,
+        600000,
+        618000,
+        636540,
+        655636.2,
+        675305.2860000001,
+        695564.44458,
+        11842059.575914687
+      ],
+      "leveredFlows": [
+        -4200000,
+        210000,
+        228000,
+        246540,
+        265636.19999999995,
+        285305.2860000001,
+        305564.44458,
+        5452059.575914687
+      ],
+      "unleveredIrr": 0.07420145631834883,
+      "leveredIrr": 0.08623492591333123,
+      "equityMultiple": 1.6650251205939728,
+      "cashOnCashYear1": 0.05,
+      "averageCashOnCash": 0.06351963634344897,
+      "years": [
+        {
+          "year": 1,
+          "noi": 600000,
+          "debtService": 390000,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 600000,
+          "levered": 210000
+        },
+        {
+          "year": 2,
+          "noi": 618000,
+          "debtService": 390000,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 618000,
+          "levered": 228000
+        },
+        {
+          "year": 3,
+          "noi": 636540,
+          "debtService": 390000,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 636540,
+          "levered": 246540
+        },
+        {
+          "year": 4,
+          "noi": 655636.2,
+          "debtService": 390000,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 655636.2,
+          "levered": 265636.19999999995
+        },
+        {
+          "year": 5,
+          "noi": 675305.2860000001,
+          "debtService": 390000,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 675305.2860000001,
+          "levered": 285305.2860000001
+        },
+        {
+          "year": 6,
+          "noi": 695564.44458,
+          "debtService": 390000,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 695564.44458,
+          "levered": 305564.44458
+        },
+        {
+          "year": 7,
+          "noi": 716431.3779174001,
+          "debtService": 390000,
+          "saleProceeds": 11125628.197997287,
+          "loanPayoff": 6000000,
+          "unlevered": 11842059.575914687,
+          "levered": 5452059.575914687
+        }
+      ],
+      "sensitivity": {
+        "exitCaps": [
+          0.06,
+          0.0625,
+          0.065,
+          0.0675,
+          0.07
+        ],
+        "growths": [
+          0.02,
+          0.025,
+          0.03,
+          0.035,
+          0.04
+        ],
+        "irr": [
+          [
+            0.08561027204024826,
+            0.09653930216197966,
+            0.10714720438392508,
+            0.1174646937249383,
+            0.12751834001590842
+          ],
+          [
+            0.07447344117189107,
+            0.08571007311682394,
+            0.0965919496809261,
+            0.107154560396529,
+            0.11742837949494271
+          ],
+          [
+            0.06349202857453302,
+            0.0750596471985713,
+            0.08623492591333123,
+            0.09705895298866406,
+            0.10756673313367408
+          ],
+          [
+            0.052630180246354755,
+            0.06455465062476434,
+            0.0760446072698243,
+            0.08714773361104432,
+            0.09790431141916159
+          ],
+          [
+            0.04185334089495561,
+            0.05416343986136643,
+            0.06599149892552286,
+            0.07739300911061955,
+            0.08841442442971563
+          ]
+        ]
+      },
+      "trace": [
+        {
+          "label": "All-in cost",
+          "formula": "$10,000,000.00 × (1 + 2.00%)",
+          "value": "$10,200,000.00"
+        },
+        {
+          "label": "Equity",
+          "formula": "$10,200,000.00 − $6,000,000.00 loan",
+          "value": "$4,200,000.00"
+        },
+        {
+          "label": "NOI in year 8",
+          "formula": "$600,000.00 × (1 + 3.00%)^7",
+          "value": "$737,924.32"
+        },
+        {
+          "label": "Sale price",
+          "formula": "year-8 NOI ÷ 6.50% exit cap",
+          "value": "$11,352,681.83"
+        },
+        {
+          "label": "Net sale proceeds",
+          "formula": "$11,352,681.83 × (1 − 2.00%)",
+          "value": "$11,125,628.20"
+        },
+        {
+          "label": "Loan payoff at sale",
+          "formula": "balance after 7 years",
+          "value": "$6,000,000.00"
+        },
+        {
+          "label": "Unlevered IRR",
+          "formula": "IRR(all-in cost, NOI by year, net sale)",
+          "value": "7.42%"
+        },
+        {
+          "label": "Levered IRR",
+          "formula": "IRR(equity, NOI − debt service, net sale − payoff)",
+          "value": "8.62%"
+        },
+        {
+          "label": "Equity multiple",
+          "formula": "$6,993,105.51 ÷ $4,200,000.00",
+          "value": "1.67x"
+        },
+        {
+          "label": "Year-1 cash-on-cash",
+          "formula": "$210,000.00 ÷ $4,200,000.00",
+          "value": "5.00%"
+        }
+      ]
+    }
+  },
+  "no-loan-io-3": {
+    "input": {
+      "price": 10000000,
+      "closingCostPct": 0.02,
+      "noi": 600000,
+      "noiGrowth": 0.03,
+      "holdYears": 5,
+      "exitCap": 0.065,
+      "saleCostPct": 0.02,
+      "loan": 0,
+      "rate": 0.065,
+      "amortYears": 30,
+      "ioYears": 3
+    },
+    "result": {
+      "equity": 10200000,
+      "exitValue": 10700991.455076924,
+      "unleveredFlows": [
+        -10200000,
+        600000,
+        618000,
+        636540,
+        655636.2,
+        11162276.911975386
+      ],
+      "leveredFlows": [
+        -10200000,
+        600000,
+        618000,
+        636540,
+        655636.2,
+        11162276.911975386
+      ],
+      "unleveredIrr": 0.06714146861773983,
+      "leveredIrr": 0.06714146861773983,
+      "equityMultiple": 1.34043657960543,
+      "cashOnCashYear1": 0.058823529411764705,
+      "averageCashOnCash": 0.06246042129411766,
+      "years": [
+        {
+          "year": 1,
+          "noi": 600000,
+          "debtService": 0,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 600000,
+          "levered": 600000
+        },
+        {
+          "year": 2,
+          "noi": 618000,
+          "debtService": 0,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 618000,
+          "levered": 618000
+        },
+        {
+          "year": 3,
+          "noi": 636540,
+          "debtService": 0,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 636540,
+          "levered": 636540
+        },
+        {
+          "year": 4,
+          "noi": 655636.2,
+          "debtService": 0,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 655636.2,
+          "levered": 655636.2
+        },
+        {
+          "year": 5,
+          "noi": 675305.2860000001,
+          "debtService": 0,
+          "saleProceeds": 10486971.625975385,
+          "loanPayoff": 0,
+          "unlevered": 11162276.911975386,
+          "levered": 11162276.911975386
+        }
+      ],
+      "sensitivity": {
+        "exitCaps": [
+          0.06,
+          0.0625,
+          0.065,
+          0.0675,
+          0.07
+        ],
+        "growths": [
+          0.02,
+          0.025,
+          0.03,
+          0.035,
+          0.04
+        ],
+        "irr": [
+          [
+            0.07159293862348498,
+            0.07655335156677927,
+            0.08151376208085005,
+            0.08647417019972063,
+            0.09143457595678396
+          ],
+          [
+            0.06430101370481305,
+            0.0692213786577516,
+            0.07414173852571095,
+            0.07906209337977378,
+            0.08398244328970662
+          ],
+          [
+            0.057377042759320374,
+            0.0622592595953997,
+            0.06714146861773983,
+            0.0720236699353597,
+            0.07690586365526295
+          ],
+          [
+            0.05079007166362854,
+            0.05563588344861714,
+            0.06048168462186628,
+            0.06532747533115014,
+            0.07017325572151611
+          ],
+          [
+            0.04451276069584042,
+            0.04932377185770963,
+            0.05413476954410579,
+            0.05894575394232569,
+            0.06375672523621541
+          ]
+        ]
+      },
+      "trace": [
+        {
+          "label": "All-in cost",
+          "formula": "$10,000,000.00 × (1 + 2.00%)",
+          "value": "$10,200,000.00"
+        },
+        {
+          "label": "Equity",
+          "formula": "$10,200,000.00 − $0.00 loan",
+          "value": "$10,200,000.00"
+        },
+        {
+          "label": "NOI in year 6",
+          "formula": "$600,000.00 × (1 + 3.00%)^5",
+          "value": "$695,564.44"
+        },
+        {
+          "label": "Sale price",
+          "formula": "year-6 NOI ÷ 6.50% exit cap",
+          "value": "$10,700,991.46"
+        },
+        {
+          "label": "Net sale proceeds",
+          "formula": "$10,700,991.46 × (1 − 2.00%)",
+          "value": "$10,486,971.63"
+        },
+        {
+          "label": "Loan payoff at sale",
+          "formula": "balance after 5 years",
+          "value": "$0.00"
+        },
+        {
+          "label": "Unlevered IRR",
+          "formula": "IRR(all-in cost, NOI by year, net sale)",
+          "value": "6.71%"
+        },
+        {
+          "label": "Levered IRR",
+          "formula": "IRR(equity, NOI − debt service, net sale − payoff)",
+          "value": "6.71%"
+        },
+        {
+          "label": "Equity multiple",
+          "formula": "$13,672,453.11 ÷ $10,200,000.00",
+          "value": "1.34x"
+        },
+        {
+          "label": "Year-1 cash-on-cash",
+          "formula": "$600,000.00 ÷ $10,200,000.00",
+          "value": "5.88%"
+        }
+      ]
+    }
+  },
+  "paid-off-amort-5-hold-7-io-1": {
+    "input": {
+      "price": 10000000,
+      "closingCostPct": 0.02,
+      "noi": 600000,
+      "noiGrowth": 0.03,
+      "holdYears": 7,
+      "exitCap": 0.065,
+      "saleCostPct": 0.02,
+      "loan": 6000000,
+      "rate": 0.065,
+      "amortYears": 5,
+      "ioYears": 1
+    },
+    "result": {
+      "equity": 4200000,
+      "exitValue": 11352681.83469111,
+      "unleveredFlows": [
+        -10200000,
+        600000,
+        618000,
+        636540,
+        655636.2,
+        675305.2860000001,
+        695564.44458,
+        11842059.575914687
+      ],
+      "leveredFlows": [
+        -4200000,
+        210000,
+        -790762.671748464,
+        -772222.6717484642,
+        -753126.4717484643,
+        -733457.3857484641,
+        -713198.2271684118,
+        11842059.575914687
+      ],
+      "unleveredIrr": 0.07420145631834883,
+      "leveredIrr": 0.08319952335421182,
+      "equityMultiple": 1.5135516244377096,
+      "cashOnCashYear1": 0.05,
+      "averageCashOnCash": -0.09647401531445131,
+      "years": [
+        {
+          "year": 1,
+          "noi": 600000,
+          "debtService": 390000,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 600000,
+          "levered": 210000
+        },
+        {
+          "year": 2,
+          "noi": 618000,
+          "debtService": 1408762.671748464,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 618000,
+          "levered": -790762.671748464
+        },
+        {
+          "year": 3,
+          "noi": 636540,
+          "debtService": 1408762.6717484642,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 636540,
+          "levered": -772222.6717484642
+        },
+        {
+          "year": 4,
+          "noi": 655636.2,
+          "debtService": 1408762.6717484642,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 655636.2,
+          "levered": -753126.4717484643
+        },
+        {
+          "year": 5,
+          "noi": 675305.2860000001,
+          "debtService": 1408762.6717484642,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 675305.2860000001,
+          "levered": -733457.3857484641
+        },
+        {
+          "year": 6,
+          "noi": 695564.44458,
+          "debtService": 1408762.6717484118,
+          "saleProceeds": 0,
+          "loanPayoff": 0,
+          "unlevered": 695564.44458,
+          "levered": -713198.2271684118
+        },
+        {
+          "year": 7,
+          "noi": 716431.3779174001,
+          "debtService": 0,
+          "saleProceeds": 11125628.197997287,
+          "loanPayoff": 0,
+          "unlevered": 11842059.575914687,
+          "levered": 11842059.575914687
+        }
+      ],
+      "sensitivity": {
+        "exitCaps": [
+          0.06,
+          0.0625,
+          0.065,
+          0.0675,
+          0.07
+        ],
+        "growths": [
+          0.02,
+          0.025,
+          0.03,
+          0.035,
+          0.04
+        ],
+        "irr": [
+          [
+            0.08277785430297226,
+            0.0904695228068717,
+            0.09811584508481082,
+            0.10571818117250406,
+            0.11327784194213054
+          ],
+          [
+            0.07514171735772883,
+            0.08284109645300253,
+            0.0904940698370028,
+            0.09810203260087123,
+            0.10566632946506875
+          ],
+          [
+            0.06783140269834669,
+            0.07553918694396133,
+            0.08319952335421182,
+            0.09081384144993901,
+            0.09838351921559797
+          ],
+          [
+            0.06082117430705553,
+            0.06853798071558549,
+            0.07620631376207526,
+            0.08382763678607359,
+            0.09140336046649018
+          ],
+          [
+            0.054088201908530226,
+            0.06181457969371762,
+            0.06949147449462892,
+            0.07712038287174905,
+            0.08470274764215385
+          ]
+        ]
+      },
+      "trace": [
+        {
+          "label": "All-in cost",
+          "formula": "$10,000,000.00 × (1 + 2.00%)",
+          "value": "$10,200,000.00"
+        },
+        {
+          "label": "Equity",
+          "formula": "$10,200,000.00 − $6,000,000.00 loan",
+          "value": "$4,200,000.00"
+        },
+        {
+          "label": "NOI in year 8",
+          "formula": "$600,000.00 × (1 + 3.00%)^7",
+          "value": "$737,924.32"
+        },
+        {
+          "label": "Sale price",
+          "formula": "year-8 NOI ÷ 6.50% exit cap",
+          "value": "$11,352,681.83"
+        },
+        {
+          "label": "Net sale proceeds",
+          "formula": "$11,352,681.83 × (1 − 2.00%)",
+          "value": "$11,125,628.20"
+        },
+        {
+          "label": "Loan payoff at sale",
+          "formula": "balance after 7 years",
+          "value": "$0.00"
+        },
+        {
+          "label": "Unlevered IRR",
+          "formula": "IRR(all-in cost, NOI by year, net sale)",
+          "value": "7.42%"
+        },
+        {
+          "label": "Levered IRR",
+          "formula": "IRR(equity, NOI − debt service, net sale − payoff)",
+          "value": "8.32%"
+        },
+        {
+          "label": "Equity multiple",
+          "formula": "$12,052,059.58 ÷ $7,962,767.43",
+          "value": "1.51x"
+        },
+        {
+          "label": "Year-1 cash-on-cash",
+          "formula": "$210,000.00 ÷ $4,200,000.00",
+          "value": "5.00%"
+        }
+      ]
+    }
+  }
+}

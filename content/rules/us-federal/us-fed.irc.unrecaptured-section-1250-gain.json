@@ -1,0 +1,43 @@
+{
+  "id": "us-fed.irc.unrecaptured-section-1250-gain",
+  "jurisdiction": "us-federal",
+  "title": "Unrecaptured section 1250 gain on the sale of depreciated real property",
+  "rule": "Section 1250 treats gain on depreciable realty as ordinary income up to additional depreciation, all of it for most property. Additional depreciation is all depreciation for property held one year or less; if longer, only the excess over straight line, so a straight-line building has none. Unrecaptured section 1250 gain is long-term capital gain, not otherwise ordinary, that would be ordinary if section 1250 reached all depreciation at 100 percent, less any excess of net short-term capital loss, collectibles loss and long-term loss carryover over collectibles and section 1202 gain. Its top rate, for individuals, estates and trusts, is 25 percent. Allowable depreciation counts unless records show less allowed.",
+  "citation": {
+    "authority": "26 U.S.C. 1(h)(1)(E), 1(h)(4) and 1(h)(6)(A) (cap in 1(h)(6)(B)); 26 U.S.C. 1250(a)(1) and (b)(1) and (3)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/1"
+  },
+  "asOf": "2026-11-14",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to the capital gains rate structure in section 1(h), including the 25 percent rate in 1(h)(1)(E) and the definition in 1(h)(6), or to the definition of additional depreciation in section 1250(b).",
+  "sources": [
+    {
+      "id": "usc-26-1",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1",
+      "title": "26 U.S.C. 1, Tax imposed (subsection (h), Maximum capital gains rate)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "which would be treated as ordinary income if section 1250(b)(1) included all depreciation and the applicable percentage under section 1250(a) were 100 percent",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-1250",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1250",
+      "title": "26 U.S.C. 1250, Gain from dispositions of certain depreciable realty",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "in the case of property held more than one year, it means such adjustments only to the extent that they exceed",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-topic-409",
+      "url": "https://www.irs.gov/taxtopics/tc409",
+      "title": "Topic no. 409, Capital gains and losses",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-14",
+      "quote": "The portion of any unrecaptured section 1250 gain from selling section 1250 real property is taxed at a maximum 25% rate.",
+      "tier": "primary"
+    }
+  ]
+}

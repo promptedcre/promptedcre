@@ -1,0 +1,166 @@
+{
+  "vendor": "reonomy",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "75812e556e9792c6326440aaefe7f9b7c4e774f0ac8e02c8b623e863a013ca71",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "c12"
+      ],
+      "rationale": "Reonomy's API documentation is on public pages (docs home, getting-started, basics and release notes) and describes matching addresses to properties, locating properties by geography, asset type and building area, bulk ingestion, and endpoints such as POST /property/bulk.",
+      "missing": "The pack shows only summary capability text and one endpoint from a Sept 2020 release note rather than a current endpoint reference, the newest release note is Mar 2021, and using the API needs an approved access request through sales and is limited to enterprise customers (c1, c2, c3)."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Nothing in the pack mentions a Reonomy MCP server.",
+      "missing": "Any official MCP server, its setup steps or its release status."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no Reonomy SDK, CLI, package-registry listing or public code repository.",
+      "missing": "Any vendor-maintained SDK or CLI, or even code samples or a pointer to an unofficial library."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "na",
+      "quality": 6,
+      "evidence": [
+        "c3",
+        "c7",
+        "c9",
+        "c12"
+      ],
+      "rationale": "The pack presents Reonomy as a licensed data set of 53M+ US commercial properties that customers match against, search and ingest, and shows no records that change on a customer's behalf.",
+      "missing": "The pack does not show the full endpoint list or state outright that customers keep no changeable records in Reonomy, and it shows no webhook or change-notification feature for data updates."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "partial",
+      "quality": 7,
+      "evidence": [
+        "c4",
+        "c1"
+      ],
+      "rationale": "Every API request needs credentials (an access key and secret key sent with HTTP Basic Authentication), but the basics page describes no scopes, roles or permissions that limit what a key can do.",
+      "missing": "Whether keys can be limited by scope or role, whether separate keys can be issued for an agent, and whether scoping is documented anywhere beyond the basics page."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no OpenAPI, Swagger, GraphQL or other machine-readable specification for the Reonomy API.",
+      "missing": "Any downloadable or in-docs machine-readable API specification."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no llms.txt file and no Markdown versions of the API documentation pages.",
+      "missing": "Any llms.txt file or Markdown documentation."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "na",
+      "quality": 6,
+      "evidence": [
+        "c5",
+        "c6",
+        "c7",
+        "c12"
+      ],
+      "rationale": "Every API function the pack shows (address matching, property search, bulk ingestion and POST /property/bulk returning property information) only reads Reonomy's published property data.",
+      "missing": "The pack does not show the complete endpoint reference, so it cannot fully rule out write endpoints, and it shows no sandbox or test environment."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "partial",
+      "quality": 6,
+      "evidence": [
+        "c8",
+        "c7",
+        "c10"
+      ],
+      "rationale": "The web app has an Exports feature for up to 2,000 property records a month, while larger bulk pulls go through the API or bulk feed plans, which are sold through Talk to an expert.",
+      "missing": "The export file format (CSV, Excel or JSON) and any documentation of the Exports feature are not shown, and the bulk routes need an approved request through sales (c2)."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "full",
+      "quality": 5,
+      "evidence": [
+        "c9"
+      ],
+      "rationale": "The pricing page invites buyers to select a subscription and get instant access to the property and ownership data, with only the bulk feed and API plans routed to Talk to an expert.",
+      "missing": "No probe or capture of the sign-up or checkout flow confirms that no call is needed, no plan prices are shown, and API access is enterprise-only and sales-gated (c2, c3)."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c10"
+      ],
+      "rationale": "The pricing page lists monthly, annual, bulk feed and API plans but shows no dollar amounts, and the API plan offers only Talk to an expert.",
+      "missing": "Any price, fee or starting price for any plan, including the monthly or annual subscription a small sponsor would buy."
+    },
+    {
+      "story": "md-property-lookup",
+      "verdict": "full",
+      "quality": 6,
+      "evidence": [
+        "c5",
+        "c12",
+        "c6"
+      ],
+      "rationale": "The public API docs say the API matches addresses to Reonomy properties and that POST /property/bulk returns information for the specified property IDs, with asset type and building area among the attributes properties can be located by.",
+      "missing": "The pack does not list the attributes returned (such as size, year built or use) or show a response schema or parcel-number lookup, the endpoint note dates to Sept 2020, and API access needs an approved request (c1, c2)."
+    },
+    {
+      "story": "md-comps",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows property search by geography, asset type and building area but nothing about sale or lease transactions or comparables.",
+      "missing": "Any sale or lease comp data, comp filters or transaction coverage in the API or app; the pack also does not show that Reonomy lacks transaction data, so na does not apply."
+    },
+    {
+      "story": "md-owner",
+      "verdict": "partial",
+      "quality": 3,
+      "evidence": [
+        "c9"
+      ],
+      "rationale": "The pricing page says a subscription gives access to ownership data, but the pack never shows the API or any data service returning the owner of record or a mailing address as structured data.",
+      "missing": "Whether the API returns owner of record and mailing address as structured fields, and how ownership data is delivered; the only support is a pricing-page marketing line."
+    },
+    {
+      "story": "md-bulk-area",
+      "verdict": "full",
+      "quality": 5,
+      "evidence": [
+        "c6",
+        "c7",
+        "c10"
+      ],
+      "rationale": "The public API docs describe locating properties by geography and ingesting Reonomy data in bulk (typically over 10k records), and the pricing page claims up to 1M properties in a single API request.",
+      "missing": "The pack does not show the area-search endpoint or confirm it returns every record for an area (the only endpoint shown takes 250 property IDs per call), the 1M figure is a pricing-page claim, the bulk feed and API plans need a sales conversation, and web-app exports are capped at 2,000 records a month (c8)."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "us-fed.irc.1031-identification-rules",
+  "jurisdiction": "us-federal",
+  "title": "Like-kind exchange: how replacement property is identified",
+  "rule": "Replacement property is identified only in a written document the taxpayer signs and sends before the identification period ends to the person obligated to transfer it, or to another person in the exchange who is neither the taxpayer nor a disqualified person; property received within the period counts as identified. Real property must be unambiguously described: legal description, street address or distinguishable name. The limit is three properties of any value, or any number worth no more than 200 percent of the relinquished properties. Exceeding both voids the identification, except for property received within the period or if 95 percent of the value identified arrives within the exchange period.",
+  "citation": {
+    "authority": "26 CFR 1.1031(k)-1(c)",
+    "url": "https://www.ecfr.gov/current/title-26/section-1.1031(k)-1"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-13",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to 26 CFR 1.1031(k)-1(c) or to Section 1031(a)(3). The deadline is on us-fed.irc.1031-periods; a revocation must also be a signed writing sent before the period ends.",
+  "sources": [
+    {
+      "id": "ecfr-1-1031-k-1",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.1031(k)-1",
+      "title": "26 CFR 1.1031(k)-1, Treatment of deferred exchanges",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "Any number of properties as long as their aggregate fair market value as of the end of the identification period does not exceed 200 percent",
+      "tier": "primary"
+    }
+  ]
+}

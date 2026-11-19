@@ -1,0 +1,32 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+/build
+next-env.d.ts
+*.tsbuildinfo
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
+
+# env files
+.env*
+
+# vercel
+.vercel
+
+# never commit a leak-check denylist or its source config, wherever they land
+denylist*.txt
+denylist-sources*.json
+
+# rankings scratch: judge inputs and raw judge output
+rankings/.work/

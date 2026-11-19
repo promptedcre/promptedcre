@@ -1,0 +1,43 @@
+{
+  "id": "us-fed.irc.6045e-reporting",
+  "jurisdiction": "us-federal",
+  "title": "Form 1099-S: who files the information return on a real estate sale",
+  "rule": "The real estate reporting person files Form 1099-S on a reportable real estate sale or exchange and gives the seller a statement; corporate and other exempt sellers are excepted. A written agreement made at or before closing, signed by an eligible designee, designates the filer. Otherwise it is the person responsible for closing: the settlement agent listed on a RESPA settlement form such as a Closing Disclosure; else whoever prepares a closing statement given to both parties; with none or several, the buyer's qualifying attorney, the seller's, then the main disbursing title or escrow company. Failing these: mortgage lender, seller's broker, buyer's broker, then buyer. No separate filing charge.",
+  "citation": {
+    "authority": "26 U.S.C. 6045(e); 26 CFR 1.6045-4(a), (d), (e); Instructions for Form 1099-S (12/2026)",
+    "url": "https://www.ecfr.gov/current/title-26/section-1.6045-4"
+  },
+  "asOf": "2026-11-14",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to 26 CFR 1.6045-4(e) (who reports, the attorney and title-company order, which persons may be designated) or to section 6045(e), and each new revision of the Form 1099-S instructions, including how they map the regulation's Uniform Settlement Statement onto the Closing Disclosure.",
+  "sources": [
+    {
+      "id": "ecfr-26-1-6045-4",
+      "url": "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-26?part=1&section=1.6045-4",
+      "title": "26 CFR 1.6045-4, Information reporting on real estate transactions (paragraphs (a), (b), (d), (e)(1) to (e)(6))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-14",
+      "quote": "the person who prepares a closing statement presented to the transferor and transferee at, or in connection with, the closing of the real estate transaction",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-6045",
+      "url": "https://www.law.cornell.edu/uscode/text/26/6045",
+      "title": "26 U.S.C. 6045, Returns of brokers (subsection (e), real estate transactions)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "It shall be unlawful for any real estate reporting person to separately charge any customer for complying with any requirement of paragraph (1).",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-1099s-instructions",
+      "url": "https://www.irs.gov/instructions/i1099s",
+      "title": "Instructions for Form 1099-S (12/2026), Proceeds From Real Estate Transactions: Who Must File; Separate Charge Prohibited",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-14",
+      "quote": "(a) the mortgage lender, (b) the transferor's broker, (c) the transferee's broker, or (d) the transferee.",
+      "tier": "primary"
+    }
+  ]
+}

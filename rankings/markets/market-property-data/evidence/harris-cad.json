@@ -1,0 +1,136 @@
+{
+  "vendor": "harris-cad",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://hcad.org/hcad-online-services/pdata/pdata-help",
+      "found": true,
+      "note": "Public Data Help page: import instructions, data definitions FAQ, codebook and GIS help."
+    },
+    "api": {
+      "url": "https://hcad.org/hcad-online-services/pdata/",
+      "found": false,
+      "note": "No API or web-service page; public data is offered as downloadable text files and shapefiles plus a search website."
+    },
+    "pricing": {
+      "url": "https://hcad.org/hcad-online-services/pdata/pdata-help",
+      "found": false,
+      "note": "No fee schedule or statement that downloads are free on the public data pages; custom requests are quoted by open records request."
+    },
+    "changelog": {
+      "url": "https://hcad.org/pdata/pdata-property-downloads.html",
+      "found": true,
+      "note": "No release notes; the downloads page shows a Last Updated date and the public data page a yearly update timeline. Browser-rendered page read through the built-in browser."
+    }
+  },
+  "links": {
+    "docs": "https://hcad.org/hcad-online-services/pdata/pdata-help"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://hcad.org/pdata/pdata-property-downloads.html",
+      "excerpt": "Data includes property information like owner name, mailing address and legal descriptions, neighborhood information, permit information and deed information.",
+      "fetched": "2026-11-12",
+      "note": "Real Property Data download description.",
+      "hash": "f64320f4df329a5305c322b8992a98252812be0d99fecb51f84514e042171ae2"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://hcad.org/pdata/pdata-property-downloads.html",
+      "excerpt": "Residential building information, information of income producing properties including occupancy rates and operating income",
+      "fetched": "2026-11-12",
+      "note": "Building Information download; nothing on sale prices in the listing.",
+      "hash": "48a229bd76cf65474fee3f7351bff780d2f15b10eb2c370bed02777b44ffc2ba"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://hcad.org/pdata/pdata-property-downloads.html",
+      "excerpt": "Last Updated: November 08, 2026",
+      "fetched": "2026-11-12",
+      "note": "Shown under 2026 Certified Values.",
+      "hash": "5f99249ca8aaebfceaf711013ea43c7bf987e4c2328bda41828ef49027b9e4ff"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://hcad.org/hcad-online-services/pdata/",
+      "excerpt": "HCAD's data files are available to users for import into other applications.",
+      "fetched": "2026-11-12",
+      "hash": "53625d796b2c4f730751c412c1005923178947d0857ce6d41304395caf4c9789"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://hcad.org/hcad-online-services/pdata/",
+      "excerpt": "Download times can be excessive and should not be attempted with a slower internet connection.",
+      "fetched": "2026-11-12",
+      "note": "Files are county-wide, very large ASCII tab-delimited text.",
+      "hash": "ddf696db627d2eefe11096e369ca85fd34d8dca7cefec0a6f7fcd973136c9031"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://hcad.org/hcad-online-services/pdata/",
+      "excerpt": "Consists of current year GIS format files including the prior year shapefiles.",
+      "fetched": "2026-11-12",
+      "hash": "a8749dd9944bf16fc64d4006e377d8fc9c30bac3c9ff8cdd16e836210e198047"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://hcad.org/pdata/pdata-gis-downloads.html",
+      "excerpt": "GIS data updates on this webpage quarterly.",
+      "fetched": "2026-11-12",
+      "hash": "75145897dc8c24703a99029e400924e9e8c9be80f23b23a25a32b31787bd9c75"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://hcad.org/hcad-online-services/pdata/pdata-help",
+      "excerpt": "The public data provided is raw data or text files and will need to be formatted for use in a database.",
+      "fetched": "2026-11-12",
+      "hash": "e8966b30e1191f1b40af36665564446acd52f55cf27fa5bd09d21a94f8903a4b"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://hcad.org/hcad-online-services/pdata/pdata-help",
+      "excerpt": "An estimate of the cost with a breakdown will be sent requiring approval prior to any work is performed.",
+      "fetched": "2026-11-12",
+      "note": "For custom data requests; HCAD gives no technical support for the files.",
+      "hash": "e785e6ed9b2ef45c256bb61788aaf4b8120145595e6d7310338026aca12130b3"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://hcad.org/hcad-help/hcad-disclaimer/",
+      "excerpt": "The search limit on any given search is 3001 records",
+      "fetched": "2026-11-12",
+      "note": "Property search website cap.",
+      "hash": "7d4bde10df39f1a600b8553ebdf3645a11784917f318cd5f01b7de3e184463cb"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://hcad.org/hcad-help/hcad-disclaimer/",
+      "excerpt": "Current Year Real and Personal Property Records on the internet server are usually updated from the District's system on a nightly basis.",
+      "fetched": "2026-11-12",
+      "hash": "26d7727f668419e78ed251284c24b81a9f610643b8907a4e095f6419d68eb020"
+    },
+    {
+      "id": "c12",
+      "tier": "vendor-claim",
+      "url": "https://hcad.org/property-search/search-help/",
+      "excerpt": "The HCAD address search does NOT work like online address search engines",
+      "fetched": "2026-11-12",
+      "note": "Address matching is literal; owner searches accept partial names.",
+      "hash": "17726d3cda1f5359293042d1a5c6efd6df6e4c694d3228bf90f146b107182dc8"
+    }
+  ]
+}

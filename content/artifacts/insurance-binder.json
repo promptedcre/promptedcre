@@ -1,0 +1,98 @@
+{
+  "id": "insurance-binder",
+  "name": "Property insurance binder",
+  "what": "Written evidence that property and liability coverage is in force from closing, as the lender requires.",
+  "fields": [
+    {
+      "key": "insurer",
+      "label": "Insurer",
+      "type": "string",
+      "definition": "Each insurance company binding coverage, as the binder names it. Where coverage is split among carriers, list each with its line of coverage."
+    },
+    {
+      "key": "agent",
+      "label": "Agent or broker",
+      "type": "string",
+      "definition": "The agent or broker who issued the binder, with the contact the lender and title company use."
+    },
+    {
+      "key": "namedInsured",
+      "label": "Named insured",
+      "type": "string",
+      "definition": "The insured exactly as the binder names it. It should be the buying entity's legal name as on its certificate of formation; a principal's name or a former name is a finding."
+    },
+    {
+      "key": "property",
+      "label": "Insured location",
+      "type": "string",
+      "definition": "The property address and buildings the binder covers."
+    },
+    {
+      "key": "binderNumber",
+      "label": "Binder or policy number",
+      "type": "string",
+      "definition": "The binder number, and the policy number once the policy issues."
+    },
+    {
+      "key": "effectiveDate",
+      "label": "Effective date",
+      "type": "date",
+      "definition": "The date and time coverage starts. It should be no later than the closing."
+    },
+    {
+      "key": "expirationDate",
+      "label": "Binder expires",
+      "type": "date",
+      "definition": "The date the binder lapses if the policy has not issued. Calendar it and track the policy until it replaces the binder."
+    },
+    {
+      "key": "policyPeriod",
+      "label": "Policy period",
+      "type": "list",
+      "definition": "For each line of coverage, the policy's start and expiration dates, read from the declarations page once the policy issues. Each expiration date goes into the deadline calendar as an insurance renewal date. Empty while only the binder exists."
+    },
+    {
+      "key": "coverages",
+      "label": "Coverages, limits and deductibles",
+      "type": "list",
+      "definition": "Each line bound, such as property, general liability, business income or loss of rents, wind, flood and umbrella, with its limit, deductible and the valuation the binder states, such as replacement cost."
+    },
+    {
+      "key": "floodCoverage",
+      "label": "Flood coverage",
+      "type": "text",
+      "definition": "Whether flood coverage is bound, its amount and the flood zone from the determination. For a building in a special flood hazard area where federal flood insurance is available, a regulated lender may not make the loan without flood coverage for its term of at least the lesser of the principal balance and the maximum available.",
+      "authority": "42 U.S.C. 4012a(b)(1)"
+    },
+    {
+      "key": "lenderInterest",
+      "label": "Lender named",
+      "type": "text",
+      "definition": "How the binder names the lender, such as mortgagee and loss payee on property and additional insured on liability, with the exact name and address the loan commitment requires."
+    },
+    {
+      "key": "cancellationNotice",
+      "label": "Notice of cancellation to lender",
+      "type": "string",
+      "definition": "The advance notice of cancellation or non-renewal the binder says the lender will receive, as written."
+    },
+    {
+      "key": "lenderRequirementsMet",
+      "label": "Meets the lender's requirements",
+      "type": "boolean",
+      "definition": "Whether each insurance requirement in the term sheet or commitment is met, checked line by line; list any gap in the deficiencies field."
+    },
+    {
+      "key": "deficiencies",
+      "label": "Gaps against the lender's list",
+      "type": "list",
+      "definition": "Each requirement the binder does not meet yet, and who is fixing it."
+    },
+    {
+      "key": "deliveredTo",
+      "label": "Delivered to",
+      "type": "list",
+      "definition": "The lender, title company and anyone else who received the binder, with the date sent."
+    }
+  ]
+}

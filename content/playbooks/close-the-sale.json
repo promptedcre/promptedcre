@@ -1,0 +1,506 @@
+{
+  "id": "close-the-sale",
+  "slug": "close-the-sale",
+  "kind": "process",
+  "title": "Close the sale",
+  "summary": "From a signed sale contract to money in the bank: the seller's checklist, diligence answers, estoppels, the payoff statement, title objections with counsel, the non-foreign certification, a line-by-line settlement review, signed documents, verified funds, notices and the hand-off to the distribution.",
+  "phase": "exit",
+  "order": 520,
+  "featured": false,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-14",
+  "requires": [
+    "negotiate-the-sale"
+  ],
+  "consumes": [
+    "purchase-and-sale-agreement",
+    "loan-documents",
+    "lease",
+    "lease-abstract",
+    "rent-roll",
+    "trailing-12",
+    "title-commitment",
+    "survey",
+    "owner-title-policy",
+    "title-objection-letter",
+    "settlement-statement",
+    "underwriting-model",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "wire-instructions",
+    "exchange-agreement",
+    "investor-register"
+  ],
+  "produces": [
+    "tenant-estoppel",
+    "snda",
+    "payoff-letter",
+    "deed",
+    "lien-release",
+    "wire-instructions"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "usc-26-1445",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1445",
+      "title": "26 U.S.C. 1445, Withholding of tax on dispositions of United States real property interests (subsection (b)(2), nonforeign affidavit)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "an affidavit by the transferor stating, under penalty of perjury",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-1-6045-4",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.6045-4",
+      "title": "26 CFR 1.6045-4, Information reporting on real estate transactions (paragraphs (d), (e) and (l))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-14",
+      "quote": "only the reporting person is required to report with respect to any real estate transaction",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-6045",
+      "url": "https://www.law.cornell.edu/uscode/text/26/6045",
+      "title": "26 U.S.C. 6045, Returns of brokers (subsection (e), real estate transactions)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "the person (including any attorney or title company) responsible for closing the transaction",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-93",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.93.htm",
+      "title": "Texas Property Code, Chapter 93 (Commercial tenancies), Section 93.007, Cessation of owner's interest",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "remains liable for a security deposit received while the person was the owner until the new owner delivers to the tenant a signed statement",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-5",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.5.htm",
+      "title": "Texas Property Code, Chapter 5 (Section 5.021, Instrument of conveyance)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "must be in writing and must be subscribed and delivered by the conveyor",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-13",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.13.htm",
+      "title": "Texas Property Code, Chapter 13 (Sections 13.001 and 13.002, Effects of recording)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "is void as to a creditor or to a subsequent purchaser for a valuable consideration without notice",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "build-closing-checklist",
+      "title": "Build the seller's closing checklist from the contract",
+      "instruction": "Read the signed contract and every amendment and list each seller delivery, deadline and closing condition with the section it comes from: the closing date and any extension right, the diligence materials and when they are due, estoppels and subordination agreements, the title and survey response periods, the deed form, closing certificates, and how notices must be given. Enter each contract period in the deadline-calendar calculator, which counts days from the dates entered; the contract's own words on business days and time of day govern, so check each date against its section. Add the lender's prepayment notice period from the loan documents and each lease's estoppel response period. List any unclear date or delivery as a question for counsel. Give every line an owner and share the checklist with counsel and the listing broker.",
+      "mode": "agent",
+      "modeBasis": "Reading the contract, the loan documents and the leases into a dated list is document work an agent can do and a person can check.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "loan-documents",
+        "lease-abstract"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "answer-diligence-requests",
+      "title": "Answer the buyer's diligence requests from the property file",
+      "instruction": "Log each request the buyer sends against the contract's delivery list and its deadline. Answer from documents already in the property file: leases and amendments, the rent roll, operating statements, service contracts, warranties, permits, the seller's title policy and survey, and reports the seller holds. Send copies as they exist; do not write new statements of fact or fill a gap with an estimate. Where the file has no answer, say so, and send to counsel any request that asks the seller to confirm a fact beyond the contract's representations. Mark what the contract or a confidentiality agreement limits. A principal approves each release before it goes to the buyer, and the log records what was sent, to whom and on what date, because the representations and any later dispute turn on what was delivered.",
+      "mode": "agent",
+      "modeBasis": "Matching requests to documents in the file is agent work; anything sent to the buyer goes only with a principal's approval.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-closing-checklist"
+      ],
+      "market": "deal-pipeline-underwriting",
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "lease",
+        "rent-roll",
+        "trailing-12",
+        "owner-title-policy",
+        "survey"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "request-tenant-estoppels",
+      "title": "Request estoppels and subordination agreements from tenants",
+      "instruction": "List the tenants the contract requires certificates from and the form it requires, then read each lease for what the tenant must sign, its response period and whether it must sign a subordination agreement for the buyer's lender. Prepare each estoppel from the lease and the rent roll so the facts the seller fills in match the file: rent, rent paid through, deposit, term, options and open landlord work. Pass the buyer's lender's subordination form to the tenants whose leases oblige them to sign one. A principal approves each request before it goes to a tenant, and it goes as the lease's notice clause requires. Compare every return with the lease and the rent roll, send any difference or claimed default to the principal and counsel before the certificate goes to the buyer, and track the contract's delivery date.",
+      "mode": "agent",
+      "modeBasis": "Preparing the forms and comparing returns is document work; each request goes to a tenant only with a principal's approval.",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-closing-checklist"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "lease",
+        "lease-abstract",
+        "rent-roll"
+      ],
+      "produces": [
+        "tenant-estoppel",
+        "snda"
+      ],
+      "basis": "practitioner",
+      "sources": [],
+      "typeNotes": {
+        "multifamily": "Where the contract calls for a certified rent roll instead of resident estoppels, prepare that certificate from the rent roll and the leases for a principal to sign."
+      }
+    },
+    {
+      "id": "request-payoff-statement",
+      "title": "Order the loan payoff statement and check the prepayment cost",
+      "instruction": "Read the note and loan documents for how the loan can be repaid: any lockout, the prepayment premium, yield maintenance or defeasance terms, the notice the lender must get and by when, permitted payoff dates, and any hedge that must be ended. Draft the notice and payoff request on those terms, with a good-through date that allows for a delayed closing. A principal approves it before it goes to the lender. When the statement arrives, check the principal balance, interest to the payoff date, the per diem on the loan's day-count basis in the loan-payments calculator, the prepayment cost against the note's formula, fees, and reserve or escrow balances to be returned. Confirm the lender will deliver a release of lien on payment. Take any figure that differs from the note to counsel and the lender. If the buyer assumes the loan instead, counsel runs the lender's assumption process.",
+      "mode": "agent",
+      "modeBasis": "Reading the note and checking the lender's arithmetic is document and calculator work; the request goes to the lender only with a principal's approval.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-closing-checklist"
+      ],
+      "calculators": [
+        "loan-payments"
+      ],
+      "consumes": [
+        "loan-documents"
+      ],
+      "produces": [
+        "payoff-letter"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "answer-title-objections",
+      "title": "Answer title and survey objections with counsel",
+      "instruction": "When the buyer's objection letter arrives, log each matter against the contract's title section: the seller's response period, what happens if the seller does not answer, and any duty to remove liens the seller created, such as the existing deed of trust. Counsel reads each objection against the title commitment, the survey and the seller's own title policy, and advises what the seller can cure, at what cost and how long it takes. The principal decides each matter: cure it, decline it, or ask the title company to insure over it. Counsel drafts the response and sends it on time once the principal approves it. Calendar any cure the seller agrees to and the buyer's next election date, and order the releases, corrective instruments or survey revisions each cure needs.",
+      "mode": "human-online",
+      "modeBasis": "Reading title matters against the contract and answering the buyer is legal work; which cures to give binds the seller and is the principal's call.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-closing-checklist"
+      ],
+      "consumes": [
+        "title-objection-letter",
+        "title-commitment",
+        "survey",
+        "owner-title-policy",
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "confirm-reporting-person",
+      "title": "Confirm who files the information return on the sale",
+      "instruction": "Only the reporting person files the return on a real estate sale. Under the regulation it is the person responsible for closing: the settlement agent listed on a Uniform Settlement Statement, otherwise the person who prepares the closing statement given to both parties, and, where there is no statement or more than one, an order among the parties' attorneys and the disbursing title company that the regulation sets out. A written designation agreement signed at or before closing can name another eligible person. From the draft statement and escrow instructions, record that person and any proposed designation, and have counsel confirm it. Corporate transferors are excepted; the CPA says whether the seller is one. The reporting person solicits the seller's identification number with a certification under penalties of perjury; a principal signs that certification in the next step, and the agent records only that it was given.",
+      "mode": "agent",
+      "modeBasis": "Reading the closing papers for who closes is document work; the identification number is certified by a principal in the signing step.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-closing-checklist"
+      ],
+      "rules": [
+        "us-fed.irc.6045e-reporting"
+      ],
+      "consumes": [
+        "settlement-statement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-1-6045-4",
+        "usc-26-6045"
+      ]
+    },
+    {
+      "id": "sign-non-foreign-certification",
+      "title": "Sign the non-foreign and TIN certifications",
+      "instruction": "The buyer will ask the seller to certify it is not foreign. Section 1445 makes the buyer withhold when a foreign person disposes of United States real property, and lifts that duty when the transferor gives an affidavit under penalty of perjury stating its taxpayer identification number and that it is not a foreign person, unless the buyer knows otherwise (see the rule card). Without the certificate the buyer cannot rely on that exemption and will usually hold back from the proceeds or treat it as a missed closing delivery; counsel reads the contract's clause. The CPA and counsel decide which entity is the transferor and whether it can certify, and set the path before closing if it cannot. A principal signs counsel's form, and the identification number certification the reporting person solicits, with the closing documents. The agent records only that each was signed, never the number.",
+      "mode": "human-online",
+      "modeBasis": "Both certifications are signed under penalty of perjury, and whether the seller can give the non-foreign one is a tax and legal conclusion.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-closing-checklist",
+        "confirm-reporting-person"
+      ],
+      "rules": [
+        "us-fed.irc.firpta"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "deal-entity-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-26-1445"
+      ]
+    },
+    {
+      "id": "review-settlement-statement",
+      "title": "Review the settlement statement against the contract and leases",
+      "instruction": "Check each line of the title company's draft against the contract, leases, rent roll and payoff statement: price and deposit credit; rent for the closing month, prorated on the contract's terms for collected and delinquent rent; reimbursements the contract allocates; property taxes, prorated in the property-tax calculator with the closing day assigned as the contract says; commissions; title and escrow charges; the payoff; any amount the buyer withholds; and, on an exchange, net proceeds payable to the qualified intermediary. List each security deposit credited to the buyer. Under Property Code 93.007 the new owner is liable for deposits from the date it takes title, but the seller stays liable until the new owner gives each tenant a signed statement of the exact deposit: the greater of the lease amount and the amount in an estoppel the statute describes. Put those statements on the checklist.",
+      "mode": "agent",
+      "modeBasis": "The statement, the contract, the leases and the payoff are documents an agent can reconcile line by line.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "request-tenant-estoppels",
+        "request-payoff-statement",
+        "answer-title-objections",
+        "sign-non-foreign-certification",
+        "confirm-reporting-person"
+      ],
+      "rules": [
+        "us-tx.property.commercial-security-deposit"
+      ],
+      "calculators": [
+        "property-tax"
+      ],
+      "consumes": [
+        "settlement-statement",
+        "purchase-and-sale-agreement",
+        "lease",
+        "rent-roll",
+        "tenant-estoppel",
+        "payoff-letter"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-93"
+      ],
+      "typeNotes": {
+        "multifamily": "Chapter 93 covers commercial tenancies; residential deposits follow a different chapter, and counsel confirms what the seller and buyer must do with them.",
+        "retail": "Check percentage rent and the year's reimbursement reconciliation against the contract's proration terms, since both may settle after closing."
+      }
+    },
+    {
+      "id": "confirm-net-proceeds",
+      "title": "Confirm net proceeds against the seller's net sheet",
+      "instruction": "Run the sale-proceeds calculator with the price, the selling costs from the draft statement, the loan payoff from the lender's statement, any other payoffs, and the adjusted basis from the books. Compare its cash at closing with the statement's net to the seller and with the net sheet the sponsor made when it decided to sell. Explain every difference by line: a credit, a proration, a cost or a payoff that moved. Settle each with the title company before the final statement is issued. Leave the gain and its tax to the CPA; the calculator's tax figure is arithmetic on the rates entered, not a return position. Hand the reconciliation to the principal with the final statement for signing.",
+      "mode": "agent",
+      "modeBasis": "The calculator runs from the statement, the payoff and the books; the tax treatment is the CPA's.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "review-settlement-statement"
+      ],
+      "calculators": [
+        "sale-proceeds"
+      ],
+      "consumes": [
+        "settlement-statement",
+        "payoff-letter",
+        "underwriting-model"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "draft-closing-documents",
+      "title": "Have counsel draft the deed and closing documents",
+      "instruction": "Counsel drafts the seller's documents on the contract's forms: the deed of the type the contract requires, subject to the permitted exceptions; the bill of sale and the assignments of leases, contracts and warranties; the tenant notice letters; the seller's closing certificate on its representations; and the evidence of authority the title company requires, such as formation documents and the consent the governing agreement calls for. A Texas deed must be in writing and signed and delivered by the grantor or an agent authorized in writing, and unless acknowledged, sworn to or proved and filed for record it is void against later purchasers for value without notice (see the rule card). Compare the drafts with the checklist and the commitment's requirements, then send the agreed set to the title company. In a joint venture, include any partner consent or signature the JV agreement requires.",
+      "mode": "human-online",
+      "modeBasis": "Drafting conveyance documents is legal work for counsel.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "request-tenant-estoppels",
+        "answer-title-objections",
+        "sign-non-foreign-certification"
+      ],
+      "rules": [
+        "us-tx.property.conveyance-recording"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "title-commitment",
+        "lease-abstract",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-5",
+        "tx-prop-13"
+      ]
+    },
+    {
+      "id": "sign-closing-documents",
+      "title": "Sign the closing documents",
+      "instruction": "The principal the governing agreement authorizes reads the final settlement statement beside the reconciliation and signs it, signs the deed before a notary or other officer who takes acknowledgments, and signs the rest of the seller's set. Check that the signer, the entity name and the legal description match the title commitment and the authority documents. Release the signed set into escrow only once the final statement matches the reconciled net and the escrow instructions hold the documents until the seller's proceeds are ready to fund. Keep a copy of every signed page for the closing file.",
+      "mode": "human-offline",
+      "modeBasis": "Signatures bind the seller and the deed must be acknowledged before an officer.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-net-proceeds",
+        "draft-closing-documents"
+      ],
+      "rules": [
+        "us-tx.property.conveyance-recording"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "settlement-statement",
+        "title-commitment"
+      ],
+      "produces": [
+        "deed"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "verify-funds-received",
+      "title": "Verify the funds received and the lien released",
+      "instruction": "Give the title company the seller's wire instructions in writing and confirm them on a call to a number already on file. Treat any request to change instructions, from either side, as fraud until verified, and follow wire-instructions-change. If the sale is part of a like-kind exchange, the proceeds go to the qualified intermediary under the exchange agreement, never to the seller; run-a-1031-exchange covers that path. After funding, a principal confirms in the bank account that the net proceeds arrived in the amount on the final statement, and the title company confirms that the lender received its payoff and that the deed and the release of lien went for recording. Record the receipt in the books the same day.",
+      "mode": "human-online",
+      "modeBasis": "Confirming money in the seller's account is a bank login only a person holds.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-closing-documents"
+      ],
+      "rules": [
+        "us-fed.irc.1031-qualified-intermediary"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "wire-instructions",
+        "settlement-statement",
+        "payoff-letter",
+        "exchange-agreement"
+      ],
+      "produces": [
+        "wire-instructions",
+        "lien-release"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "notify-tenants-vendors-insurer",
+      "title": "Tell the tenants, vendors and insurer",
+      "instruction": "Send each tenant the notice letter counsel drafted and both sides signed at closing: the new owner, where rent goes from the next due date, who handles repairs, and the buyer's signed acknowledgment of that tenant's security deposit. Send vendors the termination or assignment notices the service contracts and the sale contract call for, and move the utility accounts as of closing. Tell the insurer the property was sold, end the property coverage once the deed is recorded, keep the coverage the sponsor's insurance broker and counsel advise for claims from before closing, and ask for any return premium. Tell the property manager to hand over the files, keys and records the contract assigns to the buyer. A principal approves each notice before it goes out.",
+      "mode": "agent",
+      "modeBasis": "The tenant letters are counsel's signed set and the other notices are drafted from the contracts and the policy; each goes out only with a principal's approval.",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "verify-funds-received"
+      ],
+      "consumes": [
+        "lease-abstract",
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "file-and-hand-off",
+      "title": "File the closing set and hand off to the distribution",
+      "instruction": "Assemble the closing file: contract and amendments, final statement, the deed's recording data, payoff statement and lien release, estoppels, the non-foreign certification and the reporting person's name. List what survives closing: representations and how long they last, any holdback or escrow, prorations to be trued up, and the seller's statement of the information return when it arrives. Draft the notice to investors, or to the partner in a joint venture, that the sale closed and what it netted, tied to the final statement; a principal approves it before it goes out. Then start make-a-distribution with the net proceeds. In a fund, the proceeds go to the fund, and the fund agreement decides whether they are distributed or held and how investors are told. Before the entity is wound up, counsel reads what the governing agreement requires first, such as reserves and a final accounting; wind-down-the-entity covers it.",
+      "mode": "agent",
+      "modeBasis": "Assembling the file and drafting from the final statement is document work; the investor notice goes out only with a principal's approval.",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "verify-funds-received",
+        "notify-tenants-vendors-insurer"
+      ],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "settlement-statement",
+        "deal-entity-agreement",
+        "jv-agreement",
+        "investor-register"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    }
+  ],
+  "outlineSteps": []
+}

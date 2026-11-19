@@ -1,0 +1,69 @@
+{
+  "id": "us-fed.irc.retirement-account-debt-financed-income",
+  "jurisdiction": "us-federal",
+  "title": "Retirement-account investors in a property with a loan: tax on debt-financed income (UBTI)",
+  "rule": "An individual retirement account, though tax-exempt, owes tax on unrelated business taxable income. Income from debt-financed property counts in proportion to average acquisition debt over average adjusted basis; gain on a sale uses the highest acquisition debt in the 12 months before it, even if repaid. A partner includes its share of partnership income. The real-property debt exception covers listed qualified organizations, such as section 401 qualified trusts, not individual retirement accounts; its conditions reach a partnership's income allocations and can limit distribution terms. A $1,000 specific deduction applies; per the Form 990-T instructions, $1,000 or more of unrelated gross income requires a return. The tax is the account's.",
+  "citation": {
+    "authority": "26 U.S.C. 408(e)(1), 511, 512(b)(4), (b)(12) and (c)(1), 514(a), (b)(1), (c)(7) and (c)(9)(B), (C) and (E); filing threshold: IRS Instructions for Form 990-T and Publication 598",
+    "url": "https://www.law.cornell.edu/uscode/text/26/514"
+  },
+  "asOf": "2026-11-14",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to sections 511 to 514 (including the qualified-organization list in 514(c)(9)(C)), a revision of IRS Publication 598, or a change to the Form 990-T filing threshold.",
+  "sources": [
+    {
+      "id": "usc-26-408",
+      "url": "https://www.law.cornell.edu/uscode/text/26/408",
+      "title": "26 U.S.C. 408, Individual retirement accounts",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "any such account is subject to the taxes imposed by section 511",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-511",
+      "url": "https://www.law.cornell.edu/uscode/text/26/511",
+      "title": "26 U.S.C. 511, Imposition of tax on unrelated business income of charitable, etc., organizations",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-512",
+      "url": "https://www.law.cornell.edu/uscode/text/26/512",
+      "title": "26 U.S.C. 512, Unrelated business taxable income",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "there shall be allowed a specific deduction of $1,000",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-514",
+      "url": "https://www.law.cornell.edu/uscode/text/26/514",
+      "title": "26 U.S.C. 514, Unrelated debt-financed income",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "the highest amount of the acquisition indebtedness with respect to such property during the 12-month period ending with the date of the sale",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-p598",
+      "url": "https://www.irs.gov/publications/p598",
+      "title": "Publication 598, Tax on Unrelated Business Income of Exempt Organizations (revised March 2021)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-14",
+      "quote": "Form 990-T is required if the sum of the organization's gross income from all unrelated businesses is $1,000 or more.",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-i990t",
+      "url": "https://www.irs.gov/instructions/i990t",
+      "title": "Instructions for Form 990-T (2025)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-14",
+      "quote": "Trustees for the following trusts that have $1,000 or more of unrelated trade or business gross income.",
+      "tier": "primary"
+    }
+  ]
+}

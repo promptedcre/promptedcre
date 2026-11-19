@@ -1,0 +1,163 @@
+{
+  "vendor": "regrid",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://support.regrid.com/llms.txt",
+      "found": true,
+      "note": "Public Regrid Support docs (guides, API reference, release notes) with an llms.txt index and .md page versions."
+    },
+    "api": {
+      "url": "https://regrid.com/api",
+      "found": true,
+      "note": "Public Parcel API page; API reference with address, APN, owner-name, point and query-by-field endpoints."
+    },
+    "pricing": {
+      "url": "https://support.regrid.com/reference/plan-options.md",
+      "found": false,
+      "note": "Self-serve plans page (app.regrid.com/api/plans) and Data Store show no dollar amounts in page text; plan-options page names a 2,000-record monthly start plus per-record pricing and an Enterprise licence via contact form."
+    },
+    "changelog": {
+      "url": "https://support.regrid.com/changelog/november-2026-release-notes.md",
+      "found": true,
+      "note": "Monthly release notes listing refreshed counties."
+    }
+  },
+  "links": {
+    "docs": "https://support.regrid.com/docs/getting-started",
+    "api": "https://regrid.com/api",
+    "mcp": "https://support.regrid.com/docs/connecting-to-the-regrid-mcp-server"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://support.regrid.com/docs/connecting-to-the-regrid-mcp-server.md",
+      "excerpt": "The Regrid MCP Server is available at: https://support.regrid.com/mcp",
+      "fetched": "2026-11-12",
+      "hash": "4bee0c3ce6fd71c822483ddc26440e99ae852dadd21338e7c70c44446ce68592"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://regrid.com/mcp",
+      "excerpt": "The MCP server utilizes the exact same API token as your traditional REST setup, and usage permissions inherit directly from your existing account tier.",
+      "fetched": "2026-11-12",
+      "hash": "2a6a1bf3d49b739dac56ce3320ad775551f038be299b746315a97b8e7a4f890a"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://support.regrid.com/llms.txt",
+      "excerpt": "# Regrid Support Documentation",
+      "fetched": "2026-11-12",
+      "note": "llms.txt index for the docs; every docs page also serves a .md version.",
+      "hash": "8e8f7d5d71f6cd2cb49e2e8dc2293624185e68d8f88ac6506222c2443cefa89e"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://regrid.com/api",
+      "excerpt": "Preview live responses, explore endpoints, and validate your workflows in a secure testing environment. Free for 30 days.",
+      "fetched": "2026-11-12",
+      "note": "Interactive API sandbox.",
+      "hash": "b8397c188baed37d0b6378ccd2e838d86e15421f1c2a6c7d75dbfd081e0ac11f"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://regrid.com/api",
+      "excerpt": "Create an account, generate an API token, and start integrating immediately.",
+      "fetched": "2026-11-12",
+      "hash": "ba14c8e267956872c628a1432672384c97ce007dbed58ab8fffecc444b888ecc"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://support.regrid.com/docs/access-token-management.md",
+      "excerpt": "Each token can be provisioned to access all data or limit access to specific datasets if the account has premium add-on datasets.",
+      "fetched": "2026-11-12",
+      "hash": "0b9a69d492ef92648d07ae149c0633c50da915136334d016ba4dd5318b675014"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://support.regrid.com/reference/plan-options.md",
+      "excerpt": "Start with 2,000 Parcel records per month plus additional per record pricing.",
+      "fetched": "2026-11-12",
+      "note": "Self-serve API plan; no dollar amounts in the page text.",
+      "hash": "9d1d58ae521a5d82e3812724583ce9392954079e388851a2f06290c6d0ce1048"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://support.regrid.com/reference/plan-options.md",
+      "excerpt": "Need access to more than 10,000 parcel records per month",
+      "fetched": "2026-11-12",
+      "note": "Enterprise licence column; reached through a contact form.",
+      "hash": "80d4637de86a5ae3c6c4f8d30daf4a67602b08160962bfe490b53b3d60ed334a"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://app.regrid.com/store",
+      "excerpt": "Here you can purchase individual county files or license entire states.",
+      "fetched": "2026-11-12",
+      "note": "Self-serve Data Store; pay by card or ACH.",
+      "hash": "d1ac7170bbe75205d4e9af1f442b25e773106e564be662859783e6edaedc79e9"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://support.regrid.com/reference/get_parcels-owner-1.md",
+      "excerpt": "This endpoint delivers parcels using the owner name, either an individual or entity.",
+      "fetched": "2026-11-12",
+      "hash": "09df1e1e9f4ccbc284c1018a721b7479e98e53bcd0f24165f9bab8c8df10bd5d"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://regrid.com/api",
+      "excerpt": "Access frequently updated ownership information including owner names, mailing addresses, and deeded ownership details.",
+      "fetched": "2026-11-12",
+      "note": "Enhanced Ownership add-on.",
+      "hash": "ac936b4b99bba23c8029cb11d6d79b152484d0f618495e419146e7e23611e674"
+    },
+    {
+      "id": "c12",
+      "tier": "vendor-claim",
+      "url": "https://support.regrid.com/docs/sales-transfers.md",
+      "excerpt": "Last Sale Price - in US Dollars (from Assessor's data)",
+      "fetched": "2026-11-12",
+      "note": "Sale price is a parcel field, not a comps product.",
+      "hash": "0484cbf4ee97e34a1cc023df4ca00344b4e04b4e98881a52e4472b9277a99b10"
+    },
+    {
+      "id": "c13",
+      "tier": "vendor-claim",
+      "url": "https://regrid.com/global/us-parcels",
+      "excerpt": "We deliver the data exactly how you need it, including bulk files in any format via SFTP, cloud delivery, API, and Feature Service.",
+      "fetched": "2026-11-12",
+      "hash": "d390a869c32cb054fb924859256639e9e84ca9506f0c5078da5543270882b3b3"
+    },
+    {
+      "id": "c14",
+      "tier": "vendor-claim",
+      "url": "https://support.regrid.com/reference/using-an-llm-with-regrid-api.md",
+      "excerpt": "Regrid bills based on Parcel Records Returned, not just the number of API requests.",
+      "fetched": "2026-11-12",
+      "hash": "71f9ebd1517a37f03c4f69729a192b16e34e1ead20ba4ddd963d13e3694a6862"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://support.regrid.com/llms.txt",
+      "excerpt": "# Regrid Support Documentation",
+      "note": "llms.txt: GET 200, 30700 bytes",
+      "fetched": "2026-11-12",
+      "hash": "8e8f7d5d71f6cd2cb49e2e8dc2293624185e68d8f88ac6506222c2443cefa89e"
+    }
+  ]
+}

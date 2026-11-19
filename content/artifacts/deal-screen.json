@@ -1,0 +1,83 @@
+{
+  "id": "deal-screen",
+  "name": "Deal screen",
+  "what": "A one-page record of the first look at a deal: the buy-box check, quick price and yield math, the public-record flags, the open questions and the decision to underwrite or pass.",
+  "fields": [
+    {
+      "key": "property",
+      "label": "Property",
+      "type": "text",
+      "definition": "Address, property type, and size in square feet or units, as the offering states them."
+    },
+    {
+      "key": "source",
+      "label": "Source",
+      "type": "string",
+      "definition": "Who brought the deal: a listing broker, an owner contacted directly, or another source."
+    },
+    {
+      "key": "askingPrice",
+      "label": "Asking price or guidance",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The seller's asking price or pricing guidance; blank if the deal is unpriced."
+    },
+    {
+      "key": "statedNoi",
+      "label": "Stated NOI",
+      "type": "money",
+      "unit": "USD",
+      "definition": "Net operating income as the offering memorandum states it, before any adjustment."
+    },
+    {
+      "key": "quickMath",
+      "label": "Quick math",
+      "type": "text",
+      "definition": "Going-in cap rate, price per square foot or unit, and the loan the income supports, each with its formula and inputs."
+    },
+    {
+      "key": "buyBoxResult",
+      "label": "Buy-box check",
+      "type": "list",
+      "definition": "Each buy-box criterion marked pass, fail or unknown, with the fact behind the mark."
+    },
+    {
+      "key": "floodZone",
+      "label": "Flood zone",
+      "type": "string",
+      "definition": "The FEMA flood zone at the site, with the map panel and its effective date.",
+      "authority": "FEMA Flood Insurance Rate Map"
+    },
+    {
+      "key": "appraisalRecord",
+      "label": "Appraisal record",
+      "type": "text",
+      "definition": "Owner of record, account number, appraised land and improvement values, tax year, and the taxing units.",
+      "authority": "County appraisal district"
+    },
+    {
+      "key": "zoning",
+      "label": "Zoning",
+      "type": "text",
+      "definition": "The zoning district, whether the current use is allowed outright, by permit or only as nonconforming, and a link to the ordinance."
+    },
+    {
+      "key": "environmentalFlags",
+      "label": "Environmental database hits",
+      "type": "list",
+      "definition": "Records on or next to the site from EPA and state databases, each with a link. A screen, not a Phase I."
+    },
+    {
+      "key": "openQuestions",
+      "label": "Open questions",
+      "type": "list",
+      "definition": "Questions for the broker or seller before underwriting, including every figure the documents disagree on."
+    },
+    {
+      "key": "decision",
+      "label": "Decision",
+      "type": "enum",
+      "definition": "Underwrite, ask questions first, or pass, with the reason, the person who decided and the date."
+    }
+  ]
+}

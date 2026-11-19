@@ -1,0 +1,38 @@
+{
+  "id": "investor-data-exposed",
+  "slug": "investor-data-exposed",
+  "kind": "situation",
+  "title": "Investor data is exposed",
+  "summary": "Contain it, assess what was exposed and make the notices the law requires on time, with counsel.",
+  "phase": "report",
+  "order": 131,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "situation": {
+    "trigger": "Investor records, such as tax ids or bank details, may have been accessed by someone who should not have them.",
+    "urgency": "hours"
+  },
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Contain the exposure and stop further access",
+    "Preserve logs, emails and system records",
+    "Bring in counsel and, where needed, a forensic firm",
+    "Work out what data was exposed and whose it was",
+    "Notify the insurance carrier if the policy covers it",
+    "List with counsel each notice required and its deadline",
+    "Reset access and fix the cause",
+    "Send the notices counsel approves",
+    "Answer investor questions with one consistent message",
+    "Record what happened and what changed"
+  ]
+}

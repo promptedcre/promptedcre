@@ -1,0 +1,167 @@
+{
+  "vendor": "mercury",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "841895197990569e9da7451c5c51a49a14ea7077a3db46ebfcedb3a80aba1e72",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "c2",
+        "c8",
+        "c9",
+        "c14",
+        "p1"
+      ],
+      "rationale": "Mercury's public API docs (an llms.txt index the probe fetched live) cover authentication and endpoints for listing transactions and monthly statements, and its API page says the same REST API pulls balances and initiates ACH transfers.",
+      "missing": "The pack does not show documentation pages for write endpoints such as payments or recipients, so the ability to change records rests on the API page's claim, and full endpoint coverage of the product is not shown."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "partial",
+      "quality": 8,
+      "evidence": [
+        "c1",
+        "c10",
+        "p2"
+      ],
+      "rationale": "Mercury has a live docs page for its MCP server, which can prepare payments for a person to approve, but the docs index labels the MCP section Beta and the pack shows no setup steps.",
+      "missing": "Setup steps and the full set of MCP tools are not shown, and the Beta label comes from a note on the docs index rather than a quoted line."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "full",
+      "quality": 9,
+      "evidence": [
+        "c1",
+        "c11",
+        "p3",
+        "p4"
+      ],
+      "rationale": "A public GitHub repository, MercuryTechnologies/mercury-cli, documents CLI commands such as downloading statements, is not archived and was last pushed 2026-11-10, matching the CLI advertised on Mercury's API page.",
+      "missing": "The pack shows no vendor page linking to the repository and no package-registry listing, so vendor maintenance is inferred from the organization name and the API page's CLI claim."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "c7"
+      ],
+      "rationale": "The docs index describes configuring webhook endpoints to receive real-time notifications when resources in a Mercury account change.",
+      "missing": "The pack does not list the webhook event types or show the webhook documentation page, so which core records (transactions, payments, accounts) emit events is not confirmed."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c5",
+        "c14"
+      ],
+      "rationale": "Mercury's API token security docs say scopes let the API user set the level of access an API token has.",
+      "missing": "The pack does not list the available scopes or show how narrowly a token can be limited, for example read-only versus money movement."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item in the pack mentions an OpenAPI, Swagger, GraphQL or other machine-readable API specification.",
+      "missing": "Any public, downloadable machine-readable specification for the Mercury API, or a reference to one."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "full",
+      "quality": 10,
+      "evidence": [
+        "p1",
+        "c7",
+        "c8",
+        "c9",
+        "c14"
+      ],
+      "rationale": "A probe fetched docs.mercury.com/llms.txt (200, 22,917 bytes, titled Mercury API Documentation), and its entries cover documentation topics including authentication, webhooks, transactions and statements."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c3",
+        "c6"
+      ],
+      "rationale": "Mercury's API page says developers test in the sandbox and then swap one URL for production, and a docs page on using the sandbox says logging into it skips the normal onboarding process.",
+      "missing": "The pack does not show how a developer obtains sandbox access, so self-serve availability is implied rather than stated."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "partial",
+      "quality": 4,
+      "evidence": [
+        "c9",
+        "c11"
+      ],
+      "rationale": "Records can be pulled out self-serve through the API's paginated, date-filtered transaction listing and the CLI's statement and SAFE-document downloads, but the pack shows no documented export feature or named open file format.",
+      "missing": "No documented bulk export or download in CSV, JSON, Excel or another named open format; the output formats of the API and CLI are not stated, and coverage beyond transactions, statements and SAFE documents is not shown."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "full",
+      "quality": 3,
+      "evidence": [
+        "c12",
+        "c6"
+      ],
+      "rationale": "The pricing page shows a $0/mo plan for banking services and essential tools, and the sandbox docs refer to signing up for Mercury through a normal onboarding process, with no sales call mentioned anywhere in the pack.",
+      "missing": "The pack does not show the sign-up page or state that no call or demo is required; self-serve is inferred from the free plan and the onboarding reference."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "full",
+      "quality": 6,
+      "evidence": [
+        "c12"
+      ],
+      "rationale": "Mercury's public pricing page states that banking services and essential tools are always $0/mo, a plan a small sponsor could use.",
+      "missing": "Prices for the higher plans and any per-transaction fees are not shown, so the cost of features beyond the $0 plan is unknown."
+    },
+    {
+      "story": "fb-start",
+      "verdict": "full",
+      "quality": 6,
+      "evidence": [
+        "c2",
+        "c4",
+        "c10"
+      ],
+      "rationale": "Mercury's API page says ACH transfers can be initiated through the REST API with approval tapped in the Mercury app, and the MCP docs describe requesting a payment that a person then reviews and approves.",
+      "missing": "The pack does not show the API reference page for creating a payment or transfer, so programmatic creation rests on the API landing page and the beta MCP docs."
+    },
+    {
+      "story": "fb-status",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c9",
+        "c7"
+      ],
+      "rationale": "The documented transactions endpoint lists an account's transactions with filtering by status, and webhooks notify when account resources change.",
+      "missing": "The pack does not show the response fields or status values, or a lookup for a single payment's status; status reporting is inferred from the status filter."
+    },
+    {
+      "story": "fb-records",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c8",
+        "c11"
+      ],
+      "rationale": "The API docs include an endpoint for retrieving an account's monthly statements, and the MercuryTechnologies CLI downloads statements and SAFE documents.",
+      "missing": "The pack does not show whether the statements endpoint returns the statement files or only metadata, or which other finished documents, such as tax forms, are available."
+    }
+  ]
+}

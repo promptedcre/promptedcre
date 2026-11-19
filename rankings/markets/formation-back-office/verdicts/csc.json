@@ -1,0 +1,136 @@
+{
+  "vendor": "csc",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "90604c675f9a42d7c89142c5cbd0cc2e0107c3d2525e78abb96231866066763b",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "partial",
+      "quality": 5,
+      "evidence": [
+        "c1"
+      ],
+      "rationale": "c1 is a vendor claim that Entity Management integrates with enterprise and third-party systems 'via modern APIs', but the coverage check found no public API documentation for the entity management or registered agent product, only DomainManager docs for a different product.",
+      "missing": "Public API documentation for this product; which core records (entities, filings, SOP documents) the API reads or changes; and whether customers can call it directly and how access is granted. The only API evidence is one marketing sentence."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item in the pack mentions an MCP server for the product.",
+      "missing": "Any official MCP server, who maintains it, what it covers, or setup steps."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item mentions an official CLI, SDK, package-registry listing or public code repository.",
+      "missing": "Any vendor-maintained CLI or SDK on a public registry or repository, or even code samples."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item mentions webhooks, event subscriptions or any change notifications an agent could subscribe to instead of polling.",
+      "missing": "Documented webhooks or event subscriptions for entities, filings or SOP documents, or any events offered through a third-party automation platform."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item mentions API keys, OAuth clients, tokens, or scopes and roles that limit what a credential can do.",
+      "missing": "How API credentials are issued and whether scopes, roles or permissions can limit them."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item shows an OpenAPI, Swagger, GraphQL or other machine-readable spec, and the coverage check found no public API documentation for this product.",
+      "missing": "Any machine-readable API specification for this product, public or behind a login."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The coverage check found no public documentation or help center for the registered agent or entity management product, and no item shows an llms.txt file or Markdown pages.",
+      "missing": "An llms.txt file or Markdown versions of documentation pages, and public documentation for this product at all."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item mentions a sandbox, test mode or developer environment, whether self-serve or on request.",
+      "missing": "Any sandbox, test mode or developer environment and how to get access to it."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c5"
+      ],
+      "rationale": "c5 claims only centralized access to entity data, filings and compliance status, and no item mentions exporting or downloading records in bulk in any format.",
+      "missing": "Any self-serve bulk export or download of entity, filing or SOP records, and the formats offered."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item shows a self-serve sign-up or free trial, and the coverage check found only contact-us links on the registered agent page.",
+      "missing": "Any self-serve sign-up, free trial or paid plan a sponsor can start without contacting sales."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c2"
+      ],
+      "rationale": "c2 claims 'one flat fee' but shows no amount, and the coverage check found no prices on the registered agent page, only contact-us links.",
+      "missing": "Any published price, fee or starting price for entity management or registered agent service."
+    },
+    {
+      "story": "fb-start",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c1",
+        "c3"
+      ],
+      "rationale": "c3 describes generating documents through a guided workflow that routes signatures via Docusign and c1 makes only a generic integration-API claim, so nothing shows an agent can start a filing or other core transaction through an API or partner integration.",
+      "missing": "API documentation showing filings, document generation or other core transactions can be created programmatically, even as drafts or through a partner integration."
+    },
+    {
+      "story": "fb-status",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c4",
+        "c5"
+      ],
+      "rationale": "c4 and c5 claim SOP document tracking and centralized access to filing and compliance status, but neither shows an API, structured feed or email notice that returns status.",
+      "missing": "A documented API or structured feed returning the status of filings, orders or SOP documents, or even status email notices."
+    },
+    {
+      "story": "fb-records",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c4",
+        "c5"
+      ],
+      "rationale": "c4 and c5 claim same-day SOP document delivery and centralized access to filings, but neither shows an API that returns finished documents or says documents arrive as emailed download links.",
+      "missing": "A documented API returning filed documents, SOP scans or other finished records, or download links sent by email."
+    }
+  ]
+}

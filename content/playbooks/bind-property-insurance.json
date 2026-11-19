@@ -1,0 +1,35 @@
+{
+  "id": "bind-property-insurance",
+  "slug": "bind-property-insurance",
+  "kind": "process",
+  "title": "Bind property insurance",
+  "summary": "Get quotes, meet the lender's requirements and bind coverage effective at closing.",
+  "phase": "acquire",
+  "order": 270,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Read the lender's insurance requirements",
+    "Read the leases' insurance and waiver terms",
+    "Get the building's replacement cost",
+    "Check the flood zone",
+    "Set the coverages and limits needed",
+    "Give the broker the property information and loss history",
+    "Compare quotes against the requirements",
+    "Get the lender's sign-off on the proposed coverage",
+    "Bind coverage effective at closing",
+    "Deliver certificates to the lender, the title company and tenants",
+    "File the policy and calendar the renewal"
+  ]
+}

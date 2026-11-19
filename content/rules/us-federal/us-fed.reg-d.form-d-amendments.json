@@ -1,0 +1,32 @@
+{
+  "id": "us-fed.reg-d.form-d-amendments",
+  "jurisdiction": "us-federal",
+  "title": "When a Form D must be amended",
+  "rule": "An issuer may amend a Form D at any time. It must amend to correct a material mistake, to reflect most changes in the information filed, and every year on or before the anniversary of its last filing while the offering continues. Some changes need no amendment, including amounts sold, investor counts, a lower offering amount, and an increase in the offering amount of 10% or less. Every amendment restates all items with current information.",
+  "citation": {
+    "authority": "17 CFR 230.503(a)(2) to (a)(4)",
+    "url": "https://www.ecfr.gov/current/title-17/section-230.503"
+  },
+  "asOf": "2026-11-09",
+  "lastVerified": "2026-11-11",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Rule 503 or new staff interpretations in Section 130.",
+  "sources": [
+    {
+      "id": "ecfr-230-503",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.503",
+      "title": "17 CFR 230.503, Filing of notice of sales",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-11",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-cdi-form-d",
+      "url": "https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/securities-act-forms",
+      "title": "Securities Act Forms interpretations, Section 130: Form D",
+      "publisher": "U.S. Securities and Exchange Commission, Division of Corporation Finance",
+      "accessed": "2026-11-11",
+      "tier": "primary"
+    }
+  ]
+}

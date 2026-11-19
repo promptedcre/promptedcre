@@ -1,0 +1,532 @@
+{
+  "id": "buy-as-1031-replacement",
+  "slug": "buy-as-1031-replacement",
+  "kind": "process",
+  "title": "Buy as a 1031 replacement property",
+  "summary": "Buy the replacement in a like-kind exchange: confirm the fit with the CPA, engage the intermediary before the sale closes, identify in writing by day 45, keep the funds with the intermediary and close in time. When the seller or an investor is exchanging, the buyer's part is the contract clause and counsel's answer.",
+  "phase": "acquire",
+  "order": 285,
+  "featured": false,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-13",
+  "requires": [],
+  "consumes": [
+    "purchase-and-sale-agreement",
+    "settlement-statement",
+    "underwriting-model"
+  ],
+  "produces": [
+    "exchange-agreement",
+    "identification-notice",
+    "purchase-and-sale-agreement",
+    "settlement-statement",
+    "deed"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "lii-26-usc-1031",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1031",
+      "title": "26 U.S. Code 1031, Exchange of real property held for productive use or investment",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-13",
+      "quote": "No gain or loss shall be recognized on the exchange of real property held for productive use in a trade or business or for investment",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-1031-k-1-periods",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.1031(k)-1",
+      "title": "26 CFR 1.1031(k)-1(b), Identification period and exchange period",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "ends at midnight on the 45th day thereafter",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-1031-k-1-identification",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.1031(k)-1",
+      "title": "26 CFR 1.1031(k)-1(c) and (d), Identification and receipt of replacement property",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "Replacement property is identified only if it is designated as replacement property in a written document signed by the taxpayer",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-1031-k-1-assignment",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.1031(k)-1",
+      "title": "26 CFR 1.1031(k)-1(g)(4), Qualified intermediaries",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "an intermediary is treated as entering into an agreement if the rights of a party to the agreement are assigned to the intermediary",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-1031-k-1-receipt",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.1031(k)-1",
+      "title": "26 CFR 1.1031(k)-1(g)(6) and (g)(7), Limits on the taxpayer's rights to the funds",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "to receive, pledge, borrow, or otherwise obtain the benefits of money or other property before the end of the exchange period",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-1031-k-1-disqualified",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.1031(k)-1",
+      "title": "26 CFR 1.1031(k)-1(k), Definition of disqualified person",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "a person who has acted as the taxpayer's employee, attorney, accountant, investment banker or broker, or real estate agent or broker within the 2-year period",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-1031-a-3",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.1031(a)-3",
+      "title": "26 CFR 1.1031(a)-3, Definition of real property",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "The following intangible assets are not real property for purposes of section 1031 and this section",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-1031-d-2",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.1031(d)-2",
+      "title": "26 CFR 1.1031(d)-2, Treatment of assumption of liabilities",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "consideration given in the form of cash or other property is offset against consideration received in the form of an assumption of liabilities",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-i8824",
+      "url": "https://www.irs.gov/instructions/i8824",
+      "title": "Instructions for Form 8824 (2026), Like-Kind Exchanges",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-13",
+      "quote": "you must file Form 8824 with your tax return for that year",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "confirm-exchange-fit",
+      "title": "Confirm with the CPA that the taxpayer and property qualify",
+      "instruction": "Before the relinquished property goes under contract, send the CPA which entity holds its title, how long and for what use it was held, its adjusted basis and debt, and the kind of replacement in view. Section 1031 applies only when real property held for use in a trade or business or for investment is exchanged solely for like-kind real property held for either use. Real property held primarily for sale is excluded, U.S. and foreign real property are not like kind, and an exchange with a related person has its own two-year rules. If the replacement must close before the sale, the IRS form instructions point to an exchange accommodation titleholder under Revenue Procedure 2000-37, as modified by Revenue Procedure 2004-51; that structure is counsel's. Get the CPA's written answer naming the taxpayer that will sell and buy.",
+      "mode": "human-online",
+      "modeBasis": "Whether a taxpayer and its property qualify is a tax judgment for a licensed CPA; an agent gathers the facts.",
+      "actor": "cpa",
+      "licensed": "cpa",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-fed.irc.1031-like-kind-real-property"
+      ],
+      "consumes": [
+        "settlement-statement",
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "lii-26-usc-1031",
+        "ecfr-1031-a-3",
+        "irs-i8824"
+      ]
+    },
+    {
+      "id": "engage-intermediary",
+      "title": "Engage the qualified intermediary before the sale closes",
+      "instruction": "Choose the intermediary and sign the exchange agreement before the relinquished property transfers. It cannot be the taxpayer or a disqualified person: anyone who acted as the taxpayer's employee, attorney, accountant, investment banker or broker, or real estate agent or broker in the two years before the first relinquished transfer, setting aside exchange services and routine title, escrow or trust services, or a person related to the taxpayer or to such an agent at a 10 percent threshold. The agreement must expressly bar the taxpayer from receiving, pledging or borrowing the funds the intermediary holds, except as the regulation allows. The sale side is in Run a 1031 exchange on the sale. Ask how the funds are held, who earns the interest, the fees and any bond or insurance, and record the answers on the exchange agreement record.",
+      "mode": "human-online",
+      "modeBasis": "The exchange agreement is a contract the taxpayer signs; an agent can check the draft against the regulation first.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-exchange-fit"
+      ],
+      "rules": [
+        "us-fed.irc.1031-qualified-intermediary"
+      ],
+      "produces": [
+        "exchange-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-1031-k-1-disqualified",
+        "ecfr-1031-k-1-receipt"
+      ]
+    },
+    {
+      "id": "calendar-exchange-dates",
+      "title": "Calendar day 45 and the end of the exchange period",
+      "instruction": "On the day the relinquished property transfers, enter that date and the due date of the taxpayer's return for that year in the deadline-calendar. The identification period ends at midnight on the 45th day after the transfer. The exchange period ends at midnight on the earlier of the 180th day or the return's due date, including extensions. If several properties were given up on different dates, both periods run from the earliest. The regulation counts calendar days and sets no extension for weekends or holidays. If day 180 falls after the return's unextended due date, tell the CPA so the return is extended in time. Compare both dates with the intermediary's, then put them in the firm calendar with working dates for the identification, the contract and the closing.",
+      "mode": "agent",
+      "modeBasis": "The dates follow from the transfer date and fixed day counts, which the calendar computes.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "engage-intermediary"
+      ],
+      "rules": [
+        "us-fed.irc.1031-periods"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "exchange-agreement",
+        "settlement-statement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-1031-k-1-periods",
+        "lii-26-usc-1031"
+      ]
+    },
+    {
+      "id": "set-replacement-targets",
+      "title": "Set the price, debt and equity the replacement must match",
+      "instruction": "From the relinquished closing statement and the intermediary's account, record the proceeds held and the debt paid off, check them in the sale-proceeds calculator on that statement's price, selling costs and payoffs, and get the adjusted basis from the CPA. Run the exchange-1031 calculator on the planned replacement price, new loan and any cash added. Gain is recognized up to the cash and other property received. Debt relieved counts as money received; new debt taken on, or cash the taxpayer adds, offsets it, but new debt does not offset cash received. Record the replacement price, debt and equity at which no gain is recognized, the gain at any lower figure, and the replacement basis, which sets future depreciation. Then underwrite the replacement on its own merits in Underwrite a deal: the exchange deadline is not a reason to pay more. Send the targets to the CPA to confirm.",
+      "mode": "agent",
+      "modeBasis": "The live calculator runs the regulation's arithmetic on recorded figures; the CPA confirms the inputs.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "calendar-exchange-dates"
+      ],
+      "rules": [
+        "us-fed.irc.1031-boot-and-basis"
+      ],
+      "calculators": [
+        "exchange-1031",
+        "sale-proceeds"
+      ],
+      "consumes": [
+        "settlement-statement",
+        "exchange-agreement",
+        "underwriting-model"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "lii-26-usc-1031",
+        "ecfr-1031-d-2"
+      ]
+    },
+    {
+      "id": "draft-identification",
+      "title": "Draft the written identification",
+      "instruction": "Draft the identification for the taxpayer to sign. Describe each property unambiguously: legal description, street address or distinguishable name. Stay inside one limit: up to three properties of any value, or any number whose total fair market value at the end of the period is no more than 200 percent of the relinquished properties' value when transferred. A list over both limits counts as no identification, except property received by day 45, unless the taxpayer receives, within the exchange period, identified property worth at least 95 percent of everything identified. Address it to the person obligated to transfer the replacement, usually the intermediary, or to another person in the exchange who is not the taxpayer or a disqualified person. A revocation must also be written, signed and sent before the period ends. Send the draft to the CPA and counsel with the day-45 date at the top.",
+      "mode": "agent",
+      "modeBasis": "Drafting the list and testing it against the count and value limits is document work.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-replacement-targets"
+      ],
+      "rules": [
+        "us-fed.irc.1031-identification-rules"
+      ],
+      "consumes": [
+        "exchange-agreement"
+      ],
+      "produces": [
+        "identification-notice"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-1031-k-1-identification"
+      ]
+    },
+    {
+      "id": "fund-committee-approves",
+      "title": "Get the investment committee's approval of the replacement",
+      "instruction": "Before the identification is signed, take the replacement, the exchange targets and the underwriting to the investment committee the fund documents establish. Confirm the fund documents allow sale proceeds to be reinvested at this point in the fund's life instead of distributed, and whether the advisory committee or the investors must consent. Record the vote and any conditions.",
+      "mode": "human-online",
+      "modeBasis": "Committee members vote under the fund documents; an agent prepares the materials and records the result.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "draft-identification"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "consumes": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "jv-partner-consents",
+      "title": "Get the capital partner's consent to the exchange",
+      "instruction": "Selling, buying and new debt are usually major decisions under a JV agreement. Send the capital partner the exchange targets, the identification draft and the underwriting, and get its written consent before the identification is signed. If one partner wants cash and the other wants to exchange, how the venture can divide is a question for counsel and each partner's tax adviser, best settled before the relinquished property is under contract.",
+      "mode": "human-online",
+      "modeBasis": "The capital partner's consent is its own decision under the JV agreement.",
+      "actor": "investor",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "draft-identification"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement",
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "sign-and-send-identification",
+      "title": "Sign and send the identification by day 45",
+      "instruction": "An authorized signer for the taxpayer signs the identification and sends it to the recipient the exchange agreement names before midnight on day 45, by a method that leaves proof, such as email with a delivery confirmation or a courier receipt. Ask the recipient to acknowledge it in writing. An identification sent after the period ends does not count; a property the taxpayer actually receives within the 45 days counts as identified. Save the signed copy and the proof of delivery on the identification record.",
+      "mode": "human-online",
+      "modeBasis": "The regulation requires a document signed by the taxpayer, which a person signs and sends.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "draft-identification",
+        "fund-committee-approves",
+        "jv-partner-consents"
+      ],
+      "rules": [
+        "us-fed.irc.1031-identification-rules",
+        "us-fed.irc.1031-periods"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "exchange-agreement"
+      ],
+      "produces": [
+        "identification-notice"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-1031-k-1-identification",
+        "ecfr-1031-k-1-periods"
+      ]
+    },
+    {
+      "id": "make-contract-assignable",
+      "title": "Make the purchase contract assignable to the intermediary",
+      "instruction": "Counsel puts an exchange clause in the replacement's purchase contract, or an amendment if it is already signed: the buyer may assign its rights to its qualified intermediary, the seller will cooperate, and the closing date falls inside the exchange period. Before closing, assign the buyer's rights to the intermediary and notify the seller and every other party to the contract in writing; an intermediary is treated as entering into an assigned agreement when all parties are notified in writing on or before the transfer. Tell the lender and the title company an intermediary is involved. When the seller is the one exchanging, the clause runs the other way: the buyer consents to the assignment and acknowledges the notice, at no cost, liability or delay to the buyer. The rest of the contract follows Negotiate and sign the purchase contract.",
+      "mode": "human-online",
+      "modeBasis": "Contract language and the assignment change legal rights, so counsel drafts them and the parties sign.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-replacement-targets"
+      ],
+      "rules": [
+        "us-fed.irc.1031-qualified-intermediary"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "exchange-agreement"
+      ],
+      "produces": [
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-1031-k-1-assignment"
+      ]
+    },
+    {
+      "id": "plan-the-funds-flow",
+      "title": "Map the closing money so exchange funds never reach the taxpayer",
+      "instruction": "Map every dollar before closing. For the earnest money, settle with the intermediary and the CPA whether it comes from funds the intermediary holds or from the taxpayer's other money, and document which. At closing the intermediary wires exchange funds to the title company; the new loan and any added cash arrive on their own lines. The exchange agreement must bar the taxpayer from receiving, pledging, borrowing or otherwise getting the benefit of the funds before the exchange period ends, except as the regulation allows. Closing items such as commissions, prorated taxes, recording or transfer taxes and title fees are disregarded in that test; flag any other cost paid from exchange funds, such as loan fees, for the CPA. A person approves the map before it goes out.",
+      "mode": "agent",
+      "modeBasis": "Building the map from the contract, the loan and the exchange agreement is document work; sending it speaks for the taxpayer.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-and-send-identification",
+        "make-contract-assignable"
+      ],
+      "rules": [
+        "us-fed.irc.1031-qualified-intermediary"
+      ],
+      "consumes": [
+        "exchange-agreement",
+        "purchase-and-sale-agreement",
+        "settlement-statement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-1031-k-1-receipt"
+      ]
+    },
+    {
+      "id": "investor-exchange-proceeds",
+      "title": "Send any investor's request to exchange into the deal to counsel",
+      "instruction": "If an investor wants to fund its share with its own exchange proceeds, make no promise and send the request to counsel. Under the regulation an interest in a partnership is not real property for section 1031, unless the partnership has a valid election under section 761(a) to be excluded from subchapter K, while co-ownership is listed as real property. Whether any structure works for that investor, and what it would change for the offering, the loan and the governing documents, is counsel's question with the investor's own tax adviser. Record counsel's answer and tell the investor in writing before its identification period ends.",
+      "mode": "human-online",
+      "modeBasis": "Whether a structure fits an investor's exchange and the offering is a legal judgment for counsel.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-fed.irc.1031-like-kind-real-property"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-1031-a-3",
+        "lii-26-usc-1031"
+      ]
+    },
+    {
+      "id": "close-through-intermediary",
+      "title": "Close the replacement through the intermediary",
+      "instruction": "Close inside the exchange period. Before signing, check the settlement statement against the funds map: price, exchange funds from the intermediary, loan, added cash, and no exchange money paid to the taxpayer. Confirm every set of wire instructions by phone to a known number before any wire is released. The intermediary signs or acknowledges the assignment and wires the funds, and the seller deeds the property directly to the taxpayer, in the name the CPA confirmed. The property received must be substantially the same property that was identified. Signing, funding and recording follow Finance and close the acquisition.",
+      "mode": "human-online",
+      "modeBasis": "Closing documents are signed for the taxpayer and the wire is released by people.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "plan-the-funds-flow"
+      ],
+      "rules": [
+        "us-fed.irc.1031-periods",
+        "us-fed.irc.1031-qualified-intermediary"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "settlement-statement",
+        "exchange-agreement",
+        "purchase-and-sale-agreement"
+      ],
+      "produces": [
+        "settlement-statement",
+        "deed"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-1031-k-1-identification",
+        "ecfr-1031-k-1-periods"
+      ]
+    },
+    {
+      "id": "reconcile-the-exchange",
+      "title": "Reconcile the exchange accounting",
+      "instruction": "After closing, get the intermediary's final accounting and both settlement statements. Tie exchange funds in to exchange funds out, and list any money released to the taxpayer, when, and under which release in the exchange agreement. Re-run the exchange-1031 calculator on the actual figures: cash received, debt relieved against debt taken on and cash added, recognized gain, deferred gain and the replacement's basis. Send the result, with every difference from the targets listed first, and the source documents to the CPA.",
+      "mode": "agent",
+      "modeBasis": "Reconciling statements and re-running the calculator are document and arithmetic work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "close-through-intermediary"
+      ],
+      "rules": [
+        "us-fed.irc.1031-boot-and-basis"
+      ],
+      "calculators": [
+        "exchange-1031"
+      ],
+      "consumes": [
+        "settlement-statement",
+        "exchange-agreement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "report-on-form-8824",
+      "title": "Report the exchange on Form 8824 and keep the file",
+      "instruction": "The CPA reports the exchange on Form 8824 with the taxpayer's return for the year the relinquished property was transferred, using the identification date, the date the replacement was received and the reconciled figures. If the exchange was with a related party, Form 8824 is also filed for the two following years. Keep the exchange file: the agreement, assignment notices, identification and proof of delivery, settlement statements, the intermediary's accounting and the calculator traces. The replacement's basis carries over from them, so keep them while the property is owned and as long after as the CPA advises.",
+      "mode": "human-online",
+      "modeBasis": "Preparing and signing the return is the CPA's licensed work; an agent assembles the file.",
+      "actor": "cpa",
+      "licensed": "cpa",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "reconcile-the-exchange"
+      ],
+      "rules": [
+        "us-fed.irc.1031-boot-and-basis"
+      ],
+      "consumes": [
+        "exchange-agreement",
+        "identification-notice",
+        "settlement-statement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "irs-i8824"
+      ]
+    }
+  ],
+  "outlineSteps": []
+}

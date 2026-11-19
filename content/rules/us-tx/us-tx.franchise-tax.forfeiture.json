@@ -1,0 +1,43 @@
+{
+  "id": "us-tx.franchise-tax.forfeiture",
+  "jurisdiction": "us-tx",
+  "title": "Texas franchise tax forfeiture: losing the right to transact business",
+  "rule": "If a taxable entity does not file a required franchise tax report, including the Public Information Report, or does not pay a tax or penalty, the Comptroller sends notice and, if the failure is not cured within 45 days, forfeits the entity's right to transact business without a court proceeding. A forfeited entity cannot sue or defend in a Texas court, and its officers and directors become liable for its debts incurred in Texas after the report or tax was due and before revival. Filing and paying what is due revives the right. If it is not revived within 120 days, the Secretary of State may forfeit the entity's registration.",
+  "citation": {
+    "authority": "Tex. Tax Code 171.251, 171.2515, 171.252, 171.255, 171.256, 171.257, 171.258, 171.302 and 171.309",
+    "url": "https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Tax Code chapter 171, subchapters F and G; section 171.251 was last amended effective September 1, 2023.",
+  "sources": [
+    {
+      "id": "tx-tax-code-171",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.171.htm",
+      "title": "Texas Tax Code, Chapter 171, Subchapters F and G (Sections 171.251 to 171.258, 171.302 and 171.309, forfeiture)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "the corporation shall be denied the right to sue or defend in a court of this state",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-pir-oir",
+      "url": "https://comptroller.texas.gov/taxes/franchise/pir-oir-filing-req.php",
+      "title": "Franchise Tax Public Information Report and Ownership Information Report Filing Requirements",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-14",
+      "quote": "your entity may forfeit its right to transact business if you fail to file a completed and signed PIR or OIR",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-coas",
+      "url": "https://comptroller.texas.gov/taxes/franchise/coas-instructions.php",
+      "title": "Franchise Tax Account Status",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-14",
+      "quote": "The law also requires the Comptroller to give at least 45 days, beginning after the notice of pending forfeiture is mailed, before the actual forfeiture.",
+      "tier": "primary"
+    }
+  ]
+}

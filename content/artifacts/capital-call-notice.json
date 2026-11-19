@@ -1,0 +1,64 @@
+{
+  "id": "capital-call-notice",
+  "name": "Capital call notice",
+  "what": "A notice to investors to fund part of their commitment by a date, with the amount, purpose and how to pay.",
+  "fields": [
+    {
+      "key": "investor",
+      "label": "Investor",
+      "type": "string",
+      "definition": "The investor the notice is addressed to."
+    },
+    {
+      "key": "commitment",
+      "label": "Commitment",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The investor's total capital commitment."
+    },
+    {
+      "key": "callAmount",
+      "label": "Amount called",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The amount this notice asks the investor to fund."
+    },
+    {
+      "key": "callPercent",
+      "label": "Share of commitment called",
+      "type": "text",
+      "definition": "The amount called as a share of the investor's commitment."
+    },
+    {
+      "key": "purpose",
+      "label": "Purpose",
+      "type": "text",
+      "definition": "What the money is for, such as a closing, reserves or fees."
+    },
+    {
+      "key": "dueDate",
+      "label": "Due date",
+      "type": "date",
+      "definition": "The date by which the money must arrive."
+    },
+    {
+      "key": "paymentVerification",
+      "label": "How to confirm payment details",
+      "type": "text",
+      "definition": "The channel the investor uses to confirm wire instructions before sending money."
+    },
+    {
+      "key": "unfundedAfterCall",
+      "label": "Unfunded commitment after this call",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The commitment that remains uncalled once this call is funded."
+    },
+    {
+      "key": "defaultTerms",
+      "label": "Default terms",
+      "type": "text",
+      "definition": "Where the governing agreement sets out what happens if an investor does not fund."
+    }
+  ]
+}

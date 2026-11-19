@@ -1,0 +1,596 @@
+{
+  "id": "loan-maturity-refi-fails",
+  "slug": "loan-maturity-refi-fails",
+  "kind": "situation",
+  "title": "The loan matures and refinancing falls through",
+  "summary": "Pin down the maturity, the extension terms, the payoff and the lender's remedies, then work an extension, replacement capital, a sale or a handback in parallel. Get any standstill signed, have the CPA and counsel size tax and bankruptcy, and keep investors informed.",
+  "phase": "operate",
+  "order": 126,
+  "featured": false,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-13",
+  "situation": {
+    "trigger": "The loan's maturity is near and the planned refinancing will not close in time.",
+    "urgency": "weeks"
+  },
+  "requires": [
+    "finance-and-close",
+    "refinance-the-property"
+  ],
+  "consumes": [
+    "loan-documents",
+    "guaranty",
+    "rent-roll",
+    "trailing-12",
+    "appraisal",
+    "comp-set",
+    "loan-term-sheet",
+    "underwriting-model",
+    "ic-memo",
+    "jv-agreement",
+    "investor-register"
+  ],
+  "produces": [
+    "payoff-letter",
+    "underwriting-model",
+    "loan-term-sheet",
+    "capital-call-notice",
+    "forbearance-agreement"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "pr-51-002",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.51.htm",
+      "title": "Texas Property Code, Chapter 51 (Section 51.002, Sale of real property under contract lien)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "must be a public sale at auction held between 10 a.m. and 4 p.m. of the first Tuesday of a month",
+      "tier": "primary"
+    },
+    {
+      "id": "pr-51-003",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.51.htm",
+      "title": "Texas Property Code, Chapter 51 (Section 51.003, Deficiency judgment)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "must be brought within two years of the foreclosure sale and is governed by this section",
+      "tier": "primary"
+    },
+    {
+      "id": "pr-64",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.64.htm",
+      "title": "Texas Property Code, Chapter 64 (Assignment of rents to lienholder)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "creates a presently effective security interest in all accrued and unaccrued rents arising from the real property described in the security instrument",
+      "tier": "primary"
+    },
+    {
+      "id": "bc-26",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.26.htm",
+      "title": "Texas Business and Commerce Code, Chapter 26 (Section 26.02, Loan agreement must be in writing)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "pursuant to which a financial institution loans or delays repayment of or agrees to loan or delay repayment of money",
+      "tier": "primary"
+    },
+    {
+      "id": "cfr-246-7",
+      "url": "https://www.ecfr.gov/current/title-17/part-246/section-246.7",
+      "title": "17 CFR 246.7, Hybrid and other risk retention for commercial real estate loan securitizations (definition of special servicer)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "upon the occurrence of one or more specified conditions in the servicing agreement, has the right to service one or more assets in the transaction",
+      "tier": "primary"
+    },
+    {
+      "id": "frb-cre-workouts-2023",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20230629a.htm",
+      "title": "Agencies finalize policy statement on commercial real estate loan accommodations and workouts (joint press release, June 29, 2023)",
+      "publisher": "Board of Governors of the Federal Reserve System",
+      "accessed": "2026-11-13",
+      "quote": "calling for financial institutions to work prudently and constructively with creditworthy borrowers during times of financial stress",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-61",
+      "url": "https://www.law.cornell.edu/uscode/text/26/61",
+      "title": "26 U.S. Code 61, Gross income defined",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-13",
+      "quote": "Income from discharge of indebtedness",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-108",
+      "url": "https://www.law.cornell.edu/uscode/text/26/108",
+      "title": "26 U.S. Code 108, Income from discharge of indebtedness",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-13",
+      "quote": "In the case of a partnership, subsections (a), (b), (c), and (g) shall be applied at the partner level.",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-p4681",
+      "url": "https://www.irs.gov/publications/p4681",
+      "title": "Publication 4681 (2025), Canceled Debts, Foreclosures, Repossessions, and Abandonments",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-13",
+      "quote": "the lender’s foreclosure on the property doesn’t result in ordinary income from the cancellation of debt",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-11-362",
+      "url": "https://www.law.cornell.edu/uscode/text/11/362",
+      "title": "11 U.S. Code 362, Automatic stay",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-13",
+      "quote": "not later than the date that is 90 days after the entry of the order for relief",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-11-101",
+      "url": "https://www.law.cornell.edu/uscode/text/11/101",
+      "title": "11 U.S. Code 101, Definitions (single asset real estate; small business debtor)",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-13",
+      "quote": "excluding a person whose primary activity is the business of owning single asset real estate",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-28-1930",
+      "url": "https://www.law.cornell.edu/uscode/text/28/1930",
+      "title": "28 U.S. Code 1930, Bankruptcy fees",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-13",
+      "quote": "a quarterly fee shall be paid to the United States trustee, for deposit in the Treasury, in each case under chapter 11 of title 11",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "To make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "pin-down-maturity-and-payoff",
+      "title": "Pin down the maturity, the extension terms and the payoff",
+      "instruction": "Read the note, loan agreement, deed of trust and guaranty and record on one sheet: the maturity date and what happens if it falls on a non-business day; any extension option, with its length, fee, notice window and conditions (no default, coverage, debt yield or loan-to-value tests, a paydown, a new rate cap); and what the documents say happens the day after maturity: default interest, late charges, cash management or a sweep that stops distributions, and which guaranty obligations a maturity default or a bankruptcy filing triggers. Ask the servicer for a payoff statement good through the maturity date, with the per diem, fees and any reserves to be returned; a person approves the request. Check the balance against the loan-payments calculator, and enter the maturity and the extension notice window in the deadline-calendar.",
+      "mode": "agent",
+      "modeBasis": "Reading the loan papers and drafting the payoff request is document work; the request speaks for the borrower, so a person approves it.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "calculators": [
+        "loan-payments",
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "loan-documents",
+        "guaranty"
+      ],
+      "produces": [
+        "payoff-letter"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "size-the-gap",
+      "title": "Find out why the refinancing failed and size the gap",
+      "instruction": "Name the cause from the declining lender's answer and the quotes: value, coverage or debt yield on current income, the rate, lease rollover, or the sponsor. Run the debt-sizing calculator on today's net operating income at the terms lenders actually quoted, and the leverage calculator for coverage, debt yield and break-even occupancy. Bracket value with the cap-rate calculator from comparable sales and the lender's coverage formula, beside any appraisal. Run the lease-rollover calculator for leases ending inside a new loan's term. The gap is the payoff plus closing costs and any reserves a new lender requires, less the new loan. Record the gap, which limit binds, and what would close it: more income, a lower payoff or new money. If floating-rate debt is in view, run the rate-reset calculator on the quoted index and margin.",
+      "mode": "agent",
+      "modeBasis": "The live calculators re-size the loan from the recorded rent roll, operating statement and quotes.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "pin-down-maturity-and-payoff"
+      ],
+      "calculators": [
+        "debt-sizing",
+        "leverage",
+        "cap-rate",
+        "lease-rollover",
+        "rate-reset"
+      ],
+      "consumes": [
+        "payoff-letter",
+        "rent-roll",
+        "trailing-12",
+        "appraisal",
+        "comp-set",
+        "loan-term-sheet",
+        "underwriting-model"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "industrial": "In a single-tenant building the loan rests on one lease: a term that ends before or soon after a new loan would mature is a common reason a refinance fails, and a signed renewal or extension changes the sizing."
+      }
+    },
+    {
+      "id": "map-the-lenders-remedies",
+      "title": "Map what the lender can do after maturity",
+      "instruction": "Lay out the lender's remedies after a maturity default, for counsel to confirm. In Texas a deed of trust's power of sale is exercised at a public auction between 10 a.m. and 4 p.m. on the first Tuesday of a month, with notice posted at the courthouse door, filed with the county clerk and sent by certified mail at least 21 days before the sale (Property Code 51.002). Add any notice the deed of trust requires and enter the earliest possible sale date in the deadline-calendar. After default the lender can also enforce the assignment of rents by notice to the borrower or to tenants (Chapter 64). A deficiency suit must be brought within two years of the sale, and the person sued may ask the court to credit the property's fair market value (51.003). Mark which of these the guaranty reaches.",
+      "mode": "agent",
+      "modeBasis": "Reading the loan documents and the statutes is document work; counsel confirms how they apply to this loan.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "pin-down-maturity-and-payoff"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.property.foreclosure-sale-notice",
+        "us-tx.property.assignment-of-rents",
+        "us-tx.property.deficiency-after-foreclosure"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "loan-documents",
+        "guaranty"
+      ],
+      "basis": "cited",
+      "sources": [
+        "pr-51-002",
+        "pr-51-003",
+        "pr-64"
+      ]
+    },
+    {
+      "id": "exercise-the-extension",
+      "title": "Exercise the extension option if its conditions can be met",
+      "instruction": "If the loan has an extension option, decide early whether every condition on the maturity sheet can be met by the notice deadline: the tests, the fee, any paydown or new rate cap, and no default outstanding. If they can, deliver the extension notice exactly as the notice clause requires (method, address, deadline), pay the fee and deliver what each condition calls for. Ask the lender to confirm in writing that the extension is effective and the new maturity date, and update the deadline-calendar. If a condition cannot be met, ask the lender in writing, before the notice deadline, to waive or modify it, and do not let the window close while talks continue.",
+      "mode": "human-online",
+      "modeBasis": "The extension notice is signed for the borrower and the fee is paid by a person.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "size-the-gap"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "loan-documents"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "open-talks-with-the-lender",
+      "title": "Open talks with whoever can change the loan",
+      "instruction": "Find out who holds the loan and who can change it: a bank, a life company, a debt fund or a securitization trust. In a commercial mortgage securitization, a special servicer takes over servicing a loan when a condition named in the servicing agreement occurs; ask which servicer has the loan now and what it needs. For a bank, the federal banking agencies' 2023 policy statement calls for working prudently with creditworthy borrowers in stress. Draft a written request with the cause, the gap, the business plan and the ask: an extension, an interest-only period, a paydown schedule. Expect a pre-negotiation letter; counsel reads it before anyone signs. A principal approves each message. In Texas, where a financial institution gave the statute's conspicuous notice, its agreement to delay repayment of more than $50,000 binds only in a signed writing; treat nothing said on a call as agreed.",
+      "mode": "agent",
+      "modeBasis": "Identifying the holder and drafting the request is document work; each message speaks for the borrower, so a principal approves it.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "size-the-gap",
+        "map-the-lenders-remedies"
+      ],
+      "rules": [
+        "us-tx.finance.loan-agreement-in-writing"
+      ],
+      "consumes": [
+        "loan-documents",
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "cfr-246-7",
+        "frb-cre-workouts-2023",
+        "bc-26"
+      ]
+    },
+    {
+      "id": "line-up-replacement-capital",
+      "title": "Line up replacement debt, new money and a sale in parallel",
+      "instruction": "Work the other ways to repay at the same time as the lender talks. Replacement debt on worse terms: a smaller loan, a bridge or debt-fund loan, priced in the debt-sizing, loan-payments and rate-reset calculators with fees and any rate cap, using the package and quote comparison from source-acquisition-debt. New money for a paydown: what the governing documents let the sponsor call or raise, and from whom. A sale: ask brokers for opinions of value and time to close, and net the proceeds against the payoff, any prepayment cost and closing costs, running the sale-proceeds calculator for the seller's cash at closing before tax at the price the evidence supports before comparing it with the refinance. State the maturity date in every request. A principal approves each package before it goes out; track every answer against the maturity.",
+      "mode": "agent",
+      "modeBasis": "Packaging, pricing and tracking are agent work; contacting lenders and brokers speaks for the sponsor, so a principal approves each send.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "size-the-gap"
+      ],
+      "calculators": [
+        "debt-sizing",
+        "loan-payments",
+        "rate-reset",
+        "sale-proceeds"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "rent-roll",
+        "trailing-12",
+        "comp-set"
+      ],
+      "produces": [
+        "loan-term-sheet",
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "cpa-sizes-the-tax",
+      "title": "Have the CPA size the tax on forgiven debt or a handback",
+      "instruction": "Send the CPA each path that forgives debt or gives up the property: a discounted payoff, a principal write-down, a deed in lieu, a foreclosure. The rules the CPA applies: income from discharge of indebtedness is gross income (26 U.S.C. 61(a)(11)) unless a section 108 exclusion applies, such as a discharge in a bankruptcy case, insolvency, or, for a taxpayer other than a C corporation, qualified real property business indebtedness, which reduces the basis of depreciable real property. In a partnership those exclusions are applied at the partner level, investor by investor. In a foreclosure, recourse debt above the property's fair market value can produce ordinary cancellation income, while nonrecourse debt is treated in full as the amount realized (IRS Publication 4681). The CPA sizes the tax and its timing for each path; record the answers.",
+      "mode": "human-online",
+      "modeBasis": "Applying the exclusions to each investor's facts is a CPA's judgment.",
+      "actor": "cpa",
+      "licensed": "cpa",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "size-the-gap",
+        "map-the-lenders-remedies"
+      ],
+      "consumes": [
+        "loan-documents",
+        "guaranty",
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-26-61",
+        "usc-26-108",
+        "irs-p4681"
+      ]
+    },
+    {
+      "id": "counsel-weighs-bankruptcy",
+      "title": "Have counsel set out what a bankruptcy filing would do and cost",
+      "instruction": "Counsel assesses what a Chapter 11 filing by the property-owning entity would do and cost, so the option's limits are known before talks harden. A petition stays acts against the debtor and its property, including acts to enforce a lien and to collect prepetition claims (11 U.S.C. 362(a)). For single asset real estate, the court must lift the stay for the secured lender unless, within the deadlines in 362(d)(3), the debtor files a plan with a reasonable possibility of confirmation or starts monthly payments of interest at the nondefault contract rate on the value of the lender's interest. A single-asset owner is excluded from the small business debtor definition (101(51D)). A Chapter 11 case carries a filing fee and, outside subchapter V, quarterly United States trustee fees (28 U.S.C. 1930). Counsel also reads whether a filing triggers recourse under the guaranty.",
+      "mode": "human-online",
+      "modeBasis": "Whether and how a debtor could use bankruptcy is a legal judgment.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "map-the-lenders-remedies"
+      ],
+      "rules": [
+        "us-fed.bankruptcy.automatic-stay",
+        "us-fed.bankruptcy.single-asset-real-estate"
+      ],
+      "consumes": [
+        "loan-documents",
+        "guaranty"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-11-362",
+        "usc-11-101",
+        "usc-28-1930"
+      ]
+    },
+    {
+      "id": "price-each-path",
+      "title": "Put every path on one comparison sheet",
+      "instruction": "Lay out each path in the same columns: cash needed and from whom, the date it must close, the new payment and maturity from the loan-payments calculator, coverage, guaranty exposure, the CPA's tax answers, and what investors get. Paths: exercise or negotiate an extension, with any paydown; replacement debt plus new money; a sale; a consensual handback by deed in lieu or agreed foreclosure; and, as counsel advises, a bankruptcy filing. Run returns-sensitivity and waterfall-promote for investor returns on each path that keeps the property, and scenario-risk where an outcome is uncertain, such as whether the lender agrees. Mark any input still unknown instead of estimating it, and hand the sheet to the principal and counsel.",
+      "mode": "agent",
+      "modeBasis": "The comparison is built from recorded answers and live calculators.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "open-talks-with-the-lender",
+        "line-up-replacement-capital",
+        "cpa-sizes-the-tax",
+        "counsel-weighs-bankruptcy"
+      ],
+      "calculators": [
+        "loan-payments",
+        "returns-sensitivity",
+        "waterfall-promote",
+        "scenario-risk"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "loan-term-sheet",
+        "guaranty"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "choose-the-path",
+      "title": "Choose the path and the fallback",
+      "instruction": "Decide which path to pursue and which to hold in reserve, weighing the maturity date, the extension deadline, the lender's position, the cash the owners can provide, the guaranty, tax, and what investors were told. Record the decision, the reason, the fallback, and the date by which the fallback starts if the first path stalls. Bring counsel in before any message that offers the property back, proposes a discounted payoff or mentions a bankruptcy filing.",
+      "mode": "human-online",
+      "modeBasis": "Whether to put in money, sell or give up the property is a sponsor decision.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "exercise-the-extension",
+        "price-each-path"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "fund-committee-approves",
+      "title": "Take the path to the investment committee",
+      "instruction": "If the path draws fund capital for a paydown or new equity, sells the property or gives it up, present the comparison sheet to the investment committee and get a vote under the fund documents. Confirm the unfunded commitments a call would draw and that the documents allow capital for this purpose, then issue the call through the call-capital-fund-closing process. If an investor fails to fund, open the investor-misses-capital-call situation.",
+      "mode": "human-online",
+      "modeBasis": "Committee approval is a vote under the fund documents; an agent prepares the materials and the notices.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-the-path"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "consumes": [
+        "ic-memo",
+        "underwriting-model"
+      ],
+      "produces": [
+        "capital-call-notice"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "partner-consents",
+      "title": "Get the capital partner's written consent",
+      "instruction": "Refinancing, a sale and a handback are usually major decisions a joint venture agreement reserves for the capital partner. Send the partner the comparison sheet and the chosen path, and get its written consent before committing to the lender. If the path needs new money, follow the agreement's additional-capital terms: who must or may fund, the notice, and what happens to a partner that does not, including any dilution or change to the promote.",
+      "mode": "human-online",
+      "modeBasis": "The partner's consent is its own decision under the joint venture agreement.",
+      "actor": "investor",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-the-path"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement",
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "sign-the-standstill",
+      "title": "Get the extension, forbearance or standstill signed",
+      "instruction": "Put any agreement with the lender in a signed document before maturity passes: an extension or modification, a forbearance agreement, or a standstill while talks continue. In Texas, an agreement by a financial institution as the statute defines it (a bank, savings bank, savings and loan association, credit union, their affiliates or a HUD-approved lender) to delay repayment of more than $50,000 is not enforceable unless written and signed, where the lender gave the statute's conspicuous notice on or before signing (Business and Commerce Code 26.02). Counsel negotiates the terms: the acknowledged balance and defaults, the forbearance period and what ends it, milestones, paydowns and fees, any release of claims, and the guarantors' joinder. The principal signs. Enter every milestone and the new maturity in the deadline-calendar and send copies to the guarantors.",
+      "mode": "human-online",
+      "modeBasis": "The agreement binds the borrower and the guarantors and is signed by a principal after counsel negotiates it.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-the-path",
+        "fund-committee-approves",
+        "partner-consents"
+      ],
+      "rules": [
+        "us-tx.finance.loan-agreement-in-writing"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "loan-documents",
+        "guaranty"
+      ],
+      "produces": [
+        "forbearance-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "bc-26"
+      ]
+    },
+    {
+      "id": "tell-investors",
+      "title": "Keep investors informed",
+      "instruction": "Tell investors early, and again at each turn: the maturity date, why the refinancing failed, the paths being worked, what each could mean for their capital and distributions, and when they will hear next. Match every figure to the comparison sheet. Statements made in connection with the purchase or sale of securities must not misstate a material fact or omit one needed to keep them from misleading, so counsel reviews each notice, and counsel decides how any request for new money from investors is offered and documented. A person approves each notice before it goes out. Record what was sent, and to whom, in the investor register.",
+      "mode": "agent",
+      "modeBasis": "Drafting from the comparison sheet is writing work; investor communications go out only with a person's approval.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "size-the-gap"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "market": "investor-portals-fund-admin",
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "investor-register"
+      ],
+      "produces": [
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5"
+      ]
+    }
+  ],
+  "outlineSteps": []
+}

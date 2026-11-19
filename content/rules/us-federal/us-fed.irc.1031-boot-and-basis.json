@@ -1,0 +1,43 @@
+{
+  "id": "us-fed.irc.1031-boot-and-basis",
+  "jurisdiction": "us-federal",
+  "title": "Like-kind exchange: boot received and basis of the replacement property",
+  "rule": "When an otherwise qualifying exchange also gives the taxpayer money or other property, gain is recognized up to the money plus the other property's fair market value; no loss is recognized. Liabilities the other party assumes, or subject to which the relinquished property passes, count as money received. Liabilities the taxpayer takes on, and cash or other property it gives, offset liabilities relieved, but liabilities taken on never offset cash or other property received. The replacement's basis is the basis given up, less money received and plus gain recognized; the regulation's examples also add liabilities taken on and cash paid. Other property received takes its fair market value as basis.",
+  "citation": {
+    "authority": "26 USC 1031(b), (c) and (d); 26 CFR 1.1031(b)-1(c) and 1.1031(d)-2",
+    "url": "https://www.law.cornell.edu/uscode/text/26/1031"
+  },
+  "asOf": "2026-11-13",
+  "lastVerified": "2026-11-13",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Section 1031(b) or (d), to Section 357(d) (which decides when a liability is treated as assumed), or to 26 CFR 1.1031(b)-1 and 1.1031(d)-2.",
+  "sources": [
+    {
+      "id": "lii-26-usc-1031",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1031",
+      "title": "26 U.S. Code 1031, Exchange of real property held for productive use or investment",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-13",
+      "quote": "but in an amount not in excess of the sum of such money and the fair market value of such other property",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-1-1031-b-1",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.1031(b)-1",
+      "title": "26 CFR 1.1031(b)-1, Receipt of other property or money in tax-free exchange",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "shall be offset against consideration received in the form of an assumption of liabilities (or a transfer subject to a liability)",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-1-1031-d-2",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.1031(d)-2",
+      "title": "26 CFR 1.1031(d)-2, Treatment of assumption of liabilities",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "is to be treated as money received by the taxpayer upon the exchange",
+      "tier": "primary"
+    }
+  ]
+}

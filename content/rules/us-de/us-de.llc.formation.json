@@ -1,0 +1,59 @@
+{
+  "id": "us-de.llc.formation",
+  "jurisdiction": "us-de",
+  "title": "Forming a Delaware LLC: certificate, registered agent and the annual tax",
+  "rule": "A Delaware LLC is formed when its certificate of formation, signed by an authorized person, is filed with the Secretary of State, or later if the certificate says so. The certificate gives the name, which must include \"Limited Liability Company,\" \"L.L.C.\" or \"LLC,\" and the registered office and agent the LLC must keep in Delaware. The LLC owes a $400 annual tax each June 1; late payment adds a $200 penalty and 1.5% monthly interest and costs good standing.",
+  "citation": {
+    "authority": "6 Del. C. 18-102, 18-104, 18-201 and 18-1107",
+    "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-12",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to 6 Del. C. chapter 18, or a change in the Division of Corporations' fees or tax instructions.",
+  "sources": [
+    {
+      "id": "de-code-18-1",
+      "url": "https://delcode.delaware.gov/title6/c018/sc01/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter I (Sections 18-102 and 18-104)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-2",
+      "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter II (Section 18-201, certificate of formation)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-11",
+      "url": "https://delcode.delaware.gov/title6/c018/sc11/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter XI (Section 18-1107, taxation)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-12",
+      "quote": "shall pay an annual tax, for the use of the State of Delaware, in the amount of $400",
+      "tier": "primary"
+    },
+    {
+      "id": "de-annual-tax",
+      "url": "https://corp.delaware.gov/alt-entitytaxinstructions/",
+      "title": "LLC/LP/GP Franchise Tax Instructions",
+      "publisher": "Delaware Division of Corporations",
+      "accessed": "2026-11-12",
+      "quote": "There is no requirement to file an Annual Report.",
+      "tier": "primary"
+    },
+    {
+      "id": "de-llc-form",
+      "url": "https://corpfiles.delaware.gov/LLC_Forms/LLC%20Formation.pdf",
+      "title": "Certificate of Formation of a Limited Liability Company, form and instructions (rev. 8/2026)",
+      "publisher": "Delaware Division of Corporations",
+      "accessed": "2026-11-12",
+      "quote": "The fee to file the Certificate is $110.",
+      "tier": "primary"
+    }
+  ]
+}

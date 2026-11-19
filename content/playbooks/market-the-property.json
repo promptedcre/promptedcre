@@ -1,0 +1,34 @@
+{
+  "id": "market-the-property",
+  "slug": "market-the-property",
+  "kind": "process",
+  "title": "Market the property for sale",
+  "summary": "Prepare the offering package and data room, run the marketing, and manage tours and offers.",
+  "phase": "exit",
+  "order": 510,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Name the likely buyers for the property's type and stage",
+    "Normalize the NOI and source every market claim",
+    "Assemble the data room: rent roll, leases, contracts, statements and reports",
+    "Review the offering package before it goes out",
+    "Set the marketing timeline and the offer date",
+    "Release the package to buyers who sign the confidentiality agreement",
+    "Run tours with the tenant notice the leases require",
+    "Answer buyer questions in one log shared with every bidder",
+    "Collect offers on a common form",
+    "Summarize the offers for the decision makers"
+  ]
+}

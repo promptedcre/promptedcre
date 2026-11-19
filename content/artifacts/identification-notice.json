@@ -1,0 +1,81 @@
+{
+  "id": "identification-notice",
+  "name": "Replacement property identification",
+  "what": "The signed written identification of replacement property in a like-kind exchange.",
+  "fields": [
+    {
+      "key": "taxpayer",
+      "label": "Taxpayer",
+      "type": "string",
+      "definition": "The exchanging taxpayer the identification is made for; compare it with the name on the relinquished property's deed and the exchange agreement.",
+      "authority": "26 CFR 1.1031(k)-1(c)(2)"
+    },
+    {
+      "key": "signedBy",
+      "label": "Signed by",
+      "type": "string",
+      "definition": "Who signed for the taxpayer and in what capacity."
+    },
+    {
+      "key": "recipient",
+      "label": "Sent to",
+      "type": "string",
+      "definition": "The person the identification was sent to, such as the qualified intermediary or the seller of a replacement property.",
+      "authority": "26 CFR 1.1031(k)-1(c)(2)"
+    },
+    {
+      "key": "dateSent",
+      "label": "Date sent",
+      "type": "date",
+      "definition": "The date the signed identification was sent."
+    },
+    {
+      "key": "deliveryProof",
+      "label": "Delivery method and proof",
+      "type": "string",
+      "definition": "How it was sent and the proof kept, such as an email confirmation, a courier receipt or the recipient's signed acknowledgment."
+    },
+    {
+      "key": "identificationDeadline",
+      "label": "Identification deadline",
+      "type": "date",
+      "definition": "The last day of the identification period, from the exchange agreement.",
+      "authority": "26 CFR 1.1031(k)-1(b)(2)(i)"
+    },
+    {
+      "key": "properties",
+      "label": "Properties identified",
+      "type": "list",
+      "definition": "Each property identified, by legal description, street address or distinguishable name, with its expected price.",
+      "authority": "26 CFR 1.1031(k)-1(c)(3)"
+    },
+    {
+      "key": "identificationRule",
+      "label": "Identification limit relied on",
+      "type": "enum",
+      "definition": "Which limit the list relies on: three properties of any value, more properties within the 200-percent value limit, or the 95-percent rule for acquiring nearly all of what was identified.",
+      "authority": "26 CFR 1.1031(k)-1(c)(4)"
+    },
+    {
+      "key": "relinquishedValue",
+      "label": "Relinquished property value",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The value of the relinquished property on the date it was transferred, used to test a list of more than three properties."
+    },
+    {
+      "key": "identifiedValue",
+      "label": "Combined value identified",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The combined expected value of every property on the list."
+    },
+    {
+      "key": "revocations",
+      "label": "Revocations",
+      "type": "list",
+      "definition": "Any written revocation of an earlier identification: the date, the signer, the recipient and the property revoked.",
+      "authority": "26 CFR 1.1031(k)-1(c)(6)"
+    }
+  ]
+}

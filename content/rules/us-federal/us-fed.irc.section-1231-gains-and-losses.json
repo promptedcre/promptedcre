@@ -1,0 +1,34 @@
+{
+  "id": "us-fed.irc.section-1231-gains-and-losses",
+  "jurisdiction": "us-federal",
+  "title": "Gain on business real property: section 1231 netting",
+  "rule": "Section 1231 covers gains and losses from selling, exchanging or involuntarily converting real or depreciable property used in a trade or business and held over one year, other than inventory or property held primarily for sale to customers. If a year's recognized section 1231 gains exceed its section 1231 losses, all are treated as long-term capital gains and losses; otherwise none is a capital gain or loss. A net section 1231 gain is ordinary income up to the non-recaptured net section 1231 losses of the five most recent preceding years. Unrecaptured section 1250 gain from a year's section 1231 dispositions cannot exceed that year's net section 1231 gain.",
+  "citation": {
+    "authority": "26 U.S.C. 1231(a), (b)(1) and (c); 26 U.S.C. 1(h)(6)(A)(i) and (B)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/1231"
+  },
+  "asOf": "2026-11-14",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to section 1231(a), (b)(1) or (c), including the one-year holding period and the five-year look-back in 1231(c)(2), or to the limit on unrecaptured section 1250 gain in section 1(h)(6)(B).",
+  "sources": [
+    {
+      "id": "usc-26-1231",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1231",
+      "title": "26 U.S.C. 1231, Property used in the trade or business and involuntary conversions (subsections (a), (b)(1) and (c))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "such gains and losses shall be treated as long-term capital gains or long-term capital losses, as the case may be.",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-1",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1",
+      "title": "26 U.S.C. 1, Tax imposed (subsection (h)(6)(B), Limitation with respect to section 1231 property)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "shall not exceed the net section 1231 gain (as defined in section 1231(c)(3)) for such year.",
+      "tier": "primary"
+    }
+  ]
+}

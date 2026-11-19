@@ -1,0 +1,60 @@
+{
+  "id": "us-fed.reg-d.rule-506c",
+  "jurisdiction": "us-federal",
+  "title": "Rule 506(c): general solicitation if every buyer is a verified accredited investor",
+  "rule": "Rule 506(c) allows general solicitation if every purchaser is accredited and the issuer takes reasonable steps to verify it, even for buyers who qualify. Optional methods: two years of IRS income forms; asset statements and a credit report from the last three months; or a recent letter from a broker-dealer, SEC-registered adviser, attorney or CPA. SEC staff says a minimum investment of $200,000 per individual or $1,000,000 per entity, with written representations of accreditation and no third-party financing, can suffice.",
+  "citation": {
+    "authority": "17 CFR 230.506(c); SEC Securities Act Rules C&DIs 256.35, 256.36, 260.07 and 260.39",
+    "url": "https://www.ecfr.gov/current/title-17/section-230.506"
+  },
+  "asOf": "2026-11-09",
+  "lastVerified": "2026-11-12",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Rule 506(c), or revision or withdrawal of C&DIs 256.35, 256.36, 260.39 or 260.40 or of the Division's March 12, 2025 no-action letter on minimum investment amounts.",
+  "sources": [
+    {
+      "id": "ecfr-230-506",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.506",
+      "title": "17 CFR 230.506, Exemption for limited offers and sales without regard to dollar amount of offering",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "quote": "The issuer shall take reasonable steps to verify that purchasers of securities sold in any offering under paragraph (c) of this section are accredited investors.",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-cdi-securities-act-rules",
+      "url": "https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/securities-act-rules",
+      "title": "Securities Act Rules: Compliance and Disclosure Interpretations (Sections 255 to 260)",
+      "publisher": "U.S. Securities and Exchange Commission, Division of Corporation Finance",
+      "accessed": "2026-11-12",
+      "quote": "The verification requirement must be satisfied even if all purchasers happen to be accredited investors.",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-506c-no-action",
+      "url": "https://www.sec.gov/rules-regulations/no-action-interpretive-exemptive-letters/division-corporation-finance-no-action/latham-watkins-503c-031225",
+      "title": "No-action letter on Rule 506(c) verification through minimum investment amounts (March 12, 2025)",
+      "publisher": "U.S. Securities and Exchange Commission, Division of Corporation Finance",
+      "accessed": "2026-11-12",
+      "quote": "This letter, like all staff statements, has no legal force or effect",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-506c-incoming",
+      "url": "https://www.sec.gov/files/corpfin/no-action/latham-watkins506c-031225-incoming.pdf",
+      "title": "Request for Rule 506(c) interpretive guidance (incoming letter, March 6, 2025)",
+      "publisher": "U.S. Securities and Exchange Commission (no-action file)",
+      "accessed": "2026-11-12",
+      "quote": "of at least $200,000 for natural persons and at least $1,000,000 for legal entities",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-506c-page",
+      "url": "https://www.sec.gov/resources-small-businesses/exempt-offerings/general-solicitation-rule-506c",
+      "title": "General solicitation — Rule 506(c)",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    }
+  ]
+}

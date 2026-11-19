@@ -1,0 +1,358 @@
+{
+  "id": "submit-letter-of-intent",
+  "slug": "submit-letter-of-intent",
+  "kind": "process",
+  "title": "Submit a letter of intent",
+  "summary": "Put price, deposits, timing and the key conditions in writing so both sides can decide whether to draft a contract.",
+  "phase": "acquire",
+  "order": 230,
+  "featured": true,
+  "depth": "full",
+  "review": "practitioner-reviewed",
+  "lastVerified": "2026-11-12",
+  "requires": [
+    "underwrite-a-deal"
+  ],
+  "consumes": [
+    "ic-memo",
+    "underwriting-model"
+  ],
+  "produces": [
+    "letter-of-intent"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "bc-26",
+      "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.26.htm",
+      "title": "Texas Business and Commerce Code, Chapter 26 (Statute of Frauds, Section 26.01)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "a contract for the sale of real estate",
+      "tier": "primary"
+    },
+    {
+      "id": "occ-code-1101",
+      "url": "https://statutes.capitol.texas.gov/Docs/OC/htm/OC.1101.htm",
+      "title": "Texas Occupations Code, Chapter 1101 (Sections 1101.558 and 1101.806)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "first substantive communication with a party relating to a proposed transaction regarding specific real property",
+      "tier": "primary"
+    },
+    {
+      "id": "trec-rules",
+      "url": "https://www.trec.texas.gov/agency-information/rules-and-laws/trec-rules",
+      "title": "TREC Rules: 22 Tex. Admin. Code 531.20 (Information About Brokerage Services) and 535.144 (acquiring or disposing of own property)",
+      "publisher": "Texas Real Estate Commission",
+      "accessed": "2026-11-12",
+      "quote": "is obligated to disclose in writing that he or she is a licensed real estate broker or sales agent",
+      "tier": "primary"
+    },
+    {
+      "id": "trec-iabs-faq",
+      "url": "https://www.trec.texas.gov/information-about-brokerage-services-form",
+      "title": "Information About Brokerage Services (IABS) Form, with frequently asked questions",
+      "publisher": "Texas Real Estate Commission",
+      "accessed": "2026-11-12",
+      "quote": "Unless an exception applies, the requirements apply to all proposed real estate transactions.",
+      "tier": "primary"
+    },
+    {
+      "id": "trec-iabs-form",
+      "url": "https://www.trec.texas.gov/forms/information-about-brokerage-services",
+      "title": "Information About Brokerage Services (Form ID: IABS 1-2, effective January 1, 2026)",
+      "publisher": "Texas Real Estate Commission",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "confirm-approved-terms",
+      "title": "Start from the approved terms",
+      "instruction": "Pull the approved maximum price and required terms from the firm file and the investment committee memo. List any term the seller's guidance or call for offers asks for, such as a deposit size, a short feasibility period or no financing condition, and mark where it differs from what was approved. A difference goes back to whoever approved the underwriting before the letter is drafted around it.",
+      "mode": "agent",
+      "modeBasis": "The approved figures are in the firm file; the agent compares them with the seller's asks and decides nothing.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "consumes": [
+        "ic-memo",
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "confirm-broker-roles",
+      "title": "Confirm who represents whom and the broker disclosures",
+      "instruction": "List every license holder involved and whom each represents; TREC's public license search confirms a license. Each license holder must give a party TREC's Information About Brokerage Services notice at the first substantive communication about the property, unless the party is known to be represented by another license holder, and the rule reaches commercial deals. If the sponsor uses a buyer's broker, put the representation and commission in a signed writing; a commission promise that is not signed cannot be sued on in Texas. If a principal who owns more than 10% of the buyer holds a license, the letter or contract must disclose it in writing.",
+      "mode": "agent",
+      "modeBasis": "License status and the disclosures received can be checked against TREC's public search and the file; the agreements themselves are signed by people.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-approved-terms"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.trec.iabs",
+        "us-tx.contracts.statute-of-frauds"
+      ],
+      "basis": "cited",
+      "sources": [
+        "occ-code-1101",
+        "trec-rules",
+        "trec-iabs-faq",
+        "trec-iabs-form"
+      ]
+    },
+    {
+      "id": "draft-loi",
+      "title": "Draft the letter of intent",
+      "instruction": "Draft a short letter on the approved terms: the buyer as the sponsor's entity or its assigns, the seller of record, the property, the price, the earnest money and the escrow agent that holds it, when the deposit becomes non-refundable, the feasibility period, title and survey review, any financing condition, closing timing, closing costs, the seller's deliverables such as leases, statements and estoppels, and an expiration date. Fill in the letter-of-intent fields as you go, and keep the terms plain; the contract carries the detail.",
+      "mode": "agent",
+      "modeBasis": "Drafting from approved terms is writing work; nothing goes out until a person signs.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-approved-terms"
+      ],
+      "consumes": [
+        "ic-memo",
+        "deal-screen"
+      ],
+      "produces": [
+        "letter-of-intent"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "industrial": "Ask for access for environmental sampling during the feasibility period, and name any tenant whose estoppel is a condition.",
+        "multifamily": "Ask for access to units for inspection, the lease files, and current delinquency and concession reports.",
+        "office": "Name the tenants whose estoppels are required, and ask for a schedule of unpaid allowances and leasing commissions.",
+        "retail": "Name the anchors and major tenants whose estoppels are required, and ask for tenant sales reports and the latest expense reconciliations."
+      }
+    },
+    {
+      "id": "mark-binding-provisions",
+      "title": "Say what binds and what does not",
+      "instruction": "Texas law makes a contract to sell real estate unenforceable unless it, or a memorandum of it, is in writing and signed by the party to be charged. A signed letter is a writing, so its words decide whether it binds. State that price and terms do not bind until a definitive contract is signed, and list the few provisions that do bind on signing, such as confidentiality, an exclusivity period, each side paying its own costs, and governing law. Avoid wording that promises to negotiate or to close unless counsel means it to bind.",
+      "mode": "agent",
+      "modeBasis": "Drafting the clause is writing work; whether it does its job is counsel's call in a later step.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "draft-loi"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.contracts.statute-of-frauds"
+      ],
+      "produces": [
+        "letter-of-intent"
+      ],
+      "basis": "cited",
+      "sources": [
+        "bc-26"
+      ]
+    },
+    {
+      "id": "calendar-loi-dates",
+      "title": "Lay out the dates the letter implies",
+      "instruction": "Enter an assumed contract effective date and the letter's periods in the deadline-calendar: feasibility end, title and survey review, any financing condition, closing, and the date the deposit goes hard. Check the result against the raise or capital call schedule, a lender's likely timeline and holidays. Show the calendar with the draft so the person signing sees when money becomes non-refundable, and recompute whenever terms change.",
+      "mode": "agent",
+      "modeBasis": "The calendar computes dates from the periods entered; how the contract will count days is confirmed later.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "draft-loi"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "letter-of-intent"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "counsel-reviews-loi",
+      "title": "Have counsel review what binds",
+      "instruction": "Send counsel the draft and ask three things: whether anything in it could be read as a binding agreement to sell or buy, whether the binding provisions say what the sponsor intends, and whether a required disclosure is missing, such as a principal's license status. Keeping the review to those points lets the letter go out quickly. Record counsel's changes in the draft.",
+      "mode": "human-online",
+      "modeBasis": "Whether a letter binds its signers is a legal judgment for counsel.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-broker-roles",
+        "mark-binding-provisions",
+        "calendar-loi-dates"
+      ],
+      "rules": [
+        "us-tx.contracts.statute-of-frauds"
+      ],
+      "consumes": [
+        "letter-of-intent"
+      ],
+      "basis": "cited",
+      "sources": [
+        "bc-26",
+        "trec-rules"
+      ]
+    },
+    {
+      "id": "partner-signs-off-loi",
+      "title": "Get the capital partner's sign-off on the letter",
+      "instruction": "If the JV agreement or term sheet gives the capital partner approval over offers, send it the final draft and the calendar, and wait for its written approval before signing. Record the approval and any change it asks for.",
+      "mode": "human-online",
+      "modeBasis": "The partner's approval is its own decision under the JV agreement.",
+      "actor": "investor",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-reviews-loi"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement",
+        "letter-of-intent"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "sign-and-send-loi",
+      "title": "Sign and send the letter",
+      "instruction": "A person authorized to act for the buyer signs the letter and sends it to the listing broker, or to the seller if there is none, before any deadline in the call for offers. Keep the sent version and the time it went. If a principal's license disclosure belongs in the letter, confirm it survived counsel's edits.",
+      "mode": "human-online",
+      "modeBasis": "A signature commits the buyer to the letter's binding provisions.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-reviews-loi",
+        "partner-signs-off-loi"
+      ],
+      "market": "formation-back-office",
+      "produces": [
+        "letter-of-intent"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "track-response",
+      "title": "Track the response and any counter",
+      "instruction": "Log the seller's response, each counter and when each version expires. Compare every counter with the approved terms, and re-run the deadline-calendar and the returns-sensitivity calculator for any change to price, deposit or timing, so the person deciding sees the effect before replying. Keep every version; the last one both sides sign becomes the brief for the contract.",
+      "mode": "agent",
+      "modeBasis": "Logging versions and re-running calculators on changed terms is agent work.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-and-send-loi"
+      ],
+      "calculators": [
+        "deadline-calendar",
+        "returns-sensitivity"
+      ],
+      "consumes": [
+        "letter-of-intent",
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "decide-counter",
+      "title": "Decide on each counter",
+      "instruction": "Accept, counter or walk away on each response. A change beyond the approved price or terms goes back to whoever approved the underwriting, including the investment committee or capital partner where they hold that approval. Sign the final version once both sides agree.",
+      "mode": "human-online",
+      "modeBasis": "Price and terms are sponsor decisions, and the final letter is signed.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "track-response"
+      ],
+      "market": "formation-back-office",
+      "produces": [
+        "letter-of-intent"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "open-contract-file",
+      "title": "File the signed letter and hand it to counsel",
+      "instruction": "Save the letter both sides signed and record its dates in the firm file: the signing date, any exclusivity period, and the target date for a signed contract, recomputed in the deadline-calendar. Send it to counsel as the brief for the purchase and sale agreement, with the underwriting assumptions that depend on contract terms.",
+      "mode": "agent",
+      "modeBasis": "Filing, dating and forwarding a signed document is file work.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-counter"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "letter-of-intent"
+      ],
+      "basis": "practitioner"
+    }
+  ],
+  "outlineSteps": []
+}

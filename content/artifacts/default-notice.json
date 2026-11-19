@@ -1,0 +1,87 @@
+{
+  "id": "default-notice",
+  "name": "Notice of default",
+  "what": "A written notice that a tenant or a borrower has failed to perform, with the cure period the lease or loan gives.",
+  "fields": [
+    {
+      "key": "noticeKind",
+      "label": "Kind of notice",
+      "type": "enum",
+      "definition": "Whether the notice goes from a landlord to a tenant or from a lender to a borrower."
+    },
+    {
+      "key": "sender",
+      "label": "Sent by",
+      "type": "string",
+      "definition": "The party giving notice and the person who signed it."
+    },
+    {
+      "key": "recipients",
+      "label": "Sent to",
+      "type": "list",
+      "definition": "Each party the notice is addressed to, at the address the governing document requires, and any guarantor or copy party it names."
+    },
+    {
+      "key": "governingDocument",
+      "label": "Governing document",
+      "type": "text",
+      "definition": "The lease or loan document the default arises under, by date, and the sections the notice cites."
+    },
+    {
+      "key": "noticeDate",
+      "label": "Notice date",
+      "type": "date",
+      "definition": "The date written on the notice."
+    },
+    {
+      "key": "deliveryMethod",
+      "label": "Delivery method",
+      "type": "string",
+      "definition": "How the notice was sent, such as hand delivery, certified mail or overnight courier, and whether that method matches the notice clause."
+    },
+    {
+      "key": "deliveredOn",
+      "label": "Delivered on",
+      "type": "date",
+      "definition": "The date the notice counts as delivered under the governing document, with the proof, such as a receipt or tracking record."
+    },
+    {
+      "key": "defaults",
+      "label": "Defaults stated",
+      "type": "list",
+      "definition": "Each failure the notice describes, monetary or not, in the notice's own terms."
+    },
+    {
+      "key": "amountDue",
+      "label": "Amount due",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The total the notice demands, with its parts, such as rent, recoveries, late charges, interest or a missed loan payment; null for a non-monetary default."
+    },
+    {
+      "key": "curePeriodDays",
+      "label": "Cure period",
+      "type": "integer",
+      "unit": "days",
+      "definition": "The days the governing document gives to cure after delivery, and whether they are calendar or business days."
+    },
+    {
+      "key": "cureDeadline",
+      "label": "Cure deadline",
+      "type": "date",
+      "definition": "The last day to cure, counted from the delivery date as the governing document counts days."
+    },
+    {
+      "key": "consequences",
+      "label": "Consequences stated",
+      "type": "text",
+      "definition": "What the notice says will follow if the default is not cured, such as termination, acceleration, a draw on a deposit or letter of credit, or other remedies the document gives."
+    },
+    {
+      "key": "reservationOfRights",
+      "label": "Reservation of rights",
+      "type": "boolean",
+      "definition": "Whether the notice states that the sender keeps its other rights and that accepting a partial payment does not waive the default."
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "regulator-sends-inquiry",
+  "slug": "regulator-sends-inquiry",
+  "kind": "situation",
+  "title": "A securities regulator sends an inquiry",
+  "summary": "Preserve records, bring in securities counsel and respond fully and on time.",
+  "phase": "raise",
+  "order": 132,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "situation": {
+    "trigger": "The SEC or a state securities regulator asks for information about an offering.",
+    "urgency": "days"
+  },
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Log the inquiry, who sent it and the response date",
+    "Bring in securities counsel before any reply",
+    "Put a hold on records the inquiry may reach",
+    "Notify the insurance carrier if the policy covers inquiries",
+    "Gather the documents requested with counsel",
+    "Review the production with counsel before it goes",
+    "Respond fully and on time through counsel",
+    "Track follow-up requests and their deadlines",
+    "Record the outcome and any change to practice"
+  ]
+}

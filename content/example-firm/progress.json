@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "playbooks": {
+    "file-form-d-and-state-notices": {
+      "steps": {
+        "confirm-filing-applies": { "status": "done", "date": "2026-03-02", "note": "Rule 506(b), per the offering memorandum." },
+        "fix-first-sale-date": {
+          "status": "done",
+          "date": "2026-03-02",
+          "note": "First signed subscription received 2026-03-02; Form D due 2026-03-17."
+        },
+        "set-up-login-gov": { "status": "todo", "date": null, "note": null }
+      }
+    }
+  },
+  "other": [
+    {
+      "task": "Add Sam Sample as a signer on the operating account",
+      "status": "todo",
+      "date": "2026-03-02",
+      "playbook": "open-sponsor-bank-accounts",
+      "note": null
+    }
+  ]
+}

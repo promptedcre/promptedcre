@@ -1,0 +1,104 @@
+{
+  "id": "earnest-money-receipt",
+  "name": "Earnest money receipt",
+  "what": "The title company's or escrow agent's written receipt for the buyer's deposit.",
+  "fields": [
+    {
+      "key": "escrowAgent",
+      "label": "Escrow agent",
+      "type": "string",
+      "definition": "The title company or escrow agent that holds the deposit, and the escrow officer who signed the receipt. It should be the agent the contract names."
+    },
+    {
+      "key": "fileNumber",
+      "label": "Escrow or title file number",
+      "type": "string",
+      "definition": "The agent's file number for the transaction, read from the receipt."
+    },
+    {
+      "key": "buyer",
+      "label": "Buyer",
+      "type": "string",
+      "definition": "The buyer as the receipt names it. Check it against the contract, and against the assignee if the contract was assigned to a deal entity."
+    },
+    {
+      "key": "seller",
+      "label": "Seller",
+      "type": "string",
+      "definition": "The seller as the receipt names it."
+    },
+    {
+      "key": "property",
+      "label": "Property",
+      "type": "string",
+      "definition": "The property address or description the receipt refers to."
+    },
+    {
+      "key": "contractEffectiveDate",
+      "label": "Contract effective date",
+      "type": "date",
+      "definition": "The contract's effective date, from the contract or the receipt where it shows one. The deposit deadline usually runs from it."
+    },
+    {
+      "key": "depositDueUnderContract",
+      "label": "Deposit due under the contract",
+      "type": "text",
+      "definition": "The amount and deadline the contract sets for this deposit, with the contract section, so the receipt can be checked against it."
+    },
+    {
+      "key": "amount",
+      "label": "Amount received",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The amount the receipt acknowledges."
+    },
+    {
+      "key": "receivedDate",
+      "label": "Date received",
+      "type": "date",
+      "definition": "The date the agent says it received the funds. Compare it with the contract deadline."
+    },
+    {
+      "key": "formOfFunds",
+      "label": "Form of funds",
+      "type": "enum",
+      "definition": "Wire, cashier's check, personal or company check, or other, as the receipt states."
+    },
+    {
+      "key": "wireVerification",
+      "label": "Wire verification record",
+      "type": "string",
+      "definition": "For a wired deposit, the wire instructions record that shows the agent's instructions were confirmed by call-back before sending."
+    },
+    {
+      "key": "depositSeries",
+      "label": "Deposit number in the series",
+      "type": "string",
+      "definition": "Which deposit this receipt covers, such as the initial deposit or an additional deposit due after the feasibility period, where the contract calls for more than one."
+    },
+    {
+      "key": "nonRefundablePortion",
+      "label": "Portion released or non-refundable",
+      "type": "text",
+      "definition": "Any part of the deposit the contract makes non-refundable or payable to the seller in all events, and when the rest goes hard, with the contract sections. Read from the contract, not assumed from the receipt."
+    },
+    {
+      "key": "interestBearing",
+      "label": "Held in an interest-bearing account",
+      "type": "boolean",
+      "definition": "Whether the receipt or contract says the deposit is held in an interest-bearing account, with who receives the interest if stated."
+    },
+    {
+      "key": "disposition",
+      "label": "What happened to the deposit",
+      "type": "enum",
+      "definition": "Held, released to the seller, returned to the buyer, or applied at closing, with the date and where the escrow agent's written confirmation is kept. Read it from the agent's disbursement letter or the settlement statement's deposit credit, not from a phone call; it stays held until one of those shows otherwise."
+    },
+    {
+      "key": "storageLocation",
+      "label": "Where the receipt is kept",
+      "type": "string",
+      "definition": "Where the firm keeps the signed receipt, filed with the contract."
+    }
+  ]
+}

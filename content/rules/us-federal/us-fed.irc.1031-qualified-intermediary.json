@@ -1,0 +1,25 @@
+{
+  "id": "us-fed.irc.1031-qualified-intermediary",
+  "jurisdiction": "us-federal",
+  "title": "Like-kind exchange: the qualified intermediary safe harbor",
+  "rule": "A qualified intermediary, neither the taxpayer nor a disqualified person, acquires and transfers both properties under a written exchange agreement; an assignment of a sale or purchase contract counts if all its parties get written notice by that transfer. Disqualified persons include anyone who served as the taxpayer's employee, attorney, accountant, investment banker, broker or real estate agent within two years before the first relinquished transfer, exchange and routine title or escrow services aside, and persons related to the taxpayer or such an agent at 10 percent. The agreement must bar the taxpayer from receiving, pledging or borrowing the funds before the exchange period ends, except as the regulation allows.",
+  "citation": {
+    "authority": "26 CFR 1.1031(k)-1(g)(4), (g)(6) and (k)",
+    "url": "https://www.ecfr.gov/current/title-26/section-1.1031(k)-1"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-13",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to 26 CFR 1.1031(k)-1(g) or (k), or to the Section 267(b) and 707(b) relationship tests the disqualified-person definition borrows. The releases the regulation allows are after the identification period if nothing was identified, on receipt of all replacement property, and on a written contingency beyond the taxpayer's control after the identification period.",
+  "sources": [
+    {
+      "id": "ecfr-1-1031-k-1",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.1031(k)-1",
+      "title": "26 CFR 1.1031(k)-1, Treatment of deferred exchanges",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-13",
+      "quote": "real estate agent or broker within the 2-year period ending on the date of the transfer of the first of the relinquished properties",
+      "tier": "primary"
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "vendor": "keyway",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://www.keyway.ai/support",
+      "found": false,
+      "note": "404 Not Found; no help center or documentation found on keyway.ai"
+    },
+    "api": {
+      "url": "https://www.keyway.ai/products/keycomps",
+      "found": false,
+      "note": "KeyComps page says an API is available but there is no public API page or reference"
+    },
+    "pricing": {
+      "url": "https://www.keyway.ai/pricing",
+      "found": false,
+      "note": "404; site shows only Start Free Trial and Request a Demo buttons"
+    },
+    "changelog": {
+      "url": "https://www.keyway.ai/resources/blog",
+      "found": false,
+      "note": "Only a blog; no changelog or release notes found"
+    }
+  },
+  "links": {},
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://www.keyway.ai/",
+      "excerpt": "AI-native systems that automate, orchestrate, and accelerate the CRE lifecycle — from acquisitions to asset management.",
+      "fetched": "2026-11-12",
+      "hash": "a5bc079ba1ddc7dc0565fe038a3e10c4e4eb141b9c7c1b0c8ee7642b5b74e360"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://www.keyway.ai/",
+      "excerpt": "Drop in any document - loans, leases, OMs, rent rolls, T12s - and have Keyway automatically detect the document type, extract key fields",
+      "fetched": "2026-11-12",
+      "hash": "1406b1d3824a20e6edf5d1acc6b8b7556a8d814c0fc8855662951b8c9085d8bd"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://www.keyway.ai/",
+      "excerpt": "Automatically clean, standardize, and verify rent rolls and T-12s— no matter the format, no matter the source.",
+      "fetched": "2026-11-12",
+      "hash": "dec0f32caf9e69f1a2f8355ef607de384ce699da61f4660c6f37bad79370061d"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://www.keyway.ai/products/keydocs",
+      "excerpt": "Push outputs directly to Excel, BI tools, or deal templates—no manual entry required.",
+      "fetched": "2026-11-12",
+      "hash": "2366534df79c6b65148d8c26e74d1ed7d0e54248c9b117f246c68f3f0e11b6c3"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://www.keyway.ai/products/keydocs",
+      "excerpt": "Every narrative remains connected to the live deal, making updates automatic as documents or assumptions change.",
+      "fetched": "2026-11-12",
+      "hash": "8b9007c067fbdc89e52e9d75be9df64991747ab9128ee0b66281d1321dfb33e3"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://www.keyway.ai/products/keycomps",
+      "excerpt": "Generate custom compsets and exports with AI. Keyway has an API available to get data faster.",
+      "fetched": "2026-11-12",
+      "hash": "bd12b4047ea28cf9a569262b61889b7ccbcc33c8d4ff26aef9973591993d692f"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://www.keyway.ai/products/keycomps",
+      "excerpt": "Generate dynamic comp sets, predictive pricing insights, and tenant intelligence powered entirely by transparent public market data.",
+      "fetched": "2026-11-12",
+      "hash": "e63ee1e34bb208a209342f10b7aa5c4d7c130786c0a056e0621cbf47e9487ec4"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://www.keyway.ai/keyway-vs-claude",
+      "excerpt": "Specific Keyway functionality and integrations depend on agreed product scope and configuration.",
+      "fetched": "2026-11-12",
+      "hash": "10a263ccf929156b822f76430fa77294adf1b5a4c1b5cdd0786038305d689116"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://www.keyway.ai/keyway-vs-claude",
+      "excerpt": "Can be provided through prompts, knowledge tools, or custom integrations",
+      "fetched": "2026-11-12",
+      "note": "Table cell in the Keyway vs ChatGPT/Claude comparison",
+      "hash": "a143b41126bdde9932d7219e26b943758a1ca1a6f74934d23e5b00f3b8419eb0"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://www.keyway.ai/",
+      "excerpt": "We are SOC 2 Type II certified , ensuring rigorous controls around data security, availability, and privacy.",
+      "fetched": "2026-11-12",
+      "hash": "e9c820f15eeab23eb5faa56c75cca46d09c068b4b4731b89a69603bab001631c"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://www.keyway.ai/",
+      "excerpt": "Start Free Trial Request a Demo",
+      "fetched": "2026-11-12",
+      "note": "Only calls to action on the homepage; no price shown",
+      "hash": "26825dd63d4d1f891eae01b05fc852679c212bed8f41cf7ef16b8cb72cf18b4d"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://www.keyway.ai/llms.txt",
+      "excerpt": "# Keyway",
+      "note": "llms.txt: GET 200, 877 bytes",
+      "fetched": "2026-11-12",
+      "hash": "661d7abe2908fc6bd4f0f4107b0bb498921e11fb5e4d5fd0c3e828820f16c57a"
+    }
+  ]
+}

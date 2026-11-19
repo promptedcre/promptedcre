@@ -1,0 +1,134 @@
+{
+  "vendor": "argus-enterprise",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://www.altusgroup.com/argus/downloads/argus-enterprise/",
+      "found": true,
+      "note": "Public downloads page lists release notes and guides; the Knowledge Base sits behind client login."
+    },
+    "api": {
+      "url": "https://www.altusgroup.com/argus/downloads/argus-enterprise/",
+      "found": false,
+      "note": "No public API reference or developer portal found. Only an 'ARGUS API fair usage policy' is listed; the old ARGUS API pages now redirect to ARGUS Intelligence or the downloads page."
+    },
+    "pricing": {
+      "url": "https://www.altusgroup.com/solutions/argus-enterprise/",
+      "found": false,
+      "note": "Page describes tiered pricing and says to contact the company; no prices published."
+    },
+    "changelog": {
+      "url": "https://www.altusgroup.com/product-releases/",
+      "found": true,
+      "note": "Dated release notes for ARGUS Intelligence Platform; cloud release notes for ARGUS Enterprise are listed on the downloads page."
+    }
+  },
+  "links": {
+    "docs": "https://www.altusgroup.com/argus/downloads/argus-enterprise/"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://www.altusgroup.com/argus/downloads/argus-enterprise/",
+      "excerpt": "ARGUS Enterprise is now part of ARGUS Intelligence Platform.",
+      "fetched": "2026-11-12",
+      "hash": "fca168f51eaf4c180177253b74e9523969ae8ebbd079d0db5bd547115f5f366f"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://www.altusgroup.com/argus/downloads/argus-enterprise/",
+      "excerpt": "As of September 30, 2025, Altus Group no longer offers support for ARGUS Enterprise on-premise.",
+      "fetched": "2026-11-12",
+      "hash": "840fe545fdb3ce181842157475244deffd28580433771a37d57b73bf4e7e31cd"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://www.altusgroup.com/argus/downloads/argus-enterprise/",
+      "excerpt": "ARGUS API fair usage policy",
+      "fetched": "2026-11-12",
+      "note": "Only API-related document listed under Documentation; no API reference is listed.",
+      "hash": "1269aeae39c26e9749624d2eb19ece1bd588fe0de6186ef49da55c3c84e6f067"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://www.altusgroup.com/argus/downloads/argus-enterprise/",
+      "excerpt": "Cloud release notes - AE 15.0.1c (September 16, 2026)",
+      "fetched": "2026-11-12",
+      "hash": "7a29920a37ae251805af7f9397718f9d664072b7655cfb9d95c4a37546abc106"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://www.altusgroup.com/solutions/argus-enterprise/",
+      "excerpt": "Pricing is flexible, tiered and scales with your business. Please contact us to discuss in more detail",
+      "fetched": "2026-11-12",
+      "hash": "9f99a6d583c6b093a3631def514425734b38666cb2a4d40852655ad09a140b64"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://www.altusgroup.com/solutions/argus-intelligence/",
+      "excerpt": "Tiered pricing scales with your business, rather than the number of users, with unlimited seats",
+      "fetched": "2026-11-12",
+      "hash": "5ad8aa58a5b23471f7de32a761c1d2682a1fd69b4473fb43e84165f7be41a3c2"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://www.altusgroup.com/solutions/argus-intelligence/",
+      "excerpt": "Standard in ARGUS Intelligence Platform is the ability for customers to easily upload rent rolls and manage models contained in Microsoft Excel files",
+      "fetched": "2026-11-12",
+      "hash": "9ad4cef3c40989bfaa0c0e6237aa683872371ee03c518f9ab677036ed0dbf318"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://www.altusgroup.com/solutions/argus-intelligence/",
+      "excerpt": "Automated imports & exports - Scheduled data flows between ARGUS Intelligence and your other platforms, no manual lift required.",
+      "fetched": "2026-11-12",
+      "note": "Integration services are delivered by Altus professional services.",
+      "hash": "909f22917d54c6f3f569d11134aed372c250bfa3a19488396106bd7b678d17c9"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://www.altusgroup.com/product-releases/argus-intelligence-export-your-property-asset-and-portfolio-data-to-excel-in-one-click/",
+      "excerpt": "ARGUS Intelligence users can now download their lease, property, asset, cashflow, tenant and Summary of Assumptions (SOA) data directly into Excel in one click",
+      "fetched": "2026-11-12",
+      "note": "Release dated October 9, 2026.",
+      "hash": "eb0c9bc0ca92adab270bee95f058bab6ee04dd6b74f4e2f59cdbf023d5ef6ebc"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://www.altusgroup.com/solutions/argus-enterprise/",
+      "excerpt": "Access over 40+ standard, configurable and exportable reports.",
+      "fetched": "2026-11-12",
+      "hash": "ed920c5dc793600c79ab3050649bbad019a0295874a6be7d5e29e17816a5d964"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://www.altusgroup.com/solutions/argus-intelligence/argus-assist/",
+      "excerpt": "Powered by specialized AI agents, get real-time insights across your workflows.",
+      "fetched": "2026-11-12",
+      "note": "ARGUS Assist is an in-app assistant; no external agent access is described.",
+      "hash": "e7914053a199108ddf87af48740fb4b264843fe0f9dc5fa878a38988e693080b"
+    },
+    {
+      "id": "c12",
+      "tier": "vendor-claim",
+      "url": "https://www.altusgroup.com/support/",
+      "excerpt": "Access Knowledge Base for self-serve support",
+      "fetched": "2026-11-12",
+      "note": "Support page also shows a Client login.",
+      "hash": "cc81c397781c3571f410947fe542af6d4622490ee5e4d9b62434a3f9655f3dee"
+    }
+  ]
+}

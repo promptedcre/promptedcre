@@ -1,0 +1,158 @@
+{
+  "vendor": "microsoft-excel",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://learn.microsoft.com/en-us/graph/api/resources/excel",
+      "found": true,
+      "note": "Microsoft Graph Excel docs on Microsoft Learn; Office Add-ins docs are separate"
+    },
+    "api": {
+      "url": "https://learn.microsoft.com/en-us/graph/api/resources/excel",
+      "found": true
+    },
+    "pricing": {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/excel",
+      "found": true
+    },
+    "changelog": {
+      "url": "https://learn.microsoft.com/en-us/officeupdates/current-channel",
+      "found": true
+    }
+  },
+  "links": {
+    "docs": "https://learn.microsoft.com/en-us/graph/api/resources/excel",
+    "api": "https://learn.microsoft.com/en-us/graph/api/resources/excel",
+    "mcp": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/mcp/overview"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://learn.microsoft.com/en-us/graph/api/resources/excel",
+      "excerpt": "You can use Microsoft Graph to allow web and mobile applications to read and modify Excel workbooks stored in OneDrive for Business",
+      "fetched": "2026-11-12",
+      "hash": "aa215f6f2dc91f16beda8799071331b406622856ec5c12f25f6c73bb68e91e83"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://learn.microsoft.com/en-us/graph/api/resources/excel",
+      "excerpt": "standard REST APIs to perform create, read, update, and delete (CRUD) operations on the workbook.",
+      "fetched": "2026-11-12",
+      "hash": "bcf1932750bd72baa2127bb4e50fa055ac7d117a3c604f7e1817829f13be27e4"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://learn.microsoft.com/en-us/graph/api/resources/excel",
+      "excerpt": "The Excel REST API supports only Office Open XML file formatted workbooks. The .xls extension workbooks aren't supported.",
+      "fetched": "2026-11-12",
+      "hash": "1ed49b9ced70d87cbb9c65906e46121df9fa74ae18317ce426ae4a0501b0437d"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://learn.microsoft.com/en-us/graph/api/resources/excel",
+      "excerpt": "Files.ReadWrite (for read and write actions)",
+      "fetched": "2026-11-12",
+      "note": "Scope listed for Excel resource; Files.Read is the read-only scope",
+      "hash": "05769c085ea641bd5b9ed854c949b9dde9f8cbadbd4a692f2425e3c023ddff2f"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://learn.microsoft.com/en-us/graph/api/resources/excel",
+      "excerpt": "At this time, only the files stored in business platform are supported by Excel REST APIs.",
+      "fetched": "2026-11-12",
+      "hash": "ef65bb57d6852e95e06847c96bd698fa91b6bdf08aff33be29fa2f0b6de49171"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://learn.microsoft.com/en-us/office/dev/add-ins/excel/excel-add-ins-overview",
+      "excerpt": "Read and write workbook data, including worksheets, ranges, tables, charts, and named items.",
+      "fetched": "2026-11-12",
+      "hash": "4337e5376edd137d7bf3a14d2c6cdefaa1d6fbe64beae9746a001cb8cfa167b0"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://learn.microsoft.com/en-us/office/dev/add-ins/excel/excel-add-ins-overview",
+      "excerpt": "Excel add-ins run in Excel on the web, Windows, Mac, and iPad",
+      "fetched": "2026-11-12",
+      "hash": "78efaa606c04e9b1f84c0faa755d58c17f881f6ebc2ec1bf29556d84c38a2788"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://learn.microsoft.com/en-us/graph/sdks/sdks-overview",
+      "excerpt": "The Microsoft Graph software development kits (SDKs) are designed to simplify building high-quality, efficient, resilient applications that access Microsoft Graph.",
+      "fetched": "2026-11-12",
+      "hash": "b759fcd92deeef3bce09d84ff9a375f118ab81fc15c67f24374df8553ab1a0d8"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://learn.microsoft.com/en-us/graph/change-notifications-overview",
+      "excerpt": "Changes to content within the hierarchy of the root folder : /drives/{id}/root , /users/{id}/drive/root",
+      "fetched": "2026-11-12",
+      "note": "Subscription target for driveItem on OneDrive for work or school; the page's resource table does not list workbook ranges or cells",
+      "hash": "7936ff9bae3e806d122b6e8f5443349803b03ef9544083cad1f9ae65a5c4a828"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/mcp/overview",
+      "excerpt": "The Work IQ MCP server exposes Microsoft 365 intelligence capabilities to AI agents through the Model Context Protocol (MCP)",
+      "fetched": "2026-11-12",
+      "note": "General Microsoft 365 MCP server; the page does not name Excel-specific tools. No Excel-specific official MCP server found",
+      "hash": "4b5be8fb6587b605e0bd951d79b0d3fce899ad62693fe221471ed9bd11fab7d5"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/mcp/overview",
+      "excerpt": "Policy over scopes. Four broad OAuth permissions gate capability; fine-grained access control is enforced per path, method, and tenant policy.",
+      "fetched": "2026-11-12",
+      "hash": "a92c2ddbba544c65bb15aaaf801171e873fc30a89c04e201a7eaddbe3ad18446"
+    },
+    {
+      "id": "c12",
+      "tier": "vendor-claim",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/excel",
+      "excerpt": "Microsoft 365 Copilot in Excel unlocks the latest AI capabilities to help you achieve your goals",
+      "fetched": "2026-11-12",
+      "hash": "05594fd95c2e5ff219253d5a9ef5a730c0afbc61bbbcd99f437924231af1e312"
+    },
+    {
+      "id": "c13",
+      "tier": "vendor-claim",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/excel",
+      "excerpt": "Originally starting from $99.99 now starting from $69.99",
+      "fetched": "2026-11-12",
+      "note": "Microsoft 365 Personal, first-year offer; Excel for the web is listed as Free",
+      "hash": "0415bca81bd608c939d031b51d28d4583b90235b938f9f816dd1ed8364f72a42"
+    },
+    {
+      "id": "c14",
+      "tier": "vendor-claim",
+      "url": "https://learn.microsoft.com/en-us/officeupdates/current-channel",
+      "excerpt": "Local file support for Excel Agent Mode: Added support for Excel Agent Mode in modern Excel workbooks stored on your device",
+      "fetched": "2026-11-12",
+      "note": "Release note in Current Channel notes; line continues",
+      "hash": "46cbd9fe3f81d2c7553ca030510f1be29c68184f3a7faa96136ca28641108215"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/mcp/overview",
+      "excerpt": "Work IQ MCP overview | Microsoft Learn",
+      "note": "MCP page resolves: GET 200 (page title)",
+      "fetched": "2026-11-12",
+      "hash": "737a3825946d62ad7c3f63d52e266efa044138b807c8c359d40d65f4498079b9"
+    }
+  ]
+}

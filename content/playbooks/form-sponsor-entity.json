@@ -1,0 +1,742 @@
+{
+  "id": "form-sponsor-entity",
+  "slug": "form-sponsor-entity",
+  "kind": "process",
+  "title": "Form the sponsor entity",
+  "summary": "Create the management company that will sponsor deals: pick its state and entity type, file it, and get it ready to sign, bank and hold the promote.",
+  "phase": "stand-up",
+  "order": 10,
+  "featured": true,
+  "depth": "full",
+  "review": "practitioner-reviewed",
+  "lastVerified": "2026-11-12",
+  "requires": [],
+  "consumes": [],
+  "produces": [
+    "certificate-of-formation",
+    "sponsor-operating-agreement",
+    "ein-confirmation"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx",
+      "us-de"
+    ]
+  },
+  "sources": [
+    {
+      "id": "sos-205",
+      "url": "https://www.sos.state.tx.us/corp/instructions/205.shtml",
+      "title": "Form 205, Instructions for Certificate of Formation (Limited Liability Company), revised 09/26",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-12",
+      "quote": "Do not make financial expenditures or execute documents based on a preliminary clearance.",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-806",
+      "url": "https://www.sos.texas.gov/corp/forms/806_boc.pdf",
+      "title": "Form 806, Business Filings and Trademarks Fee Schedule, revised 09/26",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-3",
+      "url": "https://statutes.capitol.texas.gov/Docs/BO/htm/BO.3.htm",
+      "title": "Texas Business Organizations Code, Chapter 3 (Sections 3.001, 3.005 and 3.010)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-5",
+      "url": "https://statutes.capitol.texas.gov/Docs/BO/htm/BO.5.htm",
+      "title": "Texas Business Organizations Code, Chapter 5 (Sections 5.053, 5.056 and 5.201 to 5.202)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "may not be solely a mailbox service or a telephone answering service",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-9",
+      "url": "https://statutes.capitol.texas.gov/Docs/BO/htm/BO.9.htm",
+      "title": "Texas Business Organizations Code, Chapter 9 (Sections 9.001 and 9.051, foreign entities)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-101",
+      "url": "https://statutes.capitol.texas.gov/Docs/BO/htm/BO.101.htm",
+      "title": "Texas Business Organizations Code, Chapter 101 (Section 101.052, company agreement)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-171",
+      "url": "https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm",
+      "title": "Texas Tax Code, Chapter 171 (Sections 171.0002 and 171.001, franchise tax)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-account-search",
+      "url": "https://comptroller.texas.gov/taxes/franchise/account-status/search",
+      "title": "Franchise Tax Account Status Search",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-12",
+      "quote": "API access to this data is available.",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-questionnaire",
+      "url": "https://comptroller.texas.gov/taxes/franchise/questionnaire.php",
+      "title": "Questionnaires for Franchise Tax Accountability",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-franchise",
+      "url": "https://comptroller.texas.gov/taxes/franchise/",
+      "title": "Franchise Tax (due dates, and rates and thresholds for 2026 and 2027)",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-12",
+      "quote": "The annual franchise tax report is due May 15.",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-filing-requirements",
+      "url": "https://comptroller.texas.gov/taxes/franchise/filing-requirements.php",
+      "title": "Requirements for Reporting and Paying Franchise Tax",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-34-3-584",
+      "url": "https://www.law.cornell.edu/regulations/texas/34-Tex-Admin-Code-SS-3-584",
+      "title": "34 Tex. Admin. Code 3.584, Margin: Reports and Payments",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-12",
+      "quote": "due no later than May 15 of the year following the year the entity became subject to the tax",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-1",
+      "url": "https://delcode.delaware.gov/title6/c018/sc01/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter I (Sections 18-102 and 18-104)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-2",
+      "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter II (Section 18-201, certificate of formation)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-11",
+      "url": "https://delcode.delaware.gov/title6/c018/sc11/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter XI (Section 18-1107, taxation)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-12",
+      "quote": "shall pay an annual tax, for the use of the State of Delaware, in the amount of $400",
+      "tier": "primary"
+    },
+    {
+      "id": "de-llc-form",
+      "url": "https://corpfiles.delaware.gov/LLC_Forms/LLC%20Formation.pdf",
+      "title": "Certificate of Formation of a Limited Liability Company, form and instructions (rev. 8/2026)",
+      "publisher": "Delaware Division of Corporations",
+      "accessed": "2026-11-12",
+      "quote": "The fee to file the Certificate is $110.",
+      "tier": "primary"
+    },
+    {
+      "id": "de-name-search",
+      "url": "https://icis.corp.delaware.gov/ecorp/entitysearch/namesearch.aspx",
+      "title": "General Information Name Search",
+      "publisher": "Delaware Division of Corporations",
+      "accessed": "2026-11-12",
+      "quote": "Use of automated tools in any form may result in the suspension of your access to utilize this service.",
+      "tier": "primary"
+    },
+    {
+      "id": "de-annual-tax",
+      "url": "https://corp.delaware.gov/alt-entitytaxinstructions/",
+      "title": "LLC/LP/GP Franchise Tax Instructions",
+      "publisher": "Delaware Division of Corporations",
+      "accessed": "2026-11-12",
+      "quote": "There is no proration on alternative entity taxes.",
+      "tier": "primary"
+    },
+    {
+      "id": "fincen-boi",
+      "url": "https://www.fincen.gov/boi",
+      "title": "Beneficial Ownership Information Reporting (alert updated August 11, 2026)",
+      "publisher": "Financial Crimes Enforcement Network",
+      "accessed": "2026-11-12",
+      "quote": "The final rule became effective on August 14, 2026.",
+      "tier": "primary"
+    },
+    {
+      "id": "fr-boi-final-rule",
+      "url": "https://www.federalregister.gov/documents/2026/08/14/2026-16576/beneficial-ownership-information-reporting-requirement-revision",
+      "title": "Beneficial Ownership Information Reporting Requirement Revision, final rule, 91 FR 52508 (Aug. 14, 2026)",
+      "publisher": "Financial Crimes Enforcement Network (Federal Register)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-31-1010-380",
+      "url": "https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-C/section-1010.380",
+      "title": "31 CFR 1010.380, Reports of beneficial ownership information",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-ein",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number",
+      "title": "Get an employer identification number",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-12",
+      "quote": "You can apply for only 1 EIN per responsible party per day.",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-ss4-instructions",
+      "url": "https://www.irs.gov/instructions/iss4",
+      "title": "Instructions for Form SS-4 (Rev. December 2025)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-12",
+      "quote": "the responsible party must be an individual (that is, a natural person), not an entity",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-responsible-parties",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/responsible-parties-and-nominees",
+      "title": "Responsible parties and nominees",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-31-1020-220",
+      "url": "https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1020/subpart-B/section-1020.220",
+      "title": "31 CFR 1020.220, Customer identification program requirements for banks",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-31-1010-230",
+      "url": "https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-B/section-1010.230",
+      "title": "31 CFR 1010.230, Beneficial ownership requirements for legal entity customers",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "choose-state-and-entity-type",
+      "title": "Choose the state and entity type with counsel",
+      "instruction": "Decide with counsel where to form the sponsor entity and what kind of entity it is; this playbook covers an LLC. A Texas LLC costs $300 to file. A Delaware LLC costs $110 to file and $400 a year in Delaware tax, and if it transacts business in Texas it must also register there as a foreign LLC, for $750, with a Texas registered agent. Texas franchise tax reaches entities organized in Texas and entities doing business there, so forming elsewhere does not avoid it. Whether the sponsor's activities count as transacting business in Texas is for counsel to judge. Record the decision and the reasons in the firm file.",
+      "mode": "human-online",
+      "modeBasis": "Choosing the state and the entity type is a legal and tax judgment the principals make with counsel.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-tx.boc.llc-formation",
+        "us-de.llc.formation",
+        "us-tx.franchise-tax.basics",
+        "us-tx.boc.series-llc"
+      ],
+      "basis": "cited",
+      "sources": [
+        "sos-806",
+        "de-llc-form",
+        "de-code-18-11",
+        "tx-boc-9",
+        "tx-boc-5",
+        "tx-tax-code-171"
+      ]
+    },
+    {
+      "id": "fund-gp-and-management-company",
+      "title": "For a fund, plan a management company and a GP entity per fund",
+      "instruction": "A fund sponsor usually forms more than one entity: a management company that employs the team, signs the management agreement and earns the fee, and a separate general partner or managing member entity for each fund, which makes the fund's decisions and holds the carried interest. Keeping each fund's general partner separate keeps one fund's liabilities and economics apart from the next. Counsel and the tax adviser settle the structure before the fund documents are drafted. Each entity then goes through the steps below, with its own company agreement, EIN and records.",
+      "mode": "human-online",
+      "modeBasis": "How to split the management company and the general partner is a structuring decision for counsel and the tax adviser.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-state-and-entity-type"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "jv-member-entity",
+      "title": "For a JV, plan the sponsor's member entity for the venture",
+      "instruction": "In a joint venture with one capital partner, the sponsor usually holds its interest through an entity formed for that venture, which signs the JV agreement as the managing or operating member. That keeps the sponsor's other business outside the venture and gives the partner a counterparty with one job. Form it through the steps below, with its own company agreement among the principals, and have it in good standing before the JV agreement is signed.",
+      "mode": "human-online",
+      "modeBasis": "Which entity holds the sponsor's JV interest is a structuring decision for the principals and counsel.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-state-and-entity-type"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "check-name-texas",
+      "title": "Check that the name is available in Texas",
+      "instruction": "The name must contain \"limited liability company,\" \"limited company\" or an abbreviation of either, and must be distinguishable from every name on file with the Secretary of State, including reserved names. Screen candidates in the Comptroller's public franchise tax account search, which also offers an API, then email the Secretary of State's office for a preliminary determination. Only the Secretary of State's review of the filing is final, and its instructions warn against spending money or signing documents on a preliminary clearance. A name can be reserved for 120 days for $40.",
+      "mode": "agent-browser",
+      "modeBasis": "The Comptroller's search is public and needs no sign-in, and the inquiry is an email; the Secretary of State decides when it files the certificate.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-state-and-entity-type"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.boc.llc-formation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-5",
+        "sos-205",
+        "cpa-account-search",
+        "sos-806"
+      ]
+    },
+    {
+      "id": "line-up-registered-agent",
+      "title": "Line up a registered agent and registered office",
+      "instruction": "Each state where the entity is formed or registered needs a registered agent and office there. In Texas the agent is a Texas resident or an organization authorized to do business in Texas, never the LLC itself, and must consent in writing or electronically; naming the agent in a filing affirms that consent. The office is a street address where the agent can be served in person during business hours, not just a mailbox or answering service. In Delaware the agent may be the LLC itself, a Delaware resident or a qualifying entity, with a business office at the registered office. Record the agent, the office and the consent in the firm file.",
+      "mode": "human-online",
+      "modeBasis": "Hiring the agent and getting its consent are commitments the principals make; an agent can compare providers but cannot sign.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-state-and-entity-type"
+      ],
+      "rules": [
+        "us-tx.boc.registered-agent",
+        "us-de.llc.formation"
+      ],
+      "market": "formation-back-office",
+      "basis": "cited",
+      "sources": [
+        "tx-boc-5",
+        "sos-205",
+        "de-code-18-1"
+      ]
+    },
+    {
+      "id": "draft-certificate",
+      "title": "Draft the certificate of formation",
+      "instruction": "Prepare the filing from the decisions so far. Texas Form 205 asks for the name and its designation; the registered agent and the office's street address; whether the LLC has managers, with the name and address of each initial manager or, if none, of each initial member; the purpose, which may be general; the initial mailing address, which the Comptroller uses for tax mail; the organizer; and when the filing takes effect. Delaware asks only for the name, the registered office and agent, and anything else the members choose to include. Leave out personal identifying information such as Social Security numbers; the Texas instructions say including it may get the filing rejected.",
+      "mode": "agent",
+      "modeBasis": "Every answer comes from the firm file and the principals' decisions; the agent fills in the form for the person who signs.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-name-texas",
+        "line-up-registered-agent"
+      ],
+      "rules": [
+        "us-tx.boc.llc-formation",
+        "us-de.llc.formation"
+      ],
+      "produces": [
+        "certificate-of-formation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-3",
+        "sos-205",
+        "de-code-18-2"
+      ]
+    },
+    {
+      "id": "file-texas-certificate",
+      "title": "Sign and file the Texas certificate of formation",
+      "instruction": "The organizer signs; no notary is needed, but knowingly signing a materially false filing is an offense. File online through the Secretary of State's SOSPortal and pay the $300 fee by ACH or card (cards add a convenience fee), or file by mail or in person with a check or money order. The LLC exists once the filing takes effect: on filing, or on a later date up to 90 days after signing if the certificate says so. Save the filed certificate and the evidence of filing, and record the filing date and file number in the firm file.",
+      "mode": "human-online",
+      "modeBasis": "The organizer signs and the fee is paid in the sponsor's name; neither can be handed to an agent.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "cost": {
+        "text": "$300 Secretary of State filing fee",
+        "usdMin": 300,
+        "usdMax": 300,
+        "sourceId": "sos-806"
+      },
+      "after": [
+        "draft-certificate"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.boc.llc-formation"
+      ],
+      "market": "formation-back-office",
+      "produces": [
+        "certificate-of-formation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "sos-205",
+        "tx-boc-3",
+        "sos-806"
+      ]
+    },
+    {
+      "id": "file-delaware-certificate",
+      "title": "File in Delaware, and register in Texas if doing business there",
+      "instruction": "Search the name yourself in the Division of Corporations' name search; its terms warn that automated tools can get access suspended. An authorized person signs the certificate and files it with the Division, whose form lists a $110 fee, with expedited service available. The LLC is formed when the certificate is filed, or later if the certificate says so. If the LLC will transact business in Texas, it must also register with the Texas Secretary of State as a foreign LLC, for $750, and keep a Texas registered agent. A late filing fee applies after 90 days of unregistered business, and an unregistered LLC cannot sue in Texas courts over that business.",
+      "mode": "human-online",
+      "modeBasis": "An authorized person signs and pays, and Delaware's name search bars automated tools, so a person does this step.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "cost": {
+        "text": "$110 Delaware filing fee, per the Division's form",
+        "usdMin": 110,
+        "usdMax": 110,
+        "sourceId": "de-llc-form"
+      },
+      "after": [
+        "draft-certificate"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-de"
+        ]
+      },
+      "rules": [
+        "us-de.llc.formation",
+        "us-tx.boc.registered-agent"
+      ],
+      "market": "formation-back-office",
+      "produces": [
+        "certificate-of-formation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "de-name-search",
+        "de-llc-form",
+        "de-code-18-2",
+        "tx-boc-9",
+        "tx-boc-5",
+        "sos-806"
+      ]
+    },
+    {
+      "id": "sign-company-agreement",
+      "title": "Sign the company agreement among the principals",
+      "instruction": "Counsel drafts the company agreement. It governs the relations among the members, managers and officers and the company's internal affairs, and it can change most of the statute's default rules. Settle who owns what, who decides, what capital each principal puts in, how the promote and fees are split, vesting, and what happens if a principal leaves or the principals deadlock. A Delaware agreement may be signed before, at or after the filing and made effective as of the filing. Every principal signs; keep the signed copy in the firm file.",
+      "mode": "human-online",
+      "modeBasis": "Counsel drafts the agreement and it binds each principal, so each signs it personally.",
+      "actor": "principal",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-state-and-entity-type"
+      ],
+      "produces": [
+        "sponsor-operating-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "de-code-18-2"
+      ]
+    },
+    {
+      "id": "confirm-boi-status",
+      "title": "Confirm that no beneficial ownership report is due",
+      "instruction": "Under FinCEN's final rule, in effect since August 14, 2026, an entity created in the United States by a filing with a secretary of state or similar office is not a reporting company under the Corporate Transparency Act and files no beneficial ownership report. A Texas or Delaware LLC is such an entity. Only an entity formed under a foreign country's law and registered to do business in a state still reports, and it reports no U.S. persons. Check FinCEN's page when the entity is formed in case the rule changes, record the date checked in the firm file, and treat any letter asking for a filing fee as a scam.",
+      "mode": "agent",
+      "modeBasis": "Reading FinCEN's current guidance and the regulation, then recording the result, is research an agent can do.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "file-texas-certificate",
+        "file-delaware-certificate"
+      ],
+      "rules": [
+        "us-fed.fincen.boi"
+      ],
+      "basis": "cited",
+      "sources": [
+        "fincen-boi",
+        "fr-boi-final-rule",
+        "ecfr-31-1010-380"
+      ]
+    },
+    {
+      "id": "prepare-ein-answers",
+      "title": "Prepare the EIN application answers",
+      "instruction": "Apply only after the state filing; the IRS says applying first may delay the EIN. Gather the answers: the legal name exactly as filed; the tax classification, which by default is a partnership for an LLC with two or more members and a disregarded entity for one member, unless it elects otherwise on Form 8832; the number of members; and the responsible party, an individual who controls the entity and its funds, never another entity or a nominee. Add the reason for applying, the start date and the principal activity. Leave the responsible party's SSN or ITIN for that person to enter.",
+      "mode": "agent",
+      "modeBasis": "The answers come from the certificate, the company agreement and the firm file; tax ids stay with the people they belong to.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "file-texas-certificate",
+        "file-delaware-certificate",
+        "sign-company-agreement"
+      ],
+      "rules": [
+        "us-fed.irs.ein"
+      ],
+      "consumes": [
+        "certificate-of-formation",
+        "sponsor-operating-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "irs-ein",
+        "irs-ss4-instructions",
+        "irs-responsible-parties"
+      ]
+    },
+    {
+      "id": "apply-for-ein",
+      "title": "Apply for the EIN online",
+      "instruction": "The responsible party, or a third-party designee with signed authorization, completes the IRS online application in one session: it cannot be saved, it expires after 15 minutes of inactivity, and the tool is open only at set hours. There is no fee, so avoid websites that charge one. The IRS issues one EIN per responsible party per day, and an approved EIN is issued immediately. Save the confirmation letter where the firm keeps tax documents and record only its location in the firm file.",
+      "mode": "human-online",
+      "modeBasis": "The application needs the responsible party's SSN or ITIN, which an agent must never hold.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "cost": {
+        "text": "No IRS fee",
+        "usdMin": 0,
+        "usdMax": 0,
+        "sourceId": "irs-ein"
+      },
+      "after": [
+        "prepare-ein-answers"
+      ],
+      "rules": [
+        "us-fed.irs.ein"
+      ],
+      "produces": [
+        "ein-confirmation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "irs-ein",
+        "irs-responsible-parties"
+      ]
+    },
+    {
+      "id": "complete-franchise-questionnaire",
+      "title": "Complete the Comptroller's franchise tax questionnaire",
+      "instruction": "The Comptroller sets up a franchise tax account from the Secretary of State's records and sends a letter with the entity's taxpayer number and a Webfile number starting with FQ; Texas tax mail goes to the initial mailing address in the certificate. Texas LLCs newly registered with the Secretary of State, and newly registered out-of-state LLCs, complete the Franchise Tax Accountability Questionnaire online, which confirms the mailing address and sets the date the entity's tax responsibility begins. For a Texas LLC that is the day its certificate took effect; for an out-of-state LLC, the day it began doing business in Texas. Keep the letter with the tax documents.",
+      "mode": "human-online",
+      "modeBasis": "The questionnaire is filed under a Webfile sign-in with numbers from the Comptroller's letter, which an agent must not hold.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "file-texas-certificate",
+        "file-delaware-certificate"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.franchise-tax.basics"
+      ],
+      "basis": "cited",
+      "sources": [
+        "cpa-questionnaire",
+        "sos-205",
+        "tac-34-3-584"
+      ]
+    },
+    {
+      "id": "calendar-annual-filings",
+      "title": "Calendar the recurring filings",
+      "instruction": "Calendar the recurring dates. Texas: the first franchise tax report is due May 15 of the year after the entity became subject to the tax, then every May 15, moving to the next business day when May 15 falls on a weekend or holiday. For reports due in 2026 and 2027, an entity with total revenue at or below $2.65 million owes no tax and files no tax report, but still files a Public Information Report or Ownership Information Report. Federal: report a change of responsible party on Form 8822-B within 60 days. Review the registered agent and office each year; Texas warns that failing to maintain them can end in involuntary termination.",
+      "mode": "agent",
+      "modeBasis": "The dates follow from the formation date and published rules, so an agent can set and track them.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "apply-for-ein",
+        "complete-franchise-questionnaire"
+      ],
+      "rules": [
+        "us-tx.franchise-tax.basics",
+        "us-tx.boc.registered-agent",
+        "us-fed.irs.ein"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tac-34-3-584",
+        "cpa-franchise",
+        "cpa-filing-requirements",
+        "irs-responsible-parties",
+        "sos-205"
+      ]
+    },
+    {
+      "id": "pay-delaware-annual-tax",
+      "title": "Pay the Delaware annual tax by June 1",
+      "instruction": "A Delaware LLC owes a $400 annual tax each June 1 for the prior calendar year; the first payment is due the June after the year the certificate took effect. The tax is not prorated, and no annual report is required. A late payment adds a $200 penalty and interest of 1.5% a month, and an unpaid LLC loses its good standing. The state mails a statement in care of the registered agent at least 60 days before June 1; be suspicious of solicitations from anyone else. Pay on the Division of Corporations' site and save the receipt.",
+      "mode": "human-online",
+      "modeBasis": "Paying the tax is a payment from the sponsor's account, which a person authorizes.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "cost": {
+        "text": "$400 a year",
+        "usdMin": 400,
+        "usdMax": 400,
+        "sourceId": "de-code-18-11"
+      },
+      "after": [
+        "file-delaware-certificate"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-de"
+        ]
+      },
+      "rules": [
+        "us-de.llc.formation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "de-code-18-11",
+        "de-annual-tax",
+        "de-llc-form"
+      ]
+    },
+    {
+      "id": "open-bank-account",
+      "title": "Open the sponsor entity's bank account",
+      "instruction": "Before opening the account, a bank must get the entity's name, a physical business address and its taxpayer identification number, and must verify the entity's identity, for example from its filed formation documents. It must also identify the beneficial owners, meaning each individual who owns 25% or more and one individual who controls the entity, usually by having the person opening the account certify them, and verify their identities. Bring the filed certificate, the signed company agreement and the EIN letter. Decide beforehand who may sign, who may approve wires, and whether a second approval is required.",
+      "mode": "human-online",
+      "modeBasis": "The bank verifies the people who open and control the account, and only they can sign for it.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "apply-for-ein",
+        "sign-company-agreement"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "certificate-of-formation",
+        "sponsor-operating-agreement",
+        "ein-confirmation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-31-1020-220",
+        "ecfr-31-1010-230"
+      ]
+    }
+  ],
+  "outlineSteps": []
+}

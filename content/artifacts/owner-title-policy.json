@@ -1,0 +1,106 @@
+{
+  "id": "owner-title-policy",
+  "name": "Owner's title policy",
+  "what": "The title insurance policy that protects the buyer's ownership, subject to its exceptions.",
+  "fields": [
+    {
+      "key": "policyNumber",
+      "label": "Policy and file number",
+      "type": "string",
+      "definition": "The policy number and the title company's file number on Schedule A, used to match the policy to the commitment and the closing.",
+      "authority": "TDI Form T-1, Schedule A"
+    },
+    {
+      "key": "issuer",
+      "label": "Title insurer and agent",
+      "type": "string",
+      "definition": "The title insurance company that underwrites the policy, and the title agent that issued it.",
+      "authority": "TDI Form T-1, Schedule A"
+    },
+    {
+      "key": "amountOfInsurance",
+      "label": "Amount of insurance",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The coverage amount on Schedule A, usually the purchase price; compare it with the commitment.",
+      "authority": "TDI Form T-1, Schedule A"
+    },
+    {
+      "key": "dateOfPolicy",
+      "label": "Date of policy",
+      "type": "date",
+      "definition": "The date and time Schedule A designates as the date of policy.",
+      "authority": "TDI Form T-1, Schedule A"
+    },
+    {
+      "key": "premium",
+      "label": "Premium",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The premium shown for the policy, to compare with the settlement statement and the rate chart.",
+      "authority": "TDI Form T-1, Schedule A"
+    },
+    {
+      "key": "insured",
+      "label": "Name of insured",
+      "type": "string",
+      "definition": "Who the policy covers; compare it with the grantee on the deed.",
+      "authority": "TDI Form T-1, Schedule A, item 1"
+    },
+    {
+      "key": "estateInsured",
+      "label": "Estate insured",
+      "type": "string",
+      "definition": "The estate or interest in the land the policy covers, such as fee simple, or a leasehold under a named lease.",
+      "authority": "TDI Form T-1, Schedule A, item 2"
+    },
+    {
+      "key": "vestedIn",
+      "label": "Title vested in",
+      "type": "string",
+      "definition": "The owner the policy shows title vested in, which should be the insured.",
+      "authority": "TDI Form T-1, Schedule A, item 3"
+    },
+    {
+      "key": "legalDescription",
+      "label": "Legal description",
+      "type": "text",
+      "definition": "The land the policy covers; compare it word for word with the deed and the survey.",
+      "authority": "TDI Form T-1, Schedule A, item 4"
+    },
+    {
+      "key": "restrictiveCovenants",
+      "label": "Restrictive covenants",
+      "type": "list",
+      "definition": "The recorded restrictive covenants excepted, each with recording data, or a note that the exception was deleted.",
+      "authority": "TDI Form T-1, Schedule B, item 1"
+    },
+    {
+      "key": "areaAndBoundaryException",
+      "label": "Area and boundary exception",
+      "type": "string",
+      "definition": "Whether the printed exception for boundary discrepancies, encroachments and overlapping improvements stands as printed or was amended, and the amended wording if so.",
+      "authority": "TDI Form T-1, Schedule B, item 2"
+    },
+    {
+      "key": "taxException",
+      "label": "Tax exception year",
+      "type": "string",
+      "definition": "The tax year named in the exception for standby fees, taxes and assessments.",
+      "authority": "TDI Form T-1, Schedule B, item 5"
+    },
+    {
+      "key": "specificExceptions",
+      "label": "Specific exceptions",
+      "type": "list",
+      "definition": "Each matter excepted by name, such as an easement, lease, mineral reservation or recorded agreement, with recording data. Compare the list with the agreed pro forma and the survey.",
+      "authority": "TDI Form T-1, Schedule B, item 6"
+    },
+    {
+      "key": "endorsements",
+      "label": "Endorsements",
+      "type": "list",
+      "definition": "Each endorsement issued with the policy, by form number and name, with its premium."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "id": "survey",
+  "name": "Survey",
+  "what": "A licensed surveyor's drawing and certification of the land's boundaries, improvements, easements and encroachments.",
+  "fields": [
+    {
+      "key": "standard",
+      "label": "Standard",
+      "type": "string",
+      "definition": "The standard the survey was made to, such as a 2026 ALTA/NSPS Land Title Survey.",
+      "authority": "ALTA/NSPS Minimum Standard Detail Requirements (2026), effective February 23, 2026"
+    },
+    {
+      "key": "tableAItems",
+      "label": "Table A items",
+      "type": "list",
+      "definition": "The optional Table A items the request asked for and the survey includes.",
+      "authority": "ALTA/NSPS Minimum Standard Detail Requirements (2026), Table A"
+    },
+    {
+      "key": "certifiedTo",
+      "label": "Certified to",
+      "type": "list",
+      "definition": "The parties named in the surveyor's certification, typically the buyer, the lender and the title insurer.",
+      "authority": "ALTA/NSPS Minimum Standard Detail Requirements (2026), certification"
+    },
+    {
+      "key": "titleEvidence",
+      "label": "Title evidence used",
+      "type": "string",
+      "definition": "The title commitment, by number and effective date, whose recorded matters the survey shows or addresses."
+    },
+    {
+      "key": "fieldworkDate",
+      "label": "Date of fieldwork",
+      "type": "date",
+      "definition": "The date the surveyor last worked on the ground; it shows how current the survey is."
+    },
+    {
+      "key": "encroachments",
+      "label": "Encroachments and conflicts",
+      "type": "list",
+      "definition": "Encroachments, protrusions, overlaps and boundary conflicts the survey shows, the matters the area-and-boundary exception otherwise leaves uninsured.",
+      "authority": "TDI Form T-7, Schedule B, item 2"
+    },
+    {
+      "key": "possessionEvidence",
+      "label": "Evidence of possession",
+      "type": "list",
+      "definition": "Evidence of possession or use found along the perimeter, and any statements owners or occupants made about the boundary.",
+      "authority": "ALTA/NSPS Minimum Standard Detail Requirements (2026)"
+    },
+    {
+      "key": "floodZone",
+      "label": "Flood zone",
+      "type": "string",
+      "definition": "The FEMA flood zone and map panel for the land, with the map's effective date.",
+      "authority": "FEMA Flood Map Service Center"
+    },
+    {
+      "key": "surveyor",
+      "label": "Surveyor",
+      "type": "string",
+      "definition": "The licensed surveyor who signed and sealed the survey, and the firm."
+    }
+  ]
+}

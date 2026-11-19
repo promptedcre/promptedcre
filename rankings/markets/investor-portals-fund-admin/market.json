@@ -1,0 +1,44 @@
+{
+  "id": "investor-portals-fund-admin",
+  "name": "Investor portals and fund administration",
+  "what": "Where sponsors onboard investors, collect subscriptions, run capital calls and distributions, and post reports.",
+  "order": 1,
+  "tasks": [
+    {
+      "id": "ip-create-investor",
+      "group": "task",
+      "title": "Create an investor and send subscription documents",
+      "question": "Can an agent create an investor record and send subscription documents through the API?",
+      "weight": 2,
+      "full": "API documentation shows how to create investors and how to send or start subscription documents.",
+      "partial": "Only one of the two through the API, or either one only through a third-party integration."
+    },
+    {
+      "id": "ip-distribution",
+      "group": "task",
+      "title": "Post a distribution and notify investors",
+      "question": "Can an agent post a distribution and generate the investor notices through the API?",
+      "weight": 2,
+      "full": "API documentation shows how to create distributions and how to generate or send the notices.",
+      "partial": "Distributions can be read but not created through the API, or notices need a person in the app."
+    },
+    {
+      "id": "ip-register",
+      "group": "task",
+      "title": "Pull the investor register",
+      "question": "Can an agent pull the investor register (investors, commitments and contributions) as structured data?",
+      "weight": 2,
+      "full": "API endpoints or a documented export return investors, commitments and contributions as JSON or CSV.",
+      "partial": "Only part of the register, or only through a manual export in the app."
+    },
+    {
+      "id": "ip-capital-call",
+      "group": "task",
+      "title": "Issue a capital call and track funding",
+      "question": "Can an agent issue a capital call and track which investors have funded, through the API?",
+      "weight": 2,
+      "full": "API documentation shows how to create capital calls and read each investor's funding status.",
+      "partial": "Funding status can be read but calls cannot be created through the API, or the reverse."
+    }
+  ]
+}

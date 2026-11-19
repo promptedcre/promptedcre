@@ -1,0 +1,51 @@
+{
+  "id": "us-fed.flood.mandatory-purchase",
+  "jurisdiction": "us-federal",
+  "title": "Flood insurance is required on federally regulated loans in special flood hazard areas",
+  "rule": "A federally regulated or federal agency lender may not make, increase, extend or renew a loan secured by improved real estate in a special flood hazard area where federal flood insurance is available unless the building and any personal property securing it carry flood insurance for the loan's term of at least the lesser of the principal balance and the program's maximum for that property type. Loans Fannie Mae or Freddie Mac buy must comply. Qualifying private policies count.",
+  "citation": {
+    "authority": "42 U.S.C. 4012a(b)",
+    "url": "https://www.law.cornell.edu/uscode/text/42/4012a"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-12",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to 42 U.S.C. 4012a or to National Flood Insurance Program coverage limits, and FEMA map revisions that move a property into or out of a special flood hazard area.",
+  "sources": [
+    {
+      "id": "usc-42-4012a",
+      "url": "https://www.law.cornell.edu/uscode/text/42/4012a",
+      "title": "42 U.S.C. 4012a, Flood insurance purchase and compliance requirements and escrow accounts",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "quote": "covered for the term of the loan by flood insurance in an amount at least equal to the outstanding principal balance of the loan",
+      "tier": "primary"
+    },
+    {
+      "id": "fema-flood-zones",
+      "url": "https://www.fema.gov/about/glossary/flood-zones",
+      "title": "Flood Zones (glossary)",
+      "publisher": "Federal Emergency Management Agency",
+      "accessed": "2026-11-12",
+      "quote": "The 1-percent annual chance flood is also referred to as the base flood or 100-year flood.",
+      "tier": "primary"
+    },
+    {
+      "id": "fema-msc",
+      "url": "https://msc.fema.gov/portal/home",
+      "title": "FEMA Flood Map Service Center",
+      "publisher": "Federal Emergency Management Agency",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "floodsmart-coverage",
+      "url": "https://agents.floodsmart.gov/topics/selling-flood-insurance/coverage",
+      "title": "Types of Coverage (National Flood Insurance Program limits)",
+      "publisher": "FEMA National Flood Insurance Program (FloodSmart for agents)",
+      "accessed": "2026-11-12",
+      "quote": "You can insure your client’s non-residential building for up to $500,000.",
+      "tier": "primary"
+    }
+  ]
+}

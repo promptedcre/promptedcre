@@ -1,0 +1,36 @@
+{
+  "id": "close-the-raise",
+  "slug": "close-the-raise",
+  "kind": "process",
+  "title": "Close the raise and return excess funds",
+  "summary": "End the offering, return anything not accepted, and update the investor register and filings.",
+  "phase": "raise",
+  "order": 160,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Fix the offering's closing date from the offering documents",
+    "Stop accepting new subscriptions",
+    "Resolve every subscription still pending",
+    "Reconcile the investor register to the bank and resolve every difference",
+    "List the money to return for subscriptions declined or cut back",
+    "Verify any request to send a refund elsewhere by phone at a known number",
+    "Have a person approve and return each amount as the offering documents provide, to the account it came from",
+    "Confirm each refund left the account and reached the investor",
+    "Confirm the register and bank agree after refunds",
+    "Send each investor confirmation of the final amount accepted",
+    "Ask counsel which federal and state notices change now the offering has closed",
+    "File the closing record and keep it"
+  ]
+}

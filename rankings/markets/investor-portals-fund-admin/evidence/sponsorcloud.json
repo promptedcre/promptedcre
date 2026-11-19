@@ -1,0 +1,124 @@
+{
+  "vendor": "sponsorcloud",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://www.sponsorcloud.io/support",
+      "found": false,
+      "note": "No help center or documentation site found; /support returns Not Found and the footer links only to blog, SDIRA toolkit and integrations"
+    },
+    "api": {
+      "url": "https://www.sponsorcloud.io/integration-center",
+      "found": false,
+      "note": "No developer or API page; syndicationpro.com/api is a 404; integrations page lists Zapier, Equity Trust and HubSpot only"
+    },
+    "pricing": {
+      "url": "https://www.sponsorcloud.io/pricing",
+      "found": true,
+      "note": "No prices; quote request only"
+    },
+    "changelog": {
+      "url": "https://www.sponsorcloud.io/blog",
+      "found": false,
+      "note": "No changelog or release notes page found; /changelog returns Not Found; only a blog"
+    }
+  },
+  "links": {},
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://syndicationpro.com/",
+      "excerpt": "SyndicationPro is Now SponsorCloud.",
+      "fetched": "2026-11-12",
+      "note": "Banner on the SyndicationPro homepage; syndicationpro.com/pricing redirects to sponsorcloud.io/pricing",
+      "hash": "8a38428b141a4897c4509fd167ed59be8fa183832b9211e18e38b1b29bed62a3"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://www.sponsorcloud.io/syndicationpro-is-now-sponsorcloud",
+      "excerpt": "The SyndicationPro you know and trust continues as our core technology engine.",
+      "fetched": "2026-11-12",
+      "hash": "47d4d84b631aea2ba20417337e767fa3275a4f22dcabd758593862313e5072f9"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://www.sponsorcloud.io/pricing",
+      "excerpt": "Pricing is quoted case by case based on your portfolio. We don't publish a price list.",
+      "fetched": "2026-11-12",
+      "hash": "da686c44da3c9dbb2288fa44341e3d455485e361d3454828b9351daa05e4369c"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://www.sponsorcloud.io/pricing",
+      "excerpt": "Request Custom Pricing",
+      "fetched": "2026-11-12",
+      "note": "Quote form is the only route to a price",
+      "hash": "44b8e504c94c452d65c639ceaa864d78b7acd20e2534257457c956839a8a544b"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://www.sponsorcloud.io/integration-center",
+      "excerpt": "Connect SponsorCloud with 2,000+ apps like Slack, Gmail, QuickBooks, and more—without coding.",
+      "fetched": "2026-11-12",
+      "note": "Integration is through Zapier; no API or webhook documentation found",
+      "hash": "76e841b6829a86a798cb735c56c61ba1a6792ab73d5297745230e5531156a974"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://www.sponsorcloud.io/integration-center",
+      "excerpt": "Integrate with Equity Trust Company, HubSpot, and 2000+ apps to automate tasks, enhance your workflow efficiency, and scale faster.",
+      "fetched": "2026-11-12",
+      "hash": "0ec0256c85f0e3f764c71454647c3b6d21bda02121c008fd58702baab6a152a1"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://www.sponsorcloud.io/platform/investor-crm-software",
+      "excerpt": "Export filtered contact lists, investment summaries, and audit trails in multiple formats.",
+      "fetched": "2026-11-12",
+      "note": "Answer to an FAQ on exporting data for accountants and audits",
+      "hash": "4bf5159605f4ac6194837d3dd8ce8805571e16cf4225fa2ec18fe88c666bc1ce"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://www.sponsorcloud.io/platform/investment-management-software",
+      "excerpt": "Use Investment Performance Smart Cards with drag-and-drop functionality to create custom emails showing each investor's specific NAV, IRR, and equity multiple.",
+      "fetched": "2026-11-12",
+      "hash": "bcdf6c1d1437df614a6c5105906f872fbece177a0adcd463abc9091fa77f3a96"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://www.sponsorcloud.io/platform/investment-management-software",
+      "excerpt": "Secure ACH payments and distribution processing",
+      "fetched": "2026-11-12",
+      "note": "Distributions are described as an in-app feature; no API route shown",
+      "hash": "1aead8a8f8d0c49add46c073eb66a86b4f683c8824d307e7671f471db16eb30b"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://www.sponsorcloud.io/platform/fundraising-software",
+      "excerpt": "Through our powerful reservations module, you can showcase your upcoming deals as a strategy to secure soft commitments.",
+      "fetched": "2026-11-12",
+      "hash": "65c3a5491c25e779a16f9a4d4620d88f1506263ee7e9b1b5e6c88549f10d05b7"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://www.sponsorcloud.io/security",
+      "excerpt": "Our platform uses 2FA (Two Factor Authentication) which provides a safe and secure way for all our users to sign up...",
+      "fetched": "2026-11-12",
+      "hash": "e469d63c440e4fdb752aa816ef1cf4efbec5a3e7dce39e590ce7e44f16b7d290"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "id": "underwriting-model",
+  "name": "Underwriting model",
+  "what": "The spreadsheet or model that projects income, expenses, debt and sale to test a price and the returns.",
+  "fields": [
+    {
+      "key": "version",
+      "label": "Version and date",
+      "type": "string",
+      "definition": "The model's version label and the date it was last changed, so later steps can name the version they used."
+    },
+    {
+      "key": "purchasePrice",
+      "label": "Purchase price",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The price the model tests."
+    },
+    {
+      "key": "closingCosts",
+      "label": "Closing and acquisition costs",
+      "type": "money",
+      "unit": "USD",
+      "definition": "Title, legal, reports, loan fees and other costs to buy, entered as a total with its build-up shown in the model."
+    },
+    {
+      "key": "underwrittenNoi",
+      "label": "Year-one underwritten NOI",
+      "type": "money",
+      "unit": "USD",
+      "definition": "Net operating income for the first year of ownership as the sponsor underwrites it, after the normalizing adjustments."
+    },
+    {
+      "key": "noiBridge",
+      "label": "Bridge from the seller's NOI",
+      "type": "list",
+      "definition": "Each adjustment from the seller's stated or trailing net operating income to the underwritten figure, such as the tax reset, insurance quote, management fee and removed one-time items, with the amount and source of each."
+    },
+    {
+      "key": "leaseAssumptions",
+      "label": "Assumptions at each expiration",
+      "type": "list",
+      "definition": "For each lease at expiration or earliest exit: renewal probability, months of downtime, market rent and its expense basis, free rent, improvements and commissions, and the source of each figure."
+    },
+    {
+      "key": "generalVacancy",
+      "label": "General vacancy and credit loss",
+      "type": "string",
+      "definition": "The allowance applied on top of known vacancy, as a percent of potential income, and the months or years it applies to."
+    },
+    {
+      "key": "capitalPlan",
+      "label": "Capital plan",
+      "type": "list",
+      "definition": "Each planned capital item with its cost, year and source (bid, seller history or condition report), and whether it is funded at closing or from cash flow."
+    },
+    {
+      "key": "replacementReserve",
+      "label": "Replacement reserve",
+      "type": "money",
+      "unit": "USD/SF/year",
+      "definition": "The annual reserve the model deducts, and whether it comes from a lender requirement, the condition report or an assumption."
+    },
+    {
+      "key": "debtTerms",
+      "label": "Debt terms",
+      "type": "text",
+      "definition": "Loan amount, rate and index, amortization, term, interest-only period, fees and reserves, with the limit that set the amount and the quote or term sheet it came from."
+    },
+    {
+      "key": "holdPeriodYears",
+      "label": "Hold period",
+      "type": "integer",
+      "unit": "years",
+      "definition": "The number of years from purchase to the modeled sale."
+    },
+    {
+      "key": "exitAssumptions",
+      "label": "Exit assumptions",
+      "type": "text",
+      "definition": "The exit cap rate, the year of income it is applied to and the sale costs, with the basis for the cap rate."
+    },
+    {
+      "key": "unleveredIrr",
+      "label": "Unlevered IRR",
+      "type": "string",
+      "definition": "The property-level internal rate of return before debt, as a percent."
+    },
+    {
+      "key": "leveredIrr",
+      "label": "Levered IRR",
+      "type": "string",
+      "definition": "The internal rate of return on equity after debt, as a percent, and at the investor level after the promote if the model runs a waterfall."
+    },
+    {
+      "key": "equityMultiple",
+      "label": "Equity multiple",
+      "type": "string",
+      "definition": "Total cash returned to equity divided by equity invested, levered."
+    },
+    {
+      "key": "sensitivity",
+      "label": "Sensitivity results",
+      "type": "list",
+      "definition": "The returns at the tested ranges of exit cap rate, rent growth, interest rate and downtime, and the input that moves the result most."
+    }
+  ]
+}

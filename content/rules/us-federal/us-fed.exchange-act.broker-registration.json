@@ -1,0 +1,51 @@
+{
+  "id": "us-fed.exchange-act.broker-registration",
+  "jurisdiction": "us-federal",
+  "title": "Paying people to raise money: broker-dealer registration (Exchange Act Section 15(a))",
+  "rule": "A broker, anyone in the business of effecting securities transactions for others, must register with the SEC to induce securities purchases; selling a Regulation D offering is no exception. SEC staff lists finders who locate investors for issuers among those who may need to register, and treats pay tied to a deal's size or outcome as a sign of broker activity. The issuer's own people fit the Rule 3a4-1 safe harbor only if, among other conditions, they get no transaction-based pay.",
+  "citation": {
+    "authority": "15 U.S.C. 78o(a)(1) and 78c(a)(4)(A); 17 CFR 240.3a4-1",
+    "url": "https://www.law.cornell.edu/uscode/text/15/78o"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-12",
+  "review": "ai-drafted",
+  "changeWatch": "SEC action on an exemption for finders, amendments to Rule 3a4-1, or new staff guidance on paid solicitors.",
+  "sources": [
+    {
+      "id": "usc-15-78o",
+      "url": "https://www.law.cornell.edu/uscode/text/15/78o",
+      "title": "15 U.S.C. 78o, Registration and regulation of brokers and dealers",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-78c",
+      "url": "https://www.law.cornell.edu/uscode/text/15/78c",
+      "title": "15 U.S.C. 78c, Definitions and application",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "quote": "any person engaged in the business of effecting transactions in securities for the account of others",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-bd-guide",
+      "url": "https://www.sec.gov/divisions/marketreg/bdguide.htm",
+      "title": "Guide to Broker-Dealer Registration (Division of Trading and Markets, April 2008)",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-12",
+      "quote": "a person who sells securities that are exempt from registration under Regulation D of the 1933 Act must nevertheless register as a broker-dealer",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-3a4-1",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.3a4-1",
+      "title": "17 CFR 240.3a4-1, Associated persons of an issuer deemed not to be brokers",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "quote": "Is not compensated in connection with his participation by the payment of commissions or other remuneration based either directly or indirectly on transactions in securities",
+      "tier": "primary"
+    }
+  ]
+}

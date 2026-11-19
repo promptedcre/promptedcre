@@ -1,0 +1,134 @@
+{
+  "vendor": "avestor",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://www.avestorinc.com/technical-support",
+      "found": false,
+      "note": "No public documentation or help center; technical support is described as email, phone, text, Zoom and a ticketing system"
+    },
+    "api": {
+      "url": "https://www.avestorinc.com/portals-mobile-app",
+      "found": false,
+      "note": "No developer or API page; portals page and site navigation mention none"
+    },
+    "pricing": {
+      "url": "https://www.avestorinc.com/pricing",
+      "found": true
+    },
+    "changelog": {
+      "url": "https://www.avestorinc.com/blog",
+      "found": false,
+      "note": "No changelog or release notes page found; only a blog"
+    }
+  },
+  "links": {},
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://www.avestorinc.com/pricing",
+      "excerpt": "Bundles start at $600 / month",
+      "fetched": "2026-11-12",
+      "note": "Customizable Fund, Scalable Plan; also lists '$8500 for Fund Setup & Training'",
+      "hash": "8b6d6489f29b8036adde3be75c0e8940ec5c67aff37bef2ce106aab31d51c8f1"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://www.avestorinc.com/pricing",
+      "excerpt": "Starts at $400/month (includes 4 Syndications or SPVs, unlimited AUM)",
+      "fetched": "2026-11-12",
+      "note": "Syndication / SPV Base Plan",
+      "hash": "4a4fcad2aa0c0cc932593995196a4a0d49eb356f2fa815b6f2ef7e4dd35f62f3"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://www.avestorinc.com/pricing",
+      "excerpt": "Contact us for pricing details",
+      "fetched": "2026-11-12",
+      "note": "Pro Plan; Enterprise Plan shows 'Custom'",
+      "hash": "48787c12fb69c4edeb4b7012c8ff1c8042b687bab1f1d06f81b411a045d17a3c"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://www.avestorinc.com/pricing",
+      "excerpt": "Does not include partner attorney fees to create fund documents (estimated to be $10,000 + state registration fees)",
+      "fetched": "2026-11-12",
+      "hash": "18ef698b92e2d8788241919128ee532e4e63b7b4e96f4bda83c2d801f77ee4e8"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://www.avestorinc.com/pricing",
+      "excerpt": "Dedicated Investor Portal Dedicated Manager Portal Multiple account types Role Management Bank Integration Online Document Storage",
+      "fetched": "2026-11-12",
+      "note": "Scalable Plan technology list; also 'Unlimited ACH Transfers', 'Electronic Document Signing', 'AI Tools &Capabilities', 'Investor K1 Upload', 'Manager Reports'; no API item",
+      "hash": "86ad7dc51808fecd8fcfbdc6179bb1f4a8015161a4bdb3c272fe69d7e296ba11"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://www.avestorinc.com/portals-mobile-app",
+      "excerpt": "Investors establish investing accounts, complete KYC/AML verification, accreditation checks, and electronically sign documents through a guided, automated process.",
+      "fetched": "2026-11-12",
+      "hash": "26ebdf88998f558133414284ea2a6c56762bd9f914fb180553a1f4598f5069f6"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://www.avestorinc.com/portals-mobile-app",
+      "excerpt": "Capital is transferred via ACH, allocated to the investment, and tracked in real time within the system.",
+      "fetched": "2026-11-12",
+      "hash": "5d287c08c61c4cce38ffe4e9d2c2c3302a2314da9ac50785f6badda13c88064d"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://www.avestorinc.com/portals-mobile-app",
+      "excerpt": "Track transactions, balances, and investment history across every account",
+      "fetched": "2026-11-12",
+      "note": "Described as in-portal views; no export or API stated",
+      "hash": "364106fc22276e0b78b65396272f875faae804302a15b3068c73e9626fc005f7"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://www.avestorinc.com/technical-support",
+      "excerpt": "A structured ticketing system to ensure no issue get dropped.",
+      "fetched": "2026-11-12",
+      "note": "Support is by ticket, phone, text and Zoom; no public docs",
+      "hash": "1710b7d3f94d498cef60de8fbda8d8e2f88be7d1e8699bb1d8a6d3f3f1c28277"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://www.avestorinc.com/faqs",
+      "excerpt": "Avestor is much more than just software.",
+      "fetched": "2026-11-12",
+      "note": "FAQ positions Avestor as software plus legal, banking, tax and training services",
+      "hash": "4b31ec7de91868572e307f45d164fc83af79aeab10df966520a3fad10aaceb11"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://www.avestorinc.com/faqs",
+      "excerpt": "If all you need is software to track investors and investments, there are less expensive options and Avestor may not be the right fit.",
+      "fetched": "2026-11-12",
+      "hash": "4fd37dd6959bfa844961d0c0a189109027dceda2565dcdffa87a6dea8ad1039c"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://www.avestorinc.com/llms.txt",
+      "excerpt": "# Avestor",
+      "note": "llms.txt: GET 200, 28598 bytes",
+      "fetched": "2026-11-12",
+      "hash": "a33cc30bf16d24731531e33ce678a8559940d06c94093a316ffb76847bafffce"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "take-over-operations",
+  "slug": "take-over-operations",
+  "kind": "process",
+  "title": "Take over operations after closing",
+  "summary": "Transfer utilities, service contracts, tenant notices, rents and records on day one.",
+  "phase": "operate",
+  "order": 300,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Collect the rent roll, leases and service contracts at closing",
+    "Transfer utilities and service accounts to the new owner",
+    "Decide who manages the property",
+    "Send tenants the new owner's notice and payment instructions",
+    "Set up rent and reimbursement billing from each lease",
+    "Confirm insurance is in force and meets the lender's requirements",
+    "Keep or cancel each service contract",
+    "Start the loan reporting calendar",
+    "Load the reserve schedule and the capital items found in diligence",
+    "Set up tenant credit monitoring",
+    "File the property records where the team can find them"
+  ]
+}

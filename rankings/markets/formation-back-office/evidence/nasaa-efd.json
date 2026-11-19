@@ -1,0 +1,28 @@
+{
+  "vendor": "nasaa-efd",
+  "collected": "2026-11-12",
+  "coverage": {},
+  "links": {},
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://nasaaefd.org/",
+      "excerpt": "The NASAA Electronic Filing Depository allows filers and issuers the ability to quickly submit filing notices, fees, and forms to States, U.S. Territories and Jurisdictions.",
+      "fetched": "2026-11-12",
+      "note": "Homepage text joined across two lines; only page that answered before the site began returning empty 202 responses",
+      "hash": "ddbc6243fad5c037f0b6797dd02e5fc82b5963dd919b4f097898a59dfd2d53fc"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://nasaaefd.org/",
+      "excerpt": "Search EFD by EFDID, CIK, Accession Number or Name",
+      "fetched": "2026-11-12",
+      "note": "Public Form D search by EFD ID, CIK or accession number; no API mentioned on the homepage",
+      "hash": "ad31a0a78b97c9317fb894cd285655b93d6c1299dbe793847cde05ed4107588a"
+    }
+  ]
+}

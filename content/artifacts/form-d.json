@@ -1,0 +1,25 @@
+{
+  "id": "form-d",
+  "name": "Form D",
+  "what": "The SEC notice of an exempt offering under Regulation D or Section 4(a)(5), filed on EDGAR and public once accepted.",
+  "fields": [
+    { "key": "issuerName", "label": "Name of issuer", "type": "string", "definition": "The legal entity issuing the securities.", "authority": "SEC Form D, Item 1" },
+    { "key": "entityType", "label": "Entity type", "type": "enum", "definition": "Corporation, limited partnership, limited liability company, general partnership, business trust, other, or yet to be formed.", "authority": "SEC Form D, Item 1" },
+    { "key": "relatedPersons", "label": "Related persons", "type": "list", "definition": "Executive officers, directors, people in similar roles such as managing members or general partners, and promoters.", "authority": "SEC Form D, Item 3" },
+    { "key": "industryGroup", "label": "Industry group", "type": "enum", "definition": "The group that fits the use of the bulk of the proceeds; real estate choices are Commercial, Construction, REITS & Finance, Residential and Other Real Estate.", "authority": "SEC Form D, Item 4" },
+    { "key": "issuerSize", "label": "Issuer size", "type": "enum", "definition": "A revenue range, or an aggregate net asset value range for issuers that pick Hedge Fund or Other Investment Fund; either may be declined.", "authority": "SEC Form D, Item 5" },
+    { "key": "exemptionsClaimed", "label": "Exemptions and exclusions claimed", "type": "list", "definition": "Rule 504 or 506 paragraphs, Section 4(a)(5), and any Investment Company Act Section 3(c) exclusion.", "authority": "SEC Form D, Item 6" },
+    { "key": "dateOfFirstSale", "label": "Date of first sale", "type": "date", "definition": "The date the first investor is irrevocably contractually committed to invest, or 'yet to occur'.", "authority": "SEC Form D, Item 7" },
+    { "key": "lastsOverOneYear", "label": "Offering lasts more than one year", "type": "boolean", "definition": "Whether the issuer intends the offering to last more than one year.", "authority": "SEC Form D, Item 8" },
+    { "key": "securitiesOffered", "label": "Types of securities offered", "type": "list", "definition": "Equity, debt, options or rights, pooled investment fund interests, tenant-in-common securities, mineral property securities or other.", "authority": "SEC Form D, Item 9" },
+    { "key": "minimumInvestment", "label": "Minimum investment", "type": "money", "unit": "USD", "definition": "The minimum accepted from an outside investor; if it can be waived, the lowest amount below which no waiver is granted; 0 if none.", "authority": "SEC Form D, Item 11" },
+    { "key": "salesCompensation", "label": "Sales compensation recipients", "type": "list", "definition": "Each person paid to sell, including finders, with CRD numbers where they exist and the states solicited.", "authority": "SEC Form D, Item 12" },
+    { "key": "totalOfferingAmount", "label": "Total offering amount", "type": "money", "unit": "USD", "definition": "The amount offered under the claimed exemption, including cash due later under mandatory capital commitments, or indefinite.", "authority": "SEC Form D, Item 13" },
+    { "key": "totalAmountSold", "label": "Total amount sold", "type": "money", "unit": "USD", "definition": "The amount sold as of the filing date, counted from the start of the offering.", "authority": "SEC Form D, Item 13" },
+    { "key": "nonAccreditedInvestors", "label": "Non-accredited investors", "type": "integer", "definition": "The number of investors who are not accredited and have already invested.", "authority": "SEC Form D, Item 14" },
+    { "key": "totalInvestors", "label": "Total investors", "type": "integer", "definition": "Everyone who has invested to date, whether or not they still hold.", "authority": "SEC Form D, Item 14" },
+    { "key": "salesCommissions", "label": "Sales commissions", "type": "money", "unit": "USD", "definition": "Sales commissions paid or estimated.", "authority": "SEC Form D, Item 15" },
+    { "key": "findersFees", "label": "Finders' fees", "type": "money", "unit": "USD", "definition": "Finders' fees paid or estimated.", "authority": "SEC Form D, Item 15" },
+    { "key": "proceedsToRelatedPersons", "label": "Proceeds paid to related persons", "type": "money", "unit": "USD", "definition": "Gross proceeds used or proposed for payments to anyone named in Item 3.", "authority": "SEC Form D, Item 16" }
+  ]
+}

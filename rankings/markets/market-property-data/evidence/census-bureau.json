@@ -1,0 +1,138 @@
+{
+  "vendor": "census-bureau",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://www.census.gov/data/developers/guidance/api-user-guide.html",
+      "found": true,
+      "note": "Census Data API User Guide page (PDF guide, last revised May 2026) plus a Discovery Tool and a dataset catalog at api.census.gov/data.html."
+    },
+    "api": {
+      "url": "https://www.census.gov/data/developers.html",
+      "found": true,
+      "note": "Public Census Data API, TIGERweb REST and Geocoder REST services; read-only statistical data, not property records."
+    },
+    "pricing": {
+      "url": "https://www2.census.gov/data/api-documentation/api-user-guide.pdf",
+      "found": true,
+      "note": "The user guide says the API key is free of charge; no paid plans."
+    },
+    "changelog": {
+      "url": "https://www.census.gov/data/developers/updates.html",
+      "found": true,
+      "note": "Developer Updates page; newest entry listed is February 2022. Dataset release dates are on the Available APIs page."
+    }
+  },
+  "links": {
+    "docs": "https://www.census.gov/data/developers/guidance/api-user-guide.html",
+    "api": "https://www.census.gov/data/developers.html"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://www.census.gov/data/developers.html",
+      "excerpt": "The Census Bureau's API allows developers to design web and mobile apps to explore or learn more about America's changing population and economy.",
+      "fetched": "2026-11-12",
+      "hash": "8c3758b1eba027eb0d8405c870185040dea593a3dd519b1aefa6a51b3b021319"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://www2.census.gov/data/api-documentation/api-user-guide.pdf",
+      "excerpt": "An API key must be used with all data queries made to the Census Data API.",
+      "fetched": "2026-11-12",
+      "note": "Guide text read from the public PDF.",
+      "hash": "f3bb351b117ca395f89f4ba8165c2b44f7e2c9c48d3ae2be31191bbb6c41a013"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://www2.census.gov/data/api-documentation/api-user-guide.pdf",
+      "excerpt": "You can register for an API key, free of charge, by following these steps",
+      "fetched": "2026-11-12",
+      "note": "Key arrives by email; one key type with no scopes.",
+      "hash": "cf0872835c6e15aa0aa528387cd17fa02b540817c0be550a7915128049a4077e"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://www2.census.gov/data/api-documentation/api-user-guide.pdf",
+      "excerpt": "You can include up to 50 variables in a single API query.",
+      "fetched": "2026-11-12",
+      "hash": "ccd4e146efef349d814af30ba83005141139a0b56835a902e982f8c001474935"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://www2.census.gov/data/api-documentation/api-user-guide.pdf",
+      "excerpt": "&outputFormat=json provides output in JSON format.",
+      "fetched": "2026-11-12",
+      "note": "CSV output is also described in the guide.",
+      "hash": "ac27986c954e63ef531c39f650365be7efa732cd31093581c7ebd88e54ac448a"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://www.census.gov/data/developers/guidance/api-user-guide.html",
+      "excerpt": "The Census Data Application Programming Interface (API) is an API that gives the public access to raw statistical data from various Census Bureau data programs.",
+      "fetched": "2026-11-12",
+      "hash": "26cca96d5101b7e9fc86ccae355e83c9d12917934a5f584e0a44dc9e9f1ea7fe"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://www.census.gov/data/developers/guidance/api-user-guide.html",
+      "excerpt": "TIGERweb GeoServices REST API provides Census area boundaries/shapes referenced by FIPS codes.",
+      "fetched": "2026-11-12",
+      "note": "Geocoder REST service translates addresses to lat/lon; boundaries only, no parcels.",
+      "hash": "f3f1c91a10f0f08a372d8cb35fd0733a9fc7f94b0ed51108874eed56b81a26be"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://www.census.gov/data/developers/about/terms-of-service.html",
+      "excerpt": "Therefore, users will not use these data, alone or in combination with any other Census or non-Census data, to identify any individual person, household, business",
+      "fetched": "2026-11-12",
+      "note": "Terms bar identifying individuals or businesses; the data has no owner names or sale prices.",
+      "hash": "bb39e38579ac263f156142b628d33a96688a88cc1f333f275d779f75295c73c3"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://www.census.gov/data/developers/about/terms-of-service.html",
+      "excerpt": "Access to or use of the API or its content constitutes acceptance to this Agreement.",
+      "fetched": "2026-11-12",
+      "hash": "c2a6e183dc4f5a27e3ee32ef3e90f93e20d86a9ef650abc28fe7434548253abd"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://www.census.gov/data/developers/data-sets.html",
+      "excerpt": "Data available down to the block-group level.",
+      "fetched": "2026-11-12",
+      "note": "ACS 5-Year Data (2009-2024), dated January 29, 2026; demographics and housing characteristics, not individual properties.",
+      "hash": "1d6f6c3890ec28fd6c412c6ad3cf957420ddc4ef1f95e1aa0869c58a3bb0c510"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://www.census.gov/data/developers/data-sets.html",
+      "excerpt": "American Community Survey 1-Year Data (2005-2025)",
+      "fetched": "2026-11-12",
+      "note": "Dated October 29, 2026 on the Available APIs page.",
+      "hash": "58c23ab47e2f8a93140581a21025141ac2b743e0bd623756bf19fbaaf86bb048"
+    },
+    {
+      "id": "c12",
+      "tier": "vendor-claim",
+      "url": "https://www.census.gov/data/developers/updates.html",
+      "excerpt": "Removal of Broken Survey of Business Owner 2012 Endpoint",
+      "fetched": "2026-11-12",
+      "note": "Newest entry on the Developer Updates page, dated February 3, 2022.",
+      "hash": "fbb555adfc98c82352af0c5f89136b1a74e5a1f7e72ee71bdb82cd119fc3a1ca"
+    }
+  ]
+}

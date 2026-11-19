@@ -1,0 +1,25 @@
+{
+  "id": "us-tx.boc.series-llc",
+  "jurisdiction": "us-tx",
+  "title": "Texas series LLC: when a series' debts stay with that series",
+  "rule": "A Texas LLC's company agreement may establish series of members, managers, membership interests or assets, each with separate rights and duties for specified property or obligations, or a separate business purpose. A protected or registered series' debts are enforceable only against its assets, and the company's and other series' debts are not enforceable against them, but only to the extent the series' records account for its assets separately, and only if the company agreement states the limitation and the certificate of formation gives notice of it. A registered series needs a certificate filed with the Secretary of State; a series without one that meets those conditions is a protected series.",
+  "citation": {
+    "authority": "Tex. Bus. Orgs. Code 101.601, 101.602, 101.603(b) and 101.604",
+    "url": "https://statutes.capitol.texas.gov/Docs/BO/htm/BO.101.htm"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Business Organizations Code chapter 101, subchapter M; section 101.601 was last amended effective September 1, 2023.",
+  "sources": [
+    {
+      "id": "tx-boc-101-m",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.101.htm",
+      "title": "Texas Business Organizations Code, Chapter 101, Subchapter M (Sections 101.601 to 101.604, series limited liability company)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "the records maintained for that particular protected series or registered series account for the assets associated with that series separately",
+      "tier": "primary"
+    }
+  ]
+}

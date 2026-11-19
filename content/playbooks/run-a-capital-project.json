@@ -1,0 +1,35 @@
+{
+  "id": "run-a-capital-project",
+  "slug": "run-a-capital-project",
+  "kind": "process",
+  "title": "Run a capital project",
+  "summary": "Scope, bid, contract and supervise a roof, parking lot or renovation project and close it out.",
+  "phase": "operate",
+  "order": 325,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Confirm the component's condition and remaining life",
+    "Check the leases for who pays for the work",
+    "Check the loan for reserve draws and lender approval",
+    "Hire a designer or engineer to scope the work where needed",
+    "Write the scope and bid it to qualified contractors",
+    "Compare bids and sign the construction contract",
+    "Pull permits and schedule the work around tenants",
+    "Supervise progress and approve pay applications",
+    "Collect lien waivers with each payment",
+    "Close out with warranties and as-built records",
+    "Update the reserve schedule"
+  ]
+}

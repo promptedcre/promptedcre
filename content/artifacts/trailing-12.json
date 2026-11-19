@@ -1,0 +1,69 @@
+{
+  "id": "trailing-12",
+  "name": "Trailing-12 operating statement",
+  "what": "Income and expenses for the 12 months ending on a date, the starting point for underwriting NOI.",
+  "fields": [
+    {
+      "key": "periodEnd",
+      "label": "Period end",
+      "type": "date",
+      "definition": "The last day of the 12 months covered."
+    },
+    {
+      "key": "grossPotentialRent",
+      "label": "Gross potential rent",
+      "type": "money",
+      "unit": "USD",
+      "definition": "Rent if every space were leased at the current rent roll."
+    },
+    {
+      "key": "vacancyAndCreditLoss",
+      "label": "Vacancy and credit loss",
+      "type": "money",
+      "unit": "USD",
+      "definition": "Rent not collected because of vacancy or nonpayment."
+    },
+    {
+      "key": "expenseRecoveries",
+      "label": "Expense recoveries",
+      "type": "money",
+      "unit": "USD",
+      "definition": "Operating expenses billed back to tenants."
+    },
+    {
+      "key": "otherIncome",
+      "label": "Other income",
+      "type": "money",
+      "unit": "USD",
+      "definition": "Income other than rent and recoveries."
+    },
+    {
+      "key": "effectiveGrossIncome",
+      "label": "Effective gross income",
+      "type": "money",
+      "unit": "USD",
+      "definition": "Gross potential rent, less vacancy and credit loss, plus recoveries and other income."
+    },
+    {
+      "key": "operatingExpenses",
+      "label": "Operating expenses",
+      "type": "money",
+      "unit": "USD",
+      "definition": "Taxes, insurance, utilities, repairs, management and other costs of operating the property."
+    },
+    {
+      "key": "netOperatingIncome",
+      "label": "Net operating income",
+      "type": "money",
+      "unit": "USD",
+      "definition": "Effective gross income less operating expenses, before debt service and capital spending."
+    },
+    {
+      "key": "capitalExpenditures",
+      "label": "Capital expenditures",
+      "type": "money",
+      "unit": "USD",
+      "definition": "Spending on long-lived improvements, kept below the NOI line."
+    }
+  ]
+}

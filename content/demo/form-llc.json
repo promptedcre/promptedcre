@@ -1,0 +1,152 @@
+{
+  "recordedOn": "2026-11-17",
+  "firm": "Example Industrial LLC",
+  "scenes": [
+    {
+      "id": "form-llc",
+      "title": "Form the LLC",
+      "summary": "The agent forms a Texas LLC for a fictional firm, one step at a time. The engine stops it where a person must approve or sign, and the first filing dates go on a calendar.",
+      "steps": [
+        {
+          "command": "pcre firm init --name \"Example Industrial LLC\"",
+          "by": null,
+          "exit": 0,
+          "output": "Created firm\n  firm.json, decisions.json, progress.json, artifacts.json, log.jsonl\n",
+          "caption": "A firm folder is created on the operator's own machine for Example Industrial LLC, a fictional firm not formed yet. Only its name is known; the entity's facts start empty."
+        },
+        {
+          "command": "pcre run start form-sponsor-entity",
+          "by": null,
+          "exit": 0,
+          "output": "Started form-sponsor-entity (syndication · industrial · us-federal, us-tx): 12 steps apply.\n  next: pcre run next form-sponsor-entity\n",
+          "caption": "The agent starts the formation playbook. Read for a syndication sponsor in Texas, 12 of its 16 steps apply."
+        },
+        {
+          "command": "pcre run done form-sponsor-entity choose-state-and-entity-type --by counsel --proof drafts/entity-choice-memo.pdf",
+          "by": "counsel",
+          "exit": 0,
+          "output": "choose-state-and-entity-type: done by counsel on 2026-11-17\nform-sponsor-entity is open: 1 done of 12\nready now: check-name-texas, line-up-registered-agent, sign-company-agreement\n",
+          "caption": "The first step is counsel's: the state and the entity type. Counsel recorded it under its own name, with where the memo is."
+        },
+        {
+          "command": "pcre run done form-sponsor-entity check-name-texas --proof drafts/name-check-results.pdf",
+          "by": null,
+          "exit": 1,
+          "output": "\"check-name-texas\" is covered by the run's standing approval, and none is recorded yet. Ask a person once for this run, and wait. Once they say yes, record it in their name: pcre run approve form-sponsor-entity --by \"<name>\". Or record this step alone with --approved-by \"<name>\" once they approve it.\n",
+          "caption": "The agent tried the name check, a step it does in a browser. The step needs the run's standing approval, and no one had given it, so the engine refused."
+        },
+        {
+          "command": "pcre run approve form-sponsor-entity --by \"Alex Example\"",
+          "by": "Alex Example",
+          "exit": 0,
+          "output": "Alex Example approved form-sponsor-entity on 2026-11-17. Covers: check-name-texas.\n",
+          "caption": "Alex Example gave the run's standing approval, once. It covers the name check."
+        },
+        {
+          "command": "pcre run done form-sponsor-entity check-name-texas --proof drafts/name-check-results.pdf",
+          "by": null,
+          "exit": 0,
+          "output": "check-name-texas: done by agent on 2026-11-17\nform-sponsor-entity is open: 2 done of 12\nready now: line-up-registered-agent, sign-company-agreement\n",
+          "caption": "With the approval on record, the agent checked the name and recorded where the search results are."
+        },
+        {
+          "command": "pcre run done form-sponsor-entity line-up-registered-agent --by \"Alex Example\" --proof drafts/zenbusiness-registered-agent-consent.pdf",
+          "by": "Alex Example",
+          "exit": 0,
+          "output": "line-up-registered-agent: done by Alex Example on 2026-11-17\nform-sponsor-entity is open: 3 done of 12\nready now: draft-certificate, sign-company-agreement\n",
+          "caption": "Alex Example lined up ZenBusiness as the registered agent, a person's step, and recorded where its written consent is."
+        },
+        {
+          "command": "pcre run done form-sponsor-entity draft-certificate --proof drafts/certificate-of-formation-draft.pdf",
+          "by": null,
+          "exit": 0,
+          "output": "draft-certificate: done by agent on 2026-11-17\nform-sponsor-entity is open: 4 done of 12\nready now: file-texas-certificate, sign-company-agreement\n",
+          "caption": "The agent drafted the certificate of formation and recorded where the draft is."
+        },
+        {
+          "command": "pcre run done form-sponsor-entity file-texas-certificate",
+          "by": null,
+          "exit": 1,
+          "output": "\"file-texas-certificate\" is a step a person does (human-online, principal). Prepare it, then hand it to them: say what to do and where, and wait. Once they say it is done, record it in their name: pcre run done form-sponsor-entity file-texas-certificate --by \"<name>\"\n",
+          "caption": "The agent tried to record the filing. Signing and filing the certificate is a person's step, so the engine refused and told the agent to hand it over."
+        },
+        {
+          "command": "pcre run done form-sponsor-entity file-texas-certificate --by \"Alex Example\" --proof drafts/zenbusiness-filing-confirmation.pdf",
+          "by": "Alex Example",
+          "exit": 0,
+          "output": "file-texas-certificate: done by Alex Example on 2026-11-17\nform-sponsor-entity is open: 5 done of 12\nready now: sign-company-agreement, confirm-boi-status, complete-franchise-questionnaire\n",
+          "caption": "Alex Example signed the certificate and filed it through ZenBusiness, then recorded the step under their own name, with where the filing confirmation is."
+        },
+        {
+          "command": "pcre run done form-sponsor-entity sign-company-agreement --by \"Alex Example\" --proof drafts/company-agreement-signed.pdf",
+          "by": "Alex Example",
+          "exit": 0,
+          "output": "sign-company-agreement: done by Alex Example on 2026-11-17\nform-sponsor-entity is open: 6 done of 12\nready now: confirm-boi-status, prepare-ein-answers, complete-franchise-questionnaire\n",
+          "caption": "Alex Example recorded the signed company agreement, another step a person signs."
+        },
+        {
+          "command": "pcre run done form-sponsor-entity confirm-boi-status --proof drafts/fincen-boi-page.pdf",
+          "by": null,
+          "exit": 0,
+          "output": "confirm-boi-status: done by agent on 2026-11-17\nform-sponsor-entity is open: 7 done of 12\nready now: prepare-ein-answers, complete-franchise-questionnaire\n",
+          "caption": "The agent confirmed that no beneficial ownership report is due and recorded where the page it read is saved."
+        },
+        {
+          "command": "pcre run done form-sponsor-entity prepare-ein-answers --proof drafts/ein-application-answers.pdf",
+          "by": null,
+          "exit": 0,
+          "output": "prepare-ein-answers: done by agent on 2026-11-17\nform-sponsor-entity is open: 8 done of 12\nready now: apply-for-ein, complete-franchise-questionnaire\n",
+          "caption": "The agent prepared the answers for the EIN application and recorded where they are."
+        },
+        {
+          "command": "pcre run done form-sponsor-entity apply-for-ein --by \"Alex Example\" --proof drafts/ein-confirmation-letter.pdf",
+          "by": "Alex Example",
+          "exit": 0,
+          "output": "apply-for-ein: done by Alex Example on 2026-11-17\nform-sponsor-entity is open: 9 done of 12\nready now: complete-franchise-questionnaire, open-bank-account\n",
+          "caption": "Alex Example applied for the EIN online. The record holds only where the confirmation letter is kept, never the number."
+        },
+        {
+          "command": "pcre run done form-sponsor-entity complete-franchise-questionnaire --by \"Alex Example\" --proof drafts/franchise-questionnaire-confirmation.pdf",
+          "by": "Alex Example",
+          "exit": 0,
+          "output": "complete-franchise-questionnaire: done by Alex Example on 2026-11-17\nform-sponsor-entity is open: 10 done of 12\nready now: calendar-annual-filings, open-bank-account\n",
+          "caption": "Alex Example completed the Comptroller's franchise tax questionnaire and recorded where the confirmation is."
+        },
+        {
+          "command": "pcre deadline compute --franchise-report-year 2027 --franchise-report-through 2029",
+          "by": null,
+          "exit": 0,
+          "output": "Added 3, already on the calendar 0.\n  + 2027-05-17  Texas franchise tax report and Public Information Report due (2027)  [texas-franchise-report-2027-05-17]\n  + 2028-05-15  Texas franchise tax report and Public Information Report due (2028)  [texas-franchise-report-2028-05-15]\n  + 2029-05-15  Texas franchise tax report and Public Information Report due (2029)  [texas-franchise-report-2029-05-15]\nEvery computed date is flagged for review: check it against its rule before relying on it.\n",
+          "caption": "The engine worked out three years of Texas franchise tax report dates from the rule, the first report in 2027, each flagged for a person to check. May 15, 2027 is a Saturday, so that date moves to the Monday."
+        },
+        {
+          "command": "pcre deadline export",
+          "by": null,
+          "exit": 0,
+          "output": "Wrote 3 events to firm/calendar.ics\nImport it into your calendar app; export again after any change.\n",
+          "caption": "The dates were written to a calendar file that any calendar app can import."
+        },
+        {
+          "command": "pcre run done form-sponsor-entity calendar-annual-filings --proof calendar.ics",
+          "by": null,
+          "exit": 0,
+          "output": "calendar-annual-filings: done by agent on 2026-11-17\nform-sponsor-entity is open: 11 done of 12\nready now: open-bank-account\n",
+          "caption": "The agent recorded the calendar step, with the calendar file it had just written as the proof."
+        },
+        {
+          "command": "pcre run done form-sponsor-entity open-bank-account --by \"Alex Example\" --proof drafts/mercury-account-confirmation.pdf",
+          "by": "Alex Example",
+          "exit": 0,
+          "output": "open-bank-account: done by Alex Example on 2026-11-17\nform-sponsor-entity is complete: 12 done of 12\nNothing left.\n",
+          "caption": "Alex Example opened the entity's account at Mercury, the last step and one a person signs. Every step that applies is done, and the run is complete."
+        }
+      ],
+      "files": [
+        {
+          "path": "calendar.ics",
+          "text": "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//PromptedCRE//Deadlines//EN\nCALSCALE:GREGORIAN\nBEGIN:VEVENT\nUID:texas-franchise-report-2027-05-17@promptedcre\nDTSTAMP:20261117T153000Z\nDTSTART;VALUE=DATE:20270517\nDTEND;VALUE=DATE:20270518\nSUMMARY:Texas franchise tax report and Public Information Report due (2027)\nDESCRIPTION:Rule: us-tx.franchise-tax.due-date-extension (Texas franchise t\n ax: the May 15 due date\\, weekends and holidays\\, and extensions)\\nHow the\n  date was worked out: May 15\\, 2027\\; moved from 2027-05-15 past Saturday \n 2027-05-15\\; Sunday 2027-05-16\\nNote: Moved only for a weekend. The law al\n so moves it off a legal holiday on the Comptroller's yearly list\\; check t\n hat list. An extension to November 15 is requested\\, with payment\\, by thi\n s date.\\nCheck this date before relying on it.\nTRANSP:TRANSPARENT\nEND:VEVENT\nBEGIN:VEVENT\nUID:texas-franchise-report-2028-05-15@promptedcre\nDTSTAMP:20261117T153000Z\nDTSTART;VALUE=DATE:20280515\nDTEND;VALUE=DATE:20280516\nSUMMARY:Texas franchise tax report and Public Information Report due (2028)\nDESCRIPTION:Rule: us-tx.franchise-tax.due-date-extension (Texas franchise t\n ax: the May 15 due date\\, weekends and holidays\\, and extensions)\\nHow the\n  date was worked out: May 15\\, 2028\\nNote: Moved only for a weekend. The l\n aw also moves it off a legal holiday on the Comptroller's yearly list\\; ch\n eck that list. An extension to November 15 is requested\\, with payment\\, b\n y this date.\\nCheck this date before relying on it.\nTRANSP:TRANSPARENT\nEND:VEVENT\nBEGIN:VEVENT\nUID:texas-franchise-report-2029-05-15@promptedcre\nDTSTAMP:20261117T153000Z\nDTSTART;VALUE=DATE:20290515\nDTEND;VALUE=DATE:20290516\nSUMMARY:Texas franchise tax report and Public Information Report due (2029)\nDESCRIPTION:Rule: us-tx.franchise-tax.due-date-extension (Texas franchise t\n ax: the May 15 due date\\, weekends and holidays\\, and extensions)\\nHow the\n  date was worked out: May 15\\, 2029\\nNote: Moved only for a weekend. The l\n aw also moves it off a legal holiday on the Comptroller's yearly list\\; ch\n eck that list. An extension to November 15 is requested\\, with payment\\, b\n y this date.\\nCheck this date before relying on it.\nTRANSP:TRANSPARENT\nEND:VEVENT\nEND:VCALENDAR\n"
+        }
+      ]
+    }
+  ]
+}

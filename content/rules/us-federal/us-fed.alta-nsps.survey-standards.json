@@ -1,0 +1,34 @@
+{
+  "id": "us-fed.alta-nsps.survey-standards",
+  "jurisdiction": "us-federal",
+  "title": "ALTA/NSPS land title surveys: the 2026 standards apply",
+  "rule": "The 2026 Minimum Standard Detail Requirements for ALTA/NSPS Land Title Surveys, an industry standard adopted jointly by ALTA and NSPS rather than a statute, took effect February 23, 2026 and replaced the 2021 edition. A survey contracted on or after that date follows the 2026 standards, with very limited exceptions. The request names a 2026 ALTA/NSPS Land Title Survey and the optional Table A items wanted. Where a state's minimum standards are stricter, the surveyor meets those too.",
+  "citation": {
+    "authority": "Minimum Standard Detail Requirements for ALTA/NSPS Land Title Surveys (2026), American Land Title Association and National Society of Professional Surveyors",
+    "url": "https://www.alta.org/topics/topic-land-survey-standards"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-12",
+  "review": "ai-drafted",
+  "changeWatch": "The next joint ALTA/NSPS revision; the standards are revised about every five years.",
+  "sources": [
+    {
+      "id": "alta-survey-standards",
+      "url": "https://www.alta.org/topics/topic-land-survey-standards",
+      "title": "ALTA/NSPS Land Title Survey Standards",
+      "publisher": "American Land Title Association",
+      "accessed": "2026-11-12",
+      "quote": "The updated standards go into effect February 23, 2026, and will replace the 2021 version as of that date.",
+      "tier": "primary"
+    },
+    {
+      "id": "nsps-2026-alta",
+      "url": "https://nsps.us.com/page/2026ALTA",
+      "title": "2026 ALTA/NSPS Standards",
+      "publisher": "National Society of Professional Surveyors",
+      "accessed": "2026-11-12",
+      "quote": "Contracts signed on or after February 23, 2026: The survey must be done to the 2026 ALTA/NSPS Standards, with only very limited exceptions.",
+      "tier": "primary"
+    }
+  ]
+}

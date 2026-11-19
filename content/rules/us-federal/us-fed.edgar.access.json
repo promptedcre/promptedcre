@@ -1,0 +1,32 @@
+{
+  "id": "us-fed.edgar.access",
+  "jurisdiction": "us-federal",
+  "title": "Getting EDGAR access for a new issuer",
+  "rule": "A company filing on EDGAR for the first time applies for an account, identified by a CIK, through Form ID, completed online on the EDGAR Filer Management dashboard. An authorized individual signs Form ID before a notary, and the signed copy is uploaded as a PDF. Companies other than single-member companies name two account administrators. Each person who files or manages the account signs in with their own Login.gov credentials, which must not be shared. SEC staff currently cites an average of two business days for review.",
+  "citation": {
+    "authority": "SEC, How Do I guide: Prepare and Submit My Form ID Application for EDGAR Access",
+    "url": "https://www.sec.gov/submit-filings/filer-support-resources/how-do-i-guides/prepare-submit-my-form-id-application"
+  },
+  "asOf": "2026-11-11",
+  "lastVerified": "2026-11-11",
+  "review": "ai-drafted",
+  "changeWatch": "EDGAR access rules, Form ID requirements or stated review times.",
+  "sources": [
+    {
+      "id": "sec-form-id-guide",
+      "url": "https://www.sec.gov/submit-filings/filer-support-resources/how-do-i-guides/prepare-submit-my-form-id-application",
+      "title": "Prepare and Submit My Form ID Application for EDGAR Access",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-11",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-login-gov-guide",
+      "url": "https://www.sec.gov/submit-filings/filer-support-resources/how-do-i-guides/obtain-logingov-individual-account-credentials",
+      "title": "Obtain Login.gov Individual Account Credentials",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-11",
+      "tier": "primary"
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "vendor": "cherre",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "2e0e8290ed7dde4308efa866c036e14aec2def43ba268275ca0af3f21e4c9fa5",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "partial",
+      "quality": 7,
+      "evidence": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "rationale": "Cherre's platform page claims an API that queries every connected data set, supports large data pulls and offers geospatial queries (c1, c2, c3), but the coverage check found no public developer documentation or API reference, only marketing text.",
+      "missing": "No public API documentation or reference is shown; the pack does not show whether documentation exists behind a login or request, which records the API covers, or whether it can change records."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c6"
+      ],
+      "rationale": "The only MCP item is a blog opinion post saying any agent can query an MCP-compliant knowledge graph (c6), which does not announce a Cherre MCP server or give setup steps.",
+      "missing": "No official Cherre MCP server, announcement, availability status or setup steps are shown."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack contains no item about a Cherre SDK, CLI, package or code repository.",
+      "missing": "No vendor-maintained SDK or CLI, package-registry listing, public repository or code samples are shown."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack contains no item about webhooks, event subscriptions or change notifications for any records.",
+      "missing": "No webhooks, event subscriptions or change notifications are shown, nor whether any records change on a customer's behalf."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c5"
+      ],
+      "rationale": "The only related item is an Agent Studio marketing line about defining access controls for agents (c5), which does not show API keys, tokens or OAuth clients, scoped or otherwise.",
+      "missing": "No API keys, tokens or OAuth clients are shown, nor documented scopes, roles or permissions that limit what a credential can do."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no OpenAPI, Swagger, GraphQL or other machine-readable API description, and the coverage check found no public documentation site.",
+      "missing": "No machine-readable API specification is shown, whether public, behind a login or embedded in docs."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The coverage check found no public documentation site (docs.cherre.com does not resolve), and the pack shows no llms.txt file or Markdown documentation pages.",
+      "missing": "No llms.txt file or Markdown versions of documentation or marketing pages are shown."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no sandbox, test mode or developer environment, and it does not establish that the API only reads published data, so na does not apply.",
+      "missing": "No self-serve or on-request sandbox, test mode or developer environment is shown, nor whether the API reads only published data."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "partial",
+      "quality": 5,
+      "evidence": [
+        "c4",
+        "c2"
+      ],
+      "rationale": "Cherre's platform page says it can egress data to customers' data warehouses, BI tools and other systems and that its API can pull thousands of records at a time (c4, c2), but no export documentation is shown.",
+      "missing": "No documentation of a self-serve bulk export or download is shown, nor its file formats or whether the customer can run it without Cherre's help."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c9",
+        "c7"
+      ],
+      "rationale": "The homepage's calls to action are demo requests (c9) and the Agent Studio page offers only Talk to Our Team (c7), with no self-serve sign-up or free trial shown.",
+      "missing": "No self-serve sign-up, free trial or limited self-serve tier is shown."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c9",
+        "c7"
+      ],
+      "rationale": "The coverage check found no pricing page (cherre.com/pricing returns 404), and the homepage and Agent Studio page offer only demo, info-request and Talk to Our Team options with no prices (c9, c7).",
+      "missing": "No plan prices, fees, starting prices or pricing calculator are shown."
+    },
+    {
+      "story": "md-property-lookup",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c1",
+        "c3"
+      ],
+      "rationale": "The pack's API claims describe generic retrieval across connected data sets and geospatial queries (c1, c3) but never mention looking up a property by address or parcel or returning attributes such as size, year built or use.",
+      "missing": "No documented API or data service returning property attributes for an address or parcel is shown, and the pack does not say what property data Cherre holds."
+    },
+    {
+      "story": "md-comps",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack contains no item about sale or lease comparables or transaction data.",
+      "missing": "No API, data service, app feature or export for sale or lease comparables is shown, nor whether Cherre covers transactions at all."
+    },
+    {
+      "story": "md-owner",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack contains no item about the owner of record or mailing address for a parcel.",
+      "missing": "No API, data service or app search returning owner of record or mailing address is shown."
+    },
+    {
+      "story": "md-bulk-area",
+      "verdict": "partial",
+      "quality": 4,
+      "evidence": [
+        "c3",
+        "c2"
+      ],
+      "rationale": "Cherre's platform page claims out-of-the-box PostGIS geospatial queries and API pulls of thousands of records at a time (c3, c2), but these undocumented marketing claims do not show an area query returning all records for a county, shape or radius.",
+      "missing": "No documentation of area queries or bulk pulls is shown, nor what records they return, whether results are capped, or whether a whole county, drawn shape or radius can be pulled in full."
+    }
+  ]
+}

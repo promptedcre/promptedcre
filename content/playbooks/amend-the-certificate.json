@@ -1,0 +1,23 @@
+{
+  "id": "amend-the-certificate",
+  "slug": "amend-the-certificate",
+  "kind": "process",
+  "title": "Amend the certificate of formation",
+  "summary": "Change the entity's name or other terms in its certificate on file with the state, get the filed copy, and bring the bank, the IRS, counterparties and the firm file up to date.",
+  "phase": "stand-up",
+  "order": 32,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": []
+}

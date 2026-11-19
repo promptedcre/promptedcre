@@ -1,0 +1,83 @@
+{
+  "id": "rent-roll",
+  "name": "Rent roll",
+  "what": "A list of every lease at a property on one date, with the tenant, space and rent terms.",
+  "fields": [
+    {
+      "key": "asOfDate",
+      "label": "As of",
+      "type": "date",
+      "definition": "The date the rent roll describes."
+    },
+    {
+      "key": "tenant",
+      "label": "Tenant",
+      "type": "string",
+      "definition": "The tenant's legal name."
+    },
+    {
+      "key": "suite",
+      "label": "Suite or unit",
+      "type": "string",
+      "definition": "The space the tenant occupies."
+    },
+    {
+      "key": "rentableArea",
+      "label": "Rentable area",
+      "type": "integer",
+      "unit": "SF",
+      "definition": "Square feet the rent is charged on."
+    },
+    {
+      "key": "leaseStart",
+      "label": "Lease start",
+      "type": "date",
+      "definition": "The commencement date of the current term."
+    },
+    {
+      "key": "leaseEnd",
+      "label": "Lease end",
+      "type": "date",
+      "definition": "The expiration date of the current term."
+    },
+    {
+      "key": "baseRentMonthly",
+      "label": "Base rent per month",
+      "type": "money",
+      "unit": "USD/month",
+      "definition": "Current monthly base rent."
+    },
+    {
+      "key": "baseRentPerSfYear",
+      "label": "Base rent per square foot per year",
+      "type": "money",
+      "unit": "USD/SF/year",
+      "definition": "Annual base rent divided by rentable area."
+    },
+    {
+      "key": "recoveries",
+      "label": "Expense recoveries",
+      "type": "enum",
+      "definition": "How operating expenses are passed through: gross, modified gross or triple net."
+    },
+    {
+      "key": "securityDeposit",
+      "label": "Security deposit",
+      "type": "money",
+      "unit": "USD",
+      "definition": "Deposit held for the lease."
+    },
+    {
+      "key": "options",
+      "label": "Options",
+      "type": "text",
+      "definition": "Renewal, expansion, termination or purchase options."
+    },
+    {
+      "key": "status",
+      "label": "Status",
+      "type": "enum",
+      "definition": "Occupied, vacant, or occupied but not paying."
+    }
+  ]
+}

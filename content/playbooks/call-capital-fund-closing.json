@@ -1,0 +1,444 @@
+{
+  "id": "call-capital-fund-closing",
+  "slug": "call-capital-fund-closing",
+  "kind": "process",
+  "title": "Call capital and fund a closing",
+  "summary": "Collect investor money on time for a closing: notices, wire instructions, tracking and confirmation.",
+  "phase": "raise",
+  "order": 150,
+  "featured": true,
+  "depth": "full",
+  "review": "practitioner-reviewed",
+  "lastVerified": "2026-11-12",
+  "requires": [
+    "onboard-an-investor"
+  ],
+  "consumes": [
+    "deal-entity-agreement",
+    "subscription-agreement",
+    "investor-register",
+    "purchase-and-sale-agreement",
+    "loan-term-sheet",
+    "jv-agreement"
+  ],
+  "produces": [
+    "capital-call-notice",
+    "wire-instructions",
+    "investor-register"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "tx-boc-101",
+      "url": "https://statutes.capitol.texas.gov/Docs/BO/htm/BO.101.htm",
+      "title": "Texas Business Organizations Code, Chapter 101 (Sections 101.151 to 101.156, contributions)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-153",
+      "url": "https://statutes.capitol.texas.gov/Docs/BO/htm/BO.153.htm",
+      "title": "Texas Business Organizations Code, Chapter 153 (Sections 153.202 to 153.205, contributions)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "ic3-bec",
+      "url": "https://www.ic3.gov/CrimeInfo/BEC",
+      "title": "Business Email Compromise (BEC)",
+      "publisher": "FBI Internet Crime Complaint Center (IC3)",
+      "accessed": "2026-11-12",
+      "quote": "Use secondary channels or two-factor authentication to verify requests for changes in account information with the intended recipient.",
+      "tier": "primary"
+    },
+    {
+      "id": "ic3-2023-report",
+      "url": "https://www.ic3.gov/AnnualReport/Reports/2023_IC3Report.pdf",
+      "title": "2023 Internet Crime Report (business email compromise section)",
+      "publisher": "FBI Internet Crime Complaint Center (IC3)",
+      "accessed": "2026-11-12",
+      "quote": "direct phone calls but to a known verified number and not relying on information or phone numbers included in the email communication",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-p27",
+      "url": "https://www.tdi.texas.gov/title/titlem4d.html",
+      "title": "Basic Manual of Title Insurance, Procedural Rule P-27, Disbursement From Escrow or Trust Fund Accounts",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-12",
+      "quote": "Good funds in an amount equal to all disbursements must be received and deposited before any disbursement may be made.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bc-4a",
+      "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.4A.htm",
+      "title": "Texas Business and Commerce Code, Chapter 4A (Section 4A.211, cancellation of payment orders)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "After a payment order has been accepted, cancellation or amendment of the order is not effective unless the receiving bank agrees",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-form-d",
+      "url": "https://www.sec.gov/files/formd.pdf",
+      "title": "Form D, Notice of Exempt Offering of Securities, with instructions (OMB 3235-0076)",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-12",
+      "quote": "A mandatory capital commitment call does not constitute a new offering, but is made under the original offering",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "read-funding-terms",
+      "title": "Read the funding terms in the governing documents",
+      "instruction": "Before any notice goes out, read the operating or partnership agreement and the signed subscription agreements for who may call capital and for what, the notice owed and how it must be delivered, the funding deadline, where the money goes, and what happens on a default. Under Texas law, a promise to contribute to an LLC or a limited partnership is enforceable only if it is in writing and signed by the investor, and a contribution payable on a discretionary call is conditional until the call is made. Confirm a signed commitment is on file for every investor and list any gaps for counsel.",
+      "mode": "agent",
+      "modeBasis": "Reading the agreements and subscription records against the statute is document work; any gap goes to counsel.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "subscription-agreement",
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "tx-boc-153"
+      ]
+    },
+    {
+      "id": "set-funding-schedule",
+      "title": "Set each investor's amount and the due date",
+      "instruction": "From the purchase contract, the lender's terms and the closing cost estimate, fix the equity the closing needs. Split it by each investor's share in the investor register and check that the shares add up to the total. Set the due date early enough for the money to arrive before closing: in Texas, a title company may not disburse until good funds covering every disbursement have been received and deposited, and a wire counts as received when the title company's bank reports it. Enter the due date, any cure period and the closing date in the deadline calendar as contract periods.",
+      "mode": "agent",
+      "modeBasis": "The amounts and dates follow from the contract, the loan terms and the register, which an agent can compute and check.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-funding-terms"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "loan-term-sheet",
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tdi-p27"
+      ]
+    },
+    {
+      "id": "fund-drawdown-call",
+      "title": "For a fund, call a share of each partner's unfunded commitment",
+      "instruction": "A fund calls capital against commitments as its partnership agreement sets, usually the same share of each limited partner's unfunded commitment. Each notice shows the commitment, the amount called and the unfunded commitment left after the call. A mandatory capital commitment call is made under the original offering, so it needs no new Form D, and Form D's amount sold already counts cash due later under mandatory commitments. Under Texas law, a contribution payable on a discretionary call is conditional until the call is made, so follow the agreement's call procedure exactly.",
+      "mode": "agent",
+      "modeBasis": "The call amounts follow from the commitments in the register and the agreement's formula.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-funding-schedule"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "rules": [
+        "us-fed.reg-d.form-d-filing"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "sec-form-d",
+        "tx-boc-101",
+        "tx-boc-153"
+      ]
+    },
+    {
+      "id": "jv-partner-funding",
+      "title": "For a JV, send the funding request the JV agreement calls for",
+      "instruction": "With one capital partner, the call is the funding request or notice the JV agreement describes, often tied to a budget or a major decision the partner approves first. Send it with the closing cost estimate and the uses of funds, get the partner's approval in writing, and agree whether the partner wires to the venture's account or directly to the title company. Whichever account it is, verify its instructions by phone at a known number, as the base steps describe, before anyone sends money.",
+      "mode": "agent",
+      "modeBasis": "Drafting and sending the request is document work; a person approves each request before it goes out.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-funding-schedule"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "verify-receiving-account",
+      "title": "Verify the receiving account before investors see it",
+      "instruction": "Decide where investors send money: the deal entity's own account, or the title company's escrow account if investors fund the closing there directly. Confirm those instructions by calling a number you already had, such as the bank's published number or one in signed documents, never one taken from the message that delivered them. Deliver the instructions through a channel other than ordinary email, such as the investor portal, and tell investors in writing that they will never change by email. Record who verified them, how and when; keep the account numbers only in the document that holds them.",
+      "mode": "human-offline",
+      "modeBasis": "Verification is a phone call to a known number by someone who can judge the answer, and an agent must not hold account numbers.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-funding-terms"
+      ],
+      "market": "investor-portals-fund-admin",
+      "produces": [
+        "wire-instructions"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ic3-2023-report",
+        "ic3-bec"
+      ]
+    },
+    {
+      "id": "draft-call-notices",
+      "title": "Draft a notice for each investor",
+      "instruction": "Draft one notice per investor with the capital call notice fields: the investor, the commitment, the amount called and its share of the commitment, the purpose, the due date, where the payment instructions are and how to confirm them by phone before sending, what the agreement says happens on a default, and the commitment left uncalled. Use the form and delivery method the governing agreement requires. Put no account numbers in an email; point to the portal or the verified document instead, and tell investors to confirm by calling a number they already have.",
+      "mode": "agent",
+      "modeBasis": "Each field comes from the register, the funding schedule and the agreement.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-funding-schedule",
+        "fund-drawdown-call",
+        "verify-receiving-account"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "consumes": [
+        "investor-register",
+        "wire-instructions"
+      ],
+      "produces": [
+        "capital-call-notice"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ic3-2023-report"
+      ]
+    },
+    {
+      "id": "approve-and-send-notices",
+      "title": "Approve and send the notices",
+      "instruction": "The manager checks each notice against the funding schedule and approves the set. Then send each notice the way the agreement requires, through the investor portal or the sponsor's mailbox, and log when each investor received it, since cure periods and default remedies often run from delivery. Follow up the same day on any notice that bounced or went unread.",
+      "mode": "agent",
+      "modeBasis": "A person approves every call; once approved, sending and logging delivery is mechanical work through a connected mailbox or portal.",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "draft-call-notices"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "capital-call-notice"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "investors-fund",
+      "title": "Investors confirm the instructions and wire",
+      "instruction": "Each investor confirms the payment instructions by calling the sponsor at a number they already had, not one in the notice, then sends the wire from their own bank by the due date and shares the bank's confirmation. An investor who gets a call or email changing the instructions should stop and report it; that is the wire-instructions-change situation, and checking any change through a second channel is the defense the FBI's IC3 recommends.",
+      "mode": "human-online",
+      "modeBasis": "Each investor sends money from their own bank account; no one else can or should.",
+      "actor": "investor",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "approve-and-send-notices",
+        "jv-partner-funding"
+      ],
+      "consumes": [
+        "capital-call-notice",
+        "wire-instructions"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ic3-2023-report",
+        "ic3-bec"
+      ]
+    },
+    {
+      "id": "track-receipts",
+      "title": "Match receipts to the investor register",
+      "instruction": "Each business day until the due date, match incoming wires to investors in the register by amount, sender and reference, using bank statements or a read-only feed the firm provides. Flag anything short, late, duplicated or unmatched and ask the investor about it the same day. Before the due date, remind each investor who has not funded. Record each receipt's date and amount in the register, with the bank's record of the wire.",
+      "mode": "agent",
+      "modeBasis": "Matching statements to the register needs read access to bank records, never the ability to move money.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "investors-fund"
+      ],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register"
+      ],
+      "produces": [
+        "investor-register"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "reconcile-funding",
+      "title": "Reconcile the total and resolve differences",
+      "instruction": "On the due date, reconcile: the total received equals the funding schedule, each receipt equals that investor's call, and the bank balance agrees with the register. Return any overpayment the way the agreement provides, to the account it came from. If an investor has not funded, start the investor-misses-capital-call situation that day; the closing date does not move on its own. The manager signs off on the reconciliation before money goes to closing.",
+      "mode": "agent",
+      "modeBasis": "Reconciling is arithmetic on the register and the statements; a person signs off on the result.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "track-receipts"
+      ],
+      "consumes": [
+        "investor-register"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "wire-to-title",
+      "title": "Send the closing funds to the title company",
+      "instruction": "When the title company's wire instructions arrive, confirm them by phone with the escrow officer at a number you already had, such as the one in the title commitment or the company's published main line, never one in the message carrying the instructions. Release the wire from the deal entity's account under the bank's approval controls. Send it early: in Texas the title company can disburse only once its bank reports the wire received. Treat the wire as final; under Texas funds-transfer law, once the receiving bank accepts it, cancelling it needs that bank's agreement.",
+      "mode": "human-online",
+      "modeBasis": "Releasing a wire takes a bank sign-in and an approval by someone authorized on the account.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "reconcile-funding"
+      ],
+      "consumes": [
+        "wire-instructions"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ic3-2023-report",
+        "tdi-p27",
+        "tx-bc-4a"
+      ]
+    },
+    {
+      "id": "confirm-title-receipt",
+      "title": "Confirm the title company has the money",
+      "instruction": "Call the escrow officer at the known number, confirm the amount received matches the amount sent, and ask for the written receipt. Texas title companies must record the date funds are actually received before they disburse, so that confirmation is the signal the money is usable at closing. If the wire has not arrived when expected, get the wire's reference from your bank and trace it; do not send a second wire until the first is accounted for. File the receipt with the closing documents.",
+      "mode": "human-offline",
+      "modeBasis": "Confirmation comes by phone from a person the principal can identify, at a number already on file.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "wire-to-title"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tdi-p27",
+        "ic3-2023-report"
+      ]
+    },
+    {
+      "id": "record-contributions",
+      "title": "Record the contributions and keep the file",
+      "instruction": "Update the investor register with each investor's contribution, the date received and any commitment left uncalled. File the notices, the delivery log, the wire confirmations and the title company's receipt together. No new Form D is needed: a mandatory capital commitment call is made under the original offering, and Form D's amount sold already counts cash due later under mandatory commitments.",
+      "mode": "agent",
+      "modeBasis": "Updating the register and filing the records is clerical work from documents already gathered.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-title-receipt"
+      ],
+      "rules": [
+        "us-fed.reg-d.form-d-filing"
+      ],
+      "consumes": [
+        "investor-register"
+      ],
+      "produces": [
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "sec-form-d"
+      ]
+    }
+  ],
+  "outlineSteps": []
+}

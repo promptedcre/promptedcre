@@ -1,0 +1,34 @@
+{
+  "id": "us-tx.tceq.voluntary-cleanup",
+  "jurisdiction": "us-tx",
+  "title": "Texas Voluntary Cleanup Program: what the certificate of completion does",
+  "rule": "Any Texas site, except a part under a commission permit or order, may enter TCEQ's Voluntary Cleanup Program: the applicant files an application with a $1,000 fee, signs a cleanup agreement and pays TCEQ's oversight costs. A completed cleanup earns a certificate of completion. Persons who are not responsible parties are released from liability to the state for cleanup of the covered areas, except releases they cause; fraud or a change to a riskier land use defeats the release.",
+  "citation": {
+    "authority": "Tex. Health & Safety Code 361.603, 361.604, 361.606, 361.609 and 361.610",
+    "url": "https://statutes.capitol.texas.gov/Docs/HS/htm/HS.361.htm"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Health and Safety Code chapter 361, subchapter S, or to TCEQ's program rules in 30 TAC chapter 333, including the application fee.",
+  "sources": [
+    {
+      "id": "tx-hs-361",
+      "url": "https://tcss.legis.texas.gov/resources/HS/htm/HS.361.htm",
+      "title": "Texas Health and Safety Code, Chapter 361, Subchapter S (Voluntary Cleanup Program)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "provide incentive to remediate property by removing liability of lenders and future landowners",
+      "tier": "primary"
+    },
+    {
+      "id": "tceq-vcp",
+      "url": "https://www.tceq.texas.gov/remediation/vcp",
+      "title": "Voluntary Cleanup Program (VCP)",
+      "publisher": "Texas Commission on Environmental Quality",
+      "accessed": "2026-11-14",
+      "quote": "Parties may terminate their participation in the VCP at any time by written notice.",
+      "tier": "primary"
+    }
+  ]
+}

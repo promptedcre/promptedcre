@@ -1,0 +1,122 @@
+{
+  "vendor": "clik-ai",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://clik.ai/docs",
+      "found": false,
+      "note": "404 Page Not Found; no documentation site found; the only subdomains linked from the homepage are gateway.clik.ai (login page) and status.clik.ai"
+    },
+    "api": {
+      "url": "https://clik.ai/product/auto-underwriting",
+      "found": false,
+      "note": "Product page says API access exists but there is no public API reference; /api returns 404"
+    },
+    "pricing": {
+      "url": "https://clik.ai/pricing",
+      "found": false,
+      "note": "404; AutoUW page mentions plans and an Enterprise plan with no prices, only Schedule a Demo"
+    },
+    "changelog": {
+      "url": "https://clik.ai/blog",
+      "found": false,
+      "note": "Only a blog of CRE insight articles; /changelog returns 404"
+    }
+  },
+  "links": {},
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://clik.ai/",
+      "excerpt": "AI-powered spreading of T12s, rent rolls, and operating statements into production-ready financial models.",
+      "fetched": "2026-11-12",
+      "hash": "fb86b36d1097dc0f98689b51d090030aeabb2e223156363ae9dbbca43c6bcc1d"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://clik.ai/product/auto-underwriting",
+      "excerpt": "Excel Add-in for real-time sync, API access for programmatic integration, Salesforce sync for CRM workflows, and direct data lake connectivity.",
+      "fetched": "2026-11-12",
+      "note": "Excerpt starts mid-sentence of the FAQ answer",
+      "hash": "8281b2da9c1bdd419dcf7dc3928b9c89fee0ecc18b1cb131b559780690009a2f"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://clik.ai/product/auto-underwriting",
+      "excerpt": "Upload documents via drag-and-drop, API, or bulk upload - AutoUW works with your existing processes without disruption.",
+      "fetched": "2026-11-12",
+      "hash": "669d6027a47b5355f73777350068d0c02e6d2c03324dacea555d2daa3ead31e2"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://clik.ai/product/auto-underwriting",
+      "excerpt": "All outputs can be pushed to your data lakes and existing systems via our API and Excel Add-in integration.",
+      "fetched": "2026-11-12",
+      "hash": "5dceddd9056a48d2e8190715be158fe87160068b8035453939df77e1bc19fc04"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://clik.ai/product/auto-underwriting",
+      "excerpt": "Excel add-in syncs updates in real-time. Works with your existing workflows without disruption",
+      "fetched": "2026-11-12",
+      "hash": "c774981ca2de879c142e652e3740583b20dee6c2317754c6ad58d265a48fa736"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://clik.ai/product/auto-underwriting",
+      "excerpt": "our Enterprise plan offers unlimited self-created deals with custom integrations and dedicated support.",
+      "fetched": "2026-11-12",
+      "note": "No prices anywhere on the page; only Schedule a Demo",
+      "hash": "4f00d6da845fa643a7c564957cd95d889c9523c9da73e0b17a0b98cfffb7efed"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://clik.ai/product/auto-underwriting",
+      "excerpt": "AutoUW is SOC 2 certified with bank-grade security.",
+      "fetched": "2026-11-12",
+      "hash": "f318be26d3ec0f7e8d07b58dcf922afeab82b22060e759d07b2e7d51e60367d9"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://clik.ai/security",
+      "excerpt": "Clik has undergone a Service Organization Controls audit (SOC 2 Type 1).",
+      "fetched": "2026-11-12",
+      "hash": "0b08e939255a050eb7cc2c730a34f03d5db775d1fb2ab2599d5116514dca1f22"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://clik.ai/product/invest-assist",
+      "excerpt": "Use our sophisticated investor return models or plug AI directly into your financial models to run analysis at scale.",
+      "fetched": "2026-11-12",
+      "hash": "7e6748b1355e4d04432913cc441c0bfdc4c96f314645f7b54fa679c192264eb8"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://clik.ai/product/invest-assist",
+      "excerpt": "Parse, clean, and analyze any rent roll PDF to generate analytics instantaneously with AI-powered extraction",
+      "fetched": "2026-11-12",
+      "hash": "ced24c93465d22d6c6677e251a90cd79e65e8fa1e42fdb3261c7c6c6e86cbb98"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://clik.ai/llms.txt",
+      "excerpt": "# Clik.ai",
+      "note": "llms.txt: GET 200, 8068 bytes",
+      "fetched": "2026-11-12",
+      "hash": "add5e8afaccf5f8bb5ff1d80b73775bb9ed7f493f757a4a8a5cddedf14dba707"
+    }
+  ]
+}

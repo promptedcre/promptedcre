@@ -1,0 +1,145 @@
+{
+  "vendor": "keyway",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "da4ceff2eac686e5be031dd11071d6c2f00bc1eedd2cc739f8b0be75057cdb8f",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "partial",
+      "quality": 6,
+      "evidence": [
+        "c6"
+      ],
+      "rationale": "The KeyComps page says 'Keyway has an API available to get data faster' (c6), but the coverage check found no public API page or reference, which matches a vendor-claimed API with no public documentation.",
+      "missing": "No API documentation or reference is shown; what the API covers, whether it can change records rather than only read comps data, and how access is granted are all unknown."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "Nothing in the pack mentions an MCP server; the comparison-page cell about 'prompts, knowledge tools, or custom integrations' (c9) does not describe one.",
+      "missing": "No official MCP server, setup steps or announcement of one."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no SDK, CLI, package-registry listing, public repository or code samples.",
+      "missing": "No vendor-maintained SDK or CLI on a public registry or repository, and no code samples or partner-only SDK."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack has no mention of webhooks or event subscriptions; the automatic in-app narrative updates described in c5 are not events an agent can subscribe to.",
+      "missing": "No documented webhooks or event subscriptions for any records, directly or through an automation platform."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no API keys, tokens or OAuth clients and no permission scoping; the SOC 2 claim (c10) says nothing about credentials.",
+      "missing": "No information on how API credentials are issued or whether they can be limited by scope, role or permission."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No OpenAPI, Swagger, GraphQL or other machine-readable spec appears in the pack, and the coverage check found no API reference at all.",
+      "missing": "No machine-readable API specification, public or gated, and no API documentation that could carry one."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "partial",
+      "quality": 6,
+      "evidence": [
+        "p1"
+      ],
+      "rationale": "The probe found an llms.txt on keyway.ai (p1: GET 200, 877 bytes), but the coverage check found no documentation or help center on the site, so the file can only cover marketing pages.",
+      "missing": "The pack shows only the file's title, not which pages it lists; there is no documentation for an llms.txt to index and no Markdown documentation pages."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no sandbox, test mode or developer environment; the homepage 'Start Free Trial' button is a product trial, not a documented developer test environment.",
+      "missing": "No sandbox or test environment, self-serve or on request; the API's scope is undocumented, so the na condition (an API that only reads published data) is not shown either."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "partial",
+      "quality": 5,
+      "evidence": [
+        "c4",
+        "c6"
+      ],
+      "rationale": "Keyway says outputs can be pushed 'directly to Excel, BI tools, or deal templates' (c4) and mentions AI-generated comp-set 'exports' (c6), but the pack contains no documentation of an export feature.",
+      "missing": "No documentation of a self-serve bulk export: its formats, which records or licensed data it covers, and whether it works without vendor configuration are not shown."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "partial",
+      "quality": 4,
+      "evidence": [
+        "c11",
+        "c8"
+      ],
+      "rationale": "The homepage offers 'Start Free Trial' next to 'Request a Demo' (c11), while the comparison page says functionality and integrations depend on agreed product scope and configuration (c8), indicating a trial with the main product scoped through sales.",
+      "missing": "The trial sign-up flow is not shown (whether it starts without a call, form review or card), nor what the trial includes or whether any paid plan can be bought self-serve."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c11"
+      ],
+      "rationale": "The pricing page returns 404 and the homepage shows only 'Start Free Trial' and 'Request a Demo' buttons with no price (c11).",
+      "missing": "No published prices, plan fees or starting price for any plan."
+    },
+    {
+      "story": "dp-deal-record",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack refers to a 'live deal' inside the product (c5) but shows no API for reading, creating or re-staging deals; the only API claim concerns comps data (c6).",
+      "missing": "No API documentation for creating deals or updating their stage or status, and no third-party integration that does so."
+    },
+    {
+      "story": "dp-load-financials",
+      "verdict": "partial",
+      "quality": 5,
+      "evidence": [
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "rationale": "Keyway says users can drop rent rolls and T-12s into the product to detect, extract, clean and standardize key fields and push the outputs to Excel (c2, c3, c4), but the pack shows no API or upload endpoint, so this is only through the app.",
+      "missing": "No documented API or upload endpoint for rent rolls or operating statements, and the structure of the extracted output is not documented; the evidence is marketing copy."
+    },
+    {
+      "story": "dp-model-outputs",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows document-extraction outputs pushed to Excel (c4) and comp-set exports (c6), but nothing about cash flows, returns or valuation results being available as structured data.",
+      "missing": "No API endpoint or documented export for cash flows, returns or valuation results; KeyComps' predictive pricing insights (c7) are not shown to be exportable or served by the API."
+    },
+    {
+      "story": "dp-documents",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows documents being dropped into the app (c2) but no API for uploading documents to a deal or for listing and downloading them.",
+      "missing": "No API documentation for attaching documents to a deal or for listing or downloading them."
+    }
+  ]
+}

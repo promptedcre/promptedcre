@@ -1,0 +1,38 @@
+{
+  "id": "appraisal-notice-jumps",
+  "slug": "appraisal-notice-jumps",
+  "kind": "situation",
+  "title": "The appraisal notice jumps",
+  "summary": "Calendar the protest deadline, gather evidence and decide whether to protest on your own or with an agent.",
+  "phase": "operate",
+  "order": 127,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "situation": {
+    "trigger": "The property tax appraisal notice comes in far above the expected value.",
+    "urgency": "weeks"
+  },
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Calendar the protest deadline the day the notice arrives",
+    "Read the notice's land, improvement and total values",
+    "Compute what the new value would do to the tax bill",
+    "Gather income, sales and condition evidence",
+    "Decide whether to protest yourself or hire an agent",
+    "File the protest",
+    "Present the case at the hearing",
+    "Update the budget and the lender's tax escrow",
+    "Pass the result through to tenants as the leases require",
+    "Tell the lender and investors the result and record it"
+  ]
+}

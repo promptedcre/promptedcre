@@ -1,0 +1,23 @@
+{
+  "id": "bind-sponsor-insurance",
+  "slug": "bind-sponsor-insurance",
+  "kind": "process",
+  "title": "Bind the sponsor's insurance",
+  "summary": "Price and bind the sponsor-level coverages its investors, lenders and partners expect.",
+  "phase": "stand-up",
+  "order": 45,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": []
+}

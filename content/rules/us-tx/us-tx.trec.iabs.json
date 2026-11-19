@@ -1,0 +1,51 @@
+{
+  "id": "us-tx.trec.iabs",
+  "jurisdiction": "us-tx",
+  "title": "Texas license holders give the Information About Brokerage Services notice",
+  "rule": "At the first substantive communication with a party about a transaction involving specific real property, a license holder gives that party TREC's Information About Brokerage Services notice, commercial deals included. Exceptions: a residential lease under one year with no sale considered, a party known to be represented by another license holder, and open-house talk about that property. Each license holder also links the notice from each business website's homepage. A license holder acting for itself; its spouse, parent or child; a trust it is trustee of or that benefits it or those relatives; or an entity it owns over 10% of, discloses its license in writing at or before contracting.",
+  "citation": {
+    "authority": "Tex. Occ. Code 1101.558(b-1) and (c); 22 Tex. Admin. Code 531.20 and 535.144",
+    "url": "https://statutes.capitol.texas.gov/Docs/OC/htm/OC.1101.htm"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "S.B. 1968 amended 1101.558 effective January 1, 2026, and TREC's current notice is IABS 1-2; watch for later changes to the statute, TREC rules 531.20 and 535.144, or the form.",
+  "sources": [
+    {
+      "id": "occ-code-1101",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1101.htm",
+      "title": "Texas Occupations Code, Chapter 1101 (Section 1101.558, Representation disclosure)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "first substantive communication with a party relating to a proposed transaction regarding specific real property",
+      "tier": "primary"
+    },
+    {
+      "id": "trec-rules",
+      "url": "https://www.trec.texas.gov/agency-information/rules-and-laws/trec-rules",
+      "title": "TREC Rules: 22 Tex. Admin. Code 531.20 (Information About Brokerage Services) and 535.144 (acquiring or disposing of own property)",
+      "publisher": "Texas Real Estate Commission",
+      "accessed": "2026-11-14",
+      "quote": "is obligated to disclose in writing that he or she is a licensed real estate broker or sales agent",
+      "tier": "primary"
+    },
+    {
+      "id": "trec-iabs-faq",
+      "url": "https://www.trec.texas.gov/information-about-brokerage-services-form",
+      "title": "Information About Brokerage Services (IABS) Form, with frequently asked questions",
+      "publisher": "Texas Real Estate Commission",
+      "accessed": "2026-11-14",
+      "quote": "Unless an exception applies, the requirements apply to all proposed real estate transactions.",
+      "tier": "primary"
+    },
+    {
+      "id": "trec-iabs-form",
+      "url": "https://www.trec.texas.gov/forms/information-about-brokerage-services",
+      "title": "Information About Brokerage Services (Form ID: IABS 1-2, effective January 1, 2026)",
+      "publisher": "Texas Real Estate Commission",
+      "accessed": "2026-11-14",
+      "tier": "primary"
+    }
+  ]
+}

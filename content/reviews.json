@@ -1,0 +1,132 @@
+{
+  "reviews": [
+    {
+      "kind": "playbook",
+      "id": "form-sponsor-entity",
+      "level": "practitioner-reviewed",
+      "date": "2026-11-12",
+      "gate": "B",
+      "note": "Approved at Gate B after the practitioner read of the 12 flagship playbooks. Same day, after the practitioner test run, the owner approved adding the Texas series LLC rule card (AI-drafted) to step 1; the step text is unchanged. On 2026-11-17 the owner asked to add Mercury, so the bank account step names the formation and back office market and its banking software shows; the step text is unchanged"
+    },
+    {
+      "kind": "playbook",
+      "id": "choose-structure-and-exemption",
+      "level": "practitioner-reviewed",
+      "date": "2026-11-12",
+      "gate": "B",
+      "note": "Approved at Gate B after the practitioner read of the 12 flagship playbooks"
+    },
+    {
+      "kind": "playbook",
+      "id": "prepare-offering-documents",
+      "level": "practitioner-reviewed",
+      "date": "2026-11-12",
+      "gate": "B",
+      "note": "Approved at Gate B after the practitioner read of the 12 flagship playbooks"
+    },
+    {
+      "kind": "playbook",
+      "id": "onboard-an-investor",
+      "level": "practitioner-reviewed",
+      "date": "2026-11-12",
+      "gate": "B",
+      "note": "Approved at Gate B after the practitioner read of the 12 flagship playbooks"
+    },
+    {
+      "kind": "playbook",
+      "id": "file-form-d-and-state-notices",
+      "level": "practitioner-reviewed",
+      "date": "2026-11-12",
+      "gate": "B",
+      "note": "Approved at Gate B after the practitioner read of the 12 flagship playbooks"
+    },
+    {
+      "kind": "playbook",
+      "id": "call-capital-fund-closing",
+      "level": "practitioner-reviewed",
+      "date": "2026-11-12",
+      "gate": "B",
+      "note": "Approved at Gate B after the practitioner read of the 12 flagship playbooks"
+    },
+    {
+      "kind": "playbook",
+      "id": "screen-deal-buy-box",
+      "level": "practitioner-reviewed",
+      "date": "2026-11-12",
+      "gate": "B",
+      "note": "Approved at Gate B after the practitioner read of the 12 flagship playbooks"
+    },
+    {
+      "kind": "playbook",
+      "id": "underwrite-a-deal",
+      "level": "practitioner-reviewed",
+      "date": "2026-11-12",
+      "gate": "B",
+      "note": "Approved at Gate B after the practitioner read of the 12 flagship playbooks"
+    },
+    {
+      "kind": "playbook",
+      "id": "submit-letter-of-intent",
+      "level": "practitioner-reviewed",
+      "date": "2026-11-12",
+      "gate": "B",
+      "note": "Approved at Gate B after the practitioner read of the 12 flagship playbooks"
+    },
+    {
+      "kind": "playbook",
+      "id": "negotiate-purchase-contract",
+      "level": "practitioner-reviewed",
+      "date": "2026-11-12",
+      "gate": "B",
+      "note": "Approved at Gate B after the practitioner read of the 12 flagship playbooks"
+    },
+    {
+      "kind": "playbook",
+      "id": "run-due-diligence",
+      "level": "practitioner-reviewed",
+      "date": "2026-11-12",
+      "gate": "B",
+      "note": "Approved at Gate B after the practitioner read of the 12 flagship playbooks"
+    },
+    {
+      "kind": "playbook",
+      "id": "finance-and-close",
+      "level": "practitioner-reviewed",
+      "date": "2026-11-12",
+      "gate": "B",
+      "note": "Approved at Gate B after the practitioner read of the 12 flagship playbooks"
+    },
+    {
+      "kind": "market",
+      "id": "investor-portals-fund-admin",
+      "level": "practitioner-reviewed",
+      "date": "2026-11-12",
+      "gate": "C",
+      "note": "Approved at Gate C after the practitioner skimmed the published market"
+    },
+    {
+      "kind": "market",
+      "id": "deal-pipeline-underwriting",
+      "level": "practitioner-reviewed",
+      "date": "2026-11-12",
+      "gate": "C",
+      "note": "Approved at Gate C after the practitioner skimmed the published market"
+    },
+    {
+      "kind": "market",
+      "id": "market-property-data",
+      "level": "practitioner-reviewed",
+      "date": "2026-11-12",
+      "gate": "C",
+      "note": "Approved at Gate C after the practitioner skimmed the published market"
+    },
+    {
+      "kind": "market",
+      "id": "formation-back-office",
+      "level": "practitioner-reviewed",
+      "date": "2026-11-12",
+      "gate": "C",
+      "note": "Approved at Gate C after the practitioner skimmed the published market"
+    }
+  ]
+}

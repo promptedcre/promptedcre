@@ -1,0 +1,512 @@
+{
+  "id": "audit-entity-standing",
+  "slug": "audit-entity-standing",
+  "kind": "audit",
+  "title": "Audit the entity's standing",
+  "summary": "For a firm that already exists: check that the entity is in good standing and that its name, agent, agreements and accounts match what is on file. It ends with a list of what to fix and a calendar of what is due.",
+  "phase": "stand-up",
+  "order": 10,
+  "featured": false,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-12",
+  "requires": [],
+  "consumes": [
+    "certificate-of-formation",
+    "sponsor-operating-agreement",
+    "ein-confirmation",
+    "subscription-agreement",
+    "investor-register"
+  ],
+  "produces": [],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "cpa-account-search",
+      "url": "https://comptroller.texas.gov/taxes/franchise/account-status/search",
+      "title": "Franchise Tax Account Status Search",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-12",
+      "quote": "11-digit Comptroller's Taxpayer Number or the 9-digit Federal EIN",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-coas",
+      "url": "https://comptroller.texas.gov/taxes/franchise/coas-instructions.php",
+      "title": "Franchise Tax Account Status",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-12",
+      "quote": "The Franchise Tax Account Status is a summary designed to satisfy standard business needs.",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-api-doc",
+      "url": "https://api-doc.comptroller.texas.gov/public-data/",
+      "title": "CPA API Documentation (franchise tax account fields: right to transact business, SOS registration status, registered agent and office, DBA name, report year, officers)",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-sosdirect",
+      "url": "https://www.sos.state.tx.us/corp/sosda/index.shtml",
+      "title": "SOSDirect: Business Organizations Inquiry",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-12",
+      "quote": "There is a $1.00 statutorily authorized fee associated with each search.",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-franchise",
+      "url": "https://comptroller.texas.gov/taxes/franchise/",
+      "title": "Franchise Tax (due dates and forfeiture notices)",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-12",
+      "quote": "If May 15 falls on a weekend or holiday, the due date will be the next business day.",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-pir-oir",
+      "url": "https://comptroller.texas.gov/taxes/franchise/pir-oir-filing-req.php",
+      "title": "Franchise Tax Public Information Report and Ownership Information Report Filing Requirements",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-12",
+      "quote": "The PIR or OIR is due even if the entity does not have to file a franchise tax report",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-extensions",
+      "url": "https://comptroller.texas.gov/taxes/franchise/filing-extensions.php",
+      "title": "Franchise Tax Extensions of Time to File",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-12",
+      "quote": "Timely means the request is received or postmarked on or before the due date of the original report.",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-notices",
+      "url": "https://comptroller.texas.gov/taxes/franchise/notices.php",
+      "title": "Tax Notices and Resolving Problems With Your Account (franchise tax forfeiture notices)",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-12",
+      "quote": "Form 05-212, Texas Notice of Forfeiture of Right to Transact Business",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-171",
+      "url": "https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm",
+      "title": "Texas Tax Code, Chapter 171 (Sections 171.202, 171.203, 171.251 to 171.258, 171.302 and 171.309)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "The taxable entity shall file the report before May 16 of each year after the beginning of the regular annual period.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-111",
+      "url": "https://statutes.capitol.texas.gov/Docs/TX/htm/TX.111.htm",
+      "title": "Texas Tax Code, Chapter 111 (Section 111.053, filing dates on weekends and holidays)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "the next day that is not a Saturday, Sunday, or legal holiday included on that list becomes the due date",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-34-3-584",
+      "url": "https://www.law.cornell.edu/regulations/texas/34-Tex-Admin-Code-SS-3-584",
+      "title": "34 Tex. Admin. Code 3.584, Margin: Reports and Payments",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-12",
+      "quote": "is due at the same time each initial and annual, including the first annual, report is due",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-3",
+      "url": "https://statutes.capitol.texas.gov/Docs/BO/htm/BO.3.htm",
+      "title": "Texas Business Organizations Code, Chapter 3 (Sections 3.005, 3.010, 3.051 to 3.056 and 3.151)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-5",
+      "url": "https://statutes.capitol.texas.gov/Docs/BO/htm/BO.5.htm",
+      "title": "Texas Business Organizations Code, Chapter 5 (Sections 5.201 to 5.206 and 5.251, registered agents)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "The only duties of a registered agent are to",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-11",
+      "url": "https://statutes.capitol.texas.gov/Docs/BO/htm/BO.11.htm",
+      "title": "Texas Business Organizations Code, Chapter 11 (Section 11.251, termination by the Secretary of State)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-101",
+      "url": "https://statutes.capitol.texas.gov/Docs/BO/htm/BO.101.htm",
+      "title": "Texas Business Organizations Code, Chapter 101 (Sections 101.052, 101.501, 101.602 to 101.604 and 101.626)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "a copy of the company agreement, including any amendments to or restatements of the company agreement",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bcc-71",
+      "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.71.htm",
+      "title": "Texas Business and Commerce Code, Chapter 71, Assumed Business or Professional Name Act",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "A certificate is effective for a term not to exceed 10 years from the date the certificate is filed.",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-name-change",
+      "url": "https://www.irs.gov/businesses/business-name-change",
+      "title": "Business name change",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-12",
+      "quote": "In some situations a name change may require a new Employer Identification Number (EIN) or a final return.",
+      "tier": "primary"
+    },
+    {
+      "id": "fincen-boi",
+      "url": "https://www.fincen.gov/boi",
+      "title": "Beneficial Ownership Information Reporting (alert updated August 11, 2026)",
+      "publisher": "Financial Crimes Enforcement Network",
+      "accessed": "2026-11-12",
+      "quote": "The final rule became effective on August 14, 2026.",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "confirm-state-status",
+      "title": "Confirm the entity's status in the state's public record",
+      "instruction": "Search the Texas Comptroller's Franchise Tax Account Status page by the entity's Secretary of State file number, taxpayer number or EIN, or exact name; it is free and needs no login. Save the result with its as-of date and record the right to transact business in Texas, the Secretary of State registration status and its effective date, the state of formation and the file number. Clear: the right to transact business is not forfeited and the registration is in effect, under the entity's exact legal name. Finding: a forfeited right, a registration not in effect, or a name or file number the firm's records do not match. This record is a summary, and the Secretary of State's own record is a paid search the agent does not open. If the result is unclear or the search fails, mark it unverified, with a Secretary of State certificate as the principal's follow-up.",
+      "mode": "agent-browser",
+      "modeBasis": "The Comptroller's account status search is a free public page that needs no login.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.franchise-tax.forfeiture",
+        "us-tx.boc.llc-formation"
+      ],
+      "consumes": [
+        "certificate-of-formation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "cpa-account-search",
+        "cpa-coas",
+        "cpa-api-doc",
+        "sos-sosdirect",
+        "tx-tax-code-171"
+      ]
+    },
+    {
+      "id": "confirm-registered-agent",
+      "title": "Confirm the registered agent on file and that the service is current",
+      "instruction": "From the status record saved in the first check, take the registered agent's name and registered office address, and compare them with the agent the firm believes it uses, from its agent contract or latest invoice. The principal confirms that the service is paid through a stated date and that the agent has the firm's current address, because the agent's only duty is to forward process and notices to the address the firm last gave it. Clear: the names match, the office is a street address, and the service is paid. Finding: a mismatch, a lapsed or unknown service, a resignation notice from the agent, or an agent who no longer acts for the firm, such as a former principal. If the principal cannot confirm payment and the forwarding address, record the check as unverified.",
+      "mode": "human-online",
+      "modeBasis": "Only the principal knows whether the agent's service is paid and which address the agent forwards to.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-state-status"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.boc.registered-agent",
+        "us-tx.boc.registered-agent-lapse"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-5",
+        "tx-boc-11",
+        "cpa-api-doc"
+      ]
+    },
+    {
+      "id": "confirm-franchise-reports",
+      "title": "Confirm franchise tax reports and information reports are filed",
+      "instruction": "For every report year since the entity became subject to the tax, the CPA or the principal confirms from the Comptroller's Webfile history or the filed copies that each annual franchise tax report and each Public Information Report was filed by May 15, or by a valid extended date, with any tax paid. An entity at or below the no-tax-due threshold still files the Public Information Report every year. Ask whether the firm has received a notice of intent to forfeit (Form 05-211), of forfeiture of the right to transact business (Form 05-212) or of forfeiture of registration (Form 05-213). Clear: every year filed on time, nothing owed, no notices. Finding: a missing or late report, an unpaid balance, or any forfeiture notice. Webfile needs a login, so the agent does not check it; without the CPA's or the principal's confirmation, record the check as unverified.",
+      "mode": "human-online",
+      "modeBasis": "The filing history sits in the Comptroller's Webfile account behind a login, which only the firm or its CPA uses.",
+      "actor": "cpa",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-state-status"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.franchise-tax.basics",
+        "us-tx.franchise-tax.due-date-extension",
+        "us-tx.franchise-tax.forfeiture"
+      ],
+      "basis": "cited",
+      "sources": [
+        "cpa-franchise",
+        "cpa-pir-oir",
+        "cpa-notices",
+        "tx-tax-code-171",
+        "tac-34-3-584"
+      ]
+    },
+    {
+      "id": "match-legal-name",
+      "title": "Match the legal name across the filing, bank, tax and investor records",
+      "instruction": "Take the legal name from the certificate of formation, or from the latest certificate of amendment if the name changed, and compare it word for word with the name on the status record, the IRS EIN confirmation letter, each bank account, the company agreement, the subscription agreements and the investor register. Punctuation and the entity ending, such as LLC or Limited Liability Company, count. Clear: every record uses the same legal name. Finding: any record that uses a different name, a former name, or a trade name in place of the legal name; a trade name is looked at again in the assumed name check. Where the firm cannot supply one of these documents, record the comparison for that document as unverified.",
+      "mode": "agent",
+      "modeBasis": "The agent compares documents the firm supplies against the saved status record.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-state-status"
+      ],
+      "rules": [
+        "us-tx.boc.llc-formation",
+        "us-fed.irs.ein"
+      ],
+      "consumes": [
+        "certificate-of-formation",
+        "ein-confirmation",
+        "sponsor-operating-agreement",
+        "subscription-agreement",
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-3",
+        "irs-name-change"
+      ]
+    },
+    {
+      "id": "match-company-agreement",
+      "title": "Confirm the company agreement in effect matches the entity as filed",
+      "instruction": "Ask for the company agreement now in effect with every amendment, and the certificate of formation with every amendment; the company is required to keep copies of both. Check that the agreement names the same entity, that its management matches the certificate as amended (run by managers or by its members), that its member list matches the firm's current list of members and their interests, and that each amendment was approved and signed as the agreement requires. If the entity is a series LLC, check that the agreement states the limitation on each series' liabilities and that the certificate of formation gives notice of it; if the entity is not a series LLC, record this part as not applicable. Clear: everything matches. Finding: a gap or conflict, which counsel reviews. If the firm has not supplied the signed documents, record the check as unverified.",
+      "mode": "agent",
+      "modeBasis": "The agent compares the company agreement and the certificate of formation the firm supplies.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-tx.boc.llc-formation",
+        "us-tx.boc.series-llc"
+      ],
+      "consumes": [
+        "sponsor-operating-agreement",
+        "certificate-of-formation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "tx-boc-3"
+      ]
+    },
+    {
+      "id": "check-amendments-and-former-names",
+      "title": "Check that amendments and former names are reflected everywhere",
+      "instruction": "From the firm's files, list every certificate of amendment or restated certificate it has filed, and every former name. For each name change, check that the IRS was told as its business name change page directs, that the status record shows the current name, and that bank accounts, insurance and investor documents use the current name; counsel decides whether contracts or title held in the former name need any notice. For any other amendment, such as a change in management, check that the company agreement agrees with it. Clear: every change is reflected. Finding: a record still on a former name or on superseded terms. The amendment history at the Secretary of State is a paid search, so if the firm's files look incomplete, record the check as unverified and list a Secretary of State certificate as the principal's follow-up.",
+      "mode": "agent",
+      "modeBasis": "The agent works from the firm's own filed copies and the status record already saved.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "match-legal-name"
+      ],
+      "rules": [
+        "us-tx.boc.certificate-of-amendment",
+        "us-fed.irs.ein"
+      ],
+      "consumes": [
+        "certificate-of-formation",
+        "sponsor-operating-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-3",
+        "irs-name-change",
+        "sos-sosdirect"
+      ]
+    },
+    {
+      "id": "check-assumed-names",
+      "title": "Check that any assumed name in use has a certificate",
+      "instruction": "List every name the firm does business under that differs from its legal name: the website, letterhead, email signatures, signs, investor materials, contracts, and the name of any protected series that does not contain the LLC's own name. For each, look in the firm's files for an assumed name certificate filed with the Secretary of State, and note any DBA name on the Comptroller status record. A certificate lasts no more than 10 years and is renewed in the six months before it expires, so record each one's filing date. Clear: every name in use has a current certificate. Finding: a name in use with no certificate, or with one expired or expiring within the next year. The Secretary of State's index is a paid search, so if the firm has no copies, record the check as unverified.",
+      "mode": "agent",
+      "modeBasis": "The agent compares the firm's materials and certificate copies with the saved status record.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-state-status",
+        "match-legal-name"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.assumed-name.certificate"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-bcc-71",
+        "cpa-api-doc",
+        "sos-sosdirect"
+      ]
+    },
+    {
+      "id": "check-bank-accounts",
+      "title": "Check the bank accounts against the entity, and against each series",
+      "instruction": "Ask for a list of every bank account the entity uses, with the latest statement and the account agreement for each. Check that each account is titled in the entity's exact legal name and carries its EIN, not a principal's name or Social Security number. If the entity is a series LLC, check that each series' cash and other assets can be identified from the records separately from the company's and every other series' assets, whether by separate accounts or a ledger kept for each series; if the entity is not a series LLC, record this part as not applicable. Clear: titles and numbers match, and each series' assets can be traced. Finding: a mismatched title or number, money held in a principal's own account, or series funds that cannot be told apart; counsel judges the effect on series liability protection. Missing statements leave the check unverified.",
+      "mode": "agent",
+      "modeBasis": "The agent compares bank documents the firm supplies with the entity's name and EIN.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "match-legal-name"
+      ],
+      "rules": [
+        "us-tx.boc.series-llc",
+        "us-fed.irs.ein"
+      ],
+      "consumes": [
+        "ein-confirmation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101"
+      ]
+    },
+    {
+      "id": "confirm-boi-status",
+      "title": "Confirm the beneficial ownership reporting status",
+      "instruction": "Open FinCEN's beneficial ownership page and read its current alert; this rule has changed more than once, so do not rely on a stored answer. Under the final rule effective August 14, 2026, a company created in the United States by a filing with a secretary of state is exempt and files no report. Record where the entity was formed, from the certificate of formation and the status record. Clear: the entity was formed in a U.S. state and FinCEN's page still states the exemption. Finding: the entity was formed under foreign law and is registered to do business in a state, which counsel reviews. If FinCEN's page has changed since this was written or will not load, record the check as unverified.",
+      "mode": "agent-browser",
+      "modeBasis": "FinCEN's page is free and public, and where the entity was formed is in documents already gathered.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-fed.fincen.boi"
+      ],
+      "consumes": [
+        "certificate-of-formation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "fincen-boi"
+      ]
+    },
+    {
+      "id": "confirm-counsel-client",
+      "title": "Confirm who the firm's counsel represents",
+      "instruction": "Ask for counsel's current engagement letter and read whom it names as the client: the entity, a particular series, the principals, or a fund or deal entity. Counsel then confirms in writing whom it represents in the entity's matters, and whether it also represents any principal personally or any investor. Clear: an engagement letter names the entity this audit covers, and any joint representation is disclosed in writing. Finding: no engagement letter, a letter that names a different person or entity, or a joint representation that no one has put in writing. If counsel has not answered, record the check as unverified. Whether a conflict exists is for counsel to judge; this check records only what the letter and counsel say.",
+      "mode": "human-online",
+      "modeBasis": "Only counsel can state whom it represents; the engagement letter is a private document.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "build-filing-calendar",
+      "title": "Build the filing calendar",
+      "instruction": "From the checks above, list each recurring filing with its next due date and the rule card it comes from: the franchise tax report and the Public Information Report, due May 15 each year and moved to the next day that is not a Saturday, Sunday or listed legal holiday; the November 15 extended date if the firm extends, with the request and payment due by May 15; each assumed name certificate's expiry and its six-month renewal window; and the registered agent's renewal date the principal gave. Note that no beneficial ownership report is due while FinCEN's exemption stands. Where a check was unverified, leave its date blank and mark it unknown. The calendar records dates and files nothing.",
+      "mode": "agent",
+      "modeBasis": "The agent assembles dates from the earlier checks and the rule cards.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-state-status",
+        "confirm-registered-agent",
+        "confirm-franchise-reports",
+        "check-assumed-names",
+        "confirm-boi-status"
+      ],
+      "rules": [
+        "us-tx.franchise-tax.basics",
+        "us-tx.franchise-tax.due-date-extension",
+        "us-tx.assumed-name.certificate",
+        "us-tx.boc.registered-agent-lapse",
+        "us-fed.fincen.boi"
+      ],
+      "basis": "cited",
+      "sources": [
+        "cpa-franchise",
+        "tx-tax-code-111",
+        "tx-tax-code-171",
+        "cpa-extensions",
+        "tx-bcc-71"
+      ]
+    }
+  ],
+  "outlineSteps": []
+}

@@ -1,0 +1,155 @@
+{
+  "vendor": "attom",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://api.developer.attomdata.com/docs",
+      "found": true,
+      "note": "Public API documentation with endpoint reference, plus a support help center."
+    },
+    "api": {
+      "url": "https://www.attomdata.com/solutions/delivery/property-data-api/",
+      "found": true,
+      "note": "Public Property Data API page; free trial key from the developer platform."
+    },
+    "pricing": {
+      "url": "https://api.developer.attomdata.com/home",
+      "found": false,
+      "note": "Heading promises pricing but the page gives no figures: a free key, a start-up plan and a call for enterprise; /pricing paths return 404."
+    },
+    "changelog": {
+      "url": "https://api.developer.attomdata.com/docs",
+      "found": true,
+      "note": "Release Notes section at the end of the docs page; newest entry shown is October 2025."
+    }
+  },
+  "links": {
+    "docs": "https://api.developer.attomdata.com/docs",
+    "api": "https://api.developer.attomdata.com/home",
+    "mcp": "https://www.attomdata.com/solutions/delivery/mcp-server/"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://www.attomdata.com/solutions/delivery/mcp-server/",
+      "excerpt": "The ATTOM MCP Server gives AI agents, applications, and enterprise systems direct access to ATTOM's trusted property data",
+      "fetched": "2026-11-12",
+      "hash": "0593b48bc480efc3a12c5805c3313bb85e9679fbac7b63126982ea514b1e65e5"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://www.attomdata.com/solutions/delivery/mcp-server/faqs/",
+      "excerpt": "All access flows through a centrally managed MCP Server with key-based authentication aligned with ATTOM’s existing systems.",
+      "fetched": "2026-11-12",
+      "note": "MCP setup articles sit in the support help center; the page that opened showed little text.",
+      "hash": "d8ba818f26f3312f197471736d5f9f15fb97808edccf474e536dd18c02304f0b"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://api.developer.attomdata.com/docs",
+      "excerpt": "Create your free trial account on the Attom Developer Platform to get an API key to use when calling the API.",
+      "fetched": "2026-11-12",
+      "hash": "3fa6d2a5397d2214395183985e72ddbbfe8131c485451502648fd90c55ff074e"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://api.developer.attomdata.com/docs",
+      "excerpt": "All requests to all endpoints require you to specify your unique API key.",
+      "fetched": "2026-11-12",
+      "note": "One key identifies the account; no scopes described on this page.",
+      "hash": "22f89c42458f668d5c6619ed19ba688677812d2dfdb95a527ad9e028a36a37ac"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://api.developer.attomdata.com/home",
+      "excerpt": "you can start using our APIs now by signing up for a free API key or our start-up plan.",
+      "fetched": "2026-11-12",
+      "hash": "02819969d8081f8734434f86ef4866a7bf3d3f9625ba0b8ad0216a90c709ca0a"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://api.developer.attomdata.com/home",
+      "excerpt": "For more usage, give us a call about our enterprise options that work best for you.",
+      "fetched": "2026-11-12",
+      "note": "No price figures on the pricing section.",
+      "hash": "114a19c580946ba5233199067609f3a97fdaaa21a33228e583cccc0b88d05892"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://www.attomdata.com/solutions/delivery/property-data-api/",
+      "excerpt": "ATTOM can set you up with a test drive that gives you access to our developer sandbox and knowledge base.",
+      "fetched": "2026-11-12",
+      "hash": "a6202f0d5c2f9bac3ddd3b667a5b85b8b69696f001de3552b72bfd98d5cd72ea"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://www.attomdata.com/solutions/delivery/property-data-api/",
+      "excerpt": "ATTOM's Property API platform supports both JSON and XML formats running REST conventions",
+      "fetched": "2026-11-12",
+      "hash": "6ab291b20858521cb2f848bb481f41dcd50d254ad0d27a0124919bc8cfeaa12f"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://www.attomdata.com/solutions/delivery/property-data-api/",
+      "excerpt": "ownership information, lat/long, square footage, loan types, sales history, sales comps, crime, schools and more.",
+      "fetched": "2026-11-12",
+      "hash": "40990d685f983381400d605b461ccd2f113468e51a2373a6dd7c4cb4ae7a2d26"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://api.developer.attomdata.com/docs",
+      "excerpt": "Circular radius distance in miles Note: May be used in conjunction with Latitude / Longitude or Address input",
+      "fetched": "2026-11-12",
+      "note": "Radius search parameter for area queries.",
+      "hash": "ab6550838930e8cfaec0f98558b3ee3d0aa9701f87f50d1f5e7220a9853630c3"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://www.attomdata.com/solutions/delivery/bulk-data-licensing/",
+      "excerpt": "ATTOM’s Bulk Property Data Licensing allows you to host our nationwide real estate datasets directly on your servers.",
+      "fetched": "2026-11-12",
+      "note": "Bulk licensing is by contact; no prices shown.",
+      "hash": "e1d073dc768c7b649ece99aa7c04ee38f42b05cbe6d264988c9b1565f1d95248"
+    },
+    {
+      "id": "c12",
+      "tier": "vendor-claim",
+      "url": "https://api.developer.attomdata.com/docs",
+      "excerpt": "A new version (V4) of this endpoint has been released.",
+      "fetched": "2026-11-12",
+      "note": "Release Notes section; newest dated heading is October, 2025.",
+      "hash": "485f2e1b0de23c5df1a0da7c1974d95470ad1ed13b4a23ea8e41ef5a49cebf14"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://www.attomdata.com/llms.txt",
+      "excerpt": "# ATTOM",
+      "note": "llms.txt: GET 200, 9853 bytes",
+      "fetched": "2026-11-12",
+      "hash": "0e51a5acfaeb598563c8d3756a66d767085edadfad1e3079832e6235abe803ed"
+    },
+    {
+      "id": "p2",
+      "tier": "probe",
+      "url": "https://www.attomdata.com/solutions/delivery/mcp-server/",
+      "excerpt": "ATTOM MCP Server – Property Data for AI Applications",
+      "note": "MCP page resolves: GET 200 (page title)",
+      "fetched": "2026-11-12",
+      "hash": "f0efe98065bba98a059776eb121c465fb98ce8a5fb60f1e2f74e59d9808b26e4"
+    }
+  ]
+}

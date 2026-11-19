@@ -1,0 +1,39 @@
+{
+  "id": "hurricane-forecast",
+  "slug": "hurricane-forecast",
+  "kind": "situation",
+  "title": "A hurricane is forecast to hit the property",
+  "summary": "Secure the property, confirm coverage and contacts, back up records, and plan the recovery before landfall.",
+  "phase": "operate",
+  "order": 123,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "situation": {
+    "trigger": "A named storm's forecast track includes the property's area.",
+    "urgency": "days"
+  },
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Check the forecast track against the property's flood exposure",
+    "Confirm policies, deductibles and claim contacts",
+    "Photograph the property before the storm",
+    "Back up leases, records and contact lists off site",
+    "Secure loose items, roofs, openings and drains",
+    "Line up generators, pumps and contractors for after the storm",
+    "Tell tenants the plan and how to reach the owner",
+    "Shut down building systems as the property's plan calls for",
+    "Inspect the property once it is safe to return",
+    "Open a claim if there is damage",
+    "Report status to the lender and investors and record what was done"
+  ]
+}

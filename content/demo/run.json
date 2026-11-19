@@ -1,0 +1,346 @@
+{
+  "recordedOn": "2026-11-13",
+  "firm": "Example Sponsor LLC",
+  "scenes": [
+    {
+      "id": "run",
+      "title": "Run a playbook",
+      "summary": "The agent works through a filing playbook, and the engine stops it at the one step only a person can record.",
+      "steps": [
+        {
+          "command": "pcre firm init --example",
+          "by": null,
+          "exit": 0,
+          "output": "Created firm\n  firm.json, decisions.json, progress.json, artifacts.json, log.jsonl\n",
+          "caption": "A firm folder is created on the operator's own machine, holding the fictional Example Sponsor LLC."
+        },
+        {
+          "command": "pcre firm status",
+          "by": null,
+          "exit": 0,
+          "output": "Example Sponsor LLC · llc, TX, formed · syndication\nRuns: 1 open, 0 complete · 5 steps ready · 0 blocked\n  file-form-d-and-state-notices  open  2/14 done\nAudits: 0 open, 0 closed · 0 open findings (0 high, 0 medium, 0 low)\nDeadlines: 0 open · 0 overdue · 0 due soon\nDeals: 0 active, 0 completed, 0 dropped\nLog: 1 changes; last firm.init by agent at 2026-11-13 09:30\nNext: pcre run next · pcre audit next · pcre deadline list · pcre deal list\n",
+          "caption": "One view of the firm: its open playbook, audits, deadlines and deals."
+        },
+        {
+          "command": "pcre run next",
+          "by": null,
+          "exit": 0,
+          "output": "file-form-d-and-state-notices/confirm-bad-actor-check  (agent)\n  pcre run done file-form-d-and-state-notices confirm-bad-actor-check --proof \"<where the evidence is>\"\nfile-form-d-and-state-notices/set-up-login-gov  (principal)\n  pcre run done file-form-d-and-state-notices set-up-login-gov --by \"<person>\" --proof \"<where the evidence is>\"\nfile-form-d-and-state-notices/draft-form-id  (agent)\n  pcre run done file-form-d-and-state-notices draft-form-id --proof \"<where the evidence is>\"\nfile-form-d-and-state-notices/draft-form-d  (agent)\n  pcre run done file-form-d-and-state-notices draft-form-d --proof \"<where the evidence is>\"\nfile-form-d-and-state-notices/list-notice-states  (agent)\n  pcre run done file-form-d-and-state-notices list-notice-states --proof \"<where the evidence is>\"\n",
+          "caption": "The engine lists the steps that can be done now, who does each one, and the exact line to record it."
+        },
+        {
+          "command": "pcre run done file-form-d-and-state-notices confirm-bad-actor-check --proof drafts/bad-actor-questionnaires.pdf",
+          "by": null,
+          "exit": 0,
+          "output": "confirm-bad-actor-check: done by agent on 2026-11-13\nfile-form-d-and-state-notices is open: 3 done of 14\nready now: set-up-login-gov, draft-form-id, draft-form-d, list-notice-states\n",
+          "caption": "The agent did a step that is its own to do and recorded where the proof is; the reply lists what is ready next."
+        },
+        {
+          "command": "pcre run done file-form-d-and-state-notices set-up-login-gov",
+          "by": null,
+          "exit": 1,
+          "output": "\"set-up-login-gov\" is a step a person does (human-online, principal). Prepare it, then hand it to them: say what to do and where, and wait. Once they say it is done, record it in their name: pcre run done file-form-d-and-state-notices set-up-login-gov --by \"<name>\"\n",
+          "caption": "The agent tried a step that belongs to a person. The engine refused it and told the agent to hand it over."
+        },
+        {
+          "command": "pcre run done file-form-d-and-state-notices set-up-login-gov --by \"Alex Example\" --proof drafts/login-gov-account-screen.png",
+          "by": "Alex Example",
+          "exit": 0,
+          "output": "set-up-login-gov: done by Alex Example on 2026-11-13\nfile-form-d-and-state-notices is open: 4 done of 14\nready now: draft-form-id, draft-form-d, list-notice-states\n",
+          "caption": "Alex Example did the step and recorded it under their own name, with where the proof is."
+        },
+        {
+          "command": "pcre run next",
+          "by": null,
+          "exit": 0,
+          "output": "file-form-d-and-state-notices/draft-form-id  (agent)\n  pcre run done file-form-d-and-state-notices draft-form-id --proof \"<where the evidence is>\"\nfile-form-d-and-state-notices/draft-form-d  (agent)\n  pcre run done file-form-d-and-state-notices draft-form-d --proof \"<where the evidence is>\"\nfile-form-d-and-state-notices/list-notice-states  (agent)\n  pcre run done file-form-d-and-state-notices list-notice-states --proof \"<where the evidence is>\"\n",
+          "caption": "Both steps are off the list, and what remains is ready for the agent."
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": "audit",
+      "title": "Audit a firm",
+      "summary": "The agent checks the firm's standing one item at a time, and each answer is backed by evidence or written up as a finding.",
+      "steps": [
+        {
+          "command": "pcre audit open audit-entity-standing",
+          "by": null,
+          "exit": 0,
+          "output": "Opened audit audit-entity-standing-2026-11-13: 11 checks.\n1 check reads a public record; a person approves lookups once.\nNext: pcre audit approve-lookups --audit audit-entity-standing-2026-11-13 --by \"<name>\"\n",
+          "caption": "An audit of the entity's standing is opened, with eleven checks to work through."
+        },
+        {
+          "command": "pcre audit next",
+          "by": null,
+          "exit": 0,
+          "output": "confirm-state-status: Confirm the entity's status in the state's public record\n  an agent can verify it · lookups need approval first\n  pcre audit record confirm-state-status --audit audit-entity-standing-2026-11-13 --outcome clear --evidence \"<where the proof is>\"\nmatch-company-agreement: Confirm the company agreement in effect matches the entity as filed\n  an agent can verify it\n  pcre audit record match-company-agreement --audit audit-entity-standing-2026-11-13 --outcome clear --evidence \"<where the proof is>\"\nconfirm-boi-status: Confirm the beneficial ownership reporting status\n  an agent can verify it\n  pcre audit record confirm-boi-status --audit audit-entity-standing-2026-11-13 --outcome clear --evidence \"<where the proof is>\"\nconfirm-counsel-client: Confirm who the firm's counsel represents\n  a person (counsel) records it clear\n  pcre audit record confirm-counsel-client --audit audit-entity-standing-2026-11-13 --outcome clear --evidence \"<where the proof is>\" --by \"<name>\"\n",
+          "caption": "The engine lists the checks ready now and says which ones an agent can verify and which need a person."
+        },
+        {
+          "command": "pcre audit record confirm-state-status --outcome clear --evidence drafts/state-status-lookup.pdf",
+          "by": null,
+          "exit": 1,
+          "output": "Check \"confirm-state-status\" reads a public record. Before an agent records it, a person approves lookups for this audit, once: ask them and wait. Once they say yes, record it in their name: pcre audit approve-lookups --audit audit-entity-standing-2026-11-13 --by \"<name>\"\n",
+          "caption": "The agent tried to record a public-record lookup before anyone approved lookups. The engine refused."
+        },
+        {
+          "command": "pcre audit approve-lookups --by \"Alex Example\"",
+          "by": "Alex Example",
+          "exit": 0,
+          "output": "Lookups approved for audit-entity-standing-2026-11-13 by Alex Example.\nNext: pcre audit next --audit audit-entity-standing-2026-11-13\n",
+          "caption": "Alex Example approved read-only lookups of public records, once for the whole audit."
+        },
+        {
+          "command": "pcre audit record confirm-state-status --outcome clear --evidence drafts/state-status-lookup.pdf",
+          "by": null,
+          "exit": 0,
+          "output": "confirm-state-status: clear\n1 of 11 checks clear · 10 not checked yet\nReady now: confirm-registered-agent, confirm-franchise-reports, match-legal-name, match-company-agreement, confirm-boi-status, confirm-counsel-client\n",
+          "caption": "With the approval on record, the same check is recorded as clear, with its evidence."
+        },
+        {
+          "command": "pcre audit record match-company-agreement --outcome finding --title \"Only an unsigned draft of the company agreement is on file\" --detail \"Made-up example: drafts/company-agreement-draft.pdf has no signatures.\"",
+          "by": null,
+          "exit": 0,
+          "output": "match-company-agreement: finding  (opened f-1, high, principal fixes it)\n1 of 11 checks clear · 1 finding · 9 not checked yet\nReady now: confirm-registered-agent, confirm-franchise-reports, match-legal-name, confirm-boi-status, confirm-counsel-client\n",
+          "caption": "A check never fixes anything: the problem the agent found is written up as a finding, with who fixes it."
+        },
+        {
+          "command": "pcre audit record confirm-counsel-client --outcome clear --evidence drafts/engagement-letter.pdf",
+          "by": null,
+          "exit": 1,
+          "output": "Check \"confirm-counsel-client\" is a human check: only a person can call it clear. The agent may record it as unverified (with a note saying why) or as a finding. Or ask the person to check it, and once they say it is clear, record it in their name with --by \"<name>\".\n",
+          "caption": "Only a person can sign off on this check, so the engine refused to let the agent mark it clear."
+        },
+        {
+          "command": "pcre audit score",
+          "by": null,
+          "exit": 0,
+          "output": "audit-entity-standing-2026-11-13: 1 of 11 checks clear · 1 finding · 9 not checked yet\nOpen findings: 1 (1 high, 0 medium, 0 low)\nCovers: Audit the entity's standing\nNot covered: Audit past capital raises (listed, not written yet); Operate (no audit yet); Report (no audit yet)\n",
+          "caption": "The score is counted from the records: how much was verified, not a claim that the firm is compliant."
+        },
+        {
+          "command": "pcre audit report",
+          "by": null,
+          "exit": 0,
+          "output": "Wrote 2 file(s) for audit-entity-standing-2026-11-13:\n  firm/audit/audit-entity-standing-2026-11-13/findings.md\n  firm/audit/audit-entity-standing-2026-11-13/sheet-principal.md\n1 of 11 checks clear · 1 finding · 9 not checked yet\n",
+          "caption": "The report is written into the firm folder: a findings file, and a to-do sheet for the person who fixes the finding."
+        }
+      ],
+      "files": [
+        {
+          "path": "audit/audit-entity-standing-2026-11-13/findings.md",
+          "text": "# Audit the entity's standing\n\nAudit audit-entity-standing-2026-11-13 of Example Sponsor LLC. Opened 2026-11-13; still open. Written 2026-11-13.\n\n**Score:** 1 of 11 checks clear · 1 finding · 9 not checked yet\n\n## Findings\n\n| id | severity | what | who fixes it | due | status |\n|---|---|---|---|---|---|\n| f-1 | high | Only an unsigned draft of the company agreement is on file | principal | not set | open |\n\n## Checks\n\n1. **Confirm the entity's status in the state's public record** (`confirm-state-status`): clear, 2026-11-13, by agent\n   Evidence: drafts/state-status-lookup.pdf\n   Sources: [Texas franchise tax forfeiture: losing the right to transact business](https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm) · [Forming a Texas LLC: the certificate of formation, the name and the fee](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.3.htm) · [Franchise Tax Account Status Search](https://comptroller.texas.gov/taxes/franchise/account-status/search) · [Franchise Tax Account Status](https://comptroller.texas.gov/taxes/franchise/coas-instructions.php) · [CPA API Documentation (franchise tax account fields: right to transact business, SOS registration status, registered agent and office, DBA name, report year, officers)](https://api-doc.comptroller.texas.gov/public-data/) · [SOSDirect: Business Organizations Inquiry](https://www.sos.state.tx.us/corp/sosda/index.shtml) · [Texas Tax Code, Chapter 171 (Sections 171.202, 171.203, 171.251 to 171.258, 171.302 and 171.309)](https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm)\n2. **Confirm the registered agent on file and that the service is current** (`confirm-registered-agent`): not checked yet\n   Sources: [Texas registered agent and registered office](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.5.htm) · [Texas registered agent: resignation, duties, and what happens when there is none](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.5.htm) · [Texas Business Organizations Code, Chapter 5 (Sections 5.201 to 5.206 and 5.251, registered agents)](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.5.htm) · [Texas Business Organizations Code, Chapter 11 (Section 11.251, termination by the Secretary of State)](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.11.htm) · [CPA API Documentation (franchise tax account fields: right to transact business, SOS registration status, registered agent and office, DBA name, report year, officers)](https://api-doc.comptroller.texas.gov/public-data/)\n3. **Confirm franchise tax reports and information reports are filed** (`confirm-franchise-reports`): not checked yet\n   Sources: [Texas franchise tax: who is taxable, when reports are due, and the no-tax-due threshold](https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm) · [Texas franchise tax: the May 15 due date, weekends and holidays, and extensions](https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm) · [Texas franchise tax forfeiture: losing the right to transact business](https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm) · [Franchise Tax (due dates and forfeiture notices)](https://comptroller.texas.gov/taxes/franchise/) · [Franchise Tax Public Information Report and Ownership Information Report Filing Requirements](https://comptroller.texas.gov/taxes/franchise/pir-oir-filing-req.php) · [Tax Notices and Resolving Problems With Your Account (franchise tax forfeiture notices)](https://comptroller.texas.gov/taxes/franchise/notices.php) · [Texas Tax Code, Chapter 171 (Sections 171.202, 171.203, 171.251 to 171.258, 171.302 and 171.309)](https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm) · [34 Tex. Admin. Code 3.584, Margin: Reports and Payments](https://www.law.cornell.edu/regulations/texas/34-Tex-Admin-Code-SS-3-584)\n4. **Match the legal name across the filing, bank, tax and investor records** (`match-legal-name`): not checked yet\n   Sources: [Forming a Texas LLC: the certificate of formation, the name and the fee](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.3.htm) · [Getting an EIN for a new entity](https://www.irs.gov/instructions/iss4) · [Texas Business Organizations Code, Chapter 3 (Sections 3.005, 3.010, 3.051 to 3.056 and 3.151)](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.3.htm) · [Business name change](https://www.irs.gov/businesses/business-name-change)\n5. **Confirm the company agreement in effect matches the entity as filed** (`match-company-agreement`): finding, 2026-11-13, by agent\n   Sources: [Forming a Texas LLC: the certificate of formation, the name and the fee](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.3.htm) · [Texas series LLC: when a series' debts stay with that series](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.101.htm) · [Texas Business Organizations Code, Chapter 101 (Sections 101.052, 101.501, 101.602 to 101.604 and 101.626)](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.101.htm) · [Texas Business Organizations Code, Chapter 3 (Sections 3.005, 3.010, 3.051 to 3.056 and 3.151)](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.3.htm)\n6. **Check that amendments and former names are reflected everywhere** (`check-amendments-and-former-names`): not checked yet\n   Sources: [Amending a Texas certificate of formation, including a name change](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.3.htm) · [Getting an EIN for a new entity](https://www.irs.gov/instructions/iss4) · [Texas Business Organizations Code, Chapter 3 (Sections 3.005, 3.010, 3.051 to 3.056 and 3.151)](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.3.htm) · [Business name change](https://www.irs.gov/businesses/business-name-change) · [SOSDirect: Business Organizations Inquiry](https://www.sos.state.tx.us/corp/sosda/index.shtml)\n7. **Check that any assumed name in use has a certificate** (`check-assumed-names`): not checked yet\n   Sources: [Texas assumed name certificates for an LLC or a registered series](https://statutes.capitol.texas.gov/Docs/BC/htm/BC.71.htm) · [Texas Business and Commerce Code, Chapter 71, Assumed Business or Professional Name Act](https://statutes.capitol.texas.gov/Docs/BC/htm/BC.71.htm) · [CPA API Documentation (franchise tax account fields: right to transact business, SOS registration status, registered agent and office, DBA name, report year, officers)](https://api-doc.comptroller.texas.gov/public-data/) · [SOSDirect: Business Organizations Inquiry](https://www.sos.state.tx.us/corp/sosda/index.shtml)\n8. **Check the bank accounts against the entity, and against each series** (`check-bank-accounts`): not checked yet\n   Sources: [Texas series LLC: when a series' debts stay with that series](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.101.htm) · [Getting an EIN for a new entity](https://www.irs.gov/instructions/iss4) · [Texas Business Organizations Code, Chapter 101 (Sections 101.052, 101.501, 101.602 to 101.604 and 101.626)](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.101.htm)\n9. **Confirm the beneficial ownership reporting status** (`confirm-boi-status`): not checked yet\n   Sources: [Beneficial ownership reporting: companies created in the U.S. are exempt](https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-C/section-1010.380) · [Beneficial Ownership Information Reporting (alert updated August 11, 2026)](https://www.fincen.gov/boi)\n10. **Confirm who the firm's counsel represents** (`confirm-counsel-client`): not checked yet\n   Sources: none listed for this check\n11. **Build the filing calendar** (`build-filing-calendar`): not checked yet\n   Sources: [Texas franchise tax: who is taxable, when reports are due, and the no-tax-due threshold](https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm) · [Texas franchise tax: the May 15 due date, weekends and holidays, and extensions](https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm) · [Texas assumed name certificates for an LLC or a registered series](https://statutes.capitol.texas.gov/Docs/BC/htm/BC.71.htm) · [Texas registered agent: resignation, duties, and what happens when there is none](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.5.htm) · [Beneficial ownership reporting: companies created in the U.S. are exempt](https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-C/section-1010.380) · [Franchise Tax (due dates and forfeiture notices)](https://comptroller.texas.gov/taxes/franchise/) · [Texas Tax Code, Chapter 111 (Section 111.053, filing dates on weekends and holidays)](https://statutes.capitol.texas.gov/Docs/TX/htm/TX.111.htm) · [Texas Tax Code, Chapter 171 (Sections 171.202, 171.203, 171.251 to 171.258, 171.302 and 171.309)](https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm) · [Franchise Tax Extensions of Time to File](https://comptroller.texas.gov/taxes/franchise/filing-extensions.php) · [Texas Business and Commerce Code, Chapter 71, Assumed Business or Professional Name Act](https://statutes.capitol.texas.gov/Docs/BC/htm/BC.71.htm)\n\nNot legal, tax or investment advice. Each check lists its sources, or says it rests on common practice.\n"
+        },
+        {
+          "path": "audit/audit-entity-standing-2026-11-13/sheet-principal.md",
+          "text": "# Open findings for the principal\n\nFrom audit audit-entity-standing-2026-11-13 (Audit the entity's standing) of Example Sponsor LLC, written 2026-11-13. 1 finding is yours to fix.\n\n## f-1: Only an unsigned draft of the company agreement is on file (high)\n\nWhat was found: Made-up example: drafts/company-agreement-draft.pdf has no signatures.\n\nFrom the check: Confirm the company agreement in effect matches the entity as filed (`match-company-agreement`)\n\nRules and sources behind it:\n- [Forming a Texas LLC: the certificate of formation, the name and the fee](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.3.htm)\n- [Texas series LLC: when a series' debts stay with that series](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.101.htm)\n- [Texas Business Organizations Code, Chapter 101 (Sections 101.052, 101.501, 101.602 to 101.604 and 101.626)](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.101.htm)\n- [Texas Business Organizations Code, Chapter 3 (Sections 3.005, 3.010, 3.051 to 3.056 and 3.151)](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.3.htm)\n\nDue: no date set\n\nNot legal, tax or investment advice. Each check lists its sources, or says it rests on common practice.\n"
+        }
+      ]
+    },
+    {
+      "id": "deadlines",
+      "title": "Track deadlines",
+      "summary": "The engine works out the firm's filing dates from the rules and puts them on a calendar the operator can import.",
+      "steps": [
+        {
+          "command": "pcre deadline compute --franchise-report-year 2027 --franchise-report-through 2029",
+          "by": null,
+          "exit": 0,
+          "output": "Added 3, already on the calendar 0.\n  + 2027-05-17  Texas franchise tax report and Public Information Report due (2027)  [texas-franchise-report-2027-05-17]\n  + 2028-05-15  Texas franchise tax report and Public Information Report due (2028)  [texas-franchise-report-2028-05-15]\n  + 2029-05-15  Texas franchise tax report and Public Information Report due (2029)  [texas-franchise-report-2029-05-15]\nEvery computed date is flagged for review: check it against its rule before relying on it.\n",
+          "caption": "Three years of state franchise tax report dates were worked out from the rule, each flagged for a person to check."
+        },
+        {
+          "command": "pcre deadline list",
+          "by": null,
+          "exit": 0,
+          "output": "3 deadlines: 0 overdue, 0 due soon (today 2026-11-13)\n2027-05-17  185 days left     Texas franchise tax report and Public Information Report due (2027) (check)  [texas-franchise-report-2027-05-17]\n2028-05-15  549 days left     Texas franchise tax report and Public Information Report due (2028) (check)  [texas-franchise-report-2028-05-15]\n2029-05-15  914 days left     Texas franchise tax report and Public Information Report due (2029) (check)  [texas-franchise-report-2029-05-15]\n",
+          "caption": "Every open deadline, with how many days are left, counted from today."
+        },
+        {
+          "command": "pcre deadline export",
+          "by": null,
+          "exit": 0,
+          "output": "Wrote 3 events to firm/calendar.ics\nImport it into your calendar app; export again after any change.\n",
+          "caption": "The dates were written to a calendar file that any calendar app can import."
+        }
+      ],
+      "files": [
+        {
+          "path": "calendar.ics",
+          "text": "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//PromptedCRE//Deadlines//EN\nCALSCALE:GREGORIAN\nBEGIN:VEVENT\nUID:texas-franchise-report-2027-05-17@promptedcre\nDTSTAMP:20261113T153000Z\nDTSTART;VALUE=DATE:20270517\nDTEND;VALUE=DATE:20270518\nSUMMARY:Texas franchise tax report and Public Information Report due (2027)\nDESCRIPTION:Rule: us-tx.franchise-tax.due-date-extension (Texas franchise t\n ax: the May 15 due date\\, weekends and holidays\\, and extensions)\\nHow the\n  date was worked out: May 15\\, 2027\\; moved from 2027-05-15 past Saturday \n 2027-05-15\\; Sunday 2027-05-16\\nNote: Moved only for a weekend. The law al\n so moves it off a legal holiday on the Comptroller's yearly list\\; check t\n hat list. An extension to November 15 is requested\\, with payment\\, by thi\n s date.\\nCheck this date before relying on it.\nTRANSP:TRANSPARENT\nEND:VEVENT\nBEGIN:VEVENT\nUID:texas-franchise-report-2028-05-15@promptedcre\nDTSTAMP:20261113T153000Z\nDTSTART;VALUE=DATE:20280515\nDTEND;VALUE=DATE:20280516\nSUMMARY:Texas franchise tax report and Public Information Report due (2028)\nDESCRIPTION:Rule: us-tx.franchise-tax.due-date-extension (Texas franchise t\n ax: the May 15 due date\\, weekends and holidays\\, and extensions)\\nHow the\n  date was worked out: May 15\\, 2028\\nNote: Moved only for a weekend. The l\n aw also moves it off a legal holiday on the Comptroller's yearly list\\; ch\n eck that list. An extension to November 15 is requested\\, with payment\\, b\n y this date.\\nCheck this date before relying on it.\nTRANSP:TRANSPARENT\nEND:VEVENT\nBEGIN:VEVENT\nUID:texas-franchise-report-2029-05-15@promptedcre\nDTSTAMP:20261113T153000Z\nDTSTART;VALUE=DATE:20290515\nDTEND;VALUE=DATE:20290516\nSUMMARY:Texas franchise tax report and Public Information Report due (2029)\nDESCRIPTION:Rule: us-tx.franchise-tax.due-date-extension (Texas franchise t\n ax: the May 15 due date\\, weekends and holidays\\, and extensions)\\nHow the\n  date was worked out: May 15\\, 2029\\nNote: Moved only for a weekend. The l\n aw also moves it off a legal holiday on the Comptroller's yearly list\\; ch\n eck that list. An extension to November 15 is requested\\, with payment\\, b\n y this date.\\nCheck this date before relying on it.\nTRANSP:TRANSPARENT\nEND:VEVENT\nEND:VCALENDAR\n"
+        }
+      ]
+    },
+    {
+      "id": "deal",
+      "title": "Move a deal",
+      "summary": "A deal moves through the acquisition playbooks, and only a person can decide to take it to the next stage.",
+      "steps": [
+        {
+          "command": "pcre deal add deal-elm --label \"The warehouse on Elm\"",
+          "by": null,
+          "exit": 0,
+          "output": "Added deal deal-elm: The warehouse on Elm\nstage: 1 of 6: Screen a deal against the buy box\nnext: pcre run next --subject deal-elm\n",
+          "caption": "A made-up deal is added, and its first playbook, screening it against the buy box, starts on its own."
+        },
+        {
+          "command": "pcre deal show deal-elm",
+          "by": null,
+          "exit": 0,
+          "output": "deal-elm: The warehouse on Elm  active\nstage: 1 of 6: Screen a deal against the buy box (open)\n  1. open        0/12  Screen a deal against the buy box\n  2. not-started 0/12  Underwrite a deal\n  3. not-started 0/10  Submit a letter of intent\n  4. not-started 0/12  Negotiate and sign the purchase contract\n  5. not-started 0/13  Run due diligence\n  6. not-started 0/12  Finance and close the acquisition\nnext: pcre run next --subject deal-elm\n",
+          "caption": "The deal's six stages, from screening to closing, with where it stands now."
+        },
+        {
+          "command": "pcre deal advance deal-elm --note \"Fits the buy box\"",
+          "by": null,
+          "exit": 1,
+          "output": "Deal: only a person can advance. Ask the person and wait. Once they say yes, record it in their name with --by \"<name>\".\n",
+          "caption": "The agent tried to move the deal forward. Going on is a person's decision, so the engine refused."
+        },
+        {
+          "command": "pcre decision list",
+          "by": null,
+          "exit": 0,
+          "output": "  1. 2026-02-01  Alex Example  Raise the first deal as a single-asset syndication under Rule 506(b).\n",
+          "caption": "The decision log keeps what people decided; the refused move added nothing to it."
+        },
+        {
+          "command": "pcre firm status",
+          "by": null,
+          "exit": 0,
+          "output": "Example Sponsor LLC · llc, TX, formed · syndication\nRuns: 2 open, 0 complete · 4 steps ready · 0 blocked\n  file-form-d-and-state-notices  open  4/14 done\n  deal-elm:screen-deal-buy-box  open  0/12 done\nAudits: 1 open, 0 closed · 1 open finding (1 high, 0 medium, 0 low)\n  audit-entity-standing-2026-11-13: 1 of 11 checks clear · 1 finding · 9 not checked yet\nDeadlines: 3 open · 0 overdue · 0 due soon\n  2027-05-17  185 d  Texas franchise tax report and Public Information Report due (2027)\n  2028-05-15  549 d  Texas franchise tax report and Public Information Report due (2028)\n  2029-05-15  914 d  Texas franchise tax report and Public Information Report due (2029)\nDeals: 1 active, 0 completed, 0 dropped\n  deal-elm  1 of 6: Screen a deal against the buy box\nLog: 16 changes; last deal.add by agent at 2026-11-13 09:30\nNext: pcre run next · pcre audit next · pcre deadline list · pcre deal list\n",
+          "caption": "The firm's whole picture after the session: the playbook, the audit, the deadlines and the deal."
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": "audit-finished",
+      "title": "Finish the audit",
+      "summary": "The audit is taken to the end, check by check, and closes with a report a partner or counsel can read.",
+      "steps": [
+        {
+          "command": "pcre audit next",
+          "by": null,
+          "exit": 0,
+          "output": "confirm-registered-agent: Confirm the registered agent on file and that the service is current\n  a person (principal) records it clear\n  pcre audit record confirm-registered-agent --audit audit-entity-standing-2026-11-13 --outcome clear --evidence \"<where the proof is>\" --by \"<name>\"\nconfirm-franchise-reports: Confirm franchise tax reports and information reports are filed\n  a person (cpa) records it clear\n  pcre audit record confirm-franchise-reports --audit audit-entity-standing-2026-11-13 --outcome clear --evidence \"<where the proof is>\" --by \"<name>\"\nmatch-legal-name: Match the legal name across the filing, bank, tax and investor records\n  an agent can verify it\n  pcre audit record match-legal-name --audit audit-entity-standing-2026-11-13 --outcome clear --evidence \"<where the proof is>\"\nconfirm-boi-status: Confirm the beneficial ownership reporting status\n  an agent can verify it\n  pcre audit record confirm-boi-status --audit audit-entity-standing-2026-11-13 --outcome clear --evidence \"<where the proof is>\"\nconfirm-counsel-client: Confirm who the firm's counsel represents\n  a person (counsel) records it clear\n  pcre audit record confirm-counsel-client --audit audit-entity-standing-2026-11-13 --outcome clear --evidence \"<where the proof is>\" --by \"<name>\"\n",
+          "caption": "Back to the open audit: the engine lists the checks still waiting and who can record each one."
+        },
+        {
+          "command": "pcre audit record confirm-registered-agent --outcome clear --evidence drafts/registered-agent-invoice.pdf --by \"Alex Example\"",
+          "by": "Alex Example",
+          "exit": 0,
+          "output": "confirm-registered-agent: clear\n2 of 11 checks clear · 1 finding · 8 not checked yet\nReady now: confirm-franchise-reports, match-legal-name, confirm-boi-status, confirm-counsel-client\n",
+          "caption": "Alex Example confirmed the registered agent's service is paid and recorded it clear, with the invoice as proof."
+        },
+        {
+          "command": "pcre audit record confirm-franchise-reports --outcome finding --title \"No Public Information Report on file for the 2025 report year\" --detail \"Made-up example: the filed copies hold the 2025 franchise tax report, but no Public Information Report for that year.\" --due 2026-12-15 --by cpa",
+          "by": "cpa",
+          "exit": 0,
+          "output": "confirm-franchise-reports: finding  (opened f-2, high, cpa fixes it)\n2 of 11 checks clear · 2 findings · 7 not checked yet\nReady now: match-legal-name, confirm-boi-status, confirm-counsel-client\n",
+          "caption": "The CPA found one information report missing from the filed copies. It became a finding the CPA owns, with a date to fix it by."
+        },
+        {
+          "command": "pcre audit record match-legal-name --outcome clear --evidence drafts/legal-name-comparison.pdf",
+          "by": null,
+          "exit": 0,
+          "output": "match-legal-name: clear\n3 of 11 checks clear · 2 findings · 6 not checked yet\nReady now: check-amendments-and-former-names, check-assumed-names, check-bank-accounts, confirm-boi-status, confirm-counsel-client\n",
+          "caption": "The agent compared the legal name across the filing, bank, tax and investor records, and every one matched."
+        },
+        {
+          "command": "pcre audit record check-amendments-and-former-names --outcome clear --evidence drafts/amendment-history.pdf",
+          "by": null,
+          "exit": 0,
+          "output": "check-amendments-and-former-names: clear\n4 of 11 checks clear · 2 findings · 5 not checked yet\nReady now: check-assumed-names, check-bank-accounts, confirm-boi-status, confirm-counsel-client\n",
+          "caption": "The agent checked the firm's amendments against its other records and found nothing out of step."
+        },
+        {
+          "command": "pcre audit record check-assumed-names --outcome finding --title \"An assumed name in use has no certificate on file\" --detail \"Made-up example: the website and letterhead say Example Sponsor Partners, and the firm's files hold no assumed name certificate for it.\" --owner counsel --due 2027-01-15",
+          "by": null,
+          "exit": 0,
+          "output": "check-assumed-names: finding  (opened f-3, medium, counsel fixes it)\n4 of 11 checks clear · 3 findings · 4 not checked yet\nReady now: check-bank-accounts, confirm-boi-status, confirm-counsel-client\n",
+          "caption": "The agent found a trade name in use with no certificate on file, and named counsel as the one to fix it, with a due date."
+        },
+        {
+          "command": "pcre audit record check-bank-accounts --outcome unverified --note \"Made-up example: only one of the two bank statements was supplied, so the second account's title and EIN were not compared.\"",
+          "by": null,
+          "exit": 0,
+          "output": "check-bank-accounts: unverified\n4 of 11 checks clear · 3 findings · 1 unverified · 3 not checked yet\nReady now: confirm-boi-status, confirm-counsel-client\n",
+          "caption": "One bank statement never arrived, so the agent recorded the check as unverified and said what was missing."
+        },
+        {
+          "command": "pcre audit record confirm-boi-status --outcome clear --evidence drafts/fincen-boi-page.pdf",
+          "by": null,
+          "exit": 0,
+          "output": "confirm-boi-status: clear\n5 of 11 checks clear · 3 findings · 1 unverified · 2 not checked yet\nReady now: confirm-counsel-client, build-filing-calendar\n",
+          "caption": "The agent read the federal beneficial ownership page and confirmed the firm still has no report to file."
+        },
+        {
+          "command": "pcre audit record confirm-counsel-client --outcome clear --evidence drafts/engagement-letter.pdf --by counsel",
+          "by": "counsel",
+          "exit": 0,
+          "output": "confirm-counsel-client: clear\n6 of 11 checks clear · 3 findings · 1 unverified · 1 not checked yet\nReady now: build-filing-calendar\n",
+          "caption": "Counsel confirmed whom it represents and recorded the check itself, which the agent could not do earlier."
+        },
+        {
+          "command": "pcre audit record build-filing-calendar --outcome clear --evidence calendar.ics",
+          "by": null,
+          "exit": 0,
+          "output": "build-filing-calendar: clear\n7 of 11 checks clear · 3 findings · 1 unverified\nNothing else is ready now.\n",
+          "caption": "The agent built the filing calendar from the checks above. That was the last check."
+        },
+        {
+          "command": "pcre audit score",
+          "by": null,
+          "exit": 0,
+          "output": "audit-entity-standing-2026-11-13: 7 of 11 checks clear · 3 findings · 1 unverified\nOpen findings: 3 (2 high, 1 medium, 0 low)\nCovers: Audit the entity's standing\nNot covered: Audit past capital raises (listed, not written yet); Operate (no audit yet); Report (no audit yet)\n",
+          "caption": "Every check has an answer now. The score counts what was verified, what was found and what could not be confirmed."
+        },
+        {
+          "command": "pcre finding fix f-1 --note drafts/company-agreement-signed.pdf --by \"Alex Example\"",
+          "by": "Alex Example",
+          "exit": 0,
+          "output": "audit-entity-standing-2026-11-13/f-1: fixed on 2026-11-13\n2 open findings left in this audit.\n",
+          "caption": "Alex Example had the company agreement signed and recorded the first finding as fixed, with where the signed copy is."
+        },
+        {
+          "command": "pcre audit score",
+          "by": null,
+          "exit": 0,
+          "output": "audit-entity-standing-2026-11-13: 7 of 11 checks clear · 3 findings · 1 unverified\nOpen findings: 2 (1 high, 1 medium, 0 low)\nCovers: Audit the entity's standing\nNot covered: Audit past capital raises (listed, not written yet); Operate (no audit yet); Report (no audit yet)\n",
+          "caption": "The fixed finding is off the open list; the score still shows every check as it was found."
+        },
+        {
+          "command": "pcre audit report",
+          "by": null,
+          "exit": 0,
+          "output": "Wrote 3 file(s) for audit-entity-standing-2026-11-13:\n  firm/audit/audit-entity-standing-2026-11-13/findings.md\n  firm/audit/audit-entity-standing-2026-11-13/sheet-counsel.md\n  firm/audit/audit-entity-standing-2026-11-13/sheet-cpa.md\n7 of 11 checks clear · 3 findings · 1 unverified\n",
+          "caption": "The report is written: a findings file for a partner or counsel, and a to-do sheet for each person with something to fix."
+        },
+        {
+          "command": "pcre audit close",
+          "by": null,
+          "exit": 0,
+          "output": "Closed audit-entity-standing-2026-11-13 on 2026-11-13.\n7 of 11 checks clear · 3 findings · 1 unverified\n2 open findings stay on record.\n",
+          "caption": "The audit is closed. The two open findings stay on record until their owners fix them."
+        }
+      ],
+      "files": [
+        {
+          "path": "audit/audit-entity-standing-2026-11-13/findings.md",
+          "text": "# Audit the entity's standing\n\nAudit audit-entity-standing-2026-11-13 of Example Sponsor LLC. Opened 2026-11-13; still open. Written 2026-11-13.\n\n**Score:** 7 of 11 checks clear · 3 findings · 1 unverified\n\n## Findings\n\n| id | severity | what | who fixes it | due | status |\n|---|---|---|---|---|---|\n| f-1 | high | Only an unsigned draft of the company agreement is on file | principal | not set | fixed |\n| f-2 | high | No Public Information Report on file for the 2025 report year | cpa | 2026-12-15 | open |\n| f-3 | medium | An assumed name in use has no certificate on file | counsel | 2027-01-15 | open |\n\n## Checks\n\n1. **Confirm the entity's status in the state's public record** (`confirm-state-status`): clear, 2026-11-13, by agent\n   Evidence: drafts/state-status-lookup.pdf\n   Sources: [Texas franchise tax forfeiture: losing the right to transact business](https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm) · [Forming a Texas LLC: the certificate of formation, the name and the fee](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.3.htm) · [Franchise Tax Account Status Search](https://comptroller.texas.gov/taxes/franchise/account-status/search) · [Franchise Tax Account Status](https://comptroller.texas.gov/taxes/franchise/coas-instructions.php) · [CPA API Documentation (franchise tax account fields: right to transact business, SOS registration status, registered agent and office, DBA name, report year, officers)](https://api-doc.comptroller.texas.gov/public-data/) · [SOSDirect: Business Organizations Inquiry](https://www.sos.state.tx.us/corp/sosda/index.shtml) · [Texas Tax Code, Chapter 171 (Sections 171.202, 171.203, 171.251 to 171.258, 171.302 and 171.309)](https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm)\n2. **Confirm the registered agent on file and that the service is current** (`confirm-registered-agent`): clear, 2026-11-13, by Alex Example\n   Evidence: drafts/registered-agent-invoice.pdf\n   Sources: [Texas registered agent and registered office](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.5.htm) · [Texas registered agent: resignation, duties, and what happens when there is none](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.5.htm) · [Texas Business Organizations Code, Chapter 5 (Sections 5.201 to 5.206 and 5.251, registered agents)](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.5.htm) · [Texas Business Organizations Code, Chapter 11 (Section 11.251, termination by the Secretary of State)](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.11.htm) · [CPA API Documentation (franchise tax account fields: right to transact business, SOS registration status, registered agent and office, DBA name, report year, officers)](https://api-doc.comptroller.texas.gov/public-data/)\n3. **Confirm franchise tax reports and information reports are filed** (`confirm-franchise-reports`): finding, 2026-11-13, by cpa\n   Sources: [Texas franchise tax: who is taxable, when reports are due, and the no-tax-due threshold](https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm) · [Texas franchise tax: the May 15 due date, weekends and holidays, and extensions](https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm) · [Texas franchise tax forfeiture: losing the right to transact business](https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm) · [Franchise Tax (due dates and forfeiture notices)](https://comptroller.texas.gov/taxes/franchise/) · [Franchise Tax Public Information Report and Ownership Information Report Filing Requirements](https://comptroller.texas.gov/taxes/franchise/pir-oir-filing-req.php) · [Tax Notices and Resolving Problems With Your Account (franchise tax forfeiture notices)](https://comptroller.texas.gov/taxes/franchise/notices.php) · [Texas Tax Code, Chapter 171 (Sections 171.202, 171.203, 171.251 to 171.258, 171.302 and 171.309)](https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm) · [34 Tex. Admin. Code 3.584, Margin: Reports and Payments](https://www.law.cornell.edu/regulations/texas/34-Tex-Admin-Code-SS-3-584)\n4. **Match the legal name across the filing, bank, tax and investor records** (`match-legal-name`): clear, 2026-11-13, by agent\n   Evidence: drafts/legal-name-comparison.pdf\n   Sources: [Forming a Texas LLC: the certificate of formation, the name and the fee](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.3.htm) · [Getting an EIN for a new entity](https://www.irs.gov/instructions/iss4) · [Texas Business Organizations Code, Chapter 3 (Sections 3.005, 3.010, 3.051 to 3.056 and 3.151)](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.3.htm) · [Business name change](https://www.irs.gov/businesses/business-name-change)\n5. **Confirm the company agreement in effect matches the entity as filed** (`match-company-agreement`): finding, 2026-11-13, by agent\n   Sources: [Forming a Texas LLC: the certificate of formation, the name and the fee](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.3.htm) · [Texas series LLC: when a series' debts stay with that series](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.101.htm) · [Texas Business Organizations Code, Chapter 101 (Sections 101.052, 101.501, 101.602 to 101.604 and 101.626)](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.101.htm) · [Texas Business Organizations Code, Chapter 3 (Sections 3.005, 3.010, 3.051 to 3.056 and 3.151)](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.3.htm)\n6. **Check that amendments and former names are reflected everywhere** (`check-amendments-and-former-names`): clear, 2026-11-13, by agent\n   Evidence: drafts/amendment-history.pdf\n   Sources: [Amending a Texas certificate of formation, including a name change](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.3.htm) · [Getting an EIN for a new entity](https://www.irs.gov/instructions/iss4) · [Texas Business Organizations Code, Chapter 3 (Sections 3.005, 3.010, 3.051 to 3.056 and 3.151)](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.3.htm) · [Business name change](https://www.irs.gov/businesses/business-name-change) · [SOSDirect: Business Organizations Inquiry](https://www.sos.state.tx.us/corp/sosda/index.shtml)\n7. **Check that any assumed name in use has a certificate** (`check-assumed-names`): finding, 2026-11-13, by agent\n   Sources: [Texas assumed name certificates for an LLC or a registered series](https://statutes.capitol.texas.gov/Docs/BC/htm/BC.71.htm) · [Texas Business and Commerce Code, Chapter 71, Assumed Business or Professional Name Act](https://statutes.capitol.texas.gov/Docs/BC/htm/BC.71.htm) · [CPA API Documentation (franchise tax account fields: right to transact business, SOS registration status, registered agent and office, DBA name, report year, officers)](https://api-doc.comptroller.texas.gov/public-data/) · [SOSDirect: Business Organizations Inquiry](https://www.sos.state.tx.us/corp/sosda/index.shtml)\n8. **Check the bank accounts against the entity, and against each series** (`check-bank-accounts`): unverified, 2026-11-13, by agent\n   Note: Made-up example: only one of the two bank statements was supplied, so the second account's title and EIN were not compared.\n   Sources: [Texas series LLC: when a series' debts stay with that series](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.101.htm) · [Getting an EIN for a new entity](https://www.irs.gov/instructions/iss4) · [Texas Business Organizations Code, Chapter 101 (Sections 101.052, 101.501, 101.602 to 101.604 and 101.626)](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.101.htm)\n9. **Confirm the beneficial ownership reporting status** (`confirm-boi-status`): clear, 2026-11-13, by agent\n   Evidence: drafts/fincen-boi-page.pdf\n   Sources: [Beneficial ownership reporting: companies created in the U.S. are exempt](https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-C/section-1010.380) · [Beneficial Ownership Information Reporting (alert updated August 11, 2026)](https://www.fincen.gov/boi)\n10. **Confirm who the firm's counsel represents** (`confirm-counsel-client`): clear, 2026-11-13, by counsel\n   Evidence: drafts/engagement-letter.pdf\n   Sources: none listed for this check\n11. **Build the filing calendar** (`build-filing-calendar`): clear, 2026-11-13, by agent\n   Evidence: calendar.ics\n   Sources: [Texas franchise tax: who is taxable, when reports are due, and the no-tax-due threshold](https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm) · [Texas franchise tax: the May 15 due date, weekends and holidays, and extensions](https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm) · [Texas assumed name certificates for an LLC or a registered series](https://statutes.capitol.texas.gov/Docs/BC/htm/BC.71.htm) · [Texas registered agent: resignation, duties, and what happens when there is none](https://statutes.capitol.texas.gov/Docs/BO/htm/BO.5.htm) · [Beneficial ownership reporting: companies created in the U.S. are exempt](https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-C/section-1010.380) · [Franchise Tax (due dates and forfeiture notices)](https://comptroller.texas.gov/taxes/franchise/) · [Texas Tax Code, Chapter 111 (Section 111.053, filing dates on weekends and holidays)](https://statutes.capitol.texas.gov/Docs/TX/htm/TX.111.htm) · [Texas Tax Code, Chapter 171 (Sections 171.202, 171.203, 171.251 to 171.258, 171.302 and 171.309)](https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm) · [Franchise Tax Extensions of Time to File](https://comptroller.texas.gov/taxes/franchise/filing-extensions.php) · [Texas Business and Commerce Code, Chapter 71, Assumed Business or Professional Name Act](https://statutes.capitol.texas.gov/Docs/BC/htm/BC.71.htm)\n\nNot legal, tax or investment advice. Each check lists its sources, or says it rests on common practice.\n"
+        },
+        {
+          "path": "audit/audit-entity-standing-2026-11-13/sheet-counsel.md",
+          "text": "# Open findings for the counsel\n\nFrom audit audit-entity-standing-2026-11-13 (Audit the entity's standing) of Example Sponsor LLC, written 2026-11-13. 1 finding is yours to fix.\n\n## f-3: An assumed name in use has no certificate on file (medium)\n\nWhat was found: Made-up example: the website and letterhead say Example Sponsor Partners, and the firm's files hold no assumed name certificate for it.\n\nFrom the check: Check that any assumed name in use has a certificate (`check-assumed-names`)\n\nRules and sources behind it:\n- [Texas assumed name certificates for an LLC or a registered series](https://statutes.capitol.texas.gov/Docs/BC/htm/BC.71.htm)\n- [Texas Business and Commerce Code, Chapter 71, Assumed Business or Professional Name Act](https://statutes.capitol.texas.gov/Docs/BC/htm/BC.71.htm)\n- [CPA API Documentation (franchise tax account fields: right to transact business, SOS registration status, registered agent and office, DBA name, report year, officers)](https://api-doc.comptroller.texas.gov/public-data/)\n- [SOSDirect: Business Organizations Inquiry](https://www.sos.state.tx.us/corp/sosda/index.shtml)\n\nDue: 2027-01-15\n\nNot legal, tax or investment advice. Each check lists its sources, or says it rests on common practice.\n"
+        },
+        {
+          "path": "audit/audit-entity-standing-2026-11-13/sheet-cpa.md",
+          "text": "# Open findings for the cpa\n\nFrom audit audit-entity-standing-2026-11-13 (Audit the entity's standing) of Example Sponsor LLC, written 2026-11-13. 1 finding is yours to fix.\n\n## f-2: No Public Information Report on file for the 2025 report year (high)\n\nWhat was found: Made-up example: the filed copies hold the 2025 franchise tax report, but no Public Information Report for that year.\n\nFrom the check: Confirm franchise tax reports and information reports are filed (`confirm-franchise-reports`)\n\nRules and sources behind it:\n- [Texas franchise tax: who is taxable, when reports are due, and the no-tax-due threshold](https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm)\n- [Texas franchise tax: the May 15 due date, weekends and holidays, and extensions](https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm)\n- [Texas franchise tax forfeiture: losing the right to transact business](https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm)\n- [Franchise Tax (due dates and forfeiture notices)](https://comptroller.texas.gov/taxes/franchise/)\n- [Franchise Tax Public Information Report and Ownership Information Report Filing Requirements](https://comptroller.texas.gov/taxes/franchise/pir-oir-filing-req.php)\n- [Tax Notices and Resolving Problems With Your Account (franchise tax forfeiture notices)](https://comptroller.texas.gov/taxes/franchise/notices.php)\n- [Texas Tax Code, Chapter 171 (Sections 171.202, 171.203, 171.251 to 171.258, 171.302 and 171.309)](https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm)\n- [34 Tex. Admin. Code 3.584, Margin: Reports and Payments](https://www.law.cornell.edu/regulations/texas/34-Tex-Admin-Code-SS-3-584)\n\nDue: 2026-12-15\n\nNot legal, tax or investment advice. Each check lists its sources, or says it rests on common practice.\n"
+        }
+      ]
+    }
+  ]
+}

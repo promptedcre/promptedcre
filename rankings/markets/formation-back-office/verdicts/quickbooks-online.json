@@ -1,0 +1,163 @@
+{
+  "vendor": "quickbooks-online",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "c72d7a2ca1e739dc534802471c7e7adfbd3922782948219fe6d4fb0cea6e9493",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "c1",
+        "c2",
+        "c3",
+        "c8",
+        "p2"
+      ],
+      "rationale": "The public developer docs index (probe-confirmed live) says the API Explorer references all QuickBooks Online Accounting API entities, that apps read and update entities as their scopes allow, and that the API exchanges JSON and accepts batched requests.",
+      "missing": "The entity reference pages are script-rendered and their content is not in the pack, so the specific read and write operations on core records are not shown directly."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "p3",
+        "p4",
+        "c10",
+        "c11"
+      ],
+      "rationale": "A QuickBooks MCP Server repository in the intuit GitHub organization resolves live and is not archived (last push 2026-09-15), and its instructions say you must set up an app and that the server authenticates to a QuickBooks Online company with OAuth 2.0.",
+      "missing": "Only fragments of the setup are shown (app creation, OAuth 2.0), not complete install and configuration steps; the pack does not show which QuickBooks entities or operations the server exposes, and no vendor developer-docs page in the pack mentions it."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "full",
+      "quality": 9,
+      "evidence": [
+        "c7",
+        "p5",
+        "p6"
+      ],
+      "rationale": "The developer docs describe a QuickBooks Online Java SDK, and its public repository (intuit/QuickBooks-V3-Java-SDK) is not archived and was last pushed 2026-08-03, alongside a vendor NodeJS OAuth client repository.",
+      "missing": "The pack shows repository descriptions and activity only, not a package-registry listing, the docs linking to that repository, the SDK's coverage of the API, or any CLI."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "full",
+      "quality": 6,
+      "evidence": [
+        "c4"
+      ],
+      "rationale": "The developer docs say apps can use webhooks to receive event-triggered callbacks for the entities they need to track.",
+      "missing": "The pack does not list which entities or operations trigger webhooks, or show the subscription setup and payload format."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "c3",
+        "c10",
+        "c11"
+      ],
+      "rationale": "Credentials come from an app authenticating with OAuth 2.0 (there are no per-user API keys), and the docs say scopes determine which types of data and entities an app can read and update.",
+      "missing": "The pack does not list the available scopes or show how fine-grained they are, for example whether read-only or per-entity scopes exist."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no OpenAPI, Swagger, GraphQL or other machine-readable API specification; it mentions only an API Explorer reference.",
+      "missing": "No downloadable or in-docs machine-readable specification is shown, and the API Explorer is not shown to provide one."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "full",
+      "quality": 10,
+      "evidence": [
+        "p2",
+        "c1"
+      ],
+      "rationale": "A probe confirmed a 165,735-byte llms.txt at developer.intuit.com that indexes the QuickBooks Online developer documentation, including the Accounting API entity references."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c5"
+      ],
+      "rationale": "The developer docs say a developer automatically gets a sandbox company on creating a developer profile.",
+      "missing": "The pack does not show the sandbox documentation itself, such as limits, sample data or parity with production, or state explicitly that developer sign-up is free and open to anyone."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no self-serve export or bulk download of customer records in CSV, Excel, JSON or another open format; the only bulk-related item concerns batching API requests, which is not an export feature.",
+      "missing": "No export feature, export format or bulk-download documentation for QuickBooks Online records is shown."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "c12",
+        "c13"
+      ],
+      "rationale": "The public pricing page offers a 30-day free trial and lists monthly prices for Simple Start, Essentials, Plus and Advanced.",
+      "missing": "The pack does not show the sign-up flow itself or state outright that no sales call is needed."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c13"
+      ],
+      "rationale": "The public pricing page lists Simple Start at $38 per month ($19 per month at 50% off for the first 3 months) and also lists Essentials, Plus and Advanced prices.",
+      "missing": "Only the Simple Start price is quoted; the Essentials, Plus and Advanced prices are noted as listed but not quoted, and the asterisked promotion terms are not shown."
+    },
+    {
+      "story": "fb-start",
+      "verdict": "full",
+      "quality": 5,
+      "evidence": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "rationale": "The developer docs say the Accounting API references all entities, that apps can read and update entities within their scopes, and that the Accounting and Payments APIs send and receive JSON, which indicates the core transaction can be created through the API.",
+      "missing": "No item names the invoice or payment create operation or shows its endpoint; creating the core transaction is inferred from general write access and the existence of a Payments API."
+    },
+    {
+      "story": "fb-status",
+      "verdict": "full",
+      "quality": 4,
+      "evidence": [
+        "c1",
+        "c3",
+        "c4"
+      ],
+      "rationale": "The developer docs say apps can read all Accounting API entities and receive webhook callbacks on entity events, through which transaction state can be checked, though no item names a status field or endpoint.",
+      "missing": "No item shows the API returning the status of an invoice or payment, or names status fields, payment-status endpoints or the events that webhooks report."
+    },
+    {
+      "story": "fb-records",
+      "verdict": "full",
+      "quality": 5,
+      "evidence": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "rationale": "The developer docs say the Accounting API references all entities and lets apps read them as JSON, so recorded transactions can be retrieved programmatically, though no finished documents are shown.",
+      "missing": "No item shows retrieval of finished documents such as statements, financial reports or invoice PDFs; only general read access to entities is shown."
+    }
+  ]
+}

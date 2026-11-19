@@ -1,0 +1,150 @@
+{
+  "vendor": "relay",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "e839018e1ca90667f0ca46f7bf1c65d55456467e75ae921804c5c665d60f2ef8",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c1",
+        "c2"
+      ],
+      "rationale": "Relay's help article states it does not currently offer a public API and that public API access is not available (c1, c2), and the coverage check found only an end-user help center with no developer docs.",
+      "missing": "Any public API documentation for reading or changing accounts, transactions or payments."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "partial",
+      "quality": 7,
+      "evidence": [
+        "p2",
+        "c4",
+        "c3",
+        "c5"
+      ],
+      "rationale": "The vendor's help article on connecting Relay to Claude or ChatGPT resolves (p2) and describes its Relay Financial connector, but c4 says the connector is in beta for only a small group of customers and c3 says it is read-only.",
+      "missing": "The quoted text calls it a connector and never names MCP (only the probe labels it an MCP page), shows no setup steps beyond signing in and choosing access (c5), and gives no sign of general availability."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item in the pack shows a vendor SDK or CLI, and the coverage check found no developer documentation.",
+      "missing": "Any vendor-maintained SDK or command-line tool on a public package registry or repository."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item in the pack shows webhooks or event subscriptions, and na does not apply because Relay accounts and transactions change on the customer's behalf.",
+      "missing": "Any documented webhook, event subscription or change feed for accounts, transactions or payments."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "partial",
+      "quality": 4,
+      "evidence": [
+        "c5",
+        "c4"
+      ],
+      "rationale": "c5 says a user connecting the assistant signs in, picks which businesses to share and chooses exactly what the assistant may access, but the pack shows no API keys, OAuth clients or documented scope list, and the connector is a small-group beta (c4).",
+      "missing": "The credential type behind the connector, a documented list of scopes or permissions, and any agent credential outside the beta connector, since the pack shows no public API."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c1"
+      ],
+      "rationale": "No item shows an OpenAPI, GraphQL or other machine-readable spec, and c1 states Relay offers no public API to describe.",
+      "missing": "Any public or gated machine-readable API specification."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "partial",
+      "quality": 5,
+      "evidence": [
+        "p1"
+      ],
+      "rationale": "The probe found an llms.txt at relayfi.com (p1, HTTP 200, 2,083 bytes), but the pack shows only its '# Relay' heading, so it is not shown to index the help-center documentation rather than the marketing site.",
+      "missing": "The llms.txt contents beyond its heading, whether it covers the help-center documentation, and any Markdown versions of documentation pages."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item shows a sandbox, test mode or developer environment, and na does not apply because Relay holds customers' own accounts and transactions rather than only published data.",
+      "missing": "Any self-serve or on-request sandbox, test mode or developer environment."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "partial",
+      "quality": 6,
+      "evidence": [
+        "c7"
+      ],
+      "rationale": "c7 says Relay statements can be exported to accounting tools that accept CSV or OFX files, but this is a one-line mention that covers statements only and shows no self-serve export steps.",
+      "missing": "Documented export steps, whether export works in bulk across accounts and periods, and whether records beyond statements can be exported."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item shows a sign-up, account-opening or free-trial flow; the pricing page shows plan prices but not whether a sponsor can start without a sales call.",
+      "missing": "A self-serve sign-up or account-opening flow, a free trial, or a statement that no sales call is required."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c10",
+        "c9"
+      ],
+      "rationale": "The public pricing page lists plans at $0, $30 and $90-120 per month (c10) and says there is no minimum balance and no hidden or overdraft fees (c9).",
+      "missing": "The plan prices come from a collector note rather than a direct quote, the top plan appears only as a $90-120 range, and no specific wire or ACH fees are shown."
+    },
+    {
+      "story": "fb-start",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c1",
+        "c3"
+      ],
+      "rationale": "Relay states it has no public API (c1), and its only agent connector is read-only and does not move money (c3), so the pack shows no programmatic way to start a payment.",
+      "missing": "Any documented API or connector action that creates a payment, transfer or invoice."
+    },
+    {
+      "story": "fb-status",
+      "verdict": "partial",
+      "quality": 3,
+      "evidence": [
+        "c3",
+        "c4"
+      ],
+      "rationale": "c3 says the read-only connector answers questions about the account and its transactions, but it is a small-group beta (c4) and the pack does not show it returning payment status, nor any public API or feed for status.",
+      "missing": "A documented API or structured feed that returns payment or transaction status, and connector availability beyond the beta group."
+    },
+    {
+      "story": "fb-records",
+      "verdict": "partial",
+      "quality": 6,
+      "evidence": [
+        "c6",
+        "c4"
+      ],
+      "rationale": "c6 says the connector can look up a statement and return a secure PDF link, but only statements are shown and the connector is a small-group beta (c4) rather than a documented public API.",
+      "missing": "Retrieval of other finished records such as tax forms or payment confirmations, a documented public API for documents, and availability beyond the beta group."
+    }
+  ]
+}

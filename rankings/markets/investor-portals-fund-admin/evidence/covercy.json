@@ -1,0 +1,118 @@
+{
+  "vendor": "covercy",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://help.covercy.com/",
+      "found": true,
+      "note": "Help Center: user guides for GPs and investors; no developer section"
+    },
+    "api": {
+      "url": "https://www.covercy.com/integrations/",
+      "found": false,
+      "note": "No public API or developer page found; the integrations page lists built-in features and connectors only. A how-to article mentions an 'Integration' or 'API' section inside the logged-in account"
+    },
+    "pricing": {
+      "url": "https://www.covercy.com/pricing/investment-management/",
+      "found": true
+    },
+    "changelog": {
+      "url": "https://www.covercy.com/updates/",
+      "found": true
+    }
+  },
+  "links": {
+    "docs": "https://help.covercy.com/"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://www.covercy.com/pricing/investment-management/",
+      "excerpt": "Pricing is calculated per legal entity.",
+      "fetched": "2026-11-12",
+      "hash": "23689ad2670805f5e1c484088e1480fb7fe11208ee00b588861ea5bbeb9d1e7e"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://www.covercy.com/pricing/investment-management/",
+      "excerpt": "$498 / month $249 / entity / month Start 14-day Trial ( opens in a new tab ) Talk to sales",
+      "fetched": "2026-11-12",
+      "note": "Fundraising Starter tier at the 2-entity setting; Standard shows $566 / month and Professional $812 / month",
+      "hash": "38c8bf27ee64916b64808585c50364339ed979d7cb720b4094e340daf60f64bc"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://www.covercy.com/integrations/",
+      "excerpt": "Connections to external systems like QuickBooks, Rent Manager, Yardi, and your email and calendar sync data automatically once enabled",
+      "fetched": "2026-11-12",
+      "hash": "ee28d6582ade96481a8bd62a6977e6a279e509ddd2a64365008bb42b8a2d4474"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://www.covercy.com/integrations/",
+      "excerpt": "Yes. We regularly add integrations based on what our customers need. Book a demo or contact your account manager",
+      "fetched": "2026-11-12",
+      "note": "Answer to 'Can I request an integration that isn’t listed here?'; no API or webhook page",
+      "hash": "65c3e941a9a26daeedf8cf0fec6da06c17eb5508ca911c15ef294c0506af5824"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://www.covercy.com/how-to-add-an-investor-portal-to-a-website/",
+      "excerpt": "In your Covercy account, go to the “Integration” or “API” section. Here, you will find the code snippet needed to embed the portal",
+      "fetched": "2026-11-12",
+      "note": "Embed snippet inside the logged-in account, not a public API reference",
+      "hash": "cfb5e3003240c6fde8c41517d36c59f0d8d901592ed426a3cceffe416fd804d0"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://www.covercy.com/updates/",
+      "excerpt": "Publishing a report in Report Studio used to send investors nothing, so announcing it meant writing a Communications email by hand.",
+      "fetched": "2026-11-12",
+      "note": "Changelog is dated, detailed and in-app focused; no API entries seen",
+      "hash": "cd5a129a311f446dd7f79b4d270bea07b5ec87d75f9512300dac2ba18ead1624"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://www.covercy.com/llms.txt",
+      "excerpt": "New features, improvements, and fixes shipped in Covercy One, newest first.",
+      "fetched": "2026-11-12",
+      "note": "llms.txt exists and lists marketing and product pages, not API docs",
+      "hash": "28345fe479012451110ce189335a1a0824323701b98d32779127de35f1d6bfe5"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://help.covercy.com/",
+      "excerpt": "FAQs and information about the Covercy GP platform for real estate investment managers",
+      "fetched": "2026-11-12",
+      "hash": "622b42e5378573a85a636ea6579c4dac49de7f8f5a949881a779fea17384425d"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://www.covercy.com/updates/",
+      "excerpt": "The Payment Due tile on the investor portal's Cash Flows page used to net everything you had contributed against everything called",
+      "fetched": "2026-11-12",
+      "note": "Shows capital call funding status is visible in the investor portal UI",
+      "hash": "e3831c225aac1476572a97a6c98f43c6536eb33836bc999ee7f6247e9a72b280"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://www.covercy.com/llms.txt",
+      "excerpt": "# Covercy",
+      "note": "llms.txt: GET 200, 9511 bytes",
+      "fetched": "2026-11-12",
+      "hash": "5f829a6c33704ad7eaf6181f35e94e6d836739229a152420e2b8323520753e35"
+    }
+  ]
+}

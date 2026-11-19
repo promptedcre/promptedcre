@@ -1,0 +1,41 @@
+{
+  "id": "us-tx.tax.protest-deadline",
+  "jurisdiction": "us-tx",
+  "title": "Texas property tax protest deadline",
+  "rule": "To be entitled to a hearing, an owner files a written notice of protest with the appraisal review board not later than May 15 or the 30th day after the appraisal notice was delivered, whichever is later. If the last day falls on a Saturday, Sunday, or legal state or national holiday, filing on the next regular business day is timely. Texas lists its national and state holidays by statute; optional holidays are listed separately.",
+  "citation": {
+    "authority": "Tex. Tax Code 41.44(a)(1) and 1.06; Tex. Gov't Code 662.003",
+    "url": "https://statutes.capitol.texas.gov/Docs/TX/htm/TX.41.htm"
+  },
+  "asOf": "2026-11-11",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Tax Code 41.44 or 1.06 (1.06 was amended effective January 1, 2026) and to the holiday list.",
+  "sources": [
+    {
+      "id": "tx-tax-code-41",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.41.htm",
+      "title": "Texas Tax Code, Chapter 41 (Section 41.44, Notice of protest)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "not later than May 15 or the 30th day after the date that notice to the property owner was delivered",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-1",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.1.htm",
+      "title": "Texas Tax Code, Chapter 1 (Section 1.06, Effect of weekend, holiday, or office closure)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gov-code-662",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.662.htm",
+      "title": "Texas Government Code, Chapter 662 (Section 662.003, Dates and descriptions of holidays)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "tier": "primary"
+    }
+  ]
+}

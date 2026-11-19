@@ -1,0 +1,144 @@
+{
+  "vendor": "verifyinvestor",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "fd91cee57a4f4e9ee04578eeb9df02ecf40760f03bba6a0ef6426c991f1c600f",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "c5",
+        "c7",
+        "c8",
+        "c4"
+      ],
+      "rationale": "The publicly fetched API reference documents creating verification requests, checking their status and retrieving verification certificates with JSON responses, which covers the product's core records.",
+      "missing": "API access is granted only after contacting the vendor (c1); the pack quotes excerpts rather than the full endpoint list, shows no way to update or cancel a request, and does not show the separate LITE API documentation (c2)."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item or coverage entry in the pack mentions a Model Context Protocol server.",
+      "missing": "The pack shows no MCP server, setup steps, beta or waitlist."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no SDK, CLI, package-registry listing or public code repository, only the API reference page.",
+      "missing": "No vendor-maintained SDK or CLI, code samples, or vendor-recommended libraries are shown."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "full",
+      "quality": 6,
+      "evidence": [
+        "c10"
+      ],
+      "rationale": "The API reference documents webhook callbacks that POST to a URL passed with a verification request, the product's core record.",
+      "missing": "The pack does not show which events trigger callbacks, the payload format, signing or retry behavior, or an account-wide subscription; the quoted mechanism is set per verification request."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "partial",
+      "quality": 6,
+      "evidence": [
+        "c3"
+      ],
+      "rationale": "API accounts carry an API Token and a User Authorization Token, but the pack shows no scopes, roles or permissions that limit what either token can do.",
+      "missing": "No scoping of the API Token is documented, no way for an agent to obtain its own limited credential is shown (API access is granted on request, c1), and what the User Authorization Token can reach is not described."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no OpenAPI, Swagger, GraphQL or other machine-readable specification, and the API reference page is the only developer documentation found.",
+      "missing": "No machine-readable API spec, downloadable or in-page, is shown."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no llms.txt file and no Markdown versions of the documentation.",
+      "missing": "No llms.txt or Markdown documentation is shown, and the coverage checklist records no check for either."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "partial",
+      "quality": 8,
+      "evidence": [
+        "c11",
+        "c12"
+      ],
+      "rationale": "The API reference documents two staging servers and a simulate-investor-completion endpoint for testing, but staging credentials are requested from support rather than obtained self-serve.",
+      "missing": "The support-request detail comes from the collector's note rather than quoted page text, and no self-serve route to staging access is shown."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no export or bulk download feature for a customer's verification records.",
+      "missing": "No CSV, JSON, Excel or other bulk export is documented; the only multi-record read is a reduced-detail status check across all verification requests (c7), which is a status endpoint rather than an export of the records."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no sign-up page, free trial or account-creation flow for a sponsor.",
+      "missing": "Nothing shows whether a sponsor can open an account without a call; the published prices (c13) do not show the sign-up path, and API access requires contacting the vendor (c1)."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c13"
+      ],
+      "rationale": "The public service page lists issuer-pays Rule 506(c) prices of $69 (Individual), $3,105 (Prepay 50) and $5,865 (Prepay 100), which are the plans a small sponsor would buy.",
+      "missing": "The price table was captured as joined text, so the label-to-price mapping is inferred, and the pack does not show what each price covers or whether API use carries separate fees."
+    },
+    {
+      "story": "fb-start",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c5",
+        "c6"
+      ],
+      "rationale": "The API reference shows a verification request is created through the API and returns an Investor URL, with the investor's consent and form completion left to that person in the browser.",
+      "missing": "The pack quotes the workflow step rather than the create endpoint's method, path or parameters, and API access must first be requested from the vendor (c1)."
+    },
+    {
+      "story": "fb-status",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c7",
+        "c4"
+      ],
+      "rationale": "The API reference documents an endpoint that checks the status of all verification requests, and its endpoints respond in JSON.",
+      "missing": "The pack quotes only the summary endpoint, which returns less information, and does not show the per-request status response or the status values returned."
+    },
+    {
+      "story": "fb-records",
+      "verdict": "full",
+      "quality": 9,
+      "evidence": [
+        "c8",
+        "c9"
+      ],
+      "rationale": "The API reference documents an endpoint that returns the verification certificate for a specified user and verification request as a PDF.",
+      "missing": "The pack does not show the endpoint's path or whether finished documents other than the certificate can be retrieved."
+    }
+  ]
+}

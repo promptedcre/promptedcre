@@ -1,0 +1,199 @@
+{
+  "vendor": "quickbooks-online",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://developer.intuit.com/quickbooks-online/docs/get-started",
+      "found": true,
+      "note": "Developer docs render only in a browser; read through the developer llms.txt index"
+    },
+    "api": {
+      "url": "https://developer.intuit.com/llms.txt",
+      "found": true,
+      "note": "Developer portal pages are script-rendered; QuickBooks Online API pages read via llms.txt"
+    },
+    "pricing": {
+      "url": "https://quickbooks.intuit.com/pricing/",
+      "found": true
+    },
+    "changelog": {
+      "url": "https://developer.intuit.com/quickbooks-online/docs/release-notes",
+      "found": true,
+      "note": "Listed in llms.txt; page itself script-rendered"
+    }
+  },
+  "links": {
+    "docs": "https://developer.intuit.com/quickbooks-online/docs/get-started",
+    "api": "https://developer.intuit.com/quickbooks-online/docs/get-started/get-started-with-the-api-explorer",
+    "mcp": "https://github.com/intuit/quickbooks-online-mcp-server",
+    "cli": "https://developer.intuit.com/quickbooks-online/docs/develop/sdks-and-samples"
+  },
+  "packages": [],
+  "repos": [
+    "https://github.com/intuit/quickbooks-online-mcp-server",
+    "https://github.com/intuit/QuickBooks-V3-Java-SDK",
+    "https://github.com/intuit/oauth-jsclient"
+  ],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://developer.intuit.com/llms.txt",
+      "excerpt": "The API Explorer is where you'll find references for all QuickBooks Online Accounting API entities.",
+      "fetched": "2026-11-12",
+      "hash": "3dbbe5978be45b83b65190049e33255f61dd6a8d97aefe3f693f340f4abb6a13"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://developer.intuit.com/llms.txt",
+      "excerpt": "Both the QuickBooks Online Accounting API and the QuickBooks Online Payments API use JSON to send and receive information.",
+      "fetched": "2026-11-12",
+      "hash": "1cfce6690e0093d472cfc405dd7c2fe8e5fc07bebf4e11b7e82873a6499a8144"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://developer.intuit.com/llms.txt",
+      "excerpt": "Scopes determine the types of data, and by extention API entities, your app can read and update in QuickBooks Online.",
+      "fetched": "2026-11-12",
+      "hash": "043748b9f439f13524a0380d23549d620cbf65dd225798e20ec1ee7bd2d48f66"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://developer.intuit.com/llms.txt",
+      "excerpt": "Use webhooks to receive event-triggered callbacks for entities that your app needs to stay on top of.",
+      "fetched": "2026-11-12",
+      "hash": "6d749bcbd634bec2e78edfb3424ac136a0e12d4074f31e3d7b0b92db2f566faa"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://developer.intuit.com/llms.txt",
+      "excerpt": "When you create your developer profile, you automatically get a sandbox company.",
+      "fetched": "2026-11-12",
+      "hash": "9fca9957e7040d3daaabdfb80d50f70f7672d97ba0f9bd415fdf92b3e5c2a204"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://developer.intuit.com/llms.txt",
+      "excerpt": "Use Intuit Developer Plugin to set up a workspace, create an app, configure scopes, authenticate, and make your first QuickBooks API call.",
+      "fetched": "2026-11-12",
+      "note": "Developer-setup tool, per its docs not for production access or keys",
+      "hash": "76adbdb2c413761cab53f068f61a51becd0a06a4a0bdc6c7673e5255f229dc93"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://developer.intuit.com/llms.txt",
+      "excerpt": "The QuickBooks Online Java SDK makes it easier to integrate your Java web app with the QuickBooks Online API.",
+      "fetched": "2026-11-12",
+      "hash": "a3a1bdee8aeb95b33f7ee3e722444d7f100a34797458e66bed0c668a46d3a8a0"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://developer.intuit.com/llms.txt",
+      "excerpt": "Instead of sending requests individually, you can eliminate overhead and send \"batches\" of requests to the QuickBooks Online Accounting API.",
+      "fetched": "2026-11-12",
+      "hash": "e4690b8ec050c1119d18e6471068b8e79317fa1eae47cd06d00777a4859090ce"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://developer.intuit.com/llms.txt",
+      "excerpt": "These are the latest release notes for the QuickBooks Online Accounting API.",
+      "fetched": "2026-11-12",
+      "hash": "bd632dbbed83efd93a4cec551ee88db3f5eb86ff0fbc12b27413e6a5d3abdd83"
+    },
+    {
+      "id": "c10",
+      "tier": "code",
+      "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+      "excerpt": "you still need to set up an app — Intuit does not offer per-user API keys.",
+      "fetched": "2026-11-12",
+      "hash": "c227f997614d66507e3c2a230f6f1bfa3818362f9f4584a6f506653542a49909"
+    },
+    {
+      "id": "c11",
+      "tier": "code",
+      "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+      "excerpt": "This server uses OAuth 2.0 to authenticate to a QuickBooks Online company.",
+      "fetched": "2026-11-12",
+      "hash": "cee3c956d022bf58965efdbd23348afd558346b492af63da9bf289d3192814e9"
+    },
+    {
+      "id": "c12",
+      "tier": "vendor-claim",
+      "url": "https://quickbooks.intuit.com/pricing/",
+      "excerpt": "Free trial for 30 days",
+      "fetched": "2026-11-12",
+      "hash": "b53ac9e9c7fa9690abad0d3a08f32e1c9060b74bec3e457ed8d691a1035d65b2"
+    },
+    {
+      "id": "c13",
+      "tier": "vendor-claim",
+      "url": "https://quickbooks.intuit.com/pricing/",
+      "excerpt": "Simple Start Top pick for you $38 $19 / mo 50% off for 3 months*",
+      "fetched": "2026-11-12",
+      "note": "Lines of the page text joined; Essentials, Plus and Advanced prices also listed",
+      "hash": "2858c8df3b64e408e0ce7dcb778e1e19ef1087eb0c02312e360a4b03b894d478"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://quickbooks.intuit.com/llms.txt",
+      "excerpt": "# QuickBooks",
+      "note": "llms.txt: GET 200, 20137 bytes",
+      "fetched": "2026-11-12",
+      "hash": "40181715251ee4762c000622320baa46cea7fdbce216d6339a90a55035843bb2"
+    },
+    {
+      "id": "p2",
+      "tier": "probe",
+      "url": "https://developer.intuit.com/llms.txt",
+      "excerpt": "# Intuit Developer",
+      "note": "llms.txt: GET 200, 165735 bytes",
+      "fetched": "2026-11-12",
+      "hash": "fb3ac556ec13a1b37f412f926d69ec05fb5de2671897cbb8febef45cf35fd44d"
+    },
+    {
+      "id": "p3",
+      "tier": "probe",
+      "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+      "excerpt": "GitHub - intuit/quickbooks-online-mcp-server: The QuickBooks MCP Server lets AI assistants access QuickBooks data via a standard interface. It uses the Model Context Protocol to ...",
+      "note": "MCP page resolves: GET 200 (page title)",
+      "fetched": "2026-11-12",
+      "hash": "f342194fa575249387bf4adb746de1bc840f63a9bcf388ba8a2ec10ffcc60382"
+    },
+    {
+      "id": "p4",
+      "tier": "code",
+      "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+      "excerpt": "intuit/quickbooks-online-mcp-server: The QuickBooks MCP Server lets AI assistants access QuickBooks data via a standard interface. It uses the Model Context Protocol to expose QBO ...",
+      "note": "GitHub: not archived, last push 2026-09-15",
+      "fetched": "2026-11-12",
+      "hash": "e0bc33967447f5349121b5ce13f5c3b79e9e24b08e862e5f7f45f8723058e28b"
+    },
+    {
+      "id": "p5",
+      "tier": "code",
+      "url": "https://github.com/intuit/QuickBooks-V3-Java-SDK",
+      "excerpt": "intuit/QuickBooks-V3-Java-SDK: Java SDK for QuickBooks REST API v3 services",
+      "note": "GitHub: not archived, last push 2026-08-03",
+      "fetched": "2026-11-12",
+      "hash": "e7a4e29d32f26d363720a8fcb04eb2035d76a4494430fc81d51a1492acb8bc5a"
+    },
+    {
+      "id": "p6",
+      "tier": "code",
+      "url": "https://github.com/intuit/oauth-jsclient",
+      "excerpt": "intuit/oauth-jsclient: Intuit's NodeJS OAuth client provides a set of methods to make it easier to work with OAuth2.0 and Open ID",
+      "note": "GitHub: not archived, last push 2026-07-15",
+      "fetched": "2026-11-12",
+      "hash": "f743e5f53f44be5ae69e0515150baec63e0c51ef6e88de163b1e4aaebcb7b96d"
+    }
+  ]
+}

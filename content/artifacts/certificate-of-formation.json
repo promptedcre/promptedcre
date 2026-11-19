@@ -1,0 +1,150 @@
+{
+  "id": "certificate-of-formation",
+  "name": "Certificate of formation",
+  "what": "The state-filed document that creates an LLC or other entity and fixes its legal name.",
+  "fields": [
+    {
+      "key": "legalName",
+      "label": "Legal name",
+      "type": "string",
+      "definition": "The entity's name exactly as the certificate states it, punctuation and entity ending included. A Texas LLC's name must contain \"limited liability company\", \"limited company\" or an abbreviation of one. If a certificate of amendment later changed the name, record the current name here and the former one under amendments.",
+      "authority": "Tex. Bus. Orgs. Code 3.005(a)(1) and 5.056"
+    },
+    {
+      "key": "entityType",
+      "label": "Entity type",
+      "type": "enum",
+      "definition": "The type of filing entity the certificate forms, such as limited liability company, limited partnership or for-profit corporation, as the certificate states it.",
+      "authority": "Tex. Bus. Orgs. Code 3.005(a)(2)"
+    },
+    {
+      "key": "jurisdiction",
+      "label": "State of formation",
+      "type": "string",
+      "definition": "The state whose filing officer accepted the certificate. The fields marked with Texas authority apply to a Texas certificate; another state's certificate may state different items, and a field it does not state is left empty."
+    },
+    {
+      "key": "purpose",
+      "label": "Purpose",
+      "type": "text",
+      "definition": "The purpose clause as written; a limited partnership does not state one. It may be stated as any lawful purpose for that type of entity; record any narrower purpose word for word, because it limits what the entity was formed to do.",
+      "authority": "Tex. Bus. Orgs. Code 3.005(a)(3)"
+    },
+    {
+      "key": "duration",
+      "label": "Duration",
+      "type": "string",
+      "definition": "Perpetual, or the specific period the certificate states; a limited partnership does not state one. A Texas entity exists perpetually unless its governing documents provide otherwise, so a blank duration clause reads as perpetual.",
+      "authority": "Tex. Bus. Orgs. Code 3.003 and 3.005(a)(4)"
+    },
+    {
+      "key": "registeredAgent",
+      "label": "Initial registered agent",
+      "type": "string",
+      "definition": "The name of the initial registered agent the certificate names. Check the current agent in the state's record, since a later change is filed separately.",
+      "authority": "Tex. Bus. Orgs. Code 3.005(a)(5)"
+    },
+    {
+      "key": "registeredOffice",
+      "label": "Initial registered office",
+      "type": "string",
+      "definition": "The street address of the initial registered office, where the agent can be served, as the certificate states it.",
+      "authority": "Tex. Bus. Orgs. Code 3.005(a)(5)"
+    },
+    {
+      "key": "initialMailingAddress",
+      "label": "Initial mailing address",
+      "type": "string",
+      "definition": "The entity's initial mailing address as the certificate states it.",
+      "authority": "Tex. Bus. Orgs. Code 3.005(a)(6)"
+    },
+    {
+      "key": "organizers",
+      "label": "Organizers",
+      "type": "list",
+      "definition": "The name and address of each organizer the certificate lists, read from the organizer section and the signature block. None is listed for an entity formed under a plan of conversion or merger.",
+      "authority": "Tex. Bus. Orgs. Code 3.005(a)(7)(A)"
+    },
+    {
+      "key": "generalPartners",
+      "label": "General partners",
+      "type": "list",
+      "definition": "For a limited partnership, the name and address of each general partner as the certificate lists them. Empty for any other entity type.",
+      "authority": "Tex. Bus. Orgs. Code 3.005(a)(7)(B)"
+    },
+    {
+      "key": "management",
+      "label": "Managers or no managers",
+      "type": "enum",
+      "definition": "For an LLC, whether the certificate says the company initially has managers or does not. Compare it with how the company agreement says the company is run.",
+      "authority": "Tex. Bus. Orgs. Code 3.010(1)"
+    },
+    {
+      "key": "initialGoverningPersons",
+      "label": "Initial managers or members",
+      "type": "list",
+      "definition": "The name and address of each initial manager if the LLC has managers, or of each initial member if it does not, as the certificate lists them.",
+      "authority": "Tex. Bus. Orgs. Code 3.010(2) and (3)"
+    },
+    {
+      "key": "conversionOrMerger",
+      "label": "Formed by conversion or merger",
+      "type": "text",
+      "definition": "Whether the certificate states the entity is formed under a plan of conversion or merger and, for a conversion, the converting entity's name, address, date of formation, prior form and jurisdiction. Empty for an ordinary new formation.",
+      "authority": "Tex. Bus. Orgs. Code 3.005(a)(8)"
+    },
+    {
+      "key": "seriesNotice",
+      "label": "Notice of series liability limits",
+      "type": "boolean",
+      "definition": "Whether the certificate contains notice of the limitation on liabilities of a protected or registered series. Record true only where the certificate itself carries the notice.",
+      "authority": "Tex. Bus. Orgs. Code 101.604"
+    },
+    {
+      "key": "additionalProvisions",
+      "label": "Other provisions",
+      "type": "text",
+      "definition": "Any further provisions the certificate adds on organization, ownership, governance or business, summarized with the article number of each.",
+      "authority": "Tex. Bus. Orgs. Code 3.005(b)"
+    },
+    {
+      "key": "signedDate",
+      "label": "Date signed",
+      "type": "date",
+      "definition": "The date in the signature block. A delayed effective date may not fall later than the 90th day after this date.",
+      "authority": "Tex. Bus. Orgs. Code 4.053(b)"
+    },
+    {
+      "key": "effectiveness",
+      "label": "When it takes effect",
+      "type": "string",
+      "definition": "On filing, or the later date, date and time, or event the certificate clearly states. Read it from the effectiveness section of the certificate.",
+      "authority": "Tex. Bus. Orgs. Code 4.051 to 4.053"
+    },
+    {
+      "key": "filingDate",
+      "label": "Filing date",
+      "type": "date",
+      "definition": "The date the filing officer shows the certificate as filed, read from its acknowledgment or file stamp. Existence begins when the filing takes effect, and the acknowledgment is conclusive evidence of formation except in a state proceeding to end the entity.",
+      "authority": "Tex. Bus. Orgs. Code 3.001(c) and (d)"
+    },
+    {
+      "key": "fileNumber",
+      "label": "State file number",
+      "type": "string",
+      "definition": "The number the filing officer assigned, read from the acknowledgment or file stamp. It is public and is the key for later status searches."
+    },
+    {
+      "key": "amendments",
+      "label": "Amendments and restatements",
+      "type": "list",
+      "definition": "Each certificate of amendment or restated certificate filed later, with its filing date and what it changed, including any former name. Empty only when the firm's files and the state's record show none."
+    },
+    {
+      "key": "storageLocation",
+      "label": "Where the filed copy is kept",
+      "type": "string",
+      "definition": "Where the firm keeps the filed certificate with its acknowledgment, and each amendment."
+    }
+  ]
+}

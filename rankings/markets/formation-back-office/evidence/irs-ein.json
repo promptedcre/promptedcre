@@ -1,0 +1,121 @@
+{
+  "vendor": "irs-ein",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://www.irs.gov/businesses/employer-identification-number",
+      "found": true
+    },
+    "api": {
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number",
+      "found": false,
+      "note": "Browser-based application only; no developer or API page found, and a search of irs.gov found none"
+    },
+    "pricing": {
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number",
+      "found": true,
+      "note": "States the service is free"
+    },
+    "changelog": {
+      "url": "https://www.irs.gov/newsroom",
+      "found": true,
+      "note": "General IRS newsroom; no release notes or system-update page specific to the EIN tool"
+    }
+  },
+  "links": {
+    "docs": "https://www.irs.gov/businesses/employer-identification-number"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number",
+      "excerpt": "Use this tool to get an EIN directly from the IRS in minutes for free.",
+      "fetched": "2026-11-12",
+      "hash": "f00c9c7e8a63c01bedaccb77657b23119603ce1327d4c98daf479fe922cf8f62"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number",
+      "excerpt": "Beware of websites that charge for an EIN. You never have to pay a fee for an EIN.",
+      "fetched": "2026-11-12",
+      "hash": "6db212cd47d3b75534fea2ff78af98fe58c4e87d822966cc2aa5ce3d50163de1"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number",
+      "excerpt": "If it’s approved, we’ll issue your EIN immediately online.",
+      "fetched": "2026-11-12",
+      "hash": "f2ed06dddd7b1b44a7d70503f5504097e166ba646ae17d734717a9dddba8e5e1"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number",
+      "excerpt": "Complete the application in one session. You can't save it for later.",
+      "fetched": "2026-11-12",
+      "hash": "92e8fbb63e99339a14155174b63bfdd1e3384589d75c0551691e88c8f30be242"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number",
+      "excerpt": "You have the responsible party’s Social Security number (SSN) or individual taxpayer ID number (ITIN).",
+      "fetched": "2026-11-12",
+      "note": "Eligibility condition for the online tool",
+      "hash": "d1c56dc8e15e2f53c1d47cb1506c77a82e9fd426595ebce2d7ced5db972caf46"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number",
+      "excerpt": "You can apply for only 1 EIN per responsible party per day.",
+      "fetched": "2026-11-12",
+      "hash": "d99ce96090e1f4e86b8f56e631e3e5c4e7544dcf25d784710558643ed4f7c0be"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number",
+      "excerpt": "Print your EIN confirmation letter for your records.",
+      "fetched": "2026-11-12",
+      "hash": "186bcf9dca74d36f01e06d8d45a2e4bb97e836369c19d4e15fd042b907e4b59c"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number",
+      "excerpt": "If you’re a third-party designee, you must have signed authorization to apply.",
+      "fetched": "2026-11-12",
+      "hash": "b175f76d9bd87c40050cab29acc7d0642a22bbf79d46b46df48b9b9f1c0faa09"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number",
+      "excerpt": "If you can't apply online, find out how to apply by phone, fax or mail.",
+      "fetched": "2026-11-12",
+      "hash": "1be6a79ca44f755fafbdd8264436299d9b6036cd6ac8298d94241523722a325f"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number",
+      "excerpt": "If you are creating a corporation or LLC, form your entity through the secretary of state before you apply for an EIN.",
+      "fetched": "2026-11-12",
+      "hash": "93b61b06594cbaa7deb876b0c61890e0d6958cc41e2121d2dad2ee54d3ffb1ee"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://www.irs.gov/businesses/employer-identification-number",
+      "excerpt": "Eligible Business Tax Account users can download a digital CP575, Employer Identification Number Verification Notice in BTA.",
+      "fetched": "2026-11-12",
+      "hash": "659adb9de1bdb067a18300e9dd5bbdbac68e93f46117f1f65038ca3b2f409222"
+    }
+  ]
+}

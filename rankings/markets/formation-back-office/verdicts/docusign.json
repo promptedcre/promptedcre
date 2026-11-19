@@ -1,0 +1,157 @@
+{
+  "vendor": "docusign",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "d163f1b606dbc3ee12b5d1738a261b964ed35e46bd9b486c8f0408aef2b21f58",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "rationale": "Docusign's public eSignature REST API documentation includes how-to pages for sending a signature request, getting data on an already-defined envelope and retrieving an envelope's documents, covering creating and reading the core envelope records.",
+      "missing": "The pack shows only one-line excerpts of individual how-to pages, not the API reference, and does not show updating, correcting or voiding an existing envelope."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "c9",
+        "c10",
+        "c11",
+        "p2"
+      ],
+      "rationale": "Docusign's developer site has a live documentation page, Build with the Docusign MCP Server, describing a Docusign MCP server for working with Docusign APIs, with a Docusign developer account listed as a prerequisite and an llms.txt instruction giving AI clients such as Claude Code and Cursor the server URL to connect to.",
+      "missing": "The pack shows a prerequisite and a connection URL rather than the full setup steps, does not confirm the llms.txt endpoint is the same server the MCP page describes, and does not show which Docusign actions the server covers or whether it is generally available rather than in beta or preview."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "full",
+      "quality": 6,
+      "evidence": [
+        "c8",
+        "c1"
+      ],
+      "rationale": "Docusign's eSignature SDKs documentation page states that Docusign provides SDKs wrapping its eSignature REST API with objects, properties and methods in multiple programming languages.",
+      "missing": "The pack does not show the SDKs on a public package registry or in a public repository, which languages they cover, or any command-line tool."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "c5"
+      ],
+      "rationale": "Docusign's developer llms.txt describes Docusign Connect as a webhook service that sends updates when specific triggering events occur in eSignature workflows.",
+      "missing": "The pack shows only the llms.txt summary of Connect, not the Connect documentation, the envelope events that can be subscribed to, or how a subscription is configured."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "full",
+      "quality": 6,
+      "evidence": [
+        "c6"
+      ],
+      "rationale": "Docusign's eSignature authentication documentation says callers must request the signature scope during authentication, showing documented OAuth scopes that gate what a token can call.",
+      "missing": "The pack shows only the single signature scope and does not list other scopes, roles or permissions, or show that a credential can be limited to less than full eSignature access on the account."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "full",
+      "quality": 9,
+      "evidence": [
+        "c7",
+        "p3"
+      ],
+      "rationale": "Docusign's developer site says it releases OpenAPI (formerly Swagger) files, and the probe found the official docusign/OpenAPI-Specifications repository public on GitHub, not archived and last pushed 2026-10-19.",
+      "missing": "The pack does not show the repository's files or confirm which Docusign APIs, such as eSignature, the specifications cover."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "full",
+      "quality": 10,
+      "evidence": [
+        "p1",
+        "c3",
+        "c5"
+      ],
+      "rationale": "The probe found an llms.txt for Docusign's developer documentation (GET 200, 441,688 bytes) whose entries describe documentation topics such as getting envelope data and the Connect webhook service."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "c15"
+      ],
+      "rationale": "Docusign's developer sandbox page offers a free, self-serve developer account sign-up form pitched at making a first API call in minutes.",
+      "missing": "The pack shows the sign-up page but not developer documentation describing the sandbox environment, its limits, or how an integration moves from it to production."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no bulk export or bulk download of account records in an open format; the only download evidence is per-envelope document retrieval through the API, which belongs to the finished-records story.",
+      "missing": "Any documented self-serve bulk export of envelopes, documents or account data in CSV, JSON, Excel or another open format."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "full",
+      "quality": 5,
+      "evidence": [
+        "c13",
+        "c14"
+      ],
+      "rationale": "Docusign's e-commerce plans page (ecom.docusign.com) lists the Personal and Standard eSignature plans with monthly prices and annual commitments, which points to buying online without a sales call.",
+      "missing": "The pack does not show the sign-up or checkout flow itself, a free trial for the product, or whether API plans can be bought without contacting sales."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "c13",
+        "c14"
+      ],
+      "rationale": "Docusign's public eSignature pricing page lists the Personal plan at $11 per month ($132 annual commitment, 5 envelopes per month) and the Standard plan at $30 per user per month ($360 annual commitment, 100 envelopes per user per year).",
+      "missing": "The page does not show prices for API plans, which a sponsor connecting an agent may need, and the pack shows no other tiers."
+    },
+    {
+      "story": "fb-start",
+      "verdict": "full",
+      "quality": 9,
+      "evidence": [
+        "c2"
+      ],
+      "rationale": "Docusign's eSignature REST API documentation has a how-to page demonstrating how to send a signature request by email (remote signing), so an envelope can be created and sent programmatically while signing stays with the recipient.",
+      "missing": "The pack shows only the page's opening sentence, not the envelope-creation request or its API reference."
+    },
+    {
+      "story": "fb-status",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "c3"
+      ],
+      "rationale": "Docusign's developer llms.txt lists a how-to demonstrating how to get data on an already-defined envelope, which the pack notes is how to get envelope information including status.",
+      "missing": "The pack shows only the llms.txt summary line, not the how-to page or API reference showing which status fields are returned."
+    },
+    {
+      "story": "fb-records",
+      "verdict": "full",
+      "quality": 9,
+      "evidence": [
+        "c4"
+      ],
+      "rationale": "Docusign's eSignature REST API documentation has a how-to page for retrieving documents from an envelope, including the Certificate of Completion and a composite PDF.",
+      "missing": "The pack shows only the page's opening sentence and a note, not the endpoint details or explicit confirmation that the completed, signed versions are returned."
+    }
+  ]
+}

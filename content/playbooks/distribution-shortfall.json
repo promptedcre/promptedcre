@@ -1,0 +1,38 @@
+{
+  "id": "distribution-shortfall",
+  "slug": "distribution-shortfall",
+  "kind": "situation",
+  "title": "Cash falls short of a planned distribution",
+  "summary": "Confirm what the governing agreement requires, decide with the right approvals, and tell investors plainly and early.",
+  "phase": "report",
+  "order": 135,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "situation": {
+    "trigger": "Cash will not cover the distribution investors expect.",
+    "urgency": "weeks"
+  },
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Confirm the size of the shortfall and when it lands",
+    "Find the cause: vacancy, a tenant default, a rate reset or a capital item",
+    "Read what the governing agreement says about distributions",
+    "Check loan coverage and what the loan allows from reserves",
+    "Decide whether the shortfall is a one-time gap or a trend",
+    "List the options: reduce, defer, fund from reserves or skip",
+    "Test each option against the loan and the business plan",
+    "Decide with the approvals the governing agreement requires",
+    "Tell investors early, with the cause and the plan",
+    "Record the decision and update the forecast"
+  ]
+}

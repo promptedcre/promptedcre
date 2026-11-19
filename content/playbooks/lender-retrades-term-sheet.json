@@ -1,0 +1,390 @@
+{
+  "id": "lender-retrades-term-sheet",
+  "slug": "lender-retrades-term-sheet",
+  "kind": "situation",
+  "title": "The lender retrades or pulls the term sheet",
+  "summary": "Protect the deposit and the closing date: re-size the deal, find replacement debt, or negotiate more time.",
+  "phase": "acquire",
+  "order": 103,
+  "featured": true,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-12",
+  "situation": {
+    "trigger": "The lender changes loan terms or withdraws its commitment between the term sheet and closing.",
+    "urgency": "days"
+  },
+  "requires": [
+    "negotiate-purchase-contract"
+  ],
+  "consumes": [
+    "loan-term-sheet",
+    "purchase-and-sale-agreement",
+    "earnest-money-receipt",
+    "underwriting-model",
+    "investor-register"
+  ],
+  "produces": [
+    "loan-term-sheet",
+    "underwriting-model"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "bc-26",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.26.htm",
+      "title": "Texas Business and Commerce Code, Chapter 26 (Section 26.02, Loan agreement must be in writing)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "If the notice required by Subsection (e) of this section is not given on or before execution of the loan agreement",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "quote": "To make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "get-change-in-writing",
+      "title": "Get the change in writing",
+      "instruction": "Ask the lender to state in writing exactly what changed: loan amount, rate or spread, coverage or loan-to-value limits, reserves, recourse, fees or timing, or that it has withdrawn, and why. Ask whether the change is final or open to discussion, and by when the lender needs an answer. A person approves the message before it goes; save the reply with the term sheet.",
+      "mode": "agent",
+      "modeBasis": "Drafting and tracking the request is agent work; the message speaks for the borrower, so a person approves it.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "consumes": [
+        "loan-term-sheet"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "read-term-sheet",
+      "title": "Read what the lender actually committed to",
+      "instruction": "Read the term sheet and any commitment letter: whether it calls itself non-binding, its expiration, its conditions, any rate lock, and what happens to fees or deposits already paid. In Texas, where a bank, savings bank, savings and loan association, credit union, one of their affiliates or a HUD-approved lender gave the statute's conspicuous notice on or before signing, a loan agreement with it over $50,000 is unenforceable unless it is in writing and signed by the party to be bound, so an oral assurance from that lender is not an enforceable commitment. Send counsel any signed commitment the lender may be breaking.",
+      "mode": "agent",
+      "modeBasis": "Reading the loan papers is document work; whether a signed commitment was breached is counsel's call.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "get-change-in-writing"
+      ],
+      "consumes": [
+        "loan-term-sheet"
+      ],
+      "basis": "cited",
+      "sources": [
+        "bc-26"
+      ]
+    },
+    {
+      "id": "map-contract-deadlines",
+      "title": "Find the next date money goes at risk",
+      "instruction": "From the signed contract, list any financing condition, its deadline and how the buyer exercises it; the end of the feasibility period; each date a deposit goes hard; the closing date; and any extension right, its cost and its notice deadline. Run the dates in the deadline-calendar and name the next date after which walking away costs the buyer money. Schedule every other step in this situation backward from that date.",
+      "mode": "agent",
+      "modeBasis": "The dates are in the signed contract and the calendar computes them.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "earnest-money-receipt"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "protect-the-deposit",
+      "title": "Protect the deposit before the next hard date",
+      "instruction": "With counsel, act before that date: give notice under an open financing or feasibility right, exercise an extension, or get the seller to sign a written amendment that extends the date or changes terms. Follow the contract's notice clause exactly, including method, address and deadline. A termination notice usually cannot be taken back, so send one only on a decision. Get any amendment signed by both sides.",
+      "mode": "human-online",
+      "modeBasis": "Notices and amendments change legal rights under the contract and are signed for the buyer.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-term-sheet",
+        "map-contract-deadlines"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "resize-the-loan",
+      "title": "Re-size the loan on the new terms",
+      "instruction": "Run the debt-sizing calculator on the underwritten net operating income with the lender's new rate, coverage, loan-to-value and debt-yield limits. Record the new loan amount, which limit binds, the payment, and the gap against the original loan. The gap must come from new equity, a seller concession or another source of debt. Size the loan the same way on terms a replacement lender is likely to offer, so the options compare on one basis.",
+      "mode": "agent",
+      "modeBasis": "The live calculator re-sizes the loan from recorded inputs.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "get-change-in-writing"
+      ],
+      "calculators": [
+        "debt-sizing"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "loan-term-sheet"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "recheck-returns",
+      "title": "Re-check returns with the new debt",
+      "instruction": "Re-run the returns-sensitivity calculator with the re-sized loan and the extra equity, and the waterfall-promote calculator for investor returns. Compare the results with the buy box targets and with any returns already shown to investors or a capital partner. Show each path side by side: accept the changed terms, replace the lender, or close with more equity, and the price at which each path still meets the targets.",
+      "mode": "agent",
+      "modeBasis": "Both calculators are live and run from the re-sized inputs.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "resize-the-loan"
+      ],
+      "calculators": [
+        "returns-sensitivity",
+        "waterfall-promote"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "buy-box"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "line-up-replacement-debt",
+      "title": "Line up replacement lenders",
+      "instruction": "Assemble the loan request package: the underwriting model, rent roll, trailing-12, the contract and its dates, the sponsor's experience and financial statements, and why the first lender changed terms. List lenders that make loans of this size and property type, and draft an outreach note that states the closing date plainly. A person approves the package and each send; track every response and quote against the deadline.",
+      "mode": "agent",
+      "modeBasis": "Packaging and tracking are agent work; contacting lenders speaks for the sponsor, and its financial statements go out only with a person's approval.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "resize-the-loan"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "rent-roll",
+        "trailing-12",
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "choose-the-path",
+      "title": "Choose the path",
+      "instruction": "Decide: accept the changed terms, move to a replacement lender, ask the seller for a price change or more time, add equity, or terminate while the deposit is still protected. Weigh each path against the next hard date, the cost of an extension, and what investors or the capital partner were told. Record the decision and the reason in the firm file.",
+      "mode": "human-online",
+      "modeBasis": "Price, financing and whether to close are sponsor decisions.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "protect-the-deposit",
+        "recheck-returns",
+        "line-up-replacement-debt"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "counsel-checks-offering",
+      "title": "Have counsel decide whether the offering needs updating",
+      "instruction": "If the offering is open or subscriptions are not yet accepted, send counsel the change and the re-run model. Counsel decides whether the change is material to the offering, whether the offering documents need a supplement before more money is accepted, and what investors who already subscribed must receive. Statements made in selling securities must not misstate or omit material facts. Hold new closings on subscriptions until counsel answers.",
+      "mode": "human-online",
+      "modeBasis": "Whether a change is material to an offering, and how to disclose it, is a legal judgment.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-the-path"
+      ],
+      "when": {
+        "structure": [
+          "syndication"
+        ]
+      },
+      "consumes": [
+        "private-placement-memorandum",
+        "subscription-agreement",
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5",
+        "us-tx.securities.offer-sale-liability"
+      ]
+    },
+    {
+      "id": "fund-committee-reapproves",
+      "title": "Take the changed deal back to the investment committee",
+      "instruction": "If the new terms move the deal outside what the investment committee approved, such as more equity, a higher rate or lower returns, present the re-run model and get a new vote before accepting. Adjust the amount and date of the capital call if the equity need changed.",
+      "mode": "human-online",
+      "modeBasis": "Committee approval is a vote under the fund documents; an agent prepares the materials.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-the-path"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "consumes": [
+        "ic-memo",
+        "underwriting-model",
+        "capital-call-notice"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "partner-consents-to-new-debt",
+      "title": "Get the capital partner's consent to the new debt",
+      "instruction": "Financing terms are usually a decision a JV agreement reserves for the capital partner. Send it the lender's change, the re-run model and the paths considered, and get its written consent to the chosen path before accepting new terms or adding equity. Confirm how any added equity is split and whether it changes the promote.",
+      "mode": "human-online",
+      "modeBasis": "The partner's consent is its own decision under the JV agreement.",
+      "actor": "investor",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-the-path"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement",
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "accept-replacement-terms",
+      "title": "Accept the new loan terms in writing",
+      "instruction": "Once the path is approved, sign the accepted term sheet or commitment from the chosen lender, after counsel reads any provisions that bind on signing, such as deposits, break-up fees or exclusivity. Calendar the lender's conditions and deadlines against the contract's closing date, and hand the loan back to the financing and closing work.",
+      "mode": "human-online",
+      "modeBasis": "A signed term sheet or commitment binds the borrower to its fees and conditions.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-the-path",
+        "counsel-checks-offering",
+        "fund-committee-reapproves",
+        "partner-consents-to-new-debt"
+      ],
+      "consumes": [
+        "loan-term-sheet"
+      ],
+      "produces": [
+        "loan-term-sheet"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "tell-investors",
+      "title": "Tell investors what changed",
+      "instruction": "If equity has been raised or is being raised on the original loan terms, draft a short notice: what changed, why, the effect on projected returns and on the money investors are asked to fund, and what happens next. Statements to investors in connection with selling securities must not misstate or omit material facts, so match every figure to the re-run model and follow counsel's direction on content. A person approves the notice before it goes out.",
+      "mode": "agent",
+      "modeBasis": "Drafting from the re-run model is writing work; investor communications go out only with a person's approval.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-the-path",
+        "counsel-checks-offering",
+        "fund-committee-reapproves"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "underwriting-model",
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5"
+      ]
+    }
+  ],
+  "outlineSteps": []
+}

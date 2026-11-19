@@ -1,0 +1,131 @@
+{
+  "id": "sponsor-operating-agreement",
+  "name": "Sponsor operating agreement",
+  "what": "The company agreement of the sponsor's own entity: who owns it, who decides, how the promote and fees are shared among the principals.",
+  "fields": [
+    {
+      "key": "companyName",
+      "label": "Company",
+      "type": "string",
+      "definition": "The company's legal name exactly as in its filed certificate of formation, and the state it was formed in."
+    },
+    {
+      "key": "effectiveDate",
+      "label": "Effective date",
+      "type": "date",
+      "definition": "The date the agreement says it takes effect, and the date of each amendment or restatement since."
+    },
+    {
+      "key": "members",
+      "label": "Members and interests",
+      "type": "list",
+      "definition": "Each member, the percentage or other interest each owns, the class or group each belongs to if the agreement creates classes, and the date each became a member. A Texas LLC keeps, or makes available at, its principal office a current list of each member's interest and the members of each class, and a statement of each member's admission date unless the written agreement states it.",
+      "authority": "Tex. Bus. Orgs. Code 101.501(a)(1) and (a)(7)(E)"
+    },
+    {
+      "key": "contributions",
+      "label": "Capital contributions",
+      "type": "list",
+      "definition": "For each member, the cash contributed and a description and agreed value of any other contribution made or promised. A promise to contribute is enforceable only if it is in writing and signed by the person making it.",
+      "authority": "Tex. Bus. Orgs. Code 101.501(a)(7)(A); 101.151"
+    },
+    {
+      "key": "additionalContributions",
+      "label": "Additional contributions",
+      "type": "text",
+      "definition": "The dates on which members must make further contributions, the events that require them, and what happens to a member who does not fund.",
+      "authority": "Tex. Bus. Orgs. Code 101.501(a)(7)(B) and (C)"
+    },
+    {
+      "key": "governingAuthority",
+      "label": "Who manages",
+      "type": "enum",
+      "definition": "Whether the company is managed by its members or by one or more managers, as the agreement provides, with the managers named. For a Texas LLC, where the agreement is silent, the certificate of formation decides.",
+      "authority": "Tex. Bus. Orgs. Code 101.251"
+    },
+    {
+      "key": "officersAndSigners",
+      "label": "Officers and signing authority",
+      "type": "list",
+      "definition": "Each officer or other person the agreement names, the title, and what each may sign or approve alone, such as contracts, loan documents, wires and offering documents."
+    },
+    {
+      "key": "majorDecisions",
+      "label": "Decisions that need a vote",
+      "type": "list",
+      "definition": "Each decision the agreement reserves to a vote of the members or a set group of principals, such as admitting a member, selling the company, borrowing, sponsoring a new deal or amending the agreement, with the vote each needs. For a Texas LLC, where the agreement is silent, the statute's voting rules apply.",
+      "authority": "Tex. Bus. Orgs. Code 101.356"
+    },
+    {
+      "key": "economicsAmongPrincipals",
+      "label": "How economics are shared",
+      "type": "text",
+      "definition": "How the agreement allocates profits and losses and divides distributions among the principals, including the promote or carried interest earned from deals and the fees the sponsor earns, and whether shares differ by deal. Where the agreement is silent, Texas allocates and distributes by the agreed value of contributions in the company's records.",
+      "authority": "Tex. Bus. Orgs. Code 101.201; 101.203"
+    },
+    {
+      "key": "vesting",
+      "label": "Vesting",
+      "type": "text",
+      "definition": "Whether any principal's share of the promote or of the company vests over time or by deal, the schedule, and what happens to the unvested part when the principal leaves."
+    },
+    {
+      "key": "departureAndBuyout",
+      "label": "Departure, removal and buyout",
+      "type": "text",
+      "definition": "What happens when a principal leaves, is removed, dies, divorces or becomes disabled: whether the company or the others may or must buy the interest, how the price is set and paid, and what the departing principal keeps in deals already made."
+    },
+    {
+      "key": "transferRestrictions",
+      "label": "Transfer limits",
+      "type": "text",
+      "definition": "Whether a member may assign or pledge its interest, any consent or first-refusal right the others hold, and whether an assignee becomes a member or holds only the economic rights."
+    },
+    {
+      "key": "deadlock",
+      "label": "Deadlock",
+      "type": "text",
+      "definition": "How the agreement breaks a tie among principals, such as a tie-breaking vote, mediation, a buy-sell or dissolution."
+    },
+    {
+      "key": "dutiesAndIndemnity",
+      "label": "Duties and indemnity",
+      "type": "text",
+      "definition": "Any change the agreement makes to the duties and liabilities of members, managers and officers, its indemnification and advancement terms, and any outside-activity or business-opportunity terms.",
+      "authority": "Tex. Bus. Orgs. Code 101.401; 101.402"
+    },
+    {
+      "key": "amendment",
+      "label": "How the agreement is amended",
+      "type": "text",
+      "definition": "The vote the agreement requires to amend it. For a Texas LLC, where the agreement sets no other rule, every member must consent.",
+      "authority": "Tex. Bus. Orgs. Code 101.053"
+    },
+    {
+      "key": "windingUpEvents",
+      "label": "Events requiring winding up",
+      "type": "text",
+      "definition": "Each event the agreement says requires the company to wind up, and who winds it up.",
+      "authority": "Tex. Bus. Orgs. Code 101.501(a)(7)(D)"
+    },
+    {
+      "key": "taxMatters",
+      "label": "Tax matters",
+      "type": "text",
+      "definition": "The tax classification the agreement assumes, who acts for the company with tax authorities, and any tax distribution terms. The CPA confirms these; record no taxpayer identification number."
+    },
+    {
+      "key": "signatories",
+      "label": "Signed by",
+      "type": "list",
+      "definition": "Each person who signed, in what capacity, and the date. Every principal signs."
+    },
+    {
+      "key": "recordsLocation",
+      "label": "Where the signed copy and records are kept",
+      "type": "string",
+      "definition": "Where the signed agreement, its amendments and the company's other required records are kept. A Texas LLC keeps them at, or makes them available at, its principal office in the United States.",
+      "authority": "Tex. Bus. Orgs. Code 101.501(a) and (c)"
+    }
+  ]
+}

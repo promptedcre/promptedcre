@@ -1,0 +1,43 @@
+{
+  "id": "us-fed.irc.bonus-depreciation",
+  "jurisdiction": "us-federal",
+  "title": "Bonus depreciation: the 100 percent first-year allowance after the 2025 act",
+  "rule": "Qualified property acquired and placed in service after January 19, 2025 gets a 100 percent first-year depreciation allowance with no end date; property counts as acquired no later than its written binding contract date. It generally needs a recovery period of 20 years or less, so 27.5-year and 39-year buildings never qualify. Fifteen-year land improvements qualify, as does qualified improvement property (interior nonresidential improvements other than enlargements, elevators, escalators and internal structural framework) unless held by an electing real property trade or business, which must use the alternative depreciation system. Election out is by class. Section 168(n) separately covers production space the owner uses, not leased space.",
+  "citation": {
+    "authority": "26 U.S.C. 168(k)(1), (k)(2)(A) and (D), (k)(7), (e)(6), (g)(8) and (n); Pub. L. 119-21, section 70301(c); IRS Notice 2026-11",
+    "url": "https://www.law.cornell.edu/uscode/text/26/168"
+  },
+  "asOf": "2026-11-13",
+  "lastVerified": "2026-11-13",
+  "review": "ai-drafted",
+  "changeWatch": "Proposed regulations under section 168(k) that IRS Notice 2026-11 says are forthcoming; any later amendment to 168(k), whose 100 percent rate no longer has a phase-down or sunset; the section 168(n) windows (construction begun before January 1, 2029, placed in service before January 1, 2031).",
+  "sources": [
+    {
+      "id": "usc-26-168",
+      "url": "https://www.law.cornell.edu/uscode/text/26/168",
+      "title": "26 U.S.C. 168, Accelerated cost recovery system (subsections (e)(6), (g)(8), (k) and (n), and the 2025 effective date note)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "shall include an allowance equal to 100 percent of the adjusted basis of the qualified property",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-pub-946",
+      "url": "https://www.irs.gov/publications/p946",
+      "title": "Publication 946 (2025), How To Depreciate Property",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-13",
+      "quote": "reinstated the 100% special depreciation allowance for certain qualified property acquired and placed in service after January 19, 2025",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-notice-2026-11",
+      "url": "https://www.irs.gov/pub/irs-drop/n-26-11.pdf",
+      "title": "Notice 2026-11, Interim Guidance on Additional First Year Depreciation Deduction under section 168(k)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-13",
+      "quote": "intend to issue proposed regulations",
+      "tier": "primary"
+    }
+  ]
+}

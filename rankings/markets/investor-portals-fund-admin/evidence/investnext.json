@@ -1,0 +1,154 @@
+{
+  "vendor": "investnext",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://support.investnext.com/en/",
+      "found": true,
+      "note": "Intercom help center for sponsors and investors; no developer section"
+    },
+    "api": {
+      "url": "https://www.investnext.com/platform/integrations/",
+      "found": false,
+      "note": "No public API or developer docs found; /api returns 404 and legacydevelopers.investnext.com shows only an investor sign-in. Integration is via Zapier and a read-only MCP"
+    },
+    "pricing": {
+      "url": "https://www.investnext.com/pricing/",
+      "found": true,
+      "note": "Two plans, Base and Pro, both 'Get pricing' with price based on equity under management; no dollar figures except ACH fees"
+    },
+    "changelog": {
+      "url": "https://www.investnext.com/blog/category/product-updates",
+      "found": false,
+      "note": "Guessed product-updates blog category returns 404; no release-notes page linked from the site or help center home"
+    }
+  },
+  "links": {
+    "docs": "https://support.investnext.com/en/",
+    "mcp": "https://support.investnext.com/en/collections/19764241-mcp"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://www.investnext.com/pricing/",
+      "excerpt": "Priced to your equity under management.",
+      "fetched": "2026-11-12",
+      "note": "Base and Pro plans show 'Get Base pricing' and 'Get Pro pricing'; no list prices",
+      "hash": "d1477f19226c51077ac23bd137aaa7c0fb1885bfc43c4d585b5648cdfb5259b2"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://www.investnext.com/pricing/",
+      "excerpt": "Everything in Base, plus AI, Zapier connections, and our experts’ assistance on your waterfalls.",
+      "fetched": "2026-11-12",
+      "note": "Pro plan description",
+      "hash": "0dd4838c0fca579557f9c87389750a34fe9140c468580a3f74eb5c8127ce41a0"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://www.investnext.com/pricing/",
+      "excerpt": "ACH payments 0.03% + 25¢ Per payment, capped at $25. Free with a Transact account.",
+      "fetched": "2026-11-12",
+      "hash": "0dee3ed9b48421b2a841b7cf37e4b7083d356f1aa2a79ec340df5961b73e4265"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://support.investnext.com/en/articles/17220336-investnext-mcp-frequently-asked-questions",
+      "excerpt": "No. It's read-only. It cannot create, update, or delete any records in InvestNext.",
+      "fetched": "2026-11-12",
+      "note": "Answer to whether MCP changes anything in InvestNext",
+      "hash": "cc105fbbd838f67ba8e89a636b461824261facc316c0adb22c8a9f9c5779d7d9"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://support.investnext.com/en/articles/17221309-connecting-investnext-mcp-to-claude",
+      "excerpt": "InvestNext MCP is a paid add-on, so it must also be enabled for your InvestNext account.",
+      "fetched": "2026-11-12",
+      "hash": "44675d3b6f04b1a6f369134dd2397aa7a6e589cf5512fe7939ffe8286c7f87b8"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://support.investnext.com/en/articles/17220336-investnext-mcp-frequently-asked-questions",
+      "excerpt": "InvestNext MCP respects your existing InvestNext permissions. It only returns records you could already see when signed in to the InvestNext web app.",
+      "fetched": "2026-11-12",
+      "hash": "842c0f500d48f45384ad26fe2cc5fc0a6d98aff82b9b6550b4654a7b42bf03b1"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://support.investnext.com/en/articles/17220336-investnext-mcp-frequently-asked-questions",
+      "excerpt": "Large lists are returned in pages (50 records by default, up to 200 at a time).",
+      "fetched": "2026-11-12",
+      "hash": "d9e4fe95b1c474cc0e07021ba0f2fda43acea4a0b8a4f81962701e23e2f5ea45"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://www.investnext.com/platform/integrations/",
+      "excerpt": "Integrate InvestNext’s platform with your favorite business applications to create seamless workflows.",
+      "fetched": "2026-11-12",
+      "hash": "32c245ada8dedd6e1a194973e56b929adfa75fae5758aa93de195911c22ffbfb"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://www.investnext.com/platform/integrations/",
+      "excerpt": "directly to your marketing platform through flexible Zapier connections.",
+      "fetched": "2026-11-12",
+      "hash": "bad0fb43aee95ffa5812ffe3be418ca44b5698f53bdc918cd43c28432f7c1f06"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://www.investnext.com/pricing/",
+      "excerpt": "Advanced Zapier connections Push InvestNext data to the rest of your stack.",
+      "fetched": "2026-11-12",
+      "note": "Pro-plan feature, listed on separate lines",
+      "hash": "be4468b29d281f7c4a4b955bc5cee16959d8bb567a87e5c6aad797b913506545"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://www.investnext.com/llms.txt",
+      "excerpt": "Generated by Yoast SEO v28.3, this is an llms.txt file, meant for consumption by LLMs.",
+      "fetched": "2026-11-12",
+      "note": "Lists marketing pages, blog and customer stories, not API docs",
+      "hash": "a47e2a4699f74a78521febfcb543a09b04124d093b207b02892b7ad750459cef"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://www.investnext.com/llms.txt",
+      "excerpt": "# InvestNext: Modern Investment Management",
+      "note": "llms.txt: GET 200, 5357 bytes",
+      "fetched": "2026-11-12",
+      "hash": "76e92407be5e85abae45fdd42cbfedc61e196d34b260076b1f23e1b48b7be361"
+    },
+    {
+      "id": "p2",
+      "tier": "probe",
+      "url": "https://support.investnext.com/llms.txt",
+      "excerpt": "# InvestNext Help Center",
+      "note": "llms.txt: GET 200, 55373 bytes",
+      "fetched": "2026-11-12",
+      "hash": "4f5dd357aa63880d90a93eb4dbfff40190e6f06c51f0c0ece1ce824768a6e835"
+    },
+    {
+      "id": "p3",
+      "tier": "probe",
+      "url": "https://support.investnext.com/en/collections/19764241-mcp",
+      "excerpt": "MCP | InvestNext Help Center",
+      "note": "MCP page resolves: GET 200 (page title)",
+      "fetched": "2026-11-12",
+      "hash": "c853612c87bf3718cfa368542e1edd270f502a3df7b3106ba2eacde6bcc8df57"
+    }
+  ]
+}

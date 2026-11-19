@@ -1,0 +1,97 @@
+{
+  "id": "payoff-letter",
+  "name": "Payoff letter",
+  "what": "A lender's or lienholder's statement of the amount needed to release its lien on a date.",
+  "fields": [
+    {
+      "key": "lienholder",
+      "label": "Lienholder",
+      "type": "string",
+      "definition": "The lender or lienholder issuing the letter, the servicer if different, and a contact who can update the figures."
+    },
+    {
+      "key": "borrower",
+      "label": "Borrower",
+      "type": "string",
+      "definition": "The borrower or debtor the letter names, which should be the seller or its entity."
+    },
+    {
+      "key": "lienReleased",
+      "label": "Lien being paid",
+      "type": "string",
+      "definition": "The deed of trust or other lien the payment releases, with its recording data, so the release can be matched to the instrument of record."
+    },
+    {
+      "key": "goodThroughDate",
+      "label": "Good through",
+      "type": "date",
+      "definition": "The last date on which the stated total pays the debt in full."
+    },
+    {
+      "key": "principalBalance",
+      "label": "Principal balance",
+      "type": "money",
+      "unit": "USD",
+      "definition": "Unpaid principal as of the letter."
+    },
+    {
+      "key": "accruedInterest",
+      "label": "Accrued interest",
+      "type": "money",
+      "unit": "USD",
+      "definition": "Interest accrued through the good-through date, and the rate it accrues at."
+    },
+    {
+      "key": "perDiem",
+      "label": "Per diem interest",
+      "type": "money",
+      "unit": "USD/day",
+      "definition": "Interest added for each day after the good-through date, used to update the total if funding slips."
+    },
+    {
+      "key": "prepaymentCost",
+      "label": "Prepayment cost",
+      "type": "money",
+      "unit": "USD",
+      "definition": "Any prepayment premium, yield maintenance, defeasance cost or swap breakage included, with how the letter computes it."
+    },
+    {
+      "key": "feesAndCharges",
+      "label": "Fees and charges",
+      "type": "list",
+      "definition": "Late charges, default interest, legal fees, release and recording fees and any other item, each with its amount, to compare with what the loan documents allow."
+    },
+    {
+      "key": "reserveBalances",
+      "label": "Reserve and escrow balances",
+      "type": "money",
+      "unit": "USD",
+      "definition": "Reserve and escrow balances the lender holds, and whether they are netted against the payoff or refunded after it."
+    },
+    {
+      "key": "totalPayoff",
+      "label": "Total payoff",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The total needed on the good-through date to pay the debt and release the lien."
+    },
+    {
+      "key": "releaseCommitment",
+      "label": "Release commitment",
+      "type": "text",
+      "definition": "What the lender says it will deliver once paid, such as a recordable release of the deed of trust and termination of financing statements, and by when."
+    },
+    {
+      "key": "wireVerification",
+      "label": "Wire verification",
+      "type": "text",
+      "definition": "Where the lender's wire instructions are stored and how and when they were confirmed by a call to a number from an independent source. Never the account or routing number."
+    },
+    {
+      "key": "conditions",
+      "label": "Conditions on the figures",
+      "type": "text",
+      "definition": "Conditions the letter places on its figures, such as no further advances or returned payments, or an expiry if the funds do not arrive."
+    }
+  ]
+}

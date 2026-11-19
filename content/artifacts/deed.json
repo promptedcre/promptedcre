@@ -1,0 +1,79 @@
+{
+  "id": "deed",
+  "name": "Deed",
+  "what": "The signed instrument that conveys the property to the buyer, recorded in the county records.",
+  "fields": [
+    {
+      "key": "deedType",
+      "label": "Deed type",
+      "type": "enum",
+      "definition": "General warranty, special warranty, without warranty, or quitclaim. Read it from the granting and warranty clauses, not only the heading: what the grantor promises about title, against all persons, only against claims through the grantor, or nothing."
+    },
+    {
+      "key": "grantor",
+      "label": "Grantor",
+      "type": "string",
+      "definition": "The seller conveying title, exactly as named; compare it with the owner of record on the title commitment."
+    },
+    {
+      "key": "grantee",
+      "label": "Grantee",
+      "type": "string",
+      "definition": "The buyer receiving title, with its entity type and state; compare it with the buyer in the contract and the insured on the title policy."
+    },
+    {
+      "key": "granteeAddress",
+      "label": "Grantee's mailing address",
+      "type": "string",
+      "definition": "The mailing address the deed gives for the grantee, which the county and tax offices use for notices."
+    },
+    {
+      "key": "deedDate",
+      "label": "Date of deed",
+      "type": "date",
+      "definition": "The date the deed states, and the date of each signature if different."
+    },
+    {
+      "key": "consideration",
+      "label": "Consideration recited",
+      "type": "string",
+      "definition": "The consideration the deed recites, usually a nominal sum and other value; the price itself rarely appears."
+    },
+    {
+      "key": "legalDescription",
+      "label": "Legal description",
+      "type": "text",
+      "definition": "The land conveyed, as described in the deed or its exhibit; compare it word for word with the commitment and the survey."
+    },
+    {
+      "key": "permittedExceptions",
+      "label": "Conveyed subject to",
+      "type": "list",
+      "definition": "The matters the deed conveys the property subject to, such as recorded easements and restrictions, current taxes and tenants' rights; compare them with Schedule B of the title policy."
+    },
+    {
+      "key": "reservations",
+      "label": "Reservations",
+      "type": "list",
+      "definition": "Anything the grantor keeps, such as minerals, an access easement or a right of first refusal."
+    },
+    {
+      "key": "vendorsLienRetained",
+      "label": "Vendor's lien retained",
+      "type": "boolean",
+      "definition": "Whether the deed retains a lien for unpaid purchase money, in favor of the seller or of a lender that funded the purchase."
+    },
+    {
+      "key": "acknowledgment",
+      "label": "Acknowledgment",
+      "type": "string",
+      "definition": "The notary's certificate: who acknowledged and in what capacity, the date, the county and state, and whether it was taken in person or online."
+    },
+    {
+      "key": "recordingInfo",
+      "label": "Recording information",
+      "type": "string",
+      "definition": "The county, the instrument or document number and the recording date, once recorded."
+    }
+  ]
+}

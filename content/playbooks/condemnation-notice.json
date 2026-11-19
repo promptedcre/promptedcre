@@ -1,0 +1,38 @@
+{
+  "id": "condemnation-notice",
+  "slug": "condemnation-notice",
+  "kind": "situation",
+  "title": "The government plans to take part of the property",
+  "summary": "Review the lease and loan provisions on condemnation, engage counsel and an appraiser, and protect the award.",
+  "phase": "operate",
+  "order": 134,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "situation": {
+    "trigger": "A government agency notifies the owner of a planned taking of part or all of the property.",
+    "urgency": "weeks"
+  },
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Calendar every date in the notice",
+    "Read the notice for what is being taken and when",
+    "Engage condemnation counsel",
+    "Read each lease's condemnation clause",
+    "Read the loan's provisions on condemnation awards",
+    "Notify the lender and affected tenants as the documents require",
+    "Hire an appraiser to value the taking and the remainder",
+    "Assess the effect on access, parking, leases and the loan",
+    "Respond to the agency's offer with counsel",
+    "Tell investors and record the award and how it is used"
+  ]
+}

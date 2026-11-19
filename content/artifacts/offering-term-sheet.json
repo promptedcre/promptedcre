@@ -1,0 +1,148 @@
+{
+  "id": "offering-term-sheet",
+  "name": "Offering term sheet",
+  "what": "The sponsor's internal statement of an offering's terms, approved in writing by the principals before counsel drafts the documents; it goes to no investor or capital partner, and in a joint venture the venture term sheet the partner receives is drafted from it.",
+  "fields": [
+    {
+      "key": "vehicle",
+      "label": "Vehicle, entity and sponsor's role",
+      "type": "text",
+      "definition": "Whether the offering is a single-property syndication, a fund or a joint venture, the entity that will hold the property, and the sponsor's role in it, such as manager or general partner."
+    },
+    {
+      "key": "equitySought",
+      "label": "Equity sought",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The total equity the offering seeks from investors or the capital partner, and any lower amount the sheet says the offering can close on."
+    },
+    {
+      "key": "minimumInvestment",
+      "label": "Minimum investment",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The smallest investment the principals set and whether the sponsor may accept less. If counsel relies on the SEC staff's minimum-investment position to verify accredited status, the minimum is a condition of that route."
+    },
+    {
+      "key": "sponsorContribution",
+      "label": "Sponsor's own contribution",
+      "type": "text",
+      "definition": "The amount the sponsor and its principals put in, that amount as a share of the total equity, the class of interest it buys, and how much of it is new cash as distinct from fees left in or deferred."
+    },
+    {
+      "key": "netCashAtClosing",
+      "label": "Sponsor's net cash at closing",
+      "type": "text",
+      "definition": "The new cash the sponsor contributes less every payment it, its principals or related companies receive at closing, negative when the sponsor takes cash out, with reimbursements of costs it paid to others on their own line."
+    },
+    {
+      "key": "sponsorPayments",
+      "label": "Payments to the sponsor and related companies",
+      "type": "list",
+      "definition": "Every payment to the sponsor, its principals or related companies: its rate, base, estimated dollars over the planned hold, timing and payee, whether it goes to a related company, and whether its amount depends on equity raised or investors brought in."
+    },
+    {
+      "key": "preferredReturn",
+      "label": "Preferred return",
+      "type": "text",
+      "definition": "The preferred return rate, whether it is simple or compounds, whether an unpaid amount carries forward, the amount it accrues on, and the date or event accrual starts. Null if there is none."
+    },
+    {
+      "key": "distributionTiers",
+      "label": "Distribution tiers and catch-up",
+      "type": "list",
+      "definition": "The order in which cash goes out from operations and from a sale or refinance, any catch-up with its split and target, and each tier with its hurdle, the measure the hurdle uses and the split. Also whether the sponsor's contribution is paid alongside the investors, and for a fund whether the promote is figured deal by deal or on the whole fund and whether promote paid early can be taken back."
+    },
+    {
+      "key": "costBearing",
+      "label": "Offering, organizational and pursuit costs",
+      "type": "text",
+      "definition": "Who bears the costs of organizing the entity, preparing the offering and pursuing the property, whether the sponsor is repaid for them at closing, and who bears them if the deal does not close."
+    },
+    {
+      "key": "differentTerms",
+      "label": "Classes or investors on different terms",
+      "type": "list",
+      "definition": "Each class of interest or investor that gets terms different from the others, the terms that differ, and the ground for the difference, such as commitment size or timing."
+    },
+    {
+      "key": "decisionRights",
+      "label": "Decisions and consents",
+      "type": "text",
+      "definition": "What the sponsor decides alone, and what needs the investors' vote or the capital partner's consent, with the vote or consent each one takes."
+    },
+    {
+      "key": "removalTerms",
+      "label": "Removal of the sponsor",
+      "type": "text",
+      "definition": "The grounds and vote for removing the sponsor, and what removal does to its fees, its promote and its own capital."
+    },
+    {
+      "key": "transferTerms",
+      "label": "Transfer and resale",
+      "type": "text",
+      "definition": "Which transfers of an interest need consent, and the statement that the interests are restricted and cannot be resold without registration or an exemption."
+    },
+    {
+      "key": "holdAndExit",
+      "label": "Hold range and exit",
+      "type": "string",
+      "definition": "The range of years the sponsor plans to hold the property and the way out it plans, such as a sale or a refinancing."
+    },
+    {
+      "key": "retirementMoney",
+      "label": "Retirement-account money",
+      "type": "text",
+      "definition": "Whether the offering accepts money from individual retirement accounts and employee benefit plans, and any limit the sheet sets on their share of a class of interests.",
+      "authority": "29 U.S.C. 1002(42); 29 CFR 2510.3-101(f)"
+    },
+    {
+      "key": "outcomes",
+      "label": "Results across endings",
+      "type": "list",
+      "definition": "For each ending the sheet shows, such as the base case, a weaker sale and a loss, the investors' distributions, multiple and internal rate of return as the waterfall calculator produced them, the sponsor's promote from the calculator and its fees from the payment list in dollars, and a mark on each ending at which investors lose money while the sponsor still nets cash."
+    },
+    {
+      "key": "returnsCompared",
+      "label": "Investor returns before and after sponsor pay",
+      "type": "text",
+      "definition": "The investors' return before any sponsor pay, after fees and after the promote, side by side, and total sponsor pay, fees plus promote, as a share of the profit before sponsor pay."
+    },
+    {
+      "key": "breakEvens",
+      "label": "Break-even points",
+      "type": "text",
+      "definition": "The final-year cash at which investors get their capital back and the final-year cash at which the preferred return is paid, as the waterfall calculator found them."
+    },
+    {
+      "key": "payThatGrows",
+      "label": "Pay that grows with the hold or the loan",
+      "type": "list",
+      "definition": "Each payment or tier that rises when the hold runs a year longer or the loan is larger, with the change in dollars and in the investors' return, and what the principals decided about it."
+    },
+    {
+      "key": "levelBasis",
+      "label": "Basis for each level",
+      "type": "list",
+      "definition": "For each level the principals set, where it came from and why it was kept or changed after the tests."
+    },
+    {
+      "key": "modelVersion",
+      "label": "Model version",
+      "type": "string",
+      "definition": "The underwriting model file and version that every figure on the sheet comes from, and its date. For a fund that does not yet own a property, the illustrative model the principals approved, labeled illustrative."
+    },
+    {
+      "key": "openItems",
+      "label": "Open items",
+      "type": "list",
+      "definition": "Each term or figure not yet settled when the sheet was assembled, and who is to settle it."
+    },
+    {
+      "key": "approval",
+      "label": "Version and approval",
+      "type": "text",
+      "definition": "The sheet's version number and date, and each principal who approved it with the date of approval."
+    }
+  ]
+}

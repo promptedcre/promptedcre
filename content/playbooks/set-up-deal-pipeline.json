@@ -1,0 +1,23 @@
+{
+  "id": "set-up-deal-pipeline",
+  "slug": "set-up-deal-pipeline",
+  "kind": "process",
+  "title": "Set up the deal pipeline",
+  "summary": "Track every deal from first look to close or pass in one place, with the reason for each decision.",
+  "phase": "stand-up",
+  "order": 65,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": []
+}

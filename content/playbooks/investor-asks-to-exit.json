@@ -1,0 +1,484 @@
+{
+  "id": "investor-asks-to-exit",
+  "slug": "investor-asks-to-exit",
+  "kind": "situation",
+  "title": "An investor asks to sell or redeem",
+  "summary": "Acknowledge the request without promising anything, read what the governing agreement allows, and decide early whether any path is worth pursuing. Counsel sets the resale conditions and clears the buyer, the CPA answers the tax questions, the parties set the price, and the register and file are updated.",
+  "phase": "report",
+  "order": 128,
+  "featured": false,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-14",
+  "situation": {
+    "trigger": "An investor asks to sell an interest or get money back before the deal ends.",
+    "urgency": "weeks"
+  },
+  "requires": [
+    "onboard-an-investor"
+  ],
+  "consumes": [
+    "deal-entity-agreement",
+    "jv-agreement",
+    "subscription-agreement",
+    "private-placement-memorandum",
+    "loan-documents",
+    "investor-register"
+  ],
+  "produces": [
+    "investor-register"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "ecfr-230-502",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.502",
+      "title": "17 CFR 230.502, General conditions to be met",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-14",
+      "quote": "cannot be resold without registration under the Act or an exemption therefrom",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-144",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.144",
+      "title": "17 CFR 230.144, Persons deemed not to be engaged in a distribution and therefore not underwriters",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-14",
+      "quote": "Rule 144 is not an exclusive safe harbor.",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-77d",
+      "url": "https://www.law.cornell.edu/uscode/text/15/77d",
+      "title": "15 U.S.C. 77d, Exempted transactions",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "transactions by any person other than an issuer, underwriter, or dealer",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-14",
+      "quote": "in connection with the purchase or sale of any security",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-101",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.101.htm",
+      "title": "Texas Business Organizations Code, Chapter 101, Limited Liability Companies (Sections 101.052, 101.108, 101.109 and 101.111)",
+      "publisher": "Texas Legislature (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "is entitled to become a member of the company on the approval of all of the company's members",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-741",
+      "url": "https://www.law.cornell.edu/uscode/text/26/741",
+      "title": "26 U.S.C. 741, Recognition and character of gain or loss on sale or exchange",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "gain or loss shall be recognized to the transferor partner",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-751",
+      "url": "https://www.law.cornell.edu/uscode/text/26/751",
+      "title": "26 U.S.C. 751, Unrealized receivables and inventory items",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-6050k",
+      "url": "https://www.law.cornell.edu/uscode/text/26/6050K",
+      "title": "26 U.S.C. 6050K, Returns relating to exchanges of certain partnership interests",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "the transferor of the partnership interest shall promptly notify the partnership of such exchange",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-1446",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1446",
+      "title": "26 U.S.C. 1446, Withholding of tax on foreign partners' share of effectively connected income",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "acknowledge-the-request",
+      "title": "Acknowledge the request in writing",
+      "instruction": "Log the request the day it arrives: who asked, the date, the interest concerned, and what was asked for, whether a sale to a buyer the investor has found, help finding a buyer, or money back from the entity. Draft a short written reply that confirms receipt, says the sponsor is reading the governing agreement and will reply with what it allows, and names who will handle it. The reply promises no outcome, price, buyer or date, states no value for the interest, and does not say the sponsor will buy. Ask the investor to send any buyer's name, any proposed terms and anything else they want considered. A principal reads the reply and sends it.",
+      "mode": "agent",
+      "modeBasis": "Logging and drafting are writing work; anything sent to an investor goes out only with a person's approval.",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "consumes": [
+        "investor-register"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "read-the-agreement",
+      "title": "Read what the governing agreement allows",
+      "instruction": "Abstract, with section numbers, what the deal entity agreement (in a joint venture, the venture agreement) says about this request: transfer restrictions, lock-out periods and any minimum size; whose consent a transfer needs and its standard; rights of first refusal or offer and their notice periods; permitted transfers to affiliates, trusts or estates; conditions for admitting a buyer as a substitute member; any redemption or withdrawal right; in a joint venture, any buy-sell, put, call, forced-sale or marketing right; and the confidentiality terms on sharing deal information. Many closed-end deals have no redemption right; record only what the agreement says, and where it is silent. For a Texas LLC, unless the company agreement provides otherwise, an assignee receives the assigned allocations and distributions but becomes a member only with every member's approval, and the assignor stays liable to the company. Note the resale language in the subscription agreement and memorandum.",
+      "mode": "agent",
+      "modeBasis": "Abstracting signed documents is reading work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "acknowledge-the-request"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "subscription-agreement",
+        "private-placement-memorandum"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101"
+      ]
+    },
+    {
+      "id": "check-other-limits",
+      "title": "Check the loan and the entity's other limits",
+      "instruction": "Read the loan documents for transfer and change-of-ownership clauses and list what this transfer would need: nothing, notice, or the lender's consent, and any condition attached. A transfer to the sponsor or an affiliate can change who controls the borrower, so read that case separately. Check the register for limits a new holder could touch: in a fund relying on an Investment Company Act exclusion, the beneficial owner count; where benefit plan investors hold interests, whether a buyer that is one moves the plan-asset percentage; and whether the buyer would be a foreign person, including whether the Texas limits on foreign acquisition of real property reach a purchase of an entity interest. Put each item on the list for counsel, who decides how the rules apply; this step decides nothing.",
+      "mode": "agent",
+      "modeBasis": "Reading the loan documents and the register against the linked rule cards is document work; applying them is counsel's.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-the-agreement"
+      ],
+      "rules": [
+        "us-fed.ica.fund-exclusions",
+        "us-fed.erisa.plan-assets",
+        "us-tx.property.foreign-acquisition-restrictions"
+      ],
+      "consumes": [
+        "loan-documents",
+        "investor-register"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "check-the-resale-limit",
+      "title": "Have counsel set the resale conditions",
+      "instruction": "Interests sold under Regulation D cannot be resold without registration or an exemption. The issuer was to take reasonable care that buyers were not underwriters, for example by written disclosure of the resale limits and a legend on the document evidencing the interest; give counsel what was done, the resale language the investor signed, when the seller acquired and fully paid for the interest, and whether the seller is an affiliate of the issuer. Rule 144 is a safe harbor, not the only route, and a resale between private parties may rest on another exemption. Before any buyer is named, counsel sets the conditions a resale must meet, what a buyer must represent, and the limits on looking for one, such as no advertising and no paid finder without counsel's clearance. In a joint venture, counsel first decides whether the interest is a security at all.",
+      "mode": "human-online",
+      "modeBasis": "Which exemption can cover a resale, and on what conditions, is a legal conclusion.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-the-agreement"
+      ],
+      "rules": [
+        "us-fed.reg-d.resale-limits",
+        "us-fed.exchange-act.broker-registration",
+        "us-fed.securities.jv-interests"
+      ],
+      "consumes": [
+        "subscription-agreement",
+        "private-placement-memorandum",
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-502",
+        "ecfr-230-144",
+        "usc-15-77d"
+      ]
+    },
+    {
+      "id": "list-the-buyer-paths",
+      "title": "List who may buy and what each path needs",
+      "instruction": "Write one page per path the agreement permits: an existing investor, the sponsor or an affiliate, an outside buyer admitted as a substitute member, or the entity itself where a redemption right exists. For each, list as questions for counsel: which consents and first-refusal offers come first and in what order; whether the buyer must be accredited and verified; whether the buyer takes the seller's whole position, including any unfunded commitment in a fund and any default history; how a sponsor purchase affects its co-investment and promote under the agreement; and, for a redemption, whether the loan documents or reserves allow cash to leave the entity. Note what each path costs the entity and who pays it under the agreement.",
+      "mode": "agent",
+      "modeBasis": "Laying out the paths the agreement permits is document work; choosing among them is the next step, a principal's.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-other-limits",
+        "check-the-resale-limit"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "loan-documents"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "choose-the-path",
+      "title": "Decide whether to pursue a path",
+      "instruction": "A principal reads the abstract, counsel's resale conditions and the path pages and decides whether any permitted path will be pursued, applying the agreement's standard and nothing else. If the agreement permits nothing the investor asked for, or the sponsor declines where the agreement lets it, the principal tells the investor in writing what the agreement provides and why, without commenting on value, and the request goes straight to the note to file in the last step; the steps between run only when a path is pursued. When a path is pursued, the principal tells the investor which one and what happens next, promising no buyer, price or date. If the sponsor or an affiliate may buy, no package goes out and no terms are discussed until counsel has cleared the conflict in the next step.",
+      "mode": "human-online",
+      "modeBasis": "Whether the sponsor pursues or declines the request binds the firm, and the reply goes to an investor from a person.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-the-buyer-paths"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "clear-sponsor-conflicts",
+      "title": "Clear the conflict when the sponsor buys",
+      "instruction": "When the sponsor or an affiliate may be the buyer, counsel reads the agreement's affiliate-transaction, conflict and consent terms and lists the approvals they require, such as an advisory committee or a vote of the investors not affiliated with the sponsor; the approvals are obtained before the package goes out and before terms are negotiated. Counsel also asks whether the seller or the buyer is a benefit plan investor or an individual retirement account, a principal's included, and whether the entity holds plan assets, since a purchase by the sponsor could then raise a prohibited-transaction question. Rule 10b-5 reaches the sponsor as buyer, and the sponsor knows more about the deal than the seller, so counsel reviews the next step's disclosure with that in mind. Where no sponsor or affiliate is a buyer, this step does not run.",
+      "mode": "human-online",
+      "modeBasis": "The conflict approvals and the plan-asset question are counsel's conclusions.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-the-path"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5",
+        "us-fed.erisa.plan-assets",
+        "us-fed.irc.retirement-account-prohibited-transactions"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5"
+      ]
+    },
+    {
+      "id": "share-the-same-information",
+      "title": "Give both sides the same information",
+      "instruction": "The price is the seller's and buyer's to agree. Before anything is released, a principal lists what the sponsor knows that has not been reported, such as a pending lease, sale or refinancing, and counsel decides what the package must disclose. An outside buyer signs a confidentiality agreement counsel drafts, and the seller consents in writing before its account history is shared. Then give the seller and every prospective buyer the same package: the latest reports and financials, the rent roll, the seller's capital account and distributions, the distribution terms and counsel's disclosure. If both sides ask, the waterfall-promote calculator shows how the waterfall splits cash under scenarios they choose. The sponsor states no value unless the agreement makes pricing its job, then follows that text and records each input's source. Untrue or misleading statements of material fact in a securities sale are unlawful, so a principal approves the release.",
+      "mode": "agent",
+      "modeBasis": "Assembling existing reports is document work; what is disclosed is counsel's call, and the package goes out only with a principal's approval.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "clear-sponsor-conflicts"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5"
+      ],
+      "calculators": [
+        "waterfall-promote"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5"
+      ]
+    },
+    {
+      "id": "clear-the-buyer",
+      "title": "Have counsel clear the named buyer",
+      "instruction": "Once a buyer is named, give counsel the buyer's identity, its accredited status and how that was verified, whether it is an affiliate of the issuer, how the buyer was found, whether anyone would be paid for the introduction, and the proposed terms. Counsel confirms that this resale meets the conditions set earlier, or says what more it needs, and states the representations the buyer must make. If the buyer does not clear, a principal tells the seller in writing, in words counsel approves.",
+      "mode": "human-online",
+      "modeBasis": "Whether a specific resale fits an exemption is a legal conclusion.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "share-the-same-information"
+      ],
+      "rules": [
+        "us-fed.reg-d.resale-limits",
+        "us-fed.exchange-act.broker-registration"
+      ],
+      "consumes": [
+        "investor-register"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "raise-the-tax-questions",
+      "title": "Put the tax questions to the CPA",
+      "instruction": "Send the CPA the agreement's allocation terms, the seller's capital account and the proposed transfer date, and get answers on: the seller's gain or loss, which section 741 treats as capital except where section 751 applies, and how much of the entity's property section 751 reaches; whether the partnership must file the section 6050K return, given that the seller must notify the partnership promptly; how the year's income is split between seller and buyer; whether a section 754 election is in place or should be made, or a mandatory adjustment applies, since a buyer may ask about its own basis adjustment; and whether the buyer must withhold under section 1446(f) unless the seller furnishes a nonforeign affidavit. In a redemption, the CPA answers the same questions for a distribution. Each answer is the CPA's position, not the sponsor's.",
+      "mode": "human-online",
+      "modeBasis": "Tax positions belong to the CPA.",
+      "actor": "cpa",
+      "licensed": "cpa",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-the-path"
+      ],
+      "rules": [
+        "us-fed.irc.partnership-basis-election"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-26-741",
+        "usc-26-751",
+        "usc-26-6050k",
+        "usc-26-1446"
+      ]
+    },
+    {
+      "id": "decide-and-consent",
+      "title": "Decide, give consents and run first-refusal offers",
+      "instruction": "With counsel's clearance of the named buyer, the CPA's answers and any conflict approvals in hand, the principals the agreement names decide whether the sponsor consents to the transfer, exercises or waives any first-refusal right it holds, and admits the buyer, applying the standard the agreement sets and nothing else. Where other investors hold first-refusal rights, the offer goes to them on the terms and notice period the agreement states. If consent is refused where the agreement allows that, a principal tells the investor in writing what the agreement provides and why, without commenting on value. Each consent or refusal is signed and dated.",
+      "mode": "human-online",
+      "modeBasis": "Consent binds the entity and needs an authorized signer.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "clear-the-buyer",
+        "raise-the-tax-questions"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "draft-transfer-documents",
+      "title": "Have counsel draft the transfer documents",
+      "instruction": "Counsel drafts the documents the agreement and the resale exemption require, which may include an assignment and assumption between seller and buyer, the buyer's joinder to the agreement with its representations on accredited status, investment intent and the resale legend, the sponsor's written consent, any first-refusal waivers, the admission of the buyer as a substitute member, an amended schedule of members, any lender consent, and a redemption agreement where the entity buys. Counsel sets the effective date as the agreement allows and states who pays the costs. The sponsor gives counsel the abstract, the register entries and the CPA's answers; counsel decides the drafting.",
+      "mode": "human-online",
+      "modeBasis": "Legal drafting is counsel's.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-and-consent"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "loan-documents",
+        "investor-register"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "sign-and-settle",
+      "title": "Sign the documents and settle the payment",
+      "instruction": "Before anyone signs, confirm that a new holder has completed the reviewed onboarding record, including the tax form, the sanctions screen and accredited status; do not shortcut it. The seller, the buyer and the sponsor's authorized signer then sign the documents counsel prepared. Whatever the buyer, the buyer pays the seller under their agreement and the sponsor confirms the payment against the documents; where the sponsor or an affiliate pays, or the entity redeems, a principal releases the payment after confirming the seller's payment instructions by phone at a number already on file. A principal confirms the new holder's distribution instructions the same way before its first distribution, recording who confirmed and when, never the account numbers. The lender gets any notice or consent the loan documents require before the effective date.",
+      "mode": "human-online",
+      "modeBasis": "Signatures, the release of any payment and the phone confirmations are a person's acts.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "draft-transfer-documents"
+      ],
+      "consumes": [
+        "loan-documents",
+        "investor-register"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "record-and-notify",
+      "title": "Update the register, file the note and send notices",
+      "instruction": "Record the transfer in the investor register as of the effective date: the seller's reduced or ended interest, the buyer as a new or larger holder, and where the signed documents and consents are kept. Move the capital account in the books as the CPA directed, update any count kept for an exemption or exclusion, and send the transfer date to the CPA. Then write the note to file: the request, the agreement terms applied, the consents and first-refusal results, counsel's clearances, the CPA's answers, the price as the parties reported it, and where each document is kept. The same note closes a declined or withdrawn request, with no register change. Where the agreement requires notice to the other investors or partners, draft it from the note, stating facts only; a principal approves it before it goes out.",
+      "mode": "agent",
+      "modeBasis": "Updating the register from signed documents and drafting the note and notices is document work; notices go to investors only with a person's approval.",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-and-settle"
+      ],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "deal-entity-agreement",
+        "investor-register"
+      ],
+      "produces": [
+        "investor-register"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    }
+  ],
+  "outlineSteps": []
+}

@@ -1,0 +1,187 @@
+{
+  "vendor": "docusign",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://developers.docusign.com/",
+      "found": true
+    },
+    "api": {
+      "url": "https://developers.docusign.com/docs/esign-rest-api/",
+      "found": true
+    },
+    "pricing": {
+      "url": "https://ecom.docusign.com/plans-and-pricing/esignature",
+      "found": true
+    },
+    "changelog": {
+      "url": "https://developers.docusign.com/changelog",
+      "found": true
+    }
+  },
+  "links": {
+    "docs": "https://developers.docusign.com/",
+    "api": "https://developers.docusign.com/docs/esign-rest-api/",
+    "openapi": "https://github.com/docusign/OpenAPI-Specifications/blob/master/esignature.rest.swagger-v2.1.json",
+    "mcp": "https://developers.docusign.com/platform/mcp-server/"
+  },
+  "packages": [],
+  "repos": [
+    "https://github.com/docusign/OpenAPI-Specifications"
+  ],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://developers.docusign.com/llms.txt",
+      "excerpt": "Leverage our suite of performant and secure APIs and SDKs.",
+      "fetched": "2026-11-12",
+      "hash": "786f5cf2383b7916cb12dc6a834e582125e7a53d3f3f0db2202f3454fc9c9509"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://developers.docusign.com/docs/esign-rest-api/how-to/request-signature-email-remote/",
+      "excerpt": "This topic demonstrates how to send a signature request via an email, also known as a remote signature request or remote signing.",
+      "fetched": "2026-11-12",
+      "hash": "e5d1d78c5e210787eca5366f4ebba293f6fd67e94613492320a4b4c8f95ef8a8"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://developers.docusign.com/llms.txt",
+      "excerpt": "Demonstrates how to get data on an already-defined envelope.",
+      "fetched": "2026-11-12",
+      "note": "How to get envelope information (status)",
+      "hash": "80c0a9cc736e637f44066792ba3ad7bb6521009cb64082094618075173f0f013"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://developers.docusign.com/docs/esign-rest-api/how-to/download-envelope-documents/",
+      "excerpt": "This topic demonstrates how to retrieve documents from an envelope",
+      "fetched": "2026-11-12",
+      "note": "Includes Certificate of Completion and composite PDF",
+      "hash": "e4b320e50f5c2be34323105fb53c46440fc8d6102f0196912d6fbd97973f8ddd"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://developers.docusign.com/llms.txt",
+      "excerpt": "Docusign Connect is a webhook service that enables you to receive updates when specific triggering events occur in eSignature workflows",
+      "fetched": "2026-11-12",
+      "hash": "26c9ebe089906741cbde1105d79415eba013810358da32f2f9a4f14e805f2cc7"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://developers.docusign.com/docs/esign-rest-api/esign101/auth/",
+      "excerpt": "To make calls to the eSignature API, you must request the signature scope during the authentication process.",
+      "fetched": "2026-11-12",
+      "hash": "c26a72949b18ea8349d0c1a5461c3d85a346f6c393c51e16e20fc8979eee247c"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://developers.docusign.com/tools/openapi-files/",
+      "excerpt": "Docusign releases OpenAPI files , formerly known as Swagger files, containing API descriptions that conform to a publicly available specification",
+      "fetched": "2026-11-12",
+      "hash": "5c3ca546258e3073efcc72ce72a5bb8c1b4f513b94ef933a1d45bec6bf8cd60b"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://developers.docusign.com/docs/esign-rest-api/sdks/",
+      "excerpt": "We provide SDKs to wrap our eSignature REST API with objects, properties, and methods in your favorite programming language.",
+      "fetched": "2026-11-12",
+      "hash": "3400905f8e132b6efe7866cf96288a07bcd16b2a0f37d0af963d5393b2312765"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://developers.docusign.com/platform/mcp-server/",
+      "excerpt": "The Docusign Model Context Protocol (MCP) server introduces a new way for developers to interact with Docusign APIs",
+      "fetched": "2026-11-12",
+      "hash": "fffd0ba06cb76a51b08f85b1dda2b2fad8f9d7245afcd5bf4da3d0de49d467a0"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://developers.docusign.com/platform/mcp-server/",
+      "excerpt": "A Docusign developer account.",
+      "fetched": "2026-11-12",
+      "note": "Prerequisite for MCP server",
+      "hash": "03cc9893c524499b1d1ba9fc3e7b91ce13b49efea2982bdb866de2363ef68d61"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://developers.docusign.com/llms.txt",
+      "excerpt": "For AI client integration (Claude Code, Cursor, etc.), connect to the MCP server at https://developers.docusign.com/_mcp/server",
+      "fetched": "2026-11-12",
+      "hash": "3ac43e175b4431dcb2e61fce4e440c31c3ee880671462371a11b30923116d4a9"
+    },
+    {
+      "id": "c12",
+      "tier": "vendor-claim",
+      "url": "https://developers.docusign.com/changelog",
+      "excerpt": "Discover the latest for Docusign developers: new APIs, SDKs, guides, code examples, and more.",
+      "fetched": "2026-11-12",
+      "hash": "938e41b674015e4bb0f9fc2d07c0ff61ec172729439cc7710c1097aba24e33c3"
+    },
+    {
+      "id": "c13",
+      "tier": "vendor-claim",
+      "url": "https://ecom.docusign.com/plans-and-pricing/esignature",
+      "excerpt": "Send 5 envelopes per month",
+      "fetched": "2026-11-12",
+      "note": "Personal plan, $11/month, $132 annual commitment",
+      "hash": "c4e9d695d5587f947b9cf7a2c49021205964a41e86e3ac89d4cd42d72be629b3"
+    },
+    {
+      "id": "c14",
+      "tier": "vendor-claim",
+      "url": "https://ecom.docusign.com/plans-and-pricing/esignature",
+      "excerpt": "Send a total of 100 envelopes per user per year",
+      "fetched": "2026-11-12",
+      "note": "Standard plan, $30/user/month, $360 annual commitment; API plans not on this page",
+      "hash": "73fcc4782fc7a151d2cb22dce9a305b4deccd0eb2eff76a248572116d5789bd5"
+    },
+    {
+      "id": "c15",
+      "tier": "vendor-claim",
+      "url": "https://www.docusign.com/developers/sandbox",
+      "excerpt": "Make your first API call in minutes",
+      "fetched": "2026-11-12",
+      "note": "Free developer account sign-up form (sandbox)",
+      "hash": "21149e4ae278405f90b444701af80e4384f007321f131fc993d440e61dc979e3"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://developers.docusign.com/llms.txt",
+      "excerpt": "# Docusign for Developers",
+      "note": "llms.txt: GET 200, 441688 bytes",
+      "fetched": "2026-11-12",
+      "hash": "61bf422a1e6525fc1d6fb2774f027930fb6512dc074376852bb108d9f7ee10c4"
+    },
+    {
+      "id": "p2",
+      "tier": "probe",
+      "url": "https://developers.docusign.com/platform/mcp-server/",
+      "excerpt": "Build with the Docusign MCP Server | Docusign | Documentation",
+      "note": "MCP page resolves: GET 200 (page title)",
+      "fetched": "2026-11-12",
+      "hash": "55f36b566f71ef723c9f330ec9fe799537a85eae0b8d248501439c98d2d210d2"
+    },
+    {
+      "id": "p3",
+      "tier": "code",
+      "url": "https://github.com/docusign/OpenAPI-Specifications",
+      "excerpt": "docusign/OpenAPI-Specifications: The official Docusign REST APIs Swagger Specifications",
+      "note": "GitHub: not archived, last push 2026-10-19",
+      "fetched": "2026-11-12",
+      "hash": "40863210d77275b2771b079ebcfda873693ff3c1fb4c5ac4b4c2cd873e34cce7"
+    }
+  ]
+}

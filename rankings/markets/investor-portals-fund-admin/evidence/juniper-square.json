@@ -1,0 +1,119 @@
+{
+  "vendor": "juniper-square",
+  "collected": "2026-11-12",
+  "coverage": {
+    "api": {
+      "url": "https://www.junipersquare.com/gpx/apis-and-integrations",
+      "found": true
+    },
+    "pricing": {
+      "url": "https://www.junipersquare.com/learn-more",
+      "found": false,
+      "note": "No pricing page linked from site nav or footer; the learn-more page offers 'Contact sales' only"
+    },
+    "changelog": {
+      "url": "https://www.junipersquare.com/",
+      "found": false,
+      "note": "No changelog or release-notes link in the homepage nav or footer; guessed /product-updates returns 404"
+    }
+  },
+  "links": {
+    "api": "https://www.junipersquare.com/gpx/apis-and-integrations",
+    "mcp": "https://www.junipersquare.com/gpx/headless"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://www.junipersquare.com/gpx/apis-and-integrations",
+      "excerpt": "Juniper Square’s APIs offer broad read and write coverage across your data in Juniper Square: investors, transactions, accounting, compliance, reporting, and more.",
+      "fetched": "2026-11-12",
+      "hash": "d75110b4619fef8573354da4d6e5664c84a03843937863381e9c89db7e42279b"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://www.junipersquare.com/gpx/apis-and-integrations",
+      "excerpt": "Juniper Square provides technical support to all clients interested in building against our API. Reach out to us to learn more.",
+      "fetched": "2026-11-12",
+      "note": "No public API reference linked; access framed as for clients",
+      "hash": "d9a3785d4c3ff48a26e91daeb424c35bfd051e573a7152398028994628947d28"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://www.junipersquare.com/gpx/apis-and-integrations",
+      "excerpt": "all through our REST APIs and webhooks built in alignment with OpenAPI specifications.",
+      "fetched": "2026-11-12",
+      "hash": "ff7667c47d85c3df7a3cf4f369a1b38002ff0ce4916173eec920102662ee3e95"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://www.junipersquare.com/gpx/apis-and-integrations",
+      "excerpt": "Juniper Square’s APIs maintain the highest security standards with flexible credential scoping, encryption in transit and at rest",
+      "fetched": "2026-11-12",
+      "hash": "b3d083dd81f1b8b6f6f69b84e2620da5ff17e53d9d4db3d8f9788c290cf7bdff"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://www.junipersquare.com/gpx/apis-and-integrations",
+      "excerpt": "Give agents access to fund and investor data and workflows by connecting to Juniper Square’s MCP server, part of our commitment to going Headless.",
+      "fetched": "2026-11-12",
+      "hash": "df3363ece4ce581d96ec955bd77a69451309ed02f2b37a88d890c2bf0b8d9d8f"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://www.junipersquare.com/gpx/headless",
+      "excerpt": "At launch, our MCP tools cover read-access across contacts, accounts, offerings, prospects, investment entities, positions, subscriptions",
+      "fetched": "2026-11-12",
+      "hash": "4174688dfdbc72e07c0d10cc558e2c20a24b5b80a8d0f2e11131658f7c34379b"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://www.junipersquare.com/gpx/headless",
+      "excerpt": "Write capabilities, agent-driven actions, and a headless LP Portal are on the near-term roadmap.",
+      "fetched": "2026-11-12",
+      "hash": "f0dfde61a45fa047d4ce079e7bb1f813cfcbd8346cac7a1ea772c67598c4f75b"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://www.junipersquare.com/gpx/headless",
+      "excerpt": "Headless GPX inherits authentication, permissions, and audit from your existing Juniper Square configuration.",
+      "fetched": "2026-11-12",
+      "hash": "07da3f7d4759e7a6224bbb9ea0db5d8209ca256bf10990a32a55e69dd6d32edf"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://www.junipersquare.com/gpx/apis-and-integrations",
+      "excerpt": "Keep Juniper Square in sync with Salesforce or other third-party platforms with our REST APIs and webhooks.",
+      "fetched": "2026-11-12",
+      "hash": "61f7fe870d82435ef0f14368fb2bceedd845e679cce115829bc2feeb7e67c671"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://www.junipersquare.com/learn-more",
+      "excerpt": "Contact sales",
+      "fetched": "2026-11-12",
+      "note": "Only call to action for buying; no prices published",
+      "hash": "5c4bfd8be81f2b9364d33fc285bbfa25e0412ac37dd0a048cc1bc62d413f47d6"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://www.junipersquare.com/gpx/headless",
+      "excerpt": "Headless GPX: Your fund operating system, now open to any AI.",
+      "note": "MCP page resolves: GET 200 (page title)",
+      "fetched": "2026-11-12",
+      "hash": "074ef3e7a281d106b3d49c0f6f1a92acc35a78e5bd3c44eacf3d579c6d4f4d84"
+    }
+  ]
+}

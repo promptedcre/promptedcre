@@ -1,0 +1,519 @@
+{
+  "id": "tenant-stops-paying",
+  "slug": "tenant-stops-paying",
+  "kind": "situation",
+  "title": "A tenant stops paying rent",
+  "summary": "Confirm what is owed, read the lease, guaranty and security, talk to the tenant early and send the notice the lease requires. Price a workout against enforcement, test the loan covenant and tell the lender what the loan requires; counsel chooses the enforcement path after checking for a bankruptcy filing.",
+  "phase": "operate",
+  "order": 120,
+  "featured": false,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-13",
+  "situation": {
+    "trigger": "A tenant misses rent and does not respond to the usual reminders.",
+    "urgency": "days"
+  },
+  "requires": [
+    "abstract-the-leases",
+    "collect-rent-and-reconcile-cam"
+  ],
+  "consumes": [
+    "rent-roll",
+    "lease",
+    "lease-abstract",
+    "guaranty",
+    "loan-documents",
+    "trailing-12",
+    "underwriting-model",
+    "comp-set",
+    "jv-agreement",
+    "investor-register"
+  ],
+  "produces": [
+    "default-notice",
+    "lease-abstract",
+    "underwriting-model",
+    "lease",
+    "rent-roll"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "usc-11-362",
+      "url": "https://www.law.cornell.edu/uscode/text/11/362",
+      "title": "11 U.S.C. 362, Automatic stay (subsection (a))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-13",
+      "quote": "any act to collect, assess, or recover a claim against the debtor that arose before the commencement of the case under this title",
+      "tier": "primary"
+    },
+    {
+      "id": "pacer",
+      "url": "https://pacer.uscourts.gov/",
+      "title": "PACER: Federal Court Records (accounts, case locator and fees)",
+      "publisher": "Administrative Office of the U.S. Courts",
+      "accessed": "2026-11-13",
+      "quote": "If you accrue $30 or less of charges in a quarter, fees are waived for that period.",
+      "tier": "primary"
+    },
+    {
+      "id": "pr-93",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.93.htm",
+      "title": "Texas Property Code, Chapter 93 (Commercial tenancies), Sections 93.002 and 93.005",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "changing the door locks of a tenant who is delinquent in paying at least part of the rent",
+      "tier": "primary"
+    },
+    {
+      "id": "bc-26",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.26.htm",
+      "title": "Texas Business and Commerce Code, Chapter 26 (Statute of frauds, Section 26.01)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "a promise by one person to answer for the debt, default, or miscarriage of another person",
+      "tier": "primary"
+    },
+    {
+      "id": "pr-24-005",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.24.htm",
+      "title": "Texas Property Code, Chapter 24 (Forcible entry and detainer), Section 24.005 (Notice before filing certain eviction suits)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "at least three days' written notice to vacate the premises before the landlord files a forcible detainer suit",
+      "tier": "primary"
+    },
+    {
+      "id": "pr-24-004",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.24.htm",
+      "title": "Texas Property Code, Chapter 24, Sections 24.004 (Jurisdiction) and 24.0051 (Suit to evict and recover unpaid rent)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "a justice court in the precinct in which the real property is located has jurisdiction in an eviction suit",
+      "tier": "primary"
+    },
+    {
+      "id": "pr-54",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.54.htm",
+      "title": "Texas Property Code, Chapter 54, Subchapter B (Building landlord's lien), Sections 54.021 to 54.025",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "has a preference lien on the property of the tenant or subtenant in the building for rent that is due",
+      "tier": "primary"
+    },
+    {
+      "id": "pr-91",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.91.htm",
+      "title": "Texas Property Code, Chapter 91, Section 91.006 (Landlord's duty to mitigate damages)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "A landlord has a duty to mitigate damages if a tenant abandons the leased premises in violation of the lease.",
+      "tier": "primary"
+    },
+    {
+      "id": "pr-92",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.92.htm",
+      "title": "Texas Property Code, Chapter 92 (Residential tenancies)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-13",
+      "quote": "CHAPTER 92. RESIDENTIAL TENANCIES",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "confirm-the-arrears",
+      "title": "Confirm what the tenant owes",
+      "instruction": "From the property's rent ledger, list every unpaid charge for this tenant by due date: base rent, expense recoveries, and any late charge or interest the lease provides, with each partial payment and how it was applied. Check for returned payments and for credits or deposit amounts already applied. Reconcile the total to the rent roll and the lease abstract, and flag any amount the tenant may dispute, such as an unreconciled expense true-up. Do not add a charge the lease does not provide. Produce an arrears schedule with a running total and hand it to the person who will call the tenant and to counsel.",
+      "mode": "agent",
+      "modeBasis": "The ledger, rent roll and lease abstract are documents an agent can read and reconcile.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "consumes": [
+        "rent-roll",
+        "lease-abstract"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "check-for-bankruptcy",
+      "title": "Check for a bankruptcy filing before acting",
+      "instruction": "Before any collection call, notice or enforcement step, search the federal court records for a bankruptcy case filed by the tenant or by any guarantor, under each legal name in the lease and the guaranty. A bankruptcy petition stays acts to collect a claim that arose before the case, to enforce a lien against property of the estate, and to obtain possession of or control over property of the estate (11 U.S.C. 362(a)). If the tenant has a case, stop here and follow the tenant-files-bankruptcy situation with counsel; if only a guarantor has one, tell counsel before any step against that guarantor. Repeat the search before each later enforcement step and record the date of each search in the firm file.",
+      "mode": "human-online",
+      "modeBasis": "Federal court records are searched through a PACER account that a person registers and logs in to.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "cost": {
+        "text": "PACER charges $0.10 a page, and waives a quarter's fees when they total $30 or less.",
+        "sourceId": "pacer"
+      },
+      "after": [],
+      "rules": [
+        "us-fed.bankruptcy.automatic-stay"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-11-362",
+        "pacer"
+      ]
+    },
+    {
+      "id": "read-the-lease",
+      "title": "Read the lease's default and remedy terms",
+      "instruction": "Read the signed lease and every amendment, not only the abstract. Record, with section numbers: the rent due date and any grace period; the late charge or interest and when it starts; what counts as a monetary default; the notice the landlord must give, its form, delivery method, addresses and cure period; the remedies, such as termination, re-entry, changing the locks, recovery of future rent and attorney's fees; any waiver of the landlord's statutory lien, or a contractual lien or security interest in the tenant's property; and any clause requiring notice to the tenant's lender. In Texas, a lease supersedes the commercial lockout statute where the two conflict (Property Code 93.002(h)), so the lease's lockout terms control. Update the lease abstract and hand counsel the list.",
+      "mode": "agent",
+      "modeBasis": "Reading and abstracting a signed lease is document work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-tx.property.commercial-lockout",
+        "us-tx.property.commercial-landlord-lien"
+      ],
+      "consumes": [
+        "lease",
+        "lease-abstract"
+      ],
+      "produces": [
+        "lease-abstract"
+      ],
+      "basis": "cited",
+      "sources": [
+        "pr-93"
+      ]
+    },
+    {
+      "id": "check-guaranty-and-security",
+      "title": "Check the guaranty and the security held",
+      "instruction": "Find what backs the lease besides the tenant. For a guaranty: who signed, whether the copy is signed and complete, any cap, burn-off or conditions, and any notice the guarantor must get before a claim. In Texas, a promise to answer for another person's debt or default is unenforceable unless it, or a memorandum of it, is in writing and signed by the person to be charged or someone authorized to sign for it (Business and Commerce Code 26.01). For security: the deposit amount and whether it is cash or a letter of credit; for a letter of credit, the issuer, expiry and draw conditions; whether the lease lets the landlord apply the deposit during the term and requires the tenant to restore it; and whether the loan documents pledge deposits to the lender. Add the results to the arrears schedule.",
+      "mode": "agent",
+      "modeBasis": "The guaranty, the lease and the letter of credit are documents an agent can read.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-the-lease"
+      ],
+      "rules": [
+        "us-tx.property.commercial-security-deposit"
+      ],
+      "consumes": [
+        "lease",
+        "lease-abstract",
+        "guaranty",
+        "loan-documents"
+      ],
+      "basis": "cited",
+      "sources": [
+        "bc-26"
+      ]
+    },
+    {
+      "id": "talk-to-the-tenant",
+      "title": "Talk to the tenant's decision-maker",
+      "instruction": "As soon as the arrears are confirmed, call the person at the tenant who can commit the company, not only its payables contact. Ask why the rent was missed, whether the problem is timing or lasting, whether operations at the space are changing, and what the tenant proposes and by when. Ask for current financial statements where the lease or guaranty requires them. Make no promise, waiver or new deadline on the call; say any proposal will be answered in writing. Afterward an agent drafts a summary of the call for the file and a follow-up to the tenant restating what was asked and that the landlord keeps its rights under the lease; a person approves the follow-up before it goes.",
+      "mode": "human-offline",
+      "modeBasis": "A phone call with the tenant is a person's conversation; the summary and follow-up are drafted by an agent.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-the-arrears",
+        "check-for-bankruptcy"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "send-the-default-notice",
+      "title": "Send the notice the lease requires",
+      "instruction": "Draft the default notice from the lease's notice clause: the sections relied on, each unpaid amount and period from the arrears schedule, the cure period and deadline, the remedies reserved, and, if counsel wants it, that accepting a partial payment does not waive the default. Address it to every notice party the lease names, and to a guarantor where the guaranty requires notice. If eviction may follow: in Texas, a landlord must give at least three days' written notice to vacate before filing a forcible detainer suit unless a written lease sets a shorter or longer period, and where possession ends solely for nonpayment and the tenant was not late before that month, it must be a notice to pay rent or vacate (Property Code 24.005). Counsel decides whether one notice does both jobs and approves it. Deliver it as the lease and statute allow; keep proof of delivery.",
+      "mode": "agent",
+      "modeBasis": "Drafting from the lease and the arrears schedule is document work; counsel approves the notice before it is delivered.",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-the-arrears",
+        "check-for-bankruptcy",
+        "read-the-lease",
+        "check-guaranty-and-security"
+      ],
+      "rules": [
+        "us-tx.property.notice-to-vacate"
+      ],
+      "consumes": [
+        "lease",
+        "lease-abstract"
+      ],
+      "produces": [
+        "default-notice"
+      ],
+      "basis": "cited",
+      "sources": [
+        "pr-24-005"
+      ]
+    },
+    {
+      "id": "measure-the-loss",
+      "title": "Measure the loss and test the loan covenant",
+      "instruction": "Run the lease-rollover calculator on the rent roll with this tenant's lease end set before the analysis date, so its space falls in the expiring-now bucket: its share of rent and area, and the largest-tenant share. Run the expense-recovery calculator for the recoveries the landlord now carries on top of the base rent. Then take, from the loan documents, the coverage covenant's definition of income and debt service, its test period and its next test date, and use the leverage calculator for coverage and break-even occupancy with and without this tenant's rent. Report whether the next test passes, the cushion, and the rent loss at which it fails. If it fails or is close, open the loan-covenant-breach situation.",
+      "mode": "agent",
+      "modeBasis": "The calculators run from the rent roll, the operating statement and the loan's stated covenant.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-the-arrears"
+      ],
+      "calculators": [
+        "lease-rollover",
+        "expense-recovery",
+        "leverage"
+      ],
+      "consumes": [
+        "rent-roll",
+        "trailing-12",
+        "loan-documents",
+        "underwriting-model"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "industrial": "In a single-tenant building the rent is all or nothing: test coverage at zero rent from this tenant, with the landlord carrying taxes, insurance and upkeep the tenant paid before.",
+        "retail": "Check the other tenants' leases for co-tenancy or go-dark rights that a dark anchor or major tenant could trigger, and add any rent they could stop paying to the loss."
+      }
+    },
+    {
+      "id": "tell-the-lender",
+      "title": "Tell the lender what the loan documents require",
+      "instruction": "Read the loan documents for every duty this default touches: reporting a tenant default or a material adverse change; the lender's consent before a lease is amended, terminated or surrendered or its rent reduced; where security deposits and letters of credit must be held; any cash-management or sweep trigger tied to a tenant; and the next financial reporting date. List each duty with its section and deadline. Draft the notice or report the documents require, with the arrears schedule and the covenant test, and a principal approves it before it goes. Where a workout would need the lender's consent, ask early and in writing.",
+      "mode": "agent",
+      "modeBasis": "Reading the loan documents and drafting the report is document work; the message speaks for the borrower, so a person approves it.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-guaranty-and-security",
+        "measure-the-loss"
+      ],
+      "consumes": [
+        "loan-documents"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "price-the-options",
+      "title": "Price a workout against enforcement",
+      "instruction": "Lay the options side by side on one basis. Workouts: a payment plan for the arrears; a deferral repaid later and written into a lease amendment; or a longer term at a lower rent, priced in the lease-rent calculator as net effective rent against the current lease. Enforcement: the cash the landlord can reach (deposit, letter of credit, guaranty, property subject to the landlord's lien), legal cost and time as counsel states them or marked unknown, and the re-let case at market rent from the comp set with downtime, improvements and commissions, also in the lease-rent calculator. Where the outcomes are uncertain, weight the cases in the scenario-risk calculator. Show each option's effect on coverage from the covenant test, and hand the comparison to the principal and counsel.",
+      "mode": "agent",
+      "modeBasis": "The comparison is built from recorded documents and live calculators.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-guaranty-and-security",
+        "talk-to-the-tenant",
+        "measure-the-loss"
+      ],
+      "calculators": [
+        "lease-rent",
+        "scenario-risk",
+        "leverage"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "comp-set",
+        "lease-abstract"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "choose-the-path",
+      "title": "Choose a workout or enforcement",
+      "instruction": "With the comparison and counsel's advice, decide whether to offer a workout, to enforce, or to do both in order, such as a short payment plan with enforcement if a payment is missed. Weigh what the tenant said on the call, the security and guaranty behind the lease, the lender's consent rights, and what the governing documents reserve for investors or a capital partner. Record the decision, the reason and the next deadline in the firm file. If enforcement is chosen, counsel chooses the path.",
+      "mode": "human-online",
+      "modeBasis": "Whether to settle with or pursue a tenant is a business decision that binds the owner.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "send-the-default-notice",
+        "tell-the-lender",
+        "price-the-options"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "partner-consents",
+      "title": "Get the capital partner's consent",
+      "instruction": "A JV agreement often reserves lease amendments, lease terminations and lawsuits as major decisions for the capital partner. Check the agreement. Send the partner the arrears schedule, the covenant test, the option comparison and the chosen path, and get its written consent before signing a workout or filing suit.",
+      "mode": "human-online",
+      "modeBasis": "The partner's consent is its own decision under the JV agreement; an agent prepares the package.",
+      "actor": "investor",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-the-path"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "document-the-workout",
+      "title": "Put a workout in a signed amendment",
+      "instruction": "If the decision is a workout, counsel drafts a lease amendment or payment agreement stating the arrears the tenant acknowledges, the payment schedule or the deferral and how it is repaid, any new term and rent, what happens if a payment is missed, that the landlord's other rights continue, and the guarantor's written consent and confirmation that the guaranty still applies. In Texas, a lease of real estate for longer than one year is unenforceable unless it, or a memorandum of it, is in writing and signed by the party to be bound (Business and Commerce Code 26.01), so put any term extension in a signed writing. Get the lender's consent first where the loan requires it. The principal and the tenant sign; then update the lease abstract, rent roll and arrears schedule.",
+      "mode": "human-online",
+      "modeBasis": "A lease amendment changes legal rights and is signed for the owner; counsel drafts it.",
+      "actor": "principal",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-the-path",
+        "partner-consents"
+      ],
+      "rules": [
+        "us-tx.contracts.statute-of-frauds"
+      ],
+      "consumes": [
+        "lease",
+        "loan-documents"
+      ],
+      "produces": [
+        "lease",
+        "lease-abstract",
+        "rent-roll"
+      ],
+      "basis": "cited",
+      "sources": [
+        "bc-26"
+      ]
+    },
+    {
+      "id": "enforce-through-counsel",
+      "title": "Counsel chooses and runs the enforcement path",
+      "instruction": "If the decision is enforcement, counsel chooses the path and its order after a fresh bankruptcy search. Texas paths include: changing the locks of a tenant delinquent in at least part of the rent, with a notice on the front door naming who holds the new key, unless the lease provides otherwise (Property Code 93.002); the building landlord's lien on the tenant's property in the building, with a distress warrant sought from the justice of the peace and a verified lien statement filed for rent over six months past due (54.021 to 54.025); an eviction suit in the justice court of the precinct where the property sits, which may also seek unpaid rent (24.004, 24.0051); and a suit on the lease and the guaranty. If the tenant abandons the premises, the landlord has a duty to mitigate damages that a lease cannot waive (91.006).",
+      "mode": "human-online",
+      "modeBasis": "Choosing remedies, filing suits and signing pleadings are a licensed attorney's work.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-the-path",
+        "partner-consents"
+      ],
+      "rules": [
+        "us-tx.property.commercial-lockout",
+        "us-tx.property.commercial-landlord-lien",
+        "us-tx.property.notice-to-vacate",
+        "us-tx.property.commercial-security-deposit",
+        "us-fed.bankruptcy.automatic-stay"
+      ],
+      "consumes": [
+        "lease",
+        "default-notice",
+        "lease-abstract"
+      ],
+      "basis": "cited",
+      "sources": [
+        "pr-93",
+        "pr-54",
+        "pr-24-004",
+        "pr-91",
+        "pr-92"
+      ],
+      "typeNotes": {
+        "multifamily": "Residential tenants fall under Property Code chapter 92, which has its own rules on lockouts, late fees and deposits; the lockout, lien and deposit rules in this step are the commercial ones.",
+        "industrial": "Before anyone moves equipment, stock or containers left in the space, check for hazardous materials and for an equipment lender's security interest in the tenant's property, and give counsel what you find."
+      }
+    },
+    {
+      "id": "brief-investors",
+      "title": "Brief investors if the loss matters",
+      "instruction": "If the lost rent changes distributions, the covenant test or the business plan investors were shown, draft a short update for the next report, or a separate notice where the governing documents or the sponsor's reporting practice call for one: what happened, the arrears, the security and guaranty, the chosen path, the effect on cash flow and coverage, and what comes next. Match every figure to the arrears schedule and the covenant test, and follow counsel's direction on how to describe a dispute or a pending suit. A principal approves it before it goes out.",
+      "mode": "agent",
+      "modeBasis": "Drafting from recorded figures is writing work; investor communications go out only with a person's approval.",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-the-path"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register",
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    }
+  ],
+  "outlineSteps": []
+}

@@ -1,0 +1,85 @@
+{
+  "id": "site-visit-report",
+  "name": "Site visit report",
+  "what": "What a tour of the property found that the documents did not show.",
+  "fields": [
+    {
+      "key": "property",
+      "label": "Property",
+      "type": "string",
+      "definition": "The address toured."
+    },
+    {
+      "key": "visitDate",
+      "label": "Visit date",
+      "type": "date",
+      "definition": "The date of the tour."
+    },
+    {
+      "key": "attendees",
+      "label": "Attendees",
+      "type": "list",
+      "definition": "Who toured and who showed the property, by role, such as the sponsor, the listing broker, the property manager or a tenant contact."
+    },
+    {
+      "key": "areasSeen",
+      "label": "Areas seen",
+      "type": "list",
+      "definition": "The buildings, suites, roofs, yards and mechanical areas actually entered or viewed."
+    },
+    {
+      "key": "areasNotSeen",
+      "label": "Areas not seen",
+      "type": "list",
+      "definition": "Spaces that were locked, occupied or skipped, and why; a later visit or the condition consultant covers them."
+    },
+    {
+      "key": "occupancyObserved",
+      "label": "Occupancy observed",
+      "type": "text",
+      "definition": "Which spaces looked in use and which looked empty or dark, compared suite by suite with the rent roll."
+    },
+    {
+      "key": "useObserved",
+      "label": "Use observed",
+      "type": "text",
+      "definition": "What each tenant appeared to be doing in the space, including outdoor storage, chemicals, drums, tanks or processes that differ from the permitted use in the lease."
+    },
+    {
+      "key": "conditionObserved",
+      "label": "Condition observed",
+      "type": "list",
+      "definition": "Visible condition of the roof, walls, slab, paving, doors, docks and building systems, such as stains, cracks, ponding or patched areas, each with its location."
+    },
+    {
+      "key": "specsObserved",
+      "label": "Building features observed",
+      "type": "text",
+      "definition": "Features read on site rather than from the offering, such as clear height, number and type of dock and grade doors, power service, sprinklers and parking."
+    },
+    {
+      "key": "surroundings",
+      "label": "Access and surroundings",
+      "type": "text",
+      "definition": "Truck access, curb cuts, drainage, neighboring uses and anything on adjoining land that could affect the property."
+    },
+    {
+      "key": "differencesFromDocuments",
+      "label": "Differences from the documents",
+      "type": "list",
+      "definition": "Each thing seen that the offering, rent roll, leases or reports did not show or showed differently, with the document it contradicts."
+    },
+    {
+      "key": "photos",
+      "label": "Photos",
+      "type": "list",
+      "definition": "Where the tour photos are stored, with a note of what each set shows."
+    },
+    {
+      "key": "followUps",
+      "label": "Follow-up questions",
+      "type": "list",
+      "definition": "Questions for the broker, seller, tenants or consultants that the tour raised, and who is to answer each."
+    }
+  ]
+}

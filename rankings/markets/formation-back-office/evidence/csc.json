@@ -1,0 +1,72 @@
+{
+  "vendor": "csc",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://www.cscglobal.com/cscglobal/home/",
+      "found": false,
+      "note": "No public documentation or help center for registered agent or entity management found from the homepage, the entity pages or search; only a DomainManager (domain product) API doc exists."
+    },
+    "api": {
+      "url": "https://www.cscglobal.com/service/entity-solutions/entity-management/",
+      "found": false,
+      "note": "Entity Management page claims APIs but links to no public API documentation; the only public API docs found cover DomainManager, a different product."
+    },
+    "pricing": {
+      "url": "https://www.cscglobal.com/service/entity-solutions/registered-agent-services/",
+      "found": false,
+      "note": "Registered agent page shows no prices; only contact-us links."
+    },
+    "changelog": {
+      "url": "https://www.cscglobal.com/service/webinar/whats-new-with-csc-em/",
+      "found": false,
+      "note": "Only a 'What's New' webinar page; no public changelog or release notes found."
+    }
+  },
+  "links": {},
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://www.cscglobal.com/service/entity-solutions/entity-management/",
+      "excerpt": "Enable secure bi-directional integrations with enterprise and third-party systems via modern APIs",
+      "fetched": "2026-11-12",
+      "hash": "57e5e5ce28c080f67c840fa8f4e1378566c6c2b8f774b71b9f7c69f134ab1ae3"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://www.cscglobal.com/service/entity-solutions/entity-management/",
+      "excerpt": "One flat fee. Unlimited users. Full features, updates, training, and expert support included.",
+      "fetched": "2026-11-12",
+      "note": "Claims transparent pricing but shows no amount",
+      "hash": "08bf746e77e58bc0d920bccfda3afe3aba4906d6c4132ae5a5066668c00686e8"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://www.cscglobal.com/service/entity-solutions/entity-management/",
+      "excerpt": "Generate documents via an intuitive guided workflow and route electronic signature requests with Docusign",
+      "fetched": "2026-11-12",
+      "hash": "231c1e3e5ab4e580f2146d4c81c98c6f32017d6ecd049582cda1e445ded0cacd"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://www.cscglobal.com/service/entity-solutions/registered-agent-services/",
+      "excerpt": "Same-day scanning, delivery, and tracking of SOP documents",
+      "fetched": "2026-11-12",
+      "hash": "e89dbe1dba0e7259254253c38ebaba35edcacdb955a4a68562d6d1e5c92e57ad"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://www.cscglobal.com/service/entity-solutions/registered-agent-services/",
+      "excerpt": "Centralized access to your entity data, filings, and compliance status",
+      "fetched": "2026-11-12",
+      "hash": "6399bbcbaf50bdae8a4b5d589b812b7ed4757ed088baced943288916d046002c"
+    }
+  ]
+}

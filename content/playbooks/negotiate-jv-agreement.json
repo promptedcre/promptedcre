@@ -1,0 +1,499 @@
+{
+  "id": "negotiate-jv-agreement",
+  "slug": "negotiate-jv-agreement",
+  "kind": "process",
+  "title": "Negotiate the joint venture agreement",
+  "summary": "Turn the approved offering terms into a joint venture agreement with one capital partner, in final draft: capital, economics at several endings, decisions, removal, exit, guaranties, costs, reports. It details the joint venture step of Prepare the offering documents, whose checks and final approval precede signing.",
+  "phase": "raise",
+  "order": 118,
+  "featured": false,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-14",
+  "requires": [
+    "choose-structure-and-exemption",
+    "set-the-offering-terms"
+  ],
+  "consumes": [
+    "offering-term-sheet",
+    "underwriting-model",
+    "ic-memo",
+    "loan-term-sheet"
+  ],
+  "produces": [
+    "jv-agreement"
+  ],
+  "written": {
+    "structure": [
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "williamson",
+      "url": "https://openjurist.org/645/f2d/404",
+      "title": "Williamson v. Tucker, 645 F.2d 404 (5th Cir. 1981)",
+      "publisher": "OpenJurist (opinion text)",
+      "accessed": "2026-11-14",
+      "quote": "an investor who claims his general partnership or joint venture interest is an investment contract has a difficult burden to overcome",
+      "tier": "primary"
+    },
+    {
+      "id": "ralston-purina",
+      "url": "https://www.law.cornell.edu/supremecourt/text/346/119",
+      "title": "SEC v. Ralston Purina Co., 346 U.S. 119 (1953)",
+      "publisher": "Legal Information Institute (opinion text)",
+      "accessed": "2026-11-14",
+      "quote": "An offering to those who are shown to be able to fend for themselves is a transaction 'not involving any public offering.'",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-77d",
+      "url": "https://www.law.cornell.edu/uscode/text/15/77d",
+      "title": "15 U.S.C. 77d, Exempted transactions",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "transactions by an issuer not involving any public offering",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-77r",
+      "url": "https://www.law.cornell.edu/uscode/text/15/77r",
+      "title": "15 U.S.C. 77r, Exemption from State regulation of securities offerings (subsection (b)(4)(F))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-14",
+      "quote": "To make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-101",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.101.htm",
+      "title": "Texas Business Organizations Code, Chapter 101 (Limited Liability Companies)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "A promise to make a contribution or otherwise pay cash or transfer property to a limited liability company is enforceable only if the promise is",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bc-26",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.26.htm",
+      "title": "Texas Business and Commerce Code, Chapter 26 (Statute of Frauds)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "quote": "a promise by one person to answer for the debt, default, or miscarriage of another person",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-51",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.51.htm",
+      "title": "Texas Property Code, Chapter 51 (sections 51.003 and 51.005, deficiency after foreclosure)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-12-1701j-3",
+      "url": "https://www.law.cornell.edu/uscode/text/12/1701j-3",
+      "title": "12 U.S.C. 1701j-3, Preemption of due-on-sale prohibitions",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "shall be exclusively governed by the terms of the loan contract",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "learn-partner-approval-process",
+      "title": "Learn how the capital partner approves a deal",
+      "instruction": "Before terms are proposed, a principal meets the capital partner and writes down how it decides: what it needs to approve a deal, such as the model, the investment memo, third-party reports or a site visit; who approves; how long each takes; and whether it approves once or at stages, such as before the offer, before the deposit goes hard and before closing. Ask what it must see in the venture agreement, whether it has its own form, what comparable deals it has done, and whether it invests retirement plan money that needs venture terms protecting its plan-asset position; send those to counsel. Enter each in the deadline-calendar, its lead time counted back by hand from the letter of intent, the feasibility end and the hard-deposit date, marking where the partner must come in before the sponsor commits. Gaps between its timeline and the contract's dates go to the principal.",
+      "mode": "human-offline",
+      "modeBasis": "Only a conversation with the partner reveals its approval process; an agent can calendar what the principal records.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-fed.erisa.plan-assets"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "schedule-decisions",
+      "title": "Write the schedule of decisions in three lists",
+      "instruction": "Start from the decisions and consents in the approved offering term sheet. Read every step in the written playbooks and situations that asks the capital partner to approve, consent or decide, whether or not it is marked for a joint venture: pursuing the deal and the investment memo; offers and counters; the contract and its deposit share, reports, title, estoppels and environmental findings; going hard; debt, loan documents and guaranties; funding requests; leases, renewals, tenant defaults and bankruptcies; tax protests; distributions; refinancing, sale, exchange or handback; and covenant cures. Add every consent the loan papers and the purchase contract require, such as the lender's consent to transfers, leases or alterations. Sort each decision into three lists: the sponsor alone, with the partner's consent, or both together. The principals decide where each goes, the partner's answer deadline and whether silence is consent; record the reason and source document.",
+      "mode": "agent",
+      "modeBasis": "Reading the written playbooks and the deal documents for decisions is document work; the principals decide each placement.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "learn-partner-approval-process"
+      ],
+      "rules": [],
+      "consumes": [
+        "offering-term-sheet",
+        "ic-memo",
+        "loan-term-sheet",
+        "loan-documents",
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "draft-venture-term-sheet",
+      "title": "Draft the venture term sheet from the approved offering terms",
+      "instruction": "The approved offering term sheet stays with the sponsor; from it, draft a separate venture term sheet: the venture entity, its formation and its manager; each party's capital and how later capital is called; each payment to the sponsor, its principals and related companies, with basis and timing; the distribution tiers, preferred return and promote; the decisions needing the partner's consent, from the decision schedule; sponsor removal; sale, buyout and transfer rights; who signs loan guaranties; pursuit costs; and reports. Carry each figure from it, tied to the model version. A term with no approved figure stays blank and open. Enter each term a later step settles, with where its level came from, reissue the sheet and record the partner's written answer. Add the partner's approval dates. No version goes to the partner or is accepted for the sponsor until counsel has read and a principal has approved it.",
+      "mode": "agent",
+      "modeBasis": "Restating approved terms and tracing each figure is document work; counsel reads the sheet and a principal approves it before it goes to the partner.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "learn-partner-approval-process",
+        "schedule-decisions"
+      ],
+      "rules": [],
+      "consumes": [
+        "offering-term-sheet",
+        "underwriting-model"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "counsel-reviews-control-and-security",
+      "title": "Counsel reviews the term sheet and the securities question",
+      "instruction": "Before any version of the venture term sheet reaches the partner, counsel reads it, the decision schedule and the principal's notes on the partner, and marks what binds. Counsel's written decision in Choose the capital structure and offering exemption settles the security question and exemption; File Form D and state notice filings sets the filing path, Texas included; Onboard an investor keeps the private-offering record, its no-resale promise included. Counsel re-tests the security decision against these control terms. In the Fifth Circuit a joint venture interest ordinarily is not a security, but can be if the partner holds little more than a limited partner's powers, is too inexperienced to use them, or depends on the sponsor's irreplaceable skill; the court addressed general partnerships and joint ventures, not limited liability companies. Antifraud rules apply to everything the partner is told; counsel checks each version. A principal approves and sends it.",
+      "mode": "human-online",
+      "modeBasis": "Testing the control terms against counsel's written decision on the security question, and what the sheet may say, are legal judgments for counsel; a principal releases the sheet.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "draft-venture-term-sheet"
+      ],
+      "rules": [
+        "us-fed.securities.jv-interests",
+        "us-fed.securities-act.covered-securities",
+        "us-fed.reg-d.resale-limits",
+        "us-fed.exchange-act.rule-10b-5",
+        "us-tx.securities.offer-sale-liability"
+      ],
+      "basis": "cited",
+      "sources": [
+        "williamson",
+        "ralston-purina",
+        "usc-15-77d",
+        "usc-15-77r",
+        "ecfr-240-10b-5"
+      ]
+    },
+    {
+      "id": "settle-capital-and-funding-default",
+      "title": "Settle each party's capital and what happens if one does not fund",
+      "instruction": "The principals, with counsel, settle each party's share of the equity at closing; whether later capital, for capital work, leasing, a paydown or a shortfall, is mandatory or voluntary; who calls it, the notice and the deadline; and what follows when a party does not fund. List the mechanisms weighed. For a Texas limited liability company, Business Organizations Code section 101.153(b) lets the company agreement provide that a defaulting member's interest is reduced, subordinated to the others' interests, redeemed or sold at an appraised or formula value, sold in a forced sale, forfeited, or made the subject of a loan from the other members, or another consequence. Section 101.151 makes a promise to contribute enforceable only if written and signed by the person making it, and section 101.054 bars a company agreement from changing that. A contribution payable on a discretionary call is conditional until the call is made.",
+      "mode": "human-online",
+      "modeBasis": "How much each side puts in and the cost of not funding are business terms the principals agree, with counsel on the drafting.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-reviews-control-and-security"
+      ],
+      "rules": [],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101"
+      ]
+    },
+    {
+      "id": "test-economics-across-endings",
+      "title": "Test the economics at each ending with the waterfall",
+      "instruction": "Enter the closing contribution and the model's yearly distributable cash in the waterfall-promote calculator, with the co-investment share, preferred return, catch-up and promote tiers from the venture term sheet; later capital needs the connector tool, which takes yearly contributions. Fees sit outside the calculator: enter cash after fees, so its pre-promote return is after fees; the npv-irr calculator on cash before fees shows what fees take. Read the return before and after the promote, the seven endings, and the final-year cash that returns the investors' capital and that pays the preferred return. Give the principals the partner's cash (the investor class's less the sponsor's share) beside the sponsor's co-investment cash, promote and fees; the printed sponsor total omits fees. The calculator pays co-investment pro rata and models no giveback, member loan or dilution formula: test dilution through the co-investment share; list the rest as untested. Repeat for each term weighed.",
+      "mode": "agent",
+      "modeBasis": "Running the calculator on the term sheet and the model is calculation work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "settle-capital-and-funding-default"
+      ],
+      "rules": [
+        "us-fed.irc.section-1061-applicable-partnership-interests"
+      ],
+      "calculators": [
+        "waterfall-promote",
+        "npv-irr"
+      ],
+      "consumes": [
+        "offering-term-sheet",
+        "underwriting-model"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "define-sponsor-removal",
+      "title": "Define removal of the sponsor and what follows",
+      "instruction": "From the approved offering term sheet, the principals and counsel define the sponsor's removal as manager. The sponsor writes grounds from this venture's risks, each defined so both sides can tell whether it occurred, with any notice and cure period, and states who decides, whether a court or arbitrator must first find a ground, and how a dispute is resolved. For each ground, settle what happens to fees earned and not yet due; to promote earned and not yet earned, and how each is measured; to the sponsor's capital; and to the principals' loan guaranties, whether the lender releases them and who replaces them. To measure promote earned, enter the model's contributions and distributions through a test year in the waterfall-promote calculator, adding the sale-proceeds calculator's cash for a sale at a test value to the last year. Name the successor manager and each consequence needing the lender's consent.",
+      "mode": "human-online",
+      "modeBasis": "Removal grounds and their consequences are business terms the principals agree; counsel drafts them.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-reviews-control-and-security"
+      ],
+      "rules": [],
+      "calculators": [
+        "waterfall-promote",
+        "sale-proceeds"
+      ],
+      "consumes": [
+        "offering-term-sheet",
+        "loan-term-sheet",
+        "loan-documents"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "define-exit-and-buyout",
+      "title": "Define the way out: sale, buyout and funding the buyout",
+      "instruction": "The principals, with counsel, settle who may call a sale and when, any period before either party can force one, how the sale is run and whether either party may bid. For any buyout right, the agreement states how a named price becomes each party's payout. Enter a test price in the sale-proceeds calculator with the loan payoff and the costs the agreement assigns to a buyout; its cash at closing before tax is what the venture would distribute. Enter the model's contributions and distributions through a test year in the waterfall-promote calculator, add that cash to the last year's, and read each party's payout in that year's row. Repeat at several prices for the principals. Then settle the time to fund the purchase, any deposit, and what follows when the buyer cannot fund. Settle which transfers of either party's interest, or changes in its control, need the other's consent.",
+      "mode": "human-online",
+      "modeBasis": "Exit and buyout rights are business terms the principals agree; the calculators show each party's payout and counsel drafts.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "test-economics-across-endings"
+      ],
+      "rules": [
+        "us-fed.irc.section-1061-applicable-partnership-interests",
+        "us-fed.irc.partnership-basis-election"
+      ],
+      "calculators": [
+        "sale-proceeds",
+        "waterfall-promote"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "loan-term-sheet"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "prepare-guaranty-and-consent-questions",
+      "title": "Prepare the guaranty sharing and lender consent questions",
+      "instruction": "From the loan term sheet, or the loan documents once drafted, list who must sign each guaranty and any environmental indemnity, the carve-out triggers, and which party's acts could set off each one. Set out how the parties could share that exposure: who indemnifies whom and in what shares, how a carve-out caused by one party's own act is treated, whether a guarantor is paid a fee, what each guarantor could owe after a foreclosure sale, and any guaranty clause waiving the Texas fair market value offset, for counsel to assess. In Texas a promise to answer for another person's debt is enforceable only in a signed writing. Federal law lets a lender enforce a due-on-sale clause, and the loan contract governs its use. List whether the loan documents permit the partner's removal, transfer and buyout rights; send counsel any gaps. The principals and counsel settle the sharing before drafting.",
+      "mode": "agent",
+      "modeBasis": "Reading the loan papers and laying out the options is document work; the principals and counsel settle the terms.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "schedule-decisions",
+        "define-sponsor-removal",
+        "define-exit-and-buyout"
+      ],
+      "rules": [
+        "us-tx.property.deficiency-after-foreclosure"
+      ],
+      "consumes": [
+        "loan-term-sheet",
+        "loan-documents",
+        "guaranty"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-51",
+        "tx-bc-26",
+        "usc-12-1701j-3"
+      ]
+    },
+    {
+      "id": "assign-pursuit-costs",
+      "title": "Assign pursuit costs and deposits on a deal that does not close",
+      "instruction": "From the approved offering term sheet, the principals settle who bears a dead deal's costs, and from when. List each cost and amount at risk from the purchase contract, the loan term sheet and the engagement letters: earnest money and the date each deposit goes hard, third-party reports, lender deposits and fees not refunded, legal fees and other pursuit costs. For each, the agreement states who advances it, whether the partner shares it before or only after it approves the deal, whether and how the advancing party is repaid at closing, and who bears it if the deal fails because one party withholds a consent or does not fund. Tie each to the deadline-calendar so both sides see when each dollar stops being refundable. Before the partner pays anything, run Onboard an investor's sanctions screen on the partner, its signers and principal owners. Wiring a deposit stays a person's step.",
+      "mode": "human-online",
+      "modeBasis": "Who carries the risk of a dead deal is a business term the principals agree.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-reviews-control-and-security"
+      ],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "offering-term-sheet",
+        "purchase-and-sale-agreement",
+        "loan-term-sheet"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "set-partner-reports",
+      "title": "Set the reports the sponsor owes the partner",
+      "instruction": "Draft the reporting schedule the agreement will carry: each report the sponsor owes the partner, its contents, the period it covers, the deadline, the format and who signs it. Start from what the venture must already produce, such as the loan's reporting package and compliance certificates, the budget, the tax return and partner statements, and add what the partner's approval and reporting process needs. For each report, name the source of its figures and any audit or review and who pays for it. Add notice of events between reports: defaults, lender or tenant notices, claims and anything on the consent lists. A Texas limited liability company's member may examine records related to a proper purpose stated in a written demand, emails and texts generally excluded, unless the governing documents provide otherwise; the company agreement may not unreasonably restrict that right. The principals approve the schedule before it enters the agreement.",
+      "mode": "agent",
+      "modeBasis": "Assembling the reporting duties from the loan and venture documents is document work; the principals approve it.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "schedule-decisions"
+      ],
+      "rules": [],
+      "consumes": [
+        "loan-documents"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101"
+      ]
+    },
+    {
+      "id": "counsel-drafts-agreement",
+      "title": "Counsel drafts and negotiates the agreement",
+      "instruction": "Once the partner confirms the latest venture term sheet in writing, counsel drafts the agreement from it and the decisions above, and negotiates the draft with the partner's counsel, keeping one issues list. For a Texas limited liability company, under Business Organizations Code chapter 101 the company agreement governs the members' relations and its internal affairs, and may waive or modify the chapter's provisions except those section 101.054 lists, among them sections 101.151 on written contribution promises and 101.206, which limits distributions by its own test of liabilities against asset value. Section 101.401 lets the agreement expand, restrict or eliminate duties, including fiduciary duties, so counsel shows the principals what any change gives up. The CPA reviews the allocation and tax provisions. Each business point counsel sends up is a principal's decision, recorded with its reason; one that departs from the approved offering term sheet needs the principals' written approval.",
+      "mode": "human-online",
+      "modeBasis": "Drafting and negotiating the governing agreement is counsel's licensed work.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "settle-capital-and-funding-default",
+        "test-economics-across-endings",
+        "schedule-decisions",
+        "counsel-reviews-control-and-security",
+        "define-sponsor-removal",
+        "define-exit-and-buyout",
+        "prepare-guaranty-and-consent-questions",
+        "assign-pursuit-costs",
+        "set-partner-reports"
+      ],
+      "rules": [],
+      "produces": [
+        "jv-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101"
+      ]
+    },
+    {
+      "id": "tie-draft-to-terms-and-model",
+      "title": "Tie the signature draft to the term sheet and the model",
+      "instruction": "Compare the signature draft clause by clause with the venture term sheet as last agreed, the offering term sheet the principals approved and the current model version. Re-run the waterfall-promote calculator on the draft's distribution terms and the sale-proceeds calculator on its buyout terms, and compare each result with the figures tested earlier and the investment memo; list any term the calculators cannot take, such as a promote giveback, as not tested. List every difference with its clause and figure: a changed share, fee basis, tier, consent, period or deadline, a new term, and a term that dropped out. Check the decision, removal, exit and reporting terms against the draft word for word, and that the loan documents permit each transfer it grants. A term departing from the approved offering term sheet needs the principals' new written approval. Nothing is signed until a principal accepts, or counsel fixes, each difference.",
+      "mode": "agent",
+      "modeBasis": "Comparing the draft with the approved terms and re-running the calculators is document and calculation work.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-drafts-agreement"
+      ],
+      "rules": [],
+      "calculators": [
+        "waterfall-promote",
+        "sale-proceeds"
+      ],
+      "consumes": [
+        "jv-agreement",
+        "offering-term-sheet",
+        "underwriting-model",
+        "ic-memo",
+        "loan-documents"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "check-signature-set",
+      "title": "Check the signature set is complete and hand it on",
+      "instruction": "With every difference accepted or fixed, check the set to be signed: the agreement with every exhibit, the decision, reporting and capital schedules and any funding notice form. Texas enforces a guaranty, or a promise to contribute to a Texas limited liability company, only on a signed writing. List each term the set omits from the venture term sheet as last agreed, the recorded decisions or partner correspondence, guaranty sharing included, and hold the set until counsel rules on each. Hold the set unless the sponsor's signing member entity is in good standing, as Form the sponsor entity requires. Nobody signs here. The set goes to the economics check, antifraud check and final approval in Prepare the offering documents. The partner signs in Onboard an investor, where its authority check and sanctions screen come before the sponsor countersigns. List the agreement's dates for the deadline-calendar; the countersigner enters them.",
+      "mode": "agent-browser",
+      "modeBasis": "Checking the set against what was agreed is document work and the signing entity's standing is a public-record lookup in a browser; counsel rules on each omission before the set moves on, and each signature is a person's step in Onboard an investor.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-drafts-agreement",
+        "tie-draft-to-terms-and-model"
+      ],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "jv-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-bc-26",
+        "tx-boc-101"
+      ]
+    }
+  ],
+  "outlineSteps": []
+}

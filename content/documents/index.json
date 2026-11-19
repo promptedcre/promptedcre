@@ -1,0 +1,431 @@
+{
+  "documents": [
+    {
+      "id": "tx-sos-business-forms",
+      "title": "Business and nonprofit forms, including the certificate of formation for an LLC",
+      "publisher": "Texas Secretary of State",
+      "url": "https://www.sos.state.tx.us/corp/forms_boc.shtml",
+      "useCase": "Stand up: form a Texas entity",
+      "access": "free-to-view",
+      "lastChecked": "2026-11-12"
+    },
+    {
+      "id": "de-division-of-corporations",
+      "title": "Division of Corporations",
+      "publisher": "State of Delaware",
+      "url": "https://corp.delaware.gov/",
+      "useCase": "Stand up: form a Delaware entity and pay the annual tax",
+      "access": "free-to-view",
+      "lastChecked": "2026-11-12"
+    },
+    {
+      "id": "irs-form-ss-4",
+      "title": "Form SS-4, Application for Employer Identification Number",
+      "publisher": "Internal Revenue Service",
+      "url": "https://www.irs.gov/forms-pubs/about-form-ss-4",
+      "useCase": "Stand up: get an EIN",
+      "access": "public-domain",
+      "lastChecked": "2026-11-12"
+    },
+    {
+      "id": "irs-ein-online",
+      "title": "Get an employer identification number",
+      "publisher": "Internal Revenue Service",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number",
+      "useCase": "Stand up: apply for an EIN online",
+      "access": "public-domain",
+      "lastChecked": "2026-11-12"
+    },
+    {
+      "id": "fincen-boi",
+      "title": "Beneficial Ownership Information Reporting",
+      "publisher": "Financial Crimes Enforcement Network",
+      "url": "https://www.fincen.gov/boi",
+      "useCase": "Stand up: check current beneficial ownership reporting rules",
+      "access": "public-domain",
+      "lastChecked": "2026-11-12"
+    },
+    {
+      "id": "tx-franchise-tax-forms",
+      "title": "Texas franchise tax forms",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "url": "https://comptroller.texas.gov/taxes/franchise/forms/",
+      "useCase": "Stand up and report: franchise tax and information reports",
+      "access": "free-to-view",
+      "lastChecked": "2026-11-12"
+    },
+    {
+      "id": "irs-form-w-9",
+      "title": "Form W-9, Request for Taxpayer Identification Number and Certification",
+      "publisher": "Internal Revenue Service",
+      "url": "https://www.irs.gov/forms-pubs/about-form-w-9",
+      "useCase": "Raise: collect each investor's taxpayer identification",
+      "access": "public-domain",
+      "lastChecked": "2026-11-12"
+    },
+    {
+      "id": "sec-form-d",
+      "title": "Form D, Notice of Exempt Offering of Securities, with instructions",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "url": "https://www.sec.gov/files/formd.pdf",
+      "useCase": "Raise: federal notice for a Regulation D offering",
+      "access": "public-domain",
+      "lastChecked": "2026-11-11",
+      "note": "Paper copy for preparing answers; the filing itself is made online on EDGAR."
+    },
+    {
+      "id": "sec-form-id-guide",
+      "title": "Prepare and Submit My Form ID Application for EDGAR Access",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "url": "https://www.sec.gov/submit-filings/filer-support-resources/how-do-i-guides/prepare-submit-my-form-id-application",
+      "useCase": "Raise: get EDGAR access for a new issuer",
+      "access": "public-domain",
+      "lastChecked": "2026-11-11"
+    },
+    {
+      "id": "sec-edgar-filer-manual",
+      "title": "EDGAR Filer Manual",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "url": "https://www.sec.gov/submit-filings/edgar-filer-manual",
+      "useCase": "Raise: EDGAR filing rules, including Form ID notarization",
+      "access": "public-domain",
+      "lastChecked": "2026-11-12"
+    },
+    {
+      "id": "sec-form-d-interpretations",
+      "title": "Securities Act Forms interpretations, Section 130: Form D",
+      "publisher": "U.S. Securities and Exchange Commission, Division of Corporation Finance",
+      "url": "https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/securities-act-forms",
+      "useCase": "Raise: staff answers on how to fill in Form D",
+      "access": "public-domain",
+      "lastChecked": "2026-11-11"
+    },
+    {
+      "id": "nasaa-efd",
+      "title": "Electronic Filing Depository and its Form D state requirements table",
+      "publisher": "North American Securities Administrators Association",
+      "url": "https://nasaaefd.org/About/FormDStates",
+      "useCase": "Raise: file state notices and pay state fees",
+      "access": "free-to-view",
+      "lastChecked": "2026-11-11"
+    },
+    {
+      "id": "tx-ssb-exemptions",
+      "title": "Exemptions from Registration",
+      "publisher": "Texas State Securities Board",
+      "url": "https://www.ssb.texas.gov/securities-professionals/regulation-securities/exemptions-registration",
+      "useCase": "Raise: Texas treatment of Rule 506 and other exempt offerings",
+      "access": "free-to-view",
+      "lastChecked": "2026-11-11"
+    },
+    {
+      "id": "ilpa-templates",
+      "title": "Templates, standards and model documents (reporting, capital call and distribution templates, model LPA)",
+      "publisher": "Institutional Limited Partners Association",
+      "url": "https://ilpa.org/industry-guidance/templates-standards-model-documents/",
+      "useCase": "Raise and report: investor reporting and capital call formats",
+      "access": "free-to-view",
+      "lastChecked": "2026-11-12"
+    },
+    {
+      "id": "fema-flood-map-service-center",
+      "title": "FEMA Flood Map Service Center",
+      "publisher": "Federal Emergency Management Agency",
+      "url": "https://msc.fema.gov/portal/home",
+      "useCase": "Acquire: check a property's flood zone",
+      "access": "public-domain",
+      "lastChecked": "2026-11-12"
+    },
+    {
+      "id": "usfws-wetlands-mapper",
+      "title": "National Wetlands Inventory, Wetlands Mapper",
+      "publisher": "U.S. Fish and Wildlife Service",
+      "url": "https://www.fws.gov/program/national-wetlands-inventory/wetlands-mapper",
+      "useCase": "Acquire: screen a site for mapped wetlands",
+      "access": "public-domain",
+      "lastChecked": "2026-11-12"
+    },
+    {
+      "id": "epa-all-appropriate-inquiries",
+      "title": "Brownfields All Appropriate Inquiries",
+      "publisher": "U.S. Environmental Protection Agency",
+      "url": "https://www.epa.gov/brownfields/brownfields-all-appropriate-inquiries",
+      "useCase": "Acquire: what a Phase I must cover to meet the federal standard",
+      "access": "public-domain",
+      "lastChecked": "2026-11-12"
+    },
+    {
+      "id": "astm-e1527-21",
+      "title": "ASTM E1527-21, Standard Practice for Environmental Site Assessments: Phase I",
+      "publisher": "ASTM International",
+      "url": "https://store.astm.org/e1527-21.html",
+      "useCase": "Acquire: the Phase I standard consultants follow",
+      "access": "paid",
+      "lastChecked": "2026-11-12"
+    },
+    {
+      "id": "alta-policy-forms",
+      "title": "Policy forms and related documents",
+      "publisher": "American Land Title Association",
+      "url": "https://www.alta.org/policies-and-standards/policy-forms/",
+      "useCase": "Acquire: national title policy and commitment forms",
+      "access": "free-to-view",
+      "lastChecked": "2026-11-12"
+    },
+    {
+      "id": "alta-nsps-2026-standards",
+      "title": "2026 ALTA/NSPS Minimum Standard Detail Requirements for land title surveys",
+      "publisher": "National Society of Professional Surveyors",
+      "url": "https://nsps.us.com/page/2026ALTA",
+      "useCase": "Acquire: what an ALTA/NSPS survey must show",
+      "access": "free-to-view",
+      "lastChecked": "2026-11-12"
+    },
+    {
+      "id": "tdi-title-rates-2026",
+      "title": "Texas title insurance basic premium rates (2026 chart)",
+      "publisher": "Texas Department of Insurance",
+      "url": "https://www.tdi.texas.gov/title/titlerates2026.html",
+      "useCase": "Acquire: price the owner's and loan title policies",
+      "access": "free-to-view",
+      "lastChecked": "2026-11-12"
+    },
+    {
+      "id": "tdi-title-basic-manual",
+      "title": "Title Insurance Basic Manual",
+      "publisher": "Texas Department of Insurance",
+      "url": "https://www.tdi.texas.gov/title/titleman.html",
+      "useCase": "Acquire: Texas title forms, rules and rates",
+      "access": "free-to-view",
+      "lastChecked": "2026-11-12"
+    },
+    {
+      "id": "trec-iabs",
+      "title": "Information About Brokerage Services",
+      "publisher": "Texas Real Estate Commission",
+      "url": "https://www.trec.texas.gov/forms/information-about-brokerage-services",
+      "useCase": "Acquire: the brokerage disclosure Texas license holders give",
+      "access": "free-to-view",
+      "lastChecked": "2026-11-12"
+    },
+    {
+      "id": "irs-firpta",
+      "title": "FIRPTA withholding",
+      "publisher": "Internal Revenue Service",
+      "url": "https://www.irs.gov/individuals/international-taxpayers/firpta-withholding",
+      "useCase": "Acquire: withholding when the seller is a foreign person",
+      "access": "public-domain",
+      "lastChecked": "2026-11-12"
+    },
+    {
+      "id": "irs-form-1099-s",
+      "title": "Form 1099-S, Proceeds from Real Estate Transactions",
+      "publisher": "Internal Revenue Service",
+      "url": "https://www.irs.gov/forms-pubs/about-form-1099-s",
+      "useCase": "Acquire and exit: the closing agent's information return",
+      "access": "public-domain",
+      "lastChecked": "2026-11-12"
+    },
+    {
+      "id": "tceq-voluntary-cleanup",
+      "title": "Voluntary Cleanup Program",
+      "publisher": "Texas Commission on Environmental Quality",
+      "url": "https://www.tceq.texas.gov/remediation/vcp",
+      "useCase": "Acquire: resolve contamination under state oversight",
+      "access": "free-to-view",
+      "lastChecked": "2026-11-12"
+    },
+    {
+      "id": "ic3",
+      "title": "Internet Crime Complaint Center",
+      "publisher": "Federal Bureau of Investigation",
+      "url": "https://www.ic3.gov/",
+      "useCase": "Acquire and raise: report wire fraud",
+      "access": "public-domain",
+      "lastChecked": "2026-11-12"
+    },
+    {
+      "id": "tx-comptroller-protests",
+      "title": "Appraisal protests and appeals",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "url": "https://comptroller.texas.gov/taxes/property-tax/protests/",
+      "useCase": "Operate: protest a Texas property tax appraisal",
+      "access": "free-to-view",
+      "lastChecked": "2026-11-12"
+    },
+    {
+      "id": "irs-form-1065",
+      "title": "Form 1065, U.S. Return of Partnership Income",
+      "publisher": "Internal Revenue Service",
+      "url": "https://www.irs.gov/forms-pubs/about-form-1065",
+      "useCase": "Report: the deal entity's tax return and investors' K-1s",
+      "access": "public-domain",
+      "lastChecked": "2026-11-12"
+    },
+    {
+      "id": "irs-form-8824",
+      "title": "Form 8824, Like-Kind Exchanges",
+      "publisher": "Internal Revenue Service",
+      "url": "https://www.irs.gov/forms-pubs/about-form-8824",
+      "useCase": "Exit: report a 1031 exchange",
+      "access": "public-domain",
+      "lastChecked": "2026-11-12"
+    },
+    {
+      "id": "irs-pub-544",
+      "title": "Publication 544, Sales and Other Dispositions of Assets",
+      "publisher": "Internal Revenue Service",
+      "url": "https://www.irs.gov/publications/p544",
+      "useCase": "Exit: report the gain or loss when a property is sold",
+      "access": "public-domain",
+      "lastChecked": "2026-11-13",
+      "note": "Revised yearly; open the edition for the tax year of the sale."
+    },
+    {
+      "id": "irs-pub-946",
+      "title": "Publication 946, How To Depreciate Property",
+      "publisher": "Internal Revenue Service",
+      "url": "https://www.irs.gov/publications/p946",
+      "useCase": "Underwrite and report: depreciation methods and recovery periods",
+      "access": "public-domain",
+      "lastChecked": "2026-11-13",
+      "note": "Revised yearly; open the edition for the tax year in question."
+    },
+    {
+      "id": "irs-form-4562",
+      "title": "Form 4562, Depreciation and Amortization, with instructions",
+      "publisher": "Internal Revenue Service",
+      "url": "https://www.irs.gov/forms-pubs/about-form-4562",
+      "useCase": "Report: claim depreciation on the deal entity's return",
+      "access": "public-domain",
+      "lastChecked": "2026-11-13",
+      "note": "Revised yearly; the page links the current form and its instructions."
+    },
+    {
+      "id": "irs-form-4797",
+      "title": "Form 4797, Sales of Business Property, with instructions",
+      "publisher": "Internal Revenue Service",
+      "url": "https://www.irs.gov/forms-pubs/about-form-4797",
+      "useCase": "Exit: report the sale of depreciated business property",
+      "access": "public-domain",
+      "lastChecked": "2026-11-13",
+      "note": "Revised yearly; the page links the current form and its instructions."
+    },
+    {
+      "id": "irs-form-8824-instructions",
+      "title": "Instructions for Form 8824, Like-Kind Exchanges",
+      "publisher": "Internal Revenue Service",
+      "url": "https://www.irs.gov/instructions/i8824",
+      "useCase": "Exit: how to fill in the like-kind exchange report",
+      "access": "public-domain",
+      "lastChecked": "2026-11-13",
+      "note": "Revised yearly. The form itself is indexed as irs-form-8824."
+    },
+    {
+      "id": "irs-like-kind-real-estate",
+      "title": "Like-kind exchanges, real estate tax tips",
+      "publisher": "Internal Revenue Service",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/like-kind-exchanges-real-estate-tax-tips",
+      "useCase": "Exit and acquire: the IRS's plain-language page on exchanging real property",
+      "access": "public-domain",
+      "lastChecked": "2026-11-13"
+    },
+    {
+      "id": "uscourts-bankruptcy-basics",
+      "title": "Bankruptcy Basics",
+      "publisher": "U.S. Courts",
+      "url": "https://www.uscourts.gov/court-programs/bankruptcy/bankruptcy-basics",
+      "useCase": "Operate: how a tenant's or borrower's bankruptcy case proceeds",
+      "access": "public-domain",
+      "lastChecked": "2026-11-13"
+    },
+    {
+      "id": "uscourts-form-410",
+      "title": "Official Form 410, Proof of Claim, with instructions",
+      "publisher": "U.S. Courts",
+      "url": "https://www.uscourts.gov/forms-rules/forms/proof-claim-0",
+      "useCase": "Operate: file a claim in a tenant's or borrower's bankruptcy case",
+      "access": "public-domain",
+      "lastChecked": "2026-11-13",
+      "note": "Official forms are revised periodically; an older page titled Proof Of Claim (Superseded) also exists, so use this one."
+    },
+    {
+      "id": "fdic-appraisal-evaluation-guidelines",
+      "title": "Interagency Appraisal and Evaluation Guidelines",
+      "publisher": "Federal Deposit Insurance Corporation",
+      "url": "https://www.fdic.gov/news/financial-institution-letters/2010/fil10082.html",
+      "useCase": "Acquire: what a regulated lender expects from an appraisal",
+      "access": "public-domain",
+      "lastChecked": "2026-11-13",
+      "note": "Issued jointly by the federal banking agencies; this is the FDIC's copy."
+    },
+    {
+      "id": "freddie-mac-multifamily-legal-documents",
+      "title": "Multifamily legal documents, including notes, security instruments and guaranties",
+      "publisher": "Freddie Mac",
+      "url": "https://mf.freddiemac.com/lenders/legal",
+      "useCase": "Acquire: read a multifamily agency lender's loan documents",
+      "access": "free-to-view",
+      "lastChecked": "2026-11-13",
+      "note": "The page lists many documents; open the one for the loan product."
+    },
+    {
+      "id": "fannie-mae-multifamily-loan-documents",
+      "title": "Multifamily loan documents",
+      "publisher": "Fannie Mae",
+      "url": "https://multifamily.fanniemae.com/doing-business-us/loan-documents",
+      "useCase": "Acquire: read a multifamily agency lender's loan documents",
+      "access": "free-to-view",
+      "lastChecked": "2026-11-13",
+      "note": "The page lists many documents; open the one for the loan product."
+    },
+    {
+      "id": "tx-form-50-132",
+      "title": "Form 50-132, Property Owner's Notice of Protest (counties with populations greater than 120,000)",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "url": "https://comptroller.texas.gov/forms/50-132.pdf",
+      "useCase": "Operate: file a notice of protest of a Texas appraisal",
+      "access": "free-to-view",
+      "lastChecked": "2026-11-13",
+      "note": "Other protest notice forms exist for smaller counties; the forms page lists them."
+    },
+    {
+      "id": "tx-form-50-162",
+      "title": "Form 50-162, Appointment of Agent for Property Tax Matters",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "url": "https://comptroller.texas.gov/forms/50-162.pdf",
+      "useCase": "Operate: authorize an agent to handle a property tax protest",
+      "access": "free-to-view",
+      "lastChecked": "2026-11-13"
+    },
+    {
+      "id": "nyfed-sofr",
+      "title": "Secured Overnight Financing Rate data",
+      "publisher": "Federal Reserve Bank of New York",
+      "url": "https://www.newyorkfed.org/markets/reference-rates/sofr",
+      "useCase": "Acquire and operate: the published rate that floating-rate loans reset against",
+      "access": "free-to-view",
+      "lastChecked": "2026-11-13",
+      "note": "Loan documents name their own SOFR variant and reset rules; this page gives the daily overnight rate."
+    },
+    {
+      "id": "treasury-par-yield-curve",
+      "title": "Daily Treasury Par Yield Curve Rates",
+      "publisher": "U.S. Department of the Treasury",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
+      "useCase": "Acquire: Treasury yields that fixed-rate loans are priced over",
+      "access": "public-domain",
+      "lastChecked": "2026-11-13"
+    },
+    {
+      "id": "appraisal-foundation-uspap",
+      "title": "USPAP, Uniform Standards of Professional Appraisal Practice",
+      "publisher": "The Appraisal Foundation",
+      "url": "https://appraisalfoundation.org/products/uspap",
+      "useCase": "Acquire: the standards appraisers follow",
+      "access": "paid",
+      "lastChecked": "2026-11-13",
+      "note": "The page sells the standards in print and digital form; this index links the product page only and does not summarize the text."
+    }
+  ]
+}

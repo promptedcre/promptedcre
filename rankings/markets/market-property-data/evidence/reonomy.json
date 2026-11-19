@@ -1,0 +1,133 @@
+{
+  "vendor": "reonomy",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://api.reonomy.com/v2/docs/",
+      "found": true,
+      "note": "Public technical documentation for the Reonomy API (linked from reonomy.com as Technical documentation)."
+    },
+    "api": {
+      "url": "https://api.reonomy.com/v2/docs/guides/getting-started/",
+      "found": true,
+      "note": "Public API docs; access needs an approved request."
+    },
+    "pricing": {
+      "url": "https://www.reonomy.com/pricing/",
+      "found": true,
+      "note": "Plans listed (monthly, annual, bulk feed, API) but no dollar amounts on the page; bulk and API are Talk to an expert."
+    },
+    "changelog": {
+      "url": "https://api.reonomy.com/v2/docs/release-notes/",
+      "found": true,
+      "note": "API release notes; newest entry is Mar 2021."
+    }
+  },
+  "links": {
+    "docs": "https://api.reonomy.com/v2/docs/",
+    "api": "https://api.reonomy.com/v2/docs/api/reference/"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://api.reonomy.com/v2/docs/guides/getting-started/",
+      "excerpt": "The Reonomy API is available only to authorized users and all API requests must include an access token",
+      "fetched": "2026-11-12",
+      "hash": "1eb4d4fc6e9e88e5a4ee8ba6280829f619c78db70006f717ced86d70c0cea31e"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://api.reonomy.com/v2/docs/guides/getting-started/",
+      "excerpt": "To request API access, email us at sales@reonomy.com .",
+      "fetched": "2026-11-12",
+      "hash": "0ac4a059a2628c91e84e61a2940c8d71d49a9617ede4d7b355c5da83884806a5"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://api.reonomy.com/v2/docs/",
+      "excerpt": "Reonomy data solutions are available to enterprise customers only.",
+      "fetched": "2026-11-12",
+      "hash": "f89da56c5d3b6e42ff83f0b84502b9deadac4e790dbe89b3d60ae16668cbb327"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://api.reonomy.com/v2/docs/api/basics/",
+      "excerpt": "The API server authenticates all requests using HTTP Basic Authentication .",
+      "fetched": "2026-11-12",
+      "note": "Access key and secret key; no scopes described on the page.",
+      "hash": "d51a85614da3d239a0b96a8148d39de531ac272823d9fae582f8c8f25c4e0375"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://api.reonomy.com/v2/docs/",
+      "excerpt": "Match addresses and locations in your database to Reonomy properties",
+      "fetched": "2026-11-12",
+      "hash": "9c0e605e70b51f6e216117d8fc3596c700e404852f09576aa8c34aa003ce7098"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://api.reonomy.com/v2/docs/",
+      "excerpt": "Locate properties based on geography, asset type, building area, etc.",
+      "fetched": "2026-11-12",
+      "hash": "69d68a1c6a0e555b8a1b6dcf86ae689d38d47a8ff07f46f16a0d85433081c71d"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://api.reonomy.com/v2/docs/",
+      "excerpt": "Ingest Reonomy data in bulk (typically >10k records) into your systems",
+      "fetched": "2026-11-12",
+      "hash": "1c73e9073e41c49ecfac10392758f77dc147cb38cad3aeeb0261e4f6876985d9"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://api.reonomy.com/v2/docs/",
+      "excerpt": "If you're looking to export up to 2,000 property records per month, the \"Exports\" feature in our web application may be a better solution",
+      "fetched": "2026-11-12",
+      "hash": "ce4ac8b3050dc17bfba6db27b5d08c2e3373833aeac70d1e41f536d99a68aee6"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://www.reonomy.com/pricing/",
+      "excerpt": "Select a subscription below and get instant access to 53M+ US commercial properties, ownership data, and market intelligence",
+      "fetched": "2026-11-12",
+      "hash": "93eb817a0d79b6d94c8dab7fbdaed6897a152791b7395f905a447bbd66739a77"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://www.reonomy.com/pricing/",
+      "excerpt": "Up to 1M properties in a single API request",
+      "fetched": "2026-11-12",
+      "note": "API connection plan; button is Talk to an expert, no price shown.",
+      "hash": "3ff690004e20120f42f06ea960d9796b1e5428fa06fa71d9bc2b513a6a20e0d8"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://www.reonomy.com/",
+      "excerpt": "Copyright © 2026 Reonomy, An Altus Group Business. All rights reserved.",
+      "fetched": "2026-11-12",
+      "hash": "f5d0c7854cd2ffbaf004f8257ae4738aec5d1a644429b444ecc4b98a3d8067fb"
+    },
+    {
+      "id": "c12",
+      "tier": "vendor-claim",
+      "url": "https://api.reonomy.com/v2/docs/release-notes/",
+      "excerpt": "The new POST /property/bulk endpoint takes up to 250 Reonomy property IDs and returns information about the specified properties.",
+      "fetched": "2026-11-12",
+      "note": "Entry dated Sept 2020; the newest release note on the page is Mar 2021.",
+      "hash": "6b2f30f35e1cbc5ea5ac80d28a5dc3e047b553b48f69986423c26632deb260f1"
+    }
+  ]
+}

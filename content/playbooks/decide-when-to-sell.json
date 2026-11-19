@@ -1,0 +1,508 @@
+{
+  "id": "decide-when-to-sell",
+  "slug": "decide-when-to-sell",
+  "kind": "process",
+  "title": "Decide when to sell",
+  "summary": "Work hold, refinance and sell through the catalog's calculators: today's value from income, the rent roll tested as a buyer's lender would, the prepayment cost, the forward return from holding, the net before and after tax with the CPA, the exchange as a question, and each ending through the waterfall.",
+  "phase": "exit",
+  "order": 500,
+  "featured": false,
+  "depth": "full",
+  "review": "ai-drafted",
+  "lastVerified": "2026-11-14",
+  "requires": [],
+  "consumes": [
+    "rent-roll",
+    "lease-abstract",
+    "trailing-12",
+    "loan-documents",
+    "underwriting-model",
+    "ic-memo",
+    "comp-set",
+    "loan-term-sheet",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "sponsor-operating-agreement",
+    "investor-register"
+  ],
+  "produces": [
+    "underwriting-model",
+    "investor-register"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "usc-26-1001",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1001",
+      "title": "26 U.S.C. 1001, Determination of amount of and recognition of gain or loss",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "The gain from the sale or other disposition of property shall be the excess of the amount realized therefrom over the adjusted basis",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-1031",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1031",
+      "title": "26 U.S.C. 1031, Exchange of real property held for productive use or investment",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-14",
+      "quote": "No gain or loss shall be recognized on the exchange of real property held for productive use in a trade or business or for investment",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-p544",
+      "url": "https://www.irs.gov/publications/p544",
+      "title": "IRS Publication 544 (2025), Sales and Other Dispositions of Assets",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-14",
+      "quote": "Exchanges of partnership interests do not qualify as nontaxable exchanges of like-kind property.",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-p544-1250",
+      "url": "https://www.irs.gov/publications/p544",
+      "title": "IRS Publication 544 (2025), Sales and Other Dispositions of Assets: unrecaptured section 1250 gain",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-14",
+      "quote": "Unrecaptured section 1250 gain cannot be more than the net section 1231 gain or include any gain otherwise treated as ordinary income.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-14",
+      "quote": "To make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "gather-todays-facts",
+      "title": "Gather today's facts",
+      "instruction": "Set one analysis date and pull, as of that date, the current rent roll and lease abstracts, the trailing-12, and the business plan from the approved investment memo and underwriting model, with what it still has to deliver, such as leasing, capital work or a loan payoff. From the loan documents, record the principal balance, rate, maturity, any extension options and their conditions, any reserves the lender holds, and the prepayment clause in the note's own words: lockout, a schedule of percentages, yield maintenance, defeasance, swap or cap breakage, the open window, and whether a buyer may assume the loan and on what terms. Record the maturity, each extension notice date and the start of any open window as dates, each beside the clause it comes from. Mark every figure not yet confirmed as unknown rather than estimating it.",
+      "mode": "agent",
+      "modeBasis": "Reading the rent roll, the statements and the loan documents and recording what they say is document work.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "calculators": [],
+      "consumes": [
+        "rent-roll",
+        "lease-abstract",
+        "trailing-12",
+        "loan-documents",
+        "ic-memo",
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "value-from-income",
+      "title": "Value the property today from its income",
+      "instruction": "In the income-value calculator, build a current stabilized year from the rent roll and the trailing-12: in-place rent, the vacancy and collection allowance, other income, operating expenses by line and reserves, and record whether the NOI capitalized is before or after reserves. Take the cap rate from the cap-rate calculator, run by extraction on the comparable sales in the sponsor's comp set and, where the sponsor holds current lender quotes, by band of investment, with the equity dividend rate taken from its own investors' required returns; record the sales and quotes behind each rate and their dates. If the comp set is too old for the sponsor's own standard, refresh it first through the pull-sale-and-lease-comps process. Carry the value at the chosen rate, and the table either side of it, into the underwriting model. A broker's opinion of value is compared with this figure, never substituted for it.",
+      "mode": "agent",
+      "modeBasis": "Two live calculators run on the rent roll, the statements and the sponsor's recorded comps; every rate is labeled with its source.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "gather-todays-facts"
+      ],
+      "calculators": [
+        "income-value",
+        "cap-rate"
+      ],
+      "consumes": [
+        "rent-roll",
+        "trailing-12",
+        "comp-set",
+        "loan-term-sheet"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "test-rollover-like-a-lender",
+      "title": "Test the rent roll the way a buyer's lender will",
+      "instruction": "Run the lease-rollover calculator with the analysis date set to the earliest date a sale could close and the hold set to the loan term a buyer would likely seek, a figure the sponsor takes from lender quotes or term sheets it has seen and records. Record the expirations by year inside that term, the weighted average lease term by rent and by area, the largest tenant's share of rent, and in-place rent against the market rent the comp set supports. Turn on the downtime check: for each lease expiring inside the term, enter the sponsor's own renewal probability and months of downtime with the reason for each, and compare the expected loss with the flat vacancy allowance used in the valuation. Where the check shows more rent at risk than the allowance, revise the value before relying on it.",
+      "mode": "agent",
+      "modeBasis": "The live calculator reads the rent roll; the renewal and downtime figures are the sponsor's recorded judgment.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "value-from-income"
+      ],
+      "calculators": [
+        "lease-rollover",
+        "income-value"
+      ],
+      "consumes": [
+        "rent-roll",
+        "lease-abstract",
+        "comp-set"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "industrial": "On a single-tenant building the downtime check is all or nothing: one lease decides whether the building has income during a buyer's loan term. Record the tenant's renewal notice date and any renewal option beside the result."
+      }
+    },
+    {
+      "id": "price-the-prepayment",
+      "title": "Price the cost of prepaying the loan",
+      "instruction": "Using the prepayment clause recorded from the note, compute the cost of paying the loan off on each candidate date: the earliest closing, the start of any open window, and maturity. Follow the note's own formula, including its index, discount rate, notice period and day count; where it points to a published rate, record the source and date of the figure used. Use the loan-payments calculator for the year-end balance nearest each date and, where the note charges interest between two dates, that interest on the loan's day-count basis; take the exact balance from the servicer's statement. Add any exit fee, defeasance or servicer cost and any swap or cap termination the documents name. If a buyer could assume the loan, record its assumption terms and fee. Unclear wording goes to counsel. These are estimates for comparison; the binding figure is the lender's payoff letter, ordered before closing.",
+      "mode": "agent",
+      "modeBasis": "The cost follows from the note's own formula and the live calculator's balances; nothing is sent to the lender.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "gather-todays-facts"
+      ],
+      "calculators": [
+        "loan-payments"
+      ],
+      "consumes": [
+        "loan-documents"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "compute-seller-net",
+      "title": "Compute the net and the gain on a sale now",
+      "instruction": "Run the sale-proceeds calculator at today's value, with the selling cost rate and fixed costs from broker proposals or the sponsor's past closings, the loan payoff including the prepayment cost, and any other payoffs. Take the adjusted basis from the entity's books and tax returns: cost plus capital improvements, less depreciation allowed or allowable. Gain is the amount realized over the adjusted basis (26 U.S.C. 1001(a)), and selling expenses come off the amount realized. Record the gain, the part of it equal to depreciation taken, cash at closing before tax, the clearing price below which the seller brings cash, and the five-price ladder. Cash at closing before tax is the year-0 amount in the next step. Enter tax rates only as the CPA gives them; until then, report gain before tax. In a partnership, each investor's own facts set the tax.",
+      "mode": "agent",
+      "modeBasis": "The live calculator runs on the books, the returns and the payoff estimate; the tax rates are the CPA's.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "value-from-income",
+        "price-the-prepayment"
+      ],
+      "rules": [
+        "us-fed.irc.gain-and-adjusted-basis",
+        "us-fed.irc.section-1231-gains-and-losses",
+        "us-fed.irc.unrecaptured-section-1250-gain",
+        "us-fed.irc.net-investment-income-tax"
+      ],
+      "calculators": [
+        "sale-proceeds"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "loan-documents"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-26-1001",
+        "irs-p544"
+      ]
+    },
+    {
+      "id": "project-hold-against-sale",
+      "title": "Project holding against selling now",
+      "instruction": "Run the npv-irr calculator with cash at closing before tax from the sale-proceeds run as the year-0 amount: what the owners give up by holding. Enter the cash flow to equity for each remaining hold year from the underwriting model, and the net sale proceeds at its end from a sale-proceeds run at the exit price, with the exit cap rate and selling costs recorded as assumptions. The IRR is the forward return from holding, the NPV is at the required return the principals set and record with its basis, and the partition shows how much of that return rests on the later sale. For the refinance path, size the new loan with debt-sizing and its payments with loan-payments on quotes or labeled assumptions, then run npv-irr with the cash out subtracted from year 0 and the new debt service in each year. Run returns-sensitivity on the hold case.",
+      "mode": "agent",
+      "modeBasis": "Five live calculators run on recorded inputs; the required return and exit assumptions are the principals' and are labeled.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "test-rollover-like-a-lender",
+        "compute-seller-net"
+      ],
+      "calculators": [
+        "npv-irr",
+        "sale-proceeds",
+        "debt-sizing",
+        "loan-payments",
+        "returns-sensitivity"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "loan-term-sheet"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "frame-the-exchange",
+      "title": "Frame the exchange as a question for the CPA and counsel",
+      "instruction": "Run the exchange-1031 calculator for realized and deferred gain, boot and the replacement's basis, at a replacement price and debt the sponsor names as a case, not a plan. Under 26 U.S.C. 1031(a), gain is deferred only on real property held for business or investment exchanged solely for like-kind real property to be held for either use, and not held primarily for sale, with the replacement identified within 45 days of the transfer and received by the earlier of the 180th day and the due date, with extensions, of that year's return; the deadline-calendar shows both once a sale date is set. The taxpayer that owns the property makes the exchange, and exchanges of partnership interests do not qualify, so treating investors who want cash apart from those who want deferral is a written question for counsel and the CPA. Pursuing it moves to the run-a-1031-exchange process before closing.",
+      "mode": "agent",
+      "modeBasis": "The live calculator runs on the entity's recorded figures; whether and how to exchange is for the CPA, counsel and the principals.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "compute-seller-net"
+      ],
+      "rules": [
+        "us-fed.irc.1031-like-kind-real-property",
+        "us-fed.irc.1031-periods",
+        "us-fed.irc.1031-identification-rules",
+        "us-fed.irc.1031-qualified-intermediary",
+        "us-fed.irc.1031-boot-and-basis"
+      ],
+      "calculators": [
+        "exchange-1031",
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "underwriting-model"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-26-1031",
+        "irs-p544"
+      ]
+    },
+    {
+      "id": "cpa-confirms-tax",
+      "title": "Have the CPA confirm the tax treatment",
+      "instruction": "Send the CPA the sale-proceeds and exchange runs, the questions, the depreciation schedule and recent returns. The CPA confirms the adjusted basis and depreciation allowed or allowable, and how the gain is characterized at the investor level: whether section 1231 applies, the unrecaptured section 1250 part, which cannot be more than the net section 1231 gain, and whether net investment income tax reaches it. The CPA also says which rates to enter, what state or entity-level tax applies, whether and how an exchange is open to this owner, and how investors who bought from others are affected. The CPA gives the after-tax figures for holding; the after-tax calculator models a purchase from day one and cannot start today on the actual basis. Record each answer, re-run the calculators on the CPA's rates, and note what the CPA could not confirm. Investors get no tax advice from the sponsor.",
+      "mode": "human-online",
+      "modeBasis": "Characterizing the gain and choosing the rates is a tax position, which is the CPA's.",
+      "actor": "cpa",
+      "licensed": "cpa",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "compute-seller-net",
+        "frame-the-exchange"
+      ],
+      "rules": [
+        "us-fed.irc.section-1231-gains-and-losses",
+        "us-fed.irc.section-1061-applicable-partnership-interests",
+        "us-fed.irc.unrecaptured-section-1250-gain",
+        "us-fed.irc.net-investment-income-tax",
+        "us-fed.irc.partnership-basis-election"
+      ],
+      "calculators": [
+        "sale-proceeds",
+        "after-tax",
+        "exchange-1031"
+      ],
+      "consumes": [
+        "underwriting-model"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "irs-p544-1250"
+      ]
+    },
+    {
+      "id": "counsel-confirms-authority",
+      "title": "Have counsel confirm who decides and what consent is due",
+      "instruction": "An agent extracts from the governing agreement, whether the deal entity's operating agreement or partnership agreement, the fund agreement or the JV agreement, every term that governs a sale or refinancing: who may decide, any investor or partner consent and its threshold, notice periods, any lockout or required hold, buy-sell or forced-sale rights, the fund's term, fees due on a sale, and limits on a sale to an affiliate. It adds the lender's consent rights over an assumption or transfer from the loan documents. Counsel reviews the extract against the documents, confirms who must decide and by what vote, consent or notice, says what an exchange would require of the entity and its investors, and flags any conflict, such as a sponsor affiliate as buyer. Record counsel's answers.",
+      "mode": "human-online",
+      "modeBasis": "Who holds the decision and what consent it needs is a legal conclusion; an agent prepares the extract.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "gather-todays-facts",
+        "frame-the-exchange"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "sponsor-operating-agreement",
+        "loan-documents"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "run-endings-through-waterfall",
+      "title": "Run each ending through the agreed tiers",
+      "instruction": "Enter the distribution tiers from the governing agreement in the waterfall-promote calculator, with contributions and distributions to date from the investor register and the books; in a fund, use the order the fund agreement sets. Run one case per path: sell now, refinance and hold, and hold to a later sale, each with its remaining cash to equity after any fees the agreement charges, such as a disposition fee. Record for each what the investors and the sponsor receive, the return before the promote and the investors' return after it, and the sponsor's co-investment cash and promote separately. Use the outcome rows to show each path at other endings, and the break-evens to show the final-year cash at which investors have their capital back and the preferred return is paid. Show where the sponsor's promote is larger on one path, so the decision makers see the sponsor's stake.",
+      "mode": "agent",
+      "modeBasis": "The live calculator runs the agreement's tiers on the recorded cash flows of each path.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "project-hold-against-sale",
+        "cpa-confirms-tax",
+        "counsel-confirms-authority"
+      ],
+      "calculators": [
+        "waterfall-promote"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "investor-register",
+        "underwriting-model"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "write-the-comparison",
+      "title": "Write the hold, refinance and sell comparison",
+      "instruction": "Write the comparison the decision makers will read: hold, refinance and sell side by side, each with today's value and its basis, the prepayment cost, the forward return and NPV, cash at closing before and after tax on the CPA's rates, the exchange answer, the rent at risk from the downtime check, what investors and the sponsor receive at each ending, and the time each path takes. Add what the comp set and any broker conversations show about likely buyers and marketing time, labeled as the sponsor's reading, not a forecast. List counsel's answers on who decides and what consent or notice is due. State every rate with its source and date, mark each unknown, and tie every figure to a calculator run or a document. Put the recommendation last, with its reasons and the fallback.",
+      "mode": "agent",
+      "modeBasis": "Writing from the recorded calculator runs and the CPA's and counsel's answers is document work; the decision is the people's who hold it.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "cpa-confirms-tax",
+        "counsel-confirms-authority",
+        "run-endings-through-waterfall"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "comp-set"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "record-the-decision",
+      "title": "Decide and record the decision",
+      "instruction": "The people the governing agreement entitles to decide choose hold, refinance or sell, and for a sale the earliest date, the lowest acceptable price and whether to pursue an exchange. In a syndication the sponsor's principals decide as their own agreement provides, subject to any investor vote the deal entity's agreement requires. In a fund the investment committee votes as the fund documents provide, subject to any advisory committee consent they require. In a joint venture the principals settle the sponsor's position before the partner is asked. Record the decision, the reasons, any dissent, the fallback and the date to revisit it in a written consent each required person signs. A decision that needs a vote or consent stays conditional until the consent step records it; a decision to hold sets the next review date.",
+      "mode": "human-online",
+      "modeBasis": "Whether to sell binds the owners and is made by the people the governing agreement names; an agent circulates the comparison and records the consent.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "write-the-comparison"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "sponsor-operating-agreement",
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "tell-investors",
+      "title": "Tell investors the decision",
+      "instruction": "Once the decision is recorded, draft the investor notice from established facts, with any consent solicitation counsel confirmed is required: the decision and its reasons, any vote or consent investors are asked for and its deadline, the expected timing, and what the decision could mean for their capital and distributions, tied to the comparison. Say what is not yet known, such as the price a sale will bring. Rule 10b-5 bars untrue statements of material fact, and omissions that make what is said misleading, in connection with the purchase or sale of securities; counsel reviews the notice where interests are changing hands or consents are sought, and decides what must be said. A principal approves it before it goes out. Record what was sent, and to whom, in the investor register.",
+      "mode": "agent",
+      "modeBasis": "Drafting from the comparison is writing work; investor communications go out only with a person's approval.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-the-decision"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "market": "investor-portals-fund-admin",
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5"
+      ],
+      "consumes": [
+        "investor-register",
+        "underwriting-model"
+      ],
+      "produces": [
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5"
+      ]
+    },
+    {
+      "id": "collect-required-consents",
+      "title": "Collect the required votes and consents",
+      "instruction": "Collect every vote or consent counsel confirmed the governing agreement requires, and record each against the threshold counsel confirmed. In a syndication or fund, count the investor votes or advisory committee consents returned by the deadline in the approved notice, by the measure the agreement uses, and keep the signed consents with the investor register. In a joint venture, send the partner the comparison and the sponsor's position, ask for its written decision by the date the agreement allows, and follow any forced-sale or buy-sell right as counsel confirmed it. Answer questions from the same runs, re-running a calculator when an assumption changes. Where counsel confirmed no consent is due, record that. Only with the required consents in hand does a sale move to the select-a-listing-broker process or a refinance to refinance-the-property; until then engage no broker, accept no offer and apply for no loan.",
+      "mode": "human-online",
+      "modeBasis": "Each vote or consent is the investor's or partner's own decision under the agreement; an agent tallies the returns and re-runs the numbers.",
+      "actor": "investor",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-the-decision",
+        "tell-investors"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "investor-register",
+        "underwriting-model"
+      ],
+      "produces": [
+        "investor-register"
+      ],
+      "basis": "practitioner"
+    }
+  ],
+  "outlineSteps": []
+}

@@ -1,0 +1,32 @@
+{
+  "id": "form-deal-entity",
+  "slug": "form-deal-entity",
+  "kind": "process",
+  "title": "Form the deal or fund entity",
+  "summary": "Form the entity that raises the money and owns the property, and get its tax id and bank account in place.",
+  "phase": "raise",
+  "order": 115,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Confirm the structure and entity type decided with counsel",
+    "Confirm the manager or general partner entity that will control it",
+    "Choose the entity's state with counsel to fit the offering",
+    "Form the entity before any subscription is accepted",
+    "Open the entity's bank account with named signers",
+    "Require a second person to approve every outgoing wire",
+    "Have the account open before any wiring instructions go out",
+    "Keep the entity's money and records apart from the sponsor's and other deals'"
+  ]
+}

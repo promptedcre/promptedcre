@@ -1,0 +1,172 @@
+{
+  "vendor": "propertyreach",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "cc304aa7744a0de912823af977b9a1d122a41a8b30773e8642f8d74595977acb",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c1",
+        "c2",
+        "c7",
+        "c8",
+        "c9",
+        "p2"
+      ],
+      "rationale": "The public docs site, whose llms.txt a probe fetched (p2), documents a JSON REST API over PropertyReach's property data (c1, c2), with a Search Properties endpoint page (c7) and Comparables and Linked Properties endpoints (c8, c9).",
+      "missing": "The pack shows only short excerpts of the docs, not the full endpoint list or request and response details."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item in the pack mentions an MCP server; the only agent-facing claim is about the REST API.",
+      "missing": "No official MCP server, setup steps or listing for one is shown."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item in the pack mentions an SDK, CLI, package or code repository.",
+      "missing": "No vendor SDK or CLI on a package registry or public repository, and no code samples, are shown."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item in the pack mentions webhooks or event subscriptions, and na does not fit because the app holds property leads that customers save.",
+      "missing": "No webhooks, callbacks or event subscriptions for property data changes or saved leads are shown."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "partial",
+      "quality": 7,
+      "evidence": [
+        "c3",
+        "c4"
+      ],
+      "rationale": "API keys exist and are created with one click after choosing a data plan (c3), but the docs record one key per account with no scopes described (c4).",
+      "missing": "The key documentation itself is not shown, so whether a key can be restricted, rotated or issued per user is not shown, and the help center could not be checked."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No item in the pack shows or links an OpenAPI, Swagger, GraphQL or other machine-readable API specification.",
+      "missing": "No downloadable or in-docs machine-readable spec is shown."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "full",
+      "quality": 9,
+      "evidence": [
+        "p2",
+        "c8",
+        "c9"
+      ],
+      "rationale": "A probe fetched the docs site's llms.txt with a 200 response (p2), and its content describes API endpoints such as Comparables and Linked Properties (c8, c9), so it covers the documentation rather than only marketing pages.",
+      "missing": "The whole llms.txt is not shown, so it is not shown whether it indexes every docs page or whether Markdown versions of the pages exist."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "na",
+      "quality": 6,
+      "evidence": [
+        "c1",
+        "c2",
+        "c7",
+        "c8",
+        "c9"
+      ],
+      "rationale": "Every API capability the pack shows reads PropertyReach's published property data through search, comparables and linked-property endpoints (c1, c2, c7, c8, c9), so the na condition for an API that only reads published data applies.",
+      "missing": "The full endpoint list is not shown, so the pack does not prove the API has no endpoints that change records such as the app's saved leads, and no sandbox or test mode is shown."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "partial",
+      "quality": 3,
+      "evidence": [
+        "c2",
+        "c7"
+      ],
+      "rationale": "Licensed data can be pulled self-serve as JSON through the API, including searches filtered by city, county or FIPS (c2, c7), but no bulk export or file download is shown.",
+      "missing": "No documented bulk export or download in CSV, Excel or JSON, no app export feature, and no per-request record count are shown, and the help center could not be checked."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c3",
+        "c4",
+        "c11"
+      ],
+      "rationale": "The docs send new API users to an online checkout to complete signup (c4), keys are created with one click after picking a data plan (c3), and the app offers a $5 five-day trial that continues from $39/month with cancel-anytime terms (c11).",
+      "missing": "The checkout flow itself is not shown, so the pack does not confirm that no approval step or call is involved."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c2",
+        "c5",
+        "c11"
+      ],
+      "rationale": "The public Property API page lists a $30/month Developer Access fee with 100 free monthly credits and credit blocks from $0.05 down to $0.035 per credit (c2, c5), and app plans are priced publicly from $39/month, or from $19.95/month billed annually (c11).",
+      "missing": "Credit cost per endpoint is shown only for Search Properties (c7), and app plans appear only as starting prices rather than the full plan grid."
+    },
+    {
+      "story": "md-property-lookup",
+      "verdict": "full",
+      "quality": 5,
+      "evidence": [
+        "c1",
+        "c2",
+        "c7"
+      ],
+      "rationale": "The docs show a JSON REST API over the app's property data with a documented Search Properties endpoint filterable by city, county and FIPS (c1, c2, c7).",
+      "missing": "The pack does not show a lookup by street address or parcel number, or which attributes come back, such as size, year built or use."
+    },
+    {
+      "story": "md-comps",
+      "verdict": "partial",
+      "quality": 5,
+      "evidence": [
+        "c8"
+      ],
+      "rationale": "The docs llms.txt lists a Comparables endpoint that returns comps for a subject property for market analysis and valuation (c8), with no place, type, size or date filters shown.",
+      "missing": "The endpoint's parameters and response fields are not shown, nor whether the comps are sale or lease transactions."
+    },
+    {
+      "story": "md-owner",
+      "verdict": "full",
+      "quality": 4,
+      "evidence": [
+        "c1",
+        "c9",
+        "c12"
+      ],
+      "rationale": "The docs say the REST API exposes the same data as the app (c1), whose saved leads include owner contact details and tax mailing addresses (c12), and the API's Linked Properties endpoint retrieves properties with the same owner (c9).",
+      "missing": "No API documentation of owner-of-record and mailing-address fields for a parcel is shown; the mailing-address claim is homepage marketing about the app's saved leads."
+    },
+    {
+      "story": "md-bulk-area",
+      "verdict": "full",
+      "quality": 6,
+      "evidence": [
+        "c7"
+      ],
+      "rationale": "The documented Search Properties endpoint filters properties by city, county or FIPS code at one credit per request (c7), which is a county-level area query.",
+      "missing": "Page size, result caps and pagination are not shown, so the pack does not show that a county query returns every record, and no radius or drawn-shape query or bulk file is shown."
+    }
+  ]
+}

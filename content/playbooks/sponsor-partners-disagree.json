@@ -1,0 +1,37 @@
+{
+  "id": "sponsor-partners-disagree",
+  "slug": "sponsor-partners-disagree",
+  "kind": "situation",
+  "title": "Sponsor partners disagree on a major decision",
+  "summary": "Go back to the partner agreement's decision and deadlock terms and resolve it before it reaches investors.",
+  "phase": "stand-up",
+  "order": 129,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "situation": {
+    "trigger": "The principals cannot agree on a decision the business needs to make.",
+    "urgency": "weeks"
+  },
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Write down the decision in dispute and each partner's position",
+    "Read the partner agreement's decision, vote and deadlock terms",
+    "List the deadlines the dispute puts at risk",
+    "Gather the facts and figures each side relies on",
+    "Meet to decide under the agreement's process",
+    "Use the agreement's mediation or buy-sell steps if still stuck",
+    "Bring in counsel if the agreement's remedies come into play",
+    "Record the decision and how it was reached",
+    "Tell investors what the governing documents require"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "casualty-damages-property",
+  "slug": "casualty-damages-property",
+  "kind": "situation",
+  "title": "Fire, storm or flood damages the property",
+  "summary": "Make the site safe, notify the insurer and lender, document the loss and communicate with tenants and investors.",
+  "phase": "operate",
+  "order": 122,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "situation": {
+    "trigger": "A fire, storm or flood damages the building or makes space unusable.",
+    "urgency": "hours"
+  },
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Make sure everyone is safe and call emergency services if needed",
+    "Secure the site and stop further damage",
+    "Photograph and document the damage before cleanup",
+    "Notify the insurer and open a claim",
+    "Notify the lender as the loan requires",
+    "Read each lease's casualty clause for abatement, rebuild and termination rights",
+    "Hire mitigation contractors and keep every receipt",
+    "Get repair estimates and work with the adjuster",
+    "Re-test cash flow and loan coverage with abated rent",
+    "Calendar the lease and loan restoration deadlines",
+    "Tell tenants and investors what the leases and loan provide",
+    "Record the claim, payments and repairs in the property file"
+  ]
+}

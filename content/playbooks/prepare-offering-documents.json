@@ -1,0 +1,598 @@
+{
+  "id": "prepare-offering-documents",
+  "slug": "prepare-offering-documents",
+  "kind": "process",
+  "title": "Prepare the offering documents",
+  "summary": "Turn the chosen structure and exemption into the offering set: memorandum or partner package, entity or joint venture agreement, subscription agreement, investor questionnaire and bad-actor questionnaires. Agents draft business sections and check consistency; counsel drafts the legal documents.",
+  "phase": "raise",
+  "order": 110,
+  "featured": true,
+  "depth": "full",
+  "review": "practitioner-reviewed",
+  "lastVerified": "2026-11-12",
+  "requires": [
+    "choose-structure-and-exemption"
+  ],
+  "consumes": [
+    "underwriting-model",
+    "purchase-and-sale-agreement",
+    "loan-term-sheet",
+    "sponsor-operating-agreement"
+  ],
+  "produces": [
+    "private-placement-memorandum",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "subscription-agreement",
+    "investor-questionnaire",
+    "bad-actor-questionnaire"
+  ],
+  "written": {
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
+  },
+  "sources": [
+    {
+      "id": "ecfr-230-501",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.501",
+      "title": "17 CFR 230.501, Definitions and terms used in Regulation D",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "quote": "joint net worth with that person's spouse or spousal equivalent, exceeds $1,000,000",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-502",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.502",
+      "title": "17 CFR 230.502, General conditions to be met",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "quote": "the issuer shall furnish the information specified in paragraph (b)(2) of this section to such purchaser a reasonable time prior to sale",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-506",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.506",
+      "title": "17 CFR 230.506, Exemption for limited offers and sales without regard to dollar amount of offering",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "quote": "a description in writing of any matters that would have triggered disqualification",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-12",
+      "quote": "To make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-cdi-securities-act-rules",
+      "url": "https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/securities-act-rules",
+      "title": "Securities Act Rules: Compliance and Disclosure Interpretations (Sections 255 to 260)",
+      "publisher": "U.S. Securities and Exchange Commission, Division of Corporation Finance",
+      "accessed": "2026-11-12",
+      "quote": "the issuer must update its factual inquiry periodically",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-506b-page",
+      "url": "https://www.sec.gov/resources-small-businesses/exempt-offerings/private-placements-rule-506b",
+      "title": "Private Placements - Rule 506(b)",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-12",
+      "quote": "have access to the type of information normally provided in a prospectus for a registered securities offering",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-506c-no-action",
+      "url": "https://www.sec.gov/rules-regulations/no-action-interpretive-exemptive-letters/division-corporation-finance-no-action/latham-watkins-503c-031225",
+      "title": "No-action letter on Rule 506(c) verification through minimum investment amounts (March 12, 2025)",
+      "publisher": "U.S. Securities and Exchange Commission, Division of Corporation Finance",
+      "accessed": "2026-11-12",
+      "quote": "This letter, like all staff statements, has no legal force or effect",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-506c-incoming",
+      "url": "https://www.sec.gov/files/corpfin/no-action/latham-watkins506c-031225-incoming.pdf",
+      "title": "Request for Rule 506(c) interpretive guidance (incoming letter, March 6, 2025)",
+      "publisher": "U.S. Securities and Exchange Commission (no-action file)",
+      "accessed": "2026-11-12",
+      "quote": "The purchaser’s written representation could be contained in a standalone document, in a subscription agreement for the offering",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-exempt-faq",
+      "url": "https://www.sec.gov/resources-small-businesses/exempt-offerings/frequently-asked-questions-about-exempt-offerings",
+      "title": "Frequently Asked Questions About Exempt Offerings",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-12",
+      "quote": "All securities transactions, even exempt transactions, are subject to the antifraud provisions of the federal securities laws.",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-form-d",
+      "url": "https://www.sec.gov/files/formd.pdf",
+      "title": "Form D, Notice of Exempt Offering of Securities, with instructions (OMB 3235-0076)",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-12",
+      "quote": "the date on which the first investor is irrevocably contractually committed to invest",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-80a-2",
+      "url": "https://www.law.cornell.edu/uscode/text/15/80a-2",
+      "title": "15 U.S.C. 80a-2, Definitions; applicability; rulemaking considerations",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "quote": "who owns not less than $5,000,000 in investments",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-80a-3",
+      "url": "https://www.law.cornell.edu/uscode/text/15/80a-3",
+      "title": "15 U.S.C. 80a-3, Definition of investment company",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "quote": "if the company owns 10 per centum or more of the outstanding voting securities of the issuer",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-7001",
+      "url": "https://www.law.cornell.edu/uscode/text/15/7001",
+      "title": "15 U.S.C. 7001, General rule of validity",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "williamson",
+      "url": "https://openjurist.org/645/f2d/404",
+      "title": "Williamson v. Tucker, 645 F.2d 404 (5th Cir. 1981)",
+      "publisher": "OpenJurist (opinion text)",
+      "accessed": "2026-11-12",
+      "quote": "an investor who claims his general partnership or joint venture interest is an investment contract has a difficult burden to overcome",
+      "tier": "primary"
+    },
+    {
+      "id": "ssb-exemptions",
+      "url": "https://www.ssb.texas.gov/securities-professionals/regulation-securities/exemptions-registration",
+      "title": "Exemptions from Registration",
+      "publisher": "Texas State Securities Board",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gov-code-4008",
+      "url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.4008.htm",
+      "title": "Texas Government Code, Chapter 4008 (Securities Act civil liability)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "regardless of whether the security or transaction is exempt under Chapter 4005",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bus-com-code-322",
+      "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.322.htm",
+      "title": "Texas Business and Commerce Code, Chapter 322 (Uniform Electronic Transactions Act)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-12",
+      "quote": "This chapter applies only to transactions between parties each of which has agreed to conduct transactions by electronic means.",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "draft-deal-disclosure",
+      "title": "Assemble the deal facts and draft the business sections",
+      "instruction": "Even an exempt offering must fully and fairly disclose what an investor would consider important, and antifraud rules cover every statement made to sell it. From the purchase contract, loan term sheet, underwriting model and sponsor records, draft the business sections: the property, the business plan, sources and uses of funds, fees and reimbursements paid to the sponsor, conflicts of interest, the sponsor's track record and the key risks. Tag every figure with its source document and date so counsel can trace it. In a joint venture, this draft becomes the information package the capital partner receives.",
+      "mode": "agent",
+      "modeBasis": "Drafting from the deal documents and tagging each figure's source is document work; counsel reviews the result.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "loan-term-sheet",
+        "underwriting-model",
+        "sponsor-operating-agreement"
+      ],
+      "produces": [
+        "private-placement-memorandum"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ssb-exemptions",
+        "ecfr-240-10b-5",
+        "sec-exempt-faq"
+      ]
+    },
+    {
+      "id": "prepare-nonaccredited-information",
+      "title": "Prepare Rule 502(b) information if non-accredited investors may buy",
+      "instruction": "If counsel allowed non-accredited investors under Rule 506(b), each must receive, a reasonable time before buying and to the extent material, the kind of information Form 1-A Part II calls for (or Part I of a registration form if Regulation A is unavailable), plus financial statements under Form 1-A Part F/S: paragraph (b) for offerings up to $20 million, paragraph (c) above that. The CPA prepares the statements. Also prepare a description of written material given to accredited investors, the resale limits and a way to ask questions. A short summary followed by the full document is allowed if all of it arrives in time.",
+      "mode": "agent",
+      "modeBasis": "Rule 502(b) lists the contents; an agent assembles them, and the CPA prepares any financial statements.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "draft-deal-disclosure"
+      ],
+      "rules": [
+        "us-fed.reg-d.information-requirements"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-502",
+        "sec-cdi-securities-act-rules"
+      ]
+    },
+    {
+      "id": "finalize-ppm",
+      "title": "Counsel finalizes the private placement memorandum",
+      "instruction": "Counsel turns the business draft into the private placement memorandum and adds the legal sections: the exemption relied on, the terms of the interests, risk factors, tax matters, and a statement that the interests are unregistered and cannot be resold without registration or an exemption. If a covered person had an event before September 23, 2013 that would otherwise disqualify, the issuer must describe it in writing to every buyer a reasonable time before sale. Counsel decides what else is material. The sponsor answers counsel's factual questions in writing.",
+      "mode": "human-online",
+      "modeBasis": "Legal drafting and materiality calls are counsel's licensed work.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "draft-deal-disclosure",
+        "prepare-nonaccredited-information"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "rules": [
+        "us-fed.reg-d.bad-actor",
+        "us-fed.exchange-act.rule-10b-5"
+      ],
+      "consumes": [
+        "private-placement-memorandum"
+      ],
+      "produces": [
+        "private-placement-memorandum"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-502",
+        "ecfr-230-506"
+      ]
+    },
+    {
+      "id": "draft-entity-agreement",
+      "title": "Counsel drafts the deal or fund entity agreement",
+      "instruction": "Counsel drafts the operating agreement or limited partnership agreement of the entity that raises the money and owns the property: contributions, the distribution waterfall and promote, sponsor fees, the manager's authority, the decisions investors vote on, reporting, transfers and removal of the manager. Transfer limits should match Regulation D's resale limits: the interests cannot be resold without registration or an exemption, and the issuer must use reasonable care that buyers are not underwriters, such as a restrictive legend on the document evidencing the interest. For a fund, counsel adds commitments, capital calls and remedies against an investor who fails to fund.",
+      "mode": "human-online",
+      "modeBasis": "Drafting the governing agreement is counsel's licensed work; an agent can supply the deal terms.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "draft-deal-disclosure"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "rules": [],
+      "consumes": [
+        "underwriting-model",
+        "sponsor-operating-agreement"
+      ],
+      "produces": [
+        "deal-entity-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-502"
+      ]
+    },
+    {
+      "id": "negotiate-jv-agreement",
+      "title": "Negotiate the joint venture agreement",
+      "instruction": "In a joint venture, the agreement with the capital partner sets the terms it is buying: contributions, the promote, fees, major decisions that need the partner's consent, removal rights, buy-sell and exit. Counsel negotiates it with the sponsor. Control matters twice: commercially, and because in the Fifth Circuit a partner holding real control ordinarily does not hold a security, while one left with limited-partner powers may. If the sale relies on Section 4(a)(2), keep a record that the partner can evaluate the risks and has access to prospectus-type information. Antifraud rules apply to everything the partner is told.",
+      "mode": "human-online",
+      "modeBasis": "Negotiating terms with the capital partner and drafting the agreement are the sponsor's and counsel's work.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "draft-deal-disclosure"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "rules": [
+        "us-fed.securities.jv-interests",
+        "us-fed.exchange-act.rule-10b-5"
+      ],
+      "produces": [
+        "jv-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "williamson",
+        "sec-506b-page",
+        "sec-exempt-faq"
+      ]
+    },
+    {
+      "id": "check-economics",
+      "title": "Check that the economics match across documents",
+      "instruction": "Run the distribution terms from the draft agreement through the waterfall calculator on the underwriting model's base case, and compare the results with the return and fee figures in the memorandum, any investor deck and the model. Check the preferred return, catch-up, promote tiers, fee bases and timing, and the order in which capital comes back. List each mismatch with its clause, page and cell. Wording is counsel's call; the numbers must agree before anything reaches an investor.",
+      "mode": "agent",
+      "modeBasis": "Recomputing the waterfall and comparing figures across documents is calculation and document work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "finalize-ppm",
+        "draft-entity-agreement",
+        "negotiate-jv-agreement"
+      ],
+      "rules": [],
+      "calculators": [
+        "waterfall-promote",
+        "returns-sensitivity"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "private-placement-memorandum",
+        "underwriting-model"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "build-investor-questionnaire",
+      "title": "Build the investor questionnaire",
+      "instruction": "Draft the questionnaire from the current text of Rule 501(a): net worth over $1,000,000, alone or with a spouse or spousal equivalent, not counting the primary residence; income over $200,000, or $300,000 jointly, in each of the two most recent years with the same reasonably expected this year; Series 7, 65 or 82 licenses in good standing; the issuer's directors, executive officers and general partners; and the entity categories, including entities whose equity owners are all accredited. Capture legal name, entity type, state of residence and how the investor heard of the offering. If non-accredited investors may buy, add questions on financial experience and any purchaser representative.",
+      "mode": "agent",
+      "modeBasis": "The categories and thresholds come straight from the rule text; drafting the form is document work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-fed.reg-d.accredited-investor",
+        "us-fed.reg-d.rule-506b"
+      ],
+      "produces": [
+        "investor-questionnaire"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-501",
+        "sec-exempt-faq",
+        "ecfr-230-506"
+      ]
+    },
+    {
+      "id": "add-fund-items",
+      "title": "Add the fund's investment company checks",
+      "instruction": "For a fund relying on Section 3(c)(1), add questions that let the sponsor count beneficial owners: an investing company counts as one owner unless it holds 10% or more of the fund's voting securities and is itself an investment company, or would be but for Section 3(c)(1) or 3(c)(7), in which case its own holders count. For Section 3(c)(7), add a qualified purchaser certification, such as an individual owning at least $5,000,000 in investments or an entity that owns and invests at least $25,000,000 on a discretionary basis. Set up a holder count to update at every closing.",
+      "mode": "agent",
+      "modeBasis": "The counting rule and the qualified purchaser categories are statutory text turned into questions.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-investor-questionnaire"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "rules": [
+        "us-fed.ica.fund-exclusions"
+      ],
+      "produces": [
+        "investor-questionnaire"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-15-80a-3",
+        "usc-15-80a-2"
+      ]
+    },
+    {
+      "id": "draft-subscription-agreement",
+      "title": "Counsel drafts the subscription agreement",
+      "instruction": "Counsel drafts the subscription agreement: the amount, when the issuer may accept or reject, and the investor representations the exemption relies on, such as accredited status, buying for its own account, and understanding that the interests are unregistered and restricted. For a Rule 506(c) offering using the SEC staff's minimum-investment position, it can carry the written representations of accredited status and of no third-party financing of the minimum. Add consent to sign and receive documents electronically, since neither federal nor Texas law makes anyone transact electronically without agreeing. The agreement's terms decide when an investor is irrevocably committed, which fixes the Form D first-sale date.",
+      "mode": "human-online",
+      "modeBasis": "Drafting the investor contract and its representations is counsel's licensed work.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-investor-questionnaire",
+        "add-fund-items"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "rules": [
+        "us-fed.reg-d.rule-506c",
+        "us-fed.esign",
+        "us-tx.ueta",
+        "us-fed.reg-d.form-d-filing"
+      ],
+      "produces": [
+        "subscription-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-502",
+        "sec-506c-incoming",
+        "sec-506c-no-action",
+        "usc-15-7001",
+        "tx-bus-com-code-322",
+        "sec-form-d"
+      ]
+    },
+    {
+      "id": "collect-bad-actor-questionnaires",
+      "title": "Collect signed bad-actor questionnaires from covered persons",
+      "instruction": "Send each covered person identified when the structure was chosen a questionnaire covering the Rule 506(d) events and their look-back periods: securities-related convictions and injunctions, final orders of securities, banking and insurance regulators, certain SEC orders, self-regulatory suspensions or bars, stop orders, and postal false-representation orders. Each person answers and signs for themselves. The issuer keeps the reasonable-care defense only if it made a factual inquiry, and the signed questionnaires are the record of that inquiry.",
+      "mode": "human-online",
+      "modeBasis": "Each covered person must answer and sign personally; an agent can send and track the forms.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-fed.reg-d.bad-actor"
+      ],
+      "produces": [
+        "bad-actor-questionnaire"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-506"
+      ]
+    },
+    {
+      "id": "review-bad-actor-answers",
+      "title": "Review the answers and schedule the bring-down",
+      "instruction": "Read every questionnaire against Rule 506(d)'s events and look-back periods, and send any yes or unclear answer to counsel before the offering opens. Draft the written disclosure Rule 506(e) requires for events before September 23, 2013 that would otherwise disqualify. If the offering stays open for months, or a fund holds several closings, SEC staff expects the inquiry to be updated periodically, for example through bring-down certifications; calendar them, and ask each covered person to agree to report new events.",
+      "mode": "agent",
+      "modeBasis": "Reading answers against the rule's list is document review; any yes goes to counsel.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "collect-bad-actor-questionnaires"
+      ],
+      "rules": [
+        "us-fed.reg-d.bad-actor"
+      ],
+      "consumes": [
+        "bad-actor-questionnaire"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-506",
+        "sec-cdi-securities-act-rules"
+      ]
+    },
+    {
+      "id": "run-antifraud-check",
+      "title": "Check every statement against its source before release",
+      "instruction": "Before anything reaches an investor, read the memorandum or partner package, the agreements, any deck, website text and email templates together. Every figure, projection and claim must trace to a dated source and match across documents, and nothing material may be missing. Rule 10b-5 reaches untrue statements and misleading omissions in any securities sale, exempt or not. Texas makes a seller liable to the buyer for them regardless of exemption, denies the issuer a reasonable-care defense for its own written materials, and makes those who control the issuer jointly liable unless they show they could not reasonably have known. Send the issue list to counsel.",
+      "mode": "agent",
+      "modeBasis": "Cross-checking documents against their sources is document review; counsel resolves the issues found.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-economics",
+        "draft-subscription-agreement",
+        "review-bad-actor-answers"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5"
+      ],
+      "consumes": [
+        "private-placement-memorandum",
+        "deal-entity-agreement",
+        "jv-agreement",
+        "subscription-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5",
+        "sec-exempt-faq",
+        "tx-gov-code-4008"
+      ]
+    },
+    {
+      "id": "approve-final-set",
+      "title": "Approve and lock the final offering set",
+      "instruction": "The sponsor reads the final set and confirms it is accurate; counsel then releases it. Give each document a version number and date, store the locked set where investors will receive it, and record which version each investor gets. If a material fact changes later, counsel decides whether the memorandum needs a supplement before more sales.",
+      "mode": "human-online",
+      "modeBasis": "The sponsor must personally stand behind the documents; an agent can version and file them afterwards.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "run-antifraud-check"
+      ],
+      "rules": [],
+      "market": "investor-portals-fund-admin",
+      "produces": [
+        "private-placement-memorandum",
+        "deal-entity-agreement",
+        "jv-agreement",
+        "subscription-agreement",
+        "investor-questionnaire"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    }
+  ],
+  "outlineSteps": []
+}

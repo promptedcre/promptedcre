@@ -1,0 +1,165 @@
+{
+  "id": "investor-register",
+  "name": "Investor register",
+  "what": "The running list of investors in an offering: who they are, where they live, what they committed and when, and whether they are accredited.",
+  "fields": [
+    {
+      "key": "issuerName",
+      "label": "Issuer",
+      "type": "string",
+      "definition": "The issuer's legal name exactly as written on the subscription agreement, including punctuation and the entity ending, such as LLC or Limited Liability Company."
+    },
+    {
+      "key": "investorName",
+      "label": "Investor",
+      "type": "string",
+      "definition": "The investor's full legal name as it will appear on the subscription agreement. For an entity or trust, also its type and the person who signs for it."
+    },
+    {
+      "key": "contactDetails",
+      "label": "Contact details",
+      "type": "text",
+      "definition": "The mailing address, email and phone number the investor gave for notices and documents."
+    },
+    {
+      "key": "stateOfResidence",
+      "label": "State of residence",
+      "type": "string",
+      "definition": "The state the investor lives in or, for an entity, the state its questionnaire names. The list of states needing a notice filing is built from this field."
+    },
+    {
+      "key": "registerStatus",
+      "label": "Status",
+      "type": "enum",
+      "definition": "Where the investor stands: prospect, documents sent, package received, accepted, funded, declined or withdrawn, with the date of the latest change."
+    },
+    {
+      "key": "howIntroduced",
+      "label": "How the investor came to the offering",
+      "type": "text",
+      "definition": "The introduction, referral or contact that brought the investor to this offering, and whether it came through any public marketing. A prospect from public marketing in a Rule 506(b) offering is flagged for counsel before anything is sent."
+    },
+    {
+      "key": "relationshipStart",
+      "label": "Relationship began",
+      "type": "date",
+      "definition": "For a Rule 506(b) offering, the date the sponsor's relationship with the investor began, with a short note of what the sponsor knew of the investor's finances and experience before the offering started; null in a Rule 506(c) offering."
+    },
+    {
+      "key": "documentsDelivered",
+      "label": "Documents delivered",
+      "type": "list",
+      "definition": "Each offering document sent to the investor, by version and date, with the date and channel of delivery, including any Rule 502(b) information and any written description of pre-2013 bad-actor events."
+    },
+    {
+      "key": "commitmentAmount",
+      "label": "Amount committed",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The amount the sponsor accepted on the subscription agreement, or for a fund the capital commitment accepted."
+    },
+    {
+      "key": "commitmentDate",
+      "label": "Date irrevocably committed",
+      "type": "date",
+      "definition": "The date the investor became irrevocably contractually committed, which depending on the subscription agreement can be the day the signed agreement or the check arrives; where subscriptions go into escrow, the day the subscription is received into escrow. Use the sponsor's acceptance only where counsel's form makes acceptance the point of commitment, and note that here. The earliest of these dates across the register is the offering's first-sale date."
+    },
+    {
+      "key": "fundedAmount",
+      "label": "Amount funded",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The money received from the investor and matched to the accepted subscription, to date. For a fund, the total paid against capital calls."
+    },
+    {
+      "key": "fundingDates",
+      "label": "Funding dates",
+      "type": "list",
+      "definition": "Each date money from the investor arrived, with the amount and the capital call it answered, if any. Record no bank account details."
+    },
+    {
+      "key": "unfundedCommitment",
+      "label": "Commitment left uncalled",
+      "type": "money",
+      "unit": "USD",
+      "definition": "For a fund or any offering with later calls, the part of the investor's commitment not yet called, updated after each call from the call notice and the receipts recorded; null where the full amount was due at subscription."
+    },
+    {
+      "key": "ownershipInterest",
+      "label": "Ownership interest",
+      "type": "string",
+      "definition": "The investor's percentage, units or other interest as the governing agreement measures it, with the date of the latest change. Capital call shares and distributions are split by this field, so the interests across the register must add up to the whole."
+    },
+    {
+      "key": "defaultRecord",
+      "label": "Defaults and remedies",
+      "type": "text",
+      "definition": "Any missed capital call: the call, the notice of default and its date, the remedy applied under the governing agreement and its date, and the change it made to this investor's interest and contributions; null if none."
+    },
+    {
+      "key": "accreditedCategory",
+      "label": "Accredited category",
+      "type": "enum",
+      "definition": "The paragraph of Rule 501(a) the investor's questionnaire claims, such as net worth, income, a professional credential, an insider of the issuer, an entity whose equity owners are all accredited, or an entity over the asset or investment test; or not accredited.",
+      "authority": "17 CFR 230.501(a)"
+    },
+    {
+      "key": "verificationMethod",
+      "label": "Verification method",
+      "type": "enum",
+      "definition": "In a Rule 506(c) offering, how the sponsor verified accredited status: income forms, asset statements and a credit report, a written confirmation from a professional, the existing-investor certification, a re-verification representation, or other reasonable steps described in the file; null in a Rule 506(b) offering. The listed methods (A) to (E) apply to a natural person; for an entity, record the other reasonable steps taken. Reliance on the SEC staff's minimum-investment position, a staff position and not rule text, is recorded as other reasonable steps, with the representations obtained.",
+      "authority": "17 CFR 230.506(c)(2)(ii)"
+    },
+    {
+      "key": "verificationDate",
+      "label": "Verification date",
+      "type": "date",
+      "definition": "The date the verification was completed, or for a professional's letter the date the letter says the professional made the determination. Under the re-verification method, a written representation can rest on this verification for five years from this date.",
+      "authority": "17 CFR 230.506(c)(2)(ii)(E)"
+    },
+    {
+      "key": "nonAccredited",
+      "label": "Not accredited",
+      "type": "boolean",
+      "definition": "Whether the investor bought as a non-accredited purchaser in a Rule 506(b) offering, with the name of any purchaser representative the investor acknowledged in writing.",
+      "authority": "17 CFR 230.506(b)(2)(ii)"
+    },
+    {
+      "key": "purchaserCount90Day",
+      "label": "Purchasers counted in the 90-day window",
+      "type": "integer",
+      "definition": "The running count of purchasers in the issuer's Rule 506(b) offerings in the 90 calendar days ending on this investor's sale date, counted under Rule 501(e), which leaves out accredited investors and certain relatives and related entities of a purchaser. An entity formed to buy these securities counts each of its beneficial owners unless it is accredited under Rule 501(a)(8).",
+      "authority": "17 CFR 230.506(b)(2)(i); 17 CFR 230.501(e)"
+    },
+    {
+      "key": "fundOwnerCount",
+      "label": "Beneficial-owner count",
+      "type": "integer",
+      "definition": "For a fund relying on the Investment Company Act's Section 3(c)(1) exclusion, the running count of beneficial owners after this investor, looking through an investing company where counsel says to. Under Section 3(c)(7), record the investor's qualified purchaser certification in the questionnaire instead. Null for a single-property offering."
+    },
+    {
+      "key": "sanctionsCheck",
+      "label": "Sanctions check",
+      "type": "string",
+      "definition": "The date of the OFAC Sanctions List Search, the names searched (for an entity, also its signers and principal owners) and the result. A possible match stops the subscription until counsel clears it."
+    },
+    {
+      "key": "taxFormOnFile",
+      "label": "Tax form on file",
+      "type": "boolean",
+      "definition": "Whether the investor's Form W-9, or Form W-8 for a foreign investor, has been received, and where it is kept. Never copy the taxpayer identification number into the register."
+    },
+    {
+      "key": "citizenshipOrDomicile",
+      "label": "Citizenship or domicile",
+      "type": "string",
+      "definition": "Copied from the investor questionnaire: for an individual, U.S. citizen, lawful permanent resident or neither, with the country; for an entity, its country of formation and headquarters and who controls it. Flag any foreign answer for counsel and the CPA. Record no identification numbers."
+    },
+    {
+      "key": "signedDocumentsLocation",
+      "label": "Signed documents",
+      "type": "string",
+      "definition": "Where the signed subscription agreement, questionnaire and any verification letter are stored, with the e-signature audit trail if one exists."
+    }
+  ]
+}

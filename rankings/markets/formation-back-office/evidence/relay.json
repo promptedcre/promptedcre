@@ -1,0 +1,132 @@
+{
+  "vendor": "relay",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://relayfi.com/hc/en-us/",
+      "found": true,
+      "note": "End-user help center; no developer docs."
+    },
+    "api": {
+      "url": "https://relayfi.com/hc/en-us/articles/48653415496468-Does-Relay-have-public-APIs/",
+      "found": false,
+      "note": "Help article states Relay has no public API."
+    },
+    "pricing": {
+      "url": "https://relayfi.com/pricing/",
+      "found": true
+    },
+    "changelog": {
+      "url": "https://relayfi.com/blog/",
+      "found": false,
+      "note": "No public changelog or release notes page found; /whats-new/, /product-updates/ and /releases/ return 404."
+    }
+  },
+  "links": {
+    "docs": "https://relayfi.com/hc/en-us/",
+    "mcp": "https://relayfi.com/hc/en-us/articles/28653364752468-connect-relay-to-claude-or-chatgpt/"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://relayfi.com/hc/en-us/articles/48653415496468-Does-Relay-have-public-APIs/",
+      "excerpt": "Relay does not currently offer a public API.",
+      "fetched": "2026-11-12",
+      "hash": "9d0bb68323ca5a4705389d3da14224ac6b931b15d04cf6c8d62108a9f4ad8f61"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://relayfi.com/hc/en-us/articles/48653415496468-Does-Relay-have-public-APIs/",
+      "excerpt": "Public API access is not currently available.",
+      "fetched": "2026-11-12",
+      "hash": "9da6f6ddf1df45268024876a18890bda7612761ccd06285da27be17685643141"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://relayfi.com/hc/en-us/articles/28653364752468-connect-relay-to-claude-or-chatgpt/",
+      "excerpt": "The Relay Financial connector is currently read-only, so it answers questions about your account and transactions, without moving any money",
+      "fetched": "2026-11-12",
+      "hash": "8f2adb218103f1dabcb95a77cdd027f6ed65f8bce3ce9ab4b6897094f75822f1"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://relayfi.com/hc/en-us/articles/28653364752468-connect-relay-to-claude-or-chatgpt/",
+      "excerpt": "The Relay Financial connector is currently in beta and available to only a small group of customers.",
+      "fetched": "2026-11-12",
+      "hash": "04c172a5e464368bdeefa1f49d7ddfb8056fa8b7d02a8be858f44d5d26cfe75e"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://relayfi.com/hc/en-us/articles/28653364752468-connect-relay-to-claude-or-chatgpt/",
+      "excerpt": "you sign in to Relay, choose which of your businesses to share, and choose exactly what the assistant is allowed to access.",
+      "fetched": "2026-11-12",
+      "hash": "7719943ef1d6326ecf38e0fe827d38c57325fc993f7dafe962ae2219e61e1236"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://relayfi.com/hc/en-us/articles/28653364752468-connect-relay-to-claude-or-chatgpt/",
+      "excerpt": "Look up a statement and give you a secure PDF link",
+      "fetched": "2026-11-12",
+      "hash": "4ec843449cf06826d62a35c5b9a6dbf8e6722ec4f5322a4e7f5d92dca291126c"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://relayfi.com/hc/en-us/articles/360060916631-What-platforms-does-Relay-work-with/",
+      "excerpt": "Statements from Relay can also be exported to any accounting tool that accepts CSV or OFX files.",
+      "fetched": "2026-11-12",
+      "hash": "86db264f14f9cd543e27298107e005d50451f1094aec8df59ab742e39735f2a7"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://relayfi.com/integrations/",
+      "excerpt": "Relay syncs ultra-detailed, easy-to-understand transaction data directly into QuickBooks Online and Xero.",
+      "fetched": "2026-11-12",
+      "hash": "aa97d491c6c903c522b769a2204dfdf5fac2ff0e1a5ceefa0f3aa6f0185265ef"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://relayfi.com/pricing/",
+      "excerpt": "No minimum balance. No hidden or overdraft fees. Save up to 50% over competitors on wire & same-day ACH.",
+      "fetched": "2026-11-12",
+      "hash": "4db34b920ea425e12e59417c3baa7bca85a68278f9a372ef7a1447f85f0b4060"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://relayfi.com/pricing/",
+      "excerpt": "Unlimited users",
+      "fetched": "2026-11-12",
+      "note": "Listed under 'All plans include'; plans shown $0, $30 and $90-120 per month",
+      "hash": "3f268085dc593c42473a60facc05250a7df3f1ce2571c63de1349364ae558c64"
+    },
+    {
+      "id": "p1",
+      "tier": "probe",
+      "url": "https://relayfi.com/llms.txt",
+      "excerpt": "# Relay",
+      "note": "llms.txt: GET 200, 2083 bytes",
+      "fetched": "2026-11-12",
+      "hash": "96769eb5b2feb278968d65563ddcc9bb2f2b97ef005fa38b69aa085dccc06e51"
+    },
+    {
+      "id": "p2",
+      "tier": "probe",
+      "url": "https://relayfi.com/hc/en-us/articles/28653364752468-connect-relay-to-claude-or-chatgpt/",
+      "excerpt": "How to Connect Relay to Claude or ChatGPT | Relay Help Center",
+      "note": "MCP page resolves: GET 200 (page title)",
+      "fetched": "2026-11-12",
+      "hash": "38f359eebd59247fb66dd70f96f0dcf368d5c747bf3b713afdef5aeffd689dc2"
+    }
+  ]
+}

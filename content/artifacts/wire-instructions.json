@@ -1,0 +1,97 @@
+{
+  "id": "wire-instructions",
+  "name": "Wire instructions",
+  "what": "The bank details for sending money: bank, routing number, account name and number. Agents record where they are stored and how they were verified, never the numbers.",
+  "fields": [
+    {
+      "key": "recipient",
+      "label": "Recipient",
+      "type": "string",
+      "definition": "Who the money goes to: the deal entity, the title company's escrow account, a lender or another payee, by legal name."
+    },
+    {
+      "key": "purpose",
+      "label": "What the wire is for",
+      "type": "string",
+      "definition": "The payment these instructions are for, such as investor funding, earnest money, closing funds or a loan payment, with the deal or file it belongs to."
+    },
+    {
+      "key": "beneficiaryName",
+      "label": "Account name",
+      "type": "string",
+      "definition": "The name on the receiving account as the instructions state it. It should match the recipient; a different name is a warning sign to resolve before any wire."
+    },
+    {
+      "key": "bankName",
+      "label": "Receiving bank",
+      "type": "string",
+      "definition": "The receiving bank's name and country as the instructions state them, kept so a later change of bank or country stands out. No routing or account number goes here."
+    },
+    {
+      "key": "storageLocation",
+      "label": "Where the instructions are kept",
+      "type": "string",
+      "definition": "The one document or secure location that holds the account and routing numbers, such as the signed instructions on title company letterhead or the investor portal. Other records point here and never copy the numbers into the firm file, chat or task notes."
+    },
+    {
+      "key": "receivedFrom",
+      "label": "Received from and how",
+      "type": "string",
+      "definition": "Who delivered the instructions, the channel, such as a portal, a secure email service or in person, and the date received. Ordinary email delivery is recorded as such."
+    },
+    {
+      "key": "callbackNumberSource",
+      "label": "Where the call-back number came from",
+      "type": "string",
+      "definition": "The source of the phone number used to confirm the instructions, such as the recipient's own published number or a number the firm had on file from before this transaction, and never a number taken from the message that carried the instructions. A document that arrived through the same channel as the instructions, such as an emailed letter or title commitment, is not an independent source. Record the source, not the call alone."
+    },
+    {
+      "key": "verifiedBy",
+      "label": "Verified by",
+      "type": "string",
+      "definition": "The person at the firm who made the call-back."
+    },
+    {
+      "key": "verifiedWith",
+      "label": "Confirmed with",
+      "type": "string",
+      "definition": "The person at the recipient who confirmed the details on the call, by name and role, such as the escrow officer."
+    },
+    {
+      "key": "verifiedAt",
+      "label": "When verified",
+      "type": "date",
+      "definition": "The date of the call-back. Instructions verified for one payment are verified again if they arrive again or change before a later one."
+    },
+    {
+      "key": "verificationResult",
+      "label": "Result",
+      "type": "enum",
+      "definition": "Confirmed, not confirmed, or changed and confirmed. Only confirmed, or changed and confirmed by a call-back to an independently sourced number, lets a person release the wire; not confirmed means no money moves on these instructions."
+    },
+    {
+      "key": "releasedBy",
+      "label": "Wire released by",
+      "type": "string",
+      "definition": "The person who released the wire under the bank's approval controls, with any second approver. An agent never releases a wire."
+    },
+    {
+      "key": "receiptConfirmed",
+      "label": "Receipt confirmed",
+      "type": "text",
+      "definition": "How and when the recipient confirmed the money arrived, such as a call to the escrow officer at the known number, and where the bank's confirmation is kept."
+    },
+    {
+      "key": "investorNotice",
+      "label": "Investors told instructions never change by email",
+      "type": "boolean",
+      "definition": "For instructions given to investors, whether they were told in writing that the instructions will never change by email and how to confirm them by phone."
+    },
+    {
+      "key": "changeHistory",
+      "label": "Change requests",
+      "type": "list",
+      "definition": "Each request to change these instructions: when it came, from whom and through what channel, how it was checked, who decided and the outcome. A change is treated as fraud until confirmed by call-back."
+    }
+  ]
+}

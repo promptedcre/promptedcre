@@ -1,0 +1,100 @@
+{
+  "id": "forbearance-agreement",
+  "name": "Forbearance or loan modification agreement",
+  "what": "A lender's written agreement to hold off on its remedies or change the loan's terms, and what the borrower gives for it.",
+  "fields": [
+    {
+      "key": "parties",
+      "label": "Parties",
+      "type": "list",
+      "definition": "The lender, the borrower, each guarantor and any other signer, with whether each has signed."
+    },
+    {
+      "key": "loanDescription",
+      "label": "Loan affected",
+      "type": "string",
+      "definition": "The loan the agreement covers, by note amount, date and loan agreement."
+    },
+    {
+      "key": "agreementKind",
+      "label": "Kind of agreement",
+      "type": "enum",
+      "definition": "Forbearance, where the lender holds off on remedies for a period; modification, where loan terms change; or both."
+    },
+    {
+      "key": "statedBalance",
+      "label": "Balance stated",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The principal, interest and other amounts the agreement says are owed as of its date; compare them with the servicer's records."
+    },
+    {
+      "key": "acknowledgedDefaults",
+      "label": "Defaults acknowledged",
+      "type": "list",
+      "definition": "Each default the borrower admits, such as a missed payment, a covenant breach or maturity passing unpaid."
+    },
+    {
+      "key": "borrowerAcknowledgments",
+      "label": "Borrower statements",
+      "type": "list",
+      "definition": "What the borrower and guarantors confirm, such as the balance owed, that the loan documents are enforceable, and that they have no defenses or claims against the lender."
+    },
+    {
+      "key": "forbearancePeriod",
+      "label": "Forbearance period",
+      "type": "string",
+      "definition": "The first and last day the lender agrees to hold off on its remedies."
+    },
+    {
+      "key": "terminationEvents",
+      "label": "Early termination events",
+      "type": "list",
+      "definition": "Events that end the forbearance early, such as a missed payment, a new default, a bankruptcy filing or a missed milestone, and whether notice or a cure period applies."
+    },
+    {
+      "key": "modifiedTerms",
+      "label": "Terms changed",
+      "type": "text",
+      "definition": "Each loan term the agreement changes, with its old and new value, such as the rate, payment, amortization, interest-only months, maturity or covenant levels."
+    },
+    {
+      "key": "principalPaydown",
+      "label": "Principal paydown",
+      "type": "money",
+      "unit": "USD",
+      "definition": "Principal the borrower pays at signing or on stated dates, with each date listed."
+    },
+    {
+      "key": "borrowerConcessions",
+      "label": "What the borrower gives",
+      "type": "list",
+      "definition": "What the borrower and guarantors give for the relief, such as fees, added collateral, new or larger guaranties, cash management, new reserves, or a deed in lieu held in escrow."
+    },
+    {
+      "key": "milestones",
+      "label": "Milestones",
+      "type": "list",
+      "definition": "Dates by which the borrower must reach stated steps, such as listing the property, signing a sale contract, getting a refinance commitment or closing."
+    },
+    {
+      "key": "releaseOfClaims",
+      "label": "Release of claims",
+      "type": "text",
+      "definition": "Any release of claims against the lender that the borrower and guarantors give, and its scope."
+    },
+    {
+      "key": "reservationOfRights",
+      "label": "Lender's reservation of rights",
+      "type": "text",
+      "definition": "The lender's statements that it keeps its rights and remedies and that accepting payments waives nothing."
+    },
+    {
+      "key": "feesAndCosts",
+      "label": "Fees and costs",
+      "type": "money",
+      "unit": "USD",
+      "definition": "The forbearance or modification fee and the lender's legal costs the borrower pays."
+    }
+  ]
+}

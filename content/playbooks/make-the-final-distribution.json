@@ -1,0 +1,35 @@
+{
+  "id": "make-the-final-distribution",
+  "slug": "make-the-final-distribution",
+  "kind": "process",
+  "title": "Make the final distribution",
+  "summary": "Run the waterfall on the sale proceeds and pay investors and the sponsor.",
+  "phase": "exit",
+  "order": 530,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": [
+    "Reconcile net sale proceeds to the settlement statement",
+    "Settle remaining payables, reserves and loan items",
+    "Decide the holdback for wind-down costs and claims",
+    "Read the governing agreement's distribution terms",
+    "Run the waterfall on the proceeds",
+    "Have a second person check the waterfall",
+    "Get the approvals the governing agreement requires",
+    "Confirm each investor's payment instructions",
+    "Send the payments",
+    "Send each investor a statement of the distribution",
+    "Give the tax preparer the gain split for investors' reporting"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "us-fed.ica.fund-exclusions",
+  "jurisdiction": "us-federal",
+  "title": "Fund exclusions from the Investment Company Act: Sections 3(c)(1), 3(c)(5)(C) and 3(c)(7)",
+  "rule": "An issuer is an investment company if it is primarily in the business of investing in securities, or invests in securities and holds investment securities worth over 40% of its non-cash, non-government assets, unless excluded: 3(c)(1), at most 100 beneficial owners; 3(c)(7), only qualified purchasers, such as individuals with $5,000,000 in investments; 3(c)(5)(C), issuers of no redeemable securities primarily acquiring mortgages, other liens on and interests in real estate. The first two bar public offerings; a Rule 506 offering is not public merely through general solicitation.",
+  "citation": {
+    "authority": "15 U.S.C. 80a-3(a)(1), (c)(1), (c)(5)(C) and (c)(7); 15 U.S.C. 80a-2(a)(51); 15 U.S.C. 77d(b)",
+    "url": "https://www.law.cornell.edu/uscode/text/15/80a-3"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-12",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Section 3(a) or 3(c) of the Investment Company Act or to the qualified purchaser definition.",
+  "sources": [
+    {
+      "id": "usc-15-80a-3",
+      "url": "https://www.law.cornell.edu/uscode/text/15/80a-3",
+      "title": "15 U.S.C. 80a-3, Definition of investment company",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "quote": "beneficially owned by not more than one hundred persons",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-80a-2",
+      "url": "https://www.law.cornell.edu/uscode/text/15/80a-2",
+      "title": "15 U.S.C. 80a-2, Definitions; applicability; rulemaking considerations",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "quote": "who owns not less than $5,000,000 in investments",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-77d",
+      "url": "https://www.law.cornell.edu/uscode/text/15/77d",
+      "title": "15 U.S.C. 77d, Exempted transactions",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-12",
+      "quote": "shall not be deemed public offerings under the Federal securities laws as a result of general advertising or general solicitation",
+      "tier": "primary"
+    },
+    {
+      "id": "sec-form-d",
+      "url": "https://www.sec.gov/files/formd.pdf",
+      "title": "Form D, Notice of Exempt Offering of Securities, with instructions (OMB 3235-0076)",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "accessed": "2026-11-12",
+      "tier": "primary"
+    }
+  ]
+}

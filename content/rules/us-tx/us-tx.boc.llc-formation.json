@@ -1,0 +1,57 @@
+{
+  "id": "us-tx.boc.llc-formation",
+  "jurisdiction": "us-tx",
+  "title": "Forming a Texas LLC: the certificate of formation, the name and the fee",
+  "rule": "A Texas LLC comes into existence when its certificate of formation, signed by an organizer and filed with the Secretary of State, takes effect. The certificate gives the name, the registered agent and office, the initial mailing address, the purpose, the organizer, and whether the LLC has managers, naming them or else the initial members. The name must contain \"limited liability company,\" \"limited company\" or an abbreviation and be distinguishable from names on file. The filing fee is $300.",
+  "citation": {
+    "authority": "Tex. Bus. Orgs. Code 3.001, 3.005, 3.010, 4.152, 4.154, 5.053 and 5.056",
+    "url": "https://statutes.capitol.texas.gov/Docs/BO/htm/BO.3.htm"
+  },
+  "asOf": "2026-11-12",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Business Organizations Code chapters 3 to 5, or a new Secretary of State fee schedule (Form 806, last revised 09/26).",
+  "sources": [
+    {
+      "id": "tx-boc-3",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.3.htm",
+      "title": "Texas Business Organizations Code, Chapter 3 (Sections 3.001, 3.005 and 3.010)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-4",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.4.htm",
+      "title": "Texas Business Organizations Code, Chapter 4 (Sections 4.151, 4.152 and 4.154, filing fees)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-5",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.5.htm",
+      "title": "Texas Business Organizations Code, Chapter 5 (Sections 5.053 and 5.056, entity names)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-14",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-205",
+      "url": "https://www.sos.state.tx.us/corp/instructions/205.shtml",
+      "title": "Form 205, Instructions for Certificate of Formation (Limited Liability Company), revised 09/26",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-14",
+      "quote": "The filing fee for a certificate of formation for an LLC is $300.",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-806",
+      "url": "https://www.sos.texas.gov/corp/forms/806_boc.pdf",
+      "title": "Form 806, Business Filings and Trademarks Fee Schedule, revised 09/26",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-14",
+      "tier": "primary"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "us-fed.reg-d.resale-limits",
+  "jurisdiction": "us-federal",
+  "title": "Resale of Regulation D securities (Rule 502(d)) and the Rule 144 safe harbor",
+  "rule": "Securities bought under Regulation D, except certain Rule 504 sales, have Section 4(a)(2) status and cannot be resold without registration or an exemption. The issuer must take reasonable care that buyers are not underwriters; asking whether each buyer buys for itself, disclosing the resale limits in writing before sale, and legending the document evidencing the securities establish it, not exclusively. Rule 144, a non-exclusive safe harbor, deems a seller who is not, and for three months has not been, an affiliate of a non-reporting issuer not an underwriter once one year has passed since the later of acquisition from the issuer or an affiliate and full payment of the price.",
+  "citation": {
+    "authority": "17 CFR 230.502(d); 17 CFR 230.144(a)(3), (b)(1)(ii) and (d)(1)-(2)",
+    "url": "https://www.ecfr.gov/current/title-17/section-230.502"
+  },
+  "asOf": "2026-11-14",
+  "lastVerified": "2026-11-14",
+  "review": "ai-drafted",
+  "changeWatch": "Amendments to Rule 502(d) or Rule 144, including the holding periods, the affiliate conditions or the definition of restricted securities.",
+  "sources": [
+    {
+      "id": "ecfr-230-502",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.502",
+      "title": "17 CFR 230.502, General conditions to be met",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-14",
+      "quote": "cannot be resold without registration under the Act or an exemption therefrom",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-144",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.144",
+      "title": "17 CFR 230.144, Persons deemed not to be engaged in a distribution and therefore not underwriters",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-14",
+      "quote": "Rule 144 is not an exclusive safe harbor.",
+      "tier": "primary"
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "vendor": "sec-edgar",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://www.sec.gov/submit-filings/filer-support-resources/how-do-i-guides",
+      "found": true
+    },
+    "api": {
+      "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "found": true
+    },
+    "pricing": {
+      "url": "https://www.sec.gov/submit-filings/edgar-filing-fees",
+      "found": true,
+      "note": "Fee page covers securities-registration filing fees paid through EDGAR; free access to public filings is stated on the Accessing EDGAR Data page"
+    },
+    "changelog": {
+      "url": "https://www.sec.gov/submit-filings/edgar-news-announcements",
+      "found": true
+    }
+  },
+  "links": {
+    "docs": "https://www.sec.gov/submit-filings/filer-support-resources/how-do-i-guides",
+    "api": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "excerpt": "\"data.sec.gov\" was created to host RESTful data APIs delivering JSON-formatted data to external customers and to web pages on SEC.gov.",
+      "fetched": "2026-11-12",
+      "hash": "9627b5462e1644fbf8222eb1f349d95910d6e0c50d3e702990ca280810072005"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "excerpt": "These APIs do not require any authentication or API keys to access.",
+      "fetched": "2026-11-12",
+      "hash": "864a47004d05b6715b6a0be98a7651890d38d1e538fea246e08214e29cba7ea6"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "excerpt": "Currently included in the APIs are the submissions history by filer and the XBRL data from financial statements",
+      "fetched": "2026-11-12",
+      "note": "Public read-only data APIs; no filing submission here",
+      "hash": "5d703b02ede551f743e10e79287605baef1d4123e5073c0c172ac74f3733587a"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "excerpt": "a bulk ZIP file is available to download all the JSON structures for an API. This ZIP file is updated and republished nightly",
+      "fetched": "2026-11-12",
+      "hash": "c47c8559ec1cea4f2959150898072a3b8840d8588e68a33e1356638355ba88ba"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://www.sec.gov/submit-filings/filer-support-resources/how-do-i-guides/understand-edgar-application-programming-interfaces-apis",
+      "excerpt": "APIs are optional, and available to filers enrolled in EDGAR Next (or whose Form ID is granted on or after March 24, 2025).",
+      "fetched": "2026-11-12",
+      "hash": "ab38091e23d655dce975deba8ca4672298448be28b579e48a3ce516dc82a1070"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://www.sec.gov/submit-filings/filer-support-resources/how-do-i-guides/understand-edgar-application-programming-interfaces-apis",
+      "excerpt": "A submission API to allow filers to make both live and test submissions on EDGAR (submission API).",
+      "fetched": "2026-11-12",
+      "hash": "f810b45549a02e50f052c03848537bcc425ee11c3ca31e02cb83bc9d5a8242a9"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://www.sec.gov/submit-filings/filer-support-resources/how-do-i-guides/understand-edgar-application-programming-interfaces-apis",
+      "excerpt": "A submission status API to allow filers to check the status of an EDGAR submission (submission status API).",
+      "fetched": "2026-11-12",
+      "hash": "d2c8968a0538978dc7bfe21aa5cefc1e4fda3595b787fdbc818a71c1ad622062"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://www.sec.gov/submit-filings/filer-support-resources/how-do-i-guides/create-manage-filer-user-api-tokens",
+      "excerpt": "A filer must present a filer API token to connect to APIs.",
+      "fetched": "2026-11-12",
+      "hash": "6748b54910b4c4164e1d73112b3790681ff1468d10a117088781e6381ddfeff2"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://www.sec.gov/submit-filings/filer-support-resources/how-do-i-guides/create-manage-filer-user-api-tokens",
+      "excerpt": "Each filer must have at least two technical administrators to connect to APIs.",
+      "fetched": "2026-11-12",
+      "hash": "c680a461b7ddbf616b4cae82f5a0d70e66e0602f70ce649bda0f3a7f97d9da1c"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://www.sec.gov/submit-filings/improving-edgar/edgar-next-improving-filer-access-account-management",
+      "excerpt": "Beta versions of all optional application programming interfaces (APIs) are available for testing and connection in the Beta.",
+      "fetched": "2026-11-12",
+      "hash": "e850a6b61abc4181c174c8736432bcd23b8f3fce0339b2b2a38690325916d6b7"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://www.sec.gov/submit-filings/improving-edgar/edgar-next-improving-filer-access-account-management",
+      "excerpt": "Individuals must possess individual account credentials from Login.gov to log into the Beta.",
+      "fetched": "2026-11-12",
+      "note": "Beta and dashboard sign-in need a Login.gov account",
+      "hash": "3bf7ff8556230f9b5c6362501f806ff868769a6ea769418006da44388c80d677"
+    },
+    {
+      "id": "c12",
+      "tier": "vendor-claim",
+      "url": "https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data",
+      "excerpt": "Anyone can access and download this information for free or query it through a variety of EDGAR public searches.",
+      "fetched": "2026-11-12",
+      "hash": "004bb50b41c26959f3a553ddb2eee310c4cf6e88f15ea719aa3235a891405b54"
+    },
+    {
+      "id": "c13",
+      "tier": "vendor-claim",
+      "url": "https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data",
+      "excerpt": "Current max request rate: 10 requests/second.",
+      "fetched": "2026-11-12",
+      "hash": "139df9b270967236847ed248f2fff23337dcdf5c9ff25f2a187148e7ad2d11f6"
+    },
+    {
+      "id": "c14",
+      "tier": "vendor-claim",
+      "url": "https://www.sec.gov/submit-filings/edgar-filing-fees",
+      "excerpt": "You pay filing fees through EDGAR. Each filer who must pay filing fees has a filing fee account in EDGAR",
+      "fetched": "2026-11-12",
+      "hash": "a20e3a349e5c06421001f4d95f81b92603cb3840cf6c1ddc6f232b972e34696e"
+    },
+    {
+      "id": "c15",
+      "tier": "vendor-claim",
+      "url": "https://www.sec.gov/submit-filings/edgar-news-announcements",
+      "excerpt": "Preview of Planned December 2026 EDGAR Release 26.4",
+      "fetched": "2026-11-12",
+      "note": "Dated Nov. 6, 2026 on the news page",
+      "hash": "46e4fe24bad5e3320a43e2537a931f3f5b5fdc0b3e29b10141ece1492671b9bb"
+    }
+  ]
+}

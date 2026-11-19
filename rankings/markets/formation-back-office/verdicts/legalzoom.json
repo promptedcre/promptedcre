@@ -1,0 +1,146 @@
+{
+  "vendor": "legalzoom",
+  "judged": "2026-11-12",
+  "judgeModel": "claude-opus-5-5",
+  "promptVersion": "judge-v1",
+  "evidenceHash": "5e49a70a75aa5aba00693bd6e54825c8b52ccf063ed1ee80e57406a9485ff9d6",
+  "verdicts": [
+    {
+      "story": "public-api",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack's only programmatic surface is the MCP tool directory, which belongs to the mcp-server story, and the coverage check found no public REST API or developer portal documenting reads or changes to core records.",
+      "missing": "Public API documentation for reading and changing core records such as orders, filings and documents."
+    },
+    {
+      "story": "mcp-server",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "p3",
+        "c3",
+        "c1",
+        "c5"
+      ],
+      "rationale": "LegalZoom's own MCP setup page resolves (p3) and gives a sign-in and access-review setup step (c3) for a published, versioned set of 24 tools (c1, c5).",
+      "missing": "Only one setup step is quoted; supported AI clients and what the other 18 tools cover are not shown, and the formation tools stop short of filing (c4)."
+    },
+    {
+      "story": "cli-sdk",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no SDK, CLI, package-registry listing or public code repository.",
+      "missing": "Any vendor-maintained SDK or CLI on a public package registry or repository, or even code samples."
+    },
+    {
+      "story": "webhooks",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no webhooks or event subscriptions for orders, filings or documents.",
+      "missing": "Documented webhooks or event subscriptions for core records, or events through an automation platform."
+    },
+    {
+      "story": "scoped-credentials",
+      "verdict": "partial",
+      "quality": 3,
+      "evidence": [
+        "c3",
+        "c2"
+      ],
+      "rationale": "The MCP setup has the user sign in and review an access request (c3), and the tool catalog is said to list auth (c2), implying delegated tokens for the assistant, but no scopes, roles or permission limits are shown.",
+      "missing": "Documented scopes, roles or permission limits; API keys or OAuth client registration; the contents of the access request and of the catalog's auth entries."
+    },
+    {
+      "story": "api-spec",
+      "verdict": "partial",
+      "quality": 3,
+      "evidence": [
+        "c2"
+      ],
+      "rationale": "The MCP directory links a catalog.json described as holding tool schemas, annotations, versions and auth (c2), but the pack never shows its contents and it describes the MCP tool set rather than an OpenAPI or GraphQL API.",
+      "missing": "The catalog.json contents, and any public OpenAPI, Swagger or GraphQL specification."
+    },
+    {
+      "story": "agent-docs",
+      "verdict": "full",
+      "quality": 7,
+      "evidence": [
+        "p2",
+        "c9",
+        "p1",
+        "c2"
+      ],
+      "rationale": "A probe confirms an llms.txt for the LegalZoom Knowledge Base documentation (p2, c9), alongside a site-wide llms.txt (p1) and a catalog.txt of MCP tool context for agents (c2).",
+      "missing": "The documentation llms.txt covers end-user Forms & eSign help, not developer or formation docs; no Markdown page versions are shown, and the catalog.txt contents are not shown."
+    },
+    {
+      "story": "sandbox",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The pack shows no sandbox, test mode or developer environment.",
+      "missing": "A self-serve or on-request sandbox, test mode or developer environment."
+    },
+    {
+      "story": "bulk-export",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "No bulk export is shown; the help center only points to ways to save and access signed documents (c11), with no bulk or file-format detail.",
+      "missing": "Documented self-serve bulk export or download of records in CSV, JSON, Excel or another open format."
+    },
+    {
+      "story": "self-serve",
+      "verdict": "full",
+      "quality": 4,
+      "evidence": [
+        "c8",
+        "c6",
+        "c7"
+      ],
+      "rationale": "The public LLC page lists fixed plan prices from $0 to $299 plus state filing fees and lets customers add services as their business needs them (c6, c7, c8), which points to direct purchase without a sales call.",
+      "missing": "No sign-up or checkout flow is quoted, and the pack does not state that buying a plan needs no call."
+    },
+    {
+      "story": "public-pricing",
+      "verdict": "full",
+      "quality": 8,
+      "evidence": [
+        "c8",
+        "c6",
+        "c7"
+      ],
+      "rationale": "The public LLC overview page lists the LLC plans at $0, $249 and $299 plus state filing fees (c8, c6, c7).",
+      "missing": "State filing fees and add-on service prices are not shown, and the $0 tier appears only as a 'start at' line."
+    },
+    {
+      "story": "fb-start",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [
+        "c4"
+      ],
+      "rationale": "The MCP formation tools only compare entity types, collect LLC details and present package options (c4), and no API is shown creating a filing, order or draft.",
+      "missing": "API or tool documentation showing a formation filing, order, draft or prefilled form being created programmatically."
+    },
+    {
+      "story": "fb-status",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The help center only points to monitoring the status of sent documents (c10), with no API, structured feed or email notice for status shown.",
+      "missing": "A documented API or structured feed returning the status of orders, filings or documents."
+    },
+    {
+      "story": "fb-records",
+      "verdict": "none",
+      "quality": 0,
+      "evidence": [],
+      "rationale": "The help center only points to ways to save and access signed documents (c11), with no API or emailed download link for finished records shown.",
+      "missing": "A documented API returning filed formation documents, signed documents or other finished records."
+    }
+  ]
+}

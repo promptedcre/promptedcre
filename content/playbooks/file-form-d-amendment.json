@@ -1,0 +1,23 @@
+{
+  "id": "file-form-d-amendment",
+  "slug": "file-form-d-amendment",
+  "kind": "process",
+  "title": "File a Form D amendment",
+  "summary": "Amend a filed Form D when the rules require it, including the annual amendment for a continuing offering.",
+  "phase": "raise",
+  "order": 165,
+  "featured": false,
+  "depth": "outline",
+  "review": "ai-drafted",
+  "lastVerified": null,
+  "requires": [],
+  "consumes": [],
+  "produces": [],
+  "written": {
+    "structure": [],
+    "jurisdiction": []
+  },
+  "sources": [],
+  "steps": [],
+  "outlineSteps": []
+}

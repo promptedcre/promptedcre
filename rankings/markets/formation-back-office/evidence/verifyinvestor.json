@@ -1,0 +1,149 @@
+{
+  "vendor": "verifyinvestor",
+  "collected": "2026-11-12",
+  "coverage": {
+    "docs": {
+      "url": "https://www.verifyinvestor.com/api",
+      "found": true,
+      "note": "API reference is the only developer documentation; no separate docs home found"
+    },
+    "api": {
+      "url": "https://www.verifyinvestor.com/api",
+      "found": true
+    },
+    "pricing": {
+      "url": "https://www.verifyinvestor.com/accredited-investor-verification",
+      "found": true,
+      "note": "Prices appear as bare figures in a table on the service page; /pricing returns 404"
+    },
+    "changelog": {
+      "url": "https://blog.verifyinvestor.com/",
+      "found": false,
+      "note": "No changelog or release-notes page; the blog covers JOBS Act and securities-law topics, not product updates"
+    }
+  },
+  "links": {
+    "docs": "https://www.verifyinvestor.com/api",
+    "api": "https://www.verifyinvestor.com/api"
+  },
+  "packages": [],
+  "repos": [],
+  "items": [
+    {
+      "id": "c1",
+      "tier": "vendor-claim",
+      "url": "https://www.verifyinvestor.com/api",
+      "excerpt": "In order to begin using the API, please contact us",
+      "fetched": "2026-11-12",
+      "note": "API access is granted on request; the sentence continues with a support email address",
+      "hash": "1ed974e8b7709d7234a21b1349865e277ac04b27751605b4ff0fe80a3cb8b83a"
+    },
+    {
+      "id": "c2",
+      "tier": "vendor-claim",
+      "url": "https://www.verifyinvestor.com/api",
+      "excerpt": "We maintain a separate API and documentation for the LITE API.",
+      "fetched": "2026-11-12",
+      "hash": "956b0bc7d34e9fd5960c587b2e63a5a7cf3b2eacac7b2b2edc35b181787daef9"
+    },
+    {
+      "id": "c3",
+      "tier": "vendor-claim",
+      "url": "https://www.verifyinvestor.com/api",
+      "excerpt": "API accounts have two tokens, an \"API Token\" and a \"User Authorization Token\". The API token is private",
+      "fetched": "2026-11-12",
+      "hash": "0a5af8b3bf63f6dbceae18fce8381a04b8ac965c6689a5f8f2b6a853ae53e53f"
+    },
+    {
+      "id": "c4",
+      "tier": "vendor-claim",
+      "url": "https://www.verifyinvestor.com/api",
+      "excerpt": "Unless otherwise specified, all endpoints respond with data in JSON format",
+      "fetched": "2026-11-12",
+      "hash": "b33afae04cb92f62496d5ba87a60cbb693c627ea461d4cf63134acfcf6df6aac"
+    },
+    {
+      "id": "c5",
+      "tier": "vendor-claim",
+      "url": "https://www.verifyinvestor.com/api",
+      "excerpt": "Create a Verification Request for that user using our API and receive an \"Investor URL\".",
+      "fetched": "2026-11-12",
+      "hash": "7aab2ddddb7b9f86d78b4b5fc7b868b095042f6221ac0688378467e613e1fa12"
+    },
+    {
+      "id": "c6",
+      "tier": "vendor-claim",
+      "url": "https://www.verifyinvestor.com/api",
+      "excerpt": "Your user grants access to your application and is redirected to the \"Redirect URL\" you have in your account Settings.",
+      "fetched": "2026-11-12",
+      "note": "Investor consent and form completion happen in the browser, not by API",
+      "hash": "86018cd58e527b43dd3c5e2f41d91cc24116627fd5fa15f1ee68ed398686c0c9"
+    },
+    {
+      "id": "c7",
+      "tier": "vendor-claim",
+      "url": "https://www.verifyinvestor.com/api",
+      "excerpt": "Checks the status of all verification requests but with less information provided.",
+      "fetched": "2026-11-12",
+      "hash": "09ff4d0df1958dae174fae5db71257c1d4c7103b08776d9b76bbe21f5f8b2ea8"
+    },
+    {
+      "id": "c8",
+      "tier": "vendor-claim",
+      "url": "https://www.verifyinvestor.com/api",
+      "excerpt": "This endpoint returns the verificaiton certificate for the specified user and verification request.",
+      "fetched": "2026-11-12",
+      "hash": "d4cdaea3c2b90aaee54930ece90894338b56d833afec4ea4e102cd94798b580c"
+    },
+    {
+      "id": "c9",
+      "tier": "vendor-claim",
+      "url": "https://www.verifyinvestor.com/api",
+      "excerpt": "This endpoint does not accept or return JSON! It returns an `application/pdf`.",
+      "fetched": "2026-11-12",
+      "hash": "4052b971063c954aadeaab63e44dc77b8e016c7b96cb796d221a8399d1d5e0ed"
+    },
+    {
+      "id": "c10",
+      "tier": "vendor-claim",
+      "url": "https://www.verifyinvestor.com/api",
+      "excerpt": "if you pass a webhook url, webhook callbacks will POST to that url for this specific verification request.",
+      "fetched": "2026-11-12",
+      "hash": "ab31f12d0cce3aad4e2367d7c7bb2e95fbea8b0bdeb7e9154b2e320c14353e6c"
+    },
+    {
+      "id": "c11",
+      "tier": "vendor-claim",
+      "url": "https://www.verifyinvestor.com/api",
+      "excerpt": "We've provided two staging servers for you to test your integration before using our production server.",
+      "fetched": "2026-11-12",
+      "note": "Staging credentials are requested from support",
+      "hash": "cb5da535bcc91a527067b93b3befee2a5dc427bc1505f451170c1e6e88eedee7"
+    },
+    {
+      "id": "c12",
+      "tier": "vendor-claim",
+      "url": "https://www.verifyinvestor.com/api",
+      "excerpt": "POST /api/v1/verification_requests/:id/simulate_investor_completion",
+      "fetched": "2026-11-12",
+      "hash": "d2fa75144ad913d59dd4b0801915052f2ff5cc23c5b17037c5ec0b86d3715477"
+    },
+    {
+      "id": "c13",
+      "tier": "vendor-claim",
+      "url": "https://www.verifyinvestor.com/accredited-investor-verification",
+      "excerpt": "Individual Prepay 50 Prepay 100 $69 $3,105 $5,865",
+      "fetched": "2026-11-12",
+      "note": "Issuer-pays prices for Rule 506(c), page text joined; investor-pays shown as $59",
+      "hash": "f2f14115dcf5b250111a67c1b4127dfc07e83ccf1f98845cf03fc63293daa66a"
+    },
+    {
+      "id": "c14",
+      "tier": "vendor-claim",
+      "url": "https://www.verifyinvestor.com/",
+      "excerpt": "You can now store your accreditation on the blockchain with our new On-ChainPass.",
+      "fetched": "2026-11-12",
+      "hash": "d2d96288c9b1f4d9c96277314c669bd4c10c6c7105c933fb9741b02fd0ab3fd5"
+    }
+  ]
+}
