@@ -27,7 +27,7 @@ export type PlaybookMdContext = {
   rules: Rule[]; // the catalog's rule cards; the file prints the ones its steps cite
   artifacts: Artifact[]; // names for what a step keeps as proof
   review: ReviewEntry | null; // the record's latest entry in the review ledger
-  origin: string; // the site's address, such as https://promptedcre.com
+  origin: string; // the site's address, such as https://www.promptedcre.com
   computedOn: string; // the date the file was computed, YYYY-MM-DD
 };
 

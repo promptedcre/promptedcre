@@ -7,7 +7,7 @@ import { siteFacts } from "@/lib/compute/site-facts";
 import { getCorpus } from "@/lib/content/load";
 import { JURISDICTIONS, type Jurisdiction } from "@/lib/schemas/common";
 import { decodeWoff2, staticArchivo } from "@/lib/og/archivo";
-import { site } from "@/lib/site";
+import { site, siteHost } from "@/lib/site";
 
 // The share image: the cover sheet of the drawing set. Every figure on it is computed
 // from the catalog when the image is generated (at build), never typed.
@@ -155,7 +155,7 @@ export default async function Image() {
     .map((s) => ({ label: s === "jv" ? "JV" : "Fund", ...share[s] }))
     .filter((s) => s.pct !== null && s.total > 0);
   const computedOn = buildDate();
-  const host = site.url.replace(/^https?:\/\//, "").replace(/\/+$/, "");
+  const host = siteHost();
 
   const fonts = await loadFonts();
 

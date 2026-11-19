@@ -1,5 +1,5 @@
-// The launch-day check (CH09), run against the deployed vercel.app address in the test
-// window, before promptedcre.com moves. It never runs against promptedcre.com. It only reads.
+// The launch-day check (CH09), run against the project's vercel.app address, which serves
+// the same deployment as the domain. It never runs against promptedcre.com. It only reads.
 //
 //   node tools/launch-check.mjs https://<project>.vercel.app [--log <file outside the repo>]
 //
@@ -32,7 +32,7 @@ try {
 } catch {
   refuse("usage: node tools/launch-check.mjs https://<project>.vercel.app [--log <file>]");
 }
-if (/(^|\.)promptedcre\.com$/i.test(host)) refuse("Not against promptedcre.com: run this on the vercel.app address, before the domain moves.");
+if (/(^|\.)promptedcre\.com$/i.test(host)) refuse("Not against promptedcre.com: run this on the project's vercel.app address, which serves the same deployment.");
 if (!base.startsWith("https://") && !/^(127\.0\.0\.1|localhost)$/.test(host)) refuse("Use the https address (http only for 127.0.0.1, to rehearse on a local build).");
 if (logFile && (logFile + path.sep).startsWith(ROOT + path.sep)) refuse("Keep the log outside the repository: pass a --log path in another folder.");
 

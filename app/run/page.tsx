@@ -17,7 +17,7 @@ import {
 } from "@/components/run";
 import { ButtonLink, Callout, Container, Disclosure, PageHead, RoleMark, Sheet, SheetPart, TextLink, TitleBlock, TitleCell, type PageFact } from "@/components/ui";
 import { getDemoRun } from "@/lib/demo/load";
-import { site } from "@/lib/site";
+import { site, siteHost } from "@/lib/site";
 import type { DemoScene } from "@/lib/schemas/demo";
 
 export const metadata: Metadata = {
@@ -141,7 +141,7 @@ export default function RunPage() {
         {/* Paper holds the boards. What it leaves out, and where that is, is said before the first one. */}
         <p className="type-body-s measure m-0 mt-4 hidden text-muted print:block">
           On paper: the {plural(run.scenes.length, "scene")} as boards. Each step&rsquo;s command, the engine&rsquo;s output and the files
-          it wrote are on the page itself, {site.url.replace(/^https?:\/\//, "")}/run.
+          it wrote are on the page itself, {siteHost()}/run.
         </p>
       </PageHead>
 

@@ -1,7 +1,8 @@
-# Deploy checklist (William only)
+# Deploy checklist (the owner's steps)
 
 You sign in, pay, push and deploy. An agent stages files, runs checks and makes code
-edits when you say so; it never pushes, deploys or touches promptedcre.com. Run the
+edits when you say so; it pushes, deploys or touches promptedcre.com only when you ask it
+to, and never signs in, enters a code or pays for you. Run the
 commands from the repository folder unless a step says otherwise. The Vercel facts below
 were checked against Vercel's documentation on 2026-11-12 (deployment protection,
 environments, Node.js versions, function duration) and on 2026-11-18 (runtime log
@@ -31,7 +32,7 @@ The first time:
    section 6.
 2. Done on 2026-11-18: `repoUrl` in `lib/site.ts` and the install line in `README.md` name
    it.
-3. Export the release into a sibling folder, `../promptedcre-public`:
+3. Done on 2026-11-18: the release, exported into a sibling folder, `../promptedcre-public`:
 
 ```bash
 node tools/release.mjs
@@ -40,10 +41,20 @@ node tools/release.mjs
    It takes the last commit, leaves out the working files, runs the leak check on the
    files it will write, refuses to write while the README's install line has the
    placeholder, and prints what changed. `--dry-run` checks and compares without writing.
-4. In `../promptedcre-public`, make its first commit and push it:
+4. Done on 2026-11-18: in `../promptedcre-public`, its first commit and push. The folder
+   carries its own commit identity, so no personal name enters the public history (set it
+   once, before the first commit; this machine has no global git identity):
 
 ```bash
 git init -b main
+```
+
+```bash
+git config user.name "PromptedCRE"
+```
+
+```bash
+git config user.email "build@promptedcre.invalid"
 ```
 
 ```bash
@@ -63,20 +74,26 @@ git push -u origin main
 ```
 
 Every later release: commit here, run `node tools/release.mjs` again, then commit and push
-in `../promptedcre-public`. A second run on an unchanged commit reports no change.
+in `../promptedcre-public`; Vercel deploys each push to `main`. A second run on an
+unchanged commit reports no change. If Git's GitHub sign-in window fails ("User cancelled
+dialog", then a "Username" prompt), run `$env:GCM_GUI_PROMPT = 'false'` in that terminal
+first and push again.
 
 ## 3. Vercel
 
-1. Create a **new** project and import the public repository. Do not import it into the
-   gen-1 project, and do not add promptedcre.com to it yet.
-2. Vercel detects Next.js. Leave the build and output settings at their defaults. Add
-   no environment variables.
-3. Node.js: `package.json` pins `24.x`, the version the site was built and tested on.
+Done on 2026-11-19: a **new** project, `promptedcre-v3`, imported from the public
+repository (not the gen-1 project), with Vercel's GitHub app installed on the organization
+for this one repository, so each push to `main` deploys. Vercel's free plan cannot deploy a
+private repository owned by a GitHub organization, so the repository went public first
+(section 6).
+
+1. Vercel detects Next.js. The build and output settings stay at their defaults, with no
+   environment variables.
+2. Node.js: `package.json` pins `24.x`, the version the site was built and tested on.
    Vercel's own default is 26.x, and the pin overrides it.
-4. Turn on **Web Analytics** in the project (answer 18). The site already carries its
-   component, drawn only in a build on Vercel. It counts page views without cookies.
-5. Deploy. A new project's first deployment is a production deployment, served at the
-   project's `vercel.app` address: public, and not promptedcre.com.
+3. **Web Analytics** is on (answer 18), on the free tier. The site carries its component,
+   drawn only in a build on Vercel. It counts page views without cookies.
+4. The project's `vercel.app` address serves the same production deployment as the domain.
 
 **Access.** New projects start with Standard Protection: preview deployments, including
 branch pushes and per-deployment URLs, need a Vercel login. Production domains stay
@@ -84,9 +101,8 @@ public. An agent can't sign in, so test the connector on the project's `vercel.a
 production address, not on a branch preview.
 
 **Indexing.** Vercel adds a noindex header only to previews and per-deployment URLs.
-Search engines can index the `vercel.app` address once something links to it. If you
-would rather they didn't before the domain moves, say so, and the agent adds a noindex
-tag until then.
+Search engines can index the `vercel.app` address once something links to it; the pages'
+canonical address is `url` (section 5).
 
 **Limits.** The MCP route is a Node.js function capped at 30 seconds. Every plan allows
 at least 300.
@@ -98,14 +114,14 @@ Plus. A weekly count of calls needs that add-on or a log drain, both paid, so de
 whether to keep a longer record is yours. Until then the lines can be read in the
 project's Logs view while they last.
 
-## 4. The test window
+## 4. The launch checks
 
-Before promptedcre.com moves, test the deployment on its `vercel.app` address.
+On 2026-11-19 the domain moved right after the automatic check passed (31 of 31), so the
+first outside user could start sooner. The checks run against the project's `vercel.app`
+address, which serves the same deployment as the domain.
 
-1. Tell the agent the address. It sets `url` in `lib/site.ts` to it (section 5), so the
-   links the connector hands an agent point at the new site, not the old one. You commit,
-   release (section 2) and push; Vercel redeploys.
-2. The agent runs the automatic check and logs it in a folder outside the repository:
+1. Done on 2026-11-19: the agent runs the automatic check and logs it in a folder outside
+   the repository:
 
 ```bash
 node tools/launch-check.mjs https://<url> --log <folder outside the repo>/launch-check.log
@@ -117,53 +133,51 @@ node tools/launch-check.mjs https://<url> --log <folder outside the repo>/launch
    input, the same call twice and a Form D date already past. While it runs, look at the
    project's firewall and bot settings (about 5 minutes): a bot faked from the laptop
    shows what those settings do to the name, not how real crawlers are treated.
-3. The agent connects a fresh Claude Code session in an empty folder and runs one written
+2. The agent connects a fresh Claude Code session in an empty folder and runs one written
    playbook end to end against the deployed connector, then logs where it stalled:
 
 ```bash
-claude mcp add --transport http promptedcre https://<url>/api/mcp
+claude mcp add --transport http promptedcre https://www.promptedcre.com/api/mcp
 ```
 
-4. Ten operator questions, written or approved by you (about 10 minutes), go through
+3. Ten operator questions, written or approved by you (about 10 minutes), go through
    Claude Code. Each is marked found, right tool and finished, with where it stalled. A
    question whose right record is not ranked first becomes a pinned search test and a
-   ranking fix before Joey's run.
-5. Fix what failed, release again, and check again.
+   ranking fix.
+4. Fix what failed, release again, and check again.
 
-The quick manual checks still hold: `node tools/mcp-call.mjs https://<url>/api/mcp list`
-should print `server promptedcre 0.1.0` and sixteen tools, and `/install` should name the
-`vercel.app` address.
+The quick manual check still holds: `node tools/mcp-call.mjs https://<project>.vercel.app/api/mcp list`
+should print `server promptedcre 0.1.0` and sixteen tools.
 
 ## 5. Launch values
 
-Four values live in `lib/site.ts`. The agent changes them and runs `npm run verify`; you
-commit, release and push, and Vercel redeploys.
+Four values live in `lib/site.ts`, all set by 2026-11-19. To change one, the agent edits
+it and runs `npm run verify`; it is committed, released and pushed, and Vercel redeploys.
 
-| Value | Set it to | What changes |
+| Value | Now | What it drives |
 |---|---|---|
-| `repoUrl` | the public repository's address | The rankings pages show the "Open a contest" links, the terms name the issue form, and the engine's install command appears |
-| `url` | the `vercel.app` address for the test window, and `https://promptedcre.com` again in the deploy that moves the domain | Every absolute address: the paste-in sentence, the connector's links, the Markdown copies' "From" line, robots and the sitemap |
-| `connectorLive` | `true` | Every page drops "Not live yet", the paste-in prompt becomes the primary action, and `/install` and `/llms.txt` stop telling agents the connector is not switched on. The `/api/mcp` route itself is not gated by this flag: it answers wherever the site runs, so flip the flag in the same deploy that makes the route public |
-| `engineReleased` | `true` once the public repository is up (the engine is packaged: `bin/`, installed straight from GitHub) | `/install`, `/llms.txt` and the connector's instructions show the install command; `/connect` and `/run` link the repository; the site plan and the recorded-run page drop "Not released yet" |
+| `repoUrl` | `https://github.com/promptedcre/promptedcre` | The rankings pages' "Open a contest" links, the terms' issue form, and the engine's install command |
+| `url` | `https://www.promptedcre.com`: www serves the site and promptedcre.com redirects to it | Every absolute address: metadata, the connector's links and address, the Markdown copies' "From" line, robots and the sitemap. The sentence a person pastes keeps the short form, promptedcre.com/install |
+| `connectorLive` | `true` | Every page drops "Not live yet", the paste-in prompt is the primary action, and `/install` and `/llms.txt` tell agents the connector is on. The `/api/mcp` route itself is not gated by this flag |
+| `engineReleased` | `true` (the engine is packaged: `bin/`, installed straight from GitHub) | `/install`, `/llms.txt` and the connector's instructions show the install command; `/connect` and `/run` link the repository; the site plan and the recorded-run page drop "Not released yet" |
 
-## 6. Before the repository goes public
+## 6. The repository goes public
+
+Done on 2026-11-19: the repository is public, after these were in place.
 
 - **Rankings data license:** `rankings/DATA-LICENSE` is a draft that no attorney has
   reviewed. Answer 11 ships it as written, with a lawyer's read after.
 - **Working files:** the release leaves them out (section 2). Nothing to remove by hand.
-- **Issues:** check that Issues is on in the repository settings. The contest form
-  needs it.
-- Then make the repository public.
+- **Issues:** on in the repository settings. The contest form needs it.
 
 The bias disclosure was removed on 2026-11-18 at your word: no vendor pays PromptedCRE,
 and the terms say so.
 
 ## 7. The domain
 
-Your answer of 2026-11-18 moves promptedcre.com at launch, after the test window. promptedcre.com
-stays on gen-1 until you move it. When you do:
-
-1. Remove the domain from the gen-1 project.
-2. Add it to this project.
-3. Tell the agent to set `url` in `lib/site.ts` back to `https://promptedcre.com`, and
-   release that in the same deploy.
+Done on 2026-11-19 at your word: www.promptedcre.com and promptedcre.com moved from the
+gen-1 project to `promptedcre-v3` with Vercel's own move. www serves the site and
+promptedcre.com redirects to it (308), Vercel's recommended setup and the one gen-1 used,
+so `url` is `https://www.promptedcre.com`. The gen-1 project stays at its own `vercel.app`
+address as a way back, and its repository is archived on GitHub (read-only; unarchive to
+undo). To go back, move the two domains to the gen-1 project in Vercel.

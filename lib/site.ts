@@ -10,7 +10,10 @@ export const site = {
   eyebrow: "For real estate operators",
   description:
     "Open, agent-readable playbooks for real estate operators. Every step says whether an AI agent can do it or a person must, and where it comes from: a cited source or common practice.",
-  url: "https://promptedcre.com",
+  // The canonical address. www serves the site and promptedcre.com redirects to it (308),
+  // as Vercel set it up when the domain moved on 2026-11-19 (D247), so links built from
+  // this one take no redirect: metadata, the sitemap, the connector's links and its address.
+  url: "https://www.promptedcre.com",
   // True once the hosted connector is deployed. Every "not live yet" line on the site, the
   // status line's connector cell, /install and /llms.txt follow it; nothing else changes.
   // Switched on 2026-11-19 at the owner's go to launch (D246).
@@ -27,8 +30,14 @@ export const site = {
   contentLicense: "CC BY 4.0",
 } as const;
 
-// The site's address as a person types it: no scheme, no trailing slash.
-export const siteHost = (url: string = site.url) => url.replace(/^https?:\/\//, "").replace(/\/+$/, "");
+// The site's address as a person types it: no scheme, no www., no trailing slash. The
+// sentence a person pastes stays "promptedcre.com/install" (the owner's words, D218); it
+// reaches the site through the domain's redirect.
+export const siteHost = (url: string = site.url) =>
+  url
+    .replace(/^https?:\/\//, "")
+    .replace(/^www\./, "")
+    .replace(/\/+$/, "");
 
 type Launch = { repoUrl: string | null; engineReleased: boolean; codeLicense: string; contentLicense: string };
 

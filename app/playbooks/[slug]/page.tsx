@@ -24,7 +24,7 @@ import { openingStructure, writtenStructures } from "@/lib/compute/variant";
 import { getCorpus, getPlaybook } from "@/lib/content/load";
 import { hasPlaybookMd, latestReview, playbookMdPath } from "@/lib/export/playbook-md";
 import type { Playbook } from "@/lib/schemas/playbook";
-import { site } from "@/lib/site";
+import { site, siteHost } from "@/lib/site";
 
 export const dynamicParams = false;
 
@@ -131,7 +131,7 @@ export default async function PlaybookPage({ params }: PageProps<"/playbooks/[sl
       <Container>
         {/* On paper the site header is gone, so the document says where it came from. */}
         <p className="type-data m-0 hidden text-faint print:block">
-          {site.name} · {site.url.replace(/^https?:\/\//, "")}/playbooks/{pb.slug}
+          {site.name} · {siteHost()}/playbooks/{pb.slug}
         </p>
         <PlaybookHead pb={pb} review={review} today={today} file={file} />
 

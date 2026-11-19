@@ -2,7 +2,7 @@
 // It takes the committed tree (HEAD, or --ref), leaves out the working files that stay
 // private, runs the leak check on what is left, and only then writes it into the public
 // folder, whose own git history starts fresh. It prints what changed since the copy already
-// there. William commits and pushes in that folder, and Vercel deploys. Nothing here pushes,
+// there. The owner commits and pushes in that folder, and Vercel deploys. Nothing here pushes,
 // deploys or touches promptedcre.com.
 //
 //   node tools/release.mjs                    export HEAD into ../promptedcre-public
