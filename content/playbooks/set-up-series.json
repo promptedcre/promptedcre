@@ -7,17 +7,578 @@
   "phase": "stand-up",
   "order": 12,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "lastVerified": "2026-11-20",
+  "requires": [
+    "form-sponsor-entity"
+  ],
+  "consumes": [
+    "certificate-of-formation",
+    "deal-entity-agreement"
+  ],
+  "produces": [
+    "certificate-of-formation",
+    "deal-entity-agreement"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx",
+      "us-de"
+    ]
   },
-  "sources": [],
-  "steps": [],
+  "sources": [
+    {
+      "id": "tx-boc-101",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.101.htm",
+      "title": "Texas Business Organizations Code, Chapter 101, Subchapter M (Sections 101.601 to 101.627, series limited liability company, including conversion of a protected series) and Section 101.0515",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "quote": "the records maintained for that particular protected series or registered series account for the assets associated with that series separately",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-4",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.4.htm",
+      "title": "Texas Business Organizations Code, Chapter 4 (Section 4.162, filing fees for a registered series)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "quote": "for filing a certificate of registered series, $300",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-5",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.5.htm",
+      "title": "Texas Business Organizations Code, Chapter 5 (Sections 5.053 and 5.0561, names of a registered series)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-9",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.9.htm",
+      "title": "Texas Business Organizations Code, Chapter 9 (Section 9.005, a foreign series LLC's application for registration)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bcc-71",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.71.htm",
+      "title": "Texas Business and Commerce Code, Chapter 71, Assumed Business or Professional Name Act (Sections 71.002, 71.101, 71.102, 71.151 and 71.201)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-formation-faq",
+      "url": "https://www.sos.state.tx.us/corp/formationfaqs.shtml",
+      "title": "Formation of Texas Entities FAQs (Series LLCs, questions 1 to 9)",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-20",
+      "quote": "Not all states recognize a series LLC.",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-806",
+      "url": "https://www.sos.state.tx.us/corp/forms/806_boc.pdf",
+      "title": "Form 806, Business Filings and Trademarks Fee Schedule, revised 09/26",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-faq-taxable",
+      "url": "https://comptroller.texas.gov/taxes/franchise/faq/taxable-entities.php",
+      "title": "Franchise Tax Frequently Asked Questions: Taxable Entities (series LLC reporting)",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-20",
+      "quote": "A series LLC is treated as a single legal entity.",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-franchise",
+      "url": "https://comptroller.texas.gov/taxes/franchise/",
+      "title": "Franchise Tax (due dates)",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-20",
+      "quote": "The annual franchise tax report is due May 15.",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-2",
+      "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter II (Sections 18-215, 18-218 and 18-219, protected and registered series and conversion between them)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-20",
+      "quote": "Shall begin with the name of the limited liability company",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-11",
+      "url": "https://delcode.delaware.gov/title6/c018/sc11/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter XI (Sections 18-1105(a)(10) and 18-1107(b) to (e), certificates and the annual tax of a registered series)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-20",
+      "quote": "an annual tax, for use of the State of Delaware, in the amount of $100 per registered series",
+      "tier": "primary"
+    },
+    {
+      "id": "de-llc-forms",
+      "url": "https://corp.delaware.gov/corpformsllc09/",
+      "title": "Corporate Forms and Certificates for a Limited Liability Company (LLC Registered Series Formation)",
+      "publisher": "Delaware Division of Corporations",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "fr-series-2010",
+      "url": "https://www.federalregister.gov/api/v1/documents/2010-22793.json",
+      "title": "Series LLCs and Cell Companies, notice of proposed rulemaking, 75 FR 55699 (Sept. 14, 2010), REG-119921-09 (Federal Register record)",
+      "publisher": "Internal Revenue Service (Federal Register)",
+      "accessed": "2026-11-20",
+      "quote": "for Federal tax purposes it is treated as an entity formed under local law",
+      "tier": "primary"
+    },
+    {
+      "id": "fr-docket-search",
+      "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bdocket_id%5D=REG-119921-09",
+      "title": "Federal Register documents filed under docket REG-119921-09 (one result: the 2010 proposed rule)",
+      "publisher": "Office of the Federal Register",
+      "accessed": "2026-11-20",
+      "tier": "secondary"
+    },
+    {
+      "id": "ecfr-301-7701-1",
+      "url": "https://www.ecfr.gov/current/title-26/section-301.7701-1",
+      "title": "26 CFR 301.7701-1, Classification of organizations for federal tax purposes (current as of November 18, 2026)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-20",
+      "quote": "is a matter of federal tax law and does not depend on whether the organization is recognized as an entity under local law",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-ein",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number",
+      "title": "Get an employer identification number (page last reviewed October 16, 2026)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-20",
+      "quote": "You never have to pay a fee for an EIN.",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "decide-series-type",
+      "title": "Decide with counsel whether to use series, and which kind",
+      "instruction": "Counsel and the principals decide whether the firm will hold deals in series of one LLC and, if so, whether each will be a protected or a registered series. In Texas a protected series needs no filing of its own; a registered series is formed by filing a certificate of registered series for $300, can get a certificate of status from the Secretary of State, and must file again when it ends. Texas law treats neither kind as a separate domestic entity. Delaware has the same two kinds but treats each as an association for all purposes of Delaware law, and each registered series owes $100 a year in state tax on top of the LLC's $400. The Secretary of State will not advise on the choice. For a fund or a joint venture, counsel also weighs whether series fit the fund documents or the capital partner's terms.",
+      "mode": "human-online",
+      "modeBasis": "Choosing the structure is a legal and tax judgment for counsel and the principals.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-tx.boc.series-llc",
+        "us-de.llc.formation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "sos-formation-faq",
+        "tx-boc-101",
+        "tx-boc-4",
+        "de-code-18-2",
+        "de-code-18-11"
+      ]
+    },
+    {
+      "id": "counsel-on-limits",
+      "title": "Have counsel say where a series' liability limit may not hold",
+      "instruction": "Ask counsel, in writing, where the separation between series could fail and what to do about it. Not all states recognize series LLCs, so for each state where a series will own property, register or be sued, counsel says how that state will treat it; an out-of-state series LLC registers in Texas as one entity and states its series terms in the application. Texas law says a series is not a separate domestic entity, so counsel judges how a bankruptcy court might treat a series and its assets. Counsel also lists every agreement in which the LLC or another series takes on a series' debts, or a member agrees to be personally liable, such as a guaranty; both statutes allow either by agreement. Record the answers in the firm file.",
+      "mode": "human-online",
+      "modeBasis": "How other states and courts would treat a series is a legal judgment.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-series-type"
+      ],
+      "rules": [
+        "us-tx.boc.series-llc"
+      ],
+      "basis": "cited",
+      "sources": [
+        "sos-formation-faq",
+        "tx-boc-101",
+        "tx-boc-9",
+        "de-code-18-2"
+      ]
+    },
+    {
+      "id": "ask-lenders-and-partners",
+      "title": "Ask each lender, title insurer and capital partner whether it accepts a series",
+      "instruction": "Before a deal is put in a series, ask each prospective lender, the title insurer and, in a joint venture, the capital partner whether it will lend to, insure or invest in a series, and on what terms, such as a separate single-purpose entity, a legal opinion or an added guaranty. Record each answer with the deal. Where one will not accept a series, that deal goes in a standalone entity through form-deal-entity instead.",
+      "mode": "human-online",
+      "modeBasis": "These are conversations between the principals and the firm's counterparties.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-on-limits"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "decide-tax-treatment",
+      "title": "Settle each series' federal tax treatment and EIN with the CPA",
+      "instruction": "The CPA decides, with counsel, how each series is treated for federal tax: whether it files its own return and has its own EIN, or is reported within the LLC. Whether an organization is a separate entity for federal tax is a question of federal tax law, not of its standing under state law. The IRS proposed in 2010 to treat each series as an entity formed under local law; the Federal Register shows no final rule on that docket, and the current regulation has no series provision. If each series will have an EIN, plan the applications, since the IRS online tool issues one EIN per responsible party per day. Record the decision and its basis for each series.",
+      "mode": "human-online",
+      "modeBasis": "Tax classification is a professional judgment for the CPA.",
+      "actor": "cpa",
+      "licensed": "cpa",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-series-type"
+      ],
+      "rules": [
+        "us-fed.irs.ein"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-301-7701-1",
+        "fr-series-2010",
+        "fr-docket-search",
+        "irs-ein"
+      ]
+    },
+    {
+      "id": "add-series-notice",
+      "title": "Put the notice of series liability limits in the certificate of formation",
+      "instruction": "Put in the certificate of formation the notice that each series' debts are enforceable only against that series' assets, and that the LLC's and other series' debts are not enforceable against them. In Texas, notice in the filed certificate counts even if no series exists yet, need not name a series, and need not say \"protected\" or \"registered\"; the certificate on file is itself notice of the limit. The Secretary of State has no series form, so the notice goes in the supplemental provisions of the LLC certificate form. Delaware likewise requires the notice in the certificate of formation for protected and registered series. Put it in the new LLC's certificate when it is formed (form-deal-entity; form-sponsor-entity's drafting and filing steps apply to any Texas or Delaware LLC), or add it to an existing LLC's through amend-the-certificate. Counsel approves the wording.",
+      "mode": "agent",
+      "modeBasis": "Drafting the notice for counsel's approval is document work; the filing follows the formation or amendment playbook.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-series-type"
+      ],
+      "rules": [
+        "us-tx.boc.series-llc"
+      ],
+      "consumes": [
+        "certificate-of-formation"
+      ],
+      "produces": [
+        "certificate-of-formation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "sos-formation-faq",
+        "de-code-18-2"
+      ]
+    },
+    {
+      "id": "write-agreement-terms",
+      "title": "Have counsel write the series terms into the company agreement",
+      "instruction": "Counsel drafts the company agreement's series provisions, and every member signs. The agreement must state the limit both ways: each series' debts are enforceable only against its own assets, and the LLC's and other series' debts are not enforceable against them. It also says how a new series is established. Settle for each series its members, managers and governing authority, assets and purpose, capital, distributions, how its terms are amended and how it winds up without ending the LLC. Texas bars a distribution from a series if, right after it, the series' liabilities, with some exceptions, would exceed the fair value of its assets; by default a series' terms are amended with the approval of every member of that series and of any other members the change harms. An agreement that the LLC or another series answers for a series' debts must be express.",
+      "mode": "human-online",
+      "modeBasis": "Counsel drafts the agreement and it binds each member, so each signs it.",
+      "actor": "principal",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-on-limits",
+        "add-series-notice"
+      ],
+      "rules": [
+        "us-tx.boc.series-llc"
+      ],
+      "produces": [
+        "deal-entity-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "de-code-18-2"
+      ]
+    },
+    {
+      "id": "designate-each-series",
+      "title": "Designate a series for each deal by the agreement's procedure",
+      "instruction": "For each deal, adopt a series designation as the company agreement provides, before the series signs a purchase contract or takes money. Name the series and record its property, its members and their interests, its manager, capital, distribution terms and purpose. For a registered series, counsel makes the designation take effect when the certificate is filed, and the series signs nothing before then: a series set up without the certificate is a protected series, and making it registered later takes a certificate of conversion. A series can contract, hold title, grant liens, and sue and be sued in its own name, in Delaware unless the agreement says otherwise, so have it sign deal documents in its own name as a series of the LLC. In Texas, a protected series' name that lacks the LLC's name is an assumed name of the LLC; see the assumed name step.",
+      "mode": "human-online",
+      "modeBasis": "The principals adopt the designation and sign it for the LLC.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "write-agreement-terms",
+        "ask-lenders-and-partners"
+      ],
+      "rules": [
+        "us-tx.boc.series-llc"
+      ],
+      "consumes": [
+        "deal-entity-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "de-code-18-2",
+        "tx-bcc-71"
+      ]
+    },
+    {
+      "id": "file-texas-registered-series",
+      "title": "For a Texas registered series, file its certificate of registered series",
+      "instruction": "File a certificate of registered series with the Secretary of State to form each Texas registered series; the series is registered only once it is filed. The Secretary of State has no form for it, so counsel drafts one stating the LLC's name, the series' name, and whether it comes from a conversion or merger; it may add other provisions. The series' name must contain the LLC's name and \"registered series,\" \"RS\" or \"R.S.,\" and be distinguishable on the Secretary's records. An authorized officer, manager or member signs. The fee is $300; an amendment costs $150 and a certificate of termination $40. The certificate is not an amendment to the certificate of formation; amend it promptly if a statement in it becomes false.",
+      "mode": "human-online",
+      "modeBasis": "An authorized person signs and pays the fee; an agent prepares the draft for counsel.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "cost": {
+        "text": "$300 Secretary of State fee for a certificate of registered series",
+        "usdMin": 300,
+        "usdMax": 300,
+        "sourceId": "tx-boc-4"
+      },
+      "after": [
+        "designate-each-series"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.boc.series-llc"
+      ],
+      "market": "formation-back-office",
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "tx-boc-5",
+        "tx-boc-4",
+        "sos-formation-faq"
+      ]
+    },
+    {
+      "id": "file-delaware-registered-series",
+      "title": "For a Delaware registered series, file its certificate of registered series",
+      "instruction": "File a certificate of registered series with the Division of Corporations to form each Delaware registered series, on the Division's LLC registered series formation form. It states the LLC's name and the series' name, which must begin with the LLC's full name, ending included, and be distinguishable on the Division's records. An authorized person signs, and it takes effect on filing unless it states a later date or time. It is not an amendment to the certificate of formation; amend it promptly if a statement in it becomes false. Each registered series owes $100 in Delaware tax every June 1, and the Division can issue a certificate of good standing for it.",
+      "mode": "human-online",
+      "modeBasis": "An authorized person signs and the Division charges the firm's payment account; an agent prepares the form.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "designate-each-series"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-de"
+        ]
+      },
+      "rules": [
+        "us-de.llc.formation"
+      ],
+      "market": "formation-back-office",
+      "basis": "cited",
+      "sources": [
+        "de-code-18-2",
+        "de-code-18-11",
+        "de-llc-forms"
+      ]
+    },
+    {
+      "id": "assumed-names-for-series",
+      "title": "File an assumed name certificate for each series name that needs one",
+      "instruction": "Where a protected series' name does not include the LLC's name and the series is doing business, the LLC files an assumed name certificate for it with the Secretary of State, stating the series' name and the LLC's name. A registered series files its own certificate only for a name other than the one in its certificate of registered series. A Delaware series LLC that transacts business in Texas registers there as one entity, on Form 313 with its series statements, and files an assumed name certificate for any series doing business in Texas under a name other than the LLC's. Each certificate costs $25, lasts up to 10 years and is renewed in the six months before it expires; until one is filed, the entity cannot sue in Texas on a contract made under that name.",
+      "mode": "human-online",
+      "modeBasis": "An officer, manager or member signs each certificate and the fee is paid in the entity's name; an agent drafts them.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "cost": {
+        "text": "$25 per assumed name certificate",
+        "usdMin": 25,
+        "usdMax": 25,
+        "sourceId": "sos-806"
+      },
+      "after": [
+        "designate-each-series"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.assumed-name.certificate"
+      ],
+      "market": "formation-back-office",
+      "basis": "cited",
+      "sources": [
+        "tx-bcc-71",
+        "sos-formation-faq",
+        "sos-806",
+        "tx-boc-9"
+      ]
+    },
+    {
+      "id": "open-series-accounts",
+      "title": "Get each series any EIN it needs and its own bank account",
+      "instruction": "Once the CPA has settled each series' tax treatment, the responsible party applies for any EIN a series needs; the IRS charges no fee and issues one EIN per responsible party per day. Then open a separate bank account for each series, titled in its name as a series of the LLC, with its own signers and wire approvals. The statutes require only that each series' assets be identifiable in its records, and allow them to be held in the LLC's name, but separate accounts, with no series paying another's bills, make that easy to show. Keep each account's statements with that series' records.",
+      "mode": "human-online",
+      "modeBasis": "The EIN application needs the responsible party's SSN or ITIN, and the bank verifies and contracts with the signers.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-tax-treatment",
+        "designate-each-series",
+        "file-texas-registered-series",
+        "file-delaware-registered-series"
+      ],
+      "rules": [
+        "us-fed.irs.ein"
+      ],
+      "market": "formation-back-office",
+      "basis": "cited",
+      "sources": [
+        "irs-ein",
+        "tx-boc-101",
+        "de-code-18-2"
+      ]
+    },
+    {
+      "id": "keep-separate-records",
+      "title": "Keep each series' assets and books apart from every other's",
+      "instruction": "Set up the books so each series has its own ledger and its assets can be identified from its records alone. Texas and Delaware give a series its liability limit only to the extent its records account for its assets separately from the LLC's and every other series'; records that identify assets by listing, category, type, quantity or a formula count. Assets may be held in the series' name, the LLC's name or a nominee's, so the records must show which series owns what. Record each transfer between series, or between a series and the LLC, as a documented loan, contribution or distribution, and check monthly that nothing is mixed. A record that cannot show which series owns an asset puts that series' limit at risk.",
+      "mode": "agent",
+      "modeBasis": "Setting up ledgers and checking them against the bank records is bookkeeping an agent can do.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "open-series-accounts"
+      ],
+      "rules": [
+        "us-tx.boc.series-llc"
+      ],
+      "market": "formation-back-office",
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "de-code-18-2"
+      ]
+    },
+    {
+      "id": "texas-franchise-tax",
+      "title": "Confirm how the series LLC reports Texas franchise tax",
+      "instruction": "Have the CPA confirm how the series LLC reports Texas franchise tax, and record the answer in the firm file. The Comptroller treats a series LLC as a single legal entity: it registers as one entity, files one franchise tax report and one Public Information Report under the LLC's taxpayer number, not as a combined group, and if one series has nexus in Texas, the whole LLC does. That answer does not address registered series separately, so the CPA confirms how revenue from every series is reported. The report is due May 15 each year; see file-texas-franchise-report.",
+      "mode": "agent",
+      "modeBasis": "Reading the Comptroller's guidance and recording the CPA's confirmation is research and file work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-tax-treatment"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.franchise-tax.basics"
+      ],
+      "basis": "cited",
+      "sources": [
+        "cpa-faq-taxable",
+        "cpa-franchise"
+      ]
+    },
+    {
+      "id": "calendar-series-filings",
+      "title": "Calendar each series' recurring filings and the steps to end one",
+      "instruction": "Add to the firm's calendar, for each series: Delaware's $100 tax per registered series, due every June 1, with a $50 penalty and monthly interest if late; each assumed name certificate's expiry and its six-month renewal window; and a yearly check that each registered series' certificate is still accurate. When a deal ends, its series can be wound up without ending the LLC. After the winding up, a Texas registered series files a certificate of termination ($40); a Delaware registered series pays the full year's $100 tax before filing its certificate of cancellation. Keep the series on the books and the calendar until those filings are done.",
+      "mode": "agent",
+      "modeBasis": "The dates follow from the filings and published rules, so an agent can set and track them.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "keep-separate-records",
+        "file-texas-registered-series",
+        "file-delaware-registered-series",
+        "assumed-names-for-series"
+      ],
+      "rules": [
+        "us-tx.boc.series-llc",
+        "us-tx.assumed-name.certificate"
+      ],
+      "basis": "cited",
+      "sources": [
+        "de-code-18-11",
+        "tx-bcc-71",
+        "tx-boc-101",
+        "tx-boc-4",
+        "de-code-18-2"
+      ]
+    }
+  ],
   "outlineSteps": []
 }

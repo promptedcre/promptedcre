@@ -497,7 +497,7 @@
     },
     {
       "id": "principals-approval",
-      "title": "Have the sponsor's principals approve in writing",
+      "title": "Have the principals approve in writing",
       "instruction": "In a syndication the sponsor's principals decide. Circulate the memo to the principals the sponsor's company agreement or partner agreement names for investment decisions, and decide by the vote or consent it requires. Record the decision, the approved maximum price and the conditions in a written consent each required principal signs or confirms, and fill the memo's decision and approver fields. Where the agreement is silent, the principals agree in writing how this decision is made before they make it. The approved memo, not a draft, is the basis for the letter of intent and for the projections the offering shows.",
       "mode": "human-online",
       "modeBasis": "An investment decision binds the sponsor and is made by its principals; an agent circulates the memo and records the consent.",

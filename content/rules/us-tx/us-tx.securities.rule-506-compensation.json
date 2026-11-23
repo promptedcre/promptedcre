@@ -1,23 +1,78 @@
 {
   "id": "us-tx.securities.rule-506-compensation",
   "jurisdiction": "us-tx",
-  "title": "Texas pays solicitors only if they are registered",
-  "rule": "In a Rule 506 offering, no commission, fee or other pay may go to anyone who solicits Texas investors unless that person is registered in Texas as a securities dealer or agent. The State Securities Board also treats anyone other than the issuer's owners, directors, officers and employees who offers or sells its securities as subject to Texas dealer registration.",
+  "title": "Texas registration for anyone paid to solicit investors in a Rule 506 offering",
+  "rule": "Texas's Rule 506 exemption covers securities registration. The State Securities Board says an issuer using it is not a dealer, nor are its owners, directors, officers and employees, but only if not hired to sell, selling only incidentally, and paid entirely for other duties. It says no pay may go to anyone soliciting investors in Texas under Rule 506 unless licensed in Texas as a dealer or agent. Anyone else offering or selling in Texas must register unless exempt, and buyers may sue unregistered sellers to rescind. Finder registration, a restricted dealer registration for individuals, allows pay only for introducing accredited investors, without negotiating, advising, advertising or holding funds.",
   "citation": {
-    "authority": "Texas State Securities Board, Exemptions from Registration (Rules 109.13(k) and 114.4(b)(1))",
-    "url": "https://www.ssb.texas.gov/securities-professionals/regulation-securities/exemptions-registration"
+    "authority": "Tex. Gov't Code 4004.051, 4004.101 and 4008.051; 7 Tex. Admin. Code 109.13(k), 114.4(g), 115.1 and 115.11; State Securities Board, Exemptions from Registration",
+    "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.4004.htm"
   },
-  "asOf": "2026-11-11",
-  "lastVerified": "2026-11-11",
+  "asOf": "2026-11-21",
+  "lastVerified": "2026-11-21",
   "review": "ai-drafted",
-  "changeWatch": "Texas dealer and agent registration rules.",
+  "changeWatch": "Texas dealer, agent and finder registration (Government Code Chapter 4004; 7 Tex. Admin. Code Chapter 115), the scope of 7 Tex. Admin. Code 109.13(k) and 114.4(g), and the State Securities Board's exemptions page.",
   "sources": [
+    {
+      "id": "tx-gov-code-4004",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.4004.htm",
+      "title": "Texas Government Code, Chapter 4004 (Sections 4004.051 and 4004.101, registration of dealers and agents)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "unless the dealer or other person or company is first registered as provided by this chapter",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gov-code-4008",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.4008.htm",
+      "title": "Texas Government Code, Chapter 4008 (Section 4008.051, offeror or seller liability for registration violations)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "A person who offers or sells a security in violation of the following is liable to a person who buys the security",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-109-13",
+      "url": "https://www.law.cornell.edu/regulations/texas/7-Tex-Admin-Code-SS-109-13",
+      "title": "7 Tex. Admin. Code 109.13, Limited Offering Exemptions (subsection (a)(3), Registration Sections, and subsection (k), the exemption coordinating with Rule 506)",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "exempts from the registration requirements of the Registration Sections",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-114-4",
+      "url": "https://www.law.cornell.edu/regulations/texas/7-Tex-Admin-Code-SS-114-4",
+      "title": "7 Tex. Admin. Code 114.4, Filings and Fees (subsection (g), dealer and agent registration)",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "dealer and agent registration requirements of the Texas Securities Act and Board rules must be complied with",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-115-1",
+      "url": "https://www.law.cornell.edu/regulations/texas/7-Tex-Admin-Code-SS-115-1",
+      "title": "7 Tex. Admin. Code 115.1, General Provisions (subsections (a)(9), finder, (b)(1), registration required, and (c)(2)(B) and (c)(3), restricted registrations)",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "individual who receives compensation for introducing an accredited investor to an issuer or an issuer to an accredited investor",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-115-11",
+      "url": "https://www.law.cornell.edu/regulations/texas/7-Tex-Admin-Code-SS-115-11",
+      "title": "7 Tex. Admin. Code 115.11, Finder Registration and Activities",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "have custody of an accredited investor's funds or securities",
+      "tier": "primary"
+    },
     {
       "id": "ssb-exemptions",
       "url": "https://www.ssb.texas.gov/securities-professionals/regulation-securities/exemptions-registration",
       "title": "Exemptions from Registration",
       "publisher": "Texas State Securities Board",
-      "accessed": "2026-11-11",
+      "accessed": "2026-11-21",
+      "quote": "may be paid to any person who solicits investors in Texas under Rule 506 unless that person is licensed in Texas",
       "tier": "primary"
     }
   ]

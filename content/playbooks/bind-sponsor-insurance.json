@@ -2,22 +2,513 @@
   "id": "bind-sponsor-insurance",
   "slug": "bind-sponsor-insurance",
   "kind": "process",
-  "title": "Bind the sponsor's insurance",
-  "summary": "Price and bind the sponsor-level coverages its investors, lenders and partners expect.",
+  "title": "Bind the entity's insurance",
+  "summary": "Price and bind the firm-level coverages its investors, lenders and partners expect.",
   "phase": "stand-up",
   "order": 45,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
+  "lastVerified": "2026-11-20",
+  "requires": [
+    "form-sponsor-entity",
+    "open-sponsor-bank-accounts",
+    "choose-counsel-and-cpa"
+  ],
+  "consumes": [
+    "loan-documents",
+    "jv-agreement",
+    "deal-entity-agreement",
+    "private-placement-memorandum",
+    "sponsor-operating-agreement",
+    "investor-register"
+  ],
   "produces": [],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
+  "sources": [
+    {
+      "id": "usc-29-1112",
+      "url": "https://www.law.cornell.edu/uscode/text/29/1112",
+      "title": "29 U.S.C. 1112, Bonding (ERISA section 412)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-20",
+      "quote": "Such bond shall provide protection to the plan against loss by reason of acts of fraud or dishonesty on the part of the plan official",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-29-2580",
+      "url": "https://www.ecfr.gov/current/title-29/part-2580",
+      "title": "29 CFR part 2580, Temporary bonding rules (Sections 2580.412-6, handling; 2580.412-19, term of the bond; 2580.412-21, corporate sureties)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-29-2510-3-101",
+      "url": "https://www.ecfr.gov/current/title-29/section-2510.3-101",
+      "title": "29 CFR 2510.3-101, Definition of plan assets: plan investments (paragraph (f), participation by benefit plan investors)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-29-2510-3-2",
+      "url": "https://www.ecfr.gov/current/title-29/section-2510.3-2",
+      "title": "29 CFR 2510.3-2, Employee pension benefit plan (paragraph (d), individual retirement accounts under title I)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-20",
+      "quote": "the terms “employee pension benefit plan” and “pension plan” shall not include an individual retirement account",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-lab-406",
+      "url": "https://tcss.legis.texas.gov/resources/LA/htm/LA.406.htm",
+      "title": "Texas Labor Code, Chapter 406 (Sections 406.002, 406.004, 406.005 and 406.033, workers' compensation coverage and notices)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-dwc-employer",
+      "url": "https://www.tdi.texas.gov/wc/employer/index.html",
+      "title": "Employer resources, Division of Workers' Compensation (updated June 8, 2026)",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-20",
+      "quote": "In Texas, private employers can choose to carry workers' compensation insurance coverage, but it is not required in most cases.",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-dwc-nonsubscriber",
+      "url": "https://www.tdi.texas.gov/wc/nonsubscriber.html",
+      "title": "Employer E-File online reporting: non-subscriber notices to workers and to the Division of Workers' Compensation (updated August 6, 2026)",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-28-110-101",
+      "url": "https://www.law.cornell.edu/regulations/texas/28-Tex-Admin-Code-SS-110-101",
+      "title": "28 Tex. Admin. Code 110.101, Covered and Non-Covered Employer Notices to Employees (written notice at hire, 15-day notices, posted notices and their languages)",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-28-110-103",
+      "url": "https://www.law.cornell.edu/regulations/texas/28-Tex-Admin-Code-SS-110-103",
+      "title": "28 Tex. Admin. Code 110.103, Employer Requirements for Notifying the Division of Non-Coverage (subsection (b))",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-28-110-105",
+      "url": "https://www.law.cornell.edu/regulations/texas/28-Tex-Admin-Code-SS-110-105",
+      "title": "28 Tex. Admin. Code 110.105, Employer Requirements for Notifying the Division of Termination of Coverage",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-28-160-2",
+      "url": "https://www.law.cornell.edu/regulations/texas/28-Tex-Admin-Code-SS-160-2",
+      "title": "28 Tex. Admin. Code 160.2, Non-Subscribing Employer's Report of Injury",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-20",
+      "quote": "not later than the seventh day of the month following the month in which",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-4001",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.4001.htm",
+      "title": "Texas Insurance Code, Chapter 4001 (Sections 4001.051 and 4001.101, acting as an agent and the license required)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-4051",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.4051.htm",
+      "title": "Texas Insurance Code, Chapter 4051 (Section 4051.051, general property and casualty license)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-agentlists",
+      "url": "https://www.tdi.texas.gov/agent/agentlists.html",
+      "title": "Lists of Texas insurance agents, adjusters, and agencies (licensee and surplus lines agent lists on the state's open data portal)",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-20",
+      "quote": "The portal allows users to view, sort, filter, create charts and graphs (“visualize”), and export.",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-agent-lookup",
+      "url": "https://www.tdi.texas.gov/agent/agent-lookup.html",
+      "title": "How to find a licensed insurance agent or adjuster",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-find-agent",
+      "url": "https://www.tdi.texas.gov/tips/find-an-agent.html",
+      "title": "How do I find an insurance agent or company? (updated December 11, 2025)",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-20",
+      "quote": "It’s against the law to sell insurance without a license. An unlicensed company might not pay your claim.",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-company-lookup",
+      "url": "https://www.tdi.texas.gov/consumer/company-profiles-and-agents-for-service-of-process.html",
+      "title": "Look up an insurance company or find a company's agent for service of process",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-981",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.981.htm",
+      "title": "Texas Insurance Code, Chapter 981 (Sections 981.004 and 981.101, surplus lines insurance and the notice its documents carry)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "collect-insurance-requirements",
+      "title": "List every insurance requirement the firm has agreed to or will face",
+      "instruction": "Read every document that requires the firm, its principals or an entity it manages to carry insurance, and list each requirement with its section: loan documents and guaranties; the JV agreement; each deal or fund's governing agreement and offering documents, including what the memorandum says the manager carries and how the manager's indemnity is paid; any property management agreement where the firm manages; the office lease; and service contracts. For each, record who must be insured, the coverage, the limit and deductible as written, additional insureds, waivers of subrogation, notice of cancellation, any minimum insurer rating, the evidence required and the deadline. Coverage on a deal's building belongs to bind-property-insurance; list here only what falls on the firm.",
+      "mode": "agent",
+      "modeBasis": "Reading signed and draft agreements and listing their insurance terms is document work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "consumes": [
+        "loan-documents",
+        "jv-agreement",
+        "deal-entity-agreement",
+        "private-placement-memorandum",
+        "sponsor-operating-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "describe-firm-exposures",
+      "title": "Describe what the firm does that a policy may need to answer for",
+      "instruction": "Draft the firm profile that brokers and applications ask for: each entity the firm owns or manages and its role; employees, where they work and whether they drive for work; the office; services the firm provides, such as asset or property management; investor and personal data the firm holds and where it is kept; how money moves, with the approvals, dual control and callback rules from open-sponsor-bank-accounts; any retirement plan the firm sponsors; past claims and losses; and growth planned for the coming year. Mark the source of each answer and every unknown. The principals confirm the profile before any application uses it.",
+      "mode": "agent",
+      "modeBasis": "Assembling the profile from the firm file is drafting work; the principals confirm it.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "check-erisa-bond",
+      "title": "Have counsel decide whether anyone at the firm needs an ERISA bond",
+      "instruction": "Counsel decides whether ERISA's fidelity bond is required, and for whom, from a list of who would handle the money in each case below. With listed exceptions, ERISA requires every fiduciary of an employee benefit plan, and every person who handles its funds or other property, to be bonded against loss from fraud or dishonesty, and makes handling plan funds without the bond unlawful. Handling includes the power to withdraw from an account, sign checks or move funds. Two cases can reach the firm: a retirement plan it sponsors for employees, and a deal or fund entity whose assets may be plan assets because benefit plan investors hold 25 percent or more of the value of a class of its equity, where a plan covered by title I of ERISA, not only individual retirement accounts, is among them; for title I an IRA is generally not a pension plan.",
+      "mode": "human-online",
+      "modeBasis": "Whether ERISA's bond applies, and to whom, is a legal conclusion; an agent lists who handles which funds.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "describe-firm-exposures"
+      ],
+      "rules": [
+        "us-fed.erisa.plan-assets"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-29-1112",
+        "ecfr-29-2580",
+        "ecfr-29-2510-3-101",
+        "ecfr-29-2510-3-2"
+      ]
+    },
+    {
+      "id": "fund-coverage",
+      "title": "For a fund, insure the fund entities and settle who pays",
+      "instruction": "Read the fund's partnership agreement and memorandum for which insurance the fund may pay as a fund expense and which the management company pays, and for the indemnity the fund gives the general partner and the manager. Add to the requirements list that the management company, each general partner entity and each fund are to be insureds on the management liability policy, and ask in the submission how one limit would be shared among them. Split the premium between the fund and the manager only as the agreement allows, and record the split.",
+      "mode": "agent",
+      "modeBasis": "Reading the fund documents and carrying their terms into the requirements list is document work; the principals bind in the base steps.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "collect-insurance-requirements"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "consumes": [
+        "deal-entity-agreement",
+        "private-placement-memorandum"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "jv-coverage",
+      "title": "For a JV, carry the partner's insurance terms into the requirements",
+      "instruction": "Read the JV agreement's insurance terms: the coverages and limits the managing member must carry, whether the partner and the venture are additional insureds or loss payees, whether the venture or the managing member pays, and any approval the partner has over insurers or changes. Add each term to the requirements list before the submission goes out, confirm that certificates reach the partner as the agreement requires, and get the partner's consent before any change the agreement restricts.",
+      "mode": "agent",
+      "modeBasis": "Reading the agreement and carrying its terms into the requirements list is document work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "collect-insurance-requirements"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "check-agent-license",
+      "title": "Check each agent's license with the Texas Department of Insurance",
+      "instruction": "Before sharing the firm's profile, look up each agent or agency the principals are considering in the Texas Department of Insurance's licensee lists, which TDI publishes on the state's open data portal, or in the license search TDI points to, and record the license type, number, status, whether it includes a surplus lines license, and the date checked. In Texas a person may not solicit an application for insurance or aid in transacting an insurer's business without a license, and an agent who writes property and casualty insurance needs a general property and casualty license. TDI warns that selling insurance without a license is against the law. A name that does not appear, or a license that is not active, goes to the principals before anything is shared.",
+      "mode": "agent-browser",
+      "modeBasis": "TDI publishes its licensee lists on the state's open data portal for anyone to view, filter and export, so an agent can run the check.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "basis": "cited",
+      "sources": [
+        "tx-ins-4001",
+        "tx-ins-4051",
+        "tdi-agentlists",
+        "tdi-agent-lookup",
+        "tdi-find-agent"
+      ]
+    },
+    {
+      "id": "send-submission",
+      "title": "Send the broker the firm's submission for quotes",
+      "instruction": "Assemble the submission from the requirements list and the firm profile: the entities to insure; the coverages to quote, such as general liability for the office, professional or management liability, crime including funds transfer fraud and payments made on false instructions, cyber, hired and non-owned auto, workers' compensation where the firm has employees in Texas, and any bond counsel requires; each limit the documents require, as written; current policies and loss history; and the broker's applications, filled in from the profile. Answers about controls and data must describe what the firm actually does; an open question goes to the principals, never a guess. A principal approves the package before it goes to the broker through a secure channel.",
+      "mode": "agent",
+      "modeBasis": "Assembling the submission is drafting work; it leaves the firm only after a principal approves it.",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "collect-insurance-requirements",
+        "describe-firm-exposures",
+        "check-erisa-bond",
+        "fund-coverage",
+        "jv-coverage",
+        "check-agent-license"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "compare-quotes",
+      "title": "Compare each quote with the requirements and the firm's exposures",
+      "instruction": "Set the quotes side by side against the requirements list: coverage, limit and retention; who is insured, including each entity and fund the firm manages and the principals; insuring agreements and exclusions, especially whether crime coverage pays for funds transfer fraud and for payments sent on false instructions; claims-made terms, retroactive dates and reporting deadlines; additional insureds and waivers; cancellation notice; and premium. In Texas, check each admitted insurer on TDI's list of authorized insurance companies. In Texas, a surplus lines insurer is not licensed and may write coverage only through a surplus lines agent, so check the placing agent's surplus lines license; its documents must say that TDI does not audit its finances or review its solvency and that it is not a member of the Texas guaranty association. Mark every gap against a requirement; the principals choose.",
+      "mode": "agent-browser",
+      "modeBasis": "Comparing the quotes is document analysis and the license and insurer checks are public TDI records; the choice stays with the principals.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "send-submission"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-ins-981",
+        "tdi-company-lookup",
+        "tdi-agentlists"
+      ]
+    },
+    {
+      "id": "decide-workers-comp",
+      "title": "Decide whether to carry Texas workers' compensation",
+      "instruction": "If the firm has employees in Texas, the principals decide, with the broker's quote in hand, whether to carry workers' compensation; for most private employers in Texas it is elective. In an employee's injury suit, an employer without coverage cannot defend on the grounds that the employee was contributorily negligent, assumed the risk or was hurt by a co-worker's negligence, though the employee must still prove the employer's negligence. Record the decision and its reasons; the notices that follow from it are in give-workers-comp-notices.",
+      "mode": "human-online",
+      "modeBasis": "Whether to carry coverage is the principals' decision; an agent lays out the quote and the rules.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "compare-quotes"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "basis": "cited",
+      "sources": [
+        "tx-lab-406",
+        "tdi-dwc-employer"
+      ]
+    },
+    {
+      "id": "bind-coverage",
+      "title": "Decide the coverages and limits, sign the applications and bind",
+      "instruction": "The principals decide with the broker which coverages and limits to buy and which to decline, and record each decision with its reason, including any requirement the firm will not meet and who must be told. A principal signs each application after checking the answers, approves the premium and any financing of it, and binds coverage to start before the obligation that needs it, such as a loan closing, a JV signing or a first hire. Get a written binder for each policy, then the policy, and check the named insureds, limits and dates against the binder.",
+      "mode": "human-online",
+      "modeBasis": "Choosing coverage, signing applications and paying the premium are commitments only the principals can make.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "compare-quotes",
+        "decide-workers-comp"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "give-workers-comp-notices",
+      "title": "Give the Texas workers' compensation notices the decision calls for",
+      "instruction": "Give the notices the workers' compensation decision requires. Every employer tells each new hire in writing whether it has coverage, posts a notice saying so where employees will see it, in English, Spanish and any other language its employees need, and tells employees within 15 days after coverage starts or ends. An employer without coverage also files a notice of no coverage with the Division of Workers' Compensation each year between February 1 and April 30, and within 30 days after hiring its first employee; files a termination notice within 10 days after telling its insurer it is ending a policy; and, with five or more employees, reports each death, each injury causing more than one day's absence and each known occupational disease by the seventh day of the following month.",
+      "mode": "human-online",
+      "modeBasis": "The notices are posted at the workplace and filed under the employer's own Division account, so a person gives them; an agent can draft them and keep the dates.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "bind-coverage"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "basis": "cited",
+      "sources": [
+        "tx-lab-406",
+        "tdi-dwc-nonsubscriber",
+        "tac-28-110-101",
+        "tac-28-110-103",
+        "tac-28-110-105",
+        "tac-28-160-2"
+      ]
+    },
+    {
+      "id": "deliver-evidence",
+      "title": "Send certificates and endorsements to each party that requires them",
+      "instruction": "Ask the broker for the certificate and endorsements each requirement calls for, such as additional insured, waiver of subrogation and notice of cancellation, and check each against the requirement's wording before it goes out. A person approves each delivery, which goes through the notice channel the document names. Log what went to whom and when, and file the endorsements with the policies.",
+      "mode": "agent",
+      "modeBasis": "Requesting, checking and logging certificates is clerical work; each delivery outside the firm is approved first.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "bind-coverage"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "write-claim-procedure",
+      "title": "Write down how and when each policy's claims are reported",
+      "instruction": "For each policy, write the first steps when something happens: who calls the broker and the insurer, the notice method and deadline the policy sets, and what to preserve. Claims-made policies respond only to claims reported within their terms, so report anything that may become a claim as the policy defines it, without waiting for a demand. Tie the procedure to the situations it most often follows: a payment sent on false instructions (wire-instructions-change), exposed investor data (investor-data-exposed) and a suit against an entity the firm manages (deal-entity-sued).",
+      "mode": "agent",
+      "modeBasis": "Writing the procedure from the policies is drafting work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "bind-coverage"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "record-and-calendar",
+      "title": "Record each policy and calendar renewals, audits and notices",
+      "instruction": "Record each policy in the firm file: insurer, policy number, period, coverages and limits as written, retention, insureds, retroactive date, the claim notice address and deadline, and where the policy is stored. Calendar each renewal early enough to re-market it, any premium audit, and the dates set in give-workers-comp-notices. Where counsel requires an ERISA bond, calendar its amount check: the amount is fixed at the start of each plan year from the funds handled, and the surety must hold the Treasury's certificate of authority. When a new loan, deal, JV agreement, hire or office changes what the firm must carry, update the requirements list and flag it to the principals, who tell the broker before the change takes effect.",
+      "mode": "agent",
+      "modeBasis": "Keeping the policy record and the calendar is file work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "deliver-evidence",
+        "give-workers-comp-notices"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-29-1112",
+        "ecfr-29-2580"
+      ]
+    }
+  ],
   "outlineSteps": []
 }

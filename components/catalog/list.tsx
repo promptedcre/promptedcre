@@ -85,11 +85,15 @@ export function CatalogList({
   const showId = (v: string) => `${root}-show-${v}`;
   const groupId = (g: string) => `${root}-g-${safe(g)}`;
   const selectId = `${root}-g-select`;
-  const shows = [
-    { v: "all", label: "All", n: written.length + outlined.length },
-    { v: "written", label: "Written", n: written.length },
-    { v: "outline", label: "Outlined", n: outlined.length },
-  ];
+  // With nothing outlined, the written/outlined choice has nothing to choose between, so it goes.
+  const shows =
+    outlined.length === 0
+      ? []
+      : [
+          { v: "all", label: "All", n: written.length + outlined.length },
+          { v: "written", label: "Written", n: written.length },
+          { v: "outline", label: "Outlined", n: outlined.length },
+        ];
   const showOptions = shows.map((s) => ({ value: s.v, label: s.label, count: s.n }));
   const groupOptions = [{ value: "all", label: "All" }, ...groups.map((g) => ({ value: safe(g.key), label: g.label }))];
   // Where the group's pills take over from its select: 768 px, or 1024 px for a long list of choices.
@@ -123,6 +127,7 @@ export function CatalogList({
         const left = (s.v === "outline" ? 0 : w) + (s.v === "written" ? 0 : o);
         if (left === 0) out.push(`${pick(g.key)}:has(#${showId(s.v)}:checked) [data-empty]{display:block !important}`);
       }
+      if (shows.length === 0 && w + o === 0) out.push(`${pick(g.key)} [data-empty]{display:block !important}`);
     }
     return out.join("\n");
   };
@@ -174,7 +179,7 @@ export function CatalogList({
       <div className="grid gap-y-3 border-t border-line pt-3 md:grid-cols-[minmax(0,1fr)_auto] md:gap-x-8 md:gap-y-0 md:pt-0">
         <div className="flex min-w-0 flex-col gap-3 print:hidden md:col-span-2 md:flex-row md:flex-wrap md:items-center md:gap-x-8 md:border-b md:border-line md:py-3">
           <ListSearch rootId={root} noun={noun} />
-          <Segmented name={`${root}-show`} legend={scope} options={showOptions} idOf={showId} legendClassName="max-md:hidden" />
+          {shows.length > 0 && <Segmented name={`${root}-show`} legend={scope} options={showOptions} idOf={showId} legendClassName="max-md:hidden" />}
           <Segmented name={`${root}-g`} legend={groupLegend} options={groupOptions} idOf={groupId} className={wide ? "max-lg:hidden" : "max-md:hidden"} />
           <FilterSelect id={selectId} legend={groupLegend} options={groupOptions} className={wide ? "lg:hidden" : "md:hidden"} />
         </div>
@@ -218,7 +223,7 @@ export function CatalogList({
               </h2>
               <p className="type-body-s m-0 flex gap-x-4 tabular-nums text-faint">
                 <span data-depth="full">{rows.length} written</span>
-                <span data-depth="outline">{outs.length} outlined</span>
+                {outlined.length > 0 && <span data-depth="outline">{outs.length} outlined</span>}
               </p>
             </div>
 

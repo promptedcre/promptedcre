@@ -139,6 +139,15 @@
       "tier": "primary"
     },
     {
+      "id": "tac-115-1",
+      "url": "https://www.law.cornell.edu/regulations/texas/7-Tex-Admin-Code-SS-115-1",
+      "title": "7 Tex. Admin. Code 115.1, General Provisions (subsections (a)(9), finder, and (c)(2)(B)(v), finder registration)",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "individual who receives compensation for introducing an accredited investor to an issuer or an issuer to an accredited investor",
+      "tier": "primary"
+    },
+    {
       "id": "efd-form-d-states",
       "url": "https://nasaaefd.org/About/FormDStates",
       "title": "Form D Reporting Requirements by State",
@@ -520,7 +529,7 @@
     {
       "id": "list-notice-states",
       "title": "List the states that need a notice",
-      "instruction": "From the investor register, list every state where an investor lives. Many states require a Form D notice and most charge a fee; EFD publishes what each state collects. Texas requires a notice for any Rule 506 sale to a Texas investor. Also list who, if anyone, is paid to solicit in each state: Texas allows no commission or fee to anyone soliciting Texas investors under Rule 506 unless that person is registered in Texas as a dealer or agent.",
+      "instruction": "From the investor register, list every state where an investor lives. Many states require a Form D notice and most charge a fee; EFD publishes what each state collects. Texas requires a notice for any Rule 506 sale to a Texas investor. Also list who, if anyone, is paid to solicit in each state: Texas allows no commission or fee to anyone soliciting Texas investors under Rule 506 unless that person is registered in Texas as a dealer or agent, or as an individual finder paid only to introduce accredited investors.",
       "mode": "agent",
       "modeBasis": "The state list comes from the investor register and EFD's published state settings.",
       "risk": "medium",
@@ -544,13 +553,14 @@
         "sec-form-d-compliance-guide",
         "efd-form-d-states",
         "ssb-exemptions",
-        "tac-114-4"
+        "tac-114-4",
+        "tac-115-1"
       ]
     },
     {
       "id": "file-texas-notice",
       "title": "File the Texas notice through EFD and pay the fee",
-      "instruction": "Texas wants the Form D notice and fee when the Form D is filed with the SEC, and no later than 15 days after the first sale in Texas. Both go through EFD, which collects state fees and its own system fee by ACH. The Texas fee is one-tenth of 1% of the offering amount, capped at $500. The notice stays effective until the offering is completed or terminated, so there is no annual renewal. An issuer that paid less than the cap and then offers more than its notice covered owes an amended notice and three times the fee shortfall, plus interest.",
+      "instruction": "Texas wants the Form D notice and fee when the Form D is filed with the SEC, and no later than 15 days after the first sale in Texas. Both go through EFD, which collects state fees and its own system fee by ACH; so does a late notice when the Form D is already on file, after counsel's review. The Texas fee is one-tenth of 1% of the offering amount, capped at $500. The notice stays effective until the offering is completed or terminated, so there is no annual renewal. An issuer that paid less than the cap and then offers more than its notice covered owes an amended notice and three times the fee shortfall, plus interest.",
       "mode": "human-online",
       "modeBasis": "EFD needs a registered filer account and an ACH payment authorized by a person.",
       "actor": "principal",

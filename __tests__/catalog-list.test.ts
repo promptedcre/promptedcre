@@ -2,7 +2,7 @@ import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 import { CatalogList, type ListGroup } from "@/components/catalog/list";
-import { URGENCIES, getCatalog, pick } from "@/components/catalog/data";
+import { type OutlineRecord, URGENCIES, getCatalog, pick } from "@/components/catalog/data";
 import { titleKey, titleMatches, titleWords } from "@/components/catalog/title-words";
 
 // The list /playbooks and /situations are for (D224, the owner's "Pills + search"), rendered to
@@ -25,6 +25,21 @@ const playbooks = render({
   noun: "playbooks and audits",
   written: pbWritten,
   outlined: pbOutlined,
+  groups: phases,
+  groupOf: (r) => (r.kind === "audit" ? "audits" : r.phase),
+  groupLegend: "Phase",
+  detail: "summary",
+});
+
+// Every catalog record is written now, so the written/outlined pills are drawn for a catalog
+// with one made-up outline added; with none, the pills go (decision 117).
+const sample = pbWritten.find((r) => r.kind === "process")!;
+const madeUp: OutlineRecord = { id: "an-outlined-example", slug: "an-outlined-example", title: "An outlined example", kind: "process", phase: sample.phase, planned: 3, no: 999, summary: "A made-up outline for the test.", trigger: null, urgency: null };
+const withOutline = render({
+  id: "catalog",
+  noun: "playbooks and audits",
+  written: pbWritten,
+  outlined: [madeUp],
   groups: phases,
   groupOf: (r) => (r.kind === "audit" ? "audits" : r.phase),
   groupLegend: "Phase",
@@ -71,25 +86,34 @@ describe("the filter box's words", () => {
 
 describe("the catalog list's filters", () => {
   it("are radios in two pill tracks, the first choice of each chosen with scripts off", () => {
-    expect(count(playbooks, 'class="cl-seg"')).toBe(2);
-    expect(count(playbooks, 'class="cl-thumb"')).toBe(2);
-    expect(radios(playbooks, "catalog-show")).toEqual([
+    expect(count(withOutline, 'class="cl-seg"')).toBe(2);
+    expect(count(withOutline, 'class="cl-thumb"')).toBe(2);
+    expect(radios(withOutline, "catalog-show")).toEqual([
       { value: "all", checked: true },
       { value: "written", checked: false },
       { value: "outline", checked: false },
     ]);
-    const groups = radios(playbooks, "catalog-g");
+    const groups = radios(withOutline, "catalog-g");
     expect(groups.map((g) => g.value)).toEqual(["all", ...phases.map((p) => p.key)]);
     expect(groups.filter((g) => g.checked).map((g) => g.value)).toEqual(["all"]);
   });
 
+  it("drop the written/outlined choice and the outlined counts when nothing is outlined", () => {
+    expect(pbOutlined).toEqual([]);
+    expect(count(playbooks, 'class="cl-seg"')).toBe(1);
+    expect(radios(playbooks, "catalog-show")).toEqual([]);
+    expect(radios(playbooks, "catalog-g").map((g) => g.value)).toEqual(["all", ...phases.map((p) => p.key)]);
+    expect(playbooks).not.toMatch(/\d+ outlined/);
+    expect(withOutline).toMatch(/\d+ outlined/);
+  });
+
   it("slide the highlight to the chosen pill with CSS alone, one column per choice", () => {
-    expect(playbooks).toContain('#catalog:has(#catalog-show-written:checked) .cl-thumb[data-seg="catalog-show"]{translate:100% 0}');
-    expect(playbooks).toContain('#catalog:has(#catalog-show-outline:checked) .cl-thumb[data-seg="catalog-show"]{translate:200% 0}');
-    phases.forEach((p, i) => expect(playbooks).toContain(`#catalog:has(#catalog-g-${p.key}:checked) .cl-thumb[data-seg="catalog-g"]{translate:${(i + 1) * 100}% 0}`));
+    expect(withOutline).toContain('#catalog:has(#catalog-show-written:checked) .cl-thumb[data-seg="catalog-show"]{translate:100% 0}');
+    expect(withOutline).toContain('#catalog:has(#catalog-show-outline:checked) .cl-thumb[data-seg="catalog-show"]{translate:200% 0}');
+    phases.forEach((p, i) => expect(withOutline).toContain(`#catalog:has(#catalog-g-${p.key}:checked) .cl-thumb[data-seg="catalog-g"]{translate:${(i + 1) * 100}% 0}`));
     // the first choice needs no rule: the pill starts under it
-    expect(playbooks).not.toContain("#catalog-show-all:checked) .cl-thumb");
-    expect(playbooks).toContain('style="--n:3"');
+    expect(withOutline).not.toContain("#catalog-show-all:checked) .cl-thumb");
+    expect(withOutline).toContain('style="--n:3"');
   });
 
   it("give the group a select where its pills would not fit: below 1024 px for the phases, on a phone for how fast", () => {

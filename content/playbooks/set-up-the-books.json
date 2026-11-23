@@ -3,21 +3,452 @@
   "slug": "set-up-the-books",
   "kind": "process",
   "title": "Set up the books and chart of accounts",
-  "summary": "Choose the accounting system, chart of accounts and month-end routine for the sponsor and each deal entity.",
+  "summary": "Choose the accounting system, chart of accounts and month-end routine for the firm's own entities and each deal entity.",
   "phase": "stand-up",
   "order": 35,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
+  "lastVerified": "2026-11-20",
+  "requires": [
+    "form-sponsor-entity",
+    "open-sponsor-bank-accounts",
+    "choose-counsel-and-cpa"
+  ],
+  "consumes": [
+    "deal-entity-agreement",
+    "jv-agreement",
+    "investor-register",
+    "settlement-statement",
+    "loan-documents"
+  ],
   "produces": [],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
+  "sources": [
+    {
+      "id": "irs-what-kind",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/what-kind-of-records-should-i-keep",
+      "title": "What kind of records should I keep (page reviewed August 3, 2026)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-20",
+      "quote": "All requirements that apply to hard copy books and records also apply to electronic records.",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-706",
+      "url": "https://www.law.cornell.edu/uscode/text/26/706",
+      "title": "26 U.S.C. 706, Taxable years of partner and partnership (subsection (b))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-1-706-1",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.706-1",
+      "title": "26 CFR 1.706-1, Taxable years of partner and partnership (paragraph (b)(2), required taxable year and exceptions)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-20",
+      "quote": "the taxable year that produces the least aggregate deferral of income",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-448",
+      "url": "https://www.law.cornell.edu/uscode/text/26/448",
+      "title": "26 U.S.C. 448, Limitation on use of cash method of accounting (subsections (a) to (d))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-461",
+      "url": "https://www.law.cornell.edu/uscode/text/26/461",
+      "title": "26 U.S.C. 461, General rule for taxable year of deduction (paragraph (i)(3), tax shelter defined)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-1256",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1256",
+      "title": "26 U.S.C. 1256 (paragraph (e)(3)(B) and (C), syndicate defined)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-20",
+      "quote": "more than 35 percent of the losses of such entity during the taxable year are allocable to limited partners or limited entrepreneurs",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-168",
+      "url": "https://www.law.cornell.edu/uscode/text/26/168",
+      "title": "26 U.S.C. 168, Accelerated cost recovery system (subsection (c), applicable recovery period)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-p946",
+      "url": "https://www.irs.gov/publications/p946",
+      "title": "Publication 946 (2025), How To Depreciate Property (land)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-20",
+      "quote": "You cannot depreciate the cost of land because land does not wear out, become obsolete, or get used up.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-1-704-1",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.704-1",
+      "title": "26 CFR 1.704-1, Partner's distributive share (paragraph (b)(2)(iv), maintenance of capital accounts)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-i1065",
+      "url": "https://www.irs.gov/instructions/i1065",
+      "title": "Instructions for Form 1065 (2025), Item L, Partner's Capital Account Analysis (tax-basis method)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-iw9",
+      "url": "https://www.irs.gov/instructions/iw9",
+      "title": "Instructions for the Requester of Form W-9 (03/2024)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-20",
+      "quote": "The backup withholding rate is 24% for reportable payments.",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-i1099mec",
+      "url": "https://www.irs.gov/instructions/i1099mec",
+      "title": "Instructions for Forms 1099-MISC and 1099-NEC (12/2026)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-20",
+      "quote": "Enter nonemployee compensation (NEC) of $2,000 or more.",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-6001",
+      "url": "https://www.law.cornell.edu/uscode/text/26/6001",
+      "title": "26 U.S.C. 6001, Notice or regulations requiring records, statements, and special returns",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-1-6001-1",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.6001-1",
+      "title": "26 CFR 1.6001-1, Records (paragraphs (a) and (e))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-20",
+      "quote": "shall be retained so long as the contents thereof may become material in the administration of any internal revenue law",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-franchise",
+      "url": "https://comptroller.texas.gov/taxes/franchise/",
+      "title": "Franchise Tax (due date)",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-20",
+      "quote": "The annual franchise tax report is due May 15.",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "choose-the-system",
+      "title": "Choose the accounting system and open books for each entity",
+      "instruction": "A principal subscribes to an accounting system and opens a separate set of books for each entity the firm owns or manages, as each is formed, and for each series where deals sit in series of one LLC, as set-up-series requires. Look for: a separate company file or ledger for each entity; a separate login and role for each user; an audit trail of every change; the ability to lock a closed month; read-only bank connections; and exports of the ledger and reports in open formats. The IRS lets a business use any record system that clearly shows its income and expenses, and the requirements for paper books apply to electronic records too. The agent works from exports or through a limited user the principals grant, never a principal's login. Record who keeps each entity's books and who reviews them.",
+      "mode": "human-online",
+      "modeBasis": "Subscribing commits the firm to a vendor's terms and fees in a principal's name; an agent can compare the products beforehand.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "market": "formation-back-office",
+      "basis": "cited",
+      "sources": [
+        "irs-what-kind"
+      ],
+      "rules": [
+        "us-tx.boc.series-llc"
+      ]
+    },
+    {
+      "id": "settle-year-and-method",
+      "title": "Have the CPA settle each entity's tax year and accounting method",
+      "instruction": "The CPA decides each entity's tax year and method of accounting, with the reasons recorded. A partnership's tax year follows its partners: the year of partners holding more than half of profits and capital; failing that, the year of all its principal partners, those with 5 percent or more; failing that, the year giving the partners the least aggregate deferral of income. Another year needs a section 444 election, a qualifying 52-53-week year, or a business purpose the IRS approves; deferring partners' income is not one. A partnership with a C corporation partner may not use the cash method unless it meets the gross receipts test, and a tax shelter may not use it at all. A syndicate is a tax shelter: a partnership or LLC allocating more than 35 percent of its losses for the year to limited partners or limited entrepreneurs, not counting interests of active managers.",
+      "mode": "human-online",
+      "modeBasis": "The tax year and the accounting method are tax judgments the CPA makes; an agent gathers the ownership facts they rest on.",
+      "actor": "cpa",
+      "licensed": "cpa",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "consumes": [
+        "deal-entity-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-26-706",
+        "ecfr-26-1-706-1",
+        "usc-26-448",
+        "usc-26-461",
+        "usc-26-1256"
+      ]
+    },
+    {
+      "id": "build-chart-of-accounts",
+      "title": "Build one chart of accounts that every entity uses",
+      "instruction": "Draft one chart of accounts that every entity uses. Include cash by bank account; tenant receivables; expense recoveries billed on estimate, with the year's expected true-up; reserves and escrows the lender holds; deposits and prepaid items; the property at cost, split into land, buildings, land improvements, tenant improvements and leasing costs, each with accumulated depreciation or amortization; loan principal, loan costs and accrued interest; tenant security deposits and prepaid rent as liabilities; due-to and due-from accounts for each related entity; members' capital by class; and income and expense lines matching the investor report, the loan's reporting and the tax return. Keep land apart, since land is never depreciated, and buildings apart, since under the general depreciation system residential rental property is recovered over 27.5 years and nonresidential real property over 39. A deal entity's opening entries come from its settlement statement. The CPA approves the chart first.",
+      "mode": "agent",
+      "modeBasis": "Drafting the chart from the entity list and the reports it must feed is drafting work; the CPA approves it.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-the-system",
+        "settle-year-and-method"
+      ],
+      "rules": [
+        "us-fed.irc.depreciation-recovery-periods"
+      ],
+      "consumes": [
+        "settlement-statement",
+        "loan-documents"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-26-168",
+        "irs-p946"
+      ]
+    },
+    {
+      "id": "set-up-capital-ledger",
+      "title": "Keep a capital ledger for each member of every deal or fund entity",
+      "instruction": "For each deal or fund entity, keep a ledger for each member, the firm's own entity included, linked from the investor register but separate from it, with every contribution, distribution and allocation by date and source, the capital account and, where the governing agreement uses them, unreturned capital and preferred return owed. Use the agreement's own definitions. Under the partnership regulations, a capital account rises with money and the net fair value of property contributed and with income and gain allocated, and falls with money and the net value of property distributed and with loss and deduction allocated; an allocation has economic effect only if capital accounts are kept that way for the partnership's whole life. Schedule K-1 generally reports each partner's capital on the tax basis, so keep that figure too, or have the CPA keep it. make-a-distribution and file-partnership-return-and-k1s draw on this ledger.",
+      "mode": "agent",
+      "modeBasis": "Posting contributions, distributions and allocations from the books and the agreement is record-keeping an agent can do; the CPA reviews the tax figures.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-chart-of-accounts"
+      ],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-26-1-704-1",
+        "irs-i1065"
+      ]
+    },
+    {
+      "id": "collect-vendor-w9s",
+      "title": "Get a W-9 before paying a vendor, and track 1099 payments",
+      "instruction": "Before an entity first pays a vendor, request a Form W-9 for the vendor's taxpayer identification number, and record only that it is on file and where. If a payee does not furnish a number, the payer must withhold 24 percent of reportable payments as backup withholding until it does, or may owe the amount itself. Track payments by payee and type against the current IRS reporting threshold, raised for tax years beginning after 2025. Nonemployee compensation goes on Form 1099-NEC, including legal fees paid to a corporation. Office rent paid to a landlord that is not a corporation goes on Form 1099-MISC, unless it is paid to a real estate agent or property manager, who reports the rent it pays over to the owner. Payments to most other corporations are not reported. Ten or more information returns in all must be filed electronically.",
+      "mode": "agent",
+      "modeBasis": "Requesting forms and tracking payments is clerical work; each request to a vendor is approved before it goes out, and tax numbers stay on the forms.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-the-system"
+      ],
+      "market": "formation-back-office",
+      "basis": "cited",
+      "sources": [
+        "irs-iw9",
+        "irs-i1099mec"
+      ]
+    },
+    {
+      "id": "keep-entry-support",
+      "title": "Keep the support behind every entry, filed by entity and year",
+      "instruction": "File the support for every entry with the books, by entity and year, so each figure on a return or an investor report traces to a document: bank statements; invoices and receipts with proof of payment showing the payee, amount, date and purpose; closing statements and the records of when and how each property was acquired, improved and depreciated; loan documents; the sources behind the capital ledger; and the workpapers behind each return. The IRS requires anyone who files an information return to keep books and records sufficient to establish each item on it, available for inspection as long as they may be material, and holds electronic records to the same requirements as paper. How long each record is kept follows the retention schedule written under set-up-document-storage; until that schedule is approved, keep everything, and a lender, the investors or the governing agreement may require longer.",
+      "mode": "agent",
+      "modeBasis": "Filing documents against entries and checking that each entry has support is clerical work an agent can do.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-the-system"
+      ],
+      "consumes": [
+        "settlement-statement",
+        "loan-documents"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-26-6001",
+        "ecfr-26-1-6001-1",
+        "irs-what-kind"
+      ]
+    },
+    {
+      "id": "connect-bank-feeds",
+      "title": "Connect each bank account to its entity's books, read-only",
+      "instruction": "A principal connects each account opened under open-sponsor-bank-accounts, form-deal-entity or set-up-series (open-series-accounts) to the right entity's books through a bank feed, or sets statements to download each month, so entries start from the bank's own record. Use a connection that can only read, never one that can move money. Map each feed to its cash account in the chart and check the opening balance against the first statement. The bookkeeper and the agent work from the feed and the statements; neither holds a bank login that can make payments.",
+      "mode": "human-online",
+      "modeBasis": "Authorizing a bank connection takes a principal's bank sign-in, which an agent must not hold.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-chart-of-accounts"
+      ],
+      "market": "formation-back-office",
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "fund-books",
+      "title": "For a fund, add commitments, capital calls and the management fee",
+      "instruction": "Add to a fund's books each partner's commitment, capital called, contributions received and unfunded commitment, matching the notices sent under call-capital-fund-closing; a receivable for each call not yet paid; the management fee computed from the partnership agreement's basis, rate, period and any offsets, with the calculation kept for each period; and fund expenses kept apart from the management company's as the agreement allocates them, against any cap. Where the agreement runs deal by deal, keep each investment's results separately too. The management company's books record the fee as income on the same dates, and each general partner entity's books record its interest in its fund.",
+      "mode": "agent",
+      "modeBasis": "Applying the partnership agreement's terms in the books is bookkeeping an agent can do; the fee calculation is checked in the monthly review.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-up-capital-ledger"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "deal-entity-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "jv-books",
+      "title": "For a JV, set up the venture's books to produce the partner's reports",
+      "instruction": "Read the JV agreement's accounting and reporting terms: the accounting basis and year, who keeps the books, the approved budget, each report owed to the partner and its deadline, any audit or review and who pays for it, and the partner's right to inspect records. Set the venture's chart, classes and close calendar so each report comes straight from the books, such as actual results against the approved budget, capital accounts by member and the loan's reporting package. Keep the firm's member entity's books separate; its share of the venture comes from the venture's statements. The reporting schedule written under negotiate-jv-agreement is the checklist.",
+      "mode": "agent",
+      "modeBasis": "Matching the books to the agreement's reporting terms is document and bookkeeping work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-up-capital-ledger"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "close-each-month",
+      "title": "Close each entity's books every month",
+      "instruction": "Within a set number of days after each month ends, close each entity's books: match every transaction to its support; reconcile every bank, reserve and lender-held account to its statement and list the uncleared items; under either method, list unpaid bills and fees owed at month end, and under the accrual method record rent billed but not collected and interest accrued; post depreciation and amortization from the CPA's schedule; agree each due-to and due-from balance, including those between series, with the other side's books; tie the capital ledger to members' capital; and produce a balance sheet and an income statement. List every item that does not reconcile and what was tried; none is forced to agree. make-a-distribution starts from these reconciled balances.",
+      "mode": "agent",
+      "modeBasis": "Reconciling from bank feeds, statements and the ledger is bookkeeping an agent can do; a person reviews it in the next step.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "connect-bank-feeds",
+        "set-up-capital-ledger",
+        "fund-books",
+        "jv-books"
+      ],
+      "market": "formation-back-office",
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "review-and-lock",
+      "title": "Have someone other than the preparer review and lock each month",
+      "instruction": "A principal who did not prepare the close reviews it: each reconciliation against its statement, uncleared items older than a month, unusual or round-figure entries, payments to related parties and to new payees, intercompany balances, and results against the budget. Questions go back to the preparer and are answered in writing. The reviewer signs off with the date and the version reviewed, and the month is locked in the system, so a later change needs a dated, approved entry. A firm with one principal has an outside bookkeeper or the CPA prepare or review, so two people always take part.",
+      "mode": "human-online",
+      "modeBasis": "The review is a person's sign-off on someone else's work; an agent prepares the package and records the answers.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "close-each-month"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "calendar-year-end",
+      "title": "Calendar the year-end close and the filings the books feed",
+      "instruction": "Put on the firm's calendar, for each entity: the year-end close and its review; a December check that every vendor paid during the year has a W-9 on file; Forms 1099-NEC, furnished to recipients and filed with the IRS by January 31; Forms 1099-MISC, furnished by January 31 and filed by February 28 on paper or March 31 electronically, each date moving to the next business day when it falls on a weekend or legal holiday; the year-end package to the CPA ahead of file-partnership-return-and-k1s; and in Texas each entity's franchise tax report, due May 15 or the next business day, under file-texas-franchise-report. Add the loan's and any JV partner's reporting dates. Enter rule-based dates through the deadline-calendar.",
+      "mode": "agent",
+      "modeBasis": "The dates follow from published IRS and Comptroller rules and the firm's agreements, so an agent can set and track them.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "review-and-lock",
+        "collect-vendor-w9s"
+      ],
+      "rules": [
+        "us-tx.franchise-tax.basics"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "basis": "cited",
+      "sources": [
+        "irs-i1099mec",
+        "cpa-franchise"
+      ]
+    }
+  ],
   "outlineSteps": []
 }

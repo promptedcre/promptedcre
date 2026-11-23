@@ -7,17 +7,445 @@
   "phase": "stand-up",
   "order": 40,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
+  "lastVerified": "2026-11-20",
+  "requires": [
+    "form-sponsor-entity"
+  ],
+  "consumes": [
+    "certificate-of-formation",
+    "sponsor-operating-agreement",
+    "ein-confirmation",
+    "deal-entity-agreement",
+    "investor-register",
+    "subscription-agreement",
+    "investor-questionnaire",
+    "accreditation-verification-letter",
+    "wire-instructions",
+    "private-placement-memorandum",
+    "jv-agreement"
+  ],
   "produces": [],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
+  "sources": [
+    {
+      "id": "tx-boc-3",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.3.htm",
+      "title": "Texas Business Organizations Code, Chapter 3 (Sections 3.151 to 3.153, books and records of filing entities)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "quote": "can be converted into written paper form within a reasonable time",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-101",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.101.htm",
+      "title": "Texas Business Organizations Code, Chapter 101 (Sections 101.054(e), 101.501 to 101.503, 101.602 and 101.603)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "quote": "the records of the limited liability company shall not include e-mails, text messages or similar electronic communications",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-153",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.153.htm",
+      "title": "Texas Business Organizations Code, Chapter 153 (Sections 153.004(a)(3) and 153.551 to 153.5521, limited partnership records)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "make the records available in that office not later than the fifth day after the date on which a written request",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bcc-521",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.521.htm",
+      "title": "Texas Business and Commerce Code, Chapter 521, Identity Theft Enforcement and Protection Act (Sections 521.002, 521.052 and 521.053)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "quote": "not later than the 60th day after the date on which the person determines that the breach occurred",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-502",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.502",
+      "title": "17 CFR 230.502, General conditions to be met (paragraph (c), limitation on manner of offering)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-20",
+      "quote": "neither the issuer nor any person acting on its behalf shall offer or sell the securities by any form of general solicitation or general advertising",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bcc-322",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.322.htm",
+      "title": "Texas Business and Commerce Code, Chapter 322, Uniform Electronic Transactions Act (Sections 322.005, 322.007, 322.009 and 322.012)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "quote": "remains accessible for later reference",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-7001",
+      "url": "https://www.law.cornell.edu/uscode/text/15/7001",
+      "title": "15 U.S.C. 7001, General rule of validity (E-SIGN Act, subsection (d), retention of contracts and records)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-20",
+      "quote": "accurately reflects the information set forth in the contract or other record",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-keep-records",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records",
+      "title": "How long should I keep records?",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-20",
+      "quote": "Keep employment tax records for at least 4 years after the date that the tax becomes due or is paid, whichever is later.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bcc-72",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.72.htm",
+      "title": "Texas Business and Commerce Code, Chapter 72 (Sections 72.002 to 72.004, disposal of business records)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "quote": "modify, by shredding, erasing, or other means, the personal identifying information so as to make the information unreadable or undecipherable",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "inventory-required-records",
+      "title": "List the records each Texas LLC must keep and who supplies each",
+      "instruction": "List the records Texas requires for each LLC the firm runs, and who supplies each. Every filing entity keeps books of account and a current record of each owner's name and mailing address; an LLC keeps minutes only if its governing documents require them. A Texas LLC also keeps a current list of each member's interest and class, six years of tax returns, its certificate of formation and written company agreement with every amendment, signed powers of attorney, documents creating any class and, unless its written agreement states them, each member's contributions, the dates and events requiring more, the events requiring winding up and each admission date. It keeps this list at its principal office in the United States or produces it there within five days of a written request, keeps that office's address at its registered office, and may keep records electronically if printable within a reasonable time.",
+      "mode": "agent",
+      "modeBasis": "Listing the statutory records and matching them to the firm's documents is file work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "consumes": [
+        "certificate-of-formation",
+        "sponsor-operating-agreement",
+        "ein-confirmation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-3",
+        "tx-boc-101"
+      ]
+    },
+    {
+      "id": "fund-lp-records",
+      "title": "For a fund formed as a Texas limited partnership, add its records",
+      "instruction": "If a fund is a Texas limited partnership, add the records the partnership statute lists, kept at its principal office in the United States or made available there within five days of a written request. They are a current list of partners' names and mailing addresses, general and limited partners listed apart, each general partner's last known street address and each partner's interest and class; six years of tax returns; the partnership agreement and certificate of formation with every amendment; documents creating any class; signed powers of attorney; unless the agreement states them, each partner's contributions made and promised, the dates and events requiring more, the events requiring winding up and each admission date; and the books of account. Keep the principal office's street address at the registered office, and keep each fund's records apart from the management company's and the general partner's.",
+      "mode": "agent",
+      "modeBasis": "Adding the statutory list to the inventory is file work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "inventory-required-records"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ],
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "consumes": [
+        "deal-entity-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-153"
+      ]
+    },
+    {
+      "id": "design-folder-structure",
+      "title": "Set one folder structure for the firm, each entity, each deal and each offering",
+      "instruction": "Set out one folder structure and one naming rule for every record the firm keeps. Give the firm's entity records, tax, insurance and advisers one folder; each deal entity and each fund one, for its entity records, books, loan, property and tax files; each deal one, from pursuit through closing; and each offering one, for its locked documents and investor files. Keep each signed final apart from drafts, and name files by entity, date, document and version. If the firm uses series, keep each series' records apart as set-up-series requires. Write the structure down so everyone files the same way.",
+      "mode": "agent",
+      "modeBasis": "Designing and writing down a filing structure is drafting an agent can do.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "inventory-required-records",
+        "fund-lp-records"
+      ],
+      "rules": [
+        "us-tx.boc.series-llc"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "write-access-table",
+      "title": "Write who may see and change each folder, by role",
+      "instruction": "Write an access table with one row per folder and one column per role: each principal, staff, outside counsel, the CPA, the property manager, each lender and each investor. Mark each cell none, view or edit, and give each role only what its work needs. Investors see only their own files and the documents cleared for their offering; a lender sees only its own loan's room; an outside adviser sees only the matters it is engaged on. Add one restricted area for tax forms, identity documents and bank details, open only to the few who need it. Name two principals as administrators so the firm is never locked out, and require multi-factor sign-in on every account. A principal approves the table before anyone is given access.",
+      "mode": "agent",
+      "modeBasis": "Drafting the table is document work; a principal approves it and an administrator applies it.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "design-folder-structure"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "protect-sensitive-information",
+      "title": "Keep investors' sensitive personal information in a restricted, encrypted area",
+      "instruction": "Mark which records hold sensitive personal information and keep them in one restricted, encrypted area. In Texas that means a person's name with an unencrypted Social Security number, driver's license or government ID number, or financial account number with the code that opens the account, and health information. A business must keep reasonable procedures to protect it and must destroy such records it will not keep. If it is acquired without authority, each affected person must be told without unreasonable delay and within 60 days after the business determines the breach occurred, the attorney general within 30 days if at least 250 Texans are affected, and the national credit bureaus if more than 10,000 people are told. Encrypted data still counts if the key was taken. Counsel says whether other rules apply; investor-data-exposed handles a breach.",
+      "mode": "agent",
+      "modeBasis": "Classifying records and placing them by a written rule is file work; counsel answers what other law applies.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "design-folder-structure"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "consumes": [
+        "investor-questionnaire",
+        "wire-instructions"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-bcc-521"
+      ]
+    },
+    {
+      "id": "principal-sets-up-accounts",
+      "title": "Open the storage accounts and apply the structure and access table",
+      "instruction": "A principal, as administrator, opens the firm's storage and backup accounts in the firm's name, not in a personal account, turns on multi-factor sign-in for every user, creates the folder structure and applies the approved access table. The second administrator confirms they can sign in. Keep the account recovery details where both administrators, and no one else, can reach them. Give the agent only the access its role has in the table, never a principal's own sign-in. Record the accounts, the administrators and the date in the firm file.",
+      "mode": "human-online",
+      "modeBasis": "Opening accounts and granting access needs an administrator's sign-in, which an agent does not hold.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "write-access-table",
+        "protect-sensitive-information"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "set-up-investor-files",
+      "title": "Set up one file per investor for each offering",
+      "instruction": "For each offering, set up one file per investor for what onboarding produces: the signed subscription agreement and questionnaire, any accreditation verification, the tax form, identity documents, payment and distribution instructions and the confirmations of funds received, and later each statement, notice and K-1 the investor receives. Put tax forms, identity documents and bank details in the restricted area, and keep in the investor register only that each is on file and where. Each investor gets access to their own file and the offering's cleared documents only through the delivery onboard-an-investor makes. Onboard-an-investor and the reporting playbooks fill the files.",
+      "mode": "agent",
+      "modeBasis": "Creating folders and filing rules is setup work an agent can do with the access its role has.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "principal-sets-up-accounts"
+      ],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register",
+        "subscription-agreement",
+        "investor-questionnaire",
+        "accreditation-verification-letter"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "set-up-offering-data-room",
+      "title": "Set up a data room for each offering, closed to the public",
+      "instruction": "For each offering, set up a data room that holds only the locked offering set and the diligence package counsel cleared, read-only, with every view and download logged. If the firm uses the investor portal, the room set-up-investor-portal/set-up-offering-room builds is the offering's data room, and this step keeps only the archived copy, under the same rules. Unless the offering relies on Rule 506(c) or Rule 504(b)(1), neither the issuer nor anyone acting for it may offer or sell by general solicitation or general advertising, so the room is never public and never reachable by an open link. Grant no access here: people are added only through the approved sends in present-the-deal-to-investors and onboard-an-investor, and those who did not invest are removed when the offering closes. Keep the room's access log with the send log.",
+      "mode": "agent",
+      "modeBasis": "Building the room and its logging is setup work; who may see it is decided in the approved sends.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "principal-sets-up-accounts"
+      ],
+      "rules": [
+        "us-fed.reg-d.general-solicitation"
+      ],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "private-placement-memorandum"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-502"
+      ]
+    },
+    {
+      "id": "set-up-outside-party-rooms",
+      "title": "Set up separate rooms for each lender and any capital partner",
+      "instruction": "For each loan, set up a room that holds only the request package and what that lender asks for in diligence, with no investor files and none of the firm's own records. Lenders are added through the sends in source-acquisition-debt and removed when the loan closes or the lender drops out. In a joint venture, set up one shared room with the capital partner for the reports and notices the venture agreement requires. The capital partner is added only through a send a principal approves, and sees nothing else. Log every grant and removal of access in each room.",
+      "mode": "agent",
+      "modeBasis": "Building the rooms and the access log is setup work; access follows the sends a principal approves elsewhere.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "principal-sets-up-accounts"
+      ],
+      "consumes": [
+        "jv-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "keep-signed-records",
+      "title": "Keep each signed document as one complete, final electronic record",
+      "instruction": "File every signed document as one complete final copy, with all signatures, exhibits and attachments, and with the signing service's completion record where it was signed electronically. In Texas, between parties who agreed to deal electronically, an electronic record or signature is not denied effect for being electronic; a signature is attributed to the person whose act it was, which a security procedure can help show; and a law requiring a record to be kept is met by an electronic copy that accurately reflects it and remains accessible for later reference. Federal law sets a similar test for records of transactions in interstate commerce. Never overwrite a signed final; file each amendment as its own document beside it.",
+      "mode": "agent",
+      "modeBasis": "Filing complete signed copies by a written rule is file work an agent can do.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "principal-sets-up-accounts"
+      ],
+      "rules": [
+        "us-tx.ueta",
+        "us-fed.esign"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "sponsor-operating-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-bcc-322",
+        "usc-15-7001"
+      ]
+    },
+    {
+      "id": "write-retention-schedule",
+      "title": "Write the retention and disposal schedule",
+      "instruction": "Write a schedule of how long each kind of record is kept and how it is destroyed, for the CPA and counsel to review and a principal to approve. Tax records are kept until the period of limitations on the return runs out: generally three years after filing, six if income over 25% of the gross income reported was left out, seven for a worthless-securities or bad-debt loss, and at least four years for employment tax records. Records on a property are kept until the period runs out for the year it is sold; after a like-kind exchange, the old property's records are kept until it runs out for the year the new one is sold. A Texas LLC keeps six years of returns. A discarded record holding a customer's personal identifying information must be shredded, erased or made unreadable. Nothing under a legal hold is destroyed.",
+      "mode": "agent",
+      "modeBasis": "Drafting the schedule from published periods is document work; the CPA and counsel review it and a principal approves it.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "inventory-required-records",
+        "protect-sensitive-information"
+      ],
+      "basis": "cited",
+      "sources": [
+        "irs-keep-records",
+        "tx-boc-101",
+        "tx-bcc-72",
+        "tx-bcc-521"
+      ]
+    },
+    {
+      "id": "handle-records-requests",
+      "title": "Set how the firm answers a member's or partner's request to see records",
+      "instruction": "Write how the firm answers a written request to see records from a member of any Texas LLC it manages, deal entities included, or a partner of any Texas limited partnership it manages. A demand goes to the person the governing agreement designates or, if none, a manager, managing member or general partner at the principal office; name that person in the procedure. A member or assignee whose written demand states a proper purpose may examine and copy records reasonably related to it, and may request free copies in writing of the certificate of formation, the governing agreement and tax returns. Emails and texts are not records unless one carries out a company action or the agreement says so. A company that wrongly refuses pays the requester's costs, including attorney's fees; the agreement may not unreasonably restrict these rights. Partnerships follow the same rules. Log each request, answer and date.",
+      "mode": "agent",
+      "modeBasis": "Writing the procedure and keeping the request log is document work; a principal decides each answer.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "inventory-required-records",
+        "fund-lp-records"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "tx-boc-153"
+      ]
+    },
+    {
+      "id": "remove-access-on-departure",
+      "title": "List and confirm access removal when a person leaves",
+      "instruction": "When a principal, employee or adviser leaves, or an engagement, offering or loan ends, list every account, folder and room the person can reach, from the access table and each system's own user list, and give the list to an administrator to remove the same day. The administrator moves ownership of the person's files to the firm before any account is closed, and changes any shared password or recovery detail the person knew. Afterward, confirm from each system's user list that the access is gone, and record the removals and the date. A departing principal is handled with the rest of key-principal-leaves.",
+      "mode": "agent",
+      "modeBasis": "Listing access and confirming its removal from user lists is checking work; an administrator removes the access.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "principal-sets-up-accounts"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "back-up-and-test-restore",
+      "title": "Back up every folder and test a restore on a schedule",
+      "instruction": "Keep a second copy of every folder outside the main storage system and under the firm's control, with earlier versions kept, so a deleted, overwritten or encrypted file can be recovered. Check that each backup ran, and on a set schedule restore a sample, including a signed agreement and an investor file, to a test location and confirm the files open and match. Record each test, what was restored and the result, and fix any failure before the next test. Restrict the backup the same way as the original, because it holds the same sensitive information.",
+      "mode": "agent",
+      "modeBasis": "Checking backups and running a test restore is system work an agent can do with the access its role has.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "principal-sets-up-accounts"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    }
+  ],
   "outlineSteps": []
 }

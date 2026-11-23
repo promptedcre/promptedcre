@@ -2,22 +2,437 @@
   "id": "open-sponsor-bank-accounts",
   "slug": "open-sponsor-bank-accounts",
   "kind": "process",
-  "title": "Open the sponsor's bank accounts",
+  "title": "Open the entity's bank accounts",
   "summary": "Open operating accounts for the sponsor entity and set up who can approve payments and wires.",
   "phase": "stand-up",
   "order": 25,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "lastVerified": "2026-11-20",
+  "requires": [
+    "form-sponsor-entity",
+    "sign-partner-agreement"
+  ],
+  "consumes": [
+    "certificate-of-formation",
+    "sponsor-operating-agreement",
+    "ein-confirmation",
+    "deal-entity-agreement",
+    "jv-agreement"
+  ],
+  "produces": [
+    "wire-instructions"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
+  "sources": [
+    {
+      "id": "fdic-understanding",
+      "url": "https://www.fdic.gov/resources/deposit-insurance/understanding-deposit-insurance",
+      "title": "Understanding Deposit Insurance",
+      "publisher": "Federal Deposit Insurance Corporation",
+      "accessed": "2026-11-20",
+      "quote": "FDIC deposit insurance doesn’t cover default or bankruptcy of any non-FDIC-insured institution.",
+      "tier": "primary"
+    },
+    {
+      "id": "fdic-insured-deposits",
+      "url": "https://www.fdic.gov/resources/deposit-insurance/brochures/insured-deposits",
+      "title": "Your Insured Deposits (corporation, partnership and unincorporated association accounts; how to check a bank's insured status)",
+      "publisher": "Federal Deposit Insurance Corporation",
+      "accessed": "2026-11-20",
+      "quote": "Accounts owned by the same corporation, partnership, or unincorporated association but designated for different purposes are not separately insured.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-12-330-11",
+      "url": "https://www.ecfr.gov/current/title-12/section-330.11",
+      "title": "12 CFR 330.11, Accounts of a corporation, partnership or unincorporated association",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-12-330-1",
+      "url": "https://www.ecfr.gov/current/title-12/section-330.1",
+      "title": "12 CFR 330.1, Definitions (paragraph (g), independent activity, and paragraph (o), standard maximum deposit insurance amount)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-20",
+      "quote": "Standard maximum deposit insurance amount, referred to as the “SMDIA” hereafter, means $250,000",
+      "tier": "primary"
+    },
+    {
+      "id": "fincen-bec-2019",
+      "url": "https://www.fincen.gov/system/files/advisory/2019-07-16/Updated%20BEC%20Advisory%20FINAL%20508.pdf",
+      "title": "FIN-2019-A005, Updated Advisory on Email Compromise Fraud Schemes Targeting Vulnerable Business Processes (July 16, 2019), risk management considerations",
+      "publisher": "Financial Crimes Enforcement Network",
+      "accessed": "2026-11-20",
+      "quote": "verify the authenticity of suspicious emailed transaction payment instructions by using multiple means of communication",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bc-4a",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.4A.htm",
+      "title": "Texas Business and Commerce Code, Chapter 4A (Sections 4A.105, 4A.201 to 4A.204, 4A.505 and 4A.507: branches as separate banks, security procedures, unauthorized orders, objections within a year, choice of law)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-12-1005-2",
+      "url": "https://www.ecfr.gov/current/title-12/section-1005.2",
+      "title": "12 CFR 1005.2, Definitions (Regulation E, paragraph (b), account)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-20",
+      "quote": "established primarily for personal, family, or household purposes",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bo-101",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.101.htm",
+      "title": "Texas Business Organizations Code, Chapter 101 (Sections 101.251, 101.252 and 101.254, governing authority and agents)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-31-1020-100",
+      "url": "https://www.ecfr.gov/current/title-31/section-1020.100",
+      "title": "31 CFR 1020.100, Definitions (paragraph (b), customer, which leaves out a person with an existing account)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "fincen-2026-r001",
+      "url": "https://www.fincen.gov/system/files/2026-02/FinCEN-Order-CCDExceptiveRelief.pdf",
+      "title": "FIN-2026-R001, Exceptive Relief from Requirement to Identify and Verify Beneficial Owners at Each Account Opening (February 13, 2026)",
+      "publisher": "Financial Crimes Enforcement Network",
+      "accessed": "2026-11-20",
+      "quote": "Rather than having to identify and verify a legal entity customer’s beneficial owners each time that customer opens an account",
+      "tier": "primary"
+    },
+    {
+      "id": "fincen-boi",
+      "url": "https://www.fincen.gov/boi",
+      "title": "Beneficial Ownership Information Reporting (alert updated August 11, 2026)",
+      "publisher": "Financial Crimes Enforcement Network",
+      "accessed": "2026-11-20",
+      "quote": "U.S. companies are exempt from the Beneficial Ownership Information (BOI) reporting requirements and therefore, are no longer required to file BOI reports.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bc-4",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.4.htm",
+      "title": "Texas Business and Commerce Code, Chapter 4 (Sections 4.102, 4.103 and 4.406: governing law, variation by agreement, customer's duty to examine statements of paid items)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "map-the-accounts",
+      "title": "Map the accounts each of the firm's own entities needs",
+      "instruction": "List the accounts each entity the firm owns will need, what each one is for and the balance each is expected to hold. Start from the firm file: the sponsor entity, plus the management company and each general partner entity in a fund, or the firm's member entity in a joint venture. For each, list an operating account for fees and the firm's own bills, any reserve account for taxes or committed costs, and a payroll account if the firm has employees. Mark the sponsor entity's account opened under form-sponsor-entity as already open, to be brought under the consent and the controls. A deal or fund entity's accounts are opened in its own name under form-deal-entity, or for a series under set-up-series, never here. Investors' subscriptions, capital calls and distributions never pass through the firm's own accounts; the firm's entities receive only their own fees and their own share.",
+      "mode": "agent",
+      "modeBasis": "Listing the entities and the accounts each needs from the firm file is drafting work; the principals approve the map in the banking consent.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "consumes": [
+        "certificate-of-formation",
+        "sponsor-operating-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "fund-entity-accounts",
+      "title": "For a fund, map accounts for the management company and each GP entity",
+      "instruction": "In a fund, add to the map accounts in their own names for the management company and each fund's general partner entity, authorized like the sponsor entity's. The management company receives the management fee and pays the team; each general partner entity holds its interest in its fund. The fund's own accounts belong to the fund and are opened under form-deal-entity with the signers its partnership agreement allows. Write into the payment controls that money moves between these entities only as the fund agreement provides: the fee on the agreement's basis and schedule, fund expenses reimbursed only with support, and the general partner's commitment funded like any partner's, each transfer recorded on both entities' books.",
+      "mode": "agent",
+      "modeBasis": "Applying the fund agreement's money flows to the account map is drafting work; the principals approve it with the map.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "map-the-accounts"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "consumes": [
+        "deal-entity-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "jv-venture-accounts",
+      "title": "For a JV, take the venture's banking terms from the JV agreement",
+      "instruction": "In a joint venture, list what the JV agreement requires of the venture's banking, and keep the firm's member entity's own accounts, for its share of distributions and any fees, separate from the venture's, which are opened in the venture's name under form-deal-entity. Read the agreement for the bank, who may sign, which payments need the partner's approval, whether the partner gets view access or copies of statements, the reserve accounts and the reports. Carry those terms into the roles, approvals and controls a person sets in set-up-online-roles and turn-on-fraud-controls when the venture's accounts are opened, giving the partner only the access the agreement grants. A payment from the venture to the firm's member entity follows the agreement's approvals.",
+      "mode": "agent",
+      "modeBasis": "Reading the JV agreement's banking terms and matching the setup to them is document work; people sign for and configure the accounts.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "map-the-accounts"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "check-deposit-insurance",
+      "title": "Check each bank's insured status and how far coverage reaches",
+      "instruction": "Confirm in the FDIC's BankFind that each bank considered is FDIC-insured, and record the date checked. Deposit insurance protects deposits at an insured bank if that bank fails; it does not cover the default or bankruptcy of a company that is not an insured bank. An LLC's deposits are insured in the category for corporations, partnerships and unincorporated associations, apart from the principals' own deposits. All the accounts one entity holds at the same bank are added together and insured up to the standard maximum, whatever each is for, so a reserve account at the same bank adds no coverage. Each entity counts separately only if it is run mainly for a purpose other than increasing deposit insurance. Compare the balances the map expects with coverage; the principals decide how to handle any excess.",
+      "mode": "agent-browser",
+      "modeBasis": "BankFind is the FDIC's public search of insured banks and the coverage rules are published, so an agent can check and record both.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "map-the-accounts",
+        "fund-entity-accounts",
+        "jv-venture-accounts"
+      ],
+      "basis": "cited",
+      "sources": [
+        "fdic-understanding",
+        "fdic-insured-deposits",
+        "ecfr-12-330-11",
+        "ecfr-12-330-1"
+      ]
+    },
+    {
+      "id": "write-payment-controls",
+      "title": "Draft the payment controls the principals will adopt",
+      "instruction": "Draft a payment policy for the principals to adopt. It names who may create and who may approve each kind of payment; requires one person to create every outgoing wire and ACH and another to approve it; sets the amount per payment and per day above which a second principal approves; bars using a new payee or changed instructions until a person confirms them by calling a number from an independent source, such as the payee's published main number or one on file before the request, never one in the request, as wire-instructions-change sets out; and keeps the firm's accounts to the firm's own costs, never investor money. Where the firm has one principal, the policy names the second person, such as an outside bookkeeper with an approve-only role. FinCEN's email-fraud advisory notes that suspicious emailed payment instructions can be verified by more than one means of communication.",
+      "mode": "agent",
+      "modeBasis": "Drafting the policy from the account map and the firm's roles is writing work; the principals adopt it by signing the consent.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "map-the-accounts"
+      ],
+      "basis": "cited",
+      "sources": [
+        "fincen-bec-2019"
+      ]
+    },
+    {
+      "id": "read-transfer-agreement",
+      "title": "Read each bank's account and funds-transfer terms",
+      "instruction": "Get each bank's account and funds-transfer agreements, for the account already open and any still to open, and summarize for the principals the security procedures offered, limits, cut-off times, how soon errors must be reported and who bears a loss. Where Texas law governs (the bank office receiving the firm's payment orders is in Texas, and neither the agreement nor a funds-transfer system rule picks other law), an order the bank accepts in good faith, following a commercially reasonable security procedure the firm agreed to and any written limit the firm gave, counts as the firm's even if unauthorized, unless the firm proves it came from no one entrusted with its payments and from no access or information the firm controlled. Regulation E's consumer protections do not reach business accounts. The principals choose the procedure, with counsel where the terms shift losses to the firm.",
+      "mode": "agent",
+      "modeBasis": "Reading and summarizing the bank's agreements is document work; choosing the procedure and signing are the principals'.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-deposit-insurance"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-bc-4a",
+        "ecfr-12-1005-2"
+      ]
+    },
+    {
+      "id": "adopt-banking-authority",
+      "title": "Sign a written consent naming the banks, accounts and signers",
+      "instruction": "The principals sign a written consent, in the form the company agreement requires and within the signing authority settled under sign-partner-agreement, that approves the account map and the banks; says who may open and close accounts, who may sign, and who may create and approve payments and up to what amounts; and adopts the payment controls and the security procedure chosen. In a Texas LLC the governing authority, the managers or the members as the company agreement or certificate provides, directs the company's business, and an officer's or agent's act outside the ordinary course binds the company only if authorized under the statute. Most banks also ask for their own resolution or a certificate naming who holds which office; make it match the consent. Counsel reviews where the company agreement is unclear about who may bank for the company. File the signed consent.",
+      "mode": "human-online",
+      "modeBasis": "The consent binds the company, and only the people the company agreement empowers can sign it.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "write-payment-controls",
+        "read-transfer-agreement",
+        "fund-entity-accounts",
+        "jv-venture-accounts"
+      ],
+      "consumes": [
+        "sponsor-operating-agreement",
+        "certificate-of-formation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-bo-101"
+      ]
+    },
+    {
+      "id": "prepare-opening-package",
+      "title": "Prepare what each bank will ask for at opening",
+      "instruction": "Gather what each bank will ask for at opening; the identification rules a bank applies are set out in form-sponsor-entity's open-bank-account. Bring the signed banking consent and the bank's own resolution form, and each signer brings their own identification. A bank where the same entity already holds an account may treat it as an existing customer, and since FinCEN's February 2026 relief it may skip identifying the beneficial owners again unless facts call the earlier answers into question or its own procedures require it; it may still ask. Every other entity, such as a general partner entity or the management company, is a new customer at its first account there, and open-bank-account's rules apply in full. The bank's beneficial ownership certification is not FinCEN's beneficial ownership report, which U.S. companies no longer file.",
+      "mode": "agent",
+      "modeBasis": "Listing the requirements and gathering the firm's documents is file work; tax numbers and identity documents stay with the people they belong to.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "adopt-banking-authority"
+      ],
+      "rules": [
+        "us-fed.fincen.boi"
+      ],
+      "consumes": [
+        "certificate-of-formation",
+        "sponsor-operating-agreement",
+        "ein-confirmation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-31-1020-100",
+        "fincen-2026-r001",
+        "fincen-boi"
+      ]
+    },
+    {
+      "id": "open-the-accounts",
+      "title": "Open each remaining account in the entity's exact legal name and EIN",
+      "instruction": "A principal the consent names opens each account on the map not yet open, in the entity's exact legal name and under its EIN, never a principal's name or Social Security number, and signs the account, funds-transfer and online banking agreements on the terms the principals chose. Each signer the consent names completes the bank's identity checks. Ask for the fee schedule, the statement delivery options and the account's incoming wire instructions through the bank's own secure channel, not by email. Nobody gives the agent a login, a password or a full account number; record only the last four digits and where the bank's documents are stored.",
+      "mode": "human-online",
+      "modeBasis": "The bank verifies and contracts with the people who open and sign the account; an agent cannot sign or hold their credentials.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "prepare-opening-package"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "certificate-of-formation",
+        "sponsor-operating-agreement",
+        "ein-confirmation"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "set-up-online-roles",
+      "title": "Give each user a separate login and role, with two people on every payment",
+      "instruction": "A principal who administers online banking gives each person a separate login with multi-factor sign-in and only the role the consent allows: create payments, approve payments, or view. Turn on dual approval so every outgoing wire and ACH batch needs a second person, the one the payment controls name where the firm has one principal, and no one can approve a payment they created; set the per-payment and daily limits; and limit who may add payees or change payment instructions, with each such change approved by a second person too. The bookkeeper and the CPA get view-only access or statements. The agent gets no login; at most it works from statements or a read-only export a person provides. Record each user and role in the firm file, never a credential.",
+      "mode": "human-online",
+      "modeBasis": "Users, roles and approvals are set inside the bank's online banking under a person's administrator login.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "open-the-accounts"
+      ],
+      "market": "formation-back-office",
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "turn-on-fraud-controls",
+      "title": "Turn on the bank's check and debit controls and its alerts",
+      "instruction": "On each account, turn on the controls the bank offers against unauthorized items: a check service that pays only checks the firm has reported as issued, or no checks at all on an account that does not need them; a block or filter that refuses ACH debits except from companies the firm names; and alerts to the principals for each outgoing wire, new payee, changed payment instructions, new user and failed sign-in. Learn the bank's daily deadline for deciding flagged items and what happens to an item no one decides, and name who decides them and who covers absences. Record which controls are on for each account and the date each was confirmed.",
+      "mode": "human-online",
+      "modeBasis": "The controls are settings in the firm's online banking, changed under a person's login.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "open-the-accounts"
+      ],
+      "market": "formation-back-office",
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "review-statements",
+      "title": "Review each statement promptly, by someone who did not make the payments",
+      "instruction": "Each month, and more often for an account that sends wires, compare each statement and the bank's payment history with the approved payments, the payee list and the deposits expected, from statements or a read-only export a person supplies. Flag any payment no one approved, a changed payee, an unexpected debit and a new user, and hand the flags the same day to a principal who did not make the payments, who reports any unauthorized item to the bank at once. Where Texas law governs, a customer must examine statements of paid checks with reasonable promptness and loses a claim on an unauthorized signature or alteration not reported within a year; for a funds transfer, notice later than a reasonable time, at most 90 days, forfeits interest on any refund, and an objection is barred after a year. The account agreement may shorten the time to report.",
+      "mode": "agent",
+      "modeBasis": "Comparing statements with approved payments is checking work an agent can do from documents a person supplies; reporting to the bank is a person's call.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-up-online-roles",
+        "turn-on-fraud-controls"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-bc-4",
+        "tx-bc-4a"
+      ]
+    },
+    {
+      "id": "record-and-review-access",
+      "title": "Record each account and calendar the access reviews",
+      "instruction": "Record in the firm file, for each account: the entity, bank, purpose, last four digits, signers, online roles and limits, and the controls turned on, with the date each was confirmed. For each account that receives payments, start a wire-instructions record: the entity's legal name, what is paid in, the account name, the bank, where the instructions are stored and how they were received; a payer verifies them by callback before its first payment, and whoever sends them says they will never change by email. Calendar a review of users, roles, limits and controls on a set schedule, and at once when a signer leaves (key-principal-leaves), an entity is added, the bank changes or a device is lost. A departed person's access is removed the day they leave, and the consent and the bank's records are updated.",
+      "mode": "agent",
+      "modeBasis": "Keeping the account record and the review calendar is file work; access changes are made by a person in the bank.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-up-online-roles",
+        "turn-on-fraud-controls"
+      ],
+      "produces": [
+        "wire-instructions"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    }
+  ],
   "outlineSteps": []
 }

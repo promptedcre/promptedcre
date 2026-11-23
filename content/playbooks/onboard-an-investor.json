@@ -205,6 +205,15 @@
       "tier": "primary"
     },
     {
+      "id": "irs-iw8ben",
+      "url": "https://www.irs.gov/instructions/iw8ben",
+      "title": "Instructions for Form W-8BEN (Rev. October 2021)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-23",
+      "quote": "You are a foreign entity documenting your foreign status, documenting your chapter 4 status, or claiming treaty benefits. Instead, use Form W-8BEN-E.",
+      "tier": "primary"
+    },
+    {
       "id": "ic3-bec-psa",
       "url": "https://www.ic3.gov/PSA/2024/PSA240911",
       "title": "Business Email Compromise: The $55 Billion Scam (Alert I-091124-PSA)",
@@ -217,9 +226,9 @@
     {
       "id": "log-the-prospect",
       "title": "Log the prospect and how the relationship began",
-      "instruction": "Open an investor register entry for each prospect: name, contact details, state of residence and how they came to the offering. In a Rule 506(b) offering, also record when the relationship began and what the sponsor knew of the prospect's finances and experience before the offering started. SEC staff counts a pre-existing, substantive relationship as one way to show there was no general solicitation, and a self-certification checkbox alone does not create one. If a prospect arrived through public marketing, flag it for counsel before sending anything, because a Rule 506(b) offering cannot use general solicitation.",
+      "instruction": "Open an investor register entry for each prospect: name, contact details, state of residence and how they came to the offering. In a Rule 506(b) offering, also copy from build-investor-list's dated list, naming the copy used, when the relationship began and what the firm knew of the prospect's finances and experience before the offering started. A prospect not on it is added to that list first, confirmed by a principal. SEC staff counts a pre-existing, substantive relationship as one way to show there was no general solicitation, and a self-certification checkbox alone does not create one. If a prospect arrived through public marketing, flag it for counsel before sending anything, because a Rule 506(b) offering cannot use general solicitation.",
       "mode": "agent",
-      "modeBasis": "Recording intake facts from the inquiry and the sponsor's notes is data entry.",
+      "modeBasis": "Recording intake facts from the inquiry and build-investor-list's dated list is data entry.",
       "risk": "medium",
       "undo": "reversible",
       "approval": "none",
@@ -301,7 +310,7 @@
     {
       "id": "investor-signs-package",
       "title": "The investor completes and signs the subscription package",
-      "instruction": "The investor completes the questionnaire and signs the subscription agreement, or the joint venture agreement, through the e-signature tool, and provides a Form W-9 so the entity has the correct taxpayer identification number for its information returns; a foreign investor gives a Form W-8 BEN instead, and the CPA reviews foreign investors. Electronic signatures carry the same effect as ink when both sides agreed to transact electronically, and no one has to accept them, so offer paper on request. Keep the platform's audit trail, which can help show whose act a signature was.",
+      "instruction": "The investor completes the questionnaire and signs the subscription agreement, or the joint venture agreement, through the e-signature tool, and provides a Form W-9 so the entity has the correct taxpayer identification number for its information returns; a foreign investor gives the Form W-8 its status calls for instead, and the CPA reviews foreign investors. Electronic signatures carry the same effect as ink when both sides agreed to transact electronically, and no one has to accept them, so offer paper on request. Keep the platform's audit trail, which can help show whose act a signature was.",
       "mode": "human-online",
       "modeBasis": "Only the investor can complete and sign the package; the sponsor's tools only collect it.",
       "actor": "investor",
@@ -327,7 +336,8 @@
         "usc-15-7001",
         "tx-bus-com-code-322",
         "irs-w9",
-        "irs-w8ben"
+        "irs-w8ben",
+        "irs-iw8ben"
       ]
     },
     {

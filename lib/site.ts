@@ -5,7 +5,7 @@ export const site = {
   wordmark: { left: "Prompted", right: "CRE" },
   // The home page's headline and the line under it, in the owner's words (D218).
   tagline: "Start and run an autonomous CRE firm.",
-  subline: "Step-by-step playbooks your AI agent can run, from forming the firm to buying the building.",
+  subline: "Step-by-step playbooks your AI agent can run, from forming the firm to selling the building.",
   // The site calls its user an operator: a firm that raises capital and owns property.
   eyebrow: "For real estate operators",
   description:

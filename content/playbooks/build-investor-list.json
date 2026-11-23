@@ -3,31 +3,455 @@
   "slug": "build-investor-list",
   "kind": "process",
   "title": "Build the investor list",
-  "summary": "Gather the people and family offices the sponsor already knows, with how each relationship started, before any offering opens.",
+  "summary": "Gather the people and family offices the firm already knows, with how each relationship started, before any offering opens.",
   "phase": "raise",
-  "order": 105,
+  "order": 95,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "form-sponsor-entity",
+    "choose-counsel-and-cpa",
+    "set-up-document-storage"
+  ],
+  "consumes": [
+    "investor-register",
+    "investor-questionnaire",
+    "accreditation-verification-letter"
+  ],
   "produces": [],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Gather the people and family offices the sponsor already knows",
-    "Record how and when each relationship began",
-    "Mark who has invested with the sponsor before",
-    "Note what the sponsor knew of each contact's finances and investing experience",
-    "Record who referred each contact and on what terms",
-    "Keep contacts met through public outreach on a separate list",
-    "Keep deal terms out of conversations until counsel clears the offering",
-    "Limit who can see and change the list",
-    "Date the list before any offering opens"
-  ]
+  "sources": [
+    {
+      "id": "ecfr-230-152",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.152",
+      "title": "17 CFR 230.152, Integration (paragraphs (a), (b)(1) and (c))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Established a substantive relationship with such purchaser prior to the commencement of the exempt offering prohibiting general solicitation",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-502",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.502",
+      "title": "17 CFR 230.502, General conditions to be met (paragraph (c), limitation on manner of offering)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "neither the issuer nor any person acting on its behalf shall offer or sell the securities by any form of general solicitation or general advertising",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-501",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.501",
+      "title": "17 CFR 230.501, Definitions and terms used in Regulation D (paragraph (a), accredited investor)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "or who the issuer reasonably believes comes within any of the following categories, at the time of the sale of the securities to that person",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-506",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.506",
+      "title": "17 CFR 230.506, Exemption for limited offers and sales (paragraphs (b)(2)(ii), (c)(2)(ii) and (d)(1))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "for a period of five years from the date the person was previously verified as an accredited investor",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-77b",
+      "url": "https://www.law.cornell.edu/uscode/text/15/77b",
+      "title": "15 U.S.C. 77b, Definitions (Securities Act Section 2(a)(3), offer)",
+      "publisher": "Legal Information Institute (U.S. Code text)",
+      "accessed": "2026-11-21",
+      "quote": "shall include every attempt or offer to dispose of, or solicitation of an offer to buy, a security or interest in a security, for value",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-78o",
+      "url": "https://www.law.cornell.edu/uscode/text/15/78o",
+      "title": "15 U.S.C. 78o, Registration and regulation of brokers and dealers (subsection (a)(1))",
+      "publisher": "Legal Information Institute (U.S. Code text)",
+      "accessed": "2026-11-21",
+      "quote": "to effect any transactions in, or to induce or attempt to induce the purchase or sale of, any security",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gov-code-4001",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.4001.htm",
+      "title": "Texas Government Code, Chapter 4001 (Sections 4001.056, dealer, and 4001.067, sale and offer for sale)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "a solicitation of sale, a solicitation of an offer to buy, an attempt to sell, or an offer to sell",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gov-code-4004",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.4004.htm",
+      "title": "Texas Government Code, Chapter 4004 (Section 4004.051, registration of dealers required)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "offer for sale, sell, or make a sale of any securities in this state unless the dealer or other person or company is first registered",
+      "tier": "primary"
+    },
+    {
+      "id": "ssb-exemptions",
+      "url": "https://www.ssb.texas.gov/securities-professionals/regulation-securities/exemptions-registration",
+      "title": "Exemptions from Registration",
+      "publisher": "Texas State Securities Board",
+      "accessed": "2026-11-21",
+      "quote": "paid to any person who solicits investors in Texas under Rule 506 unless that person is licensed in Texas as a securities dealer or agent",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-cprc-134a",
+      "url": "https://tcss.legis.texas.gov/resources/CP/htm/CP.134A.htm",
+      "title": "Texas Civil Practice and Remedies Code, Chapter 134A, Texas Uniform Trade Secrets Act (Section 134A.002, definitions)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "the owner of the trade secret has taken reasonable measures under the circumstances to keep the information secret",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "limit-list-access",
+      "title": "Limit who can see and change the list before building it",
+      "instruction": "Before any contact is gathered, a principal, as administrator, adds one list folder for the main list and the public-outreach list to the access table from set-up-document-storage and applies it: only the principals and the people they name may view it, only named people may change it, and the agent gets only the access its role needs. Turn on version history so every change keeps its author and date. Create one more folder for dated copies, where the agent may add files but no one may edit or delete them. Keep the lists free of the sensitive personal information that set-up-document-storage keeps in its restricted area (protect-sensitive-information). If either list is copied, exposed or sent outside the firm without approval, follow investor-data-exposed.",
+      "mode": "human-online",
+      "modeBasis": "Changing permissions needs the administrator's own sign-in, which an agent does not hold.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "gather-known-contacts",
+      "title": "Gather the people and family offices the principals already know",
+      "instruction": "Build one draft main list, in the list folder, from files the principals export or share, never from inside their accounts: address-book exports, the registers of the firm's own past offerings, its investor files and each principal's notes. Take no list, register or CRM export belonging to a principal's former employer or another firm: Texas trade-secret law can protect a list of actual or potential customers that its owner takes reasonable measures to keep secret. Someone a principal knows through a former employer goes on the list from the principal's own knowledge, marked so, and any employment, separation, confidentiality or non-solicitation terms go to counsel. For each entry record the name, kind of contact, which principal knows them, contact details, state of residence and every source, merging duplicates. Names no principal knows go to the public-outreach list. Record no Social Security, driver's license, government ID or account numbers.",
+      "mode": "agent",
+      "modeBasis": "Merging and de-duplicating exports the principals hand over is file work; the agent signs in to no one's accounts.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "limit-list-access"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-cprc-134a"
+      ]
+    },
+    {
+      "id": "record-relationship-start",
+      "title": "Record how and when each relationship began",
+      "instruction": "Each principal states, for every contact they brought, when and how the relationship began, such as a past deal, a former employer, family or a named person's introduction, with the closest supportable date and any record that shows it. An agent records answers in the principal's words, marking estimates. Rule 502(c) bars general solicitation unless the offering relies on Rule 506(c) or Rule 504(b)(1). When the integration rule tests an offering that bars it, Rule 152(a)(1) asks for a reasonable belief that the issuer, or someone acting for it, either did not solicit each purchaser by general solicitation or established a substantive relationship with them before the offering began. These dates are the evidence for that test and the staff view on the general-solicitation card; none is guessed or changed except by dated correction.",
+      "mode": "human-online",
+      "modeBasis": "Only the principal knows how and when they met each person; an agent records the answers.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "gather-known-contacts"
+      ],
+      "rules": [
+        "us-fed.reg-d.general-solicitation",
+        "us-fed.reg-d.rule-506b"
+      ],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-152",
+        "ecfr-230-502"
+      ]
+    },
+    {
+      "id": "mark-past-investors",
+      "title": "Mark who has invested with the firm before",
+      "instruction": "From the registers of past offerings by the firm or its deal entities, mark each contact who invested: the offering, the issuer, the date, the accredited category claimed then and, for a Rule 506(c) offering, the verification method and date. Copy facts; documents stay in each investor's file. For a natural person, one of Rule 506(c)'s optional methods lets the issuer that verified the person rely on their written representation at the time of sale for five years from that verification, unless it knows otherwise; the methods do not cover entities. The rule says \"the issuer\", so whether an earlier deal entity's verification carries to a new one is counsel's call. A past investment is a fact for counsel to weigh, not proof of a substantive relationship or of status today; a past investor first reached through public marketing stays on the public-outreach list until separate-public-outreach moves them.",
+      "mode": "agent",
+      "modeBasis": "Reading past registers and copying dated facts is record work; what those facts allow later is counsel's call.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "gather-known-contacts"
+      ],
+      "rules": [
+        "us-fed.reg-d.rule-506c"
+      ],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register",
+        "investor-questionnaire",
+        "accreditation-verification-letter"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-506"
+      ]
+    },
+    {
+      "id": "note-finances-and-experience",
+      "title": "Note what the firm knew of each contact's finances and investing experience",
+      "instruction": "Each principal states what the firm knew, before any offering, of each contact's financial circumstances and investing experience, and how and when it learned it, such as a past questionnaire, the contact's statements or deals done together. Each also states whether, when and by which principal the firm weighed that information to judge the person's finances and sophistication, or that it did not: a relationship counts as substantive only if the firm knew enough to judge and did (general-solicitation card). An agent records each note with its date and source, or unknown. For a family office, note who directs its investments. Keep account statements and tax documents off the list, and mark no one accredited or sophisticated: Rule 501(a) looks at the time of each sale, and Rule 506(b) judges a non-accredited buyer's ability to evaluate the merits and risks immediately before it. onboard-an-investor tests each buyer then.",
+      "mode": "human-online",
+      "modeBasis": "What the firm knew of a person's finances rests on the principals' own dealings; an agent records it.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-relationship-start"
+      ],
+      "rules": [
+        "us-fed.reg-d.general-solicitation",
+        "us-fed.reg-d.accredited-investor",
+        "us-fed.reg-d.rule-506b"
+      ],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-152",
+        "ecfr-230-501",
+        "ecfr-230-506"
+      ]
+    },
+    {
+      "id": "record-referrals-and-terms",
+      "title": "Record who referred each contact and on what terms",
+      "instruction": "For every contact who came through an introduction, record who made it, when, and whether anything was promised or paid, in money, fees, profits or any other benefit, with any written agreement. Federal law bars an unregistered broker from inducing or attempting to induce a securities purchase. Texas bars any person or company, not only a dealer, from offering or selling securities there unless registered or exempt, and counts as a dealer anyone who solicits subscriptions for even part of their time. The State Securities Board says no pay may go to anyone soliciting investors in Texas under Rule 506 unless licensed there as a dealer or agent; the Texas compensation card covers finder registration. Anyone paid to solicit is a Rule 506(d) covered person. choose-structure-and-exemption tests each paid introducer in check-paid-solicitors and screen-covered-persons. Flag every paid or promised introduction for counsel; nothing is paid until counsel answers in writing.",
+      "mode": "agent",
+      "modeBasis": "Recording referral facts the principals give is file work; whether any payment is allowed is counsel's call.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-relationship-start"
+      ],
+      "rules": [
+        "us-fed.exchange-act.broker-registration",
+        "us-tx.securities.rule-506-compensation",
+        "us-fed.reg-d.bad-actor"
+      ],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-15-78o",
+        "tx-gov-code-4004",
+        "tx-gov-code-4001",
+        "ssb-exemptions",
+        "ecfr-230-506"
+      ]
+    },
+    {
+      "id": "separate-public-outreach",
+      "title": "Keep contacts met through public outreach on a separate list",
+      "instruction": "Put on a separate list everyone who first reached the firm through public channels: website forms, social media, podcasts, open webinars or events, published articles, cold email, purchased lists or a past Rule 506(c) offering's public marketing. Site contacts come from the log build-brand-and-website keeps. Record the channel and date of first contact. Anyone who then invested stays here, marked by mark-past-investors with what the firm learned of their finances, for counsel to weigh. Rule 502(c) bars general solicitation unless the offering relies on Rule 506(c) or Rule 504(b)(1). Under Rule 152(a)(1) and (b)(1), a no-solicitation offering that overlaps one that allowed general solicitation, or follows it, even 30 calendar days or more after it ended, must still meet the purchaser test. A contact moves to the main list only with a dated note of how a substantive relationship formed and counsel's agreement, never by editing the original entry.",
+      "mode": "agent",
+      "modeBasis": "Sorting contacts by the channel recorded for each is list work; whether one may move lists is counsel's call.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-relationship-start"
+      ],
+      "rules": [
+        "us-fed.reg-d.general-solicitation",
+        "us-fed.reg-d.rule-506b",
+        "us-fed.reg-d.rule-506c"
+      ],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-502",
+        "ecfr-230-152"
+      ]
+    },
+    {
+      "id": "list-jv-capital-partners",
+      "title": "For a joint venture, list the capital partners the firm could approach",
+      "instruction": "In a joint venture, keep the capital partners the firm could approach, such as family offices, institutions or individuals able to take an active partner's role, in their own section of the main list: who decides for each, how and when the relationship began, the kinds of deals the partner has said it backs, and any confidentiality agreement already signed with it. Whether the venture interest is a security, and so which outreach and disclosure rules apply, is counsel's decision in choose-structure-and-exemption. Until counsel decides, treat each partner under the same rules as the rest of the main list.",
+      "mode": "agent",
+      "modeBasis": "Keeping a short list from the principals' notes is list work; the securities question is counsel's.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-relationship-start"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "rules": [
+        "us-fed.securities.jv-interests"
+      ],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "hold-deal-terms",
+      "title": "Keep deal terms out of conversations until counsel clears the offering",
+      "instruction": "Each principal confirms in writing that, until counsel has chosen the exemption and cleared the offering, they will keep any chance to invest in a specific deal, and its investment terms and returns, out of every conversation, email and post, except with the firm's counsel, CPA and lenders. The Securities Act counts as an offer every attempt to dispose of a security and every solicitation of an offer to buy one, and Texas defines an offer as broadly. For Rule 152's integration test, a Regulation D offering begins with its first offer, so an early mention of a deal can start the offering and fix the date relationships are measured against. What the principals may say about the firm in general is counsel's call. A principal reports any conversation where a deal came up; an agent logs the date, the person and what was said for counsel.",
+      "mode": "human-offline",
+      "modeBasis": "What is said in calls and meetings is said by the principals; no agent can hold that line for them.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "gather-known-contacts"
+      ],
+      "rules": [
+        "us-fed.reg-d.general-solicitation",
+        "us-fed.reg-d.rule-506b"
+      ],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-15-77b",
+        "tx-gov-code-4001",
+        "ecfr-230-152",
+        "ecfr-230-502"
+      ]
+    },
+    {
+      "id": "principals-confirm-entries",
+      "title": "Have each principal confirm their entries",
+      "instruction": "Each principal reads every entry they supplied, on the main list and the public-outreach list, and confirms it, corrects it or marks it unknown: the relationship start, the notes on finances and experience, any referral and its terms, and past investments. Corrections go in as new dated notes beside the original, never over it. An entry no principal can stand behind moves to the public-outreach list or is marked dropped with the date and the reason. Keep the confirmation, with each principal's name and date, with the list.",
+      "mode": "human-online",
+      "modeBasis": "Each entry rests on a principal's own knowledge, so only that principal can confirm it.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "mark-past-investors",
+        "note-finances-and-experience",
+        "record-referrals-and-terms",
+        "separate-public-outreach",
+        "list-jv-capital-partners"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "date-the-list",
+      "title": "Date the list before any offering opens",
+      "instruction": "Before any offering's first offer, save a read-only copy of the main list and the public-outreach list, with the date, the confirming principals and a checksum, in the dated-copies folder from limit-list-access. If the hold-deal-terms log shows a deal came up in conversation, flag it for counsel and wait: counsel decides whether an offering has already begun. Rule 502(c) bars general solicitation outside Rule 506(c) and Rule 504(b)(1), and SEC staff treats an offer to someone with a pre-existing, substantive relationship as not one (general-solicitation card). When Rule 152 tests a no-solicitation offering for integration with one that allowed general solicitation, it looks to relationships formed before that offering's first offer. This copy records whom the firm knew, and how, by that date. Never back-date; date each later addition and note any offering then open. Save a new dated copy before each later offering and keep every earlier one.",
+      "mode": "agent",
+      "modeBasis": "Saving a dated, read-only copy is file work inside the firm's own records.",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "principals-confirm-entries",
+        "hold-deal-terms",
+        "limit-list-access"
+      ],
+      "rules": [
+        "us-fed.reg-d.general-solicitation"
+      ],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-152",
+        "ecfr-230-502"
+      ]
+    },
+    {
+      "id": "hand-off-and-keep-current",
+      "title": "Hand the dated list on and keep it current",
+      "instruction": "Give the dated list to the work that uses it: choose-structure-and-exemption tests it against each exemption and asks only about prospects not on it, each of whom is then added to the list with the principal's answers, dated when added; present-the-deal-to-investors draws the approved prospects for a deal from it, and onboard-an-investor copies each investor's relationship facts into the investor register. Each later use names the dated copy it relied on. Keep adding contacts as the principals meet them, dated when added, and ask each principal to review their entries at an interval the principals set and before each new offering. Nothing is deleted without counsel: a contact who asks not to be contacted, or whom the firm drops, is marked so with the date and the reason, and a request to delete personal data goes to counsel.",
+      "mode": "agent",
+      "modeBasis": "Passing a dated file to the next playbooks and keeping a review calendar is routine file work.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "date-the-list"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    }
+  ],
+  "outlineSteps": []
 }

@@ -7,28 +7,777 @@
   "phase": "raise",
   "order": 20,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
+  "lastVerified": "2026-11-21",
   "requires": [],
-  "consumes": [],
+  "consumes": [
+    "private-placement-memorandum",
+    "subscription-agreement",
+    "investor-questionnaire",
+    "accreditation-verification-letter",
+    "bad-actor-questionnaire",
+    "jv-agreement",
+    "capital-call-notice",
+    "investor-register",
+    "form-d",
+    "state-notice-filing"
+  ],
   "produces": [],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "List each offering and the exemption it relied on",
-    "Confirm Form D was filed on time for each offering",
-    "Confirm state notice filings where investors bought",
-    "Check yearly Form D amendments for offerings still open",
-    "Check bad-actor questionnaires for covered persons",
-    "Check accreditation records for each investor",
-    "Check how investors were solicited against the exemption used",
-    "Reconcile the investor register to subscriptions and funds received",
-    "Check who was paid for raising capital",
-    "Build the filing calendar"
-  ]
+  "sources": [
+    {
+      "id": "ecfr-230-500",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.500",
+      "title": "17 CFR 230.500, Use of Regulation D (paragraph (b), state law)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "including those relating to registration of persons who receive remuneration in connection with the offer and sale of securities",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-501",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.501",
+      "title": "17 CFR 230.501, Definitions and terms used in Regulation D (paragraphs (a), (e) and (i))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "or who the issuer reasonably believes comes within any of the following categories, at the time of the sale of the securities to that person",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-502",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.502",
+      "title": "17 CFR 230.502, General conditions to be met (paragraphs (b) and (c))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "neither the issuer nor any person acting on its behalf shall offer or sell the securities by any form of general solicitation or general advertising",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-503",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.503",
+      "title": "17 CFR 230.503, Filing of notice of sales (Form D filing and amendments)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "no later than 15 calendar days after the first sale of securities in the offering",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-239-500",
+      "url": "https://www.ecfr.gov/current/title-17/section-239.500",
+      "title": "17 CFR 239.500, Form D, notice of sales of securities under Regulation D and section 4(a)(5)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-506",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.506",
+      "title": "17 CFR 230.506, Exemption for limited offers and sales without regard to dollar amount of offering (paragraphs (b) to (e))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "The issuer shall take reasonable steps to verify that purchasers of securities sold in any offering under paragraph (c) of this section are accredited investors.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-507",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.507",
+      "title": "17 CFR 230.507, Disqualifying provision relating to exemptions under Rules 504 and 506",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "enjoining such person for failure to comply with § 230.503",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-508",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.508",
+      "title": "17 CFR 230.508, Insignificant deviations from a term, condition or requirement of Regulation D",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "shall be deemed to be significant to the offering as a whole",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-506-2021",
+      "url": "https://www.ecfr.gov/on/2021-03-01/title-17/section-230.506",
+      "title": "17 CFR 230.506 as in effect on March 1, 2021, before the 2021 amendments (paragraph (b)(2)(i), purchaser limit)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "35 purchasers of securities from the issuer in any offering under this section",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-502-2021",
+      "url": "https://www.ecfr.gov/on/2021-03-01/title-17/section-230.502",
+      "title": "17 CFR 230.502 as in effect on March 1, 2021, before the 2021 amendments (paragraph (a), integration)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "made more than six months before the start of a Regulation D offering",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-152",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.152",
+      "title": "17 CFR 230.152, Integration (paragraphs (a)(1) and (b)(1))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Any offering made more than 30 calendar days before the commencement of any other offering",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-232-10",
+      "url": "https://www.ecfr.gov/current/title-17/section-232.10",
+      "title": "17 CFR 232.10, Application of part 232 (Regulation S-T Rule 10: EDGAR account access and management)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "must confirm annually on EDGAR that all account administrators, users, technical administrators, and/or delegated entities reflected on the dashboard",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-232-13",
+      "url": "https://www.ecfr.gov/current/title-17/section-232.13",
+      "title": "17 CFR 232.13, Date of filing; adjustment of filing date (Regulation S-T Rule 13)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "filings submitted by direct transmission commencing after 5:30 p.m. Eastern Standard Time",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-3a4-1",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.3a4-1",
+      "title": "17 CFR 240.3a4-1, Associated persons of an issuer deemed not to be brokers",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Is not compensated in connection with his participation by the payment of commissions or other remuneration based either directly or indirectly on transactions in securities",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-77d",
+      "url": "https://www.law.cornell.edu/uscode/text/15/77d",
+      "title": "15 U.S.C. 77d, Exempted transactions (subsections (a)(2) and (b))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "shall not be deemed public offerings under the Federal securities laws as a result of general advertising or general solicitation",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-77r",
+      "url": "https://www.law.cornell.edu/uscode/text/15/77r",
+      "title": "15 U.S.C. 77r, Exemption from State regulation of securities offerings (subsections (b)(4)(F), (c)(2) and (c)(3))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "solely for notice purposes and the assessment of any fee, together with a consent to service of process and any required fee",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-78c",
+      "url": "https://www.law.cornell.edu/uscode/text/15/78c",
+      "title": "15 U.S.C. 78c, Definitions and application (subsection (a)(4), broker)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "any person engaged in the business of effecting transactions in securities for the account of others",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-78o",
+      "url": "https://www.law.cornell.edu/uscode/text/15/78o",
+      "title": "15 U.S.C. 78o, Registration and regulation of brokers and dealers (subsection (a)(1))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-80a-3",
+      "url": "https://www.law.cornell.edu/uscode/text/15/80a-3",
+      "title": "15 U.S.C. 80a-3, Definition of investment company (subsections (a)(1), (c)(1), (c)(5)(C) and (c)(7))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "beneficially owned by not more than one hundred persons",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-80a-2",
+      "url": "https://www.law.cornell.edu/uscode/text/15/80a-2",
+      "title": "15 U.S.C. 80a-2, Definitions (subsection (a)(51), qualified purchaser)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "who owns not less than $5,000,000 in investments",
+      "tier": "primary"
+    },
+    {
+      "id": "howey",
+      "url": "https://www.law.cornell.edu/supremecourt/text/328/293",
+      "title": "SEC v. W.J. Howey Co., 328 U.S. 293 (1946)",
+      "publisher": "Legal Information Institute (opinion text)",
+      "accessed": "2026-11-21",
+      "quote": "The test is whether the scheme involves an investment of money in a common enterprise with profits to come solely from the efforts of others.",
+      "tier": "primary"
+    },
+    {
+      "id": "ralston-purina",
+      "url": "https://www.law.cornell.edu/supremecourt/text/346/119",
+      "title": "SEC v. Ralston Purina Co., 346 U.S. 119 (1953)",
+      "publisher": "Legal Information Institute (opinion text)",
+      "accessed": "2026-11-21",
+      "quote": "An offering to those who are shown to be able to fend for themselves is a transaction 'not involving any public offering.'",
+      "tier": "primary"
+    },
+    {
+      "id": "fr-form-d-2008",
+      "url": "https://www.federalregister.gov/api/v1/documents/E8-3545.json",
+      "title": "Electronic Filing and Revision of Form D, final rule, 73 FR 10592 (Feb. 27, 2008) (Federal Register record)",
+      "publisher": "Securities and Exchange Commission (Federal Register)",
+      "accessed": "2026-11-21",
+      "quote": "The data filed will be available on our Web site and will be interactive and searchable.",
+      "tier": "primary"
+    },
+    {
+      "id": "fr-gensol-2013",
+      "url": "https://www.federalregister.gov/api/v1/documents/2013-16883.json",
+      "title": "Eliminating the Prohibition Against General Solicitation and General Advertising in Rule 506 and Rule 144A Offerings, final rule, 78 FR 44771 (July 24, 2013) (Federal Register record)",
+      "publisher": "Securities and Exchange Commission (Federal Register)",
+      "accessed": "2026-11-21",
+      "quote": "require issuers to indicate whether they are relying on the provision that permits general solicitation or general advertising",
+      "tier": "primary"
+    },
+    {
+      "id": "fr-harmonization-2021",
+      "url": "https://www.federalregister.gov/api/v1/documents/2020-24749.json",
+      "title": "Facilitating Capital Formation and Expanding Investment Opportunities by Improving Access to Capital in Private Markets, final rule, 86 FR 3496 (Jan. 14, 2021) (Federal Register record)",
+      "publisher": "Securities and Exchange Commission (Federal Register)",
+      "accessed": "2026-11-21",
+      "quote": "This final rule is effective on March 15, 2021.",
+      "tier": "primary"
+    },
+    {
+      "id": "fr-accredited-2020",
+      "url": "https://www.federalregister.gov/api/v1/documents/2020-19189.json",
+      "title": "Accredited Investor Definition, final rule, 85 FR 64234 (Oct. 9, 2020) (Federal Register record)",
+      "publisher": "Securities and Exchange Commission (Federal Register)",
+      "accessed": "2026-11-21",
+      "quote": "This final rule is effective December 8, 2020.",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-114-4",
+      "url": "https://www.law.cornell.edu/regulations/texas/7-Tex-Admin-Code-SS-114-4",
+      "title": "7 Tex. Admin. Code 114.4, Filings and Fees (subsections (b)(1), (d)(2), (f)(5) and (g))",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "dealer and agent registration requirements of the Texas Securities Act and Board rules must be complied with",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-109-13",
+      "url": "https://www.law.cornell.edu/regulations/texas/7-Tex-Admin-Code-SS-109-13",
+      "title": "7 Tex. Admin. Code 109.13, Limited Offering Exemptions (subsection (k), the exemption coordinating with Rule 506)",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "to claim this exemption, the issuer must comply with notice filing provisions",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-115-1",
+      "url": "https://www.law.cornell.edu/regulations/texas/7-Tex-Admin-Code-SS-115-1",
+      "title": "7 Tex. Admin. Code 115.1, General Provisions (subsections (a)(9), finder, and (c)(2)(B), restricted registrations)",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "individual who receives compensation for introducing an accredited investor to an issuer",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gv-4004",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.4004.htm",
+      "title": "Texas Government Code, Chapter 4004 (Sections 4004.051 and 4004.101, registration of dealers and agents)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "unless the dealer or other person or company is first registered as provided by this chapter",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gv-4005",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.4005.htm",
+      "title": "Texas Government Code, Chapter 4005 (Section 4005.012, private limited offerings)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "made without any public solicitation or advertisement",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gv-4006",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.4006.htm",
+      "title": "Texas Government Code, Chapter 4006 (Sections 4006.052 and 4006.152, limited offering notice fee)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "A fee charged under this section may not exceed $500.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gv-4008",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.4008.htm",
+      "title": "Texas Government Code, Chapter 4008 (Section 4008.051, liability for registration violations)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "is liable to a person who buys the security from the offeror or seller",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "list-offerings",
+      "title": "List each offering and the exemption it relied on",
+      "instruction": "List every offering the firm and its entities have made, from the offering documents, any Form D and counsel's written exemption decision: the issuer, structure, first offer, first and last sales, whether still open, investors' states, and the exemption claimed, such as Rule 506(b), Rule 506(c) or Section 4(a)(2) alone. Audit each structure's offerings separately, judging each by the rules in force when it was made. Flag offerings by the same issuer that overlapped, or where one began within 30 calendar days of another's end, outside Rule 152's safe harbor; before March 15, 2021, old Rule 502(a)'s six-month safe harbor applied. Counsel decides whether flagged offerings are one. Clear: every offering has a written exemption decision its documents match. Finding: no decision, documents that disagree, or flagged offerings no one has analyzed, for counsel. An exemption these checks do not cover, or missing documents, leave it unverified.",
+      "mode": "agent",
+      "modeBasis": "The agent reads the offering documents and filings the firm supplies.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-fed.reg-d.rule-506b",
+        "us-fed.reg-d.rule-506c"
+      ],
+      "consumes": [
+        "private-placement-memorandum",
+        "form-d"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-506",
+        "ecfr-230-152",
+        "ecfr-230-502-2021",
+        "fr-harmonization-2021",
+        "usc-15-77d"
+      ]
+    },
+    {
+      "id": "jv-security-decision",
+      "title": "Check how counsel treated the joint venture interest",
+      "instruction": "Read counsel's written decision on the joint venture interest beside the signed agreement. It should say whether, and why, counsel treated the interest as a security under the Supreme Court's test: an investment of money in a common enterprise with profits to come solely from the efforts of others. If counsel relied on the partner's control, check that the signed agreement grants those powers. A sale under Section 4(a)(2) alone is exempt only if the partner could fend for itself, which the issuer must show, so look for the record of its experience and information. Such a sale gets no federal shield from state registration, so the decision should name the state exemption used; Texas's private-offering exemptions bar public solicitation. Clear: a decision the signed agreement and the file support. Finding: no decision, or one they do not support, for counsel under choose-structure-and-exemption. No answer from counsel: unverified.",
+      "mode": "agent",
+      "modeBasis": "The agent compares counsel's written decision with the signed agreement; the legal call stays with counsel.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-offerings"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "rules": [
+        "us-fed.securities.jv-interests",
+        "us-fed.securities-act.covered-securities"
+      ],
+      "consumes": [
+        "jv-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "howey",
+        "ralston-purina",
+        "usc-15-77r",
+        "tx-gv-4005"
+      ]
+    },
+    {
+      "id": "confirm-form-d-filed",
+      "title": "Confirm Form D was filed on time for each offering",
+      "instruction": "For each offering that relied on Rule 506, search EDGAR for the issuer and any former name, and save each Form D and amendment with its filing date. Work out the first-sale date from the subscription records as file-form-d-and-state-notices describes; the notice was due 15 calendar days later or, if that day fell on a weekend or holiday, the next business day. Check each filing against the records: the issuer's legal name, the exemption, including whether it claimed Rule 506(c)'s general solicitation provision, and the people and amounts reported. Ask whether a court ever enjoined the issuer, a predecessor or an affiliate for not filing, which bars Rule 506. Clear: a timely, accurate Form D for every Rule 506 offering. Finding: none, a late one, or conflicting answers; missed-form-d-deadline and file-form-d-amendment fix them. An offering sold under Section 4(a)(2) alone: not applicable. An unfixable first-sale date: unverified.",
+      "mode": "agent-browser",
+      "modeBasis": "Filed Form Ds are public and searchable on the SEC's website, so the agent reads them without any login.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-offerings",
+        "jv-security-decision"
+      ],
+      "rules": [
+        "us-fed.reg-d.form-d-filing",
+        "us-fed.reg-d.rule-507",
+        "us-fed.holidays.federal"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "form-d",
+        "subscription-agreement",
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-503",
+        "ecfr-239-500",
+        "fr-form-d-2008",
+        "fr-gensol-2013",
+        "ecfr-230-507"
+      ]
+    },
+    {
+      "id": "check-form-d-amendments",
+      "title": "Check Form D amendments for offerings open past a filing anniversary",
+      "instruction": "For each Rule 506 offering open past a Form D filing's anniversary, still open or since closed, find on EDGAR an amendment filed on or before each anniversary of the filing before it. List what changed while it was open. These needed an amendment as soon as practicable: new related persons, a switch between Rule 506(b) and 506(c), a total offering amount up by more than 10%, a minimum investment down by more than 10%, more than 35 non-accredited investors, or sales commissions, finders' fees or payments to executive officers, directors or promoters up by more than 10%. Changes only in amounts sold or investor counts need none. Clear: every annual amendment on time and every required change amended. Finding: a late or missing amendment; file-form-d-amendment fixes it. No such offering: not applicable. If no one can say whether an offering was continuing, counsel decides; until then: unverified.",
+      "mode": "agent-browser",
+      "modeBasis": "The filing history is public on the SEC's website; the agent compares it with the offering records.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-form-d-filed"
+      ],
+      "rules": [
+        "us-fed.reg-d.form-d-amendments"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "form-d",
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-503",
+        "fr-gensol-2013",
+        "fr-form-d-2008"
+      ]
+    },
+    {
+      "id": "confirm-edgar-access",
+      "title": "Confirm each issuer that still files can use its EDGAR account",
+      "instruction": "For each issuer with an offering still open, or a Form D that may need correcting, an account administrator reads its EDGAR dashboard and reports who holds each role and when the account was last confirmed. Each filer must keep at least two account administrators, or one for an individual or a single-member company, each with individual credentials, and its administrators must confirm every year that everyone on the account is authorized and the filer's details are accurate. Clear: enough administrators, no former principal or vendor listed without the firm's say-so, and a confirmation within the past year. Finding: too few administrators, someone no longer authorized, a lapsed confirmation, or an issuer that cannot sign in; missed-form-d-deadline covers getting access back. No open offering and no Form D to correct: not applicable. The dashboard needs a login, so without the administrator's report record the check as unverified.",
+      "mode": "human-online",
+      "modeBasis": "The EDGAR dashboard is open only to people the filer has authorized, each signed in with their own credentials.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-form-d-filed"
+      ],
+      "rules": [
+        "us-fed.edgar.access"
+      ],
+      "market": "formation-back-office",
+      "basis": "cited",
+      "sources": [
+        "ecfr-232-10"
+      ]
+    },
+    {
+      "id": "check-paid-solicitors",
+      "title": "Check who was paid for bringing in investors",
+      "instruction": "From the books, agreements and the principals' written answers, list everyone paid or promised anything for bringing in investors, in any form, and whether pay turned on money raised. A broker, anyone in the business of effecting securities trades for others, must register with the SEC; the issuer's own people fall within the safe harbor only if, among other conditions, they get no commissions or other pay based on sales. Texas holds Rule 506 sales to its dealer and agent registration, registers individuals paid only to introduce accredited investors as finders, and lets a buyer sold in breach sue to rescind. Compare the list with Form D's sales commission and finders' fee amounts. Clear: no one paid, or counsel confirmed in writing that each payee needed no registration or held it, and the Form D amounts match. Finding: anything else, for counsel. Without the principals' written answer: unverified.",
+      "mode": "agent",
+      "modeBasis": "The agent reads the payment records and agreements the firm supplies; whether a payment needed registration is counsel's call.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-offerings"
+      ],
+      "rules": [
+        "us-fed.exchange-act.broker-registration",
+        "us-fed.reg-d.bad-actor"
+      ],
+      "consumes": [
+        "form-d"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-15-78o",
+        "usc-15-78c",
+        "ecfr-240-3a4-1",
+        "ecfr-230-500",
+        "tac-114-4",
+        "tac-115-1",
+        "tx-gv-4004",
+        "tx-gv-4008",
+        "ecfr-230-503"
+      ]
+    },
+    {
+      "id": "check-bad-actor-records",
+      "title": "Check bad-actor questionnaires for covered persons",
+      "instruction": "For each Rule 506 offering, list the covered persons: the issuer and any predecessor or affiliated issuer; its directors, executive officers, other officers in the offering, general partners and managing members; owners of 20% or more of the voting equity; promoters; and a fund's investment manager and paid solicitors, with the same five roles in each. For each, look for a signed questionnaire or other factual-inquiry record dated before the sales it covers. Disqualification is tested at each sale, so later sales or closings need an inquiry that covers them. Events before September 23, 2013 do not disqualify but must be described in writing to each purchaser a reasonable time before the sale. Clear: everyone screened in time, nothing disqualifying, earlier events disclosed. Finding: a gap or a yes answer, for counsel; prepare-offering-documents collects questionnaires. No Rule 506 offering: not applicable. An incomplete list: unverified.",
+      "mode": "agent",
+      "modeBasis": "The agent reads the questionnaires and offering documents the firm supplies.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-paid-solicitors"
+      ],
+      "rules": [
+        "us-fed.reg-d.bad-actor"
+      ],
+      "consumes": [
+        "bad-actor-questionnaire",
+        "private-placement-memorandum",
+        "form-d"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-506"
+      ]
+    },
+    {
+      "id": "check-solicitation",
+      "title": "Check how investors were solicited against the exemption used",
+      "instruction": "For each offering, gather what the firm or anyone acting for it put before the public from its first offer to its close: website pages, posts, newsletters, ads, articles, webinars, events and mass emails, from its copies and public pages. Under Rule 506(b), none may be general solicitation or advertising, and a breach cannot be excused as insignificant. For each purchaser, the register should show how they came in: no general solicitation, or a substantive relationship formed before the offering began, a showing Rule 152 demands, from March 15, 2021, beside or after an offering that allowed general solicitation. Rule 506(c) allows public marketing. The statute that keeps general solicitation from making an offering public covers only Rule 506, so public marketing of an offering sold under Section 4(a)(2) alone goes to counsel. Clear: the channels fit the exemption. Finding: anything else, which counsel reviews. Missing records: unverified.",
+      "mode": "agent-browser",
+      "modeBasis": "The agent reads the firm's own marketing records and its public pages; no login is needed.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-offerings",
+        "jv-security-decision"
+      ],
+      "rules": [
+        "us-fed.reg-d.general-solicitation",
+        "us-fed.reg-d.rule-506b",
+        "us-fed.reg-d.rule-506c"
+      ],
+      "consumes": [
+        "investor-register",
+        "investor-questionnaire"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-502",
+        "ecfr-230-508",
+        "ecfr-230-152",
+        "fr-harmonization-2021",
+        "usc-15-77d"
+      ]
+    },
+    {
+      "id": "check-accreditation-506b",
+      "title": "Check Rule 506(b) purchasers' accreditation and the non-accredited limits",
+      "instruction": "For each Rule 506(b) offering, read every purchaser's questionnaire and subscription agreement against Rule 501(a) as it read on the sale date, which accepts a reasonable belief. Count non-accredited purchasers in every 90-calendar-day window across the issuer's Rule 506(b) offerings (in each offering, before March 15, 2021), leaving out those Rule 501(e) excludes, such as a relative sharing the purchaser's home, and counting each owner of an unaccredited entity formed to invest: more than 35 cannot be excused as insignificant. For each non-accredited purchaser, look for the record that they, alone or with a purchaser representative, could evaluate the risks, and received the Rule 502(b) information a reasonable time before buying; a purchaser representative needs the purchaser's written acknowledgment and written disclosure of its material relationships. Clear: every purchaser supported and the limits met. Finding: anything else, for counsel. No Rule 506(b) offering: not applicable. Missing files: unverified.",
+      "mode": "agent",
+      "modeBasis": "The agent reads the questionnaires, subscription agreements and delivery records the firm supplies.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-offerings"
+      ],
+      "rules": [
+        "us-fed.reg-d.rule-506b",
+        "us-fed.reg-d.accredited-investor",
+        "us-fed.reg-d.information-requirements"
+      ],
+      "consumes": [
+        "investor-questionnaire",
+        "subscription-agreement",
+        "investor-register",
+        "private-placement-memorandum"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-501",
+        "ecfr-230-506",
+        "ecfr-230-502",
+        "ecfr-230-508",
+        "ecfr-230-506-2021",
+        "fr-harmonization-2021",
+        "fr-accredited-2020"
+      ]
+    },
+    {
+      "id": "check-verification-506c",
+      "title": "Check each Rule 506(c) purchaser's accreditation verification",
+      "instruction": "For each Rule 506(c) offering, confirm every purchaser was accredited and the file shows reasonable steps to verify it. For a listed method, check pieces and dates: two latest years' IRS income forms and a written representation about this year; asset statements and a consumer report under three months old, with a representation disclosing all liabilities; or a registered broker-dealer's, SEC-registered adviser's, licensed attorney's or CPA's written confirmation that it verified the purchaser within the prior three months. From March 15, 2021, a purchaser this issuer verified before may instead give a written representation at the sale, for five years from that verification, absent contrary knowledge. For the Rule 506(c) card's minimum-investment approach, check its pieces; any other method needs a record of why its steps were reasonable. Clear: a complete, dated record for every purchaser. Finding: anything else, for counsel. No 506(c) offering: not applicable. Missing files: unverified.",
+      "mode": "agent",
+      "modeBasis": "The agent reads the verification records the firm or its verification service supplies.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-offerings"
+      ],
+      "rules": [
+        "us-fed.reg-d.rule-506c",
+        "us-fed.reg-d.accredited-investor"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "accreditation-verification-letter",
+        "investor-questionnaire",
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-506",
+        "fr-harmonization-2021"
+      ]
+    },
+    {
+      "id": "reconcile-investor-register",
+      "title": "Reconcile the investor register to subscriptions and funds received",
+      "instruction": "For each offering, match every investor in the register to a signed subscription agreement the firm accepted and to the money received, from bank statements the firm supplies: name, amount, date and sender. For a fund, match each commitment and each capital call. Then compare the register's totals with each Form D as of its filing date: amount sold, investors and non-accredited investors. A difference that makes a filed Form D materially wrong needs an amendment as soon as practicable after it is found; changes only in amounts sold or investor counts do not, and the next annual amendment restates them. Clear: every investor matched and the Form D figures agree. Finding: an investor without an accepted subscription, money with no matching subscription or from someone else, a missing investor, or a materially wrong Form D; keep-investor-register-current and file-form-d-amendment fix them. Missing statements leave it unverified.",
+      "mode": "agent",
+      "modeBasis": "The agent compares the register, the signed agreements and the bank statements the firm supplies.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-form-d-filed",
+        "check-accreditation-506b",
+        "check-verification-506c"
+      ],
+      "rules": [
+        "us-fed.reg-d.form-d-amendments"
+      ],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register",
+        "subscription-agreement",
+        "form-d",
+        "capital-call-notice"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-503"
+      ]
+    },
+    {
+      "id": "confirm-state-notices",
+      "title": "Confirm state notice filings where investors bought",
+      "instruction": "Match each Rule 506 investor's state in the register to a notice receipt the firm supplies; a state may suspend sales over a missing filing or fee. Texas wants its notice and fee through EFD with the SEC filing, and within 15 days after the first Texas sale. The fee is 0.1% of the amount offered, capped at $500. Texas's exemption coordinating with Rule 506 is conditioned on the notice, so gaps go to counsel. An issuer that paid under $500 and outgrew its notice owes an amended notice and three times the shortfall, plus interest. Clear: a timely Texas notice wherever Texans bought, and other states' receipts. Finding: a missing, late or outgrown notice. No Form D filed: missed-form-d-deadline files both. Form D on file: file-form-d-and-state-notices/file-texas-notice files the late notice after counsel's review. Section 4(a)(2)-only sales: not applicable. Other states are not researched: one without a receipt stays unverified.",
+      "mode": "agent",
+      "modeBasis": "The agent compares the notice receipts the firm supplies with the investor register; it files nothing and logs in nowhere.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-form-d-filed",
+        "reconcile-investor-register"
+      ],
+      "rules": [
+        "us-tx.securities.rule-506-notice",
+        "us-fed.securities-act.covered-securities"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "state-notice-filing",
+        "investor-register",
+        "form-d"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-15-77r",
+        "tac-114-4",
+        "tac-109-13",
+        "tx-gv-4006"
+      ]
+    },
+    {
+      "id": "fund-ica-exclusion",
+      "title": "Check the fund's Investment Company Act status and holder limits",
+      "instruction": "Read counsel's written decision on the fund's Investment Company Act status and test the register against any exclusion at every closing. Under Section 3(c)(1), beneficial owners may not exceed 100, and an investing company holding 10% or more of the fund's voting securities that is, or but for 3(c)(1) or 3(c)(7) would be, an investment company counts as its own holders. Under Section 3(c)(7), each owner must have been a qualified purchaser on acquiring its interest, such as an individual with $5,000,000 or more in investments. Neither allows a public offering, though a Rule 506 offering is not one merely because of general solicitation. Under Section 3(c)(5)(C), or outside the definition, the record is counsel's analysis. Clear: a written decision and any count or records held at every closing. Finding: more than 100 owners, a missing record or no written decision, for counsel. Missing register records: unverified.",
+      "mode": "agent",
+      "modeBasis": "The agent tests the register and questionnaires the firm supplies against counsel's written decision.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "reconcile-investor-register"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "rules": [
+        "us-fed.ica.fund-exclusions"
+      ],
+      "consumes": [
+        "investor-register",
+        "investor-questionnaire"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-15-80a-3",
+        "usc-15-80a-2",
+        "usc-15-77d"
+      ]
+    },
+    {
+      "id": "build-filing-calendar",
+      "title": "Build the filing calendar",
+      "instruction": "From the checks above, list each date still ahead with the rule card it comes from: for each Rule 506 offering still continuing, the next annual Form D amendment, due on or before the anniversary of the latest filing and not moved off a weekend; each issuer's next annual EDGAR account confirmation, on the date its account administrator gave; and the next bad-actor bring-down the firm scheduled under prepare-offering-documents. A Texas Rule 506 notice needs no renewal; other states' renewals are not researched here, so list only those the receipts show. A filing submitted after 5:30 p.m. Eastern takes the next business day's date. Clear: every known date listed with its rule card. Finding: a date already past. A date from an unverified check stays blank, marked unknown. The calendar files nothing.",
+      "mode": "agent",
+      "modeBasis": "The agent assembles dates from the earlier checks and the rule cards.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-state-notices",
+        "check-form-d-amendments",
+        "confirm-edgar-access",
+        "check-bad-actor-records"
+      ],
+      "rules": [
+        "us-fed.reg-d.form-d-amendments",
+        "us-tx.securities.rule-506-notice",
+        "us-fed.edgar.access",
+        "us-fed.reg-d.bad-actor"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-503",
+        "ecfr-232-10",
+        "tac-114-4",
+        "ecfr-232-13"
+      ]
+    }
+  ],
+  "outlineSteps": []
 }

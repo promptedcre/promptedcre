@@ -3,7 +3,7 @@
   "slug": "pull-sale-and-lease-comps",
   "kind": "process",
   "title": "Pull sale and lease comps",
-  "summary": "Build the comp set that tests the price and the rent: define the subject and the search area, gather sales and leases from brokers, public records and the sponsor's data services, confirm each one, and adjust or bracket. Conclude ranges for price per square foot, cap rate and market rent, and hand them to underwriting.",
+  "summary": "Build the comp set that tests the price and the rent: define the subject and the search area, gather sales and leases from brokers, public records and the firm's data services, confirm each one, and adjust or bracket. Conclude ranges for price per square foot, cap rate and market rent, and hand them to underwriting.",
   "phase": "acquire",
   "order": 215,
   "featured": false,
@@ -178,7 +178,7 @@
     },
     {
       "id": "search-data-services",
-      "title": "Search the sponsor's comp data services",
+      "title": "Search the firm's comp data services",
       "instruction": "Sign in to the comp databases the sponsor subscribes to and run the written criteria for sales and for leases. Export the results in a form the subscription allows, with each record's source and any confirmation notes, and save the file to the deal folder for the agent to clean. Read the subscription's terms on sharing before any of its data goes into material that leaves the firm. A database record is a reported comp until a party to the deal or a public record confirms it.",
       "mode": "human-online",
       "modeBasis": "Subscription data sits behind the sponsor's login and license; where the license includes an API, an agent can run the same query.",

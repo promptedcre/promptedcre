@@ -7,30 +7,711 @@
   "phase": "operate",
   "order": 345,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "finance-and-close",
+    "decide-when-to-sell"
+  ],
+  "consumes": [
+    "loan-documents",
+    "guaranty",
+    "rent-roll",
+    "trailing-12",
+    "lease-abstract",
+    "underwriting-model",
+    "owner-title-policy",
+    "title-commitment",
+    "survey",
+    "phase-i-esa",
+    "property-condition-assessment",
+    "insurance-binder",
+    "settlement-statement",
+    "wire-instructions",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "ic-memo",
+    "investor-register"
+  ],
+  "produces": [
+    "underwriting-model",
+    "loan-term-sheet",
+    "appraisal",
+    "title-commitment",
+    "loan-documents",
+    "guaranty",
+    "payoff-letter",
+    "lien-release",
+    "insurance-binder",
+    "investor-register"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Read the current loan's prepayment and breakage terms",
-    "Test whether refinancing pays after its costs",
-    "Size the new loan on current coverage and loan-to-value",
-    "Assemble the lender package",
-    "Request quotes and compare structures side by side",
-    "Choose the lender and sign the term sheet",
-    "Order the appraisal and third-party reports the lender requires",
-    "Negotiate the loan documents",
-    "Get investor or partner approval where the operating agreement requires it",
-    "Close the new loan and pay off the old one",
-    "Decide what to do with any proceeds",
-    "Tell investors what changed"
-  ]
+  "sources": [
+    {
+      "id": "ecfr-26-1-860g-2",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.860G-2",
+      "title": "26 CFR 1.860G-2, Other rules (REMIC qualified mortgages: release of a lien; defeasance)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "The release is not within 2 years of the startup day.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-12-34-subpart-d",
+      "url": "https://www.ecfr.gov/current/title-12/part-34/subpart-D",
+      "title": "12 CFR Part 34, Subpart D, Real Estate Lending Standards, and its Appendix A, Interagency Guidelines for Real Estate Lending",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Loans that are renewed, refinanced, or restructured without the advancement of new funds or an increase in the line of credit",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-42-4012a",
+      "url": "https://www.law.cornell.edu/uscode/text/42/4012a",
+      "title": "42 U.S. Code 4012a, Flood insurance purchase and compliance requirements and escrow accounts",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-21",
+      "quote": "not to make, increase, extend, or renew any loan secured by improved real estate",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-12-1715n",
+      "url": "https://www.law.cornell.edu/uscode/text/12/1715n",
+      "title": "12 U.S. Code 1715n, Miscellaneous mortgage insurance (subsection (f), purchase or refinancing of existing multifamily housing projects)",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-21",
+      "quote": "Insurance of mortgages executed in connection with purchase or refinancing of existing multifamily housing project",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bc-26",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.26.htm",
+      "title": "Texas Business and Commerce Code, Chapter 26 (Section 26.02, Loan agreement must be in writing)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "is not enforceable unless the agreement is in writing and signed by the party to be bound",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-12-34-43",
+      "url": "https://www.ecfr.gov/current/title-12/section-34.43",
+      "title": "12 CFR 34.43, Appraisals required; transactions requiring a State certified or licensed appraiser",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "The transaction involves an existing extension of credit at the lending institution",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-12-34-45",
+      "url": "https://www.ecfr.gov/current/title-12/section-34.45",
+      "title": "12 CFR 34.45, Appraiser independence",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "the appraiser shall be engaged directly by the regulated institution or its agent",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bc-9",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.9.htm",
+      "title": "Texas Business and Commerce Code, Chapter 9 (Section 9.513, Termination statement)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "within 20 days after a secured party receives an authenticated demand from a debtor",
+      "tier": "primary"
+    },
+    {
+      "id": "ic3-psa-200406",
+      "url": "https://www.ic3.gov/PSA/2020/PSA200406",
+      "title": "Cyber Criminals Conduct Business Email Compromise through Exploitation of Cloud-Based Email Services (public service announcement, April 6, 2020)",
+      "publisher": "Federal Bureau of Investigation, Internet Crime Complaint Center",
+      "accessed": "2026-11-21",
+      "quote": "Verify all payment changes and transactions in person or via a known telephone number.",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-rate-rules",
+      "url": "https://www.tdi.texas.gov/title/titlem3b.html",
+      "title": "Basic Manual of Title Insurance, Section III, Rate Rules R-5 to R-16 (Rate Rule R-8, Loan Policy on a loan to take up, renew, extend or satisfy an existing lien)",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-21",
+      "quote": "The premium for the new Loan Policy is reduced by a credit.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-12",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.12.htm",
+      "title": "Texas Property Code, Chapter 12 (Section 12.001, Instruments concerning property; Section 12.017, Title insurance company affidavit as release of lien)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "This section does not affect any agreement or obligation of a mortgagee to execute and deliver a release of mortgage.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-13",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.13.htm",
+      "title": "Texas Property Code, Chapter 13 (Sections 13.001 and 13.002, Effects of recording)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "is void as to a creditor or to a subsequent purchaser for a valuable consideration without notice",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-752",
+      "url": "https://www.law.cornell.edu/uscode/text/26/752",
+      "title": "26 U.S. Code 752, Treatment of certain liabilities",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-21",
+      "quote": "shall be considered as a distribution of money to the partner by the partnership",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-731",
+      "url": "https://www.law.cornell.edu/uscode/text/26/731",
+      "title": "26 U.S. Code 731, Extent of recognition of gain or loss on distribution",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-21",
+      "quote": "except to the extent that any money distributed exceeds the adjusted basis of such partner’s interest in the partnership immediately before the distribution",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-1-163-8t",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.163-8T",
+      "title": "26 CFR 1.163-8T, Allocation of interest expense among expenditures (temporary)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "the replacement debt is allocated to the expenditures to which the repaid debt was allocated",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-514",
+      "url": "https://www.law.cornell.edu/uscode/text/26/514",
+      "title": "26 U.S. Code 514, Unrelated debt-financed income (subsection (c)(3), extension of obligations)",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-21",
+      "quote": "an extension, renewal, or refinancing of an obligation evidencing a pre-existing indebtedness shall not be treated as the creation of a new indebtedness",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "To make any untrue statement of a material fact or to omit to state a material fact",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "size-and-test-the-refinance",
+      "title": "Check the loan's payoff terms, size the new loan and test whether it pays",
+      "instruction": "Check decide-when-to-sell's loan sheet and prepayment pricing against the documents, adding the note's notice period, any exit fee and what the guaranty and environmental indemnity say survives payoff, and price prepayment at closing. If a REMIC holds the loan, defeasance keeps it qualified for tax only if the documents allow it, the collateral is solely government securities, the release serves a sale or other customary commercial transaction, and two years have passed since the startup day; ask the servicer for that date. If closing cannot precede maturity, open loan-maturity-refi-fails. Run debt-sizing on current net operating income at two or three sets of assumed limits, with value the appraisal or evaluation as the interagency guidelines define it; a cash-out loan stays subject to their loan-to-value limits. Net the loan against payoff and costs, compare payment, coverage and returns in loan-payments, leverage and returns-sensitivity, and record whether it pays without cash-out.",
+      "mode": "agent",
+      "modeBasis": "Checking the recorded loan sheet against the documents and running the live calculators is document and calculator work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-fed.banking.ltv-value-definition"
+      ],
+      "calculators": [
+        "loan-payments",
+        "debt-sizing",
+        "leverage",
+        "returns-sensitivity",
+        "lease-rollover"
+      ],
+      "market": "deal-pipeline-underwriting",
+      "consumes": [
+        "loan-documents",
+        "guaranty",
+        "rent-roll",
+        "trailing-12",
+        "lease-abstract",
+        "underwriting-model"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-26-1-860g-2",
+        "ecfr-12-34-subpart-d"
+      ],
+      "typeNotes": {
+        "industrial": "With one tenant, the new loan rests on that lease: its remaining term against the new loan's term, and any renewal option not yet exercised, can set the proceeds. Run lease-rollover with the analysis date at the planned closing.",
+        "office": "Leases expiring inside the new loan's term can draw rollover reserves for tenant improvements and leasing commissions; run lease-rollover and net the expected reserves out of the proceeds.",
+        "retail": "Co-tenancy, go-dark and exclusive-use clauses that could cut income during the new loan's term belong in the sizing, with tenant sales where the leases report them."
+      }
+    },
+    {
+      "id": "shop-the-loan",
+      "title": "Send the refinance package and compare the quotes side by side",
+      "instruction": "Once decide-when-to-sell has recorded every vote or consent the governing agreement requires for a refinancing, run the package and quote round as source-acquisition-debt sets out. Add the current loan's terms and payoff estimate, leasing and operations since acquisition, capital work done, and the owner's title policy, survey and reports in hand. Ask the current lender for an extension or new-loan quote. Add the FEMA flood zone: a federally regulated lender may not make, increase, extend or renew a loan secured by a building in a special flood hazard area where federal flood insurance is available unless flood coverage of at least the lesser of the loan balance and the program's maximum covers the building for the loan's term. Compare the quotes in debt-sizing, loan-payments and rate-reset, netting out fees, reserves, prepayment at the next exit and the payoff. Log each decline and its stated reason; a person approves each send.",
+      "mode": "agent",
+      "modeBasis": "Packaging and comparing quotes is document and calculator work; each package speaks for the borrower, so a person approves every send.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "size-and-test-the-refinance"
+      ],
+      "rules": [
+        "us-fed.flood.mandatory-purchase"
+      ],
+      "calculators": [
+        "debt-sizing",
+        "loan-payments",
+        "rate-reset"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "rent-roll",
+        "trailing-12",
+        "loan-documents",
+        "owner-title-policy",
+        "survey",
+        "phase-i-esa",
+        "property-condition-assessment"
+      ],
+      "produces": [
+        "loan-term-sheet",
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-42-4012a",
+        "usc-12-1715n"
+      ],
+      "typeNotes": {
+        "multifamily": "HUD may insure a mortgage made to refinance an existing multifamily housing project (12 U.S.C. 1715n(f)). Ask a HUD-approved lender whether the property fits and how long approval takes, and compare that quote with the others. A loan HUD insures this way can be prepaid only with an obligation to keep the property as rental housing for five years from the insurance date, unless HUD finds a listed exception (1715n(f)(3))."
+      }
+    },
+    {
+      "id": "fund-committee-approves",
+      "title": "Check the fund's borrowing limits and get the committee's approval",
+      "instruction": "Get the investment committee's vote on the leading quote under the fund documents, after checking the fund agreement's borrowing limits: leverage caps for one asset and across the fund, rules on floating rates and hedging, whether the fund may guarantee or give credit support, and any cross-default with a fund credit facility. Present the leading quote, the comparison and the planned use of any proceeds in the form the documents require, and record the vote and any conditions. If the terms fall outside a limit, get the advisory committee or investor consent the documents require before anyone signs.",
+      "mode": "human-online",
+      "modeBasis": "Committee approval is a vote under the fund documents; an agent prepares the materials.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "shop-the-loan"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "ic-memo",
+        "loan-term-sheet",
+        "underwriting-model"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "partner-approves-refinance",
+      "title": "Get the capital partner's written approval of the refinance",
+      "instruction": "Get the capital partner's written approval of the lender, the terms and the guarantors before anyone signs the term sheet, where the joint venture agreement reserves refinancing as a major decision. Send it the comparison, the leading term sheet and the planned use of any proceeds. Settle in writing who signs the new guaranty and environmental indemnity, how the partners share that exposure and any fee paid to the guarantors, and how the agreement's terms for capital-event distributions apply to the net proceeds.",
+      "mode": "human-online",
+      "modeBasis": "The partner's approval is its own decision under the joint venture agreement.",
+      "actor": "investor",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "shop-the-loan"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "jv-agreement",
+        "loan-term-sheet",
+        "underwriting-model"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "sign-the-term-sheet",
+      "title": "Choose the lender and sign the term sheet",
+      "instruction": "A principal chooses the lender, signs the term sheet and pays any deposit only after counsel reads what binds on signing (deposit, exclusivity, expense reimbursement, rate lock and breakage) and checks the lender's timeline against the current loan's notice period and open window. In Texas, a loan agreement over $50,000 with a bank, savings bank, savings and loan association, credit union, a holding company, subsidiary or affiliate of one, or a HUD-approved lender is enforceable only as written and signed by the party to be bound, where the lender gives the statute's conspicuous notice: a commitment binds the lender only once the lender signs. Record the reasons and runner-up, calendar the lock and commitment dates, and tell other lenders. If the lender reprices or withdraws, work lender-retrades-term-sheet's re-size and replacement steps back from the current loan's maturity, notice window and rate lock, not a purchase contract; near maturity, open loan-maturity-refi-fails.",
+      "mode": "human-online",
+      "modeBasis": "Choosing the lender and signing the term sheet binds the borrower, so a principal does it after counsel reads it.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "shop-the-loan",
+        "fund-committee-approves",
+        "partner-approves-refinance"
+      ],
+      "rules": [
+        "us-tx.finance.loan-agreement-in-writing"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "loan-term-sheet",
+        "loan-documents"
+      ],
+      "produces": [
+        "loan-term-sheet"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-bc-26"
+      ]
+    },
+    {
+      "id": "open-title-and-clear-commitment",
+      "title": "Open title for the new loan and clear the commitment",
+      "instruction": "Ask the title company for a commitment on the new Loan Policy, giving it the existing Loan Policy so any credit applies. In Texas, when a new Loan Policy insures a loan that fully takes up an existing insured lien, the premium gets a credit figured on the basic premium for the lesser of the old loan's payoff and original amount: 50% when the old Loan Policy is four years old or less, 25% when under eight years, none after eight or if the new policy adds property (Rate Rule R-8). Check Schedules B and C against the owner's policy and survey for anything recorded since acquisition, such as a mechanic's lien from capital work, and work any lien through title-shows-unexpected-lien's identify-and-cure steps; with no seller, the firm must clear it. Agree the pro forma Loan Policy and the endorsements the lender requires. A person approves each request.",
+      "mode": "agent",
+      "modeBasis": "The commitment, the policies and the survey are documents an agent can check; the title company clears the items, and each request leaves the firm, so a person approves it.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-the-term-sheet"
+      ],
+      "rules": [
+        "us-tx.title.promulgated-rates-forms"
+      ],
+      "calculators": [],
+      "consumes": [
+        "loan-term-sheet",
+        "owner-title-policy",
+        "survey"
+      ],
+      "produces": [
+        "title-commitment"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tdi-rate-rules"
+      ]
+    },
+    {
+      "id": "lender-appraisal-and-reports",
+      "title": "Get the lender's appraisal and third-party reports done",
+      "instruction": "The lender orders its appraisal and reports; the firm gives access, rent roll, leases, operating statements and reports in hand. Under the OCC's rule, a commercial real estate loan over $500,000 needs a state certified appraiser unless an exception applies. One covers an existing extension of credit at the same institution where no obvious and material change in the market or property threatens its collateral protection, or no new money is advanced beyond reasonable closing costs; the bank then gets an evaluation. A bank's fee appraiser must be engaged by the bank or its agent, so an appraisal the firm ordered will not serve; other lenders set their own. Ask whether the lender will rely on an updated survey, Phase I and condition report, get the flood determination, and re-run debt-sizing on the appraised value; if proceeds fall below the payoff and costs, treat it as a repricing under sign-the-term-sheet.",
+      "mode": "human-offline",
+      "modeBasis": "The lender engages the appraiser and the report writers; the firm can only supply access and documents.",
+      "actor": "lender",
+      "licensed": "appraiser",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-the-term-sheet"
+      ],
+      "rules": [
+        "us-fed.firrea.appraisal-thresholds",
+        "us-fed.flood.mandatory-purchase"
+      ],
+      "calculators": [
+        "debt-sizing"
+      ],
+      "consumes": [
+        "rent-roll",
+        "trailing-12",
+        "lease-abstract",
+        "survey",
+        "phase-i-esa",
+        "property-condition-assessment"
+      ],
+      "produces": [
+        "appraisal"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-12-34-43",
+        "ecfr-12-34-45",
+        "usc-42-4012a"
+      ]
+    },
+    {
+      "id": "cpa-reads-the-tax",
+      "title": "Have the CPA say what the new loan and any proceeds mean for taxes",
+      "instruction": "Send the CPA the signed term sheet, draft guaranty, current loan terms and planned use of proceeds; closing figures follow. For an entity taxed as a partnership, an increase in a partner's share of partnership liabilities counts as a contribution of money and a decrease as a distribution of money (26 U.S.C. 752), and a partner recognizes gain on a distribution only where money distributed exceeds its basis before it (731). The CPA says how the new loan and any change in guarantors move each investor's share of liabilities and basis. Interest on new debt that repays old debt follows the old debt's use, the rest what the money pays for; the rule for partnership debt-financed distributions is reserved, so the CPA says how to report them. For retirement-account investors, refinancing existing debt is not new debt under the debt-financed income rules; the CPA says how added principal is treated.",
+      "mode": "human-online",
+      "modeBasis": "Applying the partnership and interest rules to each investor's facts is a CPA's judgment.",
+      "actor": "cpa",
+      "licensed": "cpa",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-the-term-sheet"
+      ],
+      "rules": [
+        "us-fed.irc.retirement-account-debt-financed-income"
+      ],
+      "calculators": [],
+      "consumes": [
+        "loan-term-sheet",
+        "guaranty",
+        "loan-documents",
+        "deal-entity-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-26-752",
+        "usc-26-731",
+        "ecfr-26-1-163-8t",
+        "usc-26-514"
+      ]
+    },
+    {
+      "id": "negotiate-the-loan-documents",
+      "title": "Negotiate the new loan documents",
+      "instruction": "Counsel works the lender's drafts through the negotiate-loan-documents process: check them against the signed term sheet, then the note, deed of trust, covenants, transfer limits, guaranty, rents and cure periods, with a principal deciding the business points. A refinance adds its own checks: investor transfers and admissions since acquisition must fit the new loan's permitted transfers; the borrower's name and legal description must match the vesting deed and current title; the prepayment terms must fit the business plan's next exit; and the closing date must fall inside the current loan's notice period and before any rate lock expires. Where the new loan requires a rate cap, a principal buys it before closing, once counsel confirms the buyer may enter it, as buy-replacement-cap in meet-loan-covenants sets out. Terms outside what the fund's committee or the joint venture partner approved go back for new approval before the documents are final.",
+      "mode": "human-online",
+      "modeBasis": "Negotiating loan documents is legal work for counsel, with business points decided by a principal.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-the-term-sheet"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "loan-term-sheet",
+        "loan-documents",
+        "title-commitment",
+        "survey",
+        "deal-entity-agreement",
+        "jv-agreement",
+        "investor-register"
+      ],
+      "produces": [
+        "loan-documents",
+        "guaranty"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "accept-commitment-and-give-notice",
+      "title": "Accept the commitment, give the prepayment notice and get the payoff letter",
+      "instruction": "A principal signs the lender's commitment once it matches the term sheet and every condition can be met, and only then signs and gives the prepayment notice exactly as the note requires (method, address, days of notice, payoff date). An agent drafts the notice and asks the servicer for a payoff statement good through closing with the per diem, any premium, fees, and the reserves and escrows to be returned, and asks any swap or cap counterparty for its termination cost. For a defeasance, follow the servicer's process: a principal engages the defeasance consultant and any successor borrower the documents call for; the securities are bought with closing funds. Ask the lender to commit to release the deed of trust and its UCC filings on payment, and check the payoff against the earlier pricing.",
+      "mode": "human-online",
+      "modeBasis": "An agent drafts the notice and the payoff and termination requests; the commitment and the notice bind the borrower, so a principal signs them and engages any defeasance consultant.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "lender-appraisal-and-reports"
+      ],
+      "rules": [],
+      "calculators": [
+        "loan-payments",
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "loan-term-sheet",
+        "appraisal",
+        "loan-documents"
+      ],
+      "produces": [
+        "payoff-letter"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "close-and-pay-off",
+      "title": "Sign, fund and pay off the old loan",
+      "instruction": "The principals sign the loan documents before a notary, and the lender funds once its conditions are met. Before signing, an agent reconciles the settlement statement with the payoff letter and the lender's figures. In Texas a deed of trust is recorded only if acknowledged, sworn to or proved, and unrecorded it is void against a creditor or a later buyer for value without notice. Before funding, the insurance broker issues evidence naming the new lender as the loan documents require. Confirm any wire instruction by a known telephone number. The title company pays off the old loan and records the new deed of trust. A principal confirms in the bank account that any net proceeds arrived in the amount on the final statement.",
+      "mode": "human-offline",
+      "modeBasis": "Signing before a notary, confirming wire instructions by telephone and checking the bank account are done by people; an agent reconciles the statement beforehand.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "negotiate-the-loan-documents",
+        "accept-commitment-and-give-notice",
+        "open-title-and-clear-commitment",
+        "cpa-reads-the-tax"
+      ],
+      "rules": [
+        "us-tx.property.conveyance-recording"
+      ],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "settlement-statement",
+        "payoff-letter",
+        "loan-documents",
+        "title-commitment",
+        "wire-instructions",
+        "insurance-binder"
+      ],
+      "produces": [
+        "loan-documents",
+        "insurance-binder"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-pr-12",
+        "tx-pr-13",
+        "ic3-psa-200406"
+      ]
+    },
+    {
+      "id": "confirm-release-and-update-records",
+      "title": "Confirm the old lien is released and update the loan records",
+      "instruction": "Search county records for the new deed of trust and the old one's release, log recording details, and press the title company until the release is recorded. In Texas, where the original loan on property other than a one-to-four-family residence was under $1.5 million, a title insurer or its authorized agent that paid off the loan may, after notice, record an affidavit that releases the lien unless the lender controverts it within 45 days after receiving the notice; the lender's own duty to release stands. If old UCC filings remain, draft the borrower's demand for a principal to sign; with nothing owed, the lender must file or send terminations within 20 days of receiving it. Check the servicer's escrow and reserve refund against the payoff letter; a principal confirms it reached the bank. Close the old loan's calendar dates and hand the signed loan documents to build-the-covenant-calendar in meet-loan-covenants.",
+      "mode": "agent-browser",
+      "modeBasis": "County real property records can be searched in a browser; follow-ups and the demand leave the firm, so a person approves each send, and a principal signs the demand and checks the bank account.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "close-and-pay-off"
+      ],
+      "rules": [
+        "us-tx.property.conveyance-recording"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "loan-documents",
+        "payoff-letter"
+      ],
+      "produces": [
+        "lien-release"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-pr-12",
+        "tx-bc-9"
+      ]
+    },
+    {
+      "id": "decide-the-proceeds",
+      "title": "Decide what to do with any proceeds",
+      "instruction": "Decide what happens to the net proceeds left after the payoff, costs and lender reserves: distribute them, keep them as a reserve, fund leasing or capital work in the business plan, or pay down other obligations. Work from the governing agreement as signed: how it classes refinance proceeds, often as capital or sale-and-refinance proceeds with their own order in the waterfall, who decides, and any reserve it sets; from the new loan, any limit on distributions; and in a fund, whether proceeds may be reinvested or must be distributed. Preview each party's share in waterfall-promote and weigh the CPA's answers. Record the decision, the amount for each use and the reason in the firm file. Any distribution then runs through make-a-distribution, which carries the lawful-distribution test, the waterfall run, the second-person check and the payment controls.",
+      "mode": "human-online",
+      "modeBasis": "How to use the proceeds is a decision for the people the governing agreement names.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "close-and-pay-off",
+        "cpa-reads-the-tax"
+      ],
+      "rules": [],
+      "calculators": [
+        "waterfall-promote"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "loan-documents",
+        "underwriting-model",
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "tell-investors",
+      "title": "Tell investors or the capital partner what changed",
+      "instruction": "Draft the investor notice from the closing set: the new lender, amount, rate and how it is set, maturity, amortization, prepayment terms for the next exit, any change in guaranties or reserves, the payoff and costs, and the net proceeds with the decision on their use and when any distribution will be paid. Say what changed against the business plan and mark anything not yet known. Rule 10b-5 bars untrue statements of material fact, and omissions that leave statements misleading, in connection with the purchase or sale of securities; counsel reviews the notice where interests are changing hands or projections are restated. In a joint venture, send the partner the closing set and the proceeds decision its agreement calls for. A person approves each notice before it goes out through the portal or channel the governing agreement names; record what was sent, and to whom, in the investor register.",
+      "mode": "agent",
+      "modeBasis": "Drafting from the closing set is writing work; notices to investors or the partner go out only with a person's approval.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-the-proceeds"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5"
+      ],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register",
+        "jv-agreement",
+        "loan-documents",
+        "underwriting-model"
+      ],
+      "produces": [
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5"
+      ]
+    }
+  ],
+  "outlineSteps": []
 }

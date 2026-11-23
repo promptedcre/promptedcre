@@ -69,7 +69,7 @@
       "url": "https://tcss.legis.texas.gov/resources/FI/htm/FI.306.htm",
       "title": "Texas Finance Code, Chapter 306 (Sections 306.002, 306.003 and 306.006, Commercial loans)",
       "publisher": "Texas Legislature",
-      "accessed": "2026-11-13",
+      "accessed": "2026-11-23",
       "quote": "a rate or amount of interest that does not exceed the applicable ceilings computed in accordance with Chapter 303",
       "tier": "primary"
     },
@@ -85,10 +85,10 @@
     {
       "id": "usc-7-1a",
       "url": "https://www.law.cornell.edu/uscode/text/7/1a",
-      "title": "7 U.S.C. 1a(18), Eligible contract participant",
+      "title": "7 U.S.C. 1a, Definitions (paragraph (18), eligible contract participant; paragraph (47), swap)",
       "publisher": "Legal Information Institute (statute text)",
-      "accessed": "2026-11-13",
-      "quote": "that has total assets exceeding $10,000,000;",
+      "accessed": "2026-11-23",
+      "quote": "that is a put, call, cap, floor, collar, or similar option of any kind",
       "tier": "primary"
     },
     {
@@ -96,7 +96,7 @@
       "url": "https://www.law.cornell.edu/uscode/text/7/2",
       "title": "7 U.S.C. 2(e), Limitation on participation in swaps",
       "publisher": "Legal Information Institute (statute text)",
-      "accessed": "2026-11-13",
+      "accessed": "2026-11-23",
       "quote": "It shall be unlawful for any person, other than an eligible contract participant, to enter into a swap unless",
       "tier": "primary"
     },
@@ -162,6 +162,15 @@
       "accessed": "2026-11-13",
       "quote": "to accept private flood insurance as satisfaction of the flood insurance coverage requirement",
       "tier": "primary"
+    },
+    {
+      "id": "ecfr-17-1-3",
+      "url": "https://www.ecfr.gov/current/title-17/section-1.3",
+      "title": "17 CFR 1.3, Definitions (eligible contract participant, paragraph (6), commodity pools)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-23",
+      "quote": "A commodity pool that does not have total assets exceeding $5,000,000 or that is not operated by a person described in subclause (A)(iv)(II)",
+      "tier": "primary"
     }
   ],
   "steps": [
@@ -220,7 +229,7 @@
     {
       "id": "check-rate-and-payments",
       "title": "Check the note's rate, payments and balloon",
-      "instruction": "Read the note's interest terms: a fixed rate, or an index plus a spread with any floor; for a floating loan, which SOFR rate applies, when it resets, and what replaces it if it stops being published. Check the day count: Texas lets the parties to a commercial loan compute interest on a 365/360 basis, which charges slightly more per year than the stated rate. Run the loan-payments calculator on the note's terms to confirm the payment, any interest-only period and the balance at maturity. For a floating loan, run rate-reset on a rising index path and test coverage each year. If the lender requires a swap, federal law bars a party that is not an eligible contract participant from entering one off a designated contract market; an entity qualifies with, for example, total assets over $10 million, or net worth over $1 million when hedging its own business.",
+      "instruction": "Read the note's interest terms: a fixed rate, or an index plus a spread with any floor; for a floating loan, which SOFR rate, its reset dates and its fallback. Check the day count: Texas allows 365/360 interest on a commercial loan by agreement, slightly above the stated rate. Run loan-payments to confirm the payment, any interest-only period and the balloon; for floating debt, run rate-reset on a rising index, testing coverage yearly. A rate cap is a swap, and only an eligible contract participant may enter a swap off a designated contract market (7 U.S.C. 1a(47), 2(e)). An entity can qualify with total assets over $10 million, or net worth over $1 million when hedging its business; a commodity pool needs over $5 million and a regulated operator (17 CFR 1.3). If the loan requires either, counsel confirms the buyer qualifies before closing; buy-replacement-cap in meet-loan-covenants covers later caps.",
       "mode": "agent",
       "modeBasis": "The note's terms are in the drafts, and the live calculators compute the payments, the balloon and the rate path.",
       "risk": "medium",
@@ -243,7 +252,8 @@
       "sources": [
         "tx-fin-306",
         "usc-7-1a",
-        "usc-7-2"
+        "usc-7-2",
+        "ecfr-17-1-3"
       ]
     },
     {
@@ -525,7 +535,7 @@
     {
       "id": "build-closing-checklist",
       "title": "Confirm the execution set and build the closing checklist",
-      "instruction": "When counsel reports the documents final, compare the execution versions with the last agreed drafts and the tracking list, and confirm each agreed change is in. Build the closing checklist from the loan's conditions: loan title policy and endorsements, survey, insurance evidence naming the lender, SNDAs and estoppels, entity authority documents, reserves and fees to fund, and any legal opinion. A regulated lender may not make a loan on a building in a special flood hazard area where federal flood insurance is available unless flood coverage is in place, so confirm the determination. List who signs each document and in what capacity. In Texas a deed of trust is recorded only if acknowledged, sworn to or proved, and unrecorded it is void against later creditors and buyers for value without notice. Hand the set and the checklist to finance and close.",
+      "instruction": "When counsel reports the documents final, compare the execution versions with the last agreed drafts and the tracking list, and confirm each agreed change is in. Build the closing checklist from the loan's conditions: loan title policy and endorsements, survey, insurance evidence naming the lender, SNDAs and estoppels, entity authority documents, reserves and fees to fund, any required rate cap or swap, and any legal opinion. A regulated lender may not make a loan on a building in a special flood hazard area where federal flood insurance is available unless flood coverage is in place, so confirm the determination. List who signs each document and in what capacity. In Texas a deed of trust is recorded only if acknowledged, sworn to or proved, and unrecorded it is void against later creditors and buyers for value without notice. Hand the set and the checklist to finance and close.",
       "mode": "agent",
       "modeBasis": "Comparing versions and building the checklist from the loan's conditions are document tasks an agent can do.",
       "risk": "high",

@@ -7,34 +7,765 @@
   "phase": "operate",
   "order": 124,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
+  "lastVerified": "2026-11-21",
   "situation": {
     "trigger": "A tenant, contractor or neighbor reports a chemical spill or release at the property.",
     "urgency": "hours"
   },
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "requires": [
+    "take-over-operations",
+    "abstract-the-leases",
+    "bind-property-insurance",
+    "hire-property-manager"
+  ],
+  "consumes": [
+    "lease",
+    "lease-abstract",
+    "phase-i-esa",
+    "phase-ii-esa",
+    "insurance-binder",
+    "loan-documents",
+    "rent-roll",
+    "underwriting-model",
+    "jv-agreement",
+    "investor-register"
+  ],
+  "produces": [
+    "lease-abstract",
+    "underwriting-model"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Make sure people are safe and call emergency services if needed",
-    "Stop the source and contain the release",
-    "Find out what was released, how much and whose operation caused it",
-    "Have counsel confirm which reports must be made and when",
-    "Make the required reports to the agencies",
-    "Notify the insurer and the lender",
-    "Engage an environmental consultant",
-    "Document the release and every step of the response",
-    "Read the tenant's lease for use, compliance and indemnity terms",
-    "Oversee the cleanup and the consultant's assessment",
-    "Estimate the effect on value and the loan",
-    "Tell investors and record the reports, results and costs"
-  ]
+  "sources": [
+    {
+      "id": "usc-42-9601",
+      "url": "https://www.law.cornell.edu/uscode/text/42/9601",
+      "title": "42 U.S.C. 9601, Definitions (paragraphs (8), (14), (22), (35)(A) and (40))",
+      "publisher": "Legal Information Institute (U.S. Code text)",
+      "accessed": "2026-11-21",
+      "quote": "The term does not include petroleum, including crude oil or any fraction thereof",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-42-9603",
+      "url": "https://www.law.cornell.edu/uscode/text/42/9603",
+      "title": "42 U.S.C. 9603, Notification requirements respecting released substances (subsections (a) and (b))",
+      "publisher": "Legal Information Institute (U.S. Code text)",
+      "accessed": "2026-11-21",
+      "quote": "immediately notify the National Response Center",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-42-9607",
+      "url": "https://www.law.cornell.edu/uscode/text/42/9607",
+      "title": "42 U.S.C. 9607, Liability (subsections (a), (b) and (e))",
+      "publisher": "Legal Information Institute (U.S. Code text)",
+      "accessed": "2026-11-21",
+      "quote": "No indemnification, hold harmless, or similar agreement or conveyance shall be effective to transfer from the owner or operator",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-302-6",
+      "url": "https://www.ecfr.gov/current/title-40/section-302.6",
+      "title": "40 CFR 302.6, Notification requirements",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "in a quantity equal to or exceeding the reportable quantity determined by this part in any 24-hour period",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-355-c",
+      "url": "https://www.ecfr.gov/current/title-40/part-355/subpart-C",
+      "title": "40 CFR 355.30 to 355.43, Emergency release notification",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Any release that results in exposure to persons solely within the boundaries of your facility.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-110",
+      "url": "https://www.ecfr.gov/current/title-40/part-110",
+      "title": "40 CFR part 110, Discharge of oil (sections 110.3 and 110.6)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Cause a film or sheen upon or discoloration of the surface of the water or adjoining shorelines",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-112",
+      "url": "https://www.ecfr.gov/current/title-40/part-112",
+      "title": "40 CFR part 112, Oil pollution prevention (sections 112.1(b) and (d) and 112.4(a) and (c))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-29-1910-120",
+      "url": "https://www.ecfr.gov/current/title-29/section-1910.120",
+      "title": "29 CFR 1910.120, Hazardous waste operations and emergency response (paragraphs (a)(1) and (a)(3))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Responses to incidental releases of hazardous substances where the substance can be absorbed, neutralized, or otherwise controlled at the time of release",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "To make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-wa-26",
+      "url": "https://tcss.legis.texas.gov/resources/WA/htm/WA.26.htm",
+      "title": "Texas Water Code, Chapter 26 (Sections 26.039, 26.263 and 26.266)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "shall notify the commission as soon as possible and not later than 24 hours after the occurrence",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-30-327-1",
+      "url": "https://www.law.cornell.edu/regulations/texas/30-Tex-Admin-Code-SS-327-1",
+      "title": "30 Tex. Admin. Code 327.1, Applicability",
+      "publisher": "Legal Information Institute (Texas Administrative Code text)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-30-327-2",
+      "url": "https://www.law.cornell.edu/regulations/texas/30-Tex-Admin-Code-SS-327-2",
+      "title": "30 Tex. Admin. Code 327.2, Definitions (responsible person)",
+      "publisher": "Legal Information Institute (Texas Administrative Code text)",
+      "accessed": "2026-11-21",
+      "quote": "the owner or operator of a facility from which a discharge or spill emanates",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-30-327-3",
+      "url": "https://www.law.cornell.edu/regulations/texas/30-Tex-Admin-Code-SS-327-3",
+      "title": "30 Tex. Admin. Code 327.3, Notification requirements",
+      "publisher": "Legal Information Institute (Texas Administrative Code text)",
+      "accessed": "2026-11-21",
+      "quote": "as soon as possible but not later than 24 hours after the discovery of the spill or discharge",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-30-327-4",
+      "url": "https://www.law.cornell.edu/regulations/texas/30-Tex-Admin-Code-SS-327-4",
+      "title": "30 Tex. Admin. Code 327.4, Reportable quantities",
+      "publisher": "Legal Information Institute (Texas Administrative Code text)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-30-327-5",
+      "url": "https://www.law.cornell.edu/regulations/texas/30-Tex-Admin-Code-SS-327-5",
+      "title": "30 Tex. Admin. Code 327.5, Actions required",
+      "publisher": "Legal Information Institute (Texas Administrative Code text)",
+      "accessed": "2026-11-21",
+      "quote": "The responsible person shall immediately abate and contain the spill or discharge",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-30-334-75",
+      "url": "https://www.law.cornell.edu/regulations/texas/30-Tex-Admin-Code-SS-334-75",
+      "title": "30 Tex. Admin. Code 334.75, Reporting and cleanup of surface spills and overfills",
+      "publisher": "Legal Information Institute (Texas Administrative Code text)",
+      "accessed": "2026-11-21",
+      "quote": "report the spill or overfill to the agency within 24 hours",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-30-334-72",
+      "url": "https://www.law.cornell.edu/regulations/texas/30-Tex-Admin-Code-SS-334-72",
+      "title": "30 Tex. Admin. Code 334.72, Reporting of suspected releases",
+      "publisher": "Legal Information Institute (Texas Administrative Code text)",
+      "accessed": "2026-11-21",
+      "quote": "Owners and operators of aboveground storage tank (AST) and underground storage tank (UST) systems must report to the agency within 24 hours",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-30-334-76",
+      "url": "https://www.law.cornell.edu/regulations/texas/30-Tex-Admin-Code-SS-334-76",
+      "title": "30 Tex. Admin. Code 334.76, Initial response to releases",
+      "publisher": "Legal Information Institute (Texas Administrative Code text)",
+      "accessed": "2026-11-21",
+      "quote": "owners and operators must perform the following initial response actions within 24 hours of a release",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-30-334-77",
+      "url": "https://www.law.cornell.edu/regulations/texas/30-Tex-Admin-Code-SS-334-77",
+      "title": "30 Tex. Admin. Code 334.77, Initial abatement measures and site check",
+      "publisher": "Legal Information Institute (Texas Administrative Code text)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-30-334-451",
+      "url": "https://www.law.cornell.edu/regulations/texas/30-Tex-Admin-Code-SS-334-451",
+      "title": "30 Tex. Admin. Code 334.451, Applicability of Subchapter J (leaking petroleum storage tank corrective action)",
+      "publisher": "Legal Information Institute (Texas Administrative Code text)",
+      "accessed": "2026-11-21",
+      "quote": "must be performed by or be coordinated by a person or entity registered as a corrective action specialist",
+      "tier": "primary"
+    },
+    {
+      "id": "tceq-spills",
+      "url": "https://www.tceq.texas.gov/response/spills",
+      "title": "Spills, Discharges, and Releases",
+      "publisher": "Texas Commission on Environmental Quality",
+      "accessed": "2026-11-21",
+      "quote": "notifying the NRC does not constitute notice to the state",
+      "tier": "primary"
+    },
+    {
+      "id": "tceq-spill-actions",
+      "url": "https://www.tceq.texas.gov/response/spills/actions.html",
+      "title": "What to Do after a Spill",
+      "publisher": "Texas Commission on Environmental Quality",
+      "accessed": "2026-11-21",
+      "quote": "Find and, if possible, safely remove all ignition sources.",
+      "tier": "primary"
+    },
+    {
+      "id": "tceq-spill-report-info",
+      "url": "https://www.tceq.texas.gov/response/spills/reporting_info.html",
+      "title": "Spills: Information for the Initial Notification",
+      "publisher": "Texas Commission on Environmental Quality",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tceq-spill-rq",
+      "url": "https://www.tceq.texas.gov/response/spills/spill_rq.html",
+      "title": "Spills: Reportable Quantities",
+      "publisher": "Texas Commission on Environmental Quality",
+      "accessed": "2026-11-21",
+      "quote": "as required by the Texas General Land Office",
+      "tier": "primary"
+    },
+    {
+      "id": "tceq-spill-cleanup",
+      "url": "https://www.tceq.texas.gov/response/spills/cleanup.html",
+      "title": "Spills: Cleanup and Waste Management",
+      "publisher": "Texas Commission on Environmental Quality",
+      "accessed": "2026-11-21",
+      "quote": "The objective of each spill cleanup should be to return the site to pre-spill or background conditions.",
+      "tier": "primary"
+    },
+    {
+      "id": "tceq-spill-waste",
+      "url": "https://www.tceq.texas.gov/response/spills/spill_waste.html",
+      "title": "Spill Waste Management",
+      "publisher": "Texas Commission on Environmental Quality",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tceq-spill-followup",
+      "url": "https://www.tceq.texas.gov/response/spills/followup.html",
+      "title": "Spills: Information for the Follow-up Report Required within 30 Days",
+      "publisher": "Texas Commission on Environmental Quality",
+      "accessed": "2026-11-21",
+      "tier": "primary",
+      "quote": "A 30 day follow up report is required to be submitted to the Local Emergency Planning Committee (LEPC)"
+    },
+    {
+      "id": "epa-spill-reporting",
+      "url": "https://www.epa.gov/emergency-response/when-are-you-required-report-oil-spill-and-hazardous-substance-release",
+      "title": "When are You Required to Report an Oil Spill and Hazardous Substance Release?",
+      "publisher": "U.S. Environmental Protection Agency",
+      "accessed": "2026-11-21",
+      "quote": "anyone who discovers a hazardous substance release or oil spill is encouraged to contact the federal government, regardless of whether they are the responsible party",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-92",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.92.htm",
+      "title": "Texas Property Code, Chapter 92 (Section 92.052)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "get-people-safe",
+      "title": "Get people clear and call emergency services",
+      "instruction": "Move everyone away from the spill and upwind of any vapor, keep people from touching or walking through it, and call 911 if anyone is hurt, there is fire or a gas or vapor risk, or the release could reach people off site. The Texas Commission on Environmental Quality (TCEQ) spill guidance adds: remove ignition sources only if that is safe, and check for injuries. If the spill creates an imminent health threat, Texas rules require the responsible person to notify local emergency authorities, such as the fire department or the Local Emergency Planning Committee (LEPC), immediately, and to cooperate with the responders and the local incident command. Tell the property manager, the principals and, in a joint venture, the capital partner at once, and name one person to speak for the firm. If fire, storm or flood caused the spill, also follow casualty-damages-property.",
+      "mode": "human-offline",
+      "modeBasis": "Clearing the area and calling responders happen on site and by phone; an agent can only keep the contact list.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tceq-spill-actions",
+        "tac-30-327-3",
+        "tac-30-327-5"
+      ]
+    },
+    {
+      "id": "stop-and-contain",
+      "title": "Have the party in control stop the source and contain the spill",
+      "instruction": "Have whoever controls the source, usually the tenant, the manager's crew or a contractor, stop the flow and keep it out of drains, soil and water if safe. Texas rules require the responsible person to abate and contain a spill immediately and begin a reasonable response: stopping it, removing the material and managing the waste. That person includes the owner or operator of the facility it came from and anyone who causes, suffers, allows or permits it. Owners and operators of regulated storage tanks must contain and clean up a spill or overfill at once, and shut down a leaking tank system if needed. Nearby staff may handle a spill they can absorb or neutralize on the spot; federal worker-safety rules treat an uncontrolled release as emergency response, so bring in a contractor whose crew is trained for it, within the emergency spending authority set under hire-property-manager.",
+      "mode": "human-offline",
+      "modeBasis": "Stopping and containing a spill is physical work on site by the tenant, the manager's crew or a contractor.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "get-people-safe"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tac-30-327-5",
+        "tac-30-327-2",
+        "tx-wa-26",
+        "tac-30-334-75",
+        "tac-30-334-76",
+        "ecfr-29-1910-120"
+      ]
+    },
+    {
+      "id": "record-the-facts",
+      "title": "Record what was released, how much, where it went and where it came from",
+      "instruction": "Start an incident record from what the people on site report: when the release began and when it was found, the substance and whether it is an extremely hazardous substance, an estimate of the quantity and how long it ran, where it went (pavement, soil, a storm drain, a ditch or creek, the air), the source and whose operation it was, injuries, and who has responded. These are the facts the federal and Texas initial reports ask for. Ask the property manager or a principal to get the safety data sheet from the tenant or contractor, the tank records and the lease's permitted use. If no one on site can identify the material, the person on site calls the chemical emergency line TCEQ's spill guidance lists. Mark each figure as measured, reported or estimated, and update the record as facts change.",
+      "mode": "agent",
+      "modeBasis": "Gathering reported facts and documents into one record is writing work; the observations come from people on site.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "get-people-safe"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "lease-abstract"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-40-355-c",
+        "tac-30-327-3",
+        "tceq-spill-report-info",
+        "tceq-spill-actions"
+      ]
+    },
+    {
+      "id": "check-reporting-rules",
+      "title": "Test the facts against each federal threshold and list the reports that may be due",
+      "instruction": "Table each federal reporting rule the facts might meet, with its threshold and clock. A Superfund (CERCLA) hazardous substance released at or above its reportable quantity within 24 hours goes to the National Response Center immediately; petroleum not separately listed is excluded. Where the facility produces, uses or stores hazardous chemicals, that release, or a release of an extremely hazardous substance at or above its own reportable quantity, also goes immediately to the LEPC and state emergency response commission, unless only people on site were exposed. Oil that leaves a film, sheen or discoloration on navigable water or its shoreline, deposits a sludge or emulsion, or breaks a water quality standard goes to the National Response Center immediately. A release only to the air still goes to these lines when it meets a federal threshold. Mark unknowns for counsel.",
+      "mode": "agent",
+      "modeBasis": "The federal thresholds are published in the regulations and the facts are in the incident record; counsel confirms the result.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-the-facts"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-42-9601",
+        "usc-42-9603",
+        "ecfr-40-302-6",
+        "ecfr-40-355-c",
+        "ecfr-40-110"
+      ]
+    },
+    {
+      "id": "check-texas-reporting-rules",
+      "title": "Test the facts against the Texas spill and storage tank reporting rules",
+      "instruction": "Table each Texas reporting rule the facts might meet, with its threshold and clock. A spill at or above the chapter 327 quantities, such as 25 gallons of gasoline, diesel or used oil on land, or a sheen on water, goes to TCEQ as soon as possible and within 24 hours; the rule counts from discovery and the Water Code from the occurrence, so date an unnoticed spill from its likely start. A release from a regulated storage tank system, such as product in soil, is reported within 24 hours whatever the amount, as is a petroleum tank's surface spill or overfill over 25 gallons or leaving a sheen on water; a smaller one not cleaned up within 24 hours is reported at once. Oil entering or threatening coastal waters is reported as the General Land Office requires; the state hotline also takes air releases. Mark unknowns for counsel.",
+      "mode": "agent",
+      "modeBasis": "The Texas thresholds are published in TCEQ's rules and the facts are in the incident record; counsel confirms the result.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-the-facts"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-wa-26",
+        "tac-30-327-1",
+        "tac-30-327-3",
+        "tac-30-327-4",
+        "tac-30-334-72",
+        "tac-30-334-75",
+        "tac-30-334-76",
+        "tceq-spill-rq",
+        "tceq-spills"
+      ]
+    },
+    {
+      "id": "make-the-reports",
+      "title": "Make the required calls and record each report number",
+      "instruction": "Once the facts meet a threshold, or plainly may, the person in charge of the facility makes each call with the incident record at hand, without waiting for counsel: the National Response Center at 1-800-424-8802 for a federal report; for Texas, the State Emergency Response Center at 1-800-832-8224 or the TCEQ regional office during business hours. EPA encourages anyone who discovers a release to call the National Response Center. TCEQ warns that calling the National Response Center is not notice to the state. A Texas notice does satisfy the federal duty to notify the state commission, but the LEPC is called separately where the emergency release rule applies. Where the tenant reports, get its report numbers and a copy of what it said. Record each call: time, number, person reached, report number and what was said. Call again as soon as new facts would change the response.",
+      "mode": "human-offline",
+      "modeBasis": "Agency reports are made by phone by a person who can answer the operator's questions.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-reporting-rules",
+        "check-texas-reporting-rules"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-40-302-6",
+        "tac-30-327-3",
+        "tceq-spills",
+        "ecfr-40-355-c",
+        "epa-spill-reporting"
+      ]
+    },
+    {
+      "id": "confirm-duties-with-counsel",
+      "title": "Have environmental counsel confirm who reports, to whom and by when",
+      "instruction": "Call environmental counsel with the incident record and the threshold tables; counsel confirms which reports are due, who makes them and what any update says. Federal notices fall on the person in charge of the facility. Under Texas rules the responsible person includes the owner or operator of the facility the spill came from and anyone who causes, suffers, allows or permits it, so the deal entity may owe a report even when a tenant caused the spill. A Texas notice is not an admission that pollution occurred. Bona fide prospective purchaser protection covers only disposal before the firm acquired the property, so it does not shield the firm from this release, and a missed notice or unreasonable response can cost the firm that protection for older contamination. Counsel's review runs alongside the calls, never ahead of them.",
+      "mode": "human-offline",
+      "modeBasis": "Deciding who owes a legal report and what it admits is a lawyer's judgment, given on a call while the reports go in.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-reporting-rules",
+        "check-texas-reporting-rules"
+      ],
+      "rules": [
+        "us-fed.epa.all-appropriate-inquiries"
+      ],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-42-9603",
+        "tac-30-327-2",
+        "tac-30-327-3",
+        "usc-42-9601"
+      ]
+    },
+    {
+      "id": "read-the-lease",
+      "title": "Read the lease's use, compliance, environmental and indemnity terms",
+      "instruction": "For the tenant whose operation caused the release, or whose space it reached, list the permitted use, the hazardous materials and compliance-with-laws clauses, any environmental indemnity and whether it survives the lease, the insurance the tenant must carry and whether the owner is an additional insured, the notice clause, the landlord's entry and self-help rights, the default terms and any rent abatement. Then list what the lease lets the firm demand now: stopping the activity, a cleanup by the tenant, reimbursement or access. Under federal law an indemnity cannot move Superfund liability off the owner, though it still binds the parties to it, and the defense for a release caused solely by a third party does not reach one acting under a contractual relationship with the owner; the statute names leases. Record the gaps for counsel.",
+      "mode": "agent",
+      "modeBasis": "The terms are in the signed lease and its abstract; reading and listing them is document work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-the-facts"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "lease",
+        "lease-abstract"
+      ],
+      "produces": [
+        "lease-abstract"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-42-9607",
+        "usc-42-9601",
+        "ecfr-40-112"
+      ],
+      "typeNotes": {
+        "industrial": "A tenant that stores oil in aboveground containers (more than 1,320 gallons of aboveground capacity, counting containers of 55 gallons or more) may be subject to EPA's spill prevention rule, 40 CFR part 112, where a discharge could reach navigable waters; ask for its plan and any tank registrations the lease requires it to keep."
+      }
+    },
+    {
+      "id": "send-written-notices",
+      "title": "Give written notice to insurers, the lender, tenants and affected neighbors",
+      "instruction": "Draft written notice of the release to insurers, the lender, tenants and neighbors owed one. Insurers: every policy that may respond, including the tenant's where the owner is an additional insured and any pollution policy, read for its notice method and deadline and sent through the broker. Lender: the notice the loan agreement and any environmental indemnity require, with the incident record and reports made. Tenants: the notice each lease requires, and word to affected occupants. In Texas the responsible person must try, as soon as possible and within two weeks of discovery, to notify the owner or occupant of the spill site and the occupants of any property it reasonably believes is harmed, such as a neighbor downstream. If casualty-damages-property is open, add the release to its notices. Counsel approves tenant and neighbor wording, and a principal each notice, before it goes; record when each was received.",
+      "mode": "agent",
+      "modeBasis": "The notice terms are in the policies, the loan documents and the leases; each notice goes out only after counsel or a principal approves it.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-the-lease",
+        "make-the-reports",
+        "confirm-duties-with-counsel"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "insurance-binder",
+        "loan-documents",
+        "lease-abstract"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tac-30-327-3"
+      ],
+      "typeNotes": {
+        "multifamily": "Residents are at home: tell them what happened, what to avoid and when the area is safe again."
+      }
+    },
+    {
+      "id": "engage-consultant",
+      "title": "Engage an environmental consultant to assess the release and direct the cleanup",
+      "instruction": "A principal signs an engagement with an environmental consultant, after asking counsel whether counsel should engage the consultant instead. The scope: map the material's spread in soil, groundwater, drains and indoor air; compare the results with the acquisition's Phase I and any Phase II to tell new contamination from old; classify and manifest the spill waste for disposal; and price a cleanup TCEQ will accept, which the principals approve after measure-the-effect and, in a joint venture, jv-partner-consents. TCEQ expects pre-spill or background conditions or, for a cleanup of 180 days or less, Texas Risk Reduction Program standards under an assessment report the regional office approves. For a regulated petroleum tank release, a TCEQ-registered corrective action specialist does or coordinates the work under a licensed project manager. Counsel may weigh TCEQ's Voluntary Cleanup Program, whose certificate frees later buyers and lenders who are not responsible parties from state cleanup liability.",
+      "mode": "human-offline",
+      "modeBasis": "Assessing contamination and directing a cleanup are an environmental professional's fieldwork; a principal signs the engagement.",
+      "actor": "principal",
+      "licensed": "environmental-professional",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "stop-and-contain",
+        "record-the-facts",
+        "confirm-duties-with-counsel"
+      ],
+      "rules": [
+        "us-tx.tceq.voluntary-cleanup"
+      ],
+      "calculators": [],
+      "consumes": [
+        "phase-i-esa",
+        "phase-ii-esa"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tceq-spill-cleanup",
+        "tceq-spill-waste",
+        "tac-30-334-451",
+        "tx-prop-92"
+      ],
+      "typeNotes": {
+        "multifamily": "When a resident who is current on rent gives notice of a condition that materially affects an ordinary tenant's physical health or safety, Texas Property Code 92.052 requires a diligent effort to repair or remedy it, unless that resident, someone living in the resident's unit, a family member or the resident's guest caused it (normal wear and tear aside)."
+      }
+    },
+    {
+      "id": "keep-file-and-follow-up",
+      "title": "Keep the response file and draft the written follow-up reports",
+      "instruction": "Keep one response file (incident record, call log, lab results, invoices, manifests, agency letters) and draft from it each written follow-up required, for counsel and the consultant to check; a person signs. Texas: within 30 working days of discovery, not calendar days, a letter to the TCEQ regional office that the response is complete, or asking for more time with a work schedule. Extensions reach six months, from the report by rule or the spill by TCEQ's page: calendar the earlier. Federal: the written emergency release follow-up to the LEPC and state commission as soon as practicable; TCEQ's page says 30 days. Tank owners report initial abatement within 20 days of confirming a release. A facility subject to EPA's spill prevention rule reports to EPA, copying the state, within 60 days of discharging to water over 1,000 gallons of oil at once or over 42 gallons twice in twelve months.",
+      "mode": "agent",
+      "modeBasis": "Filing records and drafting reports from them is document work; a person signs and sends each report.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "make-the-reports",
+        "engage-consultant"
+      ],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tac-30-327-5",
+        "tceq-spill-followup",
+        "ecfr-40-355-c",
+        "tac-30-334-77",
+        "ecfr-40-112"
+      ]
+    },
+    {
+      "id": "measure-the-effect",
+      "title": "Estimate the cost, lost rent and effect on value and the loan",
+      "instruction": "Put the consultant's cost range for assessment, cleanup, disposal and monitoring into the underwriting model, with expected recoveries from the tenant and insurers shown separately from costs, any rent lost to closed space, and the time to closure. Re-run cash flow, distributions, the loan's coverage tests and the projected returns, with a case where recoveries come late or not at all. Note what an open release file could do at a refinancing or sale, since a buyer's or lender's environmental review is likely to find it. Hand any covenant problem to meet-loan-covenants, or to loan-covenant-breach if a test fails; if a planned distribution cannot be paid, open distribution-shortfall.",
+      "mode": "agent",
+      "modeBasis": "This is modeling from the consultant's estimate, the rent roll and the loan terms already in the file.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "engage-consultant",
+        "read-the-lease"
+      ],
+      "rules": [],
+      "calculators": [
+        "returns-sensitivity"
+      ],
+      "market": "deal-pipeline-underwriting",
+      "consumes": [
+        "underwriting-model",
+        "rent-roll",
+        "loan-documents"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "jv-partner-consents",
+      "title": "Bring the capital partner into the cleanup and recovery decisions",
+      "instruction": "Before the firm commits to the cleanup budget, a demand on or settlement with the tenant, a lawsuit or a change to the loan, get the capital partner's written position. Each is likely a major decision under the JV agreement: send the partner the incident record, the reports made, the consultant's scope and cleanup price, and the priced effect.",
+      "mode": "human-online",
+      "modeBasis": "The consent is the capital partner's own decision under the JV agreement.",
+      "actor": "investor",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "measure-the-effect"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "jv-agreement",
+        "underwriting-model"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "recover-costs",
+      "title": "Have counsel pursue the costs from the party that caused the release",
+      "instruction": "Counsel sends the tenant or contractor whose operation caused the release a written demand under its lease or contract: stop the activity, perform or pay for the cleanup, reimburse the firm's costs, and notify its insurer. For a Superfund hazardous substance, federal law makes the parties it lists liable to others for necessary response costs consistent with the national contingency plan. A petroleum spill such as gasoline, diesel or used oil falls outside that statute, so recovery rests on the lease or contract and any other claim counsel identifies. Texas rules make anyone who causes, suffers, allows or permits a spill a responsible person who must contain and remove it, so keep every cost record the consultant and contractors produce. Counsel advises on any settlement, release, cleanup agreement with the tenant or lawsuit; a principal decides and signs. If a neighbor, tenant or agency sues the deal entity, follow deal-entity-sued.",
+      "mode": "human-online",
+      "modeBasis": "Demands, settlements and suits are legal acts counsel handles and a principal signs.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-the-lease",
+        "measure-the-effect",
+        "jv-partner-consents"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "lease"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-42-9607",
+        "usc-42-9601",
+        "tx-wa-26",
+        "tac-30-327-2",
+        "tac-30-327-5"
+      ]
+    },
+    {
+      "id": "tell-investors",
+      "title": "Tell investors what happened and record the outcome",
+      "instruction": "Once the reports are made and the consultant has a first estimate, draft an investor update: what was released and where, whether anyone was hurt, the reports made, who is paying for the cleanup, the expected cost, the effect on cash flow, distributions and the loan, and when the next update will come. If casualty-damages-property has an investor update open, put the release into it. Rule 10b-5 bars an untrue statement of a material fact, or an omission that makes what is said misleading, in connection with buying or selling a security; where interests are changing hands or more capital is sought, counsel reviews the update. In a joint venture the capital partner gets the same update directly. A principal approves it before it goes. When the agency closes its file, record the closure letter, final costs and recoveries, and report the outcome through send-quarterly-investor-report.",
+      "mode": "agent",
+      "modeBasis": "Drafting from the incident file and the model is writing work; investor communications go out only with a person's approval.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "make-the-reports",
+        "measure-the-effect"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5",
+        "us-tx.securities.offer-sale-liability"
+      ],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register",
+        "underwriting-model"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5"
+      ]
+    }
+  ],
+  "outlineSteps": []
 }

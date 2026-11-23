@@ -382,7 +382,7 @@
     {
       "id": "confirm-zoning-and-use",
       "title": "Confirm zoning, permitted use and code status",
-      "instruction": "From the city's public zoning map and ordinance, find the district and whether the current use is permitted, conditional or nonconforming. Look up certificates of occupancy, open permits and code cases on the city's portals. Where a city has no zoning, read the recorded deed restrictions listed in the commitment. If the lender or the deal needs written confirmation, a person orders a zoning verification letter from the city or a zoning report from a vendor. A nonconforming use may not be rebuildable after a casualty; flag one for counsel and the lender.",
+      "instruction": "Run confirm-zoning-and-use for the parcel's zoning, permitted uses, approvals, certificates of occupancy, code cases, recorded restrictions and rebuild limits. Bring its zoning report and counsel's gap-by-gap answers from counsel-reviews-gaps to update-underwriting. Order any zoning verification letter or vendor report through order-third-party-reports, which tracks its delivery.",
       "mode": "agent-browser",
       "modeBasis": "Zoning maps, ordinances and permit records are public websites; a paid letter or report is ordered by a person.",
       "risk": "medium",

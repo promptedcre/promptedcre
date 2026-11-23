@@ -7,29 +7,560 @@
   "phase": "operate",
   "order": 300,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "finance-and-close",
+    "abstract-the-leases",
+    "bind-property-insurance"
+  ],
+  "consumes": [
+    "purchase-and-sale-agreement",
+    "settlement-statement",
+    "rent-roll",
+    "lease",
+    "lease-abstract",
+    "tenant-estoppel",
+    "loan-documents",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "deed",
+    "insurance-binder",
+    "property-condition-assessment",
+    "underwriting-model",
+    "phase-i-esa"
+  ],
+  "produces": [
+    "rent-roll"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Collect the rent roll, leases and service contracts at closing",
-    "Transfer utilities and service accounts to the new owner",
-    "Decide who manages the property",
-    "Send tenants the new owner's notice and payment instructions",
-    "Set up rent and reimbursement billing from each lease",
-    "Confirm insurance is in force and meets the lender's requirements",
-    "Keep or cancel each service contract",
-    "Start the loan reporting calendar",
-    "Load the reserve schedule and the capital items found in diligence",
-    "Set up tenant credit monitoring",
-    "File the property records where the team can find them"
-  ]
+  "sources": [
+    {
+      "id": "tx-oc-1101",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1101.htm",
+      "title": "Texas Occupations Code, Chapter 1101 (Sections 1101.002 and 1101.351, Real estate brokers and the license requirement)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "trec-license-search",
+      "url": "https://www.trec.texas.gov/license-search",
+      "title": "License Holder Search",
+      "publisher": "Texas Real Estate Commission",
+      "accessed": "2026-11-23",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-93",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.93.htm",
+      "title": "Texas Property Code, Chapter 93 (Sections 93.001, 93.002(a) and (h), 93.007, 93.008 and 93.012, Commercial tenancies)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "The landlord shall keep accurate records of all security deposits.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-92-utilities",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.92.htm",
+      "title": "Texas Property Code, Chapter 92 (Sections 92.008, 92.301 and 92.302, Interruption of utilities and utility cutoff)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-30-334-7",
+      "url": "https://www.law.cornell.edu/regulations/texas/30-Tex-Admin-Code-SS-334-7",
+      "title": "30 Tex. Admin. Code 334.7, Registration for underground storage tanks (subsection (d), changes including ownership transfers)",
+      "publisher": "Legal Information Institute (Texas Administrative Code text)",
+      "accessed": "2026-11-21",
+      "quote": "amended registrations reflecting UST ownership transfers must be provided by the new UST owner",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-92-deposits",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.92.htm",
+      "title": "Texas Property Code, Chapter 92 (Sections 92.105 and 92.106, Cessation of owner's interest and records of security deposits)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-92-disclosure",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.92.htm",
+      "title": "Texas Property Code, Chapter 92 (Sections 92.020, 92.201 and 92.203, Emergency phone number and disclosure of ownership and management)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-42-4012a",
+      "url": "https://www.law.cornell.edu/uscode/text/42/4012a",
+      "title": "42 U.S.C. 4012a, Flood insurance purchase and compliance requirements (subsection (b))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "covered for the term of the loan by flood insurance",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-31",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.31.htm",
+      "title": "Texas Tax Code, Chapter 31 (Sections 31.01, 31.02 and 31.04, Tax bills, delinquency date and its postponement)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "taxes are due on receipt of the tax bill and are delinquent if not paid before February 1",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-32",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.32.htm",
+      "title": "Texas Tax Code, Chapter 32 (Section 32.01, Tax lien)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-22",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.22.htm",
+      "title": "Texas Tax Code, Chapter 22 (Sections 22.01 and 22.23, Rendition and filing date)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-11-145",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.11.htm",
+      "title": "Texas Tax Code, Section 11.145, Income-producing tangible personal property",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-account-status",
+      "url": "https://comptroller.texas.gov/taxes/franchise/coas-instructions.php",
+      "title": "Franchise Tax Account Status",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-23",
+      "quote": "provides the status of an entity's right to transact business in Texas",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-171",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.171.htm",
+      "title": "Texas Tax Code, Chapter 171 (Sections 171.251 and 171.2515, Forfeiture of the right to transact business)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-1681b",
+      "url": "https://www.law.cornell.edu/uscode/text/15/1681b",
+      "title": "15 U.S.C. 1681b, Permissible purposes of consumer reports (subsections (a) and (f))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "decide-who-manages",
+      "title": "Decide who manages the property from the first day",
+      "instruction": "Before closing, the principals settle who runs the property from the closing date: whoever hire-property-manager's decide-self-or-hire chose, the firm or a property manager, or, until that manager starts, the seller's manager under a short interim agreement or the firm itself. The firm-or-manager choice and its license analysis are made once there. A seller's manager kept on for pay to lease or negotiate leases for the owning entity must hold a Texas broker license unless an exemption applies (Occ. Code 1101.002(1), 1101.351); check it on TREC's license holder search. Decide too whether to offer the site staff jobs, checking any no-hire term in the offering memorandum's confidentiality agreement. A principal signs any interim agreement only once every consent the loan documents and, in a joint venture, jv-partner-approves require is in hand. A person then approves the property manager's access to the leases, abstracts, contracts and contact lists under set-up-document-storage's access table.",
+      "mode": "human-online",
+      "modeBasis": "Settling who runs the property from closing commits the owning entity, so the principals decide; any interim agreement is signed once the consents it needs are in hand.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "consumes": [
+        "loan-documents",
+        "deal-entity-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-oc-1101",
+        "trec-license-search"
+      ]
+    },
+    {
+      "id": "jv-partner-approves",
+      "title": "Get the capital partner's consent to the interim manager and the contracts kept",
+      "instruction": "Read the JV agreement for the take-over decisions that need the capital partner's consent: any interim management arrangement, above all one with a manager affiliated with the firm, and each service contract the firm proposes to keep that is with an affiliate or above the agreement's stated amount. Send the partner the interim arrangement with its draft agreement and fee and the list of those contracts, and name the date by which it must answer. Record its written consent and any conditions, and hold each decision that needs consent until it arrives. A principal approves the request before it goes. The permanent property manager's agreement follows hire-property-manager's get-consents, the first budget set-the-annual-budget's partner-approves, and insurance bind-property-insurance.",
+      "mode": "human-online",
+      "modeBasis": "The consent is the capital partner's own decision under the JV agreement.",
+      "actor": "investor",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-who-manages"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "transfer-utilities",
+      "title": "Move utility and service accounts to the owning entity and change locks and codes",
+      "instruction": "Before closing, a principal schedules each owner-paid utility account to transfer into the owning entity's name effective the closing date, from the seller's account list: electricity, gas, water and wastewater, trash, telephone and data lines for elevators and alarms, and monitoring. Ask the seller to keep its accounts open until each transfer is confirmed, and get final readings to match the closing proration. Pay provider deposits from the property's operating account. At closing, a person has locks, gate, alarm and building-system codes changed and the seller's users removed. Leave alone the accounts tenants pay directly: a Texas landlord may not interrupt or cause the interruption of utility service a tenant pays for directly unless it results from bona fide repairs, construction or an emergency (Prop. Code 93.002(a) for commercial tenants, unless the lease provides otherwise (93.002(h)); 92.008(a) for residential). Record each account's provider, number, meter, deposit and payer.",
+      "mode": "human-online",
+      "modeBasis": "Opening accounts, paying deposits and authorizing payments commit the owning entity, and the providers' portals need a person's login.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "consumes": [
+        "settlement-statement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-pr-93",
+        "tx-pr-92-utilities"
+      ],
+      "typeNotes": {
+        "multifamily": "Where a lease has the owner furnish and pay for a resident's water, gas or electricity and the utility cuts it off, or gives notice of a cutoff, for the owner's nonpayment, the resident may pay to reconnect and deduct it from rent, end the lease and recover damages (92.301). A residential landlord also may not interrupt water, wastewater, gas or electric service it furnishes to residents except for bona fide repairs, construction or an emergency (92.008(b)), so a furnished account moves without a gap. At a nonsubmetered master-metered multifamily property as section 92.302 defines it, an account holder that receives an electric or gas disconnection notice gives each resident written notice by mail or hand delivery by the fifth day after, with its contact information, the residents' 92.301 remedies and the statutory text in English and Spanish, and sends the same notice by certified mail to the city if the property is in one; paying the bill to avoid the disconnection ends the duty (92.302(b) to (d))."
+      }
+    },
+    {
+      "id": "collect-closing-deliveries",
+      "title": "Collect the seller's deliveries and check them against the contract",
+      "instruction": "Check off each item the purchase contract says the seller delivers at or after closing. Expect original leases, amendments, guaranties and tenant correspondence; the rent roll, aged receivables and deposit list as of closing; assigned service contracts; warranties, plans, permits and certificates of occupancy; emergency procedures, shut-off locations and the latest fire alarm, sprinkler and elevator inspections; keys, access codes and alarm accounts; and vendor, utility and tenant contacts. The property manager or a principal receives keys and originals on site. Compare the closing rent roll with the abstracts and estoppels and list each difference. Draft a request to the seller for anything missing, citing its clause, for a person's approval. Where the Phase I or the seller's records show a regulated underground storage tank the owning entity now owns, draft TCEQ's amended registration for a person to sign and file within 30 days of the transfer (30 TAC 334.7(d)).",
+      "mode": "agent",
+      "modeBasis": "Checking deliveries against the contract and the abstracts is document work; a person receives keys and originals on site, approves each request to the seller and signs and files any tank registration.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "settlement-statement",
+        "rent-roll",
+        "lease",
+        "lease-abstract",
+        "tenant-estoppel",
+        "phase-i-esa"
+      ],
+      "produces": [
+        "rent-roll"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tac-30-334-7"
+      ]
+    },
+    {
+      "id": "confirm-tenants-paying",
+      "title": "Confirm each tenant has the closing notices and is paying the new owner",
+      "instruction": "Confirm each tenant received the deposit statement and payment instructions sent under finance-and-close, as its lease's notice clause requires. Resend only in the notice the seller and new owner both sign, tell tenants to verify any payment change by calling a known number, and give each the new owner's notice address. A commercial seller stays liable for a tenant's deposit until the new owner delivers a signed statement acknowledging it and its exact amount (Prop. Code 93.007(b)); a new residential owner must deliver one (92.105(b)). Compare the first month's receipts with the closing rent roll, listing who paid the seller, paid short or did not pay. Draft the settlement with the seller, under the purchase contract, of rent it received after closing and arrears from before; a principal agrees it, and a person moves any payment under the firm's payment controls. A person approves each letter, lender direction letters included.",
+      "mode": "agent",
+      "modeBasis": "Checking delivery records and matching receipts to the rent roll is document work; letters go out with a person's approval, a principal agrees the settlement with the seller and a person moves any money.",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "collect-closing-deliveries"
+      ],
+      "rules": [
+        "us-tx.property.commercial-security-deposit"
+      ],
+      "consumes": [
+        "rent-roll",
+        "lease-abstract",
+        "settlement-statement",
+        "purchase-and-sale-agreement",
+        "loan-documents"
+      ],
+      "produces": [
+        "rent-roll"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-pr-93",
+        "tx-pr-92-deposits"
+      ]
+    },
+    {
+      "id": "give-residents-notices",
+      "title": "Give residents the owner, manager and emergency contacts",
+      "instruction": "Draft the owner, manager and emergency-number notices residents must get; the on-site manager posts them once a person approves. The landlord discloses the record title holder's name and address from county deed records, and the name and street address of any off-site company primarily responsible for management, in writing within seven days of a request, by continuous posting, or in the lease or written rules (92.201). Correct the seller's postings and leases by any method allowed for the disclosure (92.201(e)); a landlord that has not corrected posted or lease information by the seventh day after a resident's written notice is liable (92.203). Give residents an emergency number, one answered 24 hours a day and posted outside the office where there is on-site management (92.020). Registering to bill residents for submetered or allocated water follows bill-tenant-utilities in collect-rent-and-reconcile-cam.",
+      "mode": "agent",
+      "modeBasis": "Drafting the notices and postings from the deed and the management decision is document work; the on-site manager posts, and a person approves each notice.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-who-manages"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ],
+        "propertyType": [
+          "multifamily"
+        ]
+      },
+      "consumes": [
+        "deed",
+        "lease"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-pr-92-disclosure"
+      ]
+    },
+    {
+      "id": "set-up-billing",
+      "title": "Load each lease's rent, recovery charges and deposit into the property's books",
+      "instruction": "Load each tenant's recurring charges into the property's books from the lease abstracts and the closing rent roll: base rent with every scheduled increase, estimated tax, insurance and common area payments, and any other charge the lease provides, each with its start date and the clause behind it. A Texas commercial landlord may assess a charge other than rent or physical damage only if the lease, an exhibit or an amendment states its amount or how it is computed, or a statute or the common law allows it (Prop. Code 93.012(a), (b)), so each charge is loaded with the clause or law behind it. Load each deposit, its form and where it is held; a landlord keeps accurate records of all security deposits (93.008; 92.106 for residential). The first bill and every later one go out under collect-rent-and-reconcile-cam, which also runs the year-end true-up and the seller's share.",
+      "mode": "agent",
+      "modeBasis": "Building charges from the lease terms is document and ledger work inside the firm; bills go out under collect-rent-and-reconcile-cam.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "collect-closing-deliveries",
+        "decide-who-manages"
+      ],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "lease",
+        "lease-abstract",
+        "rent-roll"
+      ],
+      "produces": [
+        "rent-roll"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-pr-93",
+        "tx-pr-92-deposits"
+      ],
+      "typeNotes": {
+        "multifamily": "Chapter 93, and with it the rule on charges, covers only commercial rental property; chapter 92 sets the residential rules. Load each lease's late-fee and payment-method terms; collect-rent-and-reconcile-cam applies the residential late-fee and cash-receipt rules.",
+        "retail": "Load each lease's percentage rent terms: the breakpoint and the rate. The sales report due dates go on the calendar in set-up-tenant-watch."
+      }
+    },
+    {
+      "id": "review-service-contracts",
+      "title": "Keep, rebid or end each service contract",
+      "instruction": "List every service contract assigned at closing and every vendor still working at the property, with scope, price, term, automatic renewal, termination notice and method, and whether the contract may be assigned. Compare the list with the purchase contract: a contract the seller was to end goes back to the seller to end. Mark each one keep, rebid or end for the principal, or the property manager within the authority it was given, to decide, and record the decision. For each vendor kept, collect a W-9 as set-up-the-books provides and a certificate of insurance naming the owning entity as the contract requires. Draft termination notices for the effective date each contract allows, by the method it names. Keep any service a lease obliges the landlord to provide running until its replacement starts. A person approves every notice before it goes.",
+      "mode": "agent",
+      "modeBasis": "Reading contracts and drafting notices is document work; the decision and any notice to a vendor need a person.",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-who-manages",
+        "jv-partner-approves"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "lease-abstract"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "confirm-insurance",
+      "title": "Confirm the policies are in force and meet the loan's requirements",
+      "instruction": "Once bind-property-insurance has checked each issued policy against its binder, check the policy against the loan documents' insurance section: the named insured, the lender's status as mortgagee, loss payee and additional insured, limits, deductibles, wind, flood and rent loss coverage, and the required cancellation notice. If a building in a special flood hazard area with federal flood insurance available secures a regulated or federal agency lender's loan, flood coverage of at least the lesser of the loan balance and the program's maximum must run for the loan's term (42 U.S.C. 4012a(b)). Draft a request to the broker or the lender for each gap; a person approves and sends it. Renewal follows renew-property-insurance; a loss follows casualty-damages-property.",
+      "mode": "agent",
+      "modeBasis": "Comparing policies with the loan's requirements is document work; requests to the broker or lender go out only from a person.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "collect-closing-deliveries"
+      ],
+      "rules": [
+        "us-fed.flood.mandatory-purchase"
+      ],
+      "consumes": [
+        "insurance-binder",
+        "loan-documents",
+        "lease-abstract"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-42-4012a"
+      ]
+    },
+    {
+      "id": "check-tax-accounts",
+      "title": "Check the tax accounts and who pays the bill for the year of purchase",
+      "instruction": "On the appraisal district's public property search, find each parcel and record its account number, owner of record, mailing address, values and taxing units; a person asks the district to correct a stale mailing address. Each assessor mails its bill to the person in whose name the property is listed on the roll (Tax Code 31.01(a)), so the bill for the year of purchase may go to the seller, and not receiving a bill changes neither the due date nor the lien (31.01(g)). The year's tax lien attached to the property on January 1 (32.01(a)), and taxes are delinquent if unpaid before February 1 of the next year, later if the bill is mailed after January 10 (31.02(a), 31.04(a)). Record who pays the bill, the owner directly or the lender from escrow, against the settlement statement's proration. List any income-producing personal property there for the operating calendar.",
+      "mode": "agent-browser",
+      "modeBasis": "Appraisal district and tax office records are public websites an agent can read; any change request goes from a person.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "collect-closing-deliveries"
+      ],
+      "market": "market-property-data",
+      "consumes": [
+        "settlement-statement",
+        "deed",
+        "loan-documents"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-31",
+        "tx-tax-32"
+      ]
+    },
+    {
+      "id": "load-reserves-and-capital-items",
+      "title": "Load the lender's reserves, build the component schedule and list the capital items",
+      "instruction": "From the loan documents, list every reserve the lender holds or requires, such as taxes and insurance, replacement, tenant improvements and leasing commissions, and required repairs, with each required deposit, and the repairs the loan requires after closing with each completion deadline: this is the lender reserve schedule. Build the component schedule from the property condition assessment's reserve table, which order-third-party-reports asked to give each component's cost, useful life and age or remaining life (age is life less remaining life). From the assessment and the underwriting model, list the immediate and near-term capital items with each estimate and its source, and mark which the lender's required repairs cover. Hand the lender reserve schedule to meet-loan-covenants' manage-reserves for its ledger and draws only, and the component schedule and capital items to set-the-annual-budget's set-capital-and-reserves, which runs the replacement-reserves test beside the loan's required deposit, and to run-a-capital-project.",
+      "mode": "agent",
+      "modeBasis": "Reading the loan's reserve terms and the condition report and building the schedules from them is document work; the reserve test runs in set-the-annual-budget.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "collect-closing-deliveries"
+      ],
+      "calculators": [],
+      "consumes": [
+        "loan-documents",
+        "property-condition-assessment",
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "build-operating-calendar",
+      "title": "Calendar the loan, tax, insurance and lease dates for the first year",
+      "instruction": "Put the property's first-year dates on one calendar, taking the loan dates from meet-loan-covenants' covenant calendar, built from the signed loan documents finance-and-close hands over, and the lease dates from abstract-the-leases' abstracts and rollover schedule. Add the property tax cycle with the protest deadline (protest-property-taxes) and delinquency date, the franchise tax report (file-texas-franchise-report), insurance and contract renewals and the purchase contract's post-closing duties. Income-producing personal property owned January 1 is rendered by April 15, or May 15 on written request (Tax Code 22.01(a), 22.23); from 2026, only where the owner believes its value at a location exceeds the $125,000 exemption, and an owner electing not to render files a certifying statement by that date, effective the next year until ownership changes (22.01(j-1), (j-3); 11.145(b)). The deadline-calendar counts forward; dates counted back are worked and checked by hand. The lease dates then pass to renew-a-tenant's build-the-lease-calendar.",
+      "mode": "agent",
+      "modeBasis": "Reading dates off the purchase contract, the loan documents, the abstracts and the statutes and entering them in one calendar is document work.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-up-billing",
+        "review-service-contracts",
+        "confirm-insurance",
+        "check-tax-accounts",
+        "load-reserves-and-capital-items"
+      ],
+      "rules": [
+        "us-tx.tax.protest-deadline",
+        "us-tx.franchise-tax.due-date-extension"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "loan-documents",
+        "lease-abstract"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-22",
+        "tx-tax-11-145"
+      ]
+    },
+    {
+      "id": "set-up-tenant-watch",
+      "title": "Set up a watch on each tenant's reporting, security and credit",
+      "instruction": "From the lease abstracts, list what each lease lets the landlord ask of the tenant and any guarantor, such as financial statements, sales reports and insurance certificates, with due dates, and each letter of credit's expiry and renewal terms; put them on the calendar and flag requested items not delivered. Late rent is tracked in collect-rent-and-reconcile-cam. For a tenant entity subject to Texas franchise tax, the Comptroller's Franchise Tax Account Status search shows its right to transact business in Texas, which the Comptroller can forfeit when a required report or payment is still missing 45 days after notice (Tax Code 171.251, 171.2515). A consumer report on an individual, such as a guarantor, may be obtained only for a purpose 15 U.S.C. 1681b permits, certified to the agency that furnishes it (1681b(f)); counsel confirms the purpose before any is ordered. Flags go to the principal; a bankruptcy filing follows tenant-files-bankruptcy.",
+      "mode": "agent-browser",
+      "modeBasis": "Reading the leases is document work, and the Comptroller's status search is a public website an agent can read.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-up-billing",
+        "build-operating-calendar"
+      ],
+      "consumes": [
+        "lease-abstract"
+      ],
+      "basis": "cited",
+      "sources": [
+        "cpa-account-status",
+        "tx-tax-171",
+        "usc-15-1681b"
+      ],
+      "typeNotes": {
+        "multifamily": "Watch residents through the delinquency report rather than credit reports; screening belongs to new leases under lease-a-vacancy.",
+        "retail": "Add the sales reports the leases require with their due dates, which collect-rent-and-reconcile-cam chases and uses for percentage rent, and note any co-tenancy rights in other leases that this tenant closing its store would trigger."
+      },
+      "rules": [
+        "us-tx.franchise-tax.forfeiture"
+      ]
+    },
+    {
+      "id": "file-property-records",
+      "title": "File the property records where the team can find them",
+      "instruction": "Add the operating records to the post-closing file built under finance-and-close, in the structure set in set-up-document-storage: the leases with their abstracts and estoppels, service contracts, warranties, permits and certificates of occupancy, plans, insurance policies, the emergency procedures and inspection records, and the utility, tax account, reserve and deposit lists from this playbook. Name each file by property, document and date. Give the lender what the loan documents require, following the access table; a person approves each grant to someone outside the firm, since a file once downloaded cannot be withdrawn. Then write a short take-over summary for the principals: what is done, each open item with its owner and date, and what passes to the operating playbooks. The first investor report follows send-quarterly-investor-report.",
+      "mode": "agent",
+      "modeBasis": "Filing, naming and sharing under an approved access table is file work an agent can do with storage access; each grant outside the firm waits for a person's approval.",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-operating-calendar",
+        "set-up-tenant-watch"
+      ],
+      "consumes": [
+        "lease",
+        "lease-abstract",
+        "tenant-estoppel",
+        "loan-documents"
+      ],
+      "basis": "practitioner"
+    }
+  ],
+  "outlineSteps": []
 }

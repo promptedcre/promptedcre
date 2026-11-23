@@ -3,32 +3,526 @@
   "slug": "hire-property-manager",
   "kind": "process",
   "title": "Hire and oversee the property manager",
-  "summary": "Choose a manager, sign the management agreement and set the reporting and approval rules.",
+  "summary": "Choose a manager, set the reporting and approval rules, sign the management agreement and review the manager's work each month and year.",
   "phase": "operate",
   "order": 305,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "abstract-the-leases",
+    "set-up-the-books"
+  ],
+  "consumes": [
+    "lease",
+    "lease-abstract",
+    "rent-roll",
+    "trailing-12",
+    "comp-set",
+    "underwriting-model",
+    "property-condition-assessment",
+    "loan-documents",
+    "deal-entity-agreement",
+    "private-placement-memorandum",
+    "jv-agreement"
+  ],
   "produces": [],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Decide whether to self-manage or hire a manager",
-    "Write down the services the property needs",
-    "Budget the management fee at a market rate",
-    "Ask candidates for proposals",
-    "Interview candidates on leasing, collections, maintenance and reporting",
-    "Check references and test the manager's market data",
-    "Set the reporting package and approval limits",
-    "Negotiate and sign the management agreement",
-    "Hand over records, accounts and keys",
-    "Review the manager's performance each year"
-  ]
+  "sources": [
+    {
+      "id": "tx-oc-1101-002",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1101.htm",
+      "title": "Texas Occupations Code, Sections 1101.002, 1101.005 and 1101.351, Who is a broker and who needs a license",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "an owner or the owner's employee who leases the owner's improved or unimproved real estate",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-oc-1101-355",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1101.htm",
+      "title": "Texas Occupations Code, Section 1101.355, Eligibility of business entities: designated broker and errors and omissions insurance",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "A business entity may not act as a broker unless the entity's designated broker is a licensed individual broker in active status and good standing",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-oc-1101-652",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1101.htm",
+      "title": "Texas Occupations Code, Section 1101.652, Grounds for suspension or revocation of a license (subsections (a)(5) and (b)(9), (10) and (13))",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "commingles money that belongs to another person with the license holder's own money",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-22-535-146",
+      "url": "https://www.law.cornell.edu/regulations/texas/22-Tex-Admin-Code-SS-535-146",
+      "title": "22 Tex. Admin. Code 535.146, Maintaining Trust Money",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "client's money, earnest money, rent, unearned fees, security deposits, or any money held on behalf of another person",
+      "tier": "primary"
+    },
+    {
+      "id": "trec-faq",
+      "url": "https://www.trec.texas.gov/public/frequently-asked-questions",
+      "title": "Frequently Asked Questions (Property Management: does a property manager have to be licensed?)",
+      "publisher": "Texas Real Estate Commission",
+      "accessed": "2026-11-21",
+      "quote": "If the duties include showing or leasing the property for the owner for which the manager gets paid, a license is required.",
+      "tier": "primary"
+    },
+    {
+      "id": "trec-rules-535-5",
+      "url": "https://www.trec.texas.gov/agency-information/rules-and-laws/trec-rules",
+      "title": "TREC Rules, 22 Tex. Admin. Code 535.5, License Not Required",
+      "publisher": "Texas Real Estate Commission",
+      "accessed": "2026-11-21",
+      "quote": "An employee of a business entity means a person employed and directly compensated by the business entity.",
+      "tier": "primary"
+    },
+    {
+      "id": "trec-license-search",
+      "url": "https://www.trec.texas.gov/license-search",
+      "title": "License Holder Search",
+      "publisher": "Texas Real Estate Commission",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "trec-disciplinary-actions",
+      "url": "https://www.trec.texas.gov/apps/disciplinary-actions/",
+      "title": "Disciplinary Actions search",
+      "publisher": "Texas Real Estate Commission",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-92-201",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.92.htm",
+      "title": "Texas Property Code, Sections 92.201, 92.203, 92.204 and 92.207, Disclosure of ownership and management; agents for delivery of notice",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "if an entity located off-site from the dwelling is primarily responsible for managing the dwelling, the name and street address of the management company",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-la-406",
+      "url": "https://tcss.legis.texas.gov/resources/LA/htm/LA.406.htm",
+      "title": "Texas Labor Code, Section 406.002, Workers' compensation coverage generally elective",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "an employer may elect to obtain workers' compensation insurance coverage",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-24-100-7",
+      "url": "https://www.ecfr.gov/current/title-24/section-100.7",
+      "title": "24 CFR 100.7, Liability for discriminatory housing practices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Failing to take prompt action to correct and end a discriminatory housing practice by that person's employee or agent",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-745-103",
+      "url": "https://www.ecfr.gov/current/title-40/section-745.103",
+      "title": "40 CFR 745.103, Definitions (agent, lessor, target housing)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "any party who enters into a contract with a seller or lessor",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-745-115",
+      "url": "https://www.ecfr.gov/current/title-40/section-745.115",
+      "title": "40 CFR 745.115, Agent responsibilities (lead-based paint disclosure)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Each agent shall ensure compliance with all requirements of this subpart.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "To make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "list-requirements",
+      "title": "List what the loan, entity and lease documents require of management",
+      "instruction": "List every requirement the property's documents place on who manages it and how, with the section for each. From the loan documents: whether the lender must approve the manager or a replacement, any test a manager must meet, any cap on fees, whether the management agreement must be subordinated or assigned to the lender, the lender's right to replace the manager after a default, and the reports the borrower owes. From the deal entity agreement and the private placement memorandum: who may manage, any fee a related company may charge, and what investors were told. In a fund, the fund agreement's terms on contracts with related parties; in a joint venture, whether hiring a manager is a major decision and any terms the JV agreement sets for an affiliated manager. From the lease abstracts: the services, response times and notice addresses each lease commits the landlord to.",
+      "mode": "agent",
+      "modeBasis": "Reading the loan, entity and lease documents for management terms is document work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "consumes": [
+        "loan-documents",
+        "deal-entity-agreement",
+        "private-placement-memorandum",
+        "jv-agreement",
+        "lease",
+        "lease-abstract"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "write-the-scope",
+      "title": "Write down the services the property needs",
+      "instruction": "Write the scope of services from the requirements list, the rent roll, the lease abstracts, the trailing-12 and the property condition assessment, marking each item as the manager's, the firm's or a separate provider's. Cover rent collection, delinquency and the expense recovery billing in collect-rent-and-reconcile-cam; leasing, or a separate leasing broker, for lease-a-vacancy and renew-a-tenant; repairs, service contracts and vendor oversight; supervising capital work under run-a-capital-project; the annual budget in set-the-annual-budget; bookkeeping, bank reconciliations and monthly reports; tenant and vendor insurance certificates; claims after a loss; tax notices for protest-property-taxes; after-hours emergencies; and any on-site staff and who employs them. Note what the property's condition and lease structure make heavy or light, so every proposal prices the same work.",
+      "mode": "agent",
+      "modeBasis": "Building the scope from the rent roll, the abstracts and the reports is document work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-requirements"
+      ],
+      "consumes": [
+        "rent-roll",
+        "lease-abstract",
+        "trailing-12",
+        "property-condition-assessment"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "multifamily": "Add the on-site office and staff, written screening criteria applied the same way to every applicant, move-ins and unit turns, residents' repair requests, and fair housing training for everyone who deals with applicants and residents.",
+        "retail": "Add tenant sales reports and percentage rent, common area upkeep, and watching the exclusives, co-tenancy and operating covenants that tie one tenant's rights to others.",
+        "industrial": "Where tenants maintain their own premises under net leases, the scope may shrink to the roof, structure, paving, yard and checks on tenants' upkeep; weigh that against the firm doing it itself.",
+        "office": "Add building engineering, janitorial, security and access control, the hours heating and cooling run, and tenants' service requests."
+      }
+    },
+    {
+      "id": "decide-self-or-hire",
+      "title": "Decide whether the firm manages the property or hires a manager",
+      "instruction": "The principals decide from the scope whether the firm or a related company manages, a third-party manager does, or the work is split, and record why. For a property being bought, decide before closing; take-over-operations' decide-who-manages covers only the interim. In Texas, leasing or negotiating leases for another for pay needs a broker's license, and a business entity doing it needs its own (Occ. Code 1101.002(1), 1101.351); TREC says a paid manager who shows or leases needs one. Exemptions include an on-site apartment manager; an owner and its employees, meaning people it employs and pays directly, not contractors (22 TAC 535.5); and an owning LLC's manager or managing member, or an LP's general partner, and their employees (1101.005). Counsel says whether a related company needs one. If the firm or a related company manages, skip request-proposals, compare-proposals and interview-finalists; a related company still takes check-licenses and the agreement steps.",
+      "mode": "human-online",
+      "modeBasis": "Choosing who manages commits the owning entity, and whether a license is needed is counsel's conclusion.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "write-the-scope"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-oc-1101-002",
+        "trec-faq",
+        "trec-rules-535-5"
+      ]
+    },
+    {
+      "id": "budget-the-fee",
+      "title": "Budget the management fee and every other manager charge",
+      "instruction": "Price every way a manager may be paid against the property's income and the model: a share of collected income, with any minimum; leasing commissions; construction or capital work fees; accounting, technology or setup fees; reimbursed on-site payroll and benefits; takeover and termination fees; and markups on purchases. Apply each rate the principals want tested to its base, such as effective gross income from the income-value calculator run on the trailing-12 and the underwriting model, and show each in dollars against the model. Compare with any fee cap in the loan documents and any fee the deal entity or JV agreement sets, and a related company's terms with what the private placement memorandum disclosed. Counsel reviews any term above what those documents allow or disclose; while interests are still sold on that memorandum, Rule 10b-5 bars material misstatements and misleading omissions in connection with a purchase or sale of securities.",
+      "mode": "agent",
+      "modeBasis": "Listing charges and running the calculator on the firm's own statements is analysis; the rates tested are the principals'.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-self-or-hire"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5"
+      ],
+      "calculators": [
+        "income-value"
+      ],
+      "consumes": [
+        "trailing-12",
+        "underwriting-model",
+        "loan-documents",
+        "deal-entity-agreement",
+        "jv-agreement",
+        "private-placement-memorandum"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5"
+      ]
+    },
+    {
+      "id": "set-reporting-and-limits",
+      "title": "Set the reporting package and approval limits",
+      "instruction": "Draft the reporting and approval-limits exhibits for the management agreement. The reporting exhibit lists the monthly package and its due day after month end: rent roll, aged receivables, income statement against budget with each variance above the principals' threshold explained, balance sheet, a reconciliation for every bank account, the general ledger, unpaid bills, capital spending, leasing activity and open work orders, coded to the chart of accounts from set-up-the-books. Add what the lender's reports under meet-loan-covenants and the investor reports under send-quarterly-investor-report need from the manager, and the budget timetable in set-the-annual-budget. The approval exhibit says what the manager may do alone and what needs the owner first: spending outside the budget, contract length, leases outside written guidelines, lawsuits and evictions, insurance claims, and emergency spending with notice after. The principals set every amount, consistent with the dual approval and payment limits on the owning entity's accounts under form-deal-entity.",
+      "mode": "agent",
+      "modeBasis": "Drafting the exhibits from the firm's chart of accounts and controls is writing work; the amounts are the principals'.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "write-the-scope"
+      ],
+      "consumes": [
+        "loan-documents",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "request-proposals",
+      "title": "Ask a short list of managers for proposals",
+      "instruction": "Build a short list from the principals' referrals, managers running similar properties nearby and any list of approved managers the lender keeps, and contact no one the principals have not approved. Draft the request for proposal: the property's type, size and location; the scope of services and the requirements list; the fee categories from the budget and the draft reporting and approval exhibits, each to be priced; who would manage the property day to day and how many others that person handles; a sample monthly report and budget; the accounting system, whether the owner gets read-only access, and how data comes back at termination; how rents and deposits are held; insurance carried; license numbers; owner references; and a transition plan. Leave tenant names, rents and financial statements out until the candidate signs a confidentiality agreement. A person approves each request before it goes.",
+      "mode": "agent",
+      "modeBasis": "Drafting the request from the scope and budget is writing work; it goes outside the firm, so a person approves each one.",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "budget-the-fee",
+        "set-reporting-and-limits"
+      ],
+      "consumes": [
+        "rent-roll"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "check-licenses",
+      "title": "Check each candidate's Texas real estate license",
+      "instruction": "Search TREC's License Holder Search for each candidate company and the individual broker it designates, and record the license type, status, expiration date and designated broker, with the date checked. Search TREC's disciplinary actions for the company, its designated broker and the person who would run the property, and record any order found. A business entity may act as a broker only with its own license and a designated broker who is a licensed individual broker in active status and good standing; where the designated broker owns less than 10 percent of the entity, the entity must carry errors and omissions insurance at the minimum the statute sets, so ask for the certificate (Occ. Code 1101.351(a-1), 1101.355). Where a candidate says it needs no license, record the exemption it names for counsel.",
+      "mode": "agent-browser",
+      "modeBasis": "TREC's searches are public pages an agent can operate; reading them needs no login.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "request-proposals"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "basis": "cited",
+      "sources": [
+        "tx-oc-1101-002",
+        "tx-oc-1101-355",
+        "trec-license-search",
+        "trec-disciplinary-actions"
+      ]
+    },
+    {
+      "id": "compare-proposals",
+      "title": "Compare the proposals and test each manager's market data",
+      "instruction": "Put the proposals side by side against the scope, the requirements list and the fee budget. Price each on the same income and the same assumed leasing so totals compare, and list what each excludes, the staff assigned, the reporting offered, the systems, and any exception it takes to the requirements. The fee terms the proposals quote are the evidence of whether the budget's rates match the market; update the budget where they differ. Then test every market claim a proposal makes, such as achievable rents, occupancy, concessions and operating costs, against the comp set from pull-sale-and-lease-comps, the trailing-12 and the firm's data services, and mark each claim supported, contradicted or untested, with its source. List the questions for each finalist, starting with any figure the evidence contradicts.",
+      "mode": "agent",
+      "modeBasis": "Comparing proposals and checking claims against the comp set from pull-sale-and-lease-comps, the trailing-12 and data services reached through an API the firm's license includes is analysis.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "request-proposals"
+      ],
+      "market": "market-property-data",
+      "consumes": [
+        "comp-set",
+        "trailing-12",
+        "rent-roll",
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "interview-finalists",
+      "title": "Interview the finalists, call references and choose the manager",
+      "instruction": "A principal interviews each finalist the principals name, at a property it already runs where possible, and asks each the same questions on leasing, collections, maintenance and reporting. Who will run this property, and what else do they run? How is a late payment worked, and when does the owner hear of it? How are work orders logged, and who answers an emergency at night? How are vendors chosen, is any vendor related to the manager, and does the manager take rebates or markups? By what day does the month close, and who reviews the report? How are rents and deposits held and reconciled? What happens to data, files and money at termination? Then call owner references the principals pick, a former client where possible, on report timeliness, budget accuracy, staff turnover and why any relationship ended. Record the answers; the principals then choose the manager and record why.",
+      "mode": "human-offline",
+      "modeBasis": "Interviews, site visits and reference calls are a person's conversations.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-licenses",
+        "compare-proposals"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "negotiate-the-agreement",
+      "title": "Have counsel negotiate the management agreement",
+      "instruction": "Counsel marks up the manager's form against the scope, fee budget and exhibits: the term; the owner's right to end it without cause on notice, for cause, on a sale and at the lender's demand; fees and reimbursable costs; standard of care; who employs on-site staff; insurance naming owner and lender as additional insureds; indemnities; the owner's title to records and data; subordination to the loan; assignment. A Texas license holder risks discipline for an undisclosed rebate or profit on the owner's spending (Occ. Code 1101.652(b)(13)). Rent and deposits a Texas broker accepts are trust money: held in a designated trust account or with an authorized escrow agent, never commingled, and accounted for monthly when active (22 TAC 535.146; 1101.652(b)(9), (10)). The agreement says whether rents go there or to the owner, and whether the manager must carry workers' compensation, generally elective for a private Texas employer (Lab. Code 406.002).",
+      "mode": "human-online",
+      "modeBasis": "Drafting and negotiating the contract is legal work, which is counsel's.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "interview-finalists",
+        "set-reporting-and-limits"
+      ],
+      "consumes": [
+        "loan-documents",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-oc-1101-652",
+        "tac-22-535-146",
+        "tx-la-406",
+        "tx-pr-92-201",
+        "ecfr-40-745-103",
+        "ecfr-40-745-115"
+      ],
+      "typeNotes": {
+        "multifamily": "A managing or leasing agent is the landlord's agent for government notices and service of process about health, sanitation, safety or nuisance violations (Prop. Code 92.207), so the agreement requires such notices forwarded at once. For target housing, generally housing built before 1978, a manager under contract to lease it is an agent under EPA's lead disclosure rule and must tell the owner its disclosure duties and see that they are met (40 CFR 745.103, 745.115)."
+      }
+    },
+    {
+      "id": "get-consents",
+      "title": "Get the lender's and any partner's consent before signing",
+      "instruction": "From the requirements list, draft each consent the documents require before the agreement is signed, with what each document says a request must include, to the notice address and by the method it names. The lender: approval of the manager and the agreement, and the subordination or assignment of the agreement on the lender's form. In a joint venture, the capital partner's written consent where the JV agreement makes hiring the manager, or a contract with the firm's affiliate, a major decision. In a fund, the advisory committee's consent where the fund agreement requires one for a contract with a related party. In a syndication, any approval the deal entity agreement requires. Where no consent is needed, record the clause that says so; record any consent already given under take-over-operations. A person approves each request before it goes; record each answer and send any condition to counsel.",
+      "mode": "agent",
+      "modeBasis": "Drafting requests from the documents is writing work; each speaks for the owner, so a person approves it.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "negotiate-the-agreement"
+      ],
+      "consumes": [
+        "loan-documents",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "sign-the-agreement",
+      "title": "Sign the management agreement",
+      "instruction": "Once counsel signs off and every required consent is in hand, the person the owning entity's agreement authorizes signs in the entity's exact legal name, and the manager signs; where the lender requires it, both sign the lender's subordination or assignment. File the signed agreement with its exhibits and every consent. Calendar the term, any automatic renewal, scheduled fee changes, each insurance certificate's expiration and the annual review. The deadline-calendar counts only forward, so work the last day to give notice of termination or non-renewal back from the term's end by hand, and have a second reader check it. Pay any setup fee only after a person confirms the payment details by calling the manager at a number from an independent source, never one in the request, as wire-instructions-change sets out.",
+      "mode": "human-online",
+      "modeBasis": "Signing binds the owning entity and paying moves money, so a person does both.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "get-consents"
+      ],
+      "rules": [
+        "us-tx.ueta",
+        "us-fed.esign"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "deal-entity-agreement"
+      ],
+      "basis": "practitioner",
+      "calculators": [
+        "deadline-calendar"
+      ]
+    },
+    {
+      "id": "hand-over",
+      "title": "Hand over records, accounts and keys",
+      "instruction": "Build the transition checklist and track each item to receipt; for a property just bought, the transfer from the seller follows take-over-operations. List the leases and tenant files, the security deposit ledger with where each deposit is held, service contracts, warranties, open work orders, insurance certificates, keys and access codes, utility accounts, the budget, systems access and bank signers. When a manager is replaced, a Texas license holder may be disciplined for failing without just cause to surrender a document the owner requests (Occ. Code 1101.652(a)(5)), and a broker pays trust money to the party entitled by the 30th day after a party's written demand (22 TAC 535.146(d)(2)). Draft the letter telling tenants who manages and where to pay; a person approves it, and new payment instructions go only through a channel tenants already know. Get the manager's W-9 under set-up-the-books.",
+      "mode": "agent",
+      "modeBasis": "Building and tracking the checklist and drafting the tenant letter is document work; the letter goes out with a person's approval.",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-the-agreement"
+      ],
+      "consumes": [
+        "lease",
+        "lease-abstract",
+        "rent-roll"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-oc-1101-652",
+        "tac-22-535-146",
+        "tx-pr-92-201"
+      ],
+      "typeNotes": {
+        "multifamily": "A residential landlord must disclose to a tenant the name and street address of an off-site company primarily responsible for managing the dwelling, in writing or by continuous posting by the seventh day after the tenant's request, or beforehand in the lease or written rules (Prop. Code 92.201). When the manager changes, correct postings and lease forms at once: wilfully leaving written or posted information uncorrected that the landlord knows is wrong is bad faith (92.204), and posted or lease information that becomes wrong creates liability if not corrected by the seventh day after a tenant's written notice (92.203)."
+      }
+    },
+    {
+      "id": "review-performance",
+      "title": "Review the manager's work each month and each year",
+      "instruction": "Each month, check that the package arrived by its due day, holds everything in the reporting exhibit and explains each variance as the exhibit requires; set-the-annual-budget's track-and-reforecast analyzes them. Tie each bank reconciliation to the bank's own statement to the firm, compare the rent roll with signed leases and amendments, and flag aged receivables, payments over approval limits, new or related vendors and round-figure entries for the principals. Each year, before any renewal or notice date, build a scorecard: budget against actual, collections and delinquency, leasing against the comp set, work-order response, tenant complaints, report timeliness, insurance certificates in force, and, in Texas, a fresh run of check-licenses. The principals decide whether to keep, renegotiate or replace the manager. A principal gives any notice of replacement or non-renewal by the agreement's method and date, plus any notice the loan or JV documents require; a new manager follows request-proposals through hand-over.",
+      "mode": "agent",
+      "modeBasis": "Checking reports against bank statements, leases and the exhibits is analysis; keeping or replacing the manager is the principals' decision.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "hand-over"
+      ],
+      "consumes": [
+        "rent-roll",
+        "lease-abstract",
+        "trailing-12",
+        "comp-set"
+      ],
+      "basis": "cited",
+      "sources": [
+        "trec-license-search",
+        "trec-disciplinary-actions",
+        "ecfr-24-100-7"
+      ],
+      "typeNotes": {
+        "multifamily": "Under HUD's rule, a person is directly liable for failing to take prompt action to correct and end a discriminatory housing practice by its agent that it knew or should have known of, and vicariously liable for its agent's practice under agency law (24 CFR 100.7). Ask for the manager's fair housing complaint log and training records, and send any complaint to counsel at once."
+      }
+    }
+  ],
+  "outlineSteps": []
 }

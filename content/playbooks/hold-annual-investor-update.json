@@ -7,28 +7,580 @@
   "phase": "report",
   "order": 425,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "send-quarterly-investor-report",
+    "set-the-annual-budget",
+    "keep-investor-register-current",
+    "set-up-investor-portal",
+    "make-a-distribution"
+  ],
+  "consumes": [
+    "deal-entity-agreement",
+    "jv-agreement",
+    "private-placement-memorandum",
+    "investor-register",
+    "trailing-12",
+    "underwriting-model",
+    "loan-documents",
+    "rent-roll",
+    "lease-abstract",
+    "appraisal",
+    "ic-memo"
+  ],
   "produces": [],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Set the date and send the invitation",
-    "Prepare the year's results against plan",
-    "Present occupancy, tenant credit and the lease term ahead",
-    "Show returns to date and how much still depends on the sale",
-    "Restate the hold and exit view for each property",
-    "Review with counsel what can be said about future plans",
-    "Prepare answers to the questions investors are likely to ask",
-    "Hold the meeting and take questions on the record",
-    "Send the materials and the answers afterward",
-    "Record follow-up items and who owns each one"
-  ]
+  "sources": [
+    {
+      "id": "tx-boc-6",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.6.htm",
+      "title": "Texas Business Organizations Code, Chapter 6, Meetings and Voting for Domestic Entities (Sections 6.001, 6.002, 6.051 and 6.301)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "implement reasonable measures to verify that every person voting at the meeting by means of remote communications is sufficiently identified",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-101",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.101.htm",
+      "title": "Texas Business Organizations Code, Chapter 101 (Sections 101.352 to 101.354, notice, quorum and equal votes; Section 101.358, written consent)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "not later than the 10th day or earlier than the 60th day before the date of the meeting",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gov-4008",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.4008.htm",
+      "title": "Texas Government Code, Chapter 4008, Private Rights of Action (Section 4008.052, Offeror or seller liability; Section 4008.053, Buyer liability)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "a person who offers to buy or buys a security and to whom another person sells the security is liable to the seller",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pe-16",
+      "url": "https://tcss.legis.texas.gov/resources/PE/htm/PE.16.htm",
+      "title": "Texas Penal Code, Chapter 16 (Section 16.02, Unlawful interception, use, or disclosure of wire, oral, or electronic communications)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "one of the parties to the communication has given prior consent to the interception",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bc-322",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.322.htm",
+      "title": "Texas Business and Commerce Code, Chapter 322, Uniform Electronic Transactions Act (Sections 322.005 and 322.008)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "This chapter applies only to transactions between parties each of which has agreed to conduct transactions by electronic means.",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-18-2511",
+      "url": "https://www.law.cornell.edu/uscode/text/18/2511",
+      "title": "18 U.S.C. 2511, Interception and disclosure of wire, oral, or electronic communications prohibited (paragraph (2)(d))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "one of the parties to the communication has given prior consent to such interception",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-78u-5",
+      "url": "https://www.law.cornell.edu/uscode/text/15/78u-5",
+      "title": "15 U.S.C. 78u-5, Application of safe harbor for forward-looking statements (Securities Exchange Act)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "made in connection with an offering by, or relating to the operations of, a partnership, limited liability company, or a direct participation investment program",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-77z-2",
+      "url": "https://www.law.cornell.edu/uscode/text/15/77z-2",
+      "title": "15 U.S.C. 77z-2, Application of safe harbor for forward-looking statements (Securities Act)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "This section shall apply only to a forward-looking statement made by",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "To make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-502",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.502",
+      "title": "17 CFR 230.502, General conditions to be met (paragraph (c), limitation on manner of offering)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Any seminar or meeting whose attendees have been invited by any general solicitation or general advertising",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-275-206-4-8",
+      "url": "https://www.ecfr.gov/current/title-17/section-275.206(4)-8",
+      "title": "17 CFR 275.206(4)-8, Pooled investment vehicles",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "to any investor or prospective investor in the pooled investment vehicle",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-275-206-4-1",
+      "url": "https://www.ecfr.gov/current/title-17/section-275.206(4)-1",
+      "title": "17 CFR 275.206(4)-1, Investment adviser marketing (scope; definition of advertisement)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "offers new investment advisory services with regard to securities to current clients or investors in a private fund advised by the investment adviser",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-116-15",
+      "url": "https://www.law.cornell.edu/regulations/texas/7-Tex-Admin-Code-SS-116-15",
+      "title": "7 Tex. Admin. Code 116.15, Adoption by Reference of Investment Adviser Marketing Rules",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "a registered investment adviser shall not publish, circulate, or distribute any advertisement which does not comply with SEC Rule 206(4)-1",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-275-206-4-2",
+      "url": "https://www.ecfr.gov/current/title-17/section-275.206(4)-2",
+      "title": "17 CFR 275.206(4)-2, Custody of funds or securities of clients by investment advisers (paragraphs (a), (b)(4) and (c))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "to all limited partners (or members or other beneficial owners) within 120 days of the end of its fiscal year",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-116-17",
+      "url": "https://www.law.cornell.edu/regulations/texas/7-Tex-Admin-Code-SS-116-17",
+      "title": "7 Tex. Admin. Code 116.17, Custody of Funds or Securities of Clients by Registered Investment Advisers (subsections (b), (c)(4) and (d))",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "No registered investment adviser may have custody of client funds or securities unless:",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "read-update-terms",
+      "title": "Read what the agreements require of the annual update",
+      "instruction": "Take report and audit terms from read-reporting-terms under send-quarterly-investor-report; then list what the signed agreement, amendments, side letters and memorandum say of an annual meeting: attendance, notice, quorum and voting. Where a Texas LLC's agreement is silent, defaults govern a members' meeting it provides for or one with a vote: a manager-managed LLC gives written notice 10 to 60 days ahead, stating the purpose where the statute requires; a majority of all members is a quorum; and each member has one equal vote, so send voting questions to counsel. A written consent signed by the votes an action needs replaces the meeting, with no notice. A phone or video meeting must let every participant communicate with all others; a limited partnership follows these rules only as its agreement adopts them. Calendar each deadline with deadline-calendar, and list for counsel any open offering, capital call, interest being sold, dispute or inquiry.",
+      "mode": "agent",
+      "modeBasis": "Reading signed agreements and listing their terms and dates is document work; a term that reads two ways goes to counsel.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "private-placement-memorandum"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-6",
+        "tx-boc-101"
+      ]
+    },
+    {
+      "id": "have-statements-audited",
+      "title": "Have a CPA firm audit the year's statements where the agreement or custody rule requires",
+      "instruction": "Where the governing agreement calls for audited annual statements, or counsel finds the custody rule's audit route applies, a principal engages a CPA firm before year end and signs its letters. For an investment adviser registered, or required to register, with the SEC, or registered with the Texas State Securities Board, that has custody of a pooled vehicle's funds or securities, that route calls for a yearly audit by an independent public accountant registered with the PCAOB and subject to its regular inspection, with GAAP statements delivered to all investors within 120 days of fiscal year end; delivery only to investors that are themselves related pooled vehicles does not count. Enter that date in the deadline-calendar. An agent gives the CPA the locked year's records; once a principal approves, the statements go to every investor through the portal or notice channel by that date, meeting or not, each delivery logged.",
+      "mode": "human-online",
+      "modeBasis": "An audit is a licensed CPA firm's work and a principal signs the engagement and approves the release; an agent gathers the records the CPA asks for and logs each delivery.",
+      "actor": "cpa",
+      "licensed": "cpa",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-update-terms"
+      ],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "deal-entity-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-275-206-4-2",
+        "tac-116-17"
+      ]
+    },
+    {
+      "id": "set-date-and-invite",
+      "title": "Set the date and send the invitation",
+      "instruction": "Set a date after the year is locked under file-partnership-return-and-k1s and the fourth-quarter report under send-quarterly-investor-report, within the agreement's deadlines, and invite every holder on the register from keep-investor-register-current. State the date, time, place of any in-person part and, for any part by phone or video, the system and how to join (a hybrid meeting gives both), as Texas's default rule requires. If a Texas LLC's agreement does not fix the place, members meet in person only at its registered or principal office unless everyone entitled to notice agrees otherwise. Email only to addresses holders gave or consented to for notices; mail the rest. While a Rule 506(b) offering is open, keep registration closed: a meeting whose attendees were invited by general solicitation is itself general solicitation. Ask for questions in advance. In a joint venture, schedule with those the JV agreement names. A principal approves the invitation and list.",
+      "mode": "agent",
+      "modeBasis": "Drafting the invitation and sending it through the portal is system work; a person approves the list and the text first.",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-update-terms"
+      ],
+      "rules": [
+        "us-fed.reg-d.general-solicitation"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-6",
+        "ecfr-230-502"
+      ]
+    },
+    {
+      "id": "get-jv-partner-decisions",
+      "title": "For a joint venture, get the partner's decisions on the business plan",
+      "instruction": "Give the capital partner next year's business plan in the form and by the date the reporting schedule drafted under negotiate-jv-agreement sets, even before the year is locked; a principal approves the plan and the request first. For each item the agreement's consent list ties to the annual business plan, ask for the partner's written decision by the agreement's deadline, and note what the agreement says follows silence or refusal. Report, without asking again, the budget decision recorded under partner-approves in set-the-annual-budget and decisions already taken on a sale under decide-when-to-sell, a refinancing under refinance-the-property and leases under lease-a-vacancy or renew-a-tenant. The approved materials reach the partner through send-materials-and-answers. Record each decision with its date and any conditions, and carry any change into the plan, or for the budget back through set-the-annual-budget, before work relies on it. A disagreement the agreement sends to a dispute process goes to counsel.",
+      "mode": "human-online",
+      "modeBasis": "Each consent is the capital partner's own decision; an agent prepares the package and records the answers.",
+      "actor": "investor",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-update-terms"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "prepare-year-results",
+      "title": "Prepare the year's results against plan",
+      "instruction": "Build the year's results from the four locked quarters and the year locked by close-the-year under file-partnership-return-and-k1s, not from a fresh pull of the books: income, operating expenses and net operating income against the approved budget from set-the-annual-budget, against the underwriting model's same year in the version investors were shown, and against last year; then cash flow after debt service, leasing costs, capital spending and reserve deposits. Keep the definitions and measures the quarterly reports used, and where a year-end adjustment changed a figure already reported, show the old figure, the new one and why. Add the year's distributions by character from make-a-distribution, the loan's year-end balance, rate, maturity and covenant headroom from meet-loan-covenants, and each capital project's cost against budget. Mark which figures are unaudited or preliminary until the partnership return and K-1s are final, and explain each line off budget past the principals' threshold.",
+      "mode": "agent",
+      "modeBasis": "Assembling figures from the locked quarters and the locked year is file work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-update-terms"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "trailing-12",
+        "underwriting-model",
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "present-leasing-and-credit",
+      "title": "Present occupancy, tenant credit and the lease term ahead",
+      "instruction": "Show occupancy at the start and end of the year, the year's leasing against the budget's plan (new leases, renewals, move-outs, free rent and allowances given) and tenant credit: arrears by age, and each default or bankruptcy with the path chosen under tenant-stops-paying or tenant-files-bankruptcy. Take the year-end rollover tables, and any sourced comparison of in-place with market rent, from the fourth-quarter report's report-rollover under send-quarterly-investor-report rather than running lease-rollover again: its analysis date is the year's last day. Name each lease expiring in the coming year with its notice and option dates and what renew-a-tenant has learned of the tenant's plans, and say which renewals the business plan assumed. Before naming a tenant or a lease term, check its abstract for confidentiality.",
+      "mode": "agent",
+      "modeBasis": "The rollover tables come from the locked fourth-quarter report; the rest is drawn from the abstracts and the year's records.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "prepare-year-results"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "rent-roll",
+        "lease-abstract"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": [],
+      "typeNotes": {
+        "multifamily": "Leases are short, so in place of term and expiration tables show the year's occupancy by month, the share of residents who renewed, rent change on new leases and on renewals, concessions and delinquency. Refer to residents by unit, never by name.",
+        "retail": "Where leases require sales reports and allow them to be shared, show the year's tenant sales and percentage rent, and any co-tenancy, kick-out or go-dark clause the year set off or a coming vacancy could.",
+        "industrial": "With one or few tenants, set the largest lease's remaining term and renewal options beside the loan's maturity and the exit year the plan assumed."
+      }
+    },
+    {
+      "id": "show-returns-and-sale-dependence",
+      "title": "Show returns to date and how much still depends on the sale",
+      "instruction": "From the capital ledger under set-up-the-books, show for investors as a class, on the agreement's definitions: capital contributed, cash distributed to date by character, that cash as a multiple of capital, and unreturned capital and preferred return owed. Then show what the rest depends on: a year-end value with its basis (appraisal, broker opinion, written offer, model or cost) and date. Run sale-proceeds at that value for the net after selling costs and loan payoff; npv-irr with the equity paid in at year 0, each year's cash to equity, and that net as a sale at year end, showing how much of the return rests on that sale; and waterfall-promote for the investors' share after the promote. Keep realized and unrealized figures apart. In a fund, show each deal and the fund and, once a principal approves, send the advisory committee the values and conflicts it reviews under the agreement.",
+      "mode": "agent",
+      "modeBasis": "The ledger and the calculators do the arithmetic; the value and its basis come from documents a principal approves, and nothing goes to an advisory committee before that approval.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "prepare-year-results"
+      ],
+      "rules": [],
+      "calculators": [
+        "sale-proceeds",
+        "npv-irr",
+        "waterfall-promote"
+      ],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "appraisal",
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "restate-hold-and-exit-view",
+      "title": "Restate the hold and exit view for each property",
+      "instruction": "The principals settle, property by property, what they will say about the plan ahead: hold, refinance or sell, roughly when, and what that depends on. An agent first drafts for each property the business plan investors were shown at purchase, with its version and date; what has been done and what remains; the loan's maturity, extension conditions and any rate cap expiry; and the exit the underwriting assumed. Where a sale or refinance is being weighed, take the comparison from decide-when-to-sell; a decision recorded there is reported as made, and one not yet taken is stated as an open question, with no date or price promised. Write each view as an expectation with its basis and the conditions that would change it. A sale or refinance that needs investors' or the partner's consent follows the agreement's process, not a show of hands at the meeting.",
+      "mode": "human-online",
+      "modeBasis": "What the firm says about its plans is the principals' decision; an agent drafts the facts behind each view.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "present-leasing-and-credit",
+        "show-returns-and-sale-dependence"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "ic-memo",
+        "underwriting-model",
+        "loan-documents",
+        "private-placement-memorandum"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "prepare-likely-questions",
+      "title": "Prepare answers to the questions investors are likely to ask",
+      "instruction": "List the questions investors are likely to ask: those sent with replies to the invitation, those asked during the year in correspondence and in last year's follow-up log from record-follow-ups, and one for each place the year missed the budget or the business plan, such as a distribution cut under distribution-shortfall, a tenant lost, a capital project over budget, the loan's maturity or the value used. Add the fees and reimbursements paid in the year to the sponsor and its affiliates, in dollars with the agreement section allowing each, when the K-1s will arrive, and when the property may be sold. Draft each answer from the locked figures for counsel's review, never from memory. Mark tax questions for the CPA and legal questions for counsel, who supply those answers. A question about one investor's own account is answered to that investor alone, not in the shared set.",
+      "mode": "agent",
+      "modeBasis": "Drafting questions and answers from the locked figures is drafting work; counsel reviews the wording, and the CPA and counsel answer their own questions.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-date-and-invite",
+        "restate-hold-and-exit-view"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "trailing-12"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "counsel-on-future-statements",
+      "title": "Review with counsel what can be said about future plans",
+      "instruction": "Counsel reviews the drafts, prepared answers and pending events from read-update-terms and decides what may be said about the future. Cautionary words do not shelter the update: the federal safe harbor for forward-looking statements covers only statements by or for Exchange Act reporting issuers, never those about a partnership's or LLC's operations. Rule 10b-5 reaches material misstatements and misleading omissions in connection with buying or selling a security, as in an open offering or investor buyout; in Texas, subject to defenses, a buyer may recover for them from the offeror or seller it bought from, and a seller from its buyer. If counsel finds the firm advises a section 3(c)(1) or 3(c)(7) fund, Rule 206(4)-8 bars misleading statements to any investor or prospective investor; if the firm is or must be SEC-registered, or is Texas-registered, a slide offering a new fund can be a marketing-rule advertisement, a rule Texas adopts.",
+      "mode": "human-online",
+      "modeBasis": "What may be said about plans, disputes and new offerings is a legal judgment; an agent assembles the drafts and answers and carries the changes back.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "prepare-likely-questions"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5",
+        "us-tx.securities.offer-sale-liability"
+      ],
+      "calculators": [],
+      "consumes": [
+        "private-placement-memorandum",
+        "deal-entity-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-15-78u-5",
+        "usc-15-77z-2",
+        "ecfr-240-10b-5",
+        "tx-gov-4008",
+        "ecfr-275-206-4-8",
+        "ecfr-275-206-4-1",
+        "tac-116-15"
+      ]
+    },
+    {
+      "id": "check-and-approve-materials",
+      "title": "Check every figure and approve the materials",
+      "instruction": "A person who did not prepare the materials ties every figure in the slides, the answers and any handout to the locked year, the fourth-quarter report, the capital statements and any audited statements issued. They check that definitions match earlier reports, that each value carries its basis and date, that realized and unrealized figures stand apart, that every statement about the future is marked as an expectation in counsel's wording, that each tenant named may be named and that nothing about one investor appears in shared materials. A difference goes back to the preparer and the materials are rebuilt, not patched. The checker records the version and the date. A principal then approves that version in writing, and only that version is shown or sent. With one principal, a person the firm engages who took no part in preparing the materials does the check.",
+      "mode": "human-online",
+      "modeBasis": "Standing behind the figures is a person's act; an agent prepares the tie-out sheet.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-on-future-statements"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "hold-the-meeting",
+      "title": "Hold the meeting and take questions on the record",
+      "instruction": "The principals present from the approved materials only, results first and bad news plainly, and give no figure or promise the materials do not hold. If the meeting is recorded, say so before anyone else speaks; federal law allows, and Texas law gives a defense for, recording by a party to the conversation, but investors may join from states whose laws differ, so counsel sets the practice. A person logs each question, asker and answer, or an agent builds the log from a recording counsel allows; a question that needs a fact not in the materials is answered later in writing, after the answer is checked and, where it adds a material fact, cleared by counsel. Keep each investor's identity and holding out of view of the others. If a vote is taken remotely, verify who is voting and record every vote, as Texas requires where its meeting chapter applies.",
+      "mode": "human-offline",
+      "modeBasis": "Presenting and answering live is the principals' own act; a person keeps the question log, or an agent builds it from a recording counsel allows.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-date-and-invite",
+        "check-and-approve-materials"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5",
+        "us-tx.securities.offer-sale-liability"
+      ],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-pe-16",
+        "usc-18-2511",
+        "tx-boc-6"
+      ]
+    },
+    {
+      "id": "send-materials-and-answers",
+      "title": "Send the materials and the answers afterward",
+      "instruction": "Send every investor the approved materials, written answers to every question asked, including those answered live, and any recording counsel allows, so each investor has the same information whether or not they attended. Answers about one investor's account go to that investor alone. Release through the portal set up under set-up-investor-portal or the agreed notice channel, in a form the investor can save and print: an electronic record the sender keeps the recipient from printing or storing does not meet a legal duty to deliver information in writing. Send paper to an investor who has not agreed to deal electronically. Keep the materials and any recording off public pages while a Rule 506(b) offering is open. A principal approves the release. Log who received what, when and how, and file the materials, the check, the approval and the question log together. A misdirected send follows investor-data-exposed.",
+      "mode": "agent",
+      "modeBasis": "Releasing approved files through the portal is system work; nothing goes out without a person's approval.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "hold-the-meeting"
+      ],
+      "rules": [
+        "us-tx.ueta",
+        "us-fed.reg-d.general-solicitation"
+      ],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-bc-322",
+        "ecfr-230-502"
+      ]
+    },
+    {
+      "id": "record-follow-ups",
+      "title": "Record follow-up items and who owns each one",
+      "instruction": "List every commitment made at the meeting and in the answers, each with an owner and due date in the deadline-calendar, and open each in the playbook that handles it, whose own steps send it: an investor's changed details in keep-investor-register-current, a request to sell or redeem in investor-asks-to-exit, a tax question in file-partnership-return-and-k1s, a suspected data exposure in investor-data-exposed, a written demand to examine records in handle-records-requests under set-up-document-storage, and a complaint, claim or dispute to a principal for counsel. Report open items in each quarterly report under send-quarterly-investor-report until closed; keep the log in the year's file.",
+      "mode": "agent",
+      "modeBasis": "Building the follow-up list and the calendar is file work; each item is sent under its own playbook.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "send-materials-and-answers"
+      ],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "investor-register",
+        "deal-entity-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    }
+  ],
+  "outlineSteps": []
 }

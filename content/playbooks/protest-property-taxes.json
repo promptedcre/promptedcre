@@ -117,7 +117,7 @@
       "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.41.htm",
       "title": "Texas Tax Code, Chapter 41 (Section 41.47, Determination of protest)",
       "publisher": "Texas Legislature",
-      "accessed": "2026-11-14",
+      "accessed": "2026-11-23",
       "quote": "shall determine the protest and make its decision by written order",
       "tier": "primary"
     },
@@ -135,7 +135,7 @@
       "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.1.htm",
       "title": "Texas Tax Code, Chapter 1 (Section 1.111, Representation of property owner)",
       "publisher": "Texas Legislature",
-      "accessed": "2026-11-14",
+      "accessed": "2026-11-23",
       "quote": "A property owner may not designate more than one agent to represent the property owner in connection with an item of property.",
       "tier": "primary"
     },
@@ -144,16 +144,16 @@
       "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1152.htm",
       "title": "Texas Occupations Code, Chapter 1152 (Property tax consultants: Sections 1152.001, 1152.002 and 1152.151)",
       "publisher": "Texas Legislature",
-      "accessed": "2026-11-14",
+      "accessed": "2026-11-23",
       "quote": "A person may not perform property tax consulting services for compensation unless the person holds a certificate of registration issued under this chapter.",
       "tier": "primary"
     },
     {
       "id": "tx-tax-code-42",
       "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.42.htm",
-      "title": "Texas Tax Code, Chapter 42 (Sections 42.06, 42.08, 42.21, 42.225, 42.226 and 42.43, Judicial review)",
+      "title": "Texas Tax Code, Chapter 42 (Sections 42.08, 42.21, 42.225, 42.226 and 42.43, Judicial review)",
       "publisher": "Texas Legislature",
-      "accessed": "2026-11-14",
+      "accessed": "2026-11-23",
       "quote": "must file a petition for review with the district court within 60 days after the party received notice that a final order has been entered",
       "tier": "primary"
     },
@@ -173,6 +173,24 @@
       "publisher": "Texas Comptroller of Public Accounts",
       "accessed": "2026-11-14",
       "quote": "50-162, Appointment of Agent for Property Tax Matters",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gov-code-2003",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.2003.htm",
+      "title": "Texas Government Code, Chapter 2003, Subchapter I (Sections 2003.901, 2003.904, 2003.906 and 2003.913, Appeals from appraisal review board determinations)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "must be filed with the chief appraiser not later than the 30th day after the date the property owner receives notice of the order",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-protests",
+      "url": "https://comptroller.texas.gov/taxes/property-tax/protests/",
+      "title": "Appraisal Protests and Appeals",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-23",
+      "quote": "This appeal option applies to determinations concerning real or personal property, but not industrial property.",
       "tier": "primary"
     }
   ],
@@ -234,7 +252,7 @@
     {
       "id": "send-tenant-copies",
       "title": "Send reimbursing tenants a copy of the notice",
-      "instruction": "Where a lease obliges the tenant to reimburse the owner's taxes on real property, the owner must send that tenant a copy of the notice of appraised value within 10 days after receiving it, unless the lease waives that duty or says the tenant will not protest (Tax Code 41.413(d)). Such a tenant may protest the appraised value itself if the owner does not, and only one protest, the owner's or the tenant's, is allowed (41.413(b)). From the lease abstracts, list each reimbursing tenant, the notice address its lease names and any lease clause on tax contests. Draft a short cover letter for each with the notice attached; it does not promise a protest before the principal decides. A person approves each letter before it goes, and the sent copies are saved to the tax file.",
+      "instruction": "Where a lease obliges the tenant to reimburse the owner's taxes on real property, the owner must send that tenant a copy of the notice of appraised value within 10 days after receiving it, unless the lease waives that duty or says the tenant will not protest (Tax Code 41.413(d)). Such a tenant may protest the appraised value itself if the owner does not, and only one protest, the owner's or the tenant's, is allowed (41.413(b)). From the lease abstracts, list each reimbursing tenant, the notice address its lease names and any lease clause on tax contests. Draft a short cover letter for each with the notice attached; it does not promise a protest before the principal decides. A person approves each letter before it goes, and the sent copies are saved to the tax file. While appraisal-notice-jumps is open, this step and those through pass-through-savings run inside it.",
       "mode": "agent",
       "modeBasis": "Listing tenants from the abstracts and drafting letters is document work; anything sent to a tenant goes only with a person's approval.",
       "risk": "medium",
@@ -257,7 +275,7 @@
     {
       "id": "decide-to-protest",
       "title": "Decide whether to protest and on what grounds",
-      "instruction": "The principal decides whether to protest and on which grounds, from the notice review, the tax at stake and what the evidence can show. The grounds the statute lists include the appraised value, unequal appraisal, inclusion of the property on the records, denial of a partial exemption, through 2026 a finding that the property does not qualify for the circuit breaker limit, ownership, the taxing units listed, and any other action of the district or board that applies to and adversely affects the owner (Tax Code 41.41(a)). In a value or unequal appraisal protest the district bears the burden of establishing value, by clear and convincing evidence where 41.43(a-1) or (a-3) applies; an owner who failed to deliver a required rendition or an answer to the chief appraiser's information request bears it instead (41.43(a), (d)). Filing costs no fee (41.41(d)). Record the decision and its reasons.",
+      "instruction": "The principal decides whether to protest and on which grounds, from the notice review, the tax at stake and the evidence, and, while appraisal-notice-jumps is open, the cause it found, the loan's conditions on a contest and any late filing counsel advised. Grounds include the appraised value, unequal appraisal, inclusion on the records, denial of a partial exemption, through 2026 a finding that the circuit breaker limit does not apply, ownership, the taxing units listed, and any other district or board action that applies to and adversely affects the owner (Tax Code 41.41(a)). In a value or unequal appraisal protest the district bears the burden of establishing value, by clear and convincing evidence where 41.43(a-1) or (a-3) applies; an owner who failed to deliver a required rendition or an answer to the chief appraiser's information request bears it instead (41.43(a), (d)). Filing is free (41.41(d)). Record the decision and reasons.",
       "mode": "human-online",
       "modeBasis": "Whether to contest the value, and on which grounds, is a judgment that binds the owning entity.",
       "actor": "principal",
@@ -282,7 +300,7 @@
     {
       "id": "get-partner-consent",
       "title": "Get the capital partner's consent where the agreement requires it",
-      "instruction": "Read the JV agreement for the capital partner's rights over tax contests, settlements with the appraisal district, hiring a consultant and the fee paid. Where it requires the partner's consent or notice, send the partner the notice review, the tax at stake and the recommended grounds and representation, and name the date by which it must answer so the filing deadline on the calendar is not missed. Record the answer. A person approves the request before it goes.",
+      "instruction": "Read the JV agreement for the capital partner's rights over tax contests, settlements with the appraisal district, naming a designated agent, hiring a property tax consultant and the fee paid. Where it requires the partner's consent or notice, send the partner the notice review, the tax at stake and the recommended grounds and representation, and name the date by which it must answer so the filing deadline on the calendar is not missed. Record the answer. A person approves the request before it goes.",
       "mode": "agent",
       "modeBasis": "Reading the agreement and drafting the request is document work; the partner's consent is its own decision.",
       "risk": "medium",
@@ -307,7 +325,7 @@
     {
       "id": "choose-representation",
       "title": "Decide who represents the owner",
-      "instruction": "An owner may designate one agent per property on the Comptroller's form, signed by the owner or another authorized person; it takes effect once filed with the appraisal district (Tax Code 1.111(a), (b), (d)). Anyone performing property tax consulting services for compensation, including representing an owner in a protest, must register under Occupations Code chapter 1152 (1152.001(6), 1152.151). The chapter exempts, among others, a Texas lawyer, a certified public accountant, an employee of the owner or an affiliated company acting for the owner, and a lessee designated as agent (1152.002(a)); counsel confirms whether an exemption fits the sponsor's staff. An exempt individual who files without being designated to receive notices attaches a statement giving name and address, that the individual acts for the owner, and the exemption's basis (1.111(j)). If a consultant is hired, the principal confirms its registration, signs the engagement and designation, and records the fee terms.",
+      "instruction": "An owner may name one designated agent per property on the Comptroller's form, signed by the owner or another authorized person, effective once filed with the appraisal district (Tax Code 1.111(a), (b), (d)). Anyone paid to perform property tax consulting services, including protest representation, must be registered as a property tax consultant under Occupations Code chapter 1152 (1152.001(6), 1152.151). Chapter 1152 exempts, among others, a Texas lawyer, a certified public accountant, an employee of the owner or an affiliated company acting for it, and a lessee designated as agent (1152.002(a)); counsel confirms whether an exemption fits the firm's staff. An exempt individual filing without designation to receive notices attaches a statement of name and address, that the individual acts for the owner, and the exemption's basis (1.111(j)). If a property tax consultant is hired, the principal confirms its registration, signs the engagement and designation and records the fees.",
       "mode": "human-online",
       "modeBasis": "The designation and any engagement commit the owning entity and are signed by a person authorized to act for it.",
       "actor": "principal",
@@ -362,7 +380,7 @@
     {
       "id": "build-the-evidence",
       "title": "Request the district's evidence and build the owner's",
-      "instruction": "Draft a written request for the chief appraiser's hearing evidence; what is not delivered 14 days before the hearing may be used only in rebuttal (Tax Code 41.461(a)(2), 41.67(d)). A person approves it. Build the owner's package as of January 1, each figure sourced: income (trailing-12, rent roll) in income-value at a cap rate from market evidence the sponsor gathered; sales from the comp set; for unequal appraisal, comparable properties' values, appropriately adjusted (41.43(b)(3)). Where the district's value is $1 million or less, a 41.43(a-2) appraisal by a chapter 1103 certified appraiser, made within 180 days before the first hearing day, raises the district's burden if filed with the board and delivered to the chief appraiser 14 days before that day (41.43(a-1)). So does income or sales data filed and delivered by then where last year's value was lowered, not by agreement (41.43(a-3)). Calendar that day from the hearing notice.",
+      "instruction": "Draft a written request for the chief appraiser's hearing evidence; what is not delivered 14 days before the hearing may be used only in rebuttal (Tax Code 41.461(a)(2), 41.67(d)). A person approves it. Build the owner's package as of January 1, each figure sourced: income (trailing-12, rent roll) in income-value at a cap rate from market evidence the firm gathered; sales from the comp set; for unequal appraisal, comparable properties' values, appropriately adjusted (41.43(b)(3)). Where the district's value is $1 million or less, a 41.43(a-2) appraisal by a chapter 1103 certified appraiser, made within 180 days before the first hearing day, raises the district's burden if filed with the board and delivered to the chief appraiser 14 days before that day (41.43(a-1)). So does income or sales data filed and delivered by then where last year's value was lowered, not by agreement (41.43(a-3)). Calendar that day from the hearing notice.",
       "mode": "agent",
       "modeBasis": "Assembling sourced figures and running the calculator is file work; the request to the district goes only with a person's approval.",
       "risk": "medium",
@@ -440,7 +458,7 @@
     {
       "id": "advise-on-remedies",
       "title": "Have counsel read the order and name the remedies",
-      "instruction": "If no value was agreed, the board issues a written order stating the value in the records and as finally determined, land and improvements separately, delivered by certified mail or electronically (Tax Code 41.47(a), (c-2), (d)). Counsel reads the order and advises in writing on the remedies the text allows: a petition for review in district court within 60 days after notice of the final order (42.21(a)), with no notice of appeal required of an owner (42.06(a)); nonbinding arbitration on the owner's motion, binding arbitration if the district joins, and mediation (42.225, 42.226); or, instead of a court appeal, binding arbitration where the value in the order is $5 million or less, requested from the Comptroller within 60 days after notice of the order with the deposit 41A.03(a) sets; without strict compliance the right is waived (41A.01, 41A.03).",
+      "instruction": "If no value was agreed, the board's written order gives the value in the records and as finally determined, land and improvements separately (Tax Code 41.47(a), (c)). Counsel advises in writing on the remedies: a petition for review in district court within 60 days after notice of the order (42.21(a)), where the court orders nonbinding arbitration on the owner's motion, binding arbitration if the district joins, and mediation (42.225, 42.226). Instead of a court appeal: binding arbitration where the order's value is $5 million or less, requested from the Comptroller within 60 days after notice with the deposit 41A.03(a) sets, waived without strict compliance (41A.01, 41A.03); or, for a value or unequal appraisal order over $1 million on non-industrial property, an appeal to the State Office of Administrative Hearings, noticed to the chief appraiser within 30 days of receiving the order, deposit within 90 (Government Code 2003.901, 2003.904, 2003.906).",
       "mode": "human-online",
       "modeBasis": "Which remedies the text allows, and their deadlines, is a legal judgment for counsel.",
       "actor": "counsel",
@@ -457,13 +475,15 @@
       "sources": [
         "tx-tax-code-41-order",
         "tx-tax-code-42",
-        "tx-tax-code-41a"
+        "tx-tax-code-41a",
+        "tx-gov-code-2003",
+        "cpa-protests"
       ]
     },
     {
       "id": "decide-remedy-and-pay",
       "title": "Decide on a remedy and pay the tax an appeal requires",
-      "instruction": "The principal decides from counsel's advice whether to pursue a remedy, after the capital partner's consent where a JV agreement requires it, and signs or authorizes any petition or request counsel prepares before its deadline. An appeal of the value under chapter 42 waives the chapter 41A arbitration on that value (41A.03(b)). For an appeal under chapter 42, the principal pays, or approves the payment of, the tax 42.08(b) requires before the delinquency date, or the right to a final determination is forfeited: the lesser of the tax on the value not in dispute, the tax under the order, or last year's tax. An owner paying only the undisputed portion files a written statement of that amount with the appeal (42.08(b-1)). Record the decision, each filing and the proof of payment.",
+      "instruction": "The principal decides from counsel's advice whether to pursue a remedy, after the capital partner's consent where a JV agreement requires it, and signs or authorizes any petition or request counsel prepares before its deadline. A chapter 42 appeal of the value waives chapter 41A arbitration on that value (41A.03(b)). For a chapter 42 appeal, the principal pays or approves paying the tax 42.08(b) requires before the delinquency date, or the right to a final determination is forfeited: the lesser of the tax on the value not in dispute, the tax under the order, or last year's tax. An owner paying only the undisputed portion states that amount in writing with the appeal (42.08(b-1)). An administrative hearings appeal is dismissed if the taxes are delinquent, or if the deposit is late, which also bars such appeals in later years (Government Code 2003.906(a-3), 2003.913(b)). Record each decision, filing and payment.",
       "mode": "human-online",
       "modeBasis": "Pursuing a remedy binds the owning entity, a petition is signed, and a tax payment moves money; each is a person's act.",
       "actor": "principal",
@@ -478,7 +498,8 @@
       "basis": "cited",
       "sources": [
         "tx-tax-code-42",
-        "tx-tax-code-41a"
+        "tx-tax-code-41a",
+        "tx-gov-code-2003"
       ]
     },
     {
@@ -513,9 +534,9 @@
     {
       "id": "pass-through-savings",
       "title": "Pass the result through to tenants as each lease requires",
-      "instruction": "Once the tax bills are issued, read each lease for how taxes are recovered: net, base year, expense stop or gross, the tenant's share, any cap, whether the cost of a protest is recoverable and how a refund or reduction is credited. Run the expense-recovery calculator for each tenant with the building's tax as billed after the result, alongside the other recoverable expenses the lease covers, and reconcile against the estimates the tenant paid. Credit any refund received later as the lease requires. Draft each tenant's reconciliation with the tax bills and the order attached. A person approves every reconciliation before it is sent to a tenant. Monthly billing and the full year-end expense true-up follow collect-rent-and-reconcile-cam.",
+      "instruction": "Once the tax bills are issued, whether or not the firm protested, read each lease for how taxes are recovered: net, base year, expense stop or gross, the tenant's share, any cap, whether the cost of a protest is recoverable and how a refund or reduction is credited. Run expense-recovery for each tenant with the building's tax as billed. Draft each tenant's revised estimate within what its lease allows and hand it to reset-estimates in collect-rent-and-reconcile-cam, which checks it, sends its notice and loads it into billing; send-reconciliations there settles the year. Send a separate tax statement or true-up only where a lease requires one, with the bills and any order attached; a person approves it before it goes. Credit any refund received later as the lease requires.",
       "mode": "agent",
-      "modeBasis": "The recovery is arithmetic on the lease terms and the bills; a reconciliation sent to a tenant goes only with a person's approval.",
+      "modeBasis": "The recovery is arithmetic on the lease terms and the bills; a statement sent to a tenant goes only with a person's approval, and notices of revised estimates go from collect-rent-and-reconcile-cam.",
       "risk": "medium",
       "undo": "irreversible",
       "approval": "every-run",

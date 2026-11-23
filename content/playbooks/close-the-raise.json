@@ -7,30 +7,584 @@
   "phase": "raise",
   "order": 160,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "onboard-an-investor",
+    "file-form-d-and-state-notices",
+    "call-capital-fund-closing",
+    "hold-the-first-close"
+  ],
+  "consumes": [
+    "private-placement-memorandum",
+    "subscription-agreement",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "investor-register",
+    "wire-instructions",
+    "form-d",
+    "state-notice-filing"
+  ],
+  "produces": [
+    "subscription-agreement",
+    "investor-register",
+    "wire-instructions"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Fix the offering's closing date from the offering documents",
-    "Stop accepting new subscriptions",
-    "Resolve every subscription still pending",
-    "Reconcile the investor register to the bank and resolve every difference",
-    "List the money to return for subscriptions declined or cut back",
-    "Verify any request to send a refund elsewhere by phone at a known number",
-    "Have a person approve and return each amount as the offering documents provide, to the account it came from",
-    "Confirm each refund left the account and reached the investor",
-    "Confirm the register and bank agree after refunds",
-    "Send each investor confirmation of the final amount accepted",
-    "Ask counsel which federal and state notices change now the offering has closed",
-    "File the closing record and keep it"
-  ]
+  "sources": [
+    {
+      "id": "ecfr-230-152",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.152",
+      "title": "17 CFR 230.152, Integration (paragraphs (b)(1) and (d)(1))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "on the later of the date: (i) The issuer entered into a binding commitment to sell all securities to be sold under the offering",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-506",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.506",
+      "title": "17 CFR 230.506, Exemption for limited offers and sales without regard to dollar amount of offering (paragraph (b)(2)(i))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "35 purchasers of securities from the issuer in offerings under this section in any 90-calendar-day period",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-9",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-9",
+      "title": "17 CFR 240.10b-9, Prohibited representations in connection with certain offerings",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "all or a specified part of the consideration paid for such security will be promptly refunded to the purchaser",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-15c2-4",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.15c2-4",
+      "title": "17 CFR 240.15c2-4, Transmission or maintenance of payments received in connection with underwritings",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "promptly deposited in a separate bank account, as agent or trustee for the persons who have the beneficial interests therein",
+      "tier": "primary"
+    },
+    {
+      "id": "ic3-bec",
+      "url": "https://www.ic3.gov/CrimeInfo/BEC",
+      "title": "Business Email Compromise (BEC)",
+      "publisher": "FBI Internet Crime Complaint Center (IC3)",
+      "accessed": "2026-11-21",
+      "quote": "Use secondary channels or two-factor authentication to verify requests for changes in account information with the intended recipient.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bc-4a",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.4A.htm",
+      "title": "Texas Business and Commerce Code, Chapter 4A (Sections 4A.207, 4A.211 and 4A.507, funds transfers)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "After a payment order has been accepted, cancellation or amendment of the order is not effective unless the receiving bank agrees",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-12-210",
+      "url": "https://www.ecfr.gov/current/title-12/part-210",
+      "title": "12 CFR part 210, Regulation J (section 210.25 and appendix A, Article 4A sections 4A-207 and 4A-211)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "This subpart incorporates the provisions of Article 4A set forth in appendix A of this part.",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-i1099int",
+      "url": "https://www.irs.gov/instructions/i1099int",
+      "title": "Instructions for Forms 1099-INT and 1099-OID (Rev. January 2024)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "Report only interest payments made in the course of your trade or business",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-101",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.101.htm",
+      "title": "Texas Business Organizations Code, Chapter 101 (Section 101.501, supplemental records required for limited liability companies)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "the percentage or other interest in the limited liability company owned by each member",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-153",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.153.htm",
+      "title": "Texas Business Organizations Code, Chapter 153 (Section 153.551, limited partnership records)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "the date on which each partner in the limited partnership became a partner",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-503",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.503",
+      "title": "17 CFR 230.503, Filing of notice of sales (paragraph (a)(3))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "no amendment is required to reflect a change that occurs after the offering terminates",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-114-4",
+      "url": "https://www.law.cornell.edu/regulations/texas/7-Tex-Admin-Code-SS-114-4",
+      "title": "7 Tex. Admin. Code 114.4, Filings and Fees (subsections (b)(1), (c), (d)(2) and (f)(5))",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-23",
+      "quote": "the period of effectiveness extends from the date of the notice filing until the offering is completed or terminated",
+      "tier": "primary"
+    },
+    {
+      "id": "ssb-regd-filing",
+      "url": "https://www.ssb.texas.gov/securities-professionals/regulation-securities/filing-requirements-regulation-d-offerings-texas",
+      "title": "Filing Requirements for Regulation D Offerings in Texas",
+      "publisher": "Texas State Securities Board",
+      "accessed": "2026-11-21",
+      "quote": "Issuers must file an amendment in Texas contemporaneously with an amendment filing with the SEC.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gov-code-4006",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.4006.htm",
+      "title": "Texas Government Code, Chapter 4006 (Sections 4006.052 and 4006.152, Securities Act fees)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "three times the difference between the fee initially paid and the fee that should have been paid",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "read-closing-terms",
+      "title": "Read the closing and refund terms in the offering documents",
+      "instruction": "Before closing anything, record the offering's end and refund terms from the memorandum, the subscription agreement and the entity agreement, or the JV agreement. Note the date or event that ends the offering and any extension the manager may grant; the maximum raise and any minimum, with the date by which the minimum must be sold and paid for; how, and within what time, a subscription is accepted in whole or in part; how an oversubscription is allocated; where money sits before acceptance; and when, how and to whom money is returned, and whether with interest. For a fund, add the final closing date the partnership agreement sets and any extension it allows. Where hold-the-first-close already listed the conditions to closing, start from that list. Enter each date in the deadline calendar as a contract period, and send any term that is missing or unclear to counsel.",
+      "mode": "agent",
+      "modeBasis": "Reading the signed documents and recording their dates is document work; counsel settles any term that is unclear.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "private-placement-memorandum",
+        "subscription-agreement",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "stop-new-subscriptions",
+      "title": "Stop taking subscriptions once the offering closes",
+      "instruction": "On the end date, or an earlier date the principals set in writing as the documents allow, stop all offering effort. Close the portal's subscription link, mark closed every page and message inviting investment, and tell prospects in the pipeline, or JV capital partners approached, that it has closed. Record the date offers stopped, and log anything arriving later for return. For integration, Rule 152 ends a Regulation D or Section 4(a)(2) offering on the later of that date and the date the issuer became bound to sell all it will sell, usually the last acceptance. A new offering more than 30 calendar days after that is in the rule's safe harbor, with an added test when an offering barred from general solicitation, such as under Rule 506(b), follows one that allowed it. A sooner raise, or another same-issuer Rule 506(b) raise within 90 calendar days, goes to counsel.",
+      "mode": "agent",
+      "modeBasis": "Closing the portal link, updating pages and messaging prospects is work an agent can do; a principal approves each closure before it goes out.",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-closing-terms"
+      ],
+      "rules": [
+        "us-fed.reg-d.rule-506b"
+      ],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-152",
+        "ecfr-230-506"
+      ]
+    },
+    {
+      "id": "resolve-pending-subscriptions",
+      "title": "Accept, cut back or decline every subscription still pending",
+      "instruction": "A principal decides each subscription still open within the time the subscription agreement allows: accept it in full, accept a smaller amount, or decline it, and countersign or send the written notice the agreement calls for. Where subscriptions exceed the maximum, cut them back only by the allocation method the documents state, and record the method used. Accept nothing whose onboard-an-investor checks are incomplete. Sign the last acceptances only after the agent has run hold-the-first-close's test-the-group on the final group. At any final close that admits investors, admit them by rerunning hold-the-first-close from confirm-subscriptions-binding to confirm-and-file, which signs the admission consent and updated schedule. A subscription accepted earlier but never funded follows investor-misses-capital-call. Record each decision, its date and the amount accepted in the investor register, and the date of the last acceptance, usually the date the issuer became bound to sell all it will sell under Rule 152.",
+      "mode": "human-online",
+      "modeBasis": "Accepting or declining a subscription is the issuer's decision and signature; an agent prepares the list, runs the group test and records the result.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "stop-new-subscriptions"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "rules": [
+        "us-fed.reg-d.rule-506b",
+        "us-fed.ica.fund-exclusions",
+        "us-fed.erisa.plan-assets"
+      ],
+      "calculators": [],
+      "consumes": [
+        "subscription-agreement",
+        "investor-register"
+      ],
+      "produces": [
+        "subscription-agreement",
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-152"
+      ]
+    },
+    {
+      "id": "settle-later-closings",
+      "title": "Settle the catch-up amounts for investors admitted at later closings",
+      "instruction": "Where the entity agreement charges investors admitted after the first close a catch-up, as hold-the-first-close's read-later-closing-terms recorded, apply those terms after the final close; where it charges none, skip this step. Recompute each investor's share of the total and check that the shares add up to the whole. For each later investor, compute its share of capital already contributed or called and any added amount the agreement charges; for each earlier investor, compute what it is owed back from those payments. Collect what later investors owe through call-capital-fund-closing's notice, verification and tracking steps, with these amounts in place of set-funding-schedule's. What earlier investors are owed goes on the return list only once those payments arrive, labeled as the agreement and the CPA treat it. Any part the agreement leaves silent or unclear goes to counsel and the CPA before anything moves. Give the CPA each admission date and amount.",
+      "mode": "agent",
+      "modeBasis": "Applying the agreement's catch-up formula to the register is computation an agent can do; money moves only in later, approved steps.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "resolve-pending-subscriptions"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "reconcile-to-bank",
+      "title": "Reconcile the investor register to the bank and resolve each difference",
+      "instruction": "Match every offering deposit to an investor and a subscription, using bank statements or a read-only feed the firm provides, and compare each investor's accepted amount with the money received. Start from call-capital-fund-closing's reconciliation, marking each item it or hold-the-first-close's return-rejected-money already returned. List every difference: money with no subscription, a duplicate or overpayment, a payment short of the accepted amount, money from someone other than the investor, money for a declined or cut-back subscription, and money after the cutoff. Ask the investor about any unexplained item that day, recording the answer. A principal decides how each difference is resolved; money from a third party goes to counsel before it is kept or returned, and money from anyone whose sanctions screen showed a possible match goes to counsel the same day. Go on only when the total held equals the register plus the items marked for return.",
+      "mode": "agent",
+      "modeBasis": "Matching deposits from statements or a read-only feed is data work; a principal approves each question to an investor and decides each difference.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "stop-new-subscriptions",
+        "resolve-pending-subscriptions",
+        "settle-later-closings"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "jv-settle-partner-funding",
+      "title": "For a JV, agree the final contributions with the partner in writing",
+      "instruction": "Send the capital partner a written statement of what it and the firm each contributed, checked against the reconciliation, the JV agreement's capital shares and the approved budget, with the date each amount arrived and any difference. A principal, not the agent, agrees with the partner in writing whether an overfunding comes back now or stays as a credit the agreement recognizes. A shortfall is handled under the agreement's funding default terms, as investor-misses-capital-call describes, and goes to counsel. An overfunding agreed for return goes on the return list unless call-capital-fund-closing already returned it. With one partner there is no oversubscription to resolve.",
+      "mode": "agent",
+      "modeBasis": "Comparing funding with the agreement and drafting the statement is file work; a principal approves the message and agrees any terms with the partner.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "reconcile-to-bank"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "list-returns",
+      "title": "List each amount to return, with its reason and deadline",
+      "instruction": "Build the return list from the reconciliation: each declined subscription, cutback, overpayment, duplicate or late payment, an agreed JV overfunding, earlier investors' catch-up paybacks once later investors pay, and any earlier-close refund hold-the-first-close's return-rejected-money did not send. Leave off what call-capital-fund-closing or that step returned and anything counsel has not cleared, such as a possible sanctions match. If the minimum is not sold at the stated price and time, or not paid in full by the stated date, or the offering is abandoned, every subscription goes on the list; Rule 10b-9 permits promising refunds on those terms only if refunds are prompt. For each line record the investor, amount, reason, date received, deadline, any interest promised and the paying account's bank record, not its number. Where a broker-dealer took money in a contingent offering, Rule 15c2-4 required a separate account or bank escrow; confirm who sends each refund.",
+      "mode": "agent",
+      "modeBasis": "Building the list from the reconciliation and the documents is file work an agent can do.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "reconcile-to-bank",
+        "jv-settle-partner-funding"
+      ],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "subscription-agreement",
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-9",
+        "ecfr-240-15c2-4"
+      ]
+    },
+    {
+      "id": "verify-refund-destination",
+      "title": "Verify any request to send a refund elsewhere by phone at a known number",
+      "instruction": "Before a refund goes anywhere but the account the money came from, as the bank's record shows it, a principal confirms the request by calling the investor at a number already on file, never one given in the request. Treat any request to send a refund elsewhere, to a new account, another person or by check, as fraud until that call confirms it; the FBI's IC3 advises verifying requests to change account information through a second channel. Have the investor state the details rather than reading them out. A refund to anyone other than the investor goes to counsel first. Record who checked, how and when in the wire instructions record, never the account numbers. If the request proves false, follow wire-instructions-change.",
+      "mode": "human-offline",
+      "modeBasis": "A call-back to a known number is a person's act; an agent cannot place the call or judge the voice on the line.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-returns"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "wire-instructions"
+      ],
+      "produces": [
+        "wire-instructions"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ic3-bec"
+      ]
+    },
+    {
+      "id": "send-refunds",
+      "title": "Have a principal approve the return list and release each refund",
+      "instruction": "A principal checks the return list against the reconciliation and approves it. Where an escrow or a broker-dealer's separate account holds the money, the authorized signers sign any return instruction its agreement requires and the holder sends the refunds. Otherwise a principal releases each refund from the entity's bank by the documents' deadline, only to verified instructions, with a second approver under the dual approval set in form-deal-entity's open-entity-account; an earlier fund partner's share goes to its verified distribution instructions. Treat each wire as final: under Texas Business and Commerce Code chapter 4A where the firm's bank is in Texas, or Regulation J for Fedwire, an accepted order is cancelled only with the receiving bank's agreement, and after the beneficiary's bank accepts, only if unauthorized, a duplicate, to the wrong payee or for too much. That bank, unaware of a name mismatch, may pay by account number.",
+      "mode": "human-online",
+      "modeBasis": "Approving and releasing a wire, or signing an escrow holder's return instruction, needs a person; an agent cannot move money.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "verify-refund-destination"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "wire-instructions",
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-bc-4a",
+        "ecfr-12-210",
+        "ecfr-240-15c2-4"
+      ]
+    },
+    {
+      "id": "confirm-refunds-arrived",
+      "title": "Confirm each refund left the account and reached the investor",
+      "instruction": "After release, compare the bank's or escrow holder's confirmation of each refund with the return list, line by line, using statements or the read-only feed. Then ask each investor, through the portal or the notice channel the documents name, to confirm the refund arrived, and record each answer and its date. Follow up the same day on any refund the bank rejects or returns, and on any investor who reports nothing arrived. A returned refund stays in the entity's account and is not sent again until its instructions pass the verification step again. Money that still cannot be delivered stays on the list and in the register; keep-investor-register-current covers investors who cannot be found. Give the CPA any interest paid on refunds, by payee and date; interest paid in a trade or business can call for a Form 1099-INT.",
+      "mode": "agent",
+      "modeBasis": "Checking bank confirmations and asking investors through the portal is work an agent can do; a principal approves the messages.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "send-refunds"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register",
+        "wire-instructions"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "irs-i1099int"
+      ]
+    },
+    {
+      "id": "reconcile-after-refunds",
+      "title": "Confirm the register, the bank and the entity's records agree after refunds",
+      "instruction": "Once every refund has cleared, or come back undeliverable and been recorded as held for its investor, reconcile again: money held for the offering equals the total accepted in the register plus refunds still held, each investor's funded amount equals its accepted amount, and the register matches the schedule of members or partners, or the JV agreement's capital shares. Recompute each ownership interest and check the interests add up to the whole. Mark each person in the register funded, declined or withdrawn, with the date. A Texas LLC or limited partnership must keep a current list of each owner's interest and, unless its written agreement states them, contributions and admission dates; for an entity formed in another state, counsel confirms that state's records rule, not researched here. If the signed schedule no longer matches, send the change to counsel. A principal signs off on the result before confirmations go out.",
+      "mode": "agent",
+      "modeBasis": "Reconciling the register to the bank and the signed schedule is data work; a principal signs off on the result.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-refunds-arrived"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "tx-boc-153"
+      ]
+    },
+    {
+      "id": "send-final-confirmations",
+      "title": "Send each investor confirmation of the final amount accepted",
+      "instruction": "Draft a confirmation from the final reconciliation for each investor whose facts changed since hold-the-first-close's confirm-and-file confirmed them, such as by a cutback, refund or later admission, and for each never confirmed there; skip the rest. Show the amount accepted, the amount funded and when, the interest or units held, the admission date, and any amount returned, with its date and reason. A declined subscriber gets a short notice that the subscription was declined and the money returned, with the date. For a fund, show the commitment, the amount called so far and the commitment left. A principal approves the set before it goes out through the portal or the notice channel the documents name, one that records delivery. Put no wiring details in any confirmation, and repeat that payment instructions never change by email.",
+      "mode": "agent",
+      "modeBasis": "Drafting confirmations from the reconciled register and sending them through the portal is agent work once a principal approves the set.",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "reconcile-after-refunds"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "counsel-on-filings",
+      "title": "Ask counsel which federal and state notices change now the offering has closed",
+      "instruction": "Send counsel the Form D and state notices, final totals, the date offers stopped and the last acceptance date; ask counsel to fix the end date and what the close requires. Under Rule 503, no Form D amendment is needed for a change after the offering ends, and the yearly one only while it continues; a material mistake, or an unexcused change before the end, such as offering-amount increases totaling over 10% since the last filing, still needs one. For a fund, ask whether calls on commitments keep it open. A Texas Rule 506 notice lasts until the offering ends, with no annual or final sales report. Texas wants each Form D amendment filed alongside the SEC filing; file-form-d-amendment files it, and any amended Texas notice where the fee paid was under the $500 cap and the amount offered has grown past what it covered. Other states are not researched.",
+      "mode": "human-online",
+      "modeBasis": "Which filings the close requires is a legal judgment; an agent assembles the filings and totals counsel reads.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "reconcile-to-bank",
+        "jv-settle-partner-funding"
+      ],
+      "rules": [
+        "us-fed.reg-d.form-d-amendments",
+        "us-tx.securities.rule-506-notice"
+      ],
+      "calculators": [],
+      "consumes": [
+        "form-d",
+        "state-notice-filing",
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-503",
+        "tac-114-4",
+        "ssb-regd-filing",
+        "tx-gov-code-4006"
+      ]
+    },
+    {
+      "id": "file-closing-record",
+      "title": "File the closing record and keep it",
+      "instruction": "Assemble one closing file for the offering: each closing set hold-the-first-close filed, the closing and refund terms, the dates offers stopped and of the last acceptance, each acceptance, cutback and decline with its date, both reconciliations with sign-offs, the return list with each approval and confirmation, refund verifications, the confirmations sent, and counsel's answer with anything filed. List every prospect and declined subscriber who can still open the offering's data room for an administrator to remove, as set-up-document-storage's remove-access-on-departure describes, adding the room's access log. Keep it in the firm's document storage beside the offering documents and entity records, for file-form-d-amendment, audit-past-raises and send-quarterly-investor-report. Record counsel's end date and the final totals in the investor register. Calendar the 31st day after that date, the first day a new offering is in Rule 152's 30-day safe harbor, and give the date to file-form-d-amendment to take the annual amendment off the calendar.",
+      "mode": "agent",
+      "modeBasis": "Assembling and filing records in the firm's storage, and listing access to remove, is document work an agent can do; an administrator removes the access.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "send-final-confirmations",
+        "counsel-on-filings"
+      ],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "investor-register"
+      ],
+      "produces": [
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-152"
+      ]
+    }
+  ],
+  "outlineSteps": []
 }

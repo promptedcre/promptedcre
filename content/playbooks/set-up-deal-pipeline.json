@@ -7,17 +7,352 @@
   "phase": "stand-up",
   "order": 65,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
+  "lastVerified": "2026-11-20",
+  "requires": [
+    "write-the-buy-box"
+  ],
+  "consumes": [
+    "buy-box",
+    "deal-screen",
+    "offering-memorandum",
+    "deal-entity-agreement",
+    "private-placement-memorandum",
+    "jv-agreement"
+  ],
   "produces": [],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
+  "sources": [
+    {
+      "id": "oc-1101",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1101.htm",
+      "title": "Texas Occupations Code, Chapter 1101, Real Estate Brokers and Sales Agents (Sections 1101.002(1), 1101.005(1), 1101.351, 1101.558 and 1101.806)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "quote": "aids or offers or attempts to aid in locating or obtaining real estate for purchase or lease",
+      "tier": "primary"
+    },
+    {
+      "id": "trec-license-search",
+      "url": "https://www.trec.texas.gov/license-search",
+      "title": "License Holder Search",
+      "publisher": "Texas Real Estate Commission",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "trec-faq",
+      "url": "https://www.trec.texas.gov/public/frequently-asked-questions",
+      "title": "Frequently Asked Questions (attorneys and real estate licensing)",
+      "publisher": "Texas Real Estate Commission",
+      "accessed": "2026-11-20",
+      "quote": "As long as the attorney is licensed in Texas, they are exempt from the licensure requirements.",
+      "tier": "primary"
+    },
+    {
+      "id": "trec-rules",
+      "url": "https://www.trec.texas.gov/agency-information/rules-and-laws/trec-rules",
+      "title": "TREC Rules: 22 Tex. Admin. Code 535.144 (acquiring or disposing of own property)",
+      "publisher": "Texas Real Estate Commission",
+      "accessed": "2026-11-20",
+      "quote": "is obligated to disclose in writing that he or she is a licensed real estate broker or sales agent",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "choose-the-tracker",
+      "title": "Choose one tracker for every deal",
+      "instruction": "The principals choose one place where every deal is tracked from first look to close or pass: a shared spreadsheet, a pipeline product or the firm file itself. Whatever they pick must let an agent add a deal and change its stage, attach documents, export everything in an open format, and limit who sees each deal, since much of what it holds is under confidentiality agreements. An agent compares the candidates on those points; opening an account and paying are a principal's. Deals now kept anywhere else, such as in inboxes or notes, are moved in, and from then on a deal that is not in the tracker is not being worked.",
+      "mode": "human-online",
+      "modeBasis": "Choosing, subscribing and paying are the principals' acts; an agent compares the products and moves the existing deals in.",
+      "actor": "principal",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "market": "deal-pipeline-underwriting",
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "define-stages",
+      "title": "Set the stages to follow the acquisition playbooks in order",
+      "instruction": "Set the tracker's stages to the catalog's acquisition playbooks in their order: screen (screen-deal-buy-box); underwrite (underwrite-a-deal, with the tour, the comps and the investment committee memo); letter of intent (submit-letter-of-intent); contract (negotiate-purchase-contract); due diligence (run-due-diligence, with the third-party reports, title and survey, the leases and the estoppels); and finance and close (source-acquisition-debt, negotiate-loan-documents and finance-and-close). Add the end states: closed, passed, and lost for a deal the firm pursued but did not win. A deal bought as a like-kind exchange replacement also carries the exchange's dates from buy-as-1031-replacement. A deal moves on only when a person decides it should. Where deals are kept in the firm file, a deal's stage is simply the first acquisition playbook it has not finished.",
+      "mode": "agent",
+      "modeBasis": "Setting stages from the catalog is configuration an agent can do in the tracker.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-the-tracker"
+      ],
+      "market": "deal-pipeline-underwriting",
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "define-deal-fields",
+      "title": "Set the fields every deal record keeps",
+      "instruction": "Give every deal the same fields: the property, with address, type and size; the source, whether a listing broker, an owner reached directly or someone else, with the broker's name, firm and license number; the date and time the firm first heard of it, and from whom; the asking price or guidance; the key dates, such as the call for offers, the tour, the letter of intent, the contract, the deposit going hard and closing; the stage, the principal responsible, and the next step with its date; links to the deal screen and the buy-box version it was checked against; and each decision with who made it, the date and the reason. A pass records one reason from a fixed list, such as price, location, size, tenancy, condition, financing, timing or outbid, plus a sentence in words.",
+      "mode": "agent",
+      "modeBasis": "Defining fields in the tracker is configuration work an agent can do.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "define-stages"
+      ],
+      "market": "deal-pipeline-underwriting",
+      "consumes": [
+        "buy-box",
+        "deal-screen"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "set-up-intake",
+      "title": "Log every deal the day it arrives and catch duplicates",
+      "instruction": "Set one place deals arrive, such as a shared inbox, and log each offering memorandum, teaser or call note there the day it comes in, with the date and time received and who sent it. Before logging, search the tracker for the same property: if another broker or source already sent it, link the new arrival to the first record and keep both dates, because who introduced a deal first matters if two brokers later claim the same fee. Each new deal then starts screen-deal-buy-box, whose first step completes this record and collects the package, and the screen's decision, its reason and the buy-box version come back to the tracker.",
+      "mode": "agent",
+      "modeBasis": "Reading arrivals, searching for duplicates and creating records is file work an agent can do in the tracker.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "define-deal-fields"
+      ],
+      "market": "deal-pipeline-underwriting",
+      "consumes": [
+        "offering-memorandum"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "keep-nda-log",
+      "title": "Keep a log of every confidentiality agreement and its duties",
+      "instruction": "Log every confidentiality agreement the firm signs to get a package, from sign-and-return in sign-nda-for-offering-memorandum: the property, the seller and broker, the firm entity that signed and who signed, the date, how long it lasts, what it covers, who may see the materials (such as lenders, partners and counsel), any no-contact or non-solicitation terms with their end dates, and what must be returned or destroyed. List who may see each deal's materials under the agreement, for an administrator to apply. When the firm passes on a deal, calendar any return or destruction the agreement requires, record when it was done, and keep the agreement itself.",
+      "mode": "agent",
+      "modeBasis": "Abstracting signed agreements into a log and setting access and reminders is file work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "define-deal-fields"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "build-broker-list",
+      "title": "Build the broker and source list and send each the buy box",
+      "instruction": "List the brokers and other sources the firm works with or wants deals from: name, firm, markets, property types, how the relationship began, deals sent, deals the firm bid on and deals closed, drawn from the tracker as it fills. Send each source the short version of the buy box from write-the-buy-box through the email template built in build-brand-and-website, each send approved by a principal, and record which version each received and when. Note how each source expects to be paid on deals it brings and by whom, and keep any written fee agreement with the source's record.",
+      "mode": "agent",
+      "modeBasis": "Building the list from the tracker and preparing sends is file work; each send goes out only on a principal's approval.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "define-deal-fields"
+      ],
+      "consumes": [
+        "buy-box"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "check-broker-licenses",
+      "title": "Check each Texas broker's license on TREC's public search",
+      "instruction": "For each source in Texas who acts as a broker, look up the person and the brokerage in TREC's public license holder search, and record the license number, type, status and sponsoring broker, with the date checked. Texas law lets only a license holder, or a person the chapter exempts such as a Texas-licensed attorney, act as a broker; a business entity needs its own license to act as one; and a person who, for pay, helps another find or obtain real estate to buy is acting as a broker. Recheck before the firm signs any fee agreement, and file with the deal any Information About Brokerage Services notice a license holder gives. Flag each principal who holds a Texas license: one buying through an entity they own more than 10% of must disclose the license in writing, which submit-letter-of-intent puts in the letter or contract.",
+      "mode": "agent-browser",
+      "modeBasis": "TREC's license holder search is public and needs no sign-in.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-broker-list"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.trec.iabs"
+      ],
+      "basis": "cited",
+      "sources": [
+        "oc-1101",
+        "trec-license-search",
+        "trec-faq",
+        "trec-rules"
+      ]
+    },
+    {
+      "id": "sign-fee-agreements",
+      "title": "Agree any fee for bringing a deal only in writing and only with a license holder",
+      "instruction": "When the firm agrees to pay a broker or anyone else for bringing a deal, a principal signs a written fee agreement first, and only with a license holder. Record each agreement with the deal: who pays, how much and when it is earned. In Texas, no one may sue to collect pay for broker work done there unless they held a license when the work began or are an attorney licensed in any state. Except between license holders sharing a fee, no one may sue in Texas to collect a commission on a sale or purchase without a written agreement, or a memorandum of it, signed by the party charged.",
+      "mode": "human-online",
+      "modeBasis": "Committing the firm to pay a fee is a principal's signature; the agent checks the license and drafts the record.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-broker-licenses"
+      ],
+      "market": "formation-back-office",
+      "basis": "cited",
+      "sources": [
+        "oc-1101"
+      ]
+    },
+    {
+      "id": "fund-allocation-and-limits",
+      "title": "For a fund, track each deal against the fund's limits and allocation terms",
+      "instruction": "Add to each fund deal the limits screen-deal-buy-box checks, such as the share of commitments it would use, the leverage caps and any consent the documents require, with the dates each consent was asked for and given, and note whether the investment period is still open. If the firm runs more than one fund or vehicle, or invests beside a fund, record for each deal which vehicle it was offered to and why, following the allocation terms in the governing documents, and treat a deal one vehicle passes on and another takes as a decision with its reason. Where the allocation terms are unclear, counsel reads them before the deal is offered to either.",
+      "mode": "agent",
+      "modeBasis": "Reading the fund's limits into each deal record is document work; unclear terms go to counsel.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "define-deal-fields"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "consumes": [
+        "deal-entity-agreement",
+        "private-placement-memorandum"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "jv-partner-approvals",
+      "title": "For a JV, track the partner's approvals and the money at risk",
+      "instruction": "Add to each JV deal the approvals the capital partner holds under the JV agreement or its term sheet, such as pursuing the deal, signing the letter of intent, posting a deposit, letting the deposit go hard and closing, each with the date asked, the date answered and the answer. A stage that needs the partner does not move until the answer is recorded. Track who has advanced each pursuit cost and when each deposit stops being refundable, as the pursuit-cost terms from negotiate-jv-agreement set out, so both sides see what is at risk on each date.",
+      "mode": "agent",
+      "modeBasis": "Reading the partner's approvals into each deal record and tracking the dates is document work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "define-deal-fields"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "prepare-weekly-review",
+      "title": "Prepare the weekly review page from the tracker",
+      "instruction": "Before the principals meet each week, prepare one page from the tracker: every active deal by stage, with its next step, the person responsible and the date; every date that falls before the next two meetings, such as calls for offers, letter of intent answers, deposits going hard and closings, with contract periods computed in deadline-calendar and checked against the contract; deals with no next step, or none recorded since the last review; deals waiting on a partner's or a fund's consent; confidentiality duties coming due; and the passes and losses since the last review, with their reasons. Flag any record missing a reason, a date or an owner.",
+      "mode": "agent",
+      "modeBasis": "Reading the tracker and the calendar into one page is reporting work an agent can do.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-up-intake",
+        "keep-nda-log",
+        "build-broker-list",
+        "fund-allocation-and-limits",
+        "jv-partner-approvals"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "market": "deal-pipeline-underwriting",
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "hold-weekly-review",
+      "title": "Hold the weekly review and record each decision",
+      "instruction": "The principals meet on the page each week and, for each active deal, decide to go on, ask questions first, pause or pass, and set the next step, its owner and its date. Each decision goes into the tracker with who made it, the date and the reason, and only a person records a decision to go on with a deal or drop it. When the firm passes, the source hears so in a short note a principal approves, unless the screen already told it. A deal nobody will work before the next review is paused or passed on purpose, not left to go stale.",
+      "mode": "human-offline",
+      "modeBasis": "Deciding which deals go on is the principals' judgment in a meeting; an agent records the notes and next steps, and only a person records go-on or drop.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "prepare-weekly-review"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "review-pass-reasons",
+      "title": "Review the pipeline's results against the buy box and the sources",
+      "instruction": "At an interval the principals set, tally the pipeline: deals received by source, the stage each reached, passes by reason, deals that went on despite a buy-box exception, and wins and losses, with the winning price where it is known. Show which criteria cause the most passes and how the exception deals fared. Send the tally to the review in write-the-buy-box, where any change to the box is proposed and adopted as a new version, and use it to update the broker list: which sources send deals that fit, which do not, and which to call on next.",
+      "mode": "agent",
+      "modeBasis": "Tallying the tracker's records is analysis an agent can do; changes to the box go through the principals.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "hold-weekly-review"
+      ],
+      "market": "deal-pipeline-underwriting",
+      "consumes": [
+        "buy-box",
+        "deal-screen"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    }
+  ],
   "outlineSteps": []
 }

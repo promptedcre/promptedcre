@@ -3,21 +3,425 @@
   "slug": "choose-counsel-and-cpa",
   "kind": "process",
   "title": "Choose counsel and a CPA",
-  "summary": "Pick the securities lawyer, real estate lawyer and tax adviser the sponsor will lean on, before the first deal needs them.",
+  "summary": "Pick the securities lawyer, real estate lawyer and tax adviser the firm will lean on, before the first deal needs them.",
   "phase": "stand-up",
   "order": 15,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
+  "lastVerified": "2026-11-20",
   "requires": [],
   "consumes": [],
   "produces": [],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
+  "sources": [
+    {
+      "id": "irs-i1065",
+      "url": "https://www.irs.gov/instructions/i1065",
+      "title": "Instructions for Form 1065 (2025): When To File, and Schedule K-1",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-20",
+      "quote": "Schedule K-1 must be provided to each partner on or before the day on which the partnership return is required to be filed.",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-franchise",
+      "url": "https://comptroller.texas.gov/taxes/franchise/",
+      "title": "Franchise Tax (due dates)",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-20",
+      "quote": "The annual franchise tax report is due May 15.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gov-code-81",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.81.htm",
+      "title": "Texas Government Code, Chapter 81 (Sections 81.102 and 81.115, State Bar membership and online attorney profiles)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "quote": "a person may not practice law in this state unless the person is a member of the state bar",
+      "tier": "primary"
+    },
+    {
+      "id": "sbot-faq",
+      "url": "https://www.texasbar.com/AM/Template.cfm?Section=FAQs_for_the_Public&Template=/CM/HTMLDisplay.cfm&ContentID=70591",
+      "title": "Frequently Asked Questions (what information is available about an attorney's disciplinary history)",
+      "publisher": "State Bar of Texas",
+      "accessed": "2026-11-20",
+      "quote": "If an attorney has any public disciplinary history, it will be listed on the attorney’s online State Bar profile",
+      "tier": "primary"
+    },
+    {
+      "id": "sbot-find-a-lawyer",
+      "url": "https://www.texasbar.com/AM/Template.cfm?Section=Find_A_Lawyer&Template=/CustomSource/MemberDirectory/Search_Form_Client_Main.cfm",
+      "title": "Find a Lawyer (online membership directory, with board certification areas)",
+      "publisher": "State Bar of Texas",
+      "accessed": "2026-11-20",
+      "quote": "Not all legal practice areas have a corresponding TBLS certification available",
+      "tier": "primary"
+    },
+    {
+      "id": "sbot-ineligible",
+      "url": "https://www.texasbar.com/AM/Template.cfm?Section=Ineligible_Attorney_List1&Template=/CM/HTMLDisplay.cfm&ContentID=58151",
+      "title": "Ineligible Attorney List",
+      "publisher": "State Bar of Texas",
+      "accessed": "2026-11-20",
+      "quote": "The State Bar of Texas publishes a list of licensed Texas attorneys who are currently ineligible to practice law.",
+      "tier": "primary"
+    },
+    {
+      "id": "sbot-terms",
+      "url": "https://www.texasbar.com/AM/template.cfm?section=terms_of_use",
+      "title": "Site Terms and Conditions of Use",
+      "publisher": "State Bar of Texas",
+      "accessed": "2026-11-20",
+      "quote": "mining, scraping or capture of data contained herein through repetitive or automated means",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-occ-code-901",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.901.htm",
+      "title": "Texas Occupations Code, Chapter 901, Public Accountancy Act (Sections 901.351, 901.401, 901.451 and 901.461)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "quote": "An individual who holds a certificate issued under this chapter must also hold a license issued under this chapter.",
+      "tier": "primary"
+    },
+    {
+      "id": "tsbpa-lookup",
+      "url": "https://www.tsbpa.texas.gov/license-lookup/",
+      "title": "License Lookup (individual CPAs and CPA firms)",
+      "publisher": "Texas State Board of Public Accountancy",
+      "accessed": "2026-11-20",
+      "quote": "find a professional’s license status, including any disciplinary actions or enforcement markers",
+      "tier": "primary"
+    },
+    {
+      "id": "tsbpa-consumers",
+      "url": "https://www.tsbpa.texas.gov/consumers/",
+      "title": "Consumers (frequently asked questions on complaints, fees, unlicensed preparers and attest services)",
+      "publisher": "Texas State Board of Public Accountancy",
+      "accessed": "2026-11-20",
+      "quote": "Attest services, however, may only be provided by a licensee in Texas through a firm licensed by the Board.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-31-10-3",
+      "url": "https://www.ecfr.gov/current/title-31/section-10.3",
+      "title": "31 CFR 10.3, Who may practice (Treasury Department Circular No. 230)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-31-10-8",
+      "url": "https://www.ecfr.gov/current/title-31/section-10.8",
+      "title": "31 CFR 10.8, Return preparation and application of rules to other individuals (paragraph (a))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-20",
+      "quote": "must have a preparer tax identification number",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-ptin",
+      "url": "https://www.irs.gov/tax-professionals/ptin-requirements-for-tax-return-preparers",
+      "title": "PTIN requirements for tax return preparers",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-20",
+      "quote": "Anyone who prepares or assists in preparing federal tax returns for compensation must have a valid 2027 PTIN before preparing returns.",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-preparer-credentials",
+      "url": "https://www.irs.gov/tax-professionals/understanding-tax-return-preparer-credentials-and-qualifications",
+      "title": "Understanding tax return preparer credentials and qualifications",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-20",
+      "quote": "Enrolled agents, certified public accountants, and attorneys have unlimited representation rights before the IRS.",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-choosing-preparer",
+      "url": "https://www.irs.gov/tax-professionals/choosing-a-tax-professional",
+      "title": "Choosing a tax professional (the directory of preparers with credentials)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-20",
+      "quote": "Anyone can be a paid tax return preparer as long as they have an IRS Preparer Tax Identification Number (PTIN).",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "list-the-work",
+      "title": "List the work each adviser will do in the first year",
+      "instruction": "List, adviser by adviser, the work the firm will hand to outside advisers over the next year. Securities counsel: the structure and exemption, the offering documents, and Form D and the state notices. Real estate counsel: letters of intent, purchase contracts, title and survey review, loan documents and closings. Entity counsel, often the same firm: the sponsor entity, each deal entity and the partner agreement. The tax adviser or CPA: each entity's tax classification, the promote and profits-interest questions, the books and the returns. A partnership's Form 1065 is generally due the 15th day of the third month after its tax year ends, March 15 for a calendar year, and each partner's Schedule K-1 is due by the day the return must be filed; the Texas franchise tax report is due May 15. Mark the work needed before the entity is formed and before the first deal.",
+      "mode": "agent",
+      "modeBasis": "Listing the work from the firm's plans and the filing calendars is drafting an agent can do; the principals confirm the list.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-tx.franchise-tax.basics"
+      ],
+      "basis": "cited",
+      "sources": [
+        "irs-i1065",
+        "cpa-franchise"
+      ]
+    },
+    {
+      "id": "fund-adds-work",
+      "title": "For a fund, add the fund counsel and fund tax work",
+      "instruction": "For a fund, add the work that fund counsel and the fund's tax adviser do. That is the fund's partnership or company agreement and subscription documents; the Investment Company Act exclusion the fund will rely on; whether the management company is an investment adviser and, if so, whether it must register or may rely on an exemption; the management company and each general partner entity; and the fund's returns and each investor's K-1. Ask each candidate how many funds of this kind they have formed, and record whether one firm will act for the fund, the general partner and the management company at once.",
+      "mode": "agent",
+      "modeBasis": "Extending the work list is drafting; whether a rule applies to the fund is counsel's answer later.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-the-work"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "rules": [
+        "us-fed.ica.fund-exclusions"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "jv-adds-work",
+      "title": "For a joint venture, add the venture work",
+      "instruction": "For a joint venture with one capital partner, add the venture work. That is negotiating the joint venture agreement, forming the firm's member entity for the venture, settling whether the partner's interest is a security and which exemption covers it, and the venture's tax return and the partner's K-1. The capital partner usually has its own counsel, so the firm's counsel acts only for the firm's side. Ask each candidate how many venture agreements they have negotiated for the operating member, and record the answer for the comparison.",
+      "mode": "agent",
+      "modeBasis": "Extending the work list is drafting; the securities question is counsel's answer later.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-the-work"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "rules": [
+        "us-fed.securities.jv-interests"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "build-candidate-list",
+      "title": "Build a short list of candidates for each role",
+      "instruction": "Build a short list of two or three candidates for each role on the work list from the principals' referrals. Record the firm, the office city, the work each says it does and who referred it, and list no one the principals have not approved for contact. Add a column for each check that follows: license and public discipline, federal tax credentials, conflicts, fees and the engagement letter. One firm may fill several roles, but each role keeps its own row so no work on the list is left without an adviser.",
+      "mode": "agent",
+      "modeBasis": "Building the list from names the principals give is file work; choosing whom to approach is the principals' call.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-the-work",
+        "fund-adds-work",
+        "jv-adds-work"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "check-lawyer-license",
+      "title": "Check each lawyer's license and public discipline with the State Bar",
+      "instruction": "A principal opens each lawyer's profile in the State Bar of Texas online directory and records the date licensed, the primary practice location, any board certification and any public discipline. By statute the profile must show public disciplinary sanctions from Texas and from other states. The principal also checks the State Bar's daily list of attorneys ineligible to practice. Pending and dismissed grievances are confidential, so a clean profile shows only that no public sanction is on file. Board certification is not offered in every field, securities law among them, so its absence there means nothing. Texas limits the practice of law in the state to State Bar members, except as Supreme Court rules allow, so ask any lawyer licensed only elsewhere how they will cover Texas matters.",
+      "mode": "human-online",
+      "modeBasis": "The State Bar's terms of use bar capturing its data by automated means, so a principal runs each search; an agent records what the principal finds.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-candidate-list"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "basis": "cited",
+      "sources": [
+        "tx-gov-code-81",
+        "sbot-faq",
+        "sbot-find-a-lawyer",
+        "sbot-ineligible",
+        "sbot-terms"
+      ]
+    },
+    {
+      "id": "check-cpa-license",
+      "title": "Check each CPA's and CPA firm's license with the State Board",
+      "instruction": "Search the Texas State Board of Public Accountancy's license lookup for each accountant and each accounting firm, and record the license status and any disciplinary action or enforcement marker it shows. The title CPA is reserved by the Public Accountancy Act, and a Texas certificate holder must also hold a current license. A firm needs a firm license from the Board, or the Act's privilege for certain out-of-state firms, to perform attest work, such as an audit or review, or to call itself a CPA firm. The Board says a CPA may do tax and other non-attest work through an unlicensed entity that displays its disclaimer that it is not a CPA firm. The Board does not regulate fees and generally has no authority over tax preparers who are not CPAs. For an accountant licensed in another state, check that state's board.",
+      "mode": "agent-browser",
+      "modeBasis": "The Board's license lookup is a public search an agent can run in a browser.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-candidate-list"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "basis": "cited",
+      "sources": [
+        "tx-occ-code-901",
+        "tsbpa-lookup",
+        "tsbpa-consumers"
+      ]
+    },
+    {
+      "id": "check-tax-credentials",
+      "title": "Confirm each tax preparer's PTIN and right to represent the firm",
+      "instruction": "Confirm that whoever will prepare the firm's and the deal entities' returns holds a current preparer tax identification number, or PTIN, and record which credential, if any, they hold. Anyone paid to prepare all or substantially all of a federal return must have a PTIN, renewed for each year. Attorneys, CPAs and enrolled agents may represent a client before the IRS in any matter, including audits, collections and appeals; an Annual Filing Season Program participant may represent only on returns it prepared and signed, and only before certain IRS staff; a preparer with only a PTIN may not represent at all. Search the IRS's public directory of preparers with credentials, and record the credential, the PTIN year confirmed and whether that person will represent the firm in an IRS examination.",
+      "mode": "agent-browser",
+      "modeBasis": "The IRS's directory of preparers with credentials is a public search an agent can run in a browser.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-candidate-list"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-31-10-8",
+        "ecfr-31-10-3",
+        "irs-ptin",
+        "irs-preparer-credentials",
+        "irs-choosing-preparer"
+      ]
+    },
+    {
+      "id": "interview-candidates",
+      "title": "Interview the candidates on the work list",
+      "instruction": "A principal meets or calls each short-listed candidate and asks every candidate the same questions. Which of the listed work have they done for firms of this size, recently and in Texas? Who will do the work and who supervises it? How do they bill, with rates or flat fees and an estimate for a first deal? How quickly do they turn drafts? Whom do they already represent among likely counterparties, such as lenders, sellers, brokers, capital partners or other real estate firms in the same market? What do they need from the firm to start? Record the answers in the comparison.",
+      "mode": "human-offline",
+      "modeBasis": "Interviews are a person's conversations; an agent prepares the questions and records the answers.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-lawyer-license",
+        "check-cpa-license",
+        "check-tax-credentials"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "confirm-whom-counsel-represents",
+      "title": "Have each lawyer state in writing whom it represents",
+      "instruction": "Ask each lawyer the principals prefer to state in writing whom they will represent and whom they will not. The client may be the firm's entity, each deal or fund entity, the principals personally or a combination; investors and capital partners are normally not clients. If the entity is not yet formed, the letter says whom counsel acts for until it is. Where the firm and a principal could disagree, as on the partner agreement, a personal guaranty or a principal's departure, ask whether counsel acts for the firm alone and whether each principal should have separate counsel. Ask counsel to disclose current work for any likely counterparty. Whether a conflict exists, and whether consent can cure it, is counsel's judgment; record what counsel says.",
+      "mode": "human-online",
+      "modeBasis": "Only the lawyer can say whom it represents and whether a conflict exists; an agent records the answers.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "interview-candidates"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "compare-engagement-letters",
+      "title": "Compare the engagement letters against the work list",
+      "instruction": "When each chosen adviser sends its engagement letter, compare it with the work list and the interview answers. Check the client named; the work included and the work excluded; who will do it; the fee basis, rates, flat fees, estimates and when the adviser warns of an overrun; any retainer and how it is applied; billing and expenses; conflicts disclosed and consents asked of the firm; how either side may end the engagement; and who keeps the files and for how long. List each gap for the principals, such as work on the list that no letter covers or a client named that is not the firm.",
+      "mode": "agent",
+      "modeBasis": "Reading letters against a list is document work; the principals decide what to ask an adviser to change.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-whom-counsel-represents"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "sign-engagement-letters",
+      "title": "Sign the engagement letters for the firm",
+      "instruction": "A principal signs each engagement letter once the gaps are settled, and the adviser countersigns. Once the entity exists, a principal the company agreement authorizes signs in its exact legal name with the principal's title, not personally, unless the letter is meant to cover the principal too; before it exists, sign as the letter provides and have the entity adopt the letter once formed. Pay any retainer only to payment details confirmed with the adviser through a channel already known to the firm, never from an email alone. File each signed letter where the firm keeps signed documents.",
+      "mode": "human-online",
+      "modeBasis": "Signing for the firm is a principal's act; an agent prepares the signature set.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-whom-counsel-represents",
+        "compare-engagement-letters"
+      ],
+      "market": "formation-back-office",
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "record-advisers",
+      "title": "Record each adviser and schedule the yearly recheck",
+      "instruction": "Record each adviser in the firm file: the role, the firm, the lead person, the client named in the letter, the scope, the fee basis, the date signed and where the signed letter is kept. Calendar a yearly recheck of each lawyer's State Bar profile and each CPA's license status, each preparer's PTIN renewal before filing season, and a review of each letter when the firm adds a structure, such as a first fund or joint venture. Prepare the filing calendar for the CPA and the list of who at the firm may give instructions, for a principal to send.",
+      "mode": "agent",
+      "modeBasis": "Recording the engagements and building the calendar is file work an agent can do.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-engagement-letters"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    }
+  ],
   "outlineSteps": []
 }

@@ -10,7 +10,7 @@
   "asOf": "2026-11-12",
   "lastVerified": "2026-11-14",
   "review": "ai-drafted",
-  "changeWatch": "Check current status before relying on this card. In the December 2025 decisions read, federal courts dismissed challengers or denied preliminary relief without ruling on the law's validity, and one challenge remained pending. The attorney general proposed implementing rules (1 TAC chapter 67) in March 2026; check whether they were adopted. The governor may designate further countries or entities.",
+  "changeWatch": "Check current status before relying on this card. In the December 2025 decisions read, federal courts dismissed challengers or denied preliminary relief without ruling on the law's validity, and one challenge remained pending. The attorney general's March 2026 proposal of implementing rules (1 TAC chapter 67) was withdrawn unadopted after six months, and a new proposal (67.1 to 67.12) was published on October 9, 2026; none was adopted through the November 20, 2026 Texas Register. Check whether it has been. The governor may designate further countries or entities.",
   "sources": [
     {
       "id": "tx-prop-code-5",
@@ -54,6 +54,24 @@
       "publisher": "Texas Secretary of State (Texas Register)",
       "accessed": "2026-11-14",
       "quote": "proposes new Chapter 67 in Title 1, Part 3 of the Texas Administrative Code (TAC), relating to foreign ownership enforcement",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-register-ag-rules-oct-2026",
+      "url": "https://www.sos.texas.gov/texreg/archive/October92026/Proposed%20Rules/1.ADMINISTRATION.html",
+      "title": "Texas Register, October 9, 2026: proposed 1 TAC Chapter 67 (Sections 67.1 to 67.12), Foreign Ownership Enforcement",
+      "publisher": "Texas Secretary of State (Texas Register)",
+      "accessed": "2026-11-20",
+      "quote": "proposes new Chapter 67 in Title 1, Part 3 of the Texas Administrative Code (TAC), relating to foreign ownership enforcement",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-register-ag-withdrawal",
+      "url": "https://www.sos.texas.gov/texreg/archive/October162026/Withdrawn%20Rules/1.ADMINISTRATION.html",
+      "title": "Texas Register, October 16, 2026: the March 27, 2026 proposal of 1 TAC 67.1 to 67.9 withdrawn",
+      "publisher": "Texas Secretary of State (Texas Register)",
+      "accessed": "2026-11-20",
+      "quote": "The agency failed to adopt the proposal within six months of publication.",
       "tier": "primary"
     }
   ]

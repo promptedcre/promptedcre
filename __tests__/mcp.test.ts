@@ -239,7 +239,8 @@ describe("tools", () => {
   it("matches no situation for a process question and names the closest process", () => {
     const m = t.matchSituation({ description: "adopt an existing LLC as the sponsor" });
     expect(m.matches).toEqual([]);
-    expect(m.processes[0]?.slug).toBe("form-sponsor-entity");
+    // Among the three closest by word overlap, not always first, since the Form phase is written in full (D254).
+    expect(m.processes.map((p) => p.slug)).toContain("form-sponsor-entity");
     expect(t.matchSituation({ description: "a tenant stopped paying rent" }).matches[0]?.slug).toBe("tenant-stops-paying");
   });
 });

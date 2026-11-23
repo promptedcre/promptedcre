@@ -3,34 +3,609 @@
   "slug": "negotiate-the-sale",
   "kind": "process",
   "title": "Negotiate and sign the sale contract",
-  "summary": "Choose a buyer, negotiate the contract and manage the buyer's due diligence.",
+  "summary": "Test the chosen buyer, sign the letter of intent, negotiate and sign the contract with counsel, and carry the buyer's diligence period to the day the deposit goes hard.",
   "phase": "exit",
   "order": 515,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "decide-when-to-sell",
+    "market-the-property"
+  ],
+  "consumes": [
+    "comp-set",
+    "loan-documents",
+    "underwriting-model",
+    "rent-roll",
+    "lease",
+    "lease-abstract",
+    "trailing-12",
+    "owner-title-policy",
+    "survey",
+    "phase-i-esa",
+    "property-condition-assessment",
+    "zoning-report",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "sponsor-operating-agreement",
+    "investor-register",
+    "earnest-money-receipt"
+  ],
+  "produces": [
+    "letter-of-intent",
+    "purchase-and-sale-agreement"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Compare offers on price, deposits, timing and financing certainty",
-    "Check each buyer's capital and record of closing",
-    "Pick a buyer and sign a letter of intent",
-    "Map the existing loan's payoff or assumption path into the timeline",
-    "Negotiate the sale contract with counsel",
-    "Agree the deed form and what the seller will represent",
-    "Get the approvals to sign under the governing agreement",
-    "Sign the contract and confirm the deposit is in escrow",
-    "Deliver diligence materials on the contract's schedule",
-    "Request the tenant estoppels the contract requires",
-    "Respond to title, survey and diligence objections",
-    "Handle any repricing request before the deposit goes hard"
-  ]
+  "sources": [
+    {
+      "id": "ofac-faq-basics",
+      "url": "https://ofac.treasury.gov/faqs/topic/1501",
+      "title": "Frequently Asked Questions: Basic Information on OFAC and Sanctions (FAQs 9 and 11 and the SDN List answer, with the 50 Percent Rule)",
+      "publisher": "Office of Foreign Assets Control, U.S. Department of the Treasury",
+      "accessed": "2026-11-21",
+      "quote": "U.S. persons are generally prohibited from dealing with the individuals and entities on the SDN List.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-5",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.5.htm",
+      "title": "Texas Property Code, Chapter 5 (Sections 5.007, 5.010, 5.011, 5.014, 5.0141 to 5.0145, 5.019, 5.022 to 5.024, 5.205, and Subchapter H, Sections 5.251 to 5.259)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "unless the contract expressly provides otherwise",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bc-26",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.26.htm",
+      "title": "Texas Business and Commerce Code, Chapter 26 (Section 26.01, Statute of frauds)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "signed by the person to be charged with the promise or agreement or by someone lawfully authorized to sign for him",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bc-27",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.27.htm",
+      "title": "Texas Business and Commerce Code, Chapter 27 (Section 27.01, Fraud in real estate and stock transactions)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "false representation of a past or existing material fact",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bc-322",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.322.htm",
+      "title": "Texas Business and Commerce Code, Chapter 322, Uniform Electronic Transactions Act (Sections 322.005 and 322.007)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "If a law requires a signature, an electronic signature satisfies the law.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-water-49",
+      "url": "https://tcss.legis.texas.gov/resources/WA/htm/WA.49.htm",
+      "title": "Texas Water Code, Chapter 49 (Sections 49.452 and 49.4521, Notice to purchasers of property in a district)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "shall be given to the prospective purchaser prior to execution of a binding contract of sale and purchase",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-water-13",
+      "url": "https://tcss.legis.texas.gov/resources/WA/htm/WA.13.htm",
+      "title": "Texas Water Code, Chapter 13 (Section 13.257, Notice to purchasers of property in a certificated service area)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "a transfer of title to property that receives water or sewer service from a utility service provider on the date the property is transferred",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-nr-33",
+      "url": "https://tcss.legis.texas.gov/resources/NR/htm/NR.33.htm",
+      "title": "Texas Natural Resources Code, Chapter 33 (Section 33.135, Notice to purchaser of coastal area property)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "real property adjoining and abutting the tidally influenced waters of the state",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-nr-61",
+      "url": "https://tcss.legis.texas.gov/resources/NR/htm/NR.61.htm",
+      "title": "Texas Natural Resources Code, Chapter 61 (Section 61.025, Disclosure to purchaser of property near a beach)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "located seaward of the Gulf Intracoastal Waterway",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-101",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.101.htm",
+      "title": "Texas Business Organizations Code, Chapter 101 (Sections 101.052, 101.054, 101.354 and 101.356, Limited liability companies)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "must be approved by the affirmative vote of the majority of all of the company's members",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-1",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.1.htm",
+      "title": "Texas Business Organizations Code, Chapter 1 (Section 1.002(32), Fundamental business transaction)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "means a merger, interest exchange, conversion, or sale of all or substantially all of an entity's assets",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-occ-1101",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1101.htm",
+      "title": "Texas Occupations Code, Chapter 1101 (Sections 1101.155 and 1101.654, Contract forms and unauthorized practice of law)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "drafts an instrument, other than a form described by Section 1101.155, that transfers or otherwise affects an interest in real property",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-22-535-144",
+      "url": "https://www.law.cornell.edu/regulations/texas/22-Tex-Admin-Code-SS-535-144",
+      "title": "22 Tex. Admin. Code 535.144, When acquiring or disposing of own property or property of spouse, parent or child",
+      "publisher": "Texas Real Estate Commission (rule text at Legal Information Institute)",
+      "accessed": "2026-11-21",
+      "quote": "is obligated to disclose in writing that he or she is a licensed real estate broker or sales agent",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-745-113",
+      "url": "https://www.ecfr.gov/current/title-40/section-745.113",
+      "title": "40 CFR 745.113, Certification and acknowledgment of disclosure (paragraphs (a) and (c))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Each contract to sell target housing shall include an attachment containing the following elements",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-745-103",
+      "url": "https://www.ecfr.gov/current/title-40/section-745.103",
+      "title": "40 CFR 745.103, Definitions (target housing)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Target housing means any housing constructed prior to 1978",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-745-107",
+      "url": "https://www.ecfr.gov/current/title-40/section-745.107",
+      "title": "40 CFR 745.107, Disclosure requirements for sellers and lessors",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "The seller or lessor shall provide the purchaser or lessee with an EPA-approved lead hazard information pamphlet.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-745-110",
+      "url": "https://www.ecfr.gov/current/title-40/section-745.110",
+      "title": "40 CFR 745.110, Opportunity to conduct an evaluation",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Before a purchaser is obligated under any contract to purchase target housing",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "check-buyer-capital-and-record",
+      "title": "Check the chosen buyer's capital and record of closing",
+      "instruction": "Before a letter of intent is signed, test whether the buyer market-the-property chose can close. From its offer form, take the buying entity's exact legal name and its proof of equity, and ask through the listing broker for what is missing: the ownership chart down to the individuals who own or control it, with the citizenship, residence and headquarters facts the next step screens; a recent statement or written capital commitment for the equity, or, for a buyer still raising it, its raise schedule; the lender and term sheet where the price relies on a loan; and its recent closings. Check each closing in the county deed and appraisal district records, and note any contract the buyer signed and did not close where the comp set or broker shows one. Record what each document proves and mark every claim not verified. A principal approves each request before it goes.",
+      "mode": "agent-browser",
+      "modeBasis": "Deed and appraisal district records are public and readable in a browser; requests to the buyer go out only with a principal's approval.",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "market": "market-property-data",
+      "consumes": [
+        "comp-set"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "screen-buyer-ownership",
+      "title": "Screen the buyer and its owners against sanctions lists and Texas ownership limits",
+      "instruction": "Search the buying entity, its parents, every owner and controller on the chart and any guarantor in OFAC's Sanctions List Search, recording each search's date and result. OFAC generally bars U.S. persons from dealing with persons on its SDN List, and an entity owned 50 percent or more, directly or indirectly, in total, by blocked persons is blocked even if unlisted. Send any possible match to counsel before anything more goes to the buyer, and search again for any assignee or new owner named before closing. In Texas, Property Code Subchapter H, in force since September 1, 2025, bars certain governments, companies and individuals tied to designated countries from acquiring an interest; a violating purchase is not void, but the attorney general can bring an action against the property ending in a court-ordered sale. Check the rule card's current status; counsel judges any unclear owner and words the buyer's representation.",
+      "mode": "agent-browser",
+      "modeBasis": "OFAC's list search is a public lookup an agent can run; whether a match or an owner is barred is counsel's judgment.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-buyer-capital-and-record"
+      ],
+      "rules": [
+        "us-tx.property.foreign-acquisition-restrictions"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ofac-faq-basics",
+        "tx-prop-5"
+      ]
+    },
+    {
+      "id": "map-loan-exit",
+      "title": "Map the existing loan's payoff or assumption path into the deal's dates",
+      "instruction": "Start from the payoff and assumption terms decide-when-to-sell recorded, confirm each against the loan documents, and set them against the chosen offer's dates. For a payoff, take the lockout or open window, the prepayment cost, the lender's notice period, permitted payoff dates and any hedge to end, and note what has moved since that run. For an assumption, read the lender's consent and application requirements, its fees, the time it allows itself, what it requires of a new borrower, and whether the seller and any guarantor are released. Enter every date in the deadline-calendar beside the offer's closing date and list each conflict, such as a closing before the open window, a notice that cannot be given in time, or an assumption that needs a lender deadline and an outside date. Send counsel the list for the letter and contract; close-the-sale's request-payoff-statement orders the payoff from this dated list.",
+      "mode": "agent",
+      "modeBasis": "Reading the loan documents into dated items and conflicts is document work a person can check.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "loan-documents",
+        "underwriting-model"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "draft-letter-of-intent",
+      "title": "Draft or mark up the letter of intent from the chosen offer",
+      "instruction": "Put the chosen offer into a short letter, or mark up the buyer's, and check each term against the offer form and decide-when-to-sell's recorded decision: the buyer entity and any right to assign, price, deposit and escrow agent, when it becomes non-refundable, inspection and closing periods, any financing or assumption condition, closing costs, the seller's deliveries, any exchange cooperation, and an expiry date. Fold in the loan map's conflicts and mark any term outside the approved limits for the principals. Texas enforces a contract to sell real estate only in a writing signed by the party to be charged, and a signed letter or email exchange can be one, so its words decide whether it binds: say that price and terms bind only in a signed contract, and list the few clauses meant to bind on signing, such as confidentiality and any exclusivity period. Fill in the letter-of-intent record.",
+      "mode": "agent",
+      "modeBasis": "Drafting from the offer form and the recorded decision is document work; counsel reviews and a principal signs in the next step.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "screen-buyer-ownership",
+        "map-loan-exit"
+      ],
+      "rules": [
+        "us-tx.contracts.statute-of-frauds"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "loan-documents"
+      ],
+      "produces": [
+        "letter-of-intent"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-bc-26",
+        "tx-bc-322"
+      ]
+    },
+    {
+      "id": "sign-letter-of-intent",
+      "title": "Have counsel review the letter and a principal sign it",
+      "instruction": "Send counsel the draft with three questions: could any words be read as a promise to sell, do the clauses meant to bind say what the principals intend, and does any exclusivity period end on a fixed date. Record counsel's changes. Confirm that each right to buy counsel found in market-the-property's confirm-rights-to-buy is waived in writing or has run out, as clear-partner-rights and choose-the-buyer record, or that counsel made the letter expressly subject to it. In a joint venture, get any approval the JV agreement gives the partner over the letter; in a fund, confirm the terms sit within what the investment committee approved. The authorized principal then signs in the selling entity's exact legal name and title, and the listing broker sends it to the buyer. File the signed version with its dates and open the contract issues list from it, term by term, each with an owner.",
+      "mode": "human-online",
+      "modeBasis": "A principal signs for the seller after counsel's review; signing commits the seller to the letter's binding clauses.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "draft-letter-of-intent"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "letter-of-intent",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [
+        "letter-of-intent"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "set-deed-and-representations",
+      "title": "Set the deed form and the representations the property file supports",
+      "instruction": "List for counsel the deed form the letter names and each representation the buyer asks for, with the documents that support it. Under Property Code 5.022 a general warranty deed binds the grantor to defend title against every lawful claim, but no warranty is required; and unless the deed says otherwise, 'grant' or 'convey' implies that the grantor has not already conveyed the estate and that it is free from encumbrances, which include taxes, assessments and liens (5.023, 5.024). For representations such as rent roll, leases, defaults, litigation, environmental condition, service contracts and permits, draft the exceptions schedule from the file. A false representation of a past or existing material fact made to induce a Texas real estate contract, and relied on, is fraud under Business and Commerce Code 27.01. Mark each statement the file cannot support for counsel to qualify, limit or refuse.",
+      "mode": "agent",
+      "modeBasis": "Matching each statement to documents in the property file is document work; the wording is for counsel and the principals.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-letter-of-intent"
+      ],
+      "consumes": [
+        "rent-roll",
+        "lease",
+        "lease-abstract",
+        "trailing-12",
+        "owner-title-policy",
+        "survey",
+        "phase-i-esa",
+        "property-condition-assessment",
+        "zoning-report"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-5",
+        "tx-bc-27"
+      ],
+      "typeNotes": {
+        "industrial": "Read the environmental representations against the Phase I, any later reports and each tenant's operations, and list every report the buyer has not yet received.",
+        "multifamily": "Expect representations on the rent roll, delinquencies, concessions and resident deposits; tie each to the rent roll and the lease files as of one date.",
+        "office": "Expect representations on unpaid tenant allowances, free rent and leasing commissions; schedule each from the leases and the commission agreements.",
+        "retail": "Expect representations on co-tenancy, exclusives, percentage rent and the year's reimbursement reconciliation; list the lease clause behind each answer."
+      }
+    },
+    {
+      "id": "attach-contract-notices",
+      "title": "Attach the notices the buyer must receive before the contract binds",
+      "instruction": "Turn market-the-property's notice findings into addenda signed before the contract binds; counsel checks filings for the rest and completes each that applies. Texas notices: water, sewer, drainage or management district (Water Code 49.452, 49.4521); public improvement district (Property Code 5.014, 5.0141); annexation, unless wholly within a city (5.011); certificated service area, unless already served (Water Code 13.257); water level, beside a reservoir of 5,000 acre-feet or more (5.019); and coastal, for land on tidal waters or seaward of the Intracoastal Waterway (Natural Resources Code 33.135, 61.025). A buyer contracting without its notice may end the contract; a missing coastal notice is also a deceptive act, and a missing 49.452, 5.014 or 13.257 notice can support a suit for purchase costs. Those three are re-signed, acknowledged and recorded at closing: add them to close-the-sale's checklist. Vacant land needs the additional-tax notice (5.010), and a possible private transfer fee its notice (5.205).",
+      "mode": "agent",
+      "modeBasis": "The notices come from recorded findings and public filings an agent can prepare; counsel confirms which apply.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-letter-of-intent"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-water-49",
+        "tx-prop-5",
+        "tx-water-13",
+        "tx-nr-33",
+        "tx-nr-61"
+      ]
+    },
+    {
+      "id": "negotiate-sale-contract",
+      "title": "Negotiate the sale contract with counsel",
+      "instruction": "Counsel drafts from the signed letter or marks up the buyer's draft, closing the issues list on positions the principals approve. A non-attorney listing broker only completes a TREC, attorney-prepared or owner-required form and never judges an instrument's legal sufficiency (Occupations Code 1101.654). Settle: deposits and when each goes hard; inspection, title and survey periods; financing or assumption conditions; estoppels and closing deliveries; prorations of rent, delinquent rent, recoveries and their reconciliation, taxes and security deposits; closing and extensions; representations, survival and any cap; remedies; assignment; and casualty and condemnation, since unless the contract expressly provides otherwise the seller cannot enforce it if a material part is destroyed without the buyer's fault, or taken, before title or possession passes (Property Code 5.007). A licensed principal acting for a seller it owns over 10% of discloses its license in the contract (22 TAC 535.144). If exchanging, add run-a-1031-exchange's clause.",
+      "mode": "human-online",
+      "modeBasis": "Drafting and negotiating a contract that conveys real property is legal work for counsel.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-deed-and-representations",
+        "attach-contract-notices"
+      ],
+      "rules": [
+        "us-tx.contracts.statute-of-frauds",
+        "us-tx.trec.iabs"
+      ],
+      "consumes": [
+        "letter-of-intent",
+        "loan-documents",
+        "lease-abstract",
+        "rent-roll"
+      ],
+      "produces": [
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-occ-1101",
+        "tx-prop-5",
+        "tac-22-535-144",
+        "ecfr-40-745-103",
+        "ecfr-40-745-107",
+        "ecfr-40-745-110",
+        "ecfr-40-745-113"
+      ],
+      "typeNotes": {
+        "multifamily": "Housing built before 1978 is target housing unless an exception applies. Before the buyer is bound, confirm it received the EPA lead pamphlet and every lead record the firm holds, common areas included, and had 10 days, or a period agreed in writing, to test, or waived that in writing (40 CFR 745.107, 745.110), as market-the-property arranged. The sale contract then carries the federal lead-based paint attachment: the warning statement, the seller's disclosure and list of records given, the buyer's acknowledgments, the agents' statement, and dated signatures (40 CFR 745.113). The seller and any agent keep it at least three years.",
+        "office": "Where the building includes housing built before 1978, that housing is target housing unless an exception applies: confirm the buyer received the EPA lead pamphlet and every lead record the firm holds and had 10 days, or a period agreed in writing, to test, or waived that in writing (40 CFR 745.107, 745.110), and attach the signed federal lead-based paint disclosure to the contract (40 CFR 745.113).",
+        "retail": "Where the building includes housing built before 1978, that housing is target housing unless an exception applies: confirm the buyer received the EPA lead pamphlet and every lead record the firm holds and had 10 days, or a period agreed in writing, to test, or waived that in writing (40 CFR 745.107, 745.110), and attach the signed federal lead-based paint disclosure to the contract (40 CFR 745.113)."
+      }
+    },
+    {
+      "id": "approve-final-contract",
+      "title": "Get the approvals the governing agreement requires before signing",
+      "instruction": "Compare the final contract with the sale decision and consents decide-when-to-sell recorded: price against the lowest acceptable price, deposit, dates and conditions. Recheck that each right to buy from market-the-property's confirm-rights-to-buy is waived in writing or has run out, or counsel made the contract expressly subject to it. Seek again only an approval the governing agreement ties to the signed contract, a term outside what was approved, or a vote counsel says the earlier consent did not cover; an agent drafts each. In a syndication, any vote the governing agreement requires; for a Texas LLC, unless its company agreement says otherwise, selling all or substantially all its assets needs a majority of all members, each with an equal vote (Business Organizations Code 101.354, 101.356(c), 1.002, 101.052). In a fund, any committee consent the fund agreement requires; in a joint venture, the partner's written approval. File the consents with the contract.",
+      "mode": "human-online",
+      "modeBasis": "Consents and votes are given by the people the governing agreement names; an agent only drafts and files them.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "negotiate-sale-contract"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "deal-entity-agreement",
+        "jv-agreement",
+        "sponsor-operating-agreement",
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "tx-boc-1"
+      ]
+    },
+    {
+      "id": "sign-sale-contract",
+      "title": "Sign the contract and confirm its effective date",
+      "instruction": "Once counsel confirms the final draft matches the agreed terms with every exhibit, notice and disclosure attached, and the consents are filed, the authorized principal signs in the selling entity's exact legal name and title. A Texas contract to sell real estate is enforceable only if it, or a memorandum of it, is in a writing signed by the party to be charged. Where the parties have agreed, even by conduct, to deal electronically, an electronic signature meets that rule (Business and Commerce Code 322.005, 322.007), so an email can bind: agree nothing by email the principals would not sign. Confirm the effective date as the contract defines it, since every period runs from it; send the escrow agent the signed contract and keep a full copy. Then end every bidder's room access but the backup's and send each the return-or-destroy request under its confidentiality agreement, on a principal's approval.",
+      "mode": "human-online",
+      "modeBasis": "A signature binds the seller, and only the principal the governing agreement authorizes can give it.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "approve-final-contract"
+      ],
+      "rules": [
+        "us-tx.contracts.statute-of-frauds",
+        "us-tx.ueta",
+        "us-fed.esign"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "purchase-and-sale-agreement"
+      ],
+      "produces": [
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-bc-26",
+        "tx-bc-322"
+      ]
+    },
+    {
+      "id": "confirm-deposit-and-start-closing",
+      "title": "Confirm the deposit is in escrow and start the closing work",
+      "instruction": "When the escrow agent's written receipt arrives, check the amount, the date received and the escrow agent against the contract, and do the same for each later deposit when it falls due. If a deposit is late, tell the principal and counsel that day: the contract decides what the seller may do and by when, and nothing goes to the buyer without counsel. Treat any message that changes escrow or payment details as fraud until verified, and follow wire-instructions-change. Then start close-the-sale the same day: its checklist calendars every contract period, and its steps deliver the diligence materials, request the estoppels and answer title and survey objections. Confirm that close-the-sale's calendar shows the end of the inspection period, each date a deposit goes hard and the buyer's last day to terminate; this record acts on them.",
+      "mode": "agent",
+      "modeBasis": "Checking the receipt and the calendar against the contract is document work; nothing is sent from this step.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-sale-contract"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "earnest-money-receipt",
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "manage-buyer-access",
+      "title": "Give the buyer site access on the contract's and the leases' terms",
+      "instruction": "Before the buyer's first visit, list the access terms: from the contract, the notice required, the insurance certificates naming the seller, the buyer's indemnity, restoring any damage and any duty to share reports; from the lease abstracts, each lease's entry clause. The property manager gives tenants the notice the leases require and confirms each time. No invasive testing, such as soil or groundwater sampling, opening walls or roof cores, happens without the seller's written approval of a work plan, and counsel reviews any such request. A principal or the manager escorts every visit, and the buyer reaches tenants, staff, vendors or the lender only as the contract allows. Log each visit, who came, what was done and any damage, and track the buyer's objection notices and requests for more time against the inspection deadline.",
+      "mode": "human-offline",
+      "modeBasis": "Visits, escorts and tenant contact happen at the property with people present.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-deposit-and-start-closing"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "lease-abstract"
+      ],
+      "basis": "practitioner",
+      "sources": [],
+      "typeNotes": {
+        "industrial": "Get the buyer's environmental work plan in writing before any sampling, and settle who receives the results and how each tenant's operations are protected during the work.",
+        "multifamily": "Schedule any unit inspections with the manager so residents get the notice their leases give, and limit them to the sample the contract allows."
+      }
+    },
+    {
+      "id": "handle-repricing-request",
+      "title": "Answer any repricing request before the deposit goes hard",
+      "instruction": "When the buyer asks for a lower price, a credit or more time before its deposit goes hard, ask for the request in writing with the reports and costs behind it. An agent checks each item against the data room, the firm's own reports and what the buyer knew when it offered, separating new findings from matters already disclosed, then reruns sale-proceeds and waterfall-promote at the proposed terms beside the net and the lowest acceptable price recorded in decide-when-to-sell, with the backup bidder's offer for comparison. The principals choose: hold the terms, offer a credit or price change, grant a short extension, or let the buyer terminate. A change outside the approved limits needs the same approvals as the contract. Record any agreed change in a written amendment counsel drafts and both sides sign, and recalculate every date it moves.",
+      "mode": "human-online",
+      "modeBasis": "Whether to give up price or time is the principals' decision, and an amendment needs their signature.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-deposit-and-start-closing"
+      ],
+      "calculators": [
+        "sale-proceeds",
+        "waterfall-promote",
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "underwriting-model",
+        "phase-i-esa",
+        "property-condition-assessment"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "record-hard-date-or-restart",
+      "title": "Record the deposit going hard, or close out the contract and turn to the backup",
+      "instruction": "The day after the buyer's last day to terminate, ask counsel whether a valid termination notice arrived on time. If none did, record each deposit as non-refundable except as the contract provides, update close-the-sale's checklist, and release the backup bidder, ending its room access and asking it to return or destroy materials under its confidentiality agreement. Draft an update for investors, or the joint venture partner, from established facts within the contract's confidentiality clause: the property is under contract, the deposit is at the buyer's risk, the expected closing and what can still end the contract; in a fund, as the fund agreement provides. If the buyer terminated, counsel confirms what the contract provides for each deposit, a principal signs any release the escrow agent requires, and the buyer's access ends with the same request; the principals may turn to the backup in market-the-property. A principal approves each notice first.",
+      "mode": "human-online",
+      "modeBasis": "Whether a termination is valid is counsel's judgment, a deposit release is signed by a principal, and turning to the backup is the principals' choice; an agent drafts the record and the notices.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "manage-buyer-access",
+        "handle-repricing-request"
+      ],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "earnest-money-receipt",
+        "investor-register",
+        "jv-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    }
+  ],
+  "outlineSteps": []
 }

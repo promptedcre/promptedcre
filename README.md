@@ -1,6 +1,6 @@
 # PromptedCRE
 
-Step-by-step playbooks your AI agent can run, from forming the firm to buying the building.
+Step-by-step playbooks your AI agent can run, from forming the firm to selling the building.
 
 Open playbooks for real estate operators: starting a firm, raising capital, buying,
 running and selling property, and auditing a firm that already exists. Every step says
@@ -10,19 +10,21 @@ said plainly.
 
 ## What's here
 
-- **Playbooks.** 43 are written in full: 32 processes, from forming the entity through
-  raising, buying, operating, distributions and the sale, and 11 scenarios: six while
-  raising or buying, such as a wire-instruction change or a missed Form D deadline; four
-  while operating (a tenant who stops paying, a tenant who files for bankruptcy, a broken
-  loan covenant, a loan that matures without a refinancing); and an investor who asks to
-  sell. The 12 flagship processes are practitioner-reviewed; the other 20 processes and
-  every scenario are AI-drafted. One process, "Negotiate the joint venture agreement", is
-  written for the joint venture structure only: its page, its file and the connector say
-  so, and it has no steps for a syndication or a fund. Another 51 are listed by title and
-  summary but not written yet.
+- **Playbooks.** All 94 are written in full: 72 processes, from forming the entity through
+  raising, buying, operating, reporting and the sale, and 22 scenarios: two while forming
+  the firm (a principal leaves, or the principals disagree); three while raising, such as a
+  missed Form D deadline or a regulator's inquiry; four while buying, such as a
+  wire-instruction change or a lender who retrades; ten while operating, from a tenant who
+  stops paying to a hurricane, a lawsuit or a jump in the appraisal notice; and three while
+  reporting, such as a distribution the cash cannot cover or an investor who asks to sell.
+  The 12 flagship processes are practitioner-reviewed; the other 60 processes and every
+  scenario are AI-drafted. One process, "Negotiate the joint venture agreement", is written
+  for the joint venture structure only: its page, its file and the connector say so, and it
+  has no steps for a syndication or a fund.
 - **Audits.** Checks for a firm that already exists. "Audit the entity's standing" is
   written in full: eleven cited checks for a Texas LLC, AI-drafted and not yet
-  practitioner-reviewed. "Audit past capital raises" is listed with its planned checks.
+  practitioner-reviewed. "Audit past capital raises" is written in full too: fourteen
+  cited checks of each offering's exemption, filings, investors and pay, AI-drafted.
 - **Rule cards.** 81 short statements of federal, Texas and Delaware law, each citing the
   statute, regulation or agency page it comes from.
 - **Artifacts and documents.** 54 artifact definitions, and an index of 46 forms and

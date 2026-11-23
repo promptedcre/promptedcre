@@ -274,8 +274,10 @@ describe("playbook.md for a record not written for every structure", () => {
 
 describe("playbook.md refuses what it cannot write", () => {
   it("throws for an outline", () => {
-    const outline = corpus.playbooks.find((p) => p.depth === "outline");
-    expect(outline).toBeTruthy();
-    expect(() => md(outline!)).toThrow(/not written/);
+    // Every catalog record is written now, so the outline is a written one turned back into a list of step titles.
+    const base = written[0];
+    if (!base) throw new Error("no written record");
+    const outline: Playbook = { ...base, depth: "outline", steps: [], outlineSteps: base.steps.map((s) => s.title) };
+    expect(() => md(outline)).toThrow(/not written/);
   });
 });

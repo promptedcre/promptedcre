@@ -37,7 +37,9 @@ export function BuildingElevation({
   const share = new Map(facts.records.map((r) => [r.slug, r.byStructure]));
   const structures = structure ? [structure] : STRUCTURES;
   const ds = (s: Structure) => (structure ? {} : { "data-s": s });
-  const summary = facts.phases.map((p) => `${p.label}: ${p.written} written, ${p.outlined} outlined`).join("; ");
+  const counts = (p: { written: number; outlined: number }) => (p.outlined > 0 ? `${p.written} written, ${p.outlined} outlined` : `${p.written} written`);
+  const summary = facts.phases.map((p) => `${p.label}: ${counts(p)}`).join("; ");
+  const anyOutlined = facts.phases.some((p) => p.outlined > 0);
 
   return (
     <figure
@@ -54,10 +56,12 @@ export function BuildingElevation({
           </i>
           Written, filled to what an agent can do
         </span>
-        <span aria-hidden="true" className="inline-flex items-center gap-2">
-          <i className="block h-3 w-7 flex-none border border-dashed border-line-bold" />
-          Outlined, not written yet
-        </span>
+        {anyOutlined && (
+          <span aria-hidden="true" className="inline-flex items-center gap-2">
+            <i className="block h-3 w-7 flex-none border border-dashed border-line-bold" />
+            Outlined, not written yet
+          </span>
+        )}
       </figcaption>
 
       {/* Each bay: the floors, and beside them a vertical dimension of the bay's height in floors
@@ -103,7 +107,7 @@ export function BuildingElevation({
             <div className="pt-3">
               <p className={cx("type-label m-0", phase.written === 0 ? "text-muted" : "text-text")}>{phase.label}</p>
               <p className="type-label m-0 mt-1 tabular-nums text-faint">
-                {phase.written} written, {phase.outlined} outlined
+                {counts(phase)}
               </p>
             </div>
           </li>

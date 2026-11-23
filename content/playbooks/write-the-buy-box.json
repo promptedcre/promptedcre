@@ -7,17 +7,424 @@
   "phase": "stand-up",
   "order": 60,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "lastVerified": "2026-11-20",
+  "requires": [
+    "form-sponsor-entity",
+    "choose-counsel-and-cpa"
+  ],
+  "consumes": [
+    "private-placement-memorandum",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "sponsor-operating-agreement",
+    "deal-screen"
+  ],
+  "produces": [
+    "buy-box"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
+  "sources": [
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-20",
+      "quote": "To make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-80a-3",
+      "url": "https://www.law.cornell.edu/uscode/text/15/80a-3",
+      "title": "15 U.S.C. 80a-3, Definition of investment company (subsections (a)(1) and (c)(5)(C))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-20",
+      "quote": "purchasing or otherwise acquiring mortgages and other liens on and interests in real estate",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-code-5",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.5.htm",
+      "title": "Texas Property Code, Chapter 5, Subchapter H (Sections 5.251 to 5.253, purchase or acquisition of real property by certain foreign individuals or entities)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "quote": "may not purchase or otherwise acquire an interest in real property in this state",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-register-1-tac-67",
+      "url": "https://www.sos.texas.gov/texreg/archive/October92026/Proposed%20Rules/1.ADMINISTRATION.html",
+      "title": "Texas Register, October 9, 2026: proposed 1 TAC Chapter 67 (Sections 67.1 to 67.12), Foreign Ownership Enforcement",
+      "publisher": "Texas Secretary of State (Texas Register)",
+      "accessed": "2026-11-20",
+      "quote": "proposes new Chapter 67 in Title 1, Part 3 of the Texas Administrative Code (TAC), relating to foreign ownership enforcement",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "gather-the-inputs",
+      "title": "Gather what the box must fit: experience, capital and capacity",
+      "instruction": "Before any criterion is drafted, collect what bounds the box, each input marked known or assumed, with its source. From each principal, and from the deal inventory in build-track-record-deck if it exists: the property types, markets, sizes and business plans each has worked on, and the role held. From the principals' own figures: the equity they can put in, and expect to raise, per deal and per year. From the firm's plans: who will run each property and from where, and which lenders the principals have borrowed from and on what kinds of property. Label any input that is a principal's estimate as an estimate. Each principal confirms their own entries.",
+      "mode": "agent",
+      "modeBasis": "Assembling inputs from the principals' files and answers is file work; each principal confirms their own entries.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "read-fund-documents",
+      "title": "For a fund, copy the strategy and limits the offering documents state",
+      "instruction": "Copy the strategy and every investment and borrowing limit from the fund's memorandum and agreement, if they exist, since the box must sit inside them: property types, locations, development, the share of capital one property may take, the investment period, and the debt limits for each property and for the fund, each marked binding or a stated target. If the documents are not yet drafted, the box becomes the source for their strategy section instead. If the fund relies on the Investment Company Act exclusion for issuers primarily engaged in acquiring mortgages, other liens on and interests in real estate, list for counsel every planned holding that is something else, such as a minority stake in another entity or a loan not secured by real estate.",
+      "mode": "agent",
+      "modeBasis": "Reading the fund's documents and copying their limits is document work; what they allow is counsel's reading.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "gather-the-inputs"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "rules": [
+        "us-fed.ica.fund-exclusions"
+      ],
+      "consumes": [
+        "private-placement-memorandum",
+        "deal-entity-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-15-80a-3"
+      ]
+    },
+    {
+      "id": "record-partner-criteria",
+      "title": "For a JV, enter the capital partner's criteria as firm criteria",
+      "instruction": "Copy the capital partner's own criteria from the JV agreement, or from its written criteria or term sheet if no agreement is signed yet: property types, markets, deal size, hold, return targets, leverage and exclusions. Enter each as a firm criterion, since a deal outside the partner's criteria needs the partner whatever the firm thinks of it. Where the partner's criteria and the firm's own differ, show both side by side for the principals to decide at adoption.",
+      "mode": "agent",
+      "modeBasis": "Copying criteria and approvals from the partner's documents is document work; the principals decide any difference.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "gather-the-inputs"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "check-texas-buyer-limits",
+      "title": "Check that the capital behind the box can buy Texas property",
+      "instruction": "Before any Texas market goes in the box, list who will own and control the entities that will buy: the firm, any capital partner, every owner of 10% or more, and every manager, general partner and officer, with each one's citizenship, residence or headquarters where known. Since September 1, 2025, the persons Property Code 5.253 lists may not acquire any interest in Texas real property; a company owned or controlled by U.S. citizens or lawful permanent residents, with no barred individual, is outside the bar. The attorney general's rules, proposed in October 2026 but not adopted, would deem a 10% voting holder, a general partner, a managing member or an executive officer to control an entity, and would treat gaining control of an entity that owns Texas property as an acquisition. Send counsel any foreign owner or capital source before Texas markets are adopted; negotiate-purchase-contract checks each deal's buyer.",
+      "mode": "agent",
+      "modeBasis": "Listing owners and controllers from the firm's records is file work; whether the bar reaches anyone is counsel's call.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "gather-the-inputs"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.property.foreign-acquisition-restrictions"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-code-5",
+        "tx-register-1-tac-67"
+      ]
+    },
+    {
+      "id": "draft-types-plans-and-hold",
+      "title": "Draft the property types, business plans and hold period",
+      "instruction": "From the inputs, draft the property types and subtypes the box accepts, and any it names as excluded, and the business plans it allows, such as buying stable income, leasing up vacancy, renovating or repositioning, each tied to the experience and capacity behind it. Draft the intended hold as a range of years from purchase to sale, and say what it rests on: the time the plan needs, the term of the debt the firm expects, or the fund's term. Mark any type or plan that is new to the principals, and say what would cover the gap, such as a partner or manager who has done it. For a fund or JV, nothing here goes beyond the documents or the partner's criteria.",
+      "mode": "agent",
+      "modeBasis": "Drafting criteria from the gathered inputs is analysis and writing; the principals decide each one at adoption.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-fund-documents",
+        "record-partner-criteria"
+      ],
+      "produces": [
+        "buy-box"
+      ],
+      "basis": "practitioner",
+      "sources": [],
+      "typeNotes": {
+        "industrial": "Name the subtypes, such as bulk distribution, light industrial, flex or cold storage, since each draws different tenants and lenders.",
+        "multifamily": "Name the building forms and ages the box accepts, and whether the plan depends on renovating units as they turn over.",
+        "office": "Name the subtypes, such as multi-tenant, single-tenant or medical office, and whether the plan depends on leasing up vacancy.",
+        "retail": "Name the subtypes, such as grocery-anchored centers, unanchored strips or single-tenant net lease, since the anchor or the single tenant carries much of the risk."
+      }
+    },
+    {
+      "id": "define-markets",
+      "title": "Define the markets and record their dated facts",
+      "instruction": "Name each market the box accepts as a metro area, a submarket or a radius from a fixed point, and say why the firm can work there: where the principals have bought, leased or managed property, or where the firm can reach a property to run it. For each market and accepted type, pull the facts the screen and the underwriting will test against: inventory, vacancy and its trend, rents, sales volume and pricing, construction underway, and population and job trends, each with its source and as-of date. A principal pulls subscription data under the firm's login, or an agent does where the license includes an API; an agent can pull public statistics. A figure no source supports is left blank, not estimated. For a fund or JV, stay within the locations the documents or the partner allow.",
+      "mode": "human-online",
+      "modeBasis": "Subscription data sits behind the firm's login and license; where the license includes an API, an agent can run the same query.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "draft-types-plans-and-hold",
+        "check-texas-buyer-limits"
+      ],
+      "market": "market-property-data",
+      "produces": [
+        "buy-box"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "propose-leverage-limits",
+      "title": "Propose leverage limits and test them at the markets' cap rates",
+      "instruction": "Propose the most debt the box allows: a maximum loan-to-value, a minimum debt service coverage or debt yield, whether recourse or a guaranty is acceptable and from whom, and whether floating-rate debt is allowed and with what protection. For a fund, stay within the fund agreement's borrowing limits for each property and for the fund as a whole. Run the leverage calculator at the going-in cap rates the market facts show, to see whether the loan constant sits below the cap rate so that borrowing adds to the return, and run rate-reset on any floating-rate case to see coverage as the rate moves. Record each limit with the test behind it.",
+      "mode": "agent",
+      "modeBasis": "The calculators run from the market facts and the proposed limits; the principals set the limits at adoption.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "define-markets"
+      ],
+      "calculators": [
+        "leverage",
+        "rate-reset"
+      ],
+      "consumes": [
+        "deal-entity-agreement"
+      ],
+      "produces": [
+        "buy-box"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "draft-size-and-price",
+      "title": "Draft the size and price range from the equity the firm can raise",
+      "instruction": "Draft the minimum and maximum building size, in square feet or units, and the minimum and maximum price. Test the price range against the equity: run debt-sizing at the proposed leverage limits for prices across the range, and compute the equity check each price needs as price plus closing costs less the loan. Compare it with the equity the principals can put in and raise per deal, from the inputs, and set the top of the range where the equity still fits, with the margin the principals choose. Set the bottom where a deal is still worth the firm's time and fixed costs. Record the formula and inputs behind each end of the range, and say which limit set it.",
+      "mode": "agent",
+      "modeBasis": "The debt-sizing calculator and the equity arithmetic run from the inputs; the principals choose the margin and the range.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "propose-leverage-limits"
+      ],
+      "calculators": [
+        "debt-sizing"
+      ],
+      "produces": [
+        "buy-box"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "set-return-targets",
+      "title": "Propose return targets and test that the markets can meet them",
+      "instruction": "Propose each return measure the box uses, such as going-in cap rate, unlevered and levered IRR, equity multiple and cash-on-cash, each with its target and its definition: levered or not, before or after the firm's fees and promote, and over what hold. Test the targets together: run returns-sensitivity with a going-in cap rate, growth and exit cap rate taken from the dated market facts, at the hold and the leverage limits, and read which combinations reach the targets. The cap-rate calculator's band of investment shows the cap rate the leverage and a chosen first-year cash-on-cash return imply. A target no tested case reaches is lowered or marked as a stretch. For a fund or JV, no target sits below what the documents or the partner set.",
+      "mode": "agent",
+      "modeBasis": "The calculators test the proposed targets against the market facts; the principals set the targets at adoption.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "draft-size-and-price"
+      ],
+      "calculators": [
+        "returns-sensitivity",
+        "cap-rate"
+      ],
+      "produces": [
+        "buy-box"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "set-physical-and-tenancy",
+      "title": "Draft the physical and tenancy criteria as tests a document can answer",
+      "instruction": "For each accepted type, draft the building and site requirements, such as year built or renovated, construction, site size and coverage, access and parking, and the tenancy requirements: occupancy, number of tenants, the largest tenant's share of rent, remaining lease term, tenant credit and who pays operating expenses. Write each one as a test a document can answer, such as a figure in the rent roll or a fact in the survey, so the screen can mark it pass, fail or unknown. Where a criterion depends on the business plan, write one version per plan; a lease-up plan accepts vacancy that a stable-income plan does not.",
+      "mode": "agent",
+      "modeBasis": "Writing criteria as document tests is drafting work; the principals decide each one at adoption.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "draft-types-plans-and-hold"
+      ],
+      "produces": [
+        "buy-box"
+      ],
+      "basis": "practitioner",
+      "sources": [],
+      "typeNotes": {
+        "industrial": "Add clear height, loading doors, truck court depth, the office share of the building, sprinklers and power.",
+        "multifamily": "Add unit count and mix, how utilities are metered and billed, and parking; run the tenancy tests on occupancy and lease expirations by month from the rent roll.",
+        "office": "Add floor plate, parking ratio and the age of the main building systems, and the share of rent from the largest tenants and their industries.",
+        "retail": "Add the anchor and its remaining term, co-tenancy clauses, visibility and access, and whether tenants report sales."
+      }
+    },
+    {
+      "id": "firm-criteria-and-exclusions",
+      "title": "Mark the firm criteria and write the exclusions",
+      "instruction": "Mark which criteria are firm, so a deal that fails one shows as an exception at the top of the screen, and which are preferences. Then list the deal breakers, the situations the box rules out whatever the other criteria say, as the principals choose them, such as a ground lease, a special-purpose building, known contamination, a use allowed only as nonconforming, or a site in a special flood hazard area. Give each exclusion the check that finds it: the flood map, the appraisal district record, the zoning map, the environmental screens or the documents named in screen-deal-buy-box. A capital partner's criteria and a fund's binding limits go in as firm criteria.",
+      "mode": "agent",
+      "modeBasis": "Sorting criteria and tying each exclusion to a check is drafting work; the principals choose the exclusions.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-return-targets",
+        "set-physical-and-tenancy"
+      ],
+      "produces": [
+        "buy-box"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "counsel-checks-fund-fit",
+      "title": "For a fund, have counsel confirm the box fits the offering documents",
+      "instruction": "Send counsel the draft box beside the strategy and limits copied from the fund's documents, with every difference marked, and the list of planned holdings that are not direct real estate. Counsel says in writing whether the box fits the documents as written, whether a difference needs investor or advisory committee consent or a change to the documents, and whether the planned holdings fit the Investment Company Act exclusion the fund relies on. Rule 10b-5 reaches untrue statements of material fact and misleading omissions in connection with selling the fund's interests, so a box broader than the stated strategy is not adopted until counsel has answered. Where the documents are not yet drafted, counsel works from the box when drafting the strategy section.",
+      "mode": "human-online",
+      "modeBasis": "Whether the box fits the fund's documents and its exclusion is a legal reading; the agent prepares the comparison.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "firm-criteria-and-exclusions"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5",
+        "us-fed.ica.fund-exclusions"
+      ],
+      "consumes": [
+        "private-placement-memorandum",
+        "deal-entity-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5",
+        "usc-15-80a-3"
+      ]
+    },
+    {
+      "id": "adopt-the-box",
+      "title": "Adopt the box as a dated version",
+      "instruction": "The principals read the draft with its inputs, its tests and, for a fund, counsel's answer, and decide each criterion: keep, change or drop. They adopt the box in writing as a numbered version with an effective date, stating whose criteria it holds (the firm's, a fund's or a capital partner's), in the way their company agreement requires for decisions of this kind, and naming who approved it. Each later deal screen names the version it was checked against. Earlier versions are kept and marked superseded, so a past screen can always be read against the box it used.",
+      "mode": "human-online",
+      "modeBasis": "What the firm will buy is the principals' decision; the agent keeps the versions.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "firm-criteria-and-exclusions",
+        "counsel-checks-fund-fit"
+      ],
+      "consumes": [
+        "sponsor-operating-agreement"
+      ],
+      "produces": [
+        "buy-box"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "share-and-review",
+      "title": "Share a short version with deal sources and review the box on a schedule",
+      "instruction": "Prepare a short version of the adopted box for brokers and other deal sources: property types, markets, size and price, and what the firm will not buy, without return targets or financing terms; set-up-deal-pipeline sends it to each source and logs the version, and the site from build-brand-and-website draws on it. Then, at an interval the principals set and whenever capital, lending or a market moves, compare the box with the pass reasons and buy-box exceptions recorded in the pipeline and with refreshed market facts, and propose changes. A change goes back through adoption as a new version and, for a fund or JV, through the documents or the partner it must match.",
+      "mode": "agent",
+      "modeBasis": "Preparing the short version and comparing the box with results is drafting and checking; the pipeline sends it.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "adopt-the-box"
+      ],
+      "consumes": [
+        "buy-box",
+        "deal-screen"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    }
+  ],
   "outlineSteps": []
 }

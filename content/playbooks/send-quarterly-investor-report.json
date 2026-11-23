@@ -7,29 +7,543 @@
   "phase": "report",
   "order": 400,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "set-up-the-books",
+    "set-the-annual-budget",
+    "meet-loan-covenants",
+    "set-up-investor-portal",
+    "keep-investor-register-current"
+  ],
+  "consumes": [
+    "deal-entity-agreement",
+    "jv-agreement",
+    "private-placement-memorandum",
+    "rent-roll",
+    "trailing-12",
+    "lease",
+    "lease-abstract",
+    "underwriting-model",
+    "loan-documents",
+    "investor-register"
+  ],
   "produces": [],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Close the quarter's books and the rent roll",
-    "Report occupancy, leasing and tenant credit",
-    "Report remaining lease term and the rollover ahead",
-    "Report NOI and cash against budget",
-    "Show cash rent apart from straight-line rent",
-    "Show leasing costs and capital spending against plan",
-    "Report loan coverage and covenant headroom",
-    "Report distributions paid and cash held",
-    "Write a plain account of what changed and why",
-    "Check the report's figures before release",
-    "Send the report and file a copy"
-  ]
+  "sources": [
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "To make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gov-4008",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.4008.htm",
+      "title": "Texas Government Code, Chapter 4008 (Section 4008.052, Offeror or seller liability: untruth or omission; Section 4008.053, Buyer liability)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "regardless of whether the security or transaction is exempt under Chapter 4005",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-502",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.502",
+      "title": "17 CFR 230.502, General conditions to be met (paragraph (c), limitation on manner of offering)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "neither the issuer nor any person acting on its behalf shall offer or sell the securities by any form of general solicitation or general advertising",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-275-206-4-1",
+      "url": "https://www.ecfr.gov/current/title-17/section-275.206(4)-1",
+      "title": "17 CFR 275.206(4)-1, Investment adviser marketing (scope; definition of advertisement)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "offers new investment advisory services with regard to securities to current clients or investors in a private fund advised by the investment adviser",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-275-206-4-8",
+      "url": "https://www.ecfr.gov/current/title-17/section-275.206(4)-8",
+      "title": "17 CFR 275.206(4)-8, Pooled investment vehicles",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "to any investor or prospective investor in the pooled investment vehicle",
+      "tier": "primary"
+    },
+    {
+      "id": "fr-2024-26524",
+      "url": "https://www.federalregister.gov/api/v1/documents/2024-26524.json",
+      "title": "Private Fund Advisers; Documentation of Registered Investment Adviser Compliance Reviews, 89 FR 91252 (final rule; technical amendments reflecting the court's vacatur, November 19, 2024)",
+      "publisher": "Securities and Exchange Commission (Federal Register)",
+      "accessed": "2026-11-21",
+      "quote": "The court's vacatur of the Private Fund Adviser Rules was effective as of June 5, 2024",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-275-versions",
+      "url": "https://www.ecfr.gov/api/versioner/v1/versions/title-17.json?part=275",
+      "title": "eCFR version history for 17 CFR part 275 (Section 275.211(h)(1)-2, Private fund quarterly statements, removed November 19, 2024)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bc-322",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.322.htm",
+      "title": "Texas Business and Commerce Code, Chapter 322, Uniform Electronic Transactions Act (Sections 322.005, 322.007 and 322.008)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "This chapter applies only to transactions between parties each of which has agreed to conduct transactions by electronic means.",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-7001",
+      "url": "https://www.law.cornell.edu/uscode/text/15/7001",
+      "title": "15 U.S.C. 7001, General rule of validity (subsection (b), preservation of rights and obligations)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "require any person to agree to use or accept electronic records or electronic signatures",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-116-15",
+      "url": "https://www.law.cornell.edu/regulations/texas/7-Tex-Admin-Code-SS-116-15",
+      "title": "7 Tex. Admin. Code 116.15, Adoption by Reference of Investment Adviser Marketing Rules",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-23",
+      "quote": "a registered investment adviser shall not publish, circulate, or distribute any advertisement which does not comply with SEC Rule 206(4)-1",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "read-reporting-terms",
+      "title": "List every report the agreements require, with its contents and deadline",
+      "instruction": "List every report the governing agreement requires, with its contents, period, deadline, any audit or review of its statements and its delivery channel, and enter each deadline in the deadline-calendar. Read the signed agreement with every amendment and side letter, not a summary. Add each report the memorandum told investors to expect, and give a principal any difference between the two. A member's or partner's written demand to see records is not a report: it follows handle-records-requests in set-up-document-storage. In a joint venture, take the partner's reports from the schedule drafted under negotiate-jv-agreement and the channel recorded under set-up-investor-portal. A term that reads two ways goes to counsel.",
+      "mode": "agent",
+      "modeBasis": "Reading the signed agreements and listing their reporting terms is document work; a disputed reading is counsel's.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "private-placement-memorandum"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "close-the-quarter",
+      "title": "Confirm the quarter's books are locked and tie out the rent roll",
+      "instruction": "Confirm each month of the quarter was closed under close-each-month and locked under review-and-lock in set-up-the-books before any figure is drafted; a month not locked goes back through those steps. Take the property manager's monthly packages with the reviews made under hire-property-manager, and the collections reports under collect-rent-and-reconcile-cam. Then do only the quarter's own checks: the reserve ledger as reconciled under manage-reserves in meet-loan-covenants against the books; each lease signed, renewed or ended in the quarter on the rent roll with an abstract; and the rent roll's total area or units against the property's. Send each item that does not tie to the bookkeeper or the manager once a person approves; none is forced to agree. Then record the version of each file the report draws on, so every later figure points to one locked set.",
+      "mode": "agent",
+      "modeBasis": "Checking that each month is locked and tying the rent roll and reserve ledger is file work; the bookkeeper and the manager fix what does not tie.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "rent-roll",
+        "trailing-12",
+        "lease-abstract",
+        "lease"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "report-occupancy-and-credit",
+      "title": "Report occupancy, leasing and tenant credit",
+      "instruction": "From the locked rent roll, report occupancy at quarter end beside the quarter before: space leased, space occupied and the reason for any gap, such as a signed lease not yet started or a tenant that has moved out but still pays. List the quarter's leasing: new leases, renewals, expansions, early terminations and move-outs, each with its space, term, starting rent against the prior rent and the budget, and the free rent and allowances given. Report tenant credit: arrears by tenant and age, each tenant in default or bankruptcy with the path chosen under tenant-stops-paying or tenant-files-bankruptcy, and any change known in a tenant's or guarantor's credit. Before naming a tenant or a lease term, read the lease abstract for a confidentiality clause; where one applies, describe the lease without what it protects.",
+      "mode": "agent",
+      "modeBasis": "Building occupancy, leasing and arrears tables from the locked rent roll and the abstracts is file work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "close-the-quarter"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "rent-roll",
+        "lease-abstract"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": [],
+      "typeNotes": {
+        "multifamily": "Report occupancy by unit type, units leased against units occupied, concessions given, rent collected against rent billed and delinquency by age. Refer to residents by unit, never by name.",
+        "office": "Report leased and occupied area separately: signed leases not yet commenced and tenants that have stopped using their space move the two apart.",
+        "retail": "Where leases require sales reports and allow them to be shared, report tenant sales and percentage rent; report any co-tenancy, kick-out or go-dark clause the quarter set off.",
+        "industrial": "With few tenants, state the largest tenant's share of rent and any change in its credit, its use of the space or its stated plans."
+      }
+    },
+    {
+      "id": "report-rollover",
+      "title": "Report remaining lease term and the rollover ahead",
+      "instruction": "Run the lease-rollover calculator on the locked rent roll with the analysis date set to the quarter's last day, not today. Report the weighted average lease term, expirations by year by area and by rent, month-to-month and holdover leases, the largest tenant's share of rent and, where the firm has a market rent it can source, in-place rent against it, marked with that source and date; with no source, leave the comparison out rather than estimate it. Name each lease expiring within the horizon the principals set, with its option and notice dates and what the firm knows of the tenant's plans from renew-a-tenant, and say which leases the business plan assumed would renew. Show last quarter's figures beside this quarter's.",
+      "mode": "agent",
+      "modeBasis": "The calculator runs on the locked rent roll and the abstracts; the market rent comes only from a source the firm holds.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "close-the-quarter"
+      ],
+      "rules": [],
+      "calculators": [
+        "lease-rollover"
+      ],
+      "consumes": [
+        "rent-roll",
+        "lease-abstract",
+        "underwriting-model"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": [],
+      "typeNotes": {
+        "multifamily": "Where leases run a year or less, weighted lease term says little; report expirations by month, renewals against move-outs and the change from expiring rent to new rent instead."
+      }
+    },
+    {
+      "id": "report-noi-against-budget",
+      "title": "Report NOI, cash flow and fees against budget",
+      "instruction": "Report the quarter's and the year-to-date income, operating expenses and net operating income against the approved budget from set-the-annual-budget, its latest reforecast and the same period last year, and carry them down to cash flow after debt service, leasing costs, capital spending, reserve deposits and the entity's own expenses. Define net operating income once and keep that definition every quarter: interest, depreciation, amortization, leasing costs and capital spending sit below it. Take each variance past the principals' threshold, with its cause and whether it is timing or lasting, from track-and-reforecast under set-the-annual-budget rather than redoing it. List each fee and reimbursement paid in the quarter to the sponsor and its affiliates, a related property manager included, with the agreement section allowing it. Where earlier reports or the governing agreement compare results with the underwriting model, keep that comparison, from the model version investors were shown.",
+      "mode": "agent",
+      "modeBasis": "Comparing the locked books with the approved budget and the model is arithmetic and file work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "close-the-quarter"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "trailing-12",
+        "underwriting-model",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": [],
+      "typeNotes": {
+        "office": "Show expense recoveries billed on estimate apart from base rent, and, once the year's reconciliations go out under collect-rent-and-reconcile-cam, the amounts billed or refunded.",
+        "retail": "Show expense recoveries billed on estimate apart from base rent, and, once the year's reconciliations go out under collect-rent-and-reconcile-cam, the amounts billed or refunded.",
+        "industrial": "Show expense recoveries billed on estimate apart from base rent, and, once the year's reconciliations go out under collect-rent-and-reconcile-cam, the amounts billed or refunded."
+      }
+    },
+    {
+      "id": "separate-cash-rent",
+      "title": "Show cash rent apart from straight-line rent",
+      "instruction": "Where the books recognize rent on a straight-line basis, show the rent billed and collected in the quarter apart from the rent recognized, and reconcile the two. Straight-line bookkeeping spreads a lease's total fixed rent, free months included, evenly over its term, so recognized rent runs ahead of the cash paid early in a lease with free rent or rising steps and behind it later. A principal asks the CPA each entity's accounting basis and how it books free rent, tenant allowances and leasing commissions, and the answer is recorded in the firm file for later quarters. State that basis in the report. List each lease in a free-rent or reduced-rent period with the month full rent starts. Coverage and distributions are discussed in cash, and recognized rent is never presented as rent collected.",
+      "mode": "agent",
+      "modeBasis": "Reconciling billed and collected rent with the ledger is file work; the accounting basis is the CPA's, recorded in the firm file.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "report-noi-against-budget"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "rent-roll",
+        "lease-abstract",
+        "trailing-12"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "report-leasing-and-capital-costs",
+      "title": "Show leasing costs and capital spending against plan",
+      "instruction": "Report what the quarter spent on tenant improvements, allowances, leasing commissions and capital work, project by project, against the approved budget, the capital plan in the underwriting model and the reserves set aside for them. For each capital project, give the scope, the contract amount, the amount spent to date, the cost to finish and the expected finish date from run-a-capital-project, and say whether it is on budget and on schedule. Report reserve balances held by the lender and by the entity, with the quarter's deposits and draws, and the reserve need the replacement-reserves calculator shows for the years ahead from the firm's component schedule, with its inputs. Name each item deferred or added since the budget, with the reason and who approved it.",
+      "mode": "agent",
+      "modeBasis": "Matching spending to the budget, the model and the reserve statements is file work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "close-the-quarter"
+      ],
+      "rules": [],
+      "calculators": [
+        "replacement-reserves"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "loan-documents",
+        "trailing-12"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": [],
+      "typeNotes": {
+        "multifamily": "Report unit renovations by count and cost per unit against plan, and rent on renovated units against comparable unrenovated ones, from the rent roll."
+      }
+    },
+    {
+      "id": "report-loan-coverage",
+      "title": "Report loan coverage and covenant headroom",
+      "instruction": "Take the quarter's covenant tests from the covenant log under meet-loan-covenants rather than recomputing them, and report each on the loan's own definitions, with the measure, the required level, the result and the logged headroom in the test's own terms: for an income test, the fall in net operating income the property could absorb; for a value or occupancy test, the fall in value or occupancy. Where the lender's net operating income differs from the report's, show both and reconcile them, and add break-even occupancy from the leverage calculator. Report the loan balance, rate, maturity and any extension conditions; for floating-rate debt, the rate cap's strike and expiry and the stressed coverage from track-rate-hedges and project-the-tests under meet-loan-covenants. State any reserve trap or cash sweep in force and what it does to distributions. A failed or failing test is reported plainly, with the path taken under loan-covenant-breach.",
+      "mode": "agent",
+      "modeBasis": "The tests and rate stresses come from the covenant log and the loan documents; the leverage calculator runs on the locked figures.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "report-noi-against-budget"
+      ],
+      "rules": [],
+      "calculators": [
+        "leverage"
+      ],
+      "consumes": [
+        "loan-documents",
+        "trailing-12"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "report-distributions-and-capital",
+      "title": "Report distributions paid, cash held and each investor's capital",
+      "instruction": "Report each distribution paid in the quarter and the year to date from the records filed under make-a-distribution: its total, date and character as the governing agreement defines it; a distribution cut or skipped is explained as decided under distribution-shortfall. Report the entity's cash at quarter end by kind of account, without account numbers, and the holdbacks behind it; say what may be distributed next only as the principals approve. Prepare each investor's capital statement from the capital ledger kept under set-up-the-books: contributions, distributions by character, unreturned capital and preferred return owed, on the agreement's definitions rather than the tax capital on the K-1, with totals tied to the books and the register reconciled under keep-investor-register-current. In a fund, add each investor's commitment, capital called and unfunded commitment. In a joint venture, use the JV agreement's form for the partner's capital account. Each statement is for its own investor only.",
+      "mode": "agent",
+      "modeBasis": "Statements are drafted from the capital ledger, the register and the filed distribution records.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "close-the-quarter"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "roll-up-the-fund",
+      "title": "For a fund, roll the properties up into the fund report",
+      "instruction": "Combine the property reports into the fund report: each property in a common format; the fund's own expenses and fees under the agreement; any fund-level borrowing and its terms; capital called and returned; and investments against the agreement's investment period and limits. State each value the agreement calls for with its basis, who set it and its date. A federal court vacated the SEC's 2023 private fund quarterly statement rule as of June 5, 2024, and left the CFR that November; the fund agreement sets this report. Where counsel finds the firm advises a fund relying on 3(c)(1) or 3(c)(7), Rule 206(4)-8 bars untrue statements and misleading omissions of material fact to its investors, offering open or not; if the firm is or must be SEC-registered, or is registered in Texas, which adopts the rule, a part offering new advisory services can be a marketing-rule advertisement. Counsel reviews the report.",
+      "mode": "agent",
+      "modeBasis": "Combining the property reports by the agreement's terms is file work; whether the firm is an adviser, and which rules reach it, is counsel's conclusion.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "report-occupancy-and-credit",
+        "report-rollover",
+        "separate-cash-rent",
+        "report-leasing-and-capital-costs",
+        "report-loan-coverage",
+        "report-distributions-and-capital"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "rules": [
+        "us-fed.ica.fund-exclusions"
+      ],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "deal-entity-agreement",
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "fr-2024-26524",
+        "ecfr-275-versions",
+        "ecfr-275-206-4-1",
+        "ecfr-275-206-4-8",
+        "tac-116-15"
+      ]
+    },
+    {
+      "id": "write-the-narrative",
+      "title": "Write a plain account of what changed and why",
+      "instruction": "Write a short account of the quarter in plain words from the tables already built, bad news first where there is any: what changed in occupancy, income, costs, the loan and distributions, why, and what the firm is doing about it, as the principals have decided. Gather the quarter's events from the firm's records: defaults, renewals, tax protest results, insurance renewals and claims, capital work, lender notices, claims, suits and regulators' inquiries, data incidents under investor-data-exposed, environmental releases, changes in the principals or the property manager, and open items in the follow-up log under hold-annual-investor-update; in a joint venture, each decision on the consent list taken or pending. Measure each against the business plan investors were shown. Mark every statement about the future as an expectation, with its basis. Keep earlier reports' measures; where one changes, or a released figure was wrong, say so and show the old figure.",
+      "mode": "agent",
+      "modeBasis": "Drafting from the checked tables and the firm's records is writing work; what is material is counsel's call, and what the firm does is the principals'.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-reporting-terms",
+        "roll-up-the-fund"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5"
+      ],
+      "calculators": [],
+      "consumes": [
+        "underwriting-model",
+        "private-placement-memorandum"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "counsel-review",
+      "title": "Have counsel review the report when securities, claims or inquiries are in play",
+      "instruction": "Send counsel the draft before release whenever an offering is open, a fund closing or capital call is pending, an investor's interest is being sold or redeemed, counsel has found the firm advises a 3(c)(1) or 3(c)(7) fund, or a default, dispute, suit, data exposure or regulator's inquiry is open or arose in the quarter, mentioned in the draft or not; a principal records which apply, or none. Rule 10b-5 reaches untrue statements and misleading omissions of material fact in connection with buying or selling a security, and Rule 206(4)-8 those such a fund's adviser makes to its investors. Texas makes whoever offers, sells or buys a security through one liable to the other party, subject to defenses, exempt or not. Counsel decides what is material, how disputes are described and whether prospective investors may see the report. Counsel's changes go into the figures and the narrative before the check.",
+      "mode": "human-online",
+      "modeBasis": "What a securities disclosure must say is a legal judgment; an agent assembles the draft and carries changes back.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "write-the-narrative"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5",
+        "us-tx.securities.offer-sale-liability",
+        "us-fed.ica.fund-exclusions"
+      ],
+      "calculators": [],
+      "consumes": [
+        "private-placement-memorandum"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5",
+        "ecfr-275-206-4-8",
+        "tx-gov-4008"
+      ]
+    },
+    {
+      "id": "check-the-figures",
+      "title": "Check the report's figures before release",
+      "instruction": "A person who did not prepare the report ties every figure in it, and in each capital statement, to the locked quarter, the source tables and the documents behind them. They check that the capital statements add up to the entity's totals, that this quarter's opening figures equal last quarter's closing ones, that measures and definitions match earlier reports or the change is stated, that each tenant named may be named, and that every statement about the future is marked as one. A difference goes back to the preparer and the report is rebuilt from corrected figures, not patched. The checker records the version checked and the date. A principal then approves that version's release in writing; a rebuild that changes anything counsel reviewed goes back to counsel first. With one principal, a person the firm engages who took no part in preparing the report does the check.",
+      "mode": "human-online",
+      "modeBasis": "An independent check of figures about to go to investors is a person's judgment, kept apart from whoever prepared them.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-review"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "rent-roll",
+        "trailing-12",
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "send-and-file",
+      "title": "Send the report and file a copy",
+      "instruction": "Release the approved version to each investor through the portal under set-up-investor-portal, or the notice channel the agreement names, with each capital statement visible only to its own investor, in a form the recipient can save and print, and log who received it, when and how. Texas's electronic transactions act applies only where each party has agreed to deal electronically, and a party may refuse later electronic dealings; federal law requires no one to accept electronic records. Send paper to an investor who has not agreed or asks for it. Keep the report off public pages: while a Rule 506(b) offering is open, neither the issuer nor anyone acting for it may offer or sell by general solicitation or general advertising. In a joint venture, use the channel and people the JV agreement names. File the report, its sources, the check and the approval together. A misdirected report follows investor-data-exposed.",
+      "mode": "agent",
+      "modeBasis": "Releasing an approved file through the portal is system work; nothing goes to an investor without a person's approval.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-the-figures"
+      ],
+      "rules": [
+        "us-tx.ueta",
+        "us-fed.esign",
+        "us-fed.reg-d.general-solicitation"
+      ],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-bc-322",
+        "usc-15-7001",
+        "ecfr-230-502"
+      ]
+    }
+  ],
+  "outlineSteps": []
 }

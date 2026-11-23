@@ -91,10 +91,37 @@
     {
       "id": "tx-prop-5",
       "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.5.htm",
-      "title": "Texas Property Code, Chapter 5 (Section 5.021, Instrument of conveyance)",
+      "title": "Texas Property Code, Chapter 5 (Sections 5.014 and 5.0143, public improvement district notice; Section 5.021, Instrument of conveyance)",
       "publisher": "Texas Legislature",
-      "accessed": "2026-11-14",
+      "accessed": "2026-11-23",
       "quote": "must be in writing and must be subscribed and delivered by the conveyor",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-water-49",
+      "url": "https://tcss.legis.texas.gov/resources/WA/htm/WA.49.htm",
+      "title": "Texas Water Code, Chapter 49 (Section 49.452, Notice to purchasers of property in a district)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "a separate copy of such notice with current information shall be executed by the seller and purchaser, acknowledged, and thereafter recorded",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-water-13",
+      "url": "https://tcss.legis.texas.gov/resources/WA/htm/WA.13.htm",
+      "title": "Texas Water Code, Chapter 13 (Section 13.257, Notice to purchasers of property in a certificated service area)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "a separate copy of the notice with current information shall be executed by the seller and purchaser, acknowledged, and subsequently recorded",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-62",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.62.htm",
+      "title": "Texas Property Code, Chapter 62, Broker's and Appraiser's Lien on Commercial Real Estate Act (Section 62.023, Affidavit identifying broker)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "shall provide to the requesting party before the closing of the transaction a written affidavit identifying each broker",
       "tier": "primary"
     },
     {
@@ -111,9 +138,9 @@
     {
       "id": "build-closing-checklist",
       "title": "Build the seller's closing checklist from the contract",
-      "instruction": "Read the signed contract and every amendment and list each seller delivery, deadline and closing condition with the section it comes from: the closing date and any extension right, the diligence materials and when they are due, estoppels and subordination agreements, the title and survey response periods, the deed form, closing certificates, and how notices must be given. Enter each contract period in the deadline-calendar calculator, which counts days from the dates entered; the contract's own words on business days and time of day govern, so check each date against its section. Add the lender's prepayment notice period from the loan documents and each lease's estoppel response period. List any unclear date or delivery as a question for counsel. Give every line an owner and share the checklist with counsel and the listing broker.",
+      "instruction": "List each seller delivery, deadline and closing condition in the signed contract and its amendments, with its section: closing date and extensions, diligence deliveries, estoppels, title and survey response periods, deed form, closing certificates and notice rules. Enter each period in the deadline-calendar calculator and check each date against the contract's business-day and time-of-day terms. Add lease estoppel response periods and the lender's notice period from negotiate-the-sale/map-loan-exit's list. For counsel to confirm in Texas: the district and service-area notices from negotiate-the-sale/attach-contract-notices, re-signed with current information, acknowledged and recorded at closing (Water Code 49.452 and 13.257, Property Code 5.0143); and, for commercial property, the seller's and broker's affidavit naming unpaid brokers, owed before closing if the buyer, its agent or the escrow agent asks (Property Code 62.023), from select-a-listing-broker/record-the-choice's register. Give every line an owner, list unclear items as questions for counsel, and share it with counsel and the listing broker.",
       "mode": "agent",
-      "modeBasis": "Reading the contract, the loan documents and the leases into a dated list is document work an agent can do and a person can check.",
+      "modeBasis": "Reading the contract, the leases and the earlier loan-exit list into a dated list is document work an agent can do and a person can check.",
       "risk": "medium",
       "undo": "reversible",
       "approval": "none",
@@ -128,8 +155,13 @@
         "loan-documents",
         "lease-abstract"
       ],
-      "basis": "practitioner",
-      "sources": []
+      "basis": "cited",
+      "sources": [
+        "tx-water-49",
+        "tx-prop-5",
+        "tx-water-13",
+        "tx-pr-62"
+      ]
     },
     {
       "id": "answer-diligence-requests",
@@ -190,9 +222,9 @@
     {
       "id": "request-payoff-statement",
       "title": "Order the loan payoff statement and check the prepayment cost",
-      "instruction": "Read the note and loan documents for how the loan can be repaid: any lockout, the prepayment premium, yield maintenance or defeasance terms, the notice the lender must get and by when, permitted payoff dates, and any hedge that must be ended. Draft the notice and payoff request on those terms, with a good-through date that allows for a delayed closing. A principal approves it before it goes to the lender. When the statement arrives, check the principal balance, interest to the payoff date, the per diem on the loan's day-count basis in the loan-payments calculator, the prepayment cost against the note's formula, fees, and reserve or escrow balances to be returned. Confirm the lender will deliver a release of lien on payment. Take any figure that differs from the note to counsel and the lender. If the buyer assumes the loan instead, counsel runs the lender's assumption process.",
+      "instruction": "Start from negotiate-the-sale/map-loan-exit's dated list of the lockout or open window, prepayment cost, lender's notice period, permitted payoff dates and any hedge to end, rather than reading the loan documents again; open them only where the list leaves a term unclear. Draft the notice and payoff request on those terms, with a good-through date that allows for a delayed closing. A principal approves it before it goes out. Spend the effort on the lender's statement: check the principal balance, interest to the payoff date, the per diem on the loan's day-count basis in the loan-payments calculator, the prepayment cost against the note's formula, fees, and reserve or escrow balances to be returned. Confirm the lender will deliver a release of lien on payment. Take any figure that differs from the note to counsel and the lender. If the buyer assumes the loan instead, counsel runs the lender's assumption process.",
       "mode": "agent",
-      "modeBasis": "Reading the note and checking the lender's arithmetic is document and calculator work; the request goes to the lender only with a principal's approval.",
+      "modeBasis": "Working from the dated loan list and checking the lender's arithmetic is document and calculator work; the request goes to the lender only with a principal's approval.",
       "risk": "high",
       "undo": "reversible",
       "approval": "every-run",
@@ -479,7 +511,7 @@
     {
       "id": "file-and-hand-off",
       "title": "File the closing set and hand off to the distribution",
-      "instruction": "Assemble the closing file: contract and amendments, final statement, the deed's recording data, payoff statement and lien release, estoppels, the non-foreign certification and the reporting person's name. List what survives closing: representations and how long they last, any holdback or escrow, prorations to be trued up, and the seller's statement of the information return when it arrives. Draft the notice to investors, or to the partner in a joint venture, that the sale closed and what it netted, tied to the final statement; a principal approves it before it goes out. Then start make-a-distribution with the net proceeds. In a fund, the proceeds go to the fund, and the fund agreement decides whether they are distributed or held and how investors are told. Before the entity is wound up, counsel reads what the governing agreement requires first, such as reserves and a final accounting; wind-down-the-entity covers it.",
+      "instruction": "Assemble the closing file: contract and amendments, final statement, the deed's recording data, payoff statement and lien release, estoppels, the non-foreign certification and the reporting person's name. List what survives closing: representations and their survival periods, any holdback or escrow, prorations to true up, and the seller's statement of the information return when it arrives. Draft the notice to investors, or the joint venture partner, that the sale closed and what it netted, tied to the final statement; a principal approves it first. Then start make-the-final-distribution with the net proceeds; its confirm-winding-up sends a payment not made in winding up to make-a-distribution. In a fund, the proceeds go to the fund, and the fund agreement decides whether they are distributed or held and how investors are told. Before winding up, counsel reads what the governing agreement requires, such as reserves and a final accounting; make-the-final-distribution's read-final-terms and confirm-winding-up cover it.",
       "mode": "agent",
       "modeBasis": "Assembling the file and drafting from the final statement is document work; the investor notice goes out only with a principal's approval.",
       "risk": "medium",

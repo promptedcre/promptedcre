@@ -10,6 +10,11 @@ export function GET(request: Request): Response {
   const { playbooks, calculators } = getCorpus();
   const written = playbooks.filter((p) => p.depth === "full");
   const line = (title: string, path: string, note: string) => `- [${title}](${origin}${path}): ${note}`;
+  // "72 playbooks, all written in full", or how many of them are still outlines.
+  const outlinedNote = (records: typeof playbooks, noun: string) => {
+    const out = records.filter((p) => p.depth !== "full").length;
+    return `${records.length} ${noun}, ${out === 0 ? "all written in full" : `${records.length - out} written in full and ${out} outlined by step title`}`;
+  };
   const text = [
     `# ${site.name}`,
     "",
@@ -48,8 +53,8 @@ export function GET(request: Request): Response {
     "",
     "## Libraries",
     "",
-    line("All playbooks", "/playbooks", `${playbooks.filter((p) => p.kind === "process").length} playbooks, most outlined by step title`),
-    line("All situations", "/situations", `${playbooks.filter((p) => p.kind === "situation").length} situations`),
+    line("All playbooks", "/playbooks", outlinedNote(playbooks.filter((p) => p.kind === "process"), "playbooks")),
+    line("All situations", "/situations", outlinedNote(playbooks.filter((p) => p.kind === "situation"), "situations")),
     line("Audits", "/playbooks#audits", `${playbooks.filter((p) => p.kind === "audit").length} audits for a firm that already exists, ${written.filter((p) => p.kind === "audit").length} written in full`),
     line("Rules", "/rules", "rule cards with primary-source citations, by jurisdiction"),
     line("Firm documents", "/artifacts", "the documents and records the playbooks use and make"),

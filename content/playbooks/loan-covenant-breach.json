@@ -93,6 +93,15 @@
       "tier": "primary"
     },
     {
+      "id": "ecfr-275-206-4-8",
+      "url": "https://www.ecfr.gov/current/title-17/section-275.206(4)-8",
+      "title": "17 CFR 275.206(4)-8, Pooled investment vehicles",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-23",
+      "quote": "to any investor or prospective investor in the pooled investment vehicle",
+      "tier": "primary"
+    },
+    {
       "id": "frb-cre-workouts-2023",
       "url": "https://www.federalreserve.gov/newsevents/pressreleases/files/bcreg20230629a1.pdf",
       "title": "Policy Statement on Prudent Commercial Real Estate Loan Accommodations and Workouts (OCC, Federal Reserve, FDIC and NCUA, 2023)",
@@ -124,9 +133,9 @@
     {
       "id": "compute-the-covenant",
       "title": "Compute the test the way the loan agreement defines it",
-      "instruction": "Copy each financial covenant from the loan agreement into the working file word for word: the ratio and its required level; how it defines income (which revenues and expenses count, whether reserves, a management fee or one-time items are adjusted, whether rent from defaulted or departing tenants is excluded); how it defines debt service (actual payments, or a stated rate and amortization); the period measured; trailing or annualized; and each test date. Compute the ratio from the trailing-12 and the rent roll on that definition, not on the underwriting's net operating income. Run the leverage calculator for coverage, debt yield and break-even occupancy as the agreement defines them. Record the result, the required level, the shortfall in dollars of income, and every line where the lender's definition differs from the books.",
+      "instruction": "Start from the covenant log's result from compute-each-test in meet-loan-covenants for the missed or failing test: the ratio on the loan's definitions, the required level, the headroom and each adjustment from the books with its section. Re-check it against the signed loan agreement word for word: which revenues and expenses count, whether reserves, a management fee or one-time items are adjusted, whether rent from defaulted or departing tenants is excluded, how debt service is defined, the period measured, trailing or annualized, and each test date. Where the log has no current result, compute the ratio from the trailing-12 and rent roll on that definition, not on the underwriting's net operating income, running leverage. Add only the shortfall in the test's own terms (dollars of income for coverage and debt yield, value or occupancy for those tests), break-even occupancy, and every line where the lender's definition differs from the books.",
       "mode": "agent",
-      "modeBasis": "The definition is in the signed documents and the calculation runs from the operating statements and a live calculator.",
+      "modeBasis": "The covenant log's result and the definition are in the firm's records and the signed documents, and any recalculation runs from the operating statements in a live calculator.",
       "risk": "medium",
       "undo": "reversible",
       "approval": "none",
@@ -146,9 +155,9 @@
     {
       "id": "project-next-tests",
       "title": "Project the ratio at each coming test date",
-      "instruction": "Project income to each of the next test dates from the rent roll and lease abstracts: scheduled rent steps, free rent ending, known move-outs, each expiration with a stated renewal assumption, signed leases not yet paying, and expense changes such as a tax reassessment or an insurance renewal. Run the lease-rollover calculator for what expires before each date. If the rate floats, run the rate-reset calculator on the loan's index, spread and any rate cap with its expiration, because coverage can fail on rate alone. Put each date's projected ratio, the cushion or shortfall, and the income at which it fails in one table, and mark which assumptions rest on signed leases and which are hoped for.",
+      "instruction": "Start from project-the-tests in meet-loan-covenants, whose projection is in the covenant log and the underwriting model, and re-check its definitions, test dates and assumptions against the signed loan documents, the current rent roll and the lease abstracts. Where it is missing or out of date, rebuild it the same way: scheduled rent steps, free rent ending, known move-outs, each expiration with a stated renewal assumption, signed leases not yet paying and expense changes, run through lease-rollover, rate-reset on the loan's index, spread and any rate cap with its expiration, and leverage. Add only what the breach needs: each coming test date through any cure period and maturity, the shortfall or cushion at each in the test's own terms, and the income, value or occupancy at which it fails, in one table, marking which assumptions rest on signed leases and which are hoped for.",
       "mode": "agent",
-      "modeBasis": "The projection follows from the rent roll, lease abstracts and loan terms run through live calculators.",
+      "modeBasis": "The projection starts from the covenant log and follows from the rent roll, lease abstracts and loan terms run through live calculators.",
       "risk": "medium",
       "undo": "reversible",
       "approval": "none",
@@ -180,7 +189,7 @@
     {
       "id": "read-cure-and-cash-terms",
       "title": "Read the cure rights, notice duties and cash management terms",
-      "instruction": "Start from the default map made when the loan documents were negotiated, if there is one, and confirm it against the signed documents. Find whether missing the test is an event of default or only a trigger for cash management, a reserve or recourse; any equity cure right (cash deposit, letter of credit or paydown), how the cure amount is computed, how often it may be used and its deadline; the notice the borrower must give and when, including the compliance certificate's due date and who signs it; any cure period; whether a lockbox springs, what a cash sweep captures and whether distributions stop. List each term with its section and date, and hand the dates to the principal before the lender is called.",
+      "instruction": "Start from meet-loan-covenants' covenant calendar, which records each test's cure period and what a miss starts, and the default map from negotiate-loan-documents behind it, and confirm both against the signed documents. Find whether missing the test is an event of default or only a trigger for cash management, a reserve or recourse; any equity cure right (cash deposit, letter of credit or paydown), how the cure amount is computed, how often it may be used and its deadline; the notice the borrower must give and when, including the compliance certificate's due date and who signs it; any cure period; whether a lockbox springs, what a cash sweep captures and whether distributions stop. List each term with its section and date, and hand the dates to the principal before the lender is called.",
       "mode": "agent",
       "modeBasis": "Reading and listing the terms of signed documents is document work.",
       "risk": "high",
@@ -487,7 +496,7 @@
     {
       "id": "tell-investors",
       "title": "Tell investors what happened and what comes next",
-      "instruction": "Draft an update once the plan is agreed, or sooner if the governing documents or a stopped distribution call for it: the test missed and why, the lender's response, the cure and how it is funded, any capital requested, the effect on distributions and projected returns, and the risks that remain. Rule 10b-5 bars untrue statements of material fact, and omissions that make what is said misleading, in connection with buying or selling securities; where an offering is open, interests are changing hands or investors are asked for more capital, counsel decides what must be said. Match every figure to the covenant computation and the underwriting model. A principal approves the update before it goes out.",
+      "instruction": "Draft an update once the plan is agreed, or sooner if the governing documents or a stopped distribution call for it: the test missed and why, the lender's response, the cure and how it is funded, any capital requested, the effect on distributions and projected returns, and the risks that remain. Rule 10b-5 bars untrue statements of material fact, and omissions that make what is said misleading, in connection with buying or selling securities; Rule 206(4)-8 bars the same by a 3(c)(1) or 3(c)(7) fund's adviser toward any investor. Counsel reviews it first, deciding what must be said, while an offering is open, interests are changing hands, investors are asked for more capital, counsel has found the firm advises such a fund, or a default, dispute, suit, data exposure or regulator's inquiry is open. Match every figure to the covenant computation and the underwriting model. A principal approves its release.",
       "mode": "agent",
       "modeBasis": "Drafting from the computation and the model is writing work; investor communications go out only with a person's approval.",
       "risk": "high",
@@ -506,7 +515,8 @@
       },
       "market": "investor-portals-fund-admin",
       "rules": [
-        "us-fed.exchange-act.rule-10b-5"
+        "us-fed.exchange-act.rule-10b-5",
+        "us-fed.ica.fund-exclusions"
       ],
       "consumes": [
         "underwriting-model",
@@ -514,7 +524,8 @@
       ],
       "basis": "cited",
       "sources": [
-        "ecfr-240-10b-5"
+        "ecfr-240-10b-5",
+        "ecfr-275-206-4-8"
       ]
     }
   ],

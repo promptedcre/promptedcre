@@ -7,32 +7,548 @@
   "phase": "report",
   "order": 135,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
+  "lastVerified": "2026-11-21",
   "situation": {
     "trigger": "Cash will not cover the distribution investors expect.",
     "urgency": "weeks"
   },
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "requires": [
+    "make-a-distribution",
+    "meet-loan-covenants",
+    "set-the-annual-budget"
+  ],
+  "consumes": [
+    "deal-entity-agreement",
+    "jv-agreement",
+    "private-placement-memorandum",
+    "loan-documents",
+    "rent-roll",
+    "trailing-12",
+    "lease-abstract",
+    "underwriting-model",
+    "investor-register"
+  ],
+  "produces": [
+    "underwriting-model"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Confirm the size of the shortfall and when it lands",
-    "Find the cause: vacancy, a tenant default, a rate reset or a capital item",
-    "Read what the governing agreement says about distributions",
-    "Check loan coverage and what the loan allows from reserves",
-    "Decide whether the shortfall is a one-time gap or a trend",
-    "List the options: reduce, defer, fund from reserves or skip",
-    "Test each option against the loan and the business plan",
-    "Decide with the approvals the governing agreement requires",
-    "Tell investors early, with the cause and the plan",
-    "Record the decision and update the forecast"
-  ]
+  "sources": [
+    {
+      "id": "tx-boc-101",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.101.htm",
+      "title": "Texas Business Organizations Code, Chapter 101 (Section 101.052, Company agreement; Section 101.204, Interim distributions; Section 101.206, Prohibited distribution; duty to return; Section 101.207, Creditor status with respect to distribution; Section 101.255, Contracts or transactions involving interested governing persons)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "is not entitled to receive and may not demand a distribution from the company until the company's governing authority declares a distribution",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-153",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.153.htm",
+      "title": "Texas Business Organizations Code, Chapter 153 (Section 153.112, Receipt of wrongful distribution; Section 153.207, Right to distribution; Section 153.209, Interim distributions; Section 153.210, Limitation on distribution)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "the partner has with respect to the distribution the status of and is entitled to all remedies available to a creditor",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gov-4008",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.4008.htm",
+      "title": "Texas Government Code, Chapter 4008 (Section 4008.052, Offeror or seller liability: untruth or omission; Section 4008.053, Buyer liability)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "regardless of whether the security or transaction is exempt under Chapter 4005",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "To make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-275-206-4-8",
+      "url": "https://www.ecfr.gov/current/title-17/section-275.206(4)-8",
+      "title": "17 CFR 275.206(4)-8, Pooled investment vehicles",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "to any investor or prospective investor in the pooled investment vehicle",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-1-702-1",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.702-1",
+      "title": "26 CFR 1.702-1, Income and credits of partner",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Each partner is required to take into account separately in his return his distributive share, whether or not distributed,",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-731",
+      "url": "https://www.law.cornell.edu/uscode/text/26/731",
+      "title": "26 U.S.C. 731, Extent of recognition of gain or loss on distribution",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "gain shall not be recognized to such partner, except to the extent that any money distributed exceeds the adjusted basis of such partner’s interest",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-503",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.503",
+      "title": "17 CFR 230.503, Filing of notice of sales",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "for each new offering of securities no later than 15 calendar days after the first sale of securities in the offering",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "confirm-the-shortfall",
+      "title": "Confirm the size of the shortfall and when it lands",
+      "instruction": "Put a number and a date on the gap before anyone discusses options. Start from make-a-distribution's distributable cash schedule if this situation opened there; if it opened from set-the-annual-budget's approval or casualty-damages-property's forecast, start from the approved budget's or that forecast's cash after debt service, reserves and committed costs at the payment date. Compare it with what investors could expect for the period: the preferred return the governing agreement accrues for it, what the last report or the memorandum's projection pointed to, and the prior period's payment. State the gap against each, in total and per unit of interest. Put the expected payment date on the deadline calendar; every later step works back from it. Whether it repeats is tested under one-time-or-trend. A figure that does not tie to the books goes back to the bookkeeper.",
+      "mode": "agent",
+      "modeBasis": "Comparing the distributable cash schedule with the agreement, past reports and the budget is file work from the entity's own records.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "trailing-12",
+        "deal-entity-agreement",
+        "jv-agreement",
+        "private-placement-memorandum",
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "find-the-cause",
+      "title": "Find the cause: vacancy, a tenant default, a rate reset or a capital item",
+      "instruction": "Tie every dollar of the gap to a line in the books, against the approved budget from set-the-annual-budget and the underwriting model investors were shown. Sort each line by cause: rent lost to vacancy, a move-out or a tenant default (tenant-stops-paying, tenant-files-bankruptcy); concessions or a slower lease-up; an expense that rose, such as a tax reassessment (protest-property-taxes) or an insurance renewal; higher debt service after a rate reset, with the rate-reset calculator run on the loan's index and spread, entering a purchased rate cap as its strike plus the spread; a casualty: rent abated, deductibles and costs paid before insurance pays, from the forecast under casualty-damages-property; leasing costs or capital work paid from operating cash (run-a-capital-project); reserve deposits, a cash sweep or cash the loan traps; and timing, such as late rent or an expense true-up still to settle. Mark each cause known or estimated, naming who confirmed it.",
+      "mode": "agent",
+      "modeBasis": "A variance analysis of the books against the budget and the model is file work; the property manager confirms the facts behind each line.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-the-shortfall"
+      ],
+      "rules": [],
+      "calculators": [
+        "rate-reset",
+        "expense-recovery"
+      ],
+      "consumes": [
+        "trailing-12",
+        "rent-roll",
+        "lease-abstract",
+        "underwriting-model",
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": [],
+      "typeNotes": {
+        "industrial": "On net leases, check whether recoveries billed on estimate fell behind the year's expenses or a reconciliation refund is due; run the expense-recovery calculator for each tenant's share.",
+        "multifamily": "Compare physical occupancy with economic occupancy from the rent roll: concessions, units not paying, bad debt written off and units down for turns or repairs can explain a gap that occupancy alone hides.",
+        "office": "Check base-year or expense-stop recoveries against the year's expenses, and any free rent or allowance period on a new lease; run the expense-recovery calculator for each tenant's share.",
+        "retail": "Check recoveries billed on estimate against the year's expenses, percentage rent against reported sales, and any rent reduction a lease's co-tenancy clause allows; run the expense-recovery calculator for each tenant's share."
+      }
+    },
+    {
+      "id": "read-distribution-terms",
+      "title": "Read what the governing agreement says when cash runs short",
+      "instruction": "Read the signed governing agreement for what it allows when cash is short. Beyond the terms written out under make-a-distribution, list: whether distributions are discretionary or required on set dates; whether unpaid preferred return accrues, compounds and is paid first later; the manager's power to draw reserves, borrow or call capital, and any limit on loans from a principal or an affiliate; whether the sponsor's fees are deferred or subordinated; and the notices investors must receive. In a fund, add whether one property's cash may cover another's shortfall, whether unfunded commitments may be called for an existing property, and any advisory committee consent a transaction with the sponsor or its affiliates needs. Take the Texas defaults from make-a-distribution; under Texas law an investor entitled to a distribution holds a creditor's status for it, subject to the lawful-distribution limit. A term that reads two ways goes to counsel.",
+      "mode": "agent",
+      "modeBasis": "Reading the signed agreement and writing out its terms is document work; a disputed reading is counsel's.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "tx-boc-153"
+      ]
+    },
+    {
+      "id": "send-holding-notice",
+      "title": "Send a holding notice if the decision will miss the payment date",
+      "instruction": "If the decision will not be signed before the payment date investors expect, draft a short holding notice that reaches them before that date. Say only that the payment is delayed or under review, the cause as far as it is known, and when the decision and the next update will come; state no amount, plan or projection the principals have not approved. Send it through the channel the governing agreement names for investor notices. If loan-covenant-breach, casualty-damages-property or tenant-stops-paying has an investor update open, this goes into it. Counsel reviews it first in the cases tell-investors names, and a principal approves it before release. Where the decision will come in time, record that no holding notice was needed.",
+      "mode": "agent",
+      "modeBasis": "Drafting a short notice from the facts found is writing work; nothing goes to investors without a principal's approval.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-the-shortfall",
+        "find-the-cause",
+        "read-distribution-terms"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register",
+        "deal-entity-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "read-loan-limits",
+      "title": "Check loan coverage and what the loan lets reserves pay for",
+      "instruction": "Start from the loan reading under make-a-distribution's read-loan-limits where this situation opened there, or do that reading first, and take the latest and projected covenant tests from the covenant log under meet-loan-covenants rather than recomputing them, adding the effect of the cause found on the next test date. Then add only what the shortfall needs from the signed loan documents: for each lender-held reserve, its balance, the uses it may pay for and how a release is requested; and any limit on new debt, pledges or new equity that would bar filling the gap from outside. If a test fails or will fail, or a sweep is on, the cash the loan traps is not distributable and loan-covenant-breach runs alongside: take its projection and funding list, and send one lender request, one partner consent and one investor notice that cover both situations.",
+      "mode": "agent",
+      "modeBasis": "Reading the loan documents beside make-a-distribution's loan reading and the covenant log is document work; nothing goes to the lender from this step.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "find-the-cause"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "one-time-or-trend",
+      "title": "Test whether the gap is a one-time event or a trend",
+      "instruction": "Start from the current projection under meet-loan-covenants' project-the-tests rather than rebuilding it from the rent roll, and extend it to each distribution date over the coming year with the causes found carried forward. Add the lines it leaves out, such as leasing and capital costs, reserve deposits, the entity's own expenses and the holdbacks the agreement and the loan require, to show the cash available to distribute at each date. Mark which figures rest on signed documents and which are hoped for. Classify the gap: timing, recovered by a stated date; one-time, such as a capital item already paid; or lasting, until a named event such as a lease-up, a refinance or a sale. Save the projection as a new version of the underwriting model and keep the version investors were shown unchanged. The principals confirm the classification when they decide.",
+      "mode": "agent",
+      "modeBasis": "Extending the covenant projection to the distribution dates is modelling work; the classification is confirmed by the principals.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "find-the-cause",
+        "read-loan-limits"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "deal-pipeline-underwriting",
+      "consumes": [
+        "underwriting-model",
+        "loan-documents",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "list-the-options",
+      "title": "List the options: reduce, defer, fund from reserves or skip",
+      "instruction": "List every option the governing agreement and the loan allow, each with its permitting clause and who decides. Reduce: pay distributable cash through the agreement's tiers. Defer: pay later on a stated condition, carrying unpaid preferred return as the agreement provides. Draw the entity's operating reserve, or a lender reserve where the loan allows it. Skip the period. Fill the gap from outside: a loan from a principal or an affiliate; new borrowing; a fund's own cash or credit line; a call on commitments already made (call-capital-fund-closing); or new interests sold for capital, whose exemption counsel confirms (choose-structure-and-exemption), and under Rule 504 or 506 Form D is due within 15 days of each new offering's first sale. Add the firm's levers: deferring the sponsor's fees where allowed, or delaying capital work the plan can spare. Record where each option's cash comes from: operations, reserves investors funded, borrowing or new capital.",
+      "mode": "agent",
+      "modeBasis": "Listing the options the documents allow is drafting from the agreement and the loan; choosing among them is the principals' decision.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-distribution-terms",
+        "read-loan-limits"
+      ],
+      "rules": [
+        "us-fed.reg-d.form-d-filing",
+        "us-fed.reg-d.rule-506b"
+      ],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-503"
+      ]
+    },
+    {
+      "id": "test-the-options",
+      "title": "Test each option against the loan, the agreement and the business plan",
+      "instruction": "Run each option forward on the projection against the loan, the agreement and the business plan. Loan: rerun meet-loan-covenants' projected tests on each option's income and debt service, one leverage run per test date, with reserves left after any draw and any sweep or lender consent triggered. Agreement: cash, unpaid preferred return and promote by year in waterfall-promote, computing more than one investor class or a quarterly accrual by investor, as make-a-distribution's run-waterfall does. Plan: months of cash left, leasing and capital costs ahead, and returns in returns-sensitivity. Screen each option that pays out with make-a-distribution's check-lawful-distribution test: a Texas LLC or limited partnership may not distribute if, right after paying, its liabilities exceed the fair value of its assets, as each statute measures them. An option that fails or passes narrowly, or an entity formed in another state, goes to counsel. Put the options side by side.",
+      "mode": "agent",
+      "modeBasis": "Running each option through the calculators and the statutory test is arithmetic on the projection and the books; a close test is counsel's to read.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "one-time-or-trend",
+        "list-the-options"
+      ],
+      "rules": [],
+      "calculators": [
+        "leverage",
+        "waterfall-promote",
+        "returns-sensitivity"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "deal-entity-agreement",
+        "jv-agreement",
+        "loan-documents"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "tx-boc-153"
+      ]
+    },
+    {
+      "id": "ask-the-cpa",
+      "title": "Have the CPA say what a cut means for investors' taxes",
+      "instruction": "Send the CPA the tested options and the projection, and ask what each means for investors' taxes this year. For an entity taxed as a partnership, each partner reports its distributive share of income whether or not any cash is distributed, so cutting a distribution while the entity has taxable income, for example because cash went to loan principal or capital work, can leave investors owing tax on income they did not receive. Ask the CPA to estimate the year's taxable income per unit of interest, to say whether the agreement's tax distribution clause, if any, is triggered, and to confirm how a distribution funded from reserves or borrowing is treated: generally a partner recognizes gain on a cash distribution only to the extent the money exceeds its adjusted basis in its interest immediately before the distribution. The CPA decides what investors are told about tax.",
+      "mode": "human-online",
+      "modeBasis": "What a cut means for investors' taxes is a tax position, and tax positions are the CPA's.",
+      "actor": "cpa",
+      "licensed": "cpa",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "test-the-options"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "underwriting-model"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-26-1-702-1",
+        "usc-26-731"
+      ]
+    },
+    {
+      "id": "request-consents",
+      "title": "Ask early for the consents an option needs: lender, committee or investors",
+      "instruction": "Draft each consent request an option needs before the decision; a principal approves each before it goes through the channel its document names. Lender: the section that applies, the gap's cause and size, the projection, the option and the loan's tests after it, with what the reporting clause requires. A reserve release goes under manage-reserves and consent to new debt or a pledge under ask-lender-consent, both in meet-loan-covenants; consent to the distribution itself goes under make-a-distribution's request-consents when the payment runs. In a fund, ask the advisory committee where the fund documents require its consent; ask investors for a vote where the agreement requires one or the chosen approval route relies on it. If loan-covenant-breach, casualty-damages-property or tenant-stops-paying has its own request open, this goes into it. Record each answer in writing with its date and conditions, and take a refusal back to the options.",
+      "mode": "agent",
+      "modeBasis": "Drafting each request from the documents and the tested options is writing work; nothing goes out without a principal's approval.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "test-the-options"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "loan-documents",
+        "deal-entity-agreement",
+        "underwriting-model"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "partner-consents",
+      "title": "Get the capital partner's consent to the plan",
+      "instruction": "The capital partner gives written consent to each major decision in the plan before anything is paid, borrowed or announced, after receiving the shortfall, its cause, the projection, the tested options and the proposed plan. A JV agreement often reserves the budget, reserves, new borrowing, a loan from a principal or an affiliate and changes to distributions as major decisions for the capital partner; read the agreement's list and get consent to each item on it. Confirm how any added capital or partner loan is credited, whether a partner that does not fund is diluted, and how the plan affects the promote. If loan-covenant-breach, casualty-damages-property or tenant-stops-paying has a partner consent open, this goes into it. Record the consent and any conditions.",
+      "mode": "human-online",
+      "modeBasis": "Consent to a major decision is the capital partner's own act under the JV agreement.",
+      "actor": "investor",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "test-the-options",
+        "ask-the-cpa"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "rules": [],
+      "calculators": [
+        "waterfall-promote"
+      ],
+      "consumes": [
+        "jv-agreement",
+        "underwriting-model"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "decide-with-approvals",
+      "title": "Decide with the approvals the governing agreement requires",
+      "instruction": "The people the governing agreement names decide in writing, in its form: the option chosen; any reduced payment's target amount; how unpaid preferred return is carried; any reserve drawn, fee deferred, loan or capital call; the gap's classification; and its review date. Attach the papers behind it and every consent obtained. It approves a plan, not a declaration: any payment is declared under make-a-distribution's approve-distribution after its checks; where the agreement could make this decision the declaration, counsel confirms before signing. A loan from a principal or an affiliate is an interested-party transaction: in a Texas LLC it is not void or voidable for that interest if disclosed and approved in good faith by disinterested governing persons or the members, or if fair to the company when approved; in a limited partnership, counsel confirms what the agreement requires. Counsel advises before cutting a distribution already declared or made due.",
+      "mode": "human-online",
+      "modeBasis": "Deciding a distribution binds the entity and is signed by the people its agreement names.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "one-time-or-trend",
+        "test-the-options",
+        "ask-the-cpa",
+        "request-consents",
+        "partner-consents"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "underwriting-model"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "tx-boc-153"
+      ]
+    },
+    {
+      "id": "tell-investors",
+      "title": "Tell investors the decision, its cause and the plan",
+      "instruction": "Draft the notice investors get before the payment date or after the holding notice. Say what will be paid; its cause and the gap's classification; how unpaid preferred return is carried; any payment's source in reserves, borrowing or new capital; the plan and its milestones; any approved effect on projected returns; and the next update's date. Rule 10b-5 bars material misstatements and misleading omissions in connection with buying or selling a security; Texas makes a seller or buyer using one liable to the other, exempt or not. Where counsel finds the firm advises a 3(c)(1) or 3(c)(7) fund, Rule 206(4)-8 bars the same toward any investor. Counsel reviews it first while an offering is open, capital is called, interests change hands, that rule applies, or a default, dispute, suit, data exposure or regulator's inquiry is open. Fold it into any open investor update. A principal approves its release.",
+      "mode": "agent",
+      "modeBasis": "Drafting the notice from the decision and the projection is writing work; nothing goes to investors without a person's approval.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-with-approvals"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5",
+        "us-fed.ica.fund-exclusions",
+        "us-tx.securities.offer-sale-liability"
+      ],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register",
+        "underwriting-model"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5",
+        "ecfr-275-206-4-8",
+        "tx-gov-4008"
+      ]
+    },
+    {
+      "id": "record-and-reforecast",
+      "title": "Record the decision and update the forecast",
+      "instruction": "File the decision, its papers and the notices sent. Send any payment decided back to make-a-distribution at its holdback schedule, which runs its lawful-distribution test, second-person check, approval and payment steps and records the payment. Carry out any other option through its own record: a capital call through call-capital-fund-closing, with investor-misses-capital-call for an investor who does not fund; a loan from a principal or an affiliate in a signed note on approved terms; a lender reserve draw or new debt under meet-loan-covenants, or refinance-the-property; new interests through choose-structure-and-exemption. Where no payment runs, record the period's unpaid preferred return in the capital ledger under set-up-the-books, as the agreement defines it. Carry the projection into set-the-annual-budget and the explanation into send-quarterly-investor-report. Calendar the review date, milestones and promised update, comparing actual cash with the projection at each; if the gap widens or a milestone slips, reopen this situation at the cause.",
+      "mode": "agent",
+      "modeBasis": "Filing, ledger entries and the calendar are record work from the signed decision.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-with-approvals",
+        "tell-investors"
+      ],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register",
+        "underwriting-model"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    }
+  ],
+  "outlineSteps": []
 }

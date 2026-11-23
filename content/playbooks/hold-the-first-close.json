@@ -3,34 +3,696 @@
   "slug": "hold-the-first-close",
   "kind": "process",
   "title": "Hold the first close",
-  "summary": "Admit the first group of investors to a fund or a multi-closing offering and start the clocks that run from it.",
+  "summary": "Admit the first group of investors and start the clocks that run from the first close. A single-close offering runs this once, as its only close; a fund or multi-closing offering runs it again at each later closing.",
   "phase": "raise",
   "order": 155,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "form-deal-entity",
+    "onboard-an-investor",
+    "call-capital-fund-closing",
+    "file-form-d-and-state-notices"
+  ],
+  "consumes": [
+    "private-placement-memorandum",
+    "subscription-agreement",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "investor-register",
+    "investor-questionnaire",
+    "accreditation-verification-letter",
+    "wire-instructions",
+    "form-d",
+    "state-notice-filing"
+  ],
+  "produces": [
+    "investor-register",
+    "deal-entity-agreement"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx",
+      "us-de"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "List the conditions to closing in the offering documents",
-    "Read the later-closing terms in the governing agreement",
-    "Confirm each condition to closing is met",
-    "Confirm every subscription in the first close is accepted and funded",
-    "Have counsel confirm the close can proceed",
-    "Set the first close date",
-    "Have a person approve each release of funds",
-    "Admit the first investors on the entity's records",
-    "Record the close in the investor register",
-    "Calendar the deadlines that run from the first close",
-    "Send each admitted investor confirmation of the close",
-    "File the closing record and keep it"
-  ]
+  "sources": [
+    {
+      "id": "ecfr-240-10b-9",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-9",
+      "title": "17 CFR 240.10b-9, Prohibited representations in connection with certain offerings",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "all or a specified amount of the consideration paid for such security will be promptly refunded to the purchaser",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-15c2-4",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.15c2-4",
+      "title": "17 CFR 240.15c2-4, Transmission or maintenance of payments received in connection with underwritings",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "promptly deposited in a separate bank account, as agent or trustee for the persons who have the beneficial interests therein",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-503",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.503",
+      "title": "17 CFR 230.503, Filing of notice of sales",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "no later than 15 calendar days after the first sale of securities in the offering",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-506",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.506",
+      "title": "17 CFR 230.506, Exemption for limited offers and sales without regard to dollar amount of offering",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "35 purchasers of securities from the issuer in offerings under this section in any 90-calendar-day period",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-501",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.501",
+      "title": "17 CFR 230.501, Definitions and terms used in Regulation D (paragraph (e), calculation of number of purchasers)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-80a-3",
+      "url": "https://www.law.cornell.edu/uscode/text/15/80a-3",
+      "title": "15 U.S.C. 80a-3, Definition of investment company (subsection (c)(1))",
+      "publisher": "Legal Information Institute (U.S. Code text)",
+      "accessed": "2026-11-21",
+      "quote": "beneficially owned by not more than one hundred persons",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-2510-3-101",
+      "url": "https://www.ecfr.gov/current/title-29/section-2510.3-101",
+      "title": "29 CFR 2510.3-101, Definition of plan assets: plan investments (paragraphs (d)(5), (e) and (f))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "immediately after the most recent acquisition of any equity interest in the entity, 25 percent or more of the value",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-29-1002",
+      "url": "https://www.law.cornell.edu/uscode/text/29/1002",
+      "title": "29 U.S.C. 1002, Definitions (paragraph (42), plan assets and benefit plan investor)",
+      "publisher": "Legal Information Institute (U.S. Code text)",
+      "accessed": "2026-11-21",
+      "quote": "the term “benefit plan investor” means an employee benefit plan subject to part 4, any plan to which section 4975 of title 26 applies",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-101",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.101.htm",
+      "title": "Texas Business Organizations Code, Chapter 101 (Sections 101.052, 101.103, 101.105, 101.1055, 101.151 and 101.501)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "becomes a member of the company on approval or consent of all of the company's members",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-153",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.153.htm",
+      "title": "Texas Business Organizations Code, Chapter 153 (Sections 153.101, 153.202, 153.258 and 153.551)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "if the partnership agreement does not contain relevant admission provisions, the written consent of all partners",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-3",
+      "url": "https://delcode.delaware.gov/title6/c018/sc03/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter III (Section 18-301(b)(1), admitting members after formation)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-21",
+      "quote": "upon the consent of all members or as otherwise provided in the limited liability company agreement",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-17-3",
+      "url": "https://delcode.delaware.gov/title6/c017/sc03/index.html",
+      "title": "6 Del. C. Chapter 17, Subchapter III (Section 17-301(b)(1), admitting limited partners after formation)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-21",
+      "quote": "upon the consent of all partners or as otherwise provided in the partnership agreement",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-706",
+      "url": "https://www.law.cornell.edu/uscode/text/26/706",
+      "title": "26 U.S.C. 706, Taxable years of partner and partnership (subsection (d), change in a partner's interest)",
+      "publisher": "Legal Information Institute (U.S. Code text)",
+      "accessed": "2026-11-21",
+      "quote": "takes into account the varying interests of the partners in the partnership during such taxable year",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-1-706-4",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.706-4",
+      "title": "26 CFR 1.706-4, Determination of distributive share when a partner's interest varies",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "the partnership shall use the interim closing method",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-114-4",
+      "url": "https://www.law.cornell.edu/regulations/texas/7-Tex-Admin-Code-SS-114-4",
+      "title": "7 Tex. Admin. Code 114.4, Filings and Fees (subsection (b)(1), Rule 506 offerings)",
+      "publisher": "Legal Information Institute (Texas Administrative Code text)",
+      "accessed": "2026-11-21",
+      "quote": "no later than 15 days after the first sale of the federal covered securities in this state",
+      "tier": "primary"
+    },
+    {
+      "id": "ic3-bec",
+      "url": "https://www.ic3.gov/CrimeInfo/BEC",
+      "title": "Business Email Compromise (BEC)",
+      "publisher": "FBI Internet Crime Complaint Center (IC3)",
+      "accessed": "2026-11-21",
+      "quote": "Use secondary channels or two-factor authentication to verify requests for changes in account information with the intended recipient.",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "list-closing-conditions",
+      "title": "List the conditions to closing in the offering documents",
+      "instruction": "List every condition the offering documents set before any investor is admitted or any held money is released. Read the memorandum, the subscription agreement, the entity agreement and any escrow agreement, and for each condition record its clause, the evidence that will prove it, its deadline, who may waive it, and what happens to investor money if it fails. Common ones are a minimum amount raised, a date for reaching it, the property purchase or loan closing, and counsel's sign-off. Where the documents promise refunds unless a minimum is sold, Rule 10b-9 makes that promise deceptive unless the offering really is conditioned on prompt refunds if the stated amount is not sold at the stated price within the stated time and paid by the stated date. Flag each such condition for counsel.",
+      "mode": "agent",
+      "modeBasis": "Reading the documents and listing what they require is file work; whether a condition is met or may be waived is decided in later steps by people.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "private-placement-memorandum",
+        "subscription-agreement",
+        "deal-entity-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-9"
+      ]
+    },
+    {
+      "id": "read-later-closing-terms",
+      "title": "Read the later-closing terms in the governing agreement",
+      "instruction": "Write down how the entity agreement lets investors in after the first close, since this close is the starting point for every later one. Record the last date for a later closing and who may extend it; whether later investors pay the same price; whether they must catch up their share of earlier contributions, with any added amount, and who receives it; how fees and earlier distributions are shared; and who approves each admission, compared with the state-law default draft-closing-papers states. A later admission also changes each partner's share of the year's tax items; the regulations use the interim closing method unless the partners agree to proration. Send gaps to counsel and the CPA. Keep the note in the closing set; close-the-raise reads it and computes any catch-up amounts in settle-later-closings.",
+      "mode": "agent",
+      "modeBasis": "Extracting terms from a signed agreement and comparing them with the statute is reading work; counsel and the CPA answer the gaps.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "private-placement-memorandum"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "tx-boc-153",
+        "de-code-18-3",
+        "de-code-17-3",
+        "usc-26-706",
+        "ecfr-26-1-706-4"
+      ]
+    },
+    {
+      "id": "jv-confirm-admission-and-funding",
+      "title": "For a JV, confirm where the partner's admission and funding happen",
+      "instruction": "Confirm where the capital partner's admission and funding happen, since with one capital partner there is no first close. The partner signs the venture agreement, and the firm countersigns it, in onboard-an-investor; the partner funds under call-capital-fund-closing's jv-partner-funding step. Confirm both are done or scheduled, and that the venture agreement's dates are on the deadline calendar. Next, test-the-group runs the plan-asset count on the partner's interest, and calendar-agreement-deadlines adds any plan-asset dates. Note any clause that would let another member in, and whose consent it needs.",
+      "mode": "agent",
+      "modeBasis": "Checking that the admission and funding steps in other records are done or scheduled is record work; people act in those records.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "confirm-subscriptions-binding",
+      "title": "Confirm every subscription in the first close is complete, signed and funded",
+      "instruction": "List the first close's investors from the investor register and confirm, for each, that onboard-an-investor is finished: the package complete, accredited status verified where Rule 506(c) applies, the sanctions screen clean, and the subscription accepted in writing at its accept-subscription step or, where the documents accept only at the close, ready for countersignature at sign-the-close. Then confirm the money: for a syndication, the amount received and matched under call-capital-fund-closing's track-receipts and reconcile-funding steps; for a fund, the signed commitment and any amount due now. For a Texas entity, a promise to contribute binds only if written and signed by the investor, and a written subscription made after formation is a contract between the subscriber and the entity. List anyone whose file has a gap for the principals and counsel, who decide in counsel-clears-close whether to leave them out. An accepted subscription not funded by its due date follows investor-misses-capital-call.",
+      "mode": "agent",
+      "modeBasis": "Comparing each investor file and receipt against a checklist is record work; the principals and counsel decide about any gap.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-closing-conditions"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "rules": [
+        "us-fed.reg-d.rule-506c"
+      ],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register",
+        "subscription-agreement",
+        "investor-questionnaire",
+        "accreditation-verification-letter"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "tx-boc-153",
+        "ecfr-230-506"
+      ]
+    },
+    {
+      "id": "test-the-group",
+      "title": "Test the first close as a group against the counts that limit it",
+      "instruction": "Test the first close's investors as a group on the close date, rechecking onboard-an-investor's counts. Under Rule 506(b), count non-accredited purchasers in any 90-calendar-day period, up to 35, leaving out those Rule 501(e) excludes and counting each owner of an investing entity formed to buy these interests unless all its owners are accredited. For a fund relying on Section 3(c)(1), count beneficial owners, up to 100, looking through as counsel directs. Compute the share of each equity class that benefit plan investors (plans subject to ERISA's fiduciary rules, IRAs and other Code section 4975 plans, and entities holding plan assets) hold right after the close, disregarding interests of anyone controlling or paid to advise on the assets, and their affiliates, unless a plan investor holds them; at 25% or more the entity's assets are plan assets unless an exception applies. Record each dated result; send any breach to counsel.",
+      "mode": "agent",
+      "modeBasis": "Counting from the register and the questionnaires is arithmetic on records the firm holds; counsel rules on any result near a limit.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-subscriptions-binding",
+        "jv-confirm-admission-and-funding"
+      ],
+      "rules": [
+        "us-fed.reg-d.rule-506b",
+        "us-fed.ica.fund-exclusions",
+        "us-fed.erisa.plan-assets"
+      ],
+      "calculators": [],
+      "consumes": [
+        "investor-register",
+        "investor-questionnaire"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-506",
+        "ecfr-230-501",
+        "usc-15-80a-3",
+        "ecfr-2510-3-101",
+        "usc-29-1002"
+      ]
+    },
+    {
+      "id": "check-each-condition",
+      "title": "Match each condition to closing to its evidence",
+      "instruction": "Turn the conditions list into a closing checklist with each item's evidence: the confirmed subscriptions' total against any minimum, the bank or escrow statement, the property or loan closing status, and group test results. Count toward a minimum only subscriptions sold at the stated price within the stated time, with the money received by the stated date, the terms a Rule 10b-9 refund promise turns on. Send counsel any purchase toward the minimum by a principal, an affiliate or anyone the firm financed. Confirm each Form D and Texas notice deadline is calendared and filed or not yet due, unless the close is the first sale (see calendar-agreement-deadlines); a passed Form D date goes to missed-form-d-deadline, a late Texas notice alone to counsel. Propose each condition as met, not met or for waiver, with evidence, for counsel and the principals to confirm in counsel-clears-close, never as met on a promise.",
+      "mode": "agent",
+      "modeBasis": "Matching each condition to a document or statement is record work; counsel and the principals confirm whether it is met or waived.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-closing-conditions",
+        "test-the-group"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "rules": [
+        "us-fed.reg-d.form-d-filing",
+        "us-tx.securities.rule-506-notice"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "investor-register",
+        "private-placement-memorandum",
+        "form-d",
+        "state-notice-filing"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-9",
+        "ecfr-230-503",
+        "tac-114-4"
+      ]
+    },
+    {
+      "id": "draft-closing-papers",
+      "title": "Draft the closing papers for counsel and the principals",
+      "instruction": "Draft the closing papers from the checklist and the register: the manager's or general partner's written consent approving the close and admitting each investor; the updated schedule of members or partners, with the contributions and admission dates record-in-register lists; where the entity began on a short initial agreement, the amended and restated agreement counsel prepares, with a joinder or signature page per investor; countersignature pages for subscriptions accepted at the close; any closing certificate the documents require; and the escrow or holding account's release instruction, covering only admitted investors' money, by investor and in total, without account numbers. Date each admission to match the consent and cite the clause relied on: in Texas and Delaware, an investor acquiring an interest from the entity after formation becomes a member or limited partner as its agreement provides or, if silent, with all members' or partners' consent (written, for a Texas limited partnership).",
+      "mode": "agent",
+      "modeBasis": "Drafting from the agreement's forms and the register is document work; counsel reviews and a principal signs.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-each-condition",
+        "read-later-closing-terms"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "investor-register",
+        "deal-entity-agreement",
+        "subscription-agreement",
+        "wire-instructions"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "tx-boc-153",
+        "de-code-18-3",
+        "de-code-17-3"
+      ]
+    },
+    {
+      "id": "counsel-clears-close",
+      "title": "Have counsel confirm in writing that the close can proceed",
+      "instruction": "Counsel confirms in writing whether the first close can proceed on the planned date, after reading the checklist with its evidence, the group test results, the draft closing papers and any proposed waiver. Counsel and the principals confirm each condition proposed as met. Counsel decides whether a condition may be waived or changed and what investors must first be told or offered, whether any investor must be left out, and whether any federal or state filing is due before or because of the close. Record counsel's answer, its date and any condition attached to it in the closing set. Nothing is signed and no money moves until the answer is in writing.",
+      "mode": "human-online",
+      "modeBasis": "Whether the offering may close, and on what terms, is a legal conclusion; an agent assembles the package and records the answer.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "draft-closing-papers"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "sign-the-close",
+      "title": "Set the first close date and sign the closing papers",
+      "instruction": "Once counsel has cleared it, the principals set the close date and the person the entity agreement authorizes signs the consent admitting the investors, the updated schedule, any countersignatures and, where one is needed, the amended and restated agreement, all dated for the close. Where the agreement gives the admission decision to the manager or general partner, cite that clause in the consent; where it is silent, collect before the close date the consent of all members or partners that draft-closing-papers describes. Record the decision, who made it and when in the firm file.",
+      "mode": "human-online",
+      "modeBasis": "Admitting investors and fixing the date bind the entity; only an authorized person can decide and sign.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-clears-close"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "deal-entity-agreement",
+        "subscription-agreement"
+      ],
+      "produces": [
+        "deal-entity-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "tx-boc-153",
+        "de-code-18-3",
+        "de-code-17-3"
+      ]
+    },
+    {
+      "id": "release-held-funds",
+      "title": "Release the admitted investors' held money once the closing papers are signed",
+      "instruction": "Release only admitted investors' held money, once the papers are signed, as the escrow agreement or documents require. Left-out investors' money stays held for a later close, or goes back under return-rejected-money. From the entity's account, a principal and a second approver release it under the dual approval set in form-deal-entity's open-entity-account, first confirming the receiving account by calling a number on file, never one in the message, as the FBI's IC3 advises. Where a broker-dealer took money in a contingent offering, Rule 15c2-4 requires it to deposit the money promptly in a separate bank account, or with a bank that agreed in writing to hold it in escrow, until the contingency occurs. That holder, not a principal, passes it on: give it the signed papers and instruction, and confirm by phone at a known number what it sent where. Purchase money goes by call-capital-fund-closing's wire-to-title, after counsel's written clearance.",
+      "mode": "human-online",
+      "modeBasis": "Releasing money needs an authorized signer and the bank's approval controls; an agent never releases a wire.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-the-close"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "wire-instructions"
+      ],
+      "produces": [
+        "wire-instructions"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-15c2-4",
+        "ic3-bec"
+      ]
+    },
+    {
+      "id": "return-rejected-money",
+      "title": "Return the money for subscriptions rejected or cut back at this close",
+      "instruction": "Return the money for each subscription rejected or cut back at this close as the subscription agreement provides, now rather than at the offering's end; money the documents let wait for a later close stays held. Send each refund only back to the paying account the bank recorded. Treat any request to send it elsewhere, to a new account, another person or by check, as fraud until a principal confirms it by calling the investor at a number on file, never one in the request, as close-the-raise's verify-refund-destination describes and the FBI's IC3 advises; a refund to a third party goes to counsel first. A principal and a second approver release each refund under the dual approval set in form-deal-entity's open-entity-account, or the escrow agent or broker-dealer holding it sends it on signed instruction. Record who verified and approved, how and when, in the wire-instructions record, never account numbers.",
+      "mode": "human-online",
+      "modeBasis": "A call-back to a known number and the release of a wire under the bank's approval controls are a person's acts; an agent lists the refunds and records the result.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-the-close"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "wire-instructions",
+        "subscription-agreement",
+        "investor-register"
+      ],
+      "produces": [
+        "wire-instructions"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ic3-bec",
+        "ecfr-240-15c2-4"
+      ]
+    },
+    {
+      "id": "record-in-register",
+      "title": "Record the close in the investor register",
+      "instruction": "Update the investor register for every investor admitted: status, admission date, interest held, amount contributed and date received, and for a fund the commitment and unfunded balance. Record anyone left out, with the reason and what became of their money, and note the close: its date, the total admitted and the counsel clearance it rests on. Check that the interests add up and that the register agrees with the signed schedule. For a Texas entity, the register and schedule hold the records it must keep at its principal office, or make available there within five days of a written request: each owner's interest and, unless the written agreement states them, contributions made and promised and each admission date. For a Delaware entity, counsel lists the records its agreement and Delaware law require. Send the CPA each admission date and amount, and the method the agreement picks for partners admitted mid-year.",
+      "mode": "agent",
+      "modeBasis": "Updating the register from signed papers is record work; the firm's portal or files hold it.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-the-close"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register",
+        "deal-entity-agreement"
+      ],
+      "produces": [
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "tx-boc-153",
+        "usc-26-706",
+        "ecfr-26-1-706-4"
+      ]
+    },
+    {
+      "id": "calendar-agreement-deadlines",
+      "title": "Calendar the deadlines the agreements count from the first close",
+      "instruction": "Calendar every date the documents count from the first close, as a contract period with its clause: the last later-closing date and any extension, the offering period's end, when fees or the preferred return begin, the catch-up window, and a fund's investment period and term if they run from it. If the close is the first sale, or first Texas sale, fix that date as file-form-d-and-state-notices' fix-first-sale-date does and enter the Form D and Texas 15-day deadlines the same day. Each later closing reruns this record from confirm-subscriptions-binding to confirm-and-file, as the plan-asset test applies immediately after each equity acquisition, the 3(c)(1) limit at any time, and Rule 506(b)'s count over any 90 calendar days. Under the real estate operating company exception, add its initial valuation date and the annual valuation period, set in advance and up to 90 days, starting by each anniversary. Give each date an owner.",
+      "mode": "agent",
+      "modeBasis": "Turning agreement clauses, the first-sale date and regulation dates into calendar entries is file work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-the-close"
+      ],
+      "rules": [
+        "us-fed.erisa.plan-assets",
+        "us-fed.reg-d.rule-506b",
+        "us-fed.ica.fund-exclusions",
+        "us-fed.reg-d.form-d-filing",
+        "us-tx.securities.rule-506-notice"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "private-placement-memorandum",
+        "form-d",
+        "state-notice-filing"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-2510-3-101",
+        "ecfr-230-506",
+        "usc-15-80a-3",
+        "ecfr-230-503",
+        "tac-114-4"
+      ]
+    },
+    {
+      "id": "confirm-and-file",
+      "title": "Confirm the close to each investor and file the closing record",
+      "instruction": "Send each admitted investor, through the investor portal or another channel that records delivery, a confirmation of the close: the admission date, the interest held, the amount accepted and received, for a fund the commitment still uncalled, and where the countersigned documents are. Include no wiring details, and repeat that payment instructions never change by email. Tell anyone left out of this close where their subscription stands, and whether their money stays held or went back under return-rejected-money. Then file the closing set together: the conditions list, the later-closing terms note, the checklist and evidence, counsel's clearance, the signed papers, release and refund confirmations, group test results and the delivery log. Keep it with the entity's required records (see record-in-register); close-the-raise adds each closing set to the offering's closing file.",
+      "mode": "agent",
+      "modeBasis": "Sending confirmations through the firm's portal and filing documents is agent work once a person approves the batch.",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "release-held-funds",
+        "return-rejected-money",
+        "record-in-register",
+        "calendar-agreement-deadlines"
+      ],
+      "when": {
+        "structure": [
+          "syndication",
+          "fund"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register",
+        "subscription-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ic3-bec"
+      ]
+    }
+  ],
+  "outlineSteps": []
 }

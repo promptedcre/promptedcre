@@ -7,28 +7,594 @@
   "phase": "exit",
   "order": 505,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "decide-when-to-sell"
+  ],
+  "consumes": [
+    "underwriting-model",
+    "loan-documents",
+    "lease-abstract",
+    "rent-roll",
+    "trailing-12",
+    "comp-set",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "sponsor-operating-agreement"
+  ],
+  "produces": [
+    "comp-set",
+    "underwriting-model"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Write down what the sale needs from a broker",
-    "List brokers active in the property type and submarket",
-    "Send each broker the same property package and request",
-    "Interview each broker on buyers, marketing plan and team",
-    "Compare pricing opinions against the sponsor's own valuation",
-    "Check references from recent sellers",
-    "Compare fee, term, exclusions and buyer-broker terms",
-    "Negotiate the listing agreement with counsel",
-    "Sign the listing agreement",
-    "Tell the brokers not chosen and record the choice"
-  ]
+  "sources": [
+    {
+      "id": "tx-oc-1101-licensing",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1101.htm",
+      "title": "Texas Occupations Code, Sections 1101.351 and 1101.355, License required; business entity brokers and their designated broker",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "Unless a business entity holds a license issued under this chapter, the business entity may not act as a broker.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-oc-1101-806",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1101.htm",
+      "title": "Texas Occupations Code, Section 1101.806(b), Liability for payment of compensation or commission (license required to sue)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "may not maintain an action to collect compensation for an act as a broker or sales agent that is performed in this state",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-oc-1101-558",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1101.htm",
+      "title": "Texas Occupations Code, Section 1101.558, Representation disclosure (as amended effective January 1, 2026)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "At the time of a license holder's first substantive communication with a party relating to a proposed transaction regarding specific real property",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-oc-1101-agency",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1101.htm",
+      "title": "Texas Occupations Code, Sections 1101.557, 1101.559, 1101.561 and 1101.651, Acting as agent, intermediaries and sharing compensation",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "the written consent of the parties states the source of any expected compensation to the broker",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-oc-1101-563",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1101.htm",
+      "title": "Texas Occupations Code, Section 1101.563, Written agreement required (added effective January 1, 2026)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "A license holder who performs any act of real estate brokerage for a prospective buyer of residential real property must enter into a written agreement",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-oc-1101-652",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1101.htm",
+      "title": "Texas Occupations Code, Section 1101.652(b), Grounds for discipline while engaged in real estate brokerage (subdivisions (8), (12) and (16))",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "fails to specify a definite termination date that is not subject to prior notice in a contract",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-62",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.62.htm",
+      "title": "Texas Property Code, Chapter 62, Broker's and Appraiser's Lien on Commercial Real Estate Act (Sections 62.002, 62.003, 62.004, 62.021, 62.022 and 62.023)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "The broker's right to claim a lien based on the commission agreement must be disclosed in the commission agreement.",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-22-531-20",
+      "url": "https://www.law.cornell.edu/regulations/texas/22-Tex-Admin-Code-SS-531-20",
+      "title": "22 Tex. Admin. Code 531.20, Information About Brokerage Services",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "the completed IABS Notice at the first substantive communication as required under §1101.558, Texas Occupations Code",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-22-535-16",
+      "url": "https://www.law.cornell.edu/regulations/texas/22-Tex-Admin-Code-SS-535-16",
+      "title": "22 Tex. Admin. Code 535.16, Listings; Net Listings",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "obligated to provide a broker price opinion or comparative market analysis on a property when negotiating a listing",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-22-535-17",
+      "url": "https://www.law.cornell.edu/regulations/texas/22-Tex-Admin-Code-SS-535-17",
+      "title": "22 Tex. Admin. Code 535.17, Broker Price Opinion, Comparative Market Analysis, or Sales Price Estimate",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "This represents an estimated sale price for this property. It is not the same as the opinion of value in an appraisal",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-22-535-156",
+      "url": "https://www.law.cornell.edu/regulations/texas/22-Tex-Admin-Code-SS-535-156",
+      "title": "22 Tex. Admin. Code 535.156, Dishonesty; Bad Faith; Untrustworthiness (the license holder's duties to its principal)",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "if the principal has agreed in writing that offers are not to be submitted after the principal has entered into a contract",
+      "tier": "primary"
+    },
+    {
+      "id": "trec-license-search",
+      "url": "https://www.trec.texas.gov/license-search",
+      "title": "License Holder Search",
+      "publisher": "Texas Real Estate Commission",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "trec-disciplinary-actions",
+      "url": "https://www.trec.texas.gov/apps/disciplinary-actions/",
+      "title": "Disciplinary Actions search",
+      "publisher": "Texas Real Estate Commission",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "trec-faq",
+      "url": "https://www.trec.texas.gov/public/frequently-asked-questions",
+      "title": "Frequently Asked Questions (out-of-state brokers; listing agreements taken in the broker's name)",
+      "publisher": "Texas Real Estate Commission",
+      "accessed": "2026-11-21",
+      "quote": "When the real property concerned is located wholly or partly in Texas, the broker must obtain a Texas license or associate with a Texas broker.",
+      "tier": "primary"
+    },
+    {
+      "id": "trec-iabs-form",
+      "url": "https://www.trec.texas.gov/forms/information-about-brokerage-services",
+      "title": "Information About Brokerage Services (form page, effective January 1, 2026)",
+      "publisher": "Texas Real Estate Commission",
+      "accessed": "2026-11-21",
+      "quote": "Information About Brokerage Services (Form ID: IABS 1-2)",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-78o",
+      "url": "https://www.law.cornell.edu/uscode/text/15/78o",
+      "title": "15 U.S.C. 78o(a)(1) and (b)(13), Registration of brokers and dealers; exemption for merger and acquisition brokers",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "to effect any transactions in, or to induce or attempt to induce the purchase or sale of, any security",
+      "tier": "primary"
+    },
+    {
+      "id": "gv-4004",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.4004.htm",
+      "title": "Texas Government Code, Section 4004.051, Registration of dealers required",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "offer for sale, sell, or make a sale of any securities in this state unless the dealer or other person or company is first registered",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "write-the-sale-brief",
+      "title": "Write down what the sale needs from a broker",
+      "instruction": "Write an internal sale brief from the decision recorded in decide-when-to-sell, leaving out the lowest acceptable price. Record the target timing, whether an exchange is planned (run-a-1031-exchange), the loan's payoff or assumption path, buyers the principals know, and from the lease abstracts each tenant purchase option, right of first refusal or first offer, and tour entry terms. List every commission agreement already signed on the property, such as a past listing's protection period or renewal leasing commissions: in Texas, for commercial real estate, whoever assumes the owner's interest is bound by a commission agreement in a lease unless an escrow or bond is set up (Prop. Code 62.002(a), 62.022(d)). If entity interests might be sold instead, flag for counsel: a broker inducing a securities sale must register with the SEC unless exempt, as an M&A broker may be (15 U.S.C. 78o(a)(1), (b)(13)), and with Texas unless exempt (Gov't Code 4004.051).",
+      "mode": "agent",
+      "modeBasis": "Reading the decision record, the loan, lease and entity documents and writing an internal brief is document work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-fed.exchange-act.broker-registration"
+      ],
+      "calculators": [],
+      "consumes": [
+        "underwriting-model",
+        "loan-documents",
+        "lease-abstract",
+        "deal-entity-agreement",
+        "jv-agreement",
+        "sponsor-operating-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-pr-62",
+        "usc-15-78o",
+        "gv-4004"
+      ],
+      "typeNotes": {
+        "multifamily": "Buyers expect to walk units: record what the residents' leases say about entering a unit for a showing and the notice they require, and which on-site staff will help with tours.",
+        "industrial": "Where a single tenant's lease is near its end or the building is vacant, record whether owner-users may compete with investors.",
+        "retail": "Record any tenant right of first refusal or first offer, exclusives and co-tenancy clauses buyers will price, and which tenant sales reports the leases let the owner share.",
+        "office": "Record near-term expirations and current leasing activity, and whether a leasing broker's agreement pays it on leases signed while the property is for sale."
+      }
+    },
+    {
+      "id": "list-candidate-brokers",
+      "title": "List brokers active in the property type and submarket",
+      "instruction": "Build a short list of brokers who have recently listed or sold properties like this one in the same submarket, from the firm's data services, current listings and the comp set, adding brokers the principals name, including any that counsel or a lender has already recommended to them. For each, record the brokerage, the individual agents, the comparable deals found with their dates and whether each closed, the buyer types involved where the source shows them, and the source of every fact. Note as a question for the interview any broker that represented the seller when the firm bought the property, or that has a tie to a likely buyer, a principal or a capital partner. Contact no one yet; the principals approve the list first.",
+      "mode": "agent",
+      "modeBasis": "Searching listings, recorded deals and the firm's data services and building a list is research work.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "write-the-sale-brief"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "market-property-data",
+      "consumes": [
+        "comp-set"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "check-licenses",
+      "title": "Check each candidate's Texas license and disciplinary record",
+      "instruction": "Search TREC's License Holder Search for each candidate brokerage and its agents, and record the license number, type and status shown, with the date checked. A business entity may act as a broker only with its own license and a designated broker who is a licensed individual broker in active status and good standing (Occ. Code 1101.351(a-1), 1101.355(b)). TREC notes that listing agreements are taken in the broker's name, not the agent's, and that for property in Texas a broker from another state must hold a Texas license or associate with a Texas broker. A person cannot sue for compensation for brokerage done in Texas unless licensed when the work began or an attorney licensed in any state (1101.806(b)). Search TREC's disciplinary actions for each brokerage, designated broker and lead agent and record any order. Flag any candidate the searches do not support, and recheck the chosen broker before signing.",
+      "mode": "agent-browser",
+      "modeBasis": "TREC's license and disciplinary searches are public pages an agent can operate without a sign-in.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-candidate-brokers"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-oc-1101-licensing",
+        "tx-oc-1101-806",
+        "trec-license-search",
+        "trec-disciplinary-actions",
+        "trec-faq"
+      ]
+    },
+    {
+      "id": "send-the-request",
+      "title": "Send each broker the same property package and request",
+      "instruction": "Send every approved candidate the same package and request, with one response date, so proposals compare. The package summarizes the property, its leasing and operating history, capital work and timing, and attaches counsel's confidentiality agreement; release the rent roll, trailing-12 and tenant names only to brokers that return it signed, logging each signed copy by date. Ask for a pricing opinion with its sales and income assumptions; the buyer groups targeted and recent similar sales; the marketing plan, offer process and timeline; the fee, when earned and paid, and how a buyer's broker is paid; the term and protection period; and any tie to likely buyers. Never send the lowest acceptable price. A Texas license holder gives the firm TREC's Information About Brokerage Services notice at its first substantive communication about the property (Occ. Code 1101.558(b-1); 22 TAC 531.20); file each. A principal approves the list and each request first.",
+      "mode": "agent",
+      "modeBasis": "Drafting the package and request from the brief is writing work; it goes outside the firm, so a principal approves the list and each request.",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-candidate-brokers",
+        "check-licenses"
+      ],
+      "rules": [
+        "us-tx.trec.iabs"
+      ],
+      "calculators": [],
+      "consumes": [
+        "rent-roll",
+        "trailing-12"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-oc-1101-558",
+        "tac-22-531-20",
+        "trec-iabs-form"
+      ]
+    },
+    {
+      "id": "interview-brokers",
+      "title": "Interview each broker on buyers, marketing plan and team",
+      "instruction": "A principal meets each broker that responds, with the agent who would run the sale, at the property where the leases' entry terms allow, after the property manager gives tenants the notice they require, and asks every broker the same questions. Who works on this sale day to day, and what else are they selling? Which buyers would you call first, and which recent buyers of similar properties did you bring? Would you market widely or to a short list, and why? How will you qualify buyers, run tours, set up the data room and call for offers? How often will you report, and what will a report show? What went wrong on your last sale that failed or repriced? Do you, your brokerage or an affiliate intend to bid, or represent a likely bidder? Record the answers beside each proposal, noting any promise not in the written proposal.",
+      "mode": "human-offline",
+      "modeBasis": "Interviews are a principal's own conversations and judgment of the people who would do the work.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "send-the-request"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": [],
+      "typeNotes": {
+        "industrial": "Where the sale brief records that owner-users may compete with investors, ask each broker which of the two groups it reaches."
+      }
+    },
+    {
+      "id": "compare-pricing-opinions",
+      "title": "Compare pricing opinions against the firm's own valuation",
+      "instruction": "Put each broker's pricing opinion beside the firm's value from decide-when-to-sell, and test it rather than adopt it. Record each opinion's price, income, cap rate and cited sales. Check each sale against the comp set and the firm's data services, record its comp-set confirmation status (confirmed by a party, by public record only, or unconfirmed), and note any figure that contradicts the set; before adding a sale the set lacks, run it through pull-sale-and-lease-comps' check-deed-records and confirm-each-comp. Re-run income-value and cap-rate where an income or rate differs from the firm's, and run sale-proceeds at each opinion less that broker's fee. Any opinion well above the others or the evidence is a question for that broker. In Texas a license holder negotiating a listing must give a price opinion or market analysis, and a written one must say in TREC's words that it is not an appraisal (22 TAC 535.16(c), 535.17).",
+      "mode": "agent",
+      "modeBasis": "Checking cited sales against the comp set and data services and running three live calculators is analysis.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "send-the-request"
+      ],
+      "rules": [],
+      "calculators": [
+        "income-value",
+        "cap-rate",
+        "sale-proceeds"
+      ],
+      "market": "market-property-data",
+      "consumes": [
+        "comp-set",
+        "underwriting-model",
+        "rent-roll",
+        "trailing-12"
+      ],
+      "produces": [
+        "comp-set",
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tac-22-535-16",
+        "tac-22-535-17"
+      ]
+    },
+    {
+      "id": "check-references",
+      "title": "Check references from recent sellers",
+      "instruction": "A principal calls sellers the principals pick from each interviewed broker's recent sales of similar properties, not only the references the broker offers, and includes a sale that repriced, relisted or failed where one can be found. Ask each the same questions. How did the closing price compare with the broker's pricing guidance? How many offers came, and from what kinds of buyers? Did the buyer try to lower the price after due diligence, and how did the broker handle it? How well did the broker report and answer questions, and who did the work day to day? Would you hire the broker again? Where the principals know counsel or a lender who has closed deals the broker ran, ask for their view too. Record the answers in the comparison.",
+      "mode": "human-offline",
+      "modeBasis": "Reference calls are a person's conversations, and the callers speak frankly only to a principal.",
+      "actor": "principal",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "interview-brokers",
+        "compare-pricing-opinions"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "compare-fee-and-term",
+      "title": "Compare fee, term, exclusions and protection period",
+      "instruction": "Set each proposal's terms side by side: fee or schedule and any minimum; marketing costs to the firm; when the fee is earned and paid; listing type (exclusive right to sell, exclusive agency or open); term; protection period and how buyers register for it; and exclusions, such as buyers the principals know, a tenant exercising a purchase right, or a sale to a capital partner. Run sale-proceeds at the firm's value on each fee. A Texas license holder's brokerage contract must state a definite end date not subject to prior notice (Occ. Code 1101.652(b)(12)). For commercial real estate, Texas's broker's lien act treats a commission as earned at the earlier of the event the agreement names or the owner signing, within the agreement's period, a purchase contract the agreement contemplates with parties it contemplates; payment conditioned on an event that does not occur is not owed (Prop. Code 62.002(a), 62.004).",
+      "mode": "agent",
+      "modeBasis": "Comparing written proposals and running the live calculator on each fee is analysis; the positions taken are the principals'.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "send-the-request"
+      ],
+      "rules": [],
+      "calculators": [
+        "sale-proceeds"
+      ],
+      "consumes": [
+        "underwriting-model"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-oc-1101-652",
+        "tx-pr-62"
+      ]
+    },
+    {
+      "id": "compare-buyer-broker-terms",
+      "title": "Compare how buyers' brokers are paid and whether the broker may act for a buyer",
+      "instruction": "Record how each proposal pays a buyer's broker: from the listing fee, by the buyer or by the firm. A Texas broker may pay for brokerage work only a Texas license holder or an out-of-state broker that conducts none of the negotiations in Texas (Occ. Code 1101.651(a)). A broker that also represents a buyer becomes an intermediary, which needs each party's written consent stating the source of its pay; a listing agreement counts as that consent only if it authorizes the broker to act as an intermediary and sets out, in conspicuous bold or underlined print, the conduct an intermediary is barred from (1101.559(a)-(b), 1101.561(b), 1101.651(d)). Pay from more than one party needs every party's knowledge and consent, and a broker may not be an undisclosed principal (1101.652(b)(8), (16)). The written buyer-agreement rule (1101.563, from January 1, 2026) covers only buyers of one-to-four-unit homes and condominium or cooperative units.",
+      "mode": "agent",
+      "modeBasis": "Reading the proposals against the statute and listing the open points is analysis; the principals decide each point with counsel.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "send-the-request"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-oc-1101-agency",
+        "tx-oc-1101-652",
+        "tx-oc-1101-563"
+      ]
+    },
+    {
+      "id": "choose-the-broker",
+      "title": "Choose the broker and a runner-up",
+      "instruction": "The people the governing agreement entitles to decide choose the broker and a runner-up and record why: in a syndication the principals, in a fund the investment committee as the fund documents provide, in a joint venture the principals subject to any partner approval that get-consents collects. They also set the positions counsel takes: the fee and when it is earned, the term, the protection period, exclusions, buyer-broker pay, and whether the broker may act as an intermediary. Weigh each broker's reach to the likely buyers, its team, its plan against the sale brief, how its pricing held up, the references, the net from the sale-proceeds runs, the terms and any conflict found. A high pricing opinion with weak support is a risk, not an advantage. Give the other candidates no final answer until the listing agreement is signed, so the runner-up stays available.",
+      "mode": "human-online",
+      "modeBasis": "Choosing who sells the property is the principals' decision for the owning entity.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-references",
+        "compare-fee-and-term",
+        "compare-buyer-broker-terms"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "underwriting-model",
+        "comp-set"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "negotiate-listing-agreement",
+      "title": "Negotiate the listing agreement with counsel",
+      "instruction": "Counsel drafts or marks up the broker's form to the principals' positions, adding a definite end date, the protection period's buyer list, sign and marketing approvals, confidentiality, no unapproved contact with tenants or the lender, reporting, and ending for cause. Counsel confirms no tenant or partner right in the brief needs notice before signing; market-the-property's confirm-rights-to-buy clears the rest before buyers hear. A Texas broker with an exclusive listing is the seller's agent and must report material information and present every offer (Occ. Code 1101.557), even after acceptance unless the seller agreed otherwise in writing (22 TAC 535.156(a)). For commercial real estate (not, among others, one to four residential units), Texas's broker's lien act requires the broker's lien right to be disclosed in the commission agreement and voids a waiver of it; the right serves the broker; counsel decides how the agreement treats it (Prop. Code 62.002(a), 62.003(2), 62.021(e), 62.022(a)).",
+      "mode": "human-online",
+      "modeBasis": "Drafting and negotiating the contract is legal work, which is counsel's.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-the-broker"
+      ],
+      "rules": [
+        "us-tx.contracts.statute-of-frauds"
+      ],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-oc-1101-agency",
+        "tac-22-535-156",
+        "tx-pr-62"
+      ]
+    },
+    {
+      "id": "get-consents",
+      "title": "Get any consent the listing needs before signing",
+      "instruction": "Prepare each consent the governing documents require for the broker or the listing terms; decide-when-to-sell collected consent to the sale. In a joint venture, the capital partner's written approval where the JV agreement makes engaging a broker or the listing agreement, including any price term in it, a major decision, or gives the partner control of the sale; its approval of price guidance and the package belongs to market-the-property's clear-partner-rights, and of the buyer to choose-the-buyer. In a fund, the advisory committee's consent where the fund agreement requires it for a related-party fee, such as to an affiliated broker. In a syndication, any approval the deal entity agreement requires, including for an affiliate's fee. Where none is needed, record the clause saying so. Counsel reviews any request to investors; a principal signs each and sends it as the document directs. Record each answer and send any condition to counsel.",
+      "mode": "human-online",
+      "modeBasis": "An agent drafts each request from the documents; a principal signs it for the owning entity and sends it by the method the document names.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "negotiate-listing-agreement"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "sponsor-operating-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "sign-listing-agreement",
+      "title": "Sign the listing agreement",
+      "instruction": "Once counsel signs off and every required consent is in hand, recheck the broker's license, then the person the owning entity's agreement authorizes signs in the entity's exact legal name and the broker signs in its licensed name. File the signed agreement with the consents. Calendar the agreement's own dates: the end date, the protection period, the day the broker's list of registered buyers is due, and a date to review progress with the principals. Give the broker only what it needs to market: the timing, the excluded buyers, the lease entry terms and any tenant rights counsel has cleared to share. Never give it the lowest acceptable price or the brief's internal notes, such as the loan path and counsel flags. Then start market-the-property, handing the marketing plan to its set-timeline-and-offer-form step.",
+      "mode": "human-online",
+      "modeBasis": "Signing binds the owning entity, so a person with authority does it.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "get-consents"
+      ],
+      "rules": [
+        "us-tx.ueta",
+        "us-fed.esign"
+      ],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "deal-entity-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "record-the-choice",
+      "title": "Tell the brokers not chosen and record the choice",
+      "instruction": "Draft a note to each broker not chosen asking it, under its confidentiality agreement, to return or destroy what it received and confirm in writing; a person approves each note. File the comparison, pricing tests, interview and reference notes, license searches, brokerage notices, confidentiality agreements, consents and reasons in the deal file. Register every commission agreement signed on the property by the owner or its authorized agent, such as a property manager, with broker, fee basis and end date, for close-the-sale's checklist: in Texas, for commercial real estate, if the buyer, its agent or the escrow agent asks, the seller and its broker must give an affidavit before closing naming each broker with whom the affiant knows or believes the seller or its authorized agent signed a commission agreement under which a commission is claimed or earned and unpaid (Prop. Code 62.023). Revisit if the listing ends unsold.",
+      "mode": "agent",
+      "modeBasis": "Drafting the notes and filing the record is writing work; the notes go outside the firm, so a person approves each one.",
+      "risk": "low",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-listing-agreement"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-pr-62"
+      ]
+    }
+  ],
+  "outlineSteps": []
 }

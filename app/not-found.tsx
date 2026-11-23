@@ -18,7 +18,7 @@ const WAYS = [
   },
   {
     title: "Want the steps?",
-    line: "The playbooks go step by step, from forming the firm to buying a property, and say who does each step.",
+    line: "The playbooks go step by step, from forming the firm to selling a property, and say who does each step.",
     href: "/playbooks",
     action: "See the playbooks",
     search: false,

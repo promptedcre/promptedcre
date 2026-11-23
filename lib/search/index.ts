@@ -21,6 +21,8 @@ export type SearchDoc = {
   text: string;
   // true for a playbook, situation or audit that is listed but not written yet; left out otherwise
   outline?: boolean;
+  // true for a flagship record (featured on the home page); left out otherwise
+  featured?: boolean;
 };
 
 export type SearchHit = Omit<SearchDoc, "text"> & { score: number };
@@ -92,6 +94,7 @@ export function buildSearchIndex(c: Corpus, r: Rankings): SearchDoc[] {
       summary: p.summary,
       text: `${p.title} ${p.summary} ${p.situation?.trigger ?? ""} ${steps}`.toLowerCase(),
       ...(p.depth === "outline" ? { outline: true } : {}),
+      ...(p.featured ? { featured: true } : {}),
     });
   }
   // A calculator is found by its name, what it works out and how (its method lines); only
@@ -149,13 +152,14 @@ const toHit = (d: SearchDoc, score: number): SearchHit => ({
   url: d.url,
   summary: d.summary,
   ...(d.outline ? { outline: true } : {}),
+  ...(d.featured ? { featured: true } : {}),
   score,
 });
 
 // Words match whole words (see termSource). A title match counts three; each mention in the text
 // counts once, up to three; the sum is scaled by the share of the query's words found; a document
 // holding the whole query as written gains a bonus, more when it is in the title. Best first; at
-// the same score a written record comes before an outline.
+// the same score a written record comes before an outline, then a flagship record before the rest.
 export function searchIndex(docs: readonly SearchDoc[], query: string, kinds: readonly SearchKind[] = SEARCH_KINDS, limit = 10): SearchHit[] {
   const terms = queryTerms(query).map((t) => ({ t, re: new RegExp(termSource(t), "g") }));
   if (terms.length === 0) return [];
@@ -187,7 +191,9 @@ export function searchIndex(docs: readonly SearchDoc[], query: string, kinds: re
     if (phrase) score += phrase.test(title) ? 6 : phrase.test(d.text) ? 2 : 0;
     hits.push(toHit(d, Math.round(score * 100) / 100));
   }
-  return hits.sort((a, b) => b.score - a.score || Number(a.outline ?? false) - Number(b.outline ?? false) || a.title.localeCompare(b.title)).slice(0, limit);
+  return hits
+    .sort((a, b) => b.score - a.score || Number(a.outline ?? false) - Number(b.outline ?? false) || Number(b.featured ?? false) - Number(a.featured ?? false) || a.title.localeCompare(b.title))
+    .slice(0, limit);
 }
 
 // How many single-letter edits (insert, delete, replace, or swap two neighbours) turn a into b.

@@ -7,26 +7,747 @@
   "phase": "raise",
   "order": 115,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "form-sponsor-entity",
+    "open-sponsor-bank-accounts",
+    "choose-structure-and-exemption",
+    "set-the-offering-terms",
+    "set-up-registered-agent",
+    "set-up-the-books",
+    "set-up-document-storage"
+  ],
+  "consumes": [
+    "offering-term-sheet",
+    "loan-term-sheet",
+    "purchase-and-sale-agreement",
+    "subscription-agreement",
+    "private-placement-memorandum",
+    "deal-entity-agreement",
+    "jv-agreement"
+  ],
+  "produces": [
+    "certificate-of-formation",
+    "deal-entity-agreement",
+    "ein-confirmation",
+    "wire-instructions"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx",
+      "us-de"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Confirm the structure and entity type decided with counsel",
-    "Confirm the manager or general partner entity that will control it",
-    "Choose the entity's state with counsel to fit the offering",
-    "Form the entity before any subscription is accepted",
-    "Open the entity's bank account with named signers",
-    "Require a second person to approve every outgoing wire",
-    "Have the account open before any wiring instructions go out",
-    "Keep the entity's money and records apart from the sponsor's and other deals'"
-  ]
+  "sources": [
+    {
+      "id": "tx-boc-3",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.3.htm",
+      "title": "Texas Business Organizations Code, Chapter 3 (Sections 3.001, 3.004, 3.005, 3.010 and 3.011: formation, signing and certificate contents)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-5",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.5.htm",
+      "title": "Texas Business Organizations Code, Chapter 5 (Sections 5.053, 5.055, 5.056, 5.201 and 5.2011: names and registered agents)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-9",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.9.htm",
+      "title": "Texas Business Organizations Code, Chapter 9 (Sections 9.001, 9.051, 9.052, 9.054 and 9.251, foreign entities and what is not transacting business)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-101",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.101.htm",
+      "title": "Texas Business Organizations Code, Chapter 101 (Sections 101.052, 101.101, 101.114 and 101.602: company agreement, members, liability and series limits)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-153",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.153.htm",
+      "title": "Texas Business Organizations Code, Chapter 153 (Sections 153.102, 153.103 and 153.152, liability of limited and general partners; Section 153.551, records)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-171",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.171.htm",
+      "title": "Texas Tax Code, Chapter 171 (Sections 171.0002 and 171.001, franchise tax: taxable entities and the tax imposed)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-207",
+      "url": "https://www.sos.state.tx.us/corp/instructions/207.shtml",
+      "title": "Form 207, Instructions for Certificate of Formation (Limited Partnership), revised 09/26",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-21",
+      "quote": "Do not make financial expenditures or execute documents based on a preliminary clearance.",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-806",
+      "url": "https://www.sos.texas.gov/corp/forms/806_boc.pdf",
+      "title": "Form 806, Business Filings and Trademarks Fee Schedule, revised 09/26",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-account-search",
+      "url": "https://comptroller.texas.gov/taxes/franchise/account-status/search",
+      "title": "Franchise Tax Account Status Search",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-coas",
+      "url": "https://comptroller.texas.gov/taxes/franchise/coas-instructions.php",
+      "title": "Franchise Tax Account Status (what the status shows)",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "quote": "provides the status of an entity's right to transact business in Texas",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-questionnaire",
+      "url": "https://comptroller.texas.gov/taxes/franchise/questionnaire.php",
+      "title": "Questionnaires for Franchise Tax Accountability",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-franchise",
+      "url": "https://comptroller.texas.gov/taxes/franchise/",
+      "title": "Franchise Tax (due date)",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-17-2",
+      "url": "https://delcode.delaware.gov/title6/c017/sc02/index.html",
+      "title": "6 Del. C. Chapter 17, Subchapter II (Sections 17-201 and 17-204, certificate of limited partnership and its signing)",
+      "publisher": "Delaware General Assembly",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-17-11",
+      "url": "https://delcode.delaware.gov/title6/c017/sc11/index.html",
+      "title": "6 Del. C. Chapter 17, Subchapter XI (Sections 17-1107 and 17-1109, fees and annual tax of a limited partnership)",
+      "publisher": "Delaware General Assembly",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-2",
+      "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter II (Section 18-201, certificate of formation of an LLC)",
+      "publisher": "Delaware General Assembly",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-11",
+      "url": "https://delcode.delaware.gov/title6/c018/sc11/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter XI (Section 18-1107, annual tax of an LLC)",
+      "publisher": "Delaware General Assembly",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-ein",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number",
+      "title": "Get an employer identification number (page last reviewed October 16, 2026)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-ss4-instructions",
+      "url": "https://www.irs.gov/instructions/iss4",
+      "title": "Instructions for Form SS-4 (Rev. December 2025), lines 7a to 9a",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-301-7701-3",
+      "url": "https://www.ecfr.gov/current/title-26/section-301.7701-3",
+      "title": "26 CFR 301.7701-3, Classification of certain business entities (paragraphs (b)(1) and (f)(2))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-31-1020-220",
+      "url": "https://www.ecfr.gov/current/title-31/section-1020.220",
+      "title": "31 CFR 1020.220, Customer identification program requirements for banks",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-31-1010-230",
+      "url": "https://www.ecfr.gov/current/title-31/section-1010.230",
+      "title": "31 CFR 1010.230, Beneficial ownership requirements for legal entity customers",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "fincen-boi",
+      "url": "https://www.fincen.gov/boi",
+      "title": "Beneficial Ownership Information Reporting (alert updated August 11, 2026)",
+      "publisher": "Financial Crimes Enforcement Network",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "ic3-bec",
+      "url": "https://www.ic3.gov/CrimeInfo/BEC",
+      "title": "Business Email Compromise (BEC)",
+      "publisher": "Federal Bureau of Investigation, Internet Crime Complaint Center",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-34-3-586",
+      "url": "https://www.law.cornell.edu/regulations/texas/34-Tex-Admin-Code-SS-3-586",
+      "title": "34 Tex. Admin. Code 3.586, Margin: Nexus (subsection (d)(15), real estate)",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-1",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.1.htm",
+      "title": "Texas Business Organizations Code, Chapter 1 (Section 1.002(50), limited partnership defined)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-17-1",
+      "url": "https://delcode.delaware.gov/title6/c017/sc01/index.html",
+      "title": "6 Del. C. Chapter 17, Subchapter I (Section 17-101(11), limited partnership defined)",
+      "publisher": "Delaware General Assembly",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-rr-2004-77",
+      "url": "https://www.irs.gov/irb/2004-31_IRB#RR-2004-77",
+      "title": "Rev. Rul. 2004-77, entity with two members where one is disregarded into the other (Internal Revenue Bulletin 2004-31)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "the eligible entity cannot be classified as a partnership",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-34-3-584",
+      "url": "https://www.law.cornell.edu/regulations/texas/34-Tex-Admin-Code-SS-3-584",
+      "title": "34 Tex. Admin. Code 3.584, Margin: Reports and Payments (subsection (c)(2), first annual report)",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "write-entity-plan",
+      "title": "Write the entity plan from the structure decision",
+      "instruction": "Write a one-page plan, for counsel to confirm, of the entity that will raise the money and own the property. From counsel's decision under choose-structure-and-exemption and the offering and loan term sheets, record: the vehicle, name and state; its controller and registered agent; who holds it before investors are admitted; the lender's borrower requirements, such as a single-purpose borrower or a property-owning entity under the one investors buy into; whether subscription money is held in escrow or a separate account until a minimum or the first close; and the dates for the offering documents, first acceptance, contract assignment and closing. A deal the firm puts in a series, with the lender, title insurer and any partner agreeing, goes to set-up-series instead. For a fund, list any property subsidiary; each runs draft-certificate through open-entity-account when its property goes under contract. Mark each item known or assumed; unknowns go to counsel.",
+      "mode": "agent",
+      "modeBasis": "Every item comes from counsel's written decision, the term sheets and the deal file; the agent assembles the plan and flags the gaps.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "offering-term-sheet",
+        "loan-term-sheet",
+        "purchase-and-sale-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "jv-venture-formation",
+      "title": "For a JV, agree with the partner which party forms the venture entity, and how",
+      "instruction": "In a joint venture, settle with the capital partner which party forms the venture entity, in which state, on whose form of agreement, and who manages it, taking each answer from negotiate-jv-agreement's draft-venture-term-sheet as the partner last confirmed it in writing. Record whether the partner must approve the name and the certificate before filing; whether the firm's member entity forms the venture alone and admits the partner when the venture agreement is signed in onboard-an-investor; who pays the formation costs under the pursuit-cost terms; and who keeps the registered agent, as set-up-registered-agent's jv-venture-agent step settles. If the partner forms the venture entity, the firm reviews its draft certificate and agreement before filing instead; mark draft-certificate and the filing steps not applicable, with the reason. The venture's banking terms are read under open-sponsor-bank-accounts. A principal confirms each answer with the partner in writing before anything is filed.",
+      "mode": "human-online",
+      "modeBasis": "These are terms the principals agree with the capital partner; an agent can record the answers but cannot agree them.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "write-entity-plan"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "offering-term-sheet"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "hold-payment-instructions",
+      "title": "Keep wiring instructions out of every document until the account is ready",
+      "instruction": "Check that no subscription package, portal page, email template or notice tells investors or a partner where to send money until the entity's own account is open, under dual approval, and its instructions are verified. Run this while the offering set is assembled, before prepare-offering-documents' approve-final-set, and again before the first acceptance. Flag any document that names the sponsor entity's or a principal's account as a stand-in, or asks anyone to wire before the entity exists. The instructions then reach investors only as onboard-an-investor's confirm-funding-instructions and call-capital-fund-closing's verify-receiving-account set out: confirmed by a call to a known number, delivered through the portal, recorded without the numbers, and with a written promise they will never change by email. The FBI's complaint center advises a second channel to verify any request to change account information; any such change goes to wire-instructions-change. Hand the flags to a principal the same day.",
+      "mode": "agent",
+      "modeBasis": "Reading the documents and templates for payment instructions is document review; the callback and every release of money stay with people.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "write-entity-plan"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "subscription-agreement",
+        "private-placement-memorandum"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ic3-bec"
+      ]
+    },
+    {
+      "id": "confirm-type-and-state",
+      "title": "Confirm the entity type and state with counsel",
+      "instruction": "Counsel confirms the entity type and state in writing, with reasons. In Texas an LLC's members and managers are not liable for its debts unless its company agreement says so. A limited partnership's general partner has a general partner's liability for its debts, so a fund's general partner is usually an entity. A limited partner is liable only if it is also a general partner or takes part in control, and then only to someone who dealt with it reasonably believing it was a general partner; the statute lists acts that are not control. A Delaware entity that transacts business in Texas must register there; the statute lists owning property without more as not transacting business, and counsel judges this entity's case. That list decides registration only: for Texas franchise tax, which reaches LLCs and partnerships, with exceptions the CPA checks, holding Texas property is doing business, registered or not.",
+      "mode": "human-online",
+      "modeBasis": "The entity type and state are legal and tax judgments counsel makes with the principals.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "write-entity-plan",
+        "jv-venture-formation"
+      ],
+      "rules": [
+        "us-tx.boc.llc-formation",
+        "us-de.llc.formation",
+        "us-tx.boc.registered-agent",
+        "us-tx.franchise-tax.basics"
+      ],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "tx-boc-153",
+        "tx-boc-9",
+        "tx-boc-5",
+        "tx-tax-171",
+        "tac-34-3-586"
+      ]
+    },
+    {
+      "id": "check-public-records",
+      "title": "Check the controlling entity's standing and screen the new name",
+      "instruction": "Confirm in public records that the entity that will control the new one is active, and screen the proposed name. The controller is the sponsor entity or a manager entity, a fund's general partner entity from form-sponsor-entity, or the firm's member entity in a joint venture. Search each Texas-registered one in the Comptroller's franchise tax account status search, which shows its right to transact business in Texas; save the result, dated, with the exact legal name and address the certificate will carry. A principal confirms a Delaware controller's standing at filing. In Texas an LLC's name, a registering Delaware LLC's included, must say limited liability company, limited company or an abbreviation, and a limited partnership's limited, limited partnership or an abbreviation; each must be distinguishable from names on file, or a Delaware entity registers in Texas under another name, settled before drafting. Stop if the controller is not active.",
+      "mode": "agent-browser",
+      "modeBasis": "The Comptroller's search is public and needs no sign-in; Delaware's search is left to a person, as form-sponsor-entity's Delaware step explains, and the Secretary of State decides on the name at filing.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-type-and-state"
+      ],
+      "rules": [
+        "us-tx.boc.llc-formation"
+      ],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "cpa-account-search",
+        "cpa-coas",
+        "tx-boc-5"
+      ]
+    },
+    {
+      "id": "draft-certificate",
+      "title": "Draft the certificate of formation for the person who signs",
+      "instruction": "Prepare the certificate from the confirmed plan. For an LLC, follow form-sponsor-entity's draft-certificate step, which fits any Texas or Delaware LLC; if it will hold deals in series, add the notice of series liability limits that set-up-series' add-series-notice describes, since Texas requires it for the limits to apply. A Texas limited partnership's certificate, on Form 207, gives the name and designation; the registered agent and office; each general partner's name and address; the principal office in the United States where records are kept; the initial mailing address for Comptroller tax mail; and when it takes effect. A Delaware certificate of limited partnership gives the name, the registered office and agent, and each general partner's name and address. Name only the agent the principals chose, once set-up-registered-agent's get-consent has its signed consent; in Texas, naming it affirms consent. Leave out personal identifying information, which can get a Texas filing rejected.",
+      "mode": "agent",
+      "modeBasis": "Every answer comes from the plan, the public-record results and the principals' decisions; the agent fills in the form for the signer.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-public-records"
+      ],
+      "rules": [
+        "us-tx.boc.llc-formation",
+        "us-de.llc.formation",
+        "us-tx.boc.registered-agent"
+      ],
+      "calculators": [],
+      "consumes": [],
+      "produces": [
+        "certificate-of-formation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "sos-207",
+        "tx-boc-3",
+        "tx-boc-5",
+        "tx-boc-101",
+        "de-code-17-2"
+      ]
+    },
+    {
+      "id": "adopt-initial-agreement",
+      "title": "Sign the entity's initial agreement and record who may act for it",
+      "instruction": "The manager or general partner, and any initial member, sign the agreement counsel provides: the deal entity agreement from prepare-offering-documents, or an initial agreement restated when investors join. A limited partnership must have at least one limited partner from formation, usually a principal or the sponsor entity; choose it with the CPA, since who holds it affects tax classification, and it signs too. Sign it by filing, effective with the certificate: a Texas limited partnership's partners must enter into a partnership agreement to form it, and Delaware allows signing before, at or after filing. In Texas a company agreement binds each member and manager even if unsigned, and an LLC with managers may go a reasonable time after formation with no members. The agreement says how investors are admitted, which hold-the-first-close applies; a joint venture's is signed in onboard-an-investor. Record the entity's signers and their limits.",
+      "mode": "human-online",
+      "modeBasis": "Counsel drafts the agreement and it binds the people who sign it, so each signs personally.",
+      "actor": "principal",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "draft-certificate"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "deal-entity-agreement",
+        "offering-term-sheet",
+        "certificate-of-formation"
+      ],
+      "produces": [
+        "deal-entity-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "tx-boc-3",
+        "tx-boc-1",
+        "de-code-17-1",
+        "de-code-17-2",
+        "de-code-18-2"
+      ]
+    },
+    {
+      "id": "settle-tax-classification",
+      "title": "Have the CPA settle the entity's tax classification before the EIN application",
+      "instruction": "The CPA decides in writing how the entity is classified for federal tax at formation, and how its EIN application treats that. By default a domestic LLC or limited partnership is a partnership only with two or more owners for federal tax purposes, and is disregarded with one; a disregarded entity becomes a partnership when it gains a second owner. State-law owners are not always tax owners: if one of two members, such as a general partner that is a single-member LLC owned by the only limited partner, is disregarded into the other, the IRS counts one owner and the entity cannot be a partnership. If it is disregarded at formation, the CPA decides whether to apply now or once investors are admitted; on that later application the Form SS-4 instructions have it check Partnership on line 9a. Record the decision and its basis for get-ein.",
+      "mode": "human-online",
+      "modeBasis": "Classifying the entity for federal tax is a tax judgment the CPA makes; an agent can gather the facts but cannot make it.",
+      "actor": "cpa",
+      "licensed": "cpa",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "adopt-initial-agreement"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-26-301-7701-3",
+        "irs-rr-2004-77",
+        "irs-ss4-instructions"
+      ]
+    },
+    {
+      "id": "file-texas-certificate",
+      "title": "File the Texas certificate before any subscription is accepted",
+      "instruction": "File the certificate with the Secretary of State before the offering documents go out, and well before any subscription is countersigned, because the entity exists only once its certificate takes effect. Before signing, confirm any Delaware controller's standing yourself in the Division of Corporations' entity search. An LLC's certificate is signed by its organizer and costs $300; a limited partnership's is signed by every general partner and costs $750. File through SOSPortal, paying by ACH or card, or by mail or in person. The filing takes effect when filed, or on a stated later date up to 90 days after signing. Save the filed certificate and record its file number and date. When the Comptroller's letter arrives, complete its accountability questionnaire online, as Texas LLCs and limited partnerships newly registered do, and keep the letter, with its taxpayer and Webfile numbers, where file-texas-franchise-report will look.",
+      "mode": "human-online",
+      "modeBasis": "The organizer or each general partner signs, the fee is paid in the firm's name and the questionnaire sits behind a person's Webfile sign-in; none can be handed to an agent.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "cost": {
+        "text": "$300 for an LLC or $750 for a limited partnership, Secretary of State filing fee",
+        "usdMin": 300,
+        "usdMax": 750,
+        "sourceId": "sos-806"
+      },
+      "after": [
+        "draft-certificate",
+        "adopt-initial-agreement"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.boc.llc-formation"
+      ],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [],
+      "produces": [
+        "certificate-of-formation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-3",
+        "sos-207",
+        "sos-806",
+        "cpa-questionnaire"
+      ]
+    },
+    {
+      "id": "file-delaware-certificate",
+      "title": "File in Delaware, and register in Texas if the entity does business there",
+      "instruction": "File the certificate with the Delaware Division of Corporations before any subscription is accepted, then register in Texas if the entity will transact business there. Before signing, check any Delaware controller's standing yourself in the Division's entity search; form-sponsor-entity's Delaware step covers an LLC's filing. A certificate of limited partnership is signed by every general partner; the statute sets its fee at $200, but confirm the amount on the Division's current form. Texas registration costs $750 and needs a registered agent there; doing business unregistered over 90 days can bring a late fee and back fees and taxes, and bars suing in Texas over that business until it registers. Then complete the Comptroller's accountability questionnaire: online for a Delaware LLC newly registered in Texas; on paper for a Delaware limited partnership, or an unregistered owner of Texas property, unless it received the letter. Keep the letter where file-texas-franchise-report will look.",
+      "mode": "human-online",
+      "modeBasis": "Authorized people sign, the fees are paid in the firm's name and the questionnaire is a person's Webfile or paper filing, so a person files.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "cost": {
+        "text": "$200 Delaware filing fee for a limited partnership under the statute (an LLC's is in form-sponsor-entity), plus $750 to register in Texas if it transacts business there",
+        "usdMin": 200,
+        "usdMax": 950,
+        "sourceId": "de-code-17-11"
+      },
+      "after": [
+        "draft-certificate",
+        "adopt-initial-agreement"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-de"
+        ]
+      },
+      "rules": [
+        "us-de.llc.formation",
+        "us-tx.boc.registered-agent"
+      ],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [],
+      "produces": [
+        "certificate-of-formation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "de-code-17-2",
+        "de-code-17-11",
+        "de-code-18-2",
+        "tx-boc-9",
+        "tx-boc-5",
+        "sos-806",
+        "cpa-questionnaire"
+      ]
+    },
+    {
+      "id": "get-ein",
+      "title": "Get the entity's EIN after the certificate is filed",
+      "instruction": "Once the certificate is filed and the CPA has settled the classification, the responsible party applies online for the EIN, at no fee; the IRS warns that an LLC applying before its state filing may be delayed. The agent prepares the other answers from the certificate, the agreement and the CPA's decision, as form-sponsor-entity's prepare-ein-answers step does, and leaves the SSN or ITIN for the responsible party to enter. The responsible party is an individual who controls the entity and its funds, never an entity, and the IRS issues one EIN per responsible party per day, whichever way it applies. Save the confirmation where the firm keeps tax documents and record only where it is kept.",
+      "mode": "human-online",
+      "modeBasis": "The application needs the responsible party's SSN or ITIN, which an agent must never hold; the agent prepares the other answers.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "cost": {
+        "text": "No IRS fee",
+        "usdMin": 0,
+        "usdMax": 0,
+        "sourceId": "irs-ein"
+      },
+      "after": [
+        "file-texas-certificate",
+        "file-delaware-certificate",
+        "settle-tax-classification"
+      ],
+      "rules": [
+        "us-fed.irs.ein"
+      ],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "certificate-of-formation"
+      ],
+      "produces": [
+        "ein-confirmation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "irs-ein",
+        "irs-ss4-instructions"
+      ]
+    },
+    {
+      "id": "open-entity-account",
+      "title": "Open the entity's account in its own name, with named signers and dual approval",
+      "instruction": "A principal named in a written consent of the manager or general partner opens the account in the entity's exact legal name and under its EIN, with only the signers its agreement allows, never in the sponsor entity's or a principal's name. The bank identifies the entity and its beneficial owners as form-sponsor-entity's open-bank-account step describes; before investors are admitted those are usually the principals, so ask when the bank wants that updated. Get the incoming wire instructions through the bank's secure channel, not email, and start the entity's wire-instructions record, never with the numbers. Where the plan holds subscription money until a minimum or first close, open that account the same way, or have counsel engage the escrow agent the documents name. Before money arrives, set roles, dual approval, limits and alerts, and read the funds-transfer terms, as open-sponsor-bank-accounts does, adding any approvals a JV agreement gives the partner.",
+      "mode": "human-online",
+      "modeBasis": "The bank verifies and contracts with the people who open and sign the account, and roles and approvals are set under a person's administrator login; an agent cannot sign or hold their credentials.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "get-ein",
+        "adopt-initial-agreement"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "certificate-of-formation",
+        "deal-entity-agreement",
+        "ein-confirmation",
+        "jv-agreement"
+      ],
+      "produces": [
+        "wire-instructions"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-31-1020-220",
+        "ecfr-31-1010-230"
+      ]
+    },
+    {
+      "id": "set-up-records-and-calendar",
+      "title": "Keep the entity's books, records and filings apart from the firm's and other deals'",
+      "instruction": "Add the entity to the firm's records. Ask a principal to open its books under set-up-the-books' choose-the-system, and record every payment between it and the firm or another deal only as its agreement allows, on both entities' books. Create its folder in the set-up-document-storage structure and add it to inventory-required-records, with fund-lp-records for a fund partnership, and for any other Texas limited partnership the records Business Organizations Code 153.551 lists; for a Delaware entity, counsel lists the records its agreement and Delaware law require. Name its register under keep-investor-register-current. Enter in the deadline-calendar its first franchise tax report, due May 15 of the year after it becomes subject to the tax and each May 15 after, for file-texas-franchise-report, and a Delaware entity's $400 annual tax, due each June 1 starting the year after formation. No beneficial ownership report is due for a U.S.-formed entity.",
+      "mode": "agent",
+      "modeBasis": "Setting up folders, lists and calendar entries from the filed documents is file work; a principal opens the books under set-up-the-books.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "adopt-initial-agreement",
+        "get-ein"
+      ],
+      "rules": [
+        "us-tx.franchise-tax.basics",
+        "us-de.llc.formation",
+        "us-fed.fincen.boi"
+      ],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "certificate-of-formation",
+        "deal-entity-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "cpa-franchise",
+        "tac-34-3-584",
+        "de-code-17-11",
+        "de-code-18-11",
+        "fincen-boi",
+        "tx-boc-153"
+      ]
+    },
+    {
+      "id": "assign-contract-to-entity",
+      "title": "Assign the purchase contract to the entity and tell title and the lender",
+      "instruction": "If the sponsor entity or a principal signed the purchase contract, assign it to the new entity before closing, on an assignment counsel drafts with any assumption the contract requires. For a fund, assign it to the subsidiary that will take title, not to the fund. An authorized signer for each entity signs as the contract allows and gives the seller any notice or documents it requires. Then tell the title company the entity is the proposed insured, as review-title-and-survey expects, and give the lender the entity's formation documents as the borrower for the loan package in finance-and-close. In a joint venture, get the partner's approval first if the JV agreement requires it. Confirm the earnest money is credited to the entity under the assignment. Save the signed assignment, and any acknowledgement from the seller, with the contract.",
+      "mode": "human-online",
+      "modeBasis": "Counsel drafts the assignment, and it binds both entities, each signing through an authorized person.",
+      "actor": "principal",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "file-texas-certificate",
+        "file-delaware-certificate",
+        "adopt-initial-agreement"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "certificate-of-formation"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    }
+  ],
+  "outlineSteps": []
 }

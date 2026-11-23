@@ -7,29 +7,523 @@
   "phase": "acquire",
   "order": 262,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "screen-deal-buy-box",
+    "sign-nda-for-offering-memorandum",
+    "negotiate-purchase-contract",
+    "order-third-party-reports",
+    "review-title-and-survey",
+    "abstract-the-leases"
+  ],
+  "consumes": [
+    "deal-screen",
+    "purchase-and-sale-agreement",
+    "title-commitment",
+    "survey",
+    "lease-abstract",
+    "rent-roll",
+    "site-visit-report",
+    "underwriting-model",
+    "loan-term-sheet",
+    "jv-agreement"
+  ],
+  "produces": [
+    "zoning-report"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Identify the parcel and the jurisdiction that zones it",
-    "Find the zoning district and any overlay",
-    "Read the district's permitted uses against current and planned use",
-    "Check conditions, variances and nonconforming status",
-    "Get the certificate of occupancy and permit history",
-    "Ask the jurisdiction about open code violations",
-    "Check private deed restrictions and covenants",
-    "Check whether another tenant type could reuse the building",
-    "Note pending zoning or regulatory changes",
-    "Order a zoning report if the lender requires one",
-    "Record findings and open items in the diligence file"
-  ]
+  "sources": [
+    {
+      "id": "tx-lgc-211",
+      "url": "https://tcss.legis.texas.gov/resources/LG/htm/LG.211.htm",
+      "title": "Texas Local Government Code, Chapter 211, Municipal Zoning Authority (Sections 211.0011, 211.003, 211.005 to 211.009, including 211.0063, and 211.019)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "Zoning regulations must be uniform for each class or kind of building in a district",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-lgc-212",
+      "url": "https://tcss.legis.texas.gov/resources/LG/htm/LG.212.htm",
+      "title": "Texas Local Government Code, Chapter 212, Municipal Regulation of Subdivisions and Property Development (Sections 212.003, 212.0115, 212.134 and 212.151 to 212.153)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "the use of any building or property for business, industrial, residential, or other purposes",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-lgc-231",
+      "url": "https://tcss.legis.texas.gov/resources/LG/htm/LG.231.htm",
+      "title": "Texas Local Government Code, Chapter 231, County Zoning Authority",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-25",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.25.htm",
+      "title": "Texas Tax Code, Chapter 25 (Section 25.02, Form and content of appraisal records)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "an identification of each taxing unit in which the property is taxable",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-lgc-214",
+      "url": "https://tcss.legis.texas.gov/resources/LG/htm/LG.214.htm",
+      "title": "Texas Local Government Code, Chapter 214, Municipal Regulation of Housing and Other Structures (Sections 214.001 and 214.216)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "applies to all commercial buildings in a municipality and to any alteration, remodeling, enlargement, or repair of those commercial buildings",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-lgc-54",
+      "url": "https://tcss.legis.texas.gov/resources/LG/htm/LG.54.htm",
+      "title": "Texas Local Government Code, Chapter 54, Enforcement of Municipal Ordinances (Sections 54.012 and 54.040)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gov-552",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.552.htm",
+      "title": "Texas Government Code, Chapter 552, Public Information (Sections 552.221, 552.234 and 552.2615)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "If an officer for public information cannot produce public information for inspection or duplication within 10 business days",
+      "tier": "primary"
+    },
+    {
+      "id": "oag-how-to-request",
+      "url": "https://www.texasattorneygeneral.gov/open-government/members-public/how-request-public-information",
+      "title": "How to Request Public Information",
+      "publisher": "Office of the Attorney General of Texas",
+      "accessed": "2026-11-21",
+      "quote": "A governmental body is not required to answer questions, perform legal research, or create new information in response to your public information request.",
+      "tier": "primary"
+    },
+    {
+      "id": "oag-pic-database",
+      "url": "https://www.texasattorneygeneral.gov/open-government/pic-contact-info-database",
+      "title": "Public Information Coordinator Database Search",
+      "publisher": "Office of the Attorney General of Texas",
+      "accessed": "2026-11-21",
+      "quote": "You may search the database by the name of the governmental body.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-202",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.202.htm",
+      "title": "Texas Property Code, Chapter 202, Construction and Enforcement of Restrictive Covenants (Sections 202.001, 202.003 and 202.004)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "A restrictive covenant shall be liberally construed to give effect to its purposes and intent.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-lgc-218",
+      "url": "https://tcss.legis.texas.gov/resources/LG/htm/LG.218.htm",
+      "title": "Texas Local Government Code, Chapter 218, Regulation of Mixed-Use and Multifamily Residential Use and Development in Certain Municipalities (Sections 218.002, 218.101, 218.102, 218.202 and 218.203)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "a municipality shall allow mixed-use residential use and development or multifamily residential use and development in a zoning classification that allows office, commercial, retail, warehouse",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-lgc-245",
+      "url": "https://tcss.legis.texas.gov/resources/LG/htm/LG.245.htm",
+      "title": "Texas Local Government Code, Chapter 245, Issuance of Local Permits (Sections 245.002 and 245.004)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-44-59-1",
+      "url": "https://www.ecfr.gov/current/title-44/section-59.1",
+      "title": "44 CFR 59.1, Definitions (National Flood Insurance Program: substantial damage and substantial improvement)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "would equal or exceed 50 percent of the market value of the structure before the damage occurred",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-44-60-3",
+      "url": "https://www.ecfr.gov/current/title-44/section-60.3",
+      "title": "44 CFR 60.3, Flood plain management criteria for flood-prone areas",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "identify-parcel-and-jurisdiction",
+      "title": "Identify the parcel and the government that zones it",
+      "instruction": "Start from the deal screen's appraisal record and zoning (screen-deal-buy-box), and confirm the exact parcels and which government, if any, zones them. This process is run-due-diligence's confirm-zoning-and-use step in full. Take the legal description from the title commitment and survey and the account number from that record. Texas appraisal records must name every taxing unit that taxes the property, so a city listed there suggests the land is inside it; confirm it on the city's official boundary map. Texas cities zone inside their limits (Local Government Code chapter 211). In a city's extraterritorial jurisdiction, chapter 212 bars the city from regulating the use of buildings or land unless other state law allows it, and the county zoning powers in chapter 231 cover only the areas it names. Record each parcel number, the city or county, and whether the land is inside city limits, in an extraterritorial jurisdiction or unincorporated.",
+      "mode": "agent-browser",
+      "modeBasis": "Appraisal records, city boundary maps and the statutes are public websites that need no sign-in.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "market": "market-property-data",
+      "consumes": [
+        "deal-screen",
+        "title-commitment",
+        "survey",
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-25",
+        "tx-lgc-211",
+        "tx-lgc-212",
+        "tx-lgc-231"
+      ]
+    },
+    {
+      "id": "request-city-records",
+      "title": "Ask the city and the seller in writing for code cases, liens and notices",
+      "instruction": "Send the city a written public information request for the property's open and closed zoning, building, fire and health code cases, enforcement orders, city liens and permit records. First check the contact limits in the deal file (sign-nda-for-offering-memorandum), or the purchase contract's access terms where it replaced the agreement, and get any consent required. Use the address the Attorney General's database lists. Ask for records, not answers. The city must produce promptly and say in writing within 10 business days if it cannot, or has nothing responsive; answer any itemized estimate of charges in writing within 10 business days, or it counts as withdrawn. Cities may sue to enforce zoning, building, fire and floodplain ordinances and record liens for work on substandard buildings; check each order or lien against Schedule B. Ask the seller under the contract for every violation notice, zoning hearing notice and nonconforming-use waiver it knows of.",
+      "mode": "agent",
+      "modeBasis": "Drafting and emailing the requests is message work; a person approves them because they go out in the buyer's name.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "identify-parcel-and-jurisdiction"
+      ],
+      "consumes": [
+        "title-commitment",
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-gov-552",
+        "oag-how-to-request",
+        "oag-pic-database",
+        "tx-lgc-54",
+        "tx-lgc-214"
+      ]
+    },
+    {
+      "id": "find-district-and-overlays",
+      "title": "Find the zoning district, overlays and any planned development ordinance",
+      "instruction": "Confirm the district the deal screen recorded against the city's official zoning map, and record the base district of every parcel, each overlay that covers it (historic, corridor, airport, design or similar) and any planned development or special district ordinance, with its number and adoption date. Texas cities divide their land into districts, and the rules must be uniform for each class or kind of building within a district, so the district name points to the rules; an overlay or planned development ordinance can add to them or replace them. Save the current ordinance text and the date the map was last updated, and note any parcel split between districts. Where the online map and the ordinance text disagree, list it as an open question for the zoning provider or the city's planning staff. If the city has no zoning, record that and rely on the recorded restrictions step.",
+      "mode": "agent-browser",
+      "modeBasis": "City zoning maps and codes of ordinances are public web pages.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "identify-parcel-and-jurisdiction"
+      ],
+      "consumes": [
+        "deal-screen"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-lgc-211"
+      ]
+    },
+    {
+      "id": "brief-the-zoning-provider",
+      "title": "Send the zoning provider the parcels, uses and open questions",
+      "instruction": "Send the zoning letter or report provider engaged in order-third-party-reports the parcel numbers, legal description, the survey once it exists, current and planned uses and the open questions found so far, and tell it the contact limits in the deal file, or the purchase contract's access terms where it replaced the agreement. Its delivery date is tracked against the need-by date in that record's tracker. If no letter or report was ordered and the lender, the business plan or counsel now needs written confirmation, return to order-third-party-reports to scope and engage one. The firm's own reading of public records does not take the place of a letter or report a lender asks for.",
+      "mode": "agent",
+      "modeBasis": "Sending the brief is message work; a person approves it because it goes outside the firm.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "find-district-and-overlays"
+      ],
+      "consumes": [
+        "survey",
+        "title-commitment",
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "read-use-and-site-rules",
+      "title": "Read the district's use and site rules against current and planned uses",
+      "instruction": "List every use actually on the property, from the lease abstracts' use clauses, the rent roll and the site visit report, and every use the business plan adds. For each, find in the district's use table whether it is allowed by right, only with a specific or conditional use permit, or not at all, and quote the ordinance section. Then compare the property with the site standards Texas cities may set under Local Government Code 211.003: height and stories, lot coverage, yards and setbacks, and density, plus the ordinance's parking, loading, landscaping and sign rules. Take measurements from the survey, not the offering memorandum. Mark each item conforms, conforms with an approval, or does not conform (its status is settled in check-approvals-and-nonconforming-status), and list every figure the survey does not show.",
+      "mode": "agent",
+      "modeBasis": "Comparing leases, the rent roll and the survey with the ordinance text is document work.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "find-district-and-overlays"
+      ],
+      "consumes": [
+        "lease-abstract",
+        "rent-roll",
+        "site-visit-report",
+        "survey",
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-lgc-211",
+        "tx-lgc-218"
+      ],
+      "typeNotes": {
+        "industrial": "Check the exact use category each tenant falls in (warehouse, distribution, light or heavy manufacturing, hazardous materials), and whether outdoor storage, truck parking and trailer staging are allowed where the site uses them.",
+        "multifamily": "Compare the legal unit count, density, height and parking with the ordinance. In a city chapter 218 covers, the city may not enforce on a multifamily development a density limit tighter than the greater of 36 units per acre and its highest residential density, a height limit tighter than the greater of 45 feet and the commercial height on the site, or more than one parking space per unit; ask counsel whether those limits reach this property before marking it as not conforming.",
+        "office": "Check whether the ordinance treats medical or clinic use apart from general office, and the parking it requires for each.",
+        "retail": "Check each restaurant, drive-through, alcohol, automotive or entertainment use separately, since use tables often treat them apart from general retail, and compare parking with the requirement for the actual mix of tenants."
+      }
+    },
+    {
+      "id": "check-approvals-and-nonconforming-status",
+      "title": "Find the variances, conditions and nonconforming status on record",
+      "instruction": "Search the city's zoning cases, board of adjustment minutes and ordinances by address and parcel, and list every variance, special exception, specific use permit, rezoning, plat and site plan approval with number, date and conditions. Check each condition is still met, such as hours, screening or a named operator. Where a use or structure fails today's rules, gather evidence of its status (when it began, under which rules, whether it ever stopped) and the ordinance's discontinuance period; the city's letter or counsel says whether it is legal nonconforming. Section 211.019 (since May 19, 2023) lets a use made nonconforming by a zoning change continue until the city orders it stopped, with costs and lost value paid or time to recoup them; it excludes a use intentionally abandoned for six months or more, and owners or lessees may waive it in writing. List records not online for a follow-up request.",
+      "mode": "agent-browser",
+      "modeBasis": "Zoning case records, board minutes and ordinances are public records, most of them online.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-use-and-site-rules"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-lgc-211"
+      ]
+    },
+    {
+      "id": "check-rebuild-limits",
+      "title": "Find what limits rebuilding after a casualty",
+      "instruction": "Read the ordinance's section on nonconforming uses and structures for what happens when one is damaged or destroyed, and record any limit on rebuilding, enlarging or changing it, with its section. If a building is in a special flood hazard area (the flood check in run-due-diligence), the community's floodplain rules also apply. Under the federal flood program, damage whose repair would cost at least half the building's pre-damage market value is substantial damage, and its repair a substantial improvement. In zones A1-30, AE and AH the community must require that work to put residential lowest floors at or above the base flood level and raise or floodproof nonresidential buildings; in zones V1-30 and VE, and V where base flood data exist, the building must sit on pilings or columns with its lowest horizontal structural member at or above it. The findings go to counsel, the lender and bind-property-insurance through counsel-reviews-gaps.",
+      "mode": "agent",
+      "modeBasis": "The ordinance and the federal rules are public text an agent can read and record against the facts found.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-approvals-and-nonconforming-status"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-44-59-1",
+        "ecfr-44-60-3",
+        "tx-lgc-211"
+      ]
+    },
+    {
+      "id": "check-pending-changes",
+      "title": "Check for pending zoning cases, code changes and moratoriums",
+      "instruction": "Search the past year's and upcoming agendas of the city council, zoning commission and board of adjustment, and the city's notices of plan or code rewrites, for anything covering the property or its district. Do not wait for mail. State law requires written notice to tax-roll owners within 200 feet only for a rezoning of specific land, and to owners and occupants at least 10 days before a hearing on a change making their conforming use nonconforming; since September 1, 2025 a comprehensive change, such as a citywide code or map rewrite, needs no other notice than publication or a council-set notice. Note any development moratorium, which needs public hearings first. If the plan relies on permits already applied for, chapter 245 can hold the city to the rules in force when the first application was filed, with listed exceptions; ask counsel whether it covers the planned work.",
+      "mode": "agent-browser",
+      "modeBasis": "Meeting agendas, notices and ordinances are posted on public city websites.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "find-district-and-overlays"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-lgc-211",
+        "tx-lgc-212",
+        "tx-lgc-245"
+      ]
+    },
+    {
+      "id": "pull-occupancy-and-permits",
+      "title": "Pull the certificates of occupancy and the permit history",
+      "instruction": "Start from the certificates of occupancy and zoning letters the seller delivered (order-third-party-reports), then search the city's permit and inspection records by address for every certificate of occupancy, building permit and final inspection. Compare each certificate's space, use and occupant with the rent roll and the lease abstracts, and list any space without one or used for something its certificate does not describe. List permits still open, permits that expired without a final inspection, and work the site visit saw with no permit behind it. In Texas cities the International Building Code applies to commercial buildings and to their alteration, remodeling, enlargement and repair, with each city setting its own amendments and enforcement procedures, so read the city's own rules on when a new certificate is needed. List any record that is not online for a follow-up public information request.",
+      "mode": "agent-browser",
+      "modeBasis": "Most cities publish permit and inspection records on public portals; records that are not online are requested in writing.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "identify-parcel-and-jurisdiction"
+      ],
+      "consumes": [
+        "rent-roll",
+        "lease-abstract",
+        "site-visit-report"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-lgc-214"
+      ]
+    },
+    {
+      "id": "read-use-restrictions",
+      "title": "Read the recorded restrictions on use",
+      "instruction": "From the Schedule B log built in review-title-and-survey (read-exception-documents), take every limit on use, building lines, parking, signs, design approval and assessments, then test the current and planned uses against them as against the zoning. Texas construes restrictive covenants in a planned development's governing documents liberally to give effect to their purpose, and an owners' association may sue to enforce them. Where a city has no zoning, recorded restrictions often do the work zoning would: a city of 1.5 million or more, or a city without zoning, that adopts the enforcing ordinance may sue to enforce recorded restrictions on a subdivision inside the city, unless an owners' association has already sued. List any parcel with no recorded plat as a question for the seller: its owner may ask the city whether a plat is required (Local Government Code 212.0115). Add any conflict to the objection list in review-title-and-survey.",
+      "mode": "agent",
+      "modeBasis": "The Schedule B log and the recorded documents are text an agent can read and compare with the uses.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-use-and-site-rules"
+      ],
+      "consumes": [
+        "title-commitment",
+        "lease-abstract"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-202",
+        "tx-lgc-212"
+      ],
+      "typeNotes": {
+        "retail": "Read the reciprocal easement agreement and any recorded use restrictions with the leases' exclusive-use clauses; together they decide which replacement tenants the center can take."
+      }
+    },
+    {
+      "id": "test-alternative-uses",
+      "title": "Check which other tenant types the rules would allow",
+      "instruction": "List the tenant types that could fill the space at a vacancy or interest a later buyer, and check each against the use table, parking and loading rules and recorded restrictions. Note which would need a specific use permit, a variance or more parking, and what each change of use would require, as a question for city building staff. Flag for underwriting any building the rules leave to one narrow kind of tenant. In a city of more than 150,000 people at least partly in a county of more than 300,000, chapter 218 (since September 1, 2025) makes districts that allow office, commercial, retail, warehouse or mixed use also allow multifamily and mixed-use residential without a zoning change, except in a district allowing heavy industrial use, within 1,000 feet of existing heavy industry or 3,000 feet of an airport or military base, and in designated clear or accident potential zones.",
+      "mode": "agent",
+      "modeBasis": "Comparing the ordinance and the restrictions with a list of uses is document work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-use-restrictions"
+      ],
+      "consumes": [
+        "underwriting-model",
+        "lease-abstract"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-lgc-218",
+        "tx-lgc-211"
+      ],
+      "typeNotes": {
+        "industrial": "Test the next likely occupants, such as distribution, light manufacturing or contractor yards, against the use table, truck access and outdoor storage rules.",
+        "office": "Test medical office, education and residential conversion. Where chapter 218 applies, a city may not require added parking to convert an office building at least five years old to at least 65 percent residential use (sections 218.202 and 218.203), though building codes still apply.",
+        "retail": "Test restaurant, fitness, medical and service uses against the parking rules, since a vacancy often goes to a use with a higher requirement."
+      }
+    },
+    {
+      "id": "compile-zoning-findings",
+      "title": "Record the findings and check the delivered report against them",
+      "instruction": "Fill in the zoning report record from the steps above: the authority, district and overlays, each use and its status, the site standards compared, approvals and their conditions, certificates of occupancy, open permits, violations, recorded restrictions, rebuild limits and pending changes, each with its source and date. Write \"not confirmed\" wherever no record settles a point; never fill a gap with an assumption. When the city's letter or the vendor's report arrives, compare it line by line with these findings and draft a query on each conflict for a principal to send to its author before either is relied on. List the open items, including every question for city staff, each with what would close it, who will ask it within the contact limits, and the date it must close by, counted back from the feasibility deadline in the deadline calendar.",
+      "mode": "agent",
+      "modeBasis": "Assembling findings and comparing two documents is file work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "brief-the-zoning-provider",
+        "check-rebuild-limits",
+        "request-city-records",
+        "test-alternative-uses",
+        "check-pending-changes",
+        "pull-occupancy-and-permits"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement"
+      ],
+      "produces": [
+        "zoning-report"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "counsel-reviews-gaps",
+      "title": "Have counsel review each gap and get the lender's position",
+      "instruction": "Send counsel the zoning report with every gap marked: a use not permitted, a nonconforming use or structure, a rebuild limit, a missing or mismatched certificate of occupancy, an open violation, a restriction the use breaks, or a pending change. Counsel advises, gap by gap, on the cure and who bears it, such as a seller cure before closing, a representation or covenant in the contract, a city letter confirming legal nonconforming status, an application filed before closing, or ending the contract within the feasibility period. A principal asks the lender in writing which gaps it accepts and on what terms. Hand the costs to update-underwriting and the decision to decide-go-no-go in run-due-diligence, restriction conflicts to review-title-and-survey, and rebuild limits to bind-property-insurance.",
+      "mode": "human-online",
+      "modeBasis": "Whether a gap is acceptable and how to cure it are legal judgments for counsel and business decisions for the principals.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "compile-zoning-findings"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "loan-term-sheet"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "jv-partner-zoning-consent",
+      "title": "Take any zoning gap the plan depends on to the capital partner",
+      "instruction": "Check the JV agreement's major decisions for entitlement applications and changes to the business plan or budget. Where a gap would need a rezoning, variance or specific use permit, or a change of plan, send the capital partner the zoning report and counsel's advice, and get its consent in writing before any application is filed. Waivers of diligence conditions go to the partner under jv-partner-approval in run-due-diligence.",
+      "mode": "human-online",
+      "modeBasis": "The consent is the capital partner's own decision under the JV agreement.",
+      "actor": "investor",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-reviews-gaps"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement"
+      ],
+      "basis": "practitioner"
+    }
+  ],
+  "outlineSteps": []
 }

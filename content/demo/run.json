@@ -117,7 +117,7 @@
           "command": "pcre audit score",
           "by": null,
           "exit": 0,
-          "output": "audit-entity-standing-2026-11-13: 1 of 11 checks clear · 1 finding · 9 not checked yet\nOpen findings: 1 (1 high, 0 medium, 0 low)\nCovers: Audit the entity's standing\nNot covered: Audit past capital raises (listed, not written yet); Operate (no audit yet); Report (no audit yet)\n",
+          "output": "audit-entity-standing-2026-11-13: 1 of 11 checks clear · 1 finding · 9 not checked yet\nOpen findings: 1 (1 high, 0 medium, 0 low)\nCovers: Audit the entity's standing\nNot covered: Audit past capital raises (a separate audit); Operate (no audit yet); Report (no audit yet)\n",
           "caption": "The score is counted from the records: how much was verified, not a claim that the firm is compliant."
         },
         {
@@ -295,7 +295,7 @@
           "command": "pcre audit score",
           "by": null,
           "exit": 0,
-          "output": "audit-entity-standing-2026-11-13: 7 of 11 checks clear · 3 findings · 1 unverified\nOpen findings: 3 (2 high, 1 medium, 0 low)\nCovers: Audit the entity's standing\nNot covered: Audit past capital raises (listed, not written yet); Operate (no audit yet); Report (no audit yet)\n",
+          "output": "audit-entity-standing-2026-11-13: 7 of 11 checks clear · 3 findings · 1 unverified\nOpen findings: 3 (2 high, 1 medium, 0 low)\nCovers: Audit the entity's standing\nNot covered: Audit past capital raises (a separate audit); Operate (no audit yet); Report (no audit yet)\n",
           "caption": "Every check has an answer now. The score counts what was verified, what was found and what could not be confirmed."
         },
         {
@@ -309,7 +309,7 @@
           "command": "pcre audit score",
           "by": null,
           "exit": 0,
-          "output": "audit-entity-standing-2026-11-13: 7 of 11 checks clear · 3 findings · 1 unverified\nOpen findings: 2 (1 high, 1 medium, 0 low)\nCovers: Audit the entity's standing\nNot covered: Audit past capital raises (listed, not written yet); Operate (no audit yet); Report (no audit yet)\n",
+          "output": "audit-entity-standing-2026-11-13: 7 of 11 checks clear · 3 findings · 1 unverified\nOpen findings: 2 (1 high, 1 medium, 0 low)\nCovers: Audit the entity's standing\nNot covered: Audit past capital raises (a separate audit); Operate (no audit yet); Report (no audit yet)\n",
           "caption": "The fixed finding is off the open list; the score still shows every check as it was found."
         },
         {

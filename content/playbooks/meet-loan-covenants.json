@@ -7,28 +7,558 @@
   "phase": "operate",
   "order": 340,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "negotiate-loan-documents",
+    "finance-and-close",
+    "set-up-the-books"
+  ],
+  "consumes": [
+    "loan-documents",
+    "guaranty",
+    "trailing-12",
+    "rent-roll",
+    "lease-abstract",
+    "lease",
+    "underwriting-model",
+    "insurance-binder",
+    "deal-entity-agreement",
+    "jv-agreement"
+  ],
+  "produces": [
+    "underwriting-model",
+    "default-notice"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "List every covenant, test date and reporting due date in the loan documents",
-    "Add the guarantor's own reporting and financial tests",
-    "Compute coverage on the lender's NOI definition each test period",
-    "Project coverage from the rent roll to see a breach coming",
-    "Track rate exposure, caps and swaps on floating debt",
-    "Fund and draw reserves as the loan requires",
-    "Assemble and deliver the reporting package on time",
-    "Get lender consent before lease changes that need it",
-    "Tell the lender early if a test may fail",
-    "File what was sent and the lender's acknowledgments"
-  ]
+  "sources": [
+    {
+      "id": "usc-7-1a",
+      "url": "https://www.law.cornell.edu/uscode/text/7/1a",
+      "title": "7 U.S.C. 1a, Definitions (paragraph (18), eligible contract participant; paragraph (47), swap)",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-21",
+      "quote": "that is a put, call, cap, floor, collar, or similar option of any kind",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-7-2",
+      "url": "https://www.law.cornell.edu/uscode/text/7/2",
+      "title": "7 U.S.C. 2, subsection (e), Limitation on participation (swaps entered into by persons other than eligible contract participants)",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-21",
+      "quote": "It shall be unlawful for any person, other than an eligible contract participant, to enter into a swap",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-17-1-3",
+      "url": "https://www.ecfr.gov/current/title-17/section-1.3",
+      "title": "17 CFR 1.3, Definitions (eligible contract participant, paragraph (6), commodity pools)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "A commodity pool that does not have total assets exceeding $5,000,000 or that is not operated by a person described in subclause (A)(iv)(II)",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-31-02",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.31.htm",
+      "title": "Texas Tax Code, Chapter 31 (Sections 31.01(c), 31.02 and 31.04, Bill contents, delinquency date and its postponement)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "are delinquent if not paid before February 1 of the year following the year in which imposed",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-31-01",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.31.htm",
+      "title": "Texas Tax Code, Chapter 31 (Section 31.01(j), Tax bill sent to a mortgagee)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "the mortgagee shall mail a copy of the bill to the owner of the property not more than 30 days",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-32",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.32.htm",
+      "title": "Texas Tax Code, Chapter 32 (Sections 32.01 and 32.05, Tax lien and its priority over other liens)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "prevails, regardless of whether the debt, lien, future interest, or other encumbrance existed before attachment of the tax lien",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-42-4012a",
+      "url": "https://www.law.cornell.edu/uscode/text/42/4012a",
+      "title": "42 U.S.C. 4012a, Flood insurance purchase and compliance requirements (subsection (b), Requirement for mortgage loans)",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-21",
+      "quote": "A Federal agency lender may not make, increase, extend, or renew any loan secured by improved real estate",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-171",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.171.htm",
+      "title": "Texas Tax Code, Chapter 171, Subchapter F (Sections 171.251, 171.2515 and 171.255, Forfeiture and liability of directors and officers)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "forfeit the right of a taxable entity to transact business in this state",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-coas",
+      "url": "https://comptroller.texas.gov/taxes/franchise/coas-instructions.php",
+      "title": "Franchise Tax Account Status",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-23",
+      "quote": "The Franchise Tax Account Status is a summary designed to satisfy standard business needs.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-occ-901",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.901.htm",
+      "title": "Texas Occupations Code, Chapter 901 (Sections 901.002, 901.351, 901.456 and 901.461, Attest services, reports on financial statements and out-of-state firms)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "may issue a report on a financial statement of another person or otherwise perform or offer to perform an attest service",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-18-1014",
+      "url": "https://www.law.cornell.edu/uscode/text/18/1014",
+      "title": "18 U.S.C. 1014, Loan and credit applications generally; renewals and discounts; crop insurance",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-21",
+      "quote": "Whoever knowingly makes any false statement or report, or willfully overvalues any land, property or security, for the purpose of influencing in any way",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-12-1701j-3",
+      "url": "https://www.law.cornell.edu/uscode/text/12/1701j-3",
+      "title": "12 U.S.C. 1701j-3, Preemption of due-on-sale prohibitions",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-21",
+      "quote": "is sold or transferred without the lender’s prior written consent",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-copies",
+      "url": "https://www.sos.state.tx.us/corp/copies.shtml",
+      "title": "Copies and Certificates (certificates of fact - status, and how they differ from certificates of account status)",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-23",
+      "quote": "Certificates of account status are often confused with certificates of fact - status issued by the Secretary of State.",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "build-the-covenant-calendar",
+      "title": "List every covenant, test date and reporting due date in the loan documents",
+      "instruction": "Build the covenant calendar for each loan closed under finance-and-close or refinance-the-property, from the signed documents and negotiate-loan-documents' default map. For each duty, record its section, what it requires, its due or test date, who prepares and signs it, where it goes and any cure period. Cover the financial tests and what a miss starts; reports and the compliance certificate; any lender-approved budget; reserve deposits and draws; tax and insurance evidence; rate cap expirations; limits on leasing, transfers, alterations, liens and other debt; good standing; extension options with notice windows and conditions; and maturity. Send decide-when-to-sell the maturity, the principals' lead time and each extension notice window, so the hold, refinance or sell decision starts on time; a planned extension is exercised under exercise-the-extension in loan-maturity-refi-fails. The deadline-calendar counts forward, so count back from maturity by hand. Keep a covenant log of results for other playbooks to read, not recompute.",
+      "mode": "agent",
+      "modeBasis": "The duties are written in the signed documents; listing and dating them is document work.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "add-guarantor-tests",
+      "title": "Add the guarantor's own reporting and financial tests",
+      "instruction": "Add to the calendar what the guaranty asks of each guarantor, from the guaranty record: the financial statements and tax returns due and by when, any certificate of net worth, liquidity or contingent liabilities, and each test with its definition, such as what counts as a liquid asset and how real estate is valued for net worth. A guarantor who is a person supplies personal statements and returns; the agent lists and dates them and never asks for account logins. Note whether a guarantor's default on other debt, or a missed guarantor test, is a default under this loan. Where a fund or another entity guarantees the loan or gives a keepwell, add its reporting and tests, and any fund credit facility whose borrowing base or covenants this property's results feed. Where the guarantor shares its figures, compute each test and flag thin headroom to the principals.",
+      "mode": "agent",
+      "modeBasis": "The duties are in the guaranty and loan documents; the guarantor supplies its own figures.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-the-covenant-calendar"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "guaranty",
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "compute-each-test",
+      "title": "Compute each financial test on the loan's own definitions every test period",
+      "instruction": "At each test date, compute every financial test exactly as the loan agreement defines it, from the period's operating statement and rent roll, and record it in the covenant log. Follow its definitions word for word: which income counts, such as whether rent from defaulted or departing tenants is excluded and one-time items removed; which expenses count, and whether an assumed management fee or reserve replaces the actual figure; whether debt service is the actual payments or a stated rate and amortization; and whether figures are trailing or annualized. Run leverage for coverage and debt yield. Record the result, the required level, the headroom in the test's own terms (income for coverage and debt yield, value for loan-to-value, occupancy for an occupancy test), each adjustment from the books with its section, and who checked it. Where a test uses value, note whether the lender's appraisal or another valuation sets it.",
+      "mode": "agent",
+      "modeBasis": "The definition is in the signed documents and the ratio runs from the operating statements in a live calculator.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-the-covenant-calendar"
+      ],
+      "rules": [],
+      "calculators": [
+        "leverage"
+      ],
+      "consumes": [
+        "loan-documents",
+        "trailing-12",
+        "rent-roll"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "track-rate-hedges",
+      "title": "Track rate exposure, caps and swaps on floating debt",
+      "instruction": "For a floating-rate loan, record the index, spread, floor, reset dates and each hedge: a rate cap's strike, notional amount, expiration and the provider rating the loan requires, or a swap's fixed rate, term and termination terms. Run the rate-reset calculator on a rising index path with the cap applied to test coverage each year. Calendar what the loan requires before a cap expires, such as buying a replacement or extension cap or funding a reserve for one, and give the principals the date, with any quotes they ask for compared against those terms, in time for buy-replacement-cap. Update the record when a new cap is bought.",
+      "mode": "agent",
+      "modeBasis": "The terms are in the documents and the stress runs in a live calculator; buying a hedge is the next, human step.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-the-covenant-calendar"
+      ],
+      "rules": [],
+      "calculators": [
+        "rate-reset",
+        "leverage"
+      ],
+      "consumes": [
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "buy-replacement-cap",
+      "title": "Buy each rate cap the loan requires and confirm the buyer may enter it",
+      "instruction": "A principal buys each rate cap a loan requires: a replacement or extension on the calendar's terms before the current one expires, or a new loan's cap before closing under refinance-the-property, unless the loan allows a reserve instead. A rate cap is a swap, which only an eligible contract participant may enter off a designated contract market (7 U.S.C. 1a(47), 2(e)). An entity qualifies, for example, with total assets over $10 million, net worth over $1 million when the swap relates to its business or manages its own risk, or a qualifying entity guaranteeing or supporting its obligations (1a(18)(A)(v)). A commodity pool cannot use those entity tests without over $5 million in assets and a regulated operator (17 CFR 1.3), so counsel asks whether a fund or pooled buyer is one and confirms the buyer qualifies before a principal signs and pays. Deliver what the loan requires; record the terms.",
+      "mode": "human-online",
+      "modeBasis": "Buying a hedge is a principal's decision, signature and payment, and whether the buyer may enter a swap is counsel's judgment.",
+      "actor": "principal",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "track-rate-hedges"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-7-1a",
+        "usc-7-2",
+        "ecfr-17-1-3"
+      ]
+    },
+    {
+      "id": "project-the-tests",
+      "title": "Project coverage from the rent roll to see a breach coming",
+      "instruction": "Project each test to each test date in the coming year and any extension or maturity date, from the rent roll, lease abstracts and budget. Include scheduled rent steps, free rent ending, known move-outs, each expiration with a stated renewal assumption, signed leases not yet paying, and expense changes such as a new tax value or an insurance renewal. Run lease-rollover on what expires before each date, rate-reset on floating debt, and leverage for each date's ratio on the lender's definitions. Show each date's result, its headroom in the test's own terms and the income, value or occupancy at which it fails, marking which assumptions rest on signed leases and which are hoped for. Update it each period and on any reported change, record it in the covenant log and underwriting model, and open loan-covenant-breach where a test fails or may fail; that situation starts from this projection.",
+      "mode": "agent",
+      "modeBasis": "The projection follows from the rent roll, lease abstracts and loan terms run through live calculators.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "compute-each-test",
+        "track-rate-hedges"
+      ],
+      "rules": [],
+      "calculators": [
+        "lease-rollover",
+        "rate-reset",
+        "leverage"
+      ],
+      "market": "deal-pipeline-underwriting",
+      "consumes": [
+        "rent-roll",
+        "lease-abstract",
+        "loan-documents",
+        "underwriting-model"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner",
+      "sources": [],
+      "typeNotes": {
+        "multifamily": "Some leases expire every month; project from the recent trend in trade-outs, concessions and bad debt rather than lease by lease.",
+        "retail": "Read the co-tenancy clauses: an anchor closing can cut other tenants' rent or let them leave before any lease expires.",
+        "industrial": "With one or a few tenants, project each test both with the largest tenant renewing and with it leaving."
+      }
+    },
+    {
+      "id": "manage-reserves",
+      "title": "Check each loan statement and keep the reserve ledger",
+      "instruction": "Check each servicer statement against the note and reserve ledger before the payment date: the balance, the rate applied after each reset, interest, principal and each escrow or reserve deposit, and that a principal released the payment on time; record the balance and rate in the covenant log. Keep a ledger for each lender-held reserve and escrow from the loan documents' reserve terms, adding take-over-operations' lender reserve schedule after an acquisition: each required deposit, the balance the lender reports, any cap, any cash swept under a trigger, and the conditions for a draw or release. Reconcile the lender's statements to it monthly and question any difference in writing. Draft each draw request with what the documents demand, such as invoices, photos or an inspection, attach the lien waivers from run-a-capital-project, and send it once a person approves. set-the-annual-budget's set-capital-and-reserves runs the replacement-reserves test. A principal releases every payment and deposit.",
+      "mode": "agent",
+      "modeBasis": "Checking statements, keeping the ledger and drafting requests is document work; requests go out with a person's approval and only a person moves money.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-the-covenant-calendar"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "keep-taxes-and-insurance-current",
+      "title": "Keep taxes current and log the insurance evidence the lender receives",
+      "instruction": "Calendar each tax bill and send the lender the payment proof the loan asks for, once a person approves. Use the delinquency date printed on each bill (Tax Code 31.01(c)(7)): February 1 of the next year (31.02), later if the bill was mailed after January 10 (31.04) or another statutory exception applies. The tax lien attaching each January 1 outranks the lender's lien, even an earlier one (32.01, 32.05). A lender that receives the bill must mail the owner a copy within 30 days (31.01(j)); confirm it paid. Log the insurance evidence renew-property-insurance delivered; flood checks and renewals stay there. Where a federally regulated or federal agency lender holds the loan, or Fannie Mae or Freddie Mac bought it, and a building is in a special flood hazard area, coverage must be in place before any extension or increase (42 U.S.C. 4012a(b)): list flood evidence among the extension conditions.",
+      "mode": "agent-browser",
+      "modeBasis": "The agent checks the county tax records online and drafts the evidence; it goes to the lender with a person's approval.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-the-covenant-calendar"
+      ],
+      "rules": [
+        "us-fed.flood.mandatory-purchase"
+      ],
+      "calculators": [],
+      "consumes": [
+        "loan-documents",
+        "insurance-binder"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-31-02",
+        "tx-tax-32",
+        "tx-tax-31-01",
+        "usc-42-4012a"
+      ]
+    },
+    {
+      "id": "check-entity-standing",
+      "title": "Confirm the borrower and entity guarantors remain in good standing",
+      "instruction": "Before each compliance certificate, search the Texas Comptroller's Franchise Tax Account Status for the borrower and each entity guarantor, and record in the covenant log, with the date, the right to transact business and Secretary of State registration status it shows. If a franchise tax report or payment is missing 45 days after a forfeiture notice, the Comptroller may forfeit the entity's right to transact business in Texas, and its officers and directors can become liable for debts it incurs in Texas between the due date and revival (Tax Code 171.251, 171.2515, 171.255). Send any status but active to the principals at once; file-texas-franchise-report handles the report and audit-entity-standing fuller checks. The printout is not a certificate: where the loan requires one, a principal orders the Secretary of State's certificate of fact - status, or the formation state's equivalent, not the Comptroller's Certificate of Account Status.",
+      "mode": "agent-browser",
+      "modeBasis": "The status search is a free public record that needs no login.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-the-covenant-calendar"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.franchise-tax.forfeiture"
+      ],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-171",
+        "cpa-coas",
+        "sos-copies"
+      ]
+    },
+    {
+      "id": "have-cpa-report",
+      "title": "Have a licensed CPA firm audit or review the statements the loan requires",
+      "instruction": "Where the loan or the guaranty requires audited or reviewed annual statements, a principal engages a CPA firm chosen under choose-counsel-and-cpa that holds a Texas firm license or practices under a statutory privilege, in time for the calendar date. In Texas only a license holder, or one practicing under a privilege, may issue a report on another person's financial statements or perform an attest service (Occ. Code 901.456(a), 901.351(a)); anyone may prepare statements. A firm licensed only in another state may practice here without a Texas firm license or notice to the Texas board (901.461(a)): confirm its license with its home state's board and, where the borrower's home office is in Texas, have the engagement letter confirm 901.461(b) is met. The principal signs the engagement and representation letters; the agent gives the CPA the trial balance, rent roll, loan documents and covenant log. Where officer-certified statements suffice, skip this step.",
+      "mode": "human-online",
+      "modeBasis": "An audit or review report is a licensed CPA firm's work, and the engagement is signed by a principal.",
+      "actor": "cpa",
+      "licensed": "cpa",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "compute-each-test"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "loan-documents",
+        "guaranty",
+        "rent-roll"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-occ-901"
+      ]
+    },
+    {
+      "id": "assemble-the-package",
+      "title": "Assemble the reporting package and draft the compliance certificate",
+      "instruction": "For each due date, assemble what the loan documents list, in the form they require: the period's operating statement and rent roll; leasing activity and tenants in default; capital spending; confirmation that set-the-annual-budget delivered the budget, or the budget itself where the documents put it in this package; tax and insurance evidence; the reserve reconciliation; in the annual package only, the CPA's report where one is required; and the guarantors' statements. Draft the compliance certificate from the covenant log: each test computed on the lender's definitions with its supporting schedule, and each statement the form requires, such as that no default exists. Tie every figure to the books and the covenant log and list anything that does not tie. Mark every statement in the certificate that is not true as written, for a principal to resolve before signing. If a test failed, the draft says so.",
+      "mode": "agent",
+      "modeBasis": "Gathering the reports and drafting the certificate from the log is document work; nothing is signed or sent here.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "add-guarantor-tests",
+        "compute-each-test",
+        "manage-reserves",
+        "keep-taxes-and-insurance-current",
+        "check-entity-standing",
+        "have-cpa-report"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "loan-documents",
+        "trailing-12",
+        "rent-roll",
+        "guaranty",
+        "insurance-binder"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "sign-and-deliver",
+      "title": "Sign the certificate and deliver the package on time",
+      "instruction": "A principal reviews the package, resolves every flagged item, and signs the compliance certificate and any officer's certification only when each statement is accurate; each guarantor signs its own. Federal law makes it a crime to knowingly make a false statement or report to influence an FDIC-insured bank, a federal or insured state-chartered credit union, a mortgage lending business or another lender the statute lists in acting on a loan, including its renewal, extension or a deferment of action (18 U.S.C. 1014). A certificate that reports a failed test goes with the steps in loan-covenant-breach. Deliver by the method and to every address the notice clause names, with any copies it requires; a portal upload or an email counts as delivery only where the documents say so. Keep the evidence of delivery: the courier or certified mail receipt, the portal confirmation or the sent email.",
+      "mode": "human-online",
+      "modeBasis": "The certificate is signed for the borrower by an authorized person; an agent assembles and sends the package only on that signature.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "assemble-the-package"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "loan-documents",
+        "guaranty"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-18-1014"
+      ]
+    },
+    {
+      "id": "ask-lender-consent",
+      "title": "Get the lender's consent before acts the loan restricts",
+      "instruction": "Ask for the lender's written consent before any act the loan restricts, and let nothing be signed until it arrives. Leases follow lease-a-vacancy and renew-a-tenant, a new manager hire-property-manager, alterations run-a-capital-project, and investor transfers investor-asks-to-exit and keep-investor-register-current; this step covers the rest, such as an easement, other debt or a pledge, and sets the method they follow. Draft each request with what the documents require, to the notice address by the named method, and send it once a person approves. Federal law allows a lender to call the loan under a due-on-sale clause if the property or an interest in it is transferred without its prior written consent (12 U.S.C. 1701j-3); the loan contract alone governs how the lender uses it, and an ownership change in the borrower counts only as the documents define it. In a JV, a principal first gets the capital partner's written consent where required.",
+      "mode": "agent",
+      "modeBasis": "Matching the act to the documents and drafting the request is document work; the request goes out only with a person's approval.",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-the-covenant-calendar"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "loan-documents",
+        "lease",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-12-1701j-3"
+      ]
+    },
+    {
+      "id": "file-the-record",
+      "title": "File what was sent and the lender's acknowledgments",
+      "instruction": "After each delivery or request, file in the loan folder the package and certificate as signed, the delivery evidence, every lender or servicer reply, and each consent, approval, waiver or notice received, and update the covenant calendar and log from them. Follow up on any answer the documents entitle the firm to, such as a consent or a reserve release, and flag to a principal any that is late. Record a lender's notice of default as a default-notice record and file any reservation of rights in the loan folder; send either to a principal and counsel the same day, and open loan-covenant-breach or loan-maturity-refi-fails as the notice requires. Give the latest test results and headroom to send-quarterly-investor-report and make-a-distribution. In a JV, send the capital partner copies of what was delivered and received within the time its agreement sets. A person approves each message before it leaves the firm.",
+      "mode": "agent",
+      "modeBasis": "Filing, updating the log and drafting follow-ups is document work; anything sent outside the firm goes with a person's approval.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-and-deliver",
+        "ask-lender-consent"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "loan-documents",
+        "jv-agreement"
+      ],
+      "produces": [
+        "default-notice"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    }
+  ],
+  "outlineSteps": []
 }

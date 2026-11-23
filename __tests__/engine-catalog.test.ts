@@ -35,8 +35,9 @@ describe("the catalog on the engine", () => {
       expect(act<{ problems: string[] }>(ctx, "firm.check").problems).toEqual([]);
     }
     // Every step of every written record, three times over, each a file write. The
-    // budget grows with the catalog: 42 written records took 66 to 97 s alone on 2026-11-14.
-  }, 240_000);
+    // budget grows with the catalog: 42 written records took 66 to 97 s alone on 2026-11-14,
+    // and all 94 took 24 s on a Linux machine on 2026-11-23, so a slower Windows disk gets room.
+  }, 480_000);
 
   it("lets every written audit be walked from open to closed, and holds an agent to the rules on the way", () => {
     const audits = realCorpus().playbooks.filter((p) => p.kind === "audit" && p.depth === "full");
@@ -61,8 +62,9 @@ describe("the catalog on the engine", () => {
       expect(recorded).toBe(opened.checks);
       const score = act<Score>(ctx, "audit.score");
       expect(score).toMatchObject({ checks: opened.checks, clear: opened.checks, finding: 0, unverified: 0, unchecked: 0 });
-      // A score always says what it does not cover.
+      // A score always says what it does not cover, every other audit included (D257).
       expect(score.notCovered.length).toBeGreaterThan(0);
+      for (const other of audits.filter((a) => a.slug !== pb.slug)) expect(score.notCovered).toContain(`${other.title} (a separate audit)`);
       expect(act<{ state: string }>(ctx, "audit.close").state).toBe("closed");
       expect(act<{ problems: string[] }>(ctx, "firm.check").problems).toEqual([]);
     }

@@ -7,17 +7,604 @@
   "phase": "raise",
   "order": 165,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "file-form-d-and-state-notices"
+  ],
+  "consumes": [
+    "form-d",
+    "investor-register",
+    "subscription-agreement",
+    "private-placement-memorandum",
+    "deal-entity-agreement",
+    "bad-actor-questionnaire",
+    "state-notice-filing"
+  ],
+  "produces": [
+    "form-d",
+    "state-notice-filing"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
+  "sources": [
+    {
+      "id": "ecfr-230-503",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.503",
+      "title": "17 CFR 230.503, Filing of notice of sales",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "on or before the first anniversary of the filing of the notice of sales on Form D or the filing of the most recent amendment",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-239-500",
+      "url": "https://www.ecfr.gov/current/title-17/section-239.500",
+      "title": "17 CFR 239.500, Form D, notice of sales of securities under Regulation D and section 4(a)(5) of the Securities Act of 1933",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-506",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.506",
+      "title": "17 CFR 230.506, Exemption for limited offers and sales without regard to dollar amount of offering (paragraph (d), bad actor disqualification)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "An issuer will not be able to establish that it has exercised reasonable care unless it has made, in light of the circumstances, factual inquiry",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-507",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.507",
+      "title": "17 CFR 230.507, Disqualifying provision relating to exemptions under Rules 504 and 506",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-232-10",
+      "url": "https://www.ecfr.gov/current/title-17/section-232.10",
+      "title": "17 CFR 232.10, Application of part 232 (EDGAR account access and management)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "must confirm annually on EDGAR that all account administrators, users, technical administrators, and/or delegated entities reflected on the dashboard",
+      "tier": "primary"
+    },
+    {
+      "id": "fr-2024-30494",
+      "url": "https://www.federalregister.gov/api/v1/documents/2024-30494.json",
+      "title": "EDGAR Filer Access and Account Management, 89 FR 106168 (final rule, December 27, 2024)",
+      "publisher": "Securities and Exchange Commission (Federal Register)",
+      "accessed": "2026-11-21",
+      "quote": "Filers will have 12 months from the issuance of this release to transition to EDGAR Next.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-232-13",
+      "url": "https://www.ecfr.gov/current/title-17/section-232.13",
+      "title": "17 CFR 232.13, Date of filing; adjustment of filing date",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "shall be deemed filed as of the next business day",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-232-201",
+      "url": "https://www.ecfr.gov/current/title-17/section-232.201",
+      "title": "17 CFR 232.201, Temporary hardship exemption",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-114-4",
+      "url": "https://www.law.cornell.edu/regulations/texas/7-Tex-Admin-Code-SS-114-4",
+      "title": "7 Tex. Admin. Code 114.4, Filings and Fees (subsections (b)(1), (d)(2), (d)(3) and (f)(5))",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "the amended Form D shall be effective retroactively to the date of the initial filing",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gov-code-4006",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.4006.htm",
+      "title": "Texas Government Code, Chapter 4006 (Securities Act fees), sections 4006.052 and 4006.152",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "three times the difference between the fee initially paid and the fee that should have been paid",
+      "tier": "primary"
+    },
+    {
+      "id": "ssb-reg-d-filing",
+      "url": "https://www.ssb.texas.gov/securities-professionals/regulation-securities/filing-requirements-regulation-d-offerings-texas",
+      "title": "Filing Requirements for Regulation D Offerings in Texas",
+      "publisher": "Texas State Securities Board",
+      "accessed": "2026-11-21",
+      "quote": "Issuers must file an amendment in Texas contemporaneously with an amendment filing with the SEC.",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-77r",
+      "url": "https://www.law.cornell.edu/uscode/text/15/77r",
+      "title": "15 U.S.C. 77r, Exemption from State regulation of securities offerings (subsection (c))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "jv-confirm-rule-506",
+      "title": "Confirm the joint venture interest was sold under Rule 506",
+      "instruction": "Confirm from counsel's written exemption decision, made in choose-structure-and-exemption and applied in file-form-d-and-state-notices, whether the joint venture interest was sold under Rule 506. A Form D, and so any amendment to one, is required only for sales under Rule 504, Rule 506 or Section 4(a)(5). If the capital partner's interest was sold under Section 4(a)(2) alone, or counsel concluded it is not a security, there is no Form D to amend: record that in the firm file and stop here. If a Form D was filed, continue as for any other offering.",
+      "mode": "agent",
+      "modeBasis": "The answer is in counsel's written decision and the scope of the Form D rule; the agent reads both.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "rules": [
+        "us-fed.reg-d.form-d-filing",
+        "us-fed.securities.jv-interests"
+      ],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-239-500",
+        "ecfr-230-503"
+      ]
+    },
+    {
+      "id": "find-last-filing",
+      "title": "Pull the offering's most recent Form D filing from EDGAR",
+      "instruction": "Find the offering's most recent Form D filing, the original notice or its latest amendment, on EDGAR's public company search, and save it with its filing date and accession number. Search the issuer's current name and any former name, and check the list against the firm file so no amendment is missed. That filing is the baseline: every comparison below is made against its answers, and the annual deadline runs from its date. If no Form D was ever filed for an offering that relied on Rule 506, stop and use missed-form-d-deadline instead.",
+      "mode": "agent-browser",
+      "modeBasis": "Filed Form Ds can be read on EDGAR's public search without signing in.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "jv-confirm-rule-506"
+      ],
+      "rules": [
+        "us-fed.reg-d.form-d-amendments"
+      ],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "form-d"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-503"
+      ]
+    },
+    {
+      "id": "fund-offering-end",
+      "title": "Have counsel set the date the fund's offering ends",
+      "instruction": "Ask counsel to say in writing when the fund's offering ends for Form D purposes, from the fund documents: the final closing date, any extension the documents allow, and whether the fund may admit investors or take larger commitments after that. The annual amendment is owed only while the offering continues, so a fund that admits investors at several closings over more than a year can owe one or more before its final close. Whether calls on capital already committed keep the offering open after the final close is a question for counsel. Record the answer and its date in the firm file. Skip this when counsel's dated answer is already in the firm file and the fund documents have not changed since.",
+      "mode": "human-online",
+      "modeBasis": "When an offering ends is a legal conclusion drawn from the fund documents; the agent supplies the documents and records the answer.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "find-last-filing"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "rules": [
+        "us-fed.reg-d.form-d-amendments"
+      ],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "private-placement-memorandum"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-503"
+      ]
+    },
+    {
+      "id": "confirm-offering-open",
+      "title": "Find whether the offering is still open and set the next deadline",
+      "instruction": "Gather the records showing whether the offering continues: subscriptions still accepted, a closing scheduled, or a final closing record from close-the-raise. Rule 503 does not define when an offering ends. Record an end date only from counsel's written answer (close-the-raise's counsel-on-filings, or fund-offering-end for a fund) or the principals' written confirmation of offers stopped and a final closing; otherwise ask counsel, keeping the offering on the amendment calendar. If it has ended, stop unless a filing mistake has surfaced, a change before the end was never amended, or an annual amendment fell due while it was open and went unfiled; then continue, testing only changes before the end, and mark it for counsel-review. If open, calendar the annual amendment for a business day on or before the first anniversary of the latest filing, with no weekend or holiday extension; a date already passed makes it late: mark it for counsel-review.",
+      "mode": "agent",
+      "modeBasis": "The agent gathers the offering records and calendars the date the rule sets; when the offering ended comes from counsel's written answer or the principals' written confirmation.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "find-last-filing",
+        "fund-offering-end"
+      ],
+      "rules": [
+        "us-fed.reg-d.form-d-amendments"
+      ],
+      "calculators": [],
+      "consumes": [
+        "investor-register",
+        "private-placement-memorandum"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-503",
+        "ecfr-232-13"
+      ]
+    },
+    {
+      "id": "compare-to-last-filing",
+      "title": "Compare today's facts with every answer in the last filing",
+      "instruction": "Rebuild each Form D answer from today's records and compare it with the baseline. Amend as soon as practicable after finding a material mistake, or after any other change in the information filed, unless it is only in: a related person's address or relationship to the issuer; revenue or net asset value; a minimum investment that rose, or fell 10% or less; an address or state of solicitation in Item 12 (paid sellers); an offering amount that fell, or rose 10% or less; amounts sold or remaining; non-accredited investors, while 35 or fewer; total investors; or sales commissions, finders' fees or payments to executive officers, directors or promoters that fell, or rose 10% or less. Each 10% test is cumulative since the last filing. If nothing needs an amendment and the annual date is not near, record the check and skip the federal steps; filing anyway restarts the annual clock.",
+      "mode": "agent",
+      "modeBasis": "Rebuilding the answers from the register and the offering records and testing each difference against Rule 503's list is document work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-offering-open"
+      ],
+      "rules": [
+        "us-fed.reg-d.form-d-amendments"
+      ],
+      "calculators": [],
+      "consumes": [
+        "form-d",
+        "investor-register",
+        "subscription-agreement",
+        "private-placement-memorandum"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-503",
+        "ecfr-239-500"
+      ]
+    },
+    {
+      "id": "list-state-filings",
+      "title": "List the state notices and amended notices now due",
+      "instruction": "List the state filings due, whether or not a federal amendment is due, by comparing each investor's state in the register with the notices on file. A state with a sale and no notice on file is owed a first notice, not an amendment, on its own clock; Texas wants its notice and fee no later than 15 days after the first Texas sale. Rule 503 needs no federal amendment when only Item 12's states of solicitation change. File a first notice as file-form-d-and-state-notices describes (file-texas-notice, file-other-state-notices), a late one included, sending the lateness to counsel-review. In Texas, if the fee paid was under the $500 cap and the offering amount has grown past what it covered, even by 10% or less, an amended notice and the shortfall payment are due (file-texas-amendment); Rule 503 allows a federal amendment at any time if counsel wants the filings to match.",
+      "mode": "agent",
+      "modeBasis": "Comparing the register's investor states with the notices on file is document work; the filings themselves are made by a person.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "compare-to-last-filing"
+      ],
+      "rules": [
+        "us-tx.securities.rule-506-notice",
+        "us-fed.securities-act.covered-securities",
+        "us-fed.reg-d.form-d-amendments"
+      ],
+      "calculators": [],
+      "consumes": [
+        "investor-register",
+        "state-notice-filing"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tac-114-4",
+        "ssb-reg-d-filing",
+        "tx-gov-code-4006",
+        "ecfr-230-503",
+        "usc-15-77r"
+      ]
+    },
+    {
+      "id": "check-covered-persons",
+      "title": "Bring the bad-actor check current for every covered person",
+      "instruction": "Bring the Rule 506(d) inquiry current for every covered person before anyone signs the amendment. From the entity agreements, register, solicitation agreements and comparison, list every covered person today: the issuer, any predecessor and any affiliated issuer; directors, executive officers, other officers in the offering, general partners and managing members; owners of 20% or more of the voting equity, counted by voting power; promoters; anyone paid to solicit; for a fund, the investment manager; and the general partners, managing members, directors, executive officers and other officers in the offering of any investment manager or paid solicitor, or of its general partner or managing member. Confirm a signed questionnaire for each new person, and for each continuing one a bring-down dated after the last filing, as scheduled in prepare-offering-documents (review-bad-actor-answers). Reasonable care requires a factual inquiry, so get anything missing through collect-bad-actor-questionnaires. Yes or unclear answers go to counsel-review.",
+      "mode": "agent",
+      "modeBasis": "Listing covered persons from the records and reading the questionnaires and bring-downs against Rule 506(d) is document review; any yes or unclear answer goes to counsel.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "compare-to-last-filing"
+      ],
+      "rules": [
+        "us-fed.reg-d.bad-actor"
+      ],
+      "calculators": [],
+      "consumes": [
+        "bad-actor-questionnaire",
+        "deal-entity-agreement",
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-506"
+      ]
+    },
+    {
+      "id": "counsel-review",
+      "title": "Have counsel rule on mistakes, missed amendments, unclear changes and bad actors",
+      "instruction": "Send counsel the comparison, state filing list and covered-person check whenever they show a possible mistake in a filed Form D, an amendment due and not filed, a late state notice, a change an exception may not cover, such as a principal's departure sent by key-principal-leaves, or a yes or unclear bad-actor answer or missing bring-down. Counsel decides whether a mistake is material and a change requires an amendment, and reviews late filings. On a bad-actor issue, counsel says in writing whether Rule 506 is still available before the amendment is signed or another sale is made. Counsel also decides whether a mistake found after the offering ended still needs correcting, since Rule 503's after-the-offering exception covers changes only. For counsel's review: Rule 507 bars Rules 504 and 506 to an issuer enjoined, or whose predecessor or affiliate was enjoined, for failing to comply with Rule 503, amendment duty included.",
+      "mode": "human-online",
+      "modeBasis": "Materiality, whether a change falls within an exception, and whether a covered person is disqualified are legal conclusions; the agent prepares the comparison and the covered-person check.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "compare-to-last-filing",
+        "list-state-filings",
+        "check-covered-persons"
+      ],
+      "rules": [
+        "us-fed.reg-d.form-d-amendments",
+        "us-fed.reg-d.rule-507",
+        "us-fed.reg-d.bad-actor"
+      ],
+      "calculators": [],
+      "consumes": [
+        "form-d",
+        "bad-actor-questionnaire",
+        "state-notice-filing"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-503",
+        "ecfr-230-507",
+        "ecfr-230-506"
+      ]
+    },
+    {
+      "id": "confirm-edgar-access",
+      "title": "Confirm the issuer's EDGAR account is in order before the deadline",
+      "instruction": "Well before the deadline, have an account administrator sign in to the issuer's EDGAR dashboard with their own credentials. Confirm three things: the person, or the delegated entity, that will file the amendment holds a role on the issuer's account; the account keeps the administrators the rules require, at least two, or one for an individual or single-member company; and the annual confirmation that everyone on the dashboard is authorized and the filer's information is accurate was made within the past year. These are conditions of filing on EDGAR, so close any gap first. If the account was never moved to the dashboard, as can happen when the last filing predates the EDGAR Next transition, or the issuer has no access at all, follow the SEC's current instructions for getting access as file-form-d-and-state-notices describes, and start at once: SEC staff reviews every Form ID and needs time to do it.",
+      "mode": "human-online",
+      "modeBasis": "Only individuals holding their own EDGAR credentials can act on the issuer's dashboard.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-offering-open"
+      ],
+      "rules": [
+        "us-fed.edgar.access"
+      ],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-232-10",
+        "fr-2024-30494"
+      ]
+    },
+    {
+      "id": "draft-amendment",
+      "title": "Draft the amendment with current answers to every item",
+      "instruction": "Draft the amendment as a complete Form D with every item answered as of today, not only the item that changed: Rule 503 requires current information throughout, whatever the reason for the amendment. Answer the items as file-form-d-and-state-notices describes in draft-form-d, taking each answer from the comparison, the register and counsel's rulings. For a fund, answer the pooled-fund items again as its fund-items step describes, with any net asset value range current as of the amendment and Item 13 counting commitments still to be called. Mark each change against the baseline for the signer, and note any answer that rests on a counsel ruling.",
+      "mode": "agent",
+      "modeBasis": "Every answer comes from the comparison, the register and counsel's written rulings.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "compare-to-last-filing",
+        "counsel-review",
+        "check-covered-persons"
+      ],
+      "rules": [
+        "us-fed.reg-d.form-d-amendments",
+        "us-fed.reg-d.form-d-filing"
+      ],
+      "calculators": [],
+      "consumes": [
+        "form-d",
+        "investor-register",
+        "private-placement-memorandum"
+      ],
+      "produces": [
+        "form-d"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-503"
+      ]
+    },
+    {
+      "id": "sign-and-file-amendment",
+      "title": "Approve, sign and file the amendment on EDGAR",
+      "instruction": "A person the issuer has authorized reviews the draft, signs for the issuer and files the amendment on EDGAR on or before its deadline. Signing certifies again that no Rule 506(d) disqualification applies, so sign only after the covered-person check is clear or counsel has answered. Begin the submission on a business day no later than 5:30 p.m. Eastern; one begun later is dated the next business day. Form D is excluded from the temporary hardship exemption that lets some filings go in on paper; if EDGAR trouble beyond the issuer's control delays a good-faith attempt to file on time, the issuer may ask the SEC to adjust the filing date. A mistake found later is corrected by another amendment.",
+      "mode": "human-online",
+      "modeBasis": "EDGAR takes the filing from an authorized individual signed in under their own credentials, and the signature binds the issuer.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "draft-amendment",
+        "confirm-edgar-access"
+      ],
+      "rules": [
+        "us-fed.reg-d.form-d-amendments",
+        "us-fed.reg-d.form-d-filing",
+        "us-fed.edgar.access",
+        "us-fed.reg-d.bad-actor"
+      ],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "form-d"
+      ],
+      "produces": [
+        "form-d"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-503",
+        "ecfr-232-13",
+        "ecfr-232-201",
+        "ecfr-230-506"
+      ]
+    },
+    {
+      "id": "file-texas-amendment",
+      "title": "File the amendment with Texas through EFD, with any fee shortfall",
+      "instruction": "If the offering has a Texas notice on file, file with Texas each amendment filed with the SEC, and an amended notice whenever the offering amount has grown past what the fee paid covered. Both go through EFD to the Texas Securities Commissioner; the State Securities Board asks for each SEC amendment contemporaneously. The amended notice, owed only where the fee paid was below the $500 cap, states the amount now offered and pays three times the difference between the fee paid and the fee that should have been paid, plus interest at 6% a year from the day Texas received the original notice to the day it receives the amendment; the notice then dates back to the first filing. Rule 114.4 and the Board's page set no fee for an ordinary amendment. No annual renewal is due: the notice lasts until the offering is completed or terminated.",
+      "mode": "human-online",
+      "modeBasis": "EFD needs a registered filer account and any payment is authorized by a person.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "cost": {
+        "text": "Three times the fee shortfall plus interest, owed only when the offering amount grew past what an under-cap fee covered",
+        "sourceId": "tx-gov-code-4006"
+      },
+      "after": [
+        "sign-and-file-amendment",
+        "list-state-filings"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.securities.rule-506-notice"
+      ],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "state-notice-filing",
+        "form-d"
+      ],
+      "produces": [
+        "state-notice-filing"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ssb-reg-d-filing",
+        "tac-114-4",
+        "tx-gov-code-4006"
+      ]
+    },
+    {
+      "id": "file-other-state-amendments",
+      "title": "File the amendment in each other state that requires it",
+      "instruction": "For each other state that holds a notice for the offering, read that state's current requirements for amendments and file what it asks. Federal law lets a state require copies of documents filed with the SEC, a consent to service of process and a fee, for notice purposes, and lets it suspend the offer or sale in the state when a required filing or fee is missing. Requirements outside Texas are not researched here; take each state's answer from its regulator before filing.",
+      "mode": "human-online",
+      "modeBasis": "Each filing runs through a state filing account and any payment is authorized by a person.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-and-file-amendment"
+      ],
+      "rules": [
+        "us-fed.securities-act.covered-securities"
+      ],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "state-notice-filing"
+      ],
+      "produces": [
+        "state-notice-filing"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-15-77r"
+      ]
+    },
+    {
+      "id": "save-and-reset-calendar",
+      "title": "Save the accepted amendment and restart the one-year clock",
+      "instruction": "Once EDGAR accepts the amendment, pull its public copy, save it with its filing date and accession number, and make it the new baseline in the firm file. Save each state's EFD receipt and any fee payment confirmation beside it. Every amendment, whatever prompted it, restarts the annual clock: move the next annual amendment to a business day on or before the first anniversary of this filing, for as long as the offering continues. Put a check on each closing, each investor register update and each change among the principals, so the next change is compared with this filing.",
+      "mode": "agent-browser",
+      "modeBasis": "The accepted filing is on EDGAR's public search, and the calendar and firm file are the agent's to update.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-and-file-amendment",
+        "file-texas-amendment",
+        "file-other-state-amendments"
+      ],
+      "rules": [
+        "us-fed.reg-d.form-d-amendments"
+      ],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "state-notice-filing"
+      ],
+      "produces": [
+        "form-d"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-503"
+      ]
+    }
+  ],
   "outlineSteps": []
 }

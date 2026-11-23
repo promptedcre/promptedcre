@@ -7,29 +7,852 @@
   "phase": "exit",
   "order": 535,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "close-the-sale",
+    "make-the-final-distribution"
+  ],
+  "consumes": [
+    "settlement-statement",
+    "investor-register",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "certificate-of-formation",
+    "purchase-and-sale-agreement",
+    "wire-instructions",
+    "ein-confirmation"
+  ],
   "produces": [],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx",
+      "us-de"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Read the governing agreement's dissolution terms",
-    "Confirm the sale has closed and the final distribution has gone out",
-    "Pay or reserve for remaining liabilities and claims",
-    "Cancel contracts, insurance and utility accounts no longer needed",
-    "File the final federal return and final K-1s",
-    "File the final state tax reports",
-    "Release any remaining holdback to investors",
-    "Close the bank accounts",
-    "File the entity's termination with the state",
-    "Tell investors the entity is closed",
-    "Set a retention schedule and store the records"
-  ]
+  "sources": [
+    {
+      "id": "tx-bo-11",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.11.htm",
+      "title": "Texas Business Organizations Code, Chapter 11, Winding Up and Termination (Sections 11.001, 11.052, 11.053, 11.101, 11.102, 11.352, 11.353 and 11.356 to 11.359)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "send a written notice of the winding up to each known claimant against the domestic entity",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bo-153",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.153.htm",
+      "title": "Texas Business Organizations Code, Chapter 153, Limited Partnerships (Sections 153.502, 153.504 and 153.553; Section 153.502(c) repealed effective September 1, 2025)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "a certificate of termination must be signed by all general partners participating in the winding up of the limited partnership's business",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bo-9",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.9.htm",
+      "title": "Texas Business Organizations Code, Chapter 9, Foreign Entities (Section 9.011, voluntary withdrawal of registration)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "no longer is transacting business in this state",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-651",
+      "url": "https://www.sos.state.tx.us/corp/instructions/651.shtml",
+      "title": "Form 651, Instructions for Certificate of Termination of a Domestic Entity (revised 09/26)",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-21",
+      "quote": "A printout of the entity’s franchise tax account status obtained from the Comptroller’s website is not sufficient.",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-608",
+      "url": "https://www.sos.state.tx.us/corp/instructions/608.shtml",
+      "title": "Form 608, General Information (Certificate of Withdrawal of Registration) (revised 09/26)",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-612",
+      "url": "https://www.sos.state.tx.us/corp/instructions/612.shtml",
+      "title": "Form 612, General Information (Termination of Registration) (revised 09/26)",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-806",
+      "url": "https://www.sos.texas.gov/corp/forms/806_boc.pdf",
+      "title": "Form 806, Business Filings and Trademarks Fee Schedule (revised 09/26)",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-terminate",
+      "url": "https://comptroller.texas.gov/taxes/franchise/reinstate-terminate.php",
+      "title": "Reinstating or Terminating a Business (requirements before terminating or withdrawing)",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "quote": "The certificate is valid through Dec. 31 of the year issued.",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-certificates",
+      "url": "https://comptroller.texas.gov/taxes/franchise/certificate-letter-request.php",
+      "title": "Requesting Tax Certificates and Tax Clearance Letters",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "quote": "This is the only time a COAS is required.",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-coas",
+      "url": "https://comptroller.texas.gov/taxes/franchise/coas-instructions.php",
+      "title": "Franchise Tax Account Status",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "quote": "The Franchise Tax Account Status is a summary designed to satisfy standard business needs.",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-account-search",
+      "url": "https://comptroller.texas.gov/taxes/franchise/account-status/search",
+      "title": "Franchise Tax Account Status Search",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "quote": "API access to this data is available.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-171",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.171.htm",
+      "title": "Texas Tax Code, Chapter 171, Franchise Tax (Section 171.0011, additional tax)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "are due on the 60th day after the date the taxable entity becomes no longer subject to the tax imposed under this chapter",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-34-3-584",
+      "url": "https://www.law.cornell.edu/regulations/texas/34-Tex-Admin-Code-SS-3-584",
+      "title": "34 Tex. Admin. Code 3.584, Margin: Reports and Payments (paragraphs on the final report and its extension)",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "A final tax report and payment of the additional tax are due within 60 days",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-34-3-592",
+      "url": "https://www.law.cornell.edu/regulations/texas/34-Tex-Admin-Code-SS-3-592",
+      "title": "34 Tex. Admin. Code 3.592, Margin: Additional Tax",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "an estimated return and payment may need to be filed and paid before a taxable entity will receive clearance from the comptroller",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-111",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.111.htm",
+      "title": "Texas Tax Code, Chapter 111 (Sections 111.0041, records, and 111.201, assessment limitation)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "No tax imposed by this title may be assessed after four years from the date that the tax becomes due and payable.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bc-521",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.521.htm",
+      "title": "Texas Business and Commerce Code, Chapter 521 (Section 521.052, duty to protect sensitive personal information)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "shall destroy or arrange for the destruction of customer records containing sensitive personal information",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bc-72",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.72.htm",
+      "title": "Texas Business and Commerce Code, Chapter 72 (Section 72.004, disposal of records containing personal identifying information)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "so as to make the information unreadable or undecipherable",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-8",
+      "url": "https://delcode.delaware.gov/title6/c018/sc08/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter VIII, Dissolution (Sections 18-801, 18-803 and 18-804)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-21",
+      "quote": "are likely to arise or to become known to the limited liability company within 10 years after the date of dissolution",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-2",
+      "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter II (Sections 18-203, cancellation of certificate, and 18-204, execution)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-21",
+      "quote": "A certificate of cancellation shall be filed in the office of the Secretary of State to accomplish the cancellation of a certificate of formation",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-11",
+      "url": "https://delcode.delaware.gov/title6/c018/sc11/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter XI (Sections 18-1105, fees, and 18-1107, annual tax)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-21",
+      "quote": "the full amount of the annual tax for the calendar year in which the certificate becomes effective is due and payable",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-17-2",
+      "url": "https://delcode.delaware.gov/title6/c017/sc02/index.html",
+      "title": "6 Del. C. Chapter 17, Subchapter II (Sections 17-203, cancellation of certificate, and 17-204, execution)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-17-8",
+      "url": "https://delcode.delaware.gov/title6/c017/sc08/index.html",
+      "title": "6 Del. C. Chapter 17, Subchapter VIII, Dissolution (Sections 17-803 and 17-804)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-17-11",
+      "url": "https://delcode.delaware.gov/title6/c017/sc11/index.html",
+      "title": "6 Del. C. Chapter 17, Subchapter XI (Sections 17-1107, fees, and 17-1109, annual tax)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "de-llc-forms",
+      "url": "https://corp.delaware.gov/corpformsllc09/",
+      "title": "Corporate Forms and Certificates for a Limited Liability Company (lists the certificate of cancellation)",
+      "publisher": "Delaware Division of Corporations",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "de-upload",
+      "url": "https://corp.delaware.gov/document-upload-service-information/",
+      "title": "Document Filing and Certificate Request Information",
+      "publisher": "Delaware Division of Corporations",
+      "accessed": "2026-11-21",
+      "quote": "When the order is processed, the charges will be applied.",
+      "tier": "primary"
+    },
+    {
+      "id": "de-fee",
+      "url": "https://corp.delaware.gov/fee/",
+      "title": "Corporate Fee Schedule (links the Division's current fee schedule)",
+      "publisher": "Delaware Division of Corporations",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "de-status",
+      "url": "https://corp.delaware.gov/onlinestatus/",
+      "title": "Online Status",
+      "publisher": "Delaware Division of Corporations",
+      "accessed": "2026-11-21",
+      "quote": "There are two options of online status available, status ($10) or status with tax & history information ($20).",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-708",
+      "url": "https://www.law.cornell.edu/uscode/text/26/708",
+      "title": "26 U.S.C. 708, Continuation of partnership (subsection (b)(1), termination)",
+      "publisher": "Legal Information Institute (U.S. Code text)",
+      "accessed": "2026-11-21",
+      "quote": "no part of any business, financial operation, or venture of the partnership continues to be carried on by any of its partners in a partnership",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-i1065",
+      "url": "https://www.irs.gov/instructions/i1065",
+      "title": "Instructions for Form 1065 (2025): Termination of the Partnership; When To File",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "The partnership’s tax year ends on the date of termination which is the date the partnership winds up its affairs.",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-closing",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/closing-a-business",
+      "title": "Closing a business (page last reviewed July 21, 2026)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "You must file a final return for the year you close your business.",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-no-ein",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/if-you-no-longer-need-your-ein",
+      "title": "If you no longer need your EIN (page last reviewed November 6, 2026)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "If you no longer need your employer identification number (EIN), we can’t cancel it, but we can deactivate it.",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-i1099mec",
+      "url": "https://www.irs.gov/instructions/i1099mec",
+      "title": "Instructions for Forms 1099-MISC and 1099-NEC (12/2026)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "For tax years beginning after 2025, the minimum threshold amount for reporting certain payments required to be reported on certain information returns",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-6235",
+      "url": "https://www.law.cornell.edu/uscode/text/26/6235",
+      "title": "26 U.S.C. 6235, Period of limitations on making adjustments (subsection (a))",
+      "publisher": "Legal Information Institute (U.S. Code text)",
+      "accessed": "2026-11-21",
+      "quote": "no adjustment under this subchapter for any partnership taxable year may be made after the later of",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-6221",
+      "url": "https://www.law.cornell.edu/uscode/text/26/6221",
+      "title": "26 U.S.C. 6221, Determination at partnership level (subsection (b), election out for partnerships with 100 or fewer partners)",
+      "publisher": "Legal Information Institute (U.S. Code text)",
+      "accessed": "2026-11-23",
+      "quote": "This subchapter shall not apply with respect to any partnership for any taxable year if",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-6223",
+      "url": "https://www.law.cornell.edu/uscode/text/26/6223",
+      "title": "26 U.S.C. 6223, Partners bound by actions of partnership (subsection (a), partnership representative)",
+      "publisher": "Legal Information Institute (U.S. Code text)",
+      "accessed": "2026-11-23",
+      "quote": "shall have the sole authority to act on behalf of the partnership under this subchapter",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-301-6223-1",
+      "url": "https://www.ecfr.gov/current/title-26/section-301.6223-1",
+      "title": "26 CFR 301.6223-1, Partnership representative (paragraph (a), how long a designation lasts)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-23",
+      "quote": "remains in effect until the date on which the designation of the partnership representative is terminated by valid resignation",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-275-204-4",
+      "url": "https://www.ecfr.gov/current/title-17/section-275.204-4",
+      "title": "17 CFR 275.204-4, Reporting by exempt reporting advisers (paragraph (f), final report)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "You must file a final report in accordance with instructions in Form ADV when",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-275-203-2",
+      "url": "https://www.ecfr.gov/current/title-17/section-275.203-2",
+      "title": "17 CFR 275.203-2, Withdrawal from investment adviser registration",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "You must file Form ADV-W (17 CFR 279.2) to withdraw from investment adviser registration with the Commission",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-7-139-23",
+      "url": "https://www.law.cornell.edu/regulations/texas/7-Tex-Admin-Code-SS-139-23",
+      "title": "7 Tex. Admin. Code 139.23, Registration Exemption for Investment Advisers to Private Funds (subsection (b)(1), reports filed with the Securities Commissioner)",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-23",
+      "quote": "files with the Securities Commissioner each report and amendment thereto that an exempt reporting adviser is required to file with the SEC",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "confirm-hand-off",
+      "title": "Confirm the sale has closed and the final distribution has gone out",
+      "instruction": "Before anything is cancelled or filed, collect what close-the-sale and make-the-final-distribution handed on: the closing file and bank confirmation, the approval record with the decision to wind up, the holdback schedule with each line's release date, set-holdback's winding-up notices and counsel's confirmation from counsel-confirms-holdback, any unpaid investor, and the CPA's sale-year package; the final return follows under final-federal-return. Build one checklist, each item with an owner and date. List every entity ending with this deal: the deal entity and any property subsidiary; in a joint venture, the venture entity and the firm's member entity formed for it; in a fund, the fund and its general partner entity. Each goes through this playbook; so does a series, without ending the LLC, using the end filing set-up-series names. Without a sale, start from counsel's written confirmation of the event requiring winding up, such as a foreclosure or a whole taking (condemnation-notice).",
+      "mode": "agent",
+      "modeBasis": "Gathering the closing and distribution records into a checklist is file work an agent can do.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "settlement-statement",
+        "investor-register",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "read-wind-down-terms",
+      "title": "Read the governing agreement's winding-up and termination terms",
+      "instruction": "Add to read-final-terms' list and counsel's written answer under confirm-winding-up the terms, with section numbers, that govern the end: who winds up; the approval the termination filing needs; any final accounting owed; how long reserves may be held; who keeps the records; a joint venture partner's consent and reporting rights; and a fund's term and extensions. Unless the agreement says otherwise, a Delaware LLC is wound up by a manager, and a Delaware limited partnership by its general partners, who did not wrongfully dissolve it; failing them, by the members or limited partners, or a person they approve. After a whole taking, add the buy-back right and any replacement period condemnation-notice's record-the-award calendared. Before any filing, counsel confirms the list in writing, decides with the CPA what happens to each such item, and, for a Delaware entity formed by July 31, 2015, applies the rule as it read that day.",
+      "mode": "agent",
+      "modeBasis": "Listing the terms is document work; counsel confirms the list in writing.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-hand-off"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "certificate-of-formation"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "de-code-18-8",
+        "de-code-17-8"
+      ]
+    },
+    {
+      "id": "list-claims-and-notify",
+      "title": "List the contracts and claims left after the final distribution",
+      "instruction": "Start from the holdback schedule and notice record confirm-hand-off collected; add only what make-the-final-distribution left out: every contract and service in the entity's name, such as utilities and property management, and every claim, invoice or demand received since the distribution, with counterparty, amount or estimate, source and end date. After a whole taking, add counsel's decision on the buy-back right (condemnation-notice). Send any lawsuit or threat to counsel (deal-entity-sued). A Texas entity winding up, other than a general partnership, must send each known claimant written notice of the winding up, which set-holdback sends before payment. If confirm-hand-off finds none went out, draft notices now with counsel and release nothing more until provide-for-claims re-checks the holdback. Draft a cancellation or final-bill request for each contract except the registered agent, one bank account, the books, storage and any insurance counsel and the broker advise keeping until termination. A principal approves each first.",
+      "mode": "agent",
+      "modeBasis": "Building the list and drafting notices is document work; each notice goes out only after a principal approves it.",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-wind-down-terms"
+      ],
+      "rules": [
+        "us-tx.boc.registered-agent"
+      ],
+      "calculators": [],
+      "consumes": [
+        "settlement-statement",
+        "deal-entity-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-bo-11"
+      ]
+    },
+    {
+      "id": "provide-for-claims",
+      "title": "Have counsel re-check the holdback against claims received since the distribution",
+      "instruction": "Counsel checks each answer to the winding-up notices and each claim on list-claims-and-notify's list received since make-the-final-distribution's counsel-confirms-holdback, and confirms in writing, claim by claim and on the standard that step applied, that each is paid, released, insured or covered by a dated holdback line; lines confirmed there are not reviewed again unless a claim changes them. The principals decide any payment or release. A dissolved Delaware LLC or limited partnership must pay or reasonably provide for known claims, pending suits and claims known facts make likely within ten years, and an owner who knowingly took a distribution out of that order must repay it. After a Texas entity terminates, registered or certified-mail notice can bar a claim not presented in writing by a date at least 120 days out. Counsel reports any shortfall to the principals at once. Put the dates in the deadline-calendar.",
+      "mode": "human-online",
+      "modeBasis": "Whether the holdback adequately provides for each claim is a legal judgment for counsel; the principals decide any payment or release, and an agent prepares the list and the calendar.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-claims-and-notify"
+      ],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-bo-11",
+        "de-code-18-8",
+        "de-code-17-8"
+      ]
+    },
+    {
+      "id": "release-holdback",
+      "title": "Release each holdback line when its date passes or its claim is settled",
+      "instruction": "When a holdback line's release date passes or its claim is resolved, prepare the release from the second run made under make-the-final-distribution's run-final-waterfall, updated for what was spent, and take it through that playbook's steps: check-foreign-withholding, the tax sentence from cpa-ties-capital-accounts, second-person-check, approve-final-distribution, verify-payment-instructions, release-payments and send-final-statements. In a fund, rerun the clawback test if a release changes totals. Keep back the cost of the final returns and filings. Settle each line before termination where possible: a Texas entity may release one during its three-year survival, but a Delaware entity's power to distribute ends when its cancellation is filed. A share still unpaid when a Texas entity terminates goes to the Comptroller with the statement and diligence record from deposit-unlocated-shares: once counsel confirms that record, a principal signs the statement and makes the deposit before the account closes. The deposit discharges the person responsible for that money; file its receipt.",
+      "mode": "human-online",
+      "modeBasis": "Approving and paying a distribution is the named people's act; an agent prepares the run and the statements.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "provide-for-claims"
+      ],
+      "rules": [],
+      "calculators": [
+        "waterfall-promote"
+      ],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register",
+        "wire-instructions",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-bo-11",
+        "de-code-18-8",
+        "de-code-17-8"
+      ]
+    },
+    {
+      "id": "fund-gp-and-adviser",
+      "title": "For a fund, settle the general partner's last duties and the adviser filings",
+      "instruction": "Before the fund terminates, counsel confirms in writing that the general partner's last obligations to the fund are met: the clawback test from make-the-final-distribution, any investor giveback the fund agreement provides, and the final report it owes the limited partners or their advisory committee. The general partner entity formed for this fund then winds down through this playbook once nothing more is owed to or by it. Counsel also says whether the firm's investment adviser filings change. An adviser relying on the venture capital or private fund adviser exemption files a final report on Form ADV when it stops operating as an adviser or no longer qualifies as an exempt reporting adviser, with no filing fee; a registered adviser withdraws on Form ADV-W. If the firm still advises other funds, counsel says what it updates instead.",
+      "mode": "human-online",
+      "modeBasis": "Whether the general partner's obligations are met and which adviser filings change are legal conclusions for counsel; a principal files in the adviser's depository account, which an agent must not hold.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "release-holdback"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-275-204-4",
+        "ecfr-275-203-2",
+        "tac-7-139-23"
+      ]
+    },
+    {
+      "id": "final-texas-report",
+      "title": "File the final Texas franchise tax report and get the certificate to terminate",
+      "instruction": "Run the final franchise tax report through file-texas-franchise-report's steps from decide-report-type to file-and-pay, the CPA preparing it and a principal approving it, then request the certificate of account status in Webfile or, where the Comptroller requires, by mail on Form 05-359. The Comptroller issues that certificate, needed to terminate a Texas entity or withdraw an out-of-state entity's registration on Form 608, only after every outstanding annual franchise tax report and Public or Ownership Information Report, any required final report, all tax, penalty and interest, and the closing of any other Comptroller tax account. The final report and any additional tax are due 60 days after the entity stops being subject to the tax, with a 45-day extension on a timely request paid at 90 percent. Clearance may need an estimated report first; paying the right amount and amending within 60 days after termination avoids penalty and interest.",
+      "mode": "human-online",
+      "modeBasis": "The CPA prepares the report and a person files it and requests the certificate under a Webfile sign-in an agent must not hold.",
+      "actor": "cpa",
+      "licensed": "cpa",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "release-holdback"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.franchise-tax.basics",
+        "us-tx.franchise-tax.forfeiture"
+      ],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "cpa-terminate",
+        "tx-tax-171",
+        "tac-34-3-584",
+        "tac-34-3-592",
+        "cpa-certificates"
+      ]
+    },
+    {
+      "id": "file-texas-termination",
+      "title": "Sign and file the Texas certificate of termination",
+      "instruction": "When winding up is complete, file Form 651 with the Secretary of State; a Texas registered series files the certificate of termination set-up-series describes instead. Form 651 gives the entity's name and file number, each governing person's name and address, the event requiring winding up, and a statement that the entity has complied with the Code's winding-up provisions. Attach the Comptroller's certificate of account status, Form 05-305, good through the filing's effective date; a certificate is valid only through December 31 of the year issued, and an online status printout is not enough. An LLC's authorized manager or managing member signs; for a limited partnership, every general partner taking part in the winding up signs, under penalty of perjury. Knowingly signing a materially false filing is an offense. File through SOSPortal or by mail. Termination takes effect on filing, or on a stated date up to 90 days after signing.",
+      "mode": "human-online",
+      "modeBasis": "A person authorized for the entity signs the certificate and pays the fee; an agent can draft it from the records.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "cost": {
+        "text": "$40 Secretary of State filing fee",
+        "usdMin": 40,
+        "usdMax": 40,
+        "sourceId": "sos-651"
+      },
+      "after": [
+        "final-texas-report",
+        "provide-for-claims",
+        "fund-gp-and-adviser"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "certificate-of-formation"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "sos-651",
+        "tx-bo-11",
+        "tx-bo-153",
+        "sos-806",
+        "cpa-terminate"
+      ]
+    },
+    {
+      "id": "file-delaware-cancellation",
+      "title": "Cancel a Delaware entity's certificate and end its Texas registration",
+      "instruction": "When winding up is complete, file a certificate of cancellation through the Division of Corporations' upload service, signed by an authorized person for an LLC or by all general partners for a limited partnership. It gives the name, the original certificate's filing date, each registered series not yet canceled and any later effective date. The full $400 annual tax for the year the cancellation takes effect, plus $100 per registered series ending with it, is due before filing. The Act's fee is $180 for an LLC, $200 for a limited partnership, plus $50 per registered series named; confirm the total on the Division's schedule. If the entity is registered in Texas, end that registration after the final Texas report: before the cancellation, withdraw on Form 608 with the certificate of account status; after it, terminate on Form 612 with Delaware's certificate or certified copy of it; $15 either way.",
+      "mode": "human-online",
+      "modeBasis": "An authorized person signs and pays both filings; an agent can prepare them from the records.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "release-holdback",
+        "provide-for-claims",
+        "final-texas-report",
+        "fund-gp-and-adviser"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-de"
+        ]
+      },
+      "rules": [
+        "us-de.llc.formation"
+      ],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "certificate-of-formation"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "de-code-18-2",
+        "de-code-18-11",
+        "de-code-17-2",
+        "de-code-17-11",
+        "de-llc-forms",
+        "de-upload",
+        "de-fee",
+        "tx-bo-9",
+        "sos-612",
+        "sos-608",
+        "sos-806",
+        "cpa-terminate"
+      ]
+    },
+    {
+      "id": "confirm-terminated",
+      "title": "Confirm the state records show the entity terminated",
+      "instruction": "Once each filing is processed, search the entity in the Comptroller's free franchise tax account status search by taxpayer number, Secretary of State file number or name, and save the dated result beside the evidence of filing each office returned. The result is a summary, not a certificate. The Secretary of State's record changes when the filing is made, even one taking effect later: to voluntarily terminated for a Texas entity, and to withdrawn or terminated for an out-of-state entity's registration. Delaware's online status check is a paid search, so a principal buys it if wanted; otherwise the Division's filed copy is the record. If a result does not match the filing, tell counsel at once; a filing with a later effective date shows as filed but takes effect only then. Record the termination's effective date in the firm file and the deadline-calendar: Texas's three-year survival period runs from it.",
+      "mode": "agent-browser",
+      "modeBasis": "The Comptroller's search is public and needs no sign-in; Delaware's status check costs money, so a person buys it.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "file-texas-termination",
+        "file-delaware-cancellation"
+      ],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "cpa-account-search",
+        "cpa-coas",
+        "sos-651",
+        "sos-608",
+        "sos-612",
+        "de-status",
+        "tx-bo-11"
+      ],
+      "market": "formation-back-office"
+    },
+    {
+      "id": "tell-investors-closed",
+      "title": "Tell investors the entity is closed and what comes next",
+      "instruction": "Draft one notice to every investor of record, and in a joint venture to the partner: the entity's termination date and filing; what the final distribution and any holdback releases paid in total; what remains reserved, why and until when; when the CPA expects to issue the final K-1, from make-the-final-distribution's cpa-ties-capital-accounts or, where winding up ran past that tax year, the CPA's written date; and who keeps the records and answers questions from now on. Attach any final accounting or final report the governing agreement requires (read-wind-down-terms). State only facts from the records, and leave each investor's own tax questions to their advisers. Send it through the portal or the notice method the agreement names once a principal approves it, and log each delivery. Keep the portal open until the final K-1s are delivered and the investors' documents are saved to the entity's records.",
+      "mode": "agent",
+      "modeBasis": "Drafting the notice from the records is writing work; it goes out only after a principal approves it.",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-terminated"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "final-federal-return",
+      "title": "File the final federal return and K-1s and record the partnership representative",
+      "instruction": "Have the CPA prepare the final Form 1065 and final K-1s under file-partnership-return-and-k1s, with the final boxes checked on the return and each Schedule K-1, for a principal to sign. A partnership terminates only when no part of its business continues to be carried on by any partner in a partnership, and its tax year ends on the date it winds up its affairs; the return is due by the 15th day of the third month after. Include every holdback release paid; the CPA says how any line still held bears on the final year. File the year's Forms 1099 at the current instructions' thresholds. Unless the partnership elected out of the centralized audit regime, confirm with the CPA who is partnership representative for each open year; the designation lasts until resigned, revoked or ended by the IRS, so give that person's contact to the custodian for IRS notices.",
+      "mode": "human-online",
+      "modeBasis": "The CPA prepares the return and a principal signs it; an agent assembles the package.",
+      "actor": "cpa",
+      "licensed": "cpa",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "file-texas-termination",
+        "file-delaware-cancellation",
+        "fund-gp-and-adviser"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "investor-register",
+        "ein-confirmation",
+        "settlement-statement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-26-708",
+        "irs-i1065",
+        "irs-closing",
+        "irs-i1099mec",
+        "usc-26-6221",
+        "usc-26-6223",
+        "ecfr-26-301-6223-1"
+      ]
+    },
+    {
+      "id": "close-bank-accounts",
+      "title": "Close the bank accounts, end the last services and deactivate the EIN",
+      "instruction": "Keep one account open only for final fees, any line a Texas entity releases during survival, any Comptroller deposit, refunds and returned deposits. When the last payment has cleared, a principal reconciles the account to zero, downloads every statement, cancels cards, online access and automatic payments, closes the account in writing and files the bank's confirmation. At the same time, cancel the registered agent, other services kept until termination and any policy counsel and the broker do not say to keep through the survival period; remove each person's access. A later check or refund goes to the principals and counsel; a terminated Texas entity survives three years to collect and distribute property. Once every return is filed and all tax paid, a principal signs a letter asking the IRS to deactivate the EIN, giving the EIN, legal name, address and reason; file it with any answer.",
+      "mode": "human-online",
+      "modeBasis": "Only an authorized signer can close an account, cancel a service or sign the IRS letter; an agent prepares the reconciliation, the letters and the checklist.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "final-federal-return"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "ein-confirmation"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-bo-11",
+        "irs-no-ein"
+      ]
+    },
+    {
+      "id": "keep-the-records",
+      "title": "Set the retention schedule and store the entity's records",
+      "instruction": "Archive the entity's file under set-up-document-storage, close its own storage and name a custodian. Keep it until the latest of: the IRS's time to adjust the final partnership return, generally three years after the later of its filing or due date, six for a substantial omission of income, or, if it elected out of the centralized audit regime, the date the CPA gives from the partners' returns; four years after Texas tax becomes due; three years after a Texas entity's termination, its survival period; three years after a Delaware entity's last distribution, which owners may have to return; any condemnation date counsel set under read-wind-down-terms, also calendared; and any legal hold's end. Records destroyed later have personal identifying information made unreadable, as Texas requires for customer records such as tenants' applications; investors' records get the same care. A principal approves the schedule; the CPA and counsel get the custodian's contact.",
+      "mode": "agent",
+      "modeBasis": "Moving the files and drafting the schedule is records work; a principal approves the schedule before anything is destroyed.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "tell-investors-closed",
+        "close-bank-accounts"
+      ],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "investor-register",
+        "deal-entity-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-26-6235",
+        "usc-26-6221",
+        "tx-tax-111",
+        "tx-bo-11",
+        "de-code-18-8",
+        "de-code-17-8",
+        "tx-bc-521",
+        "tx-bc-72"
+      ]
+    }
+  ],
+  "outlineSteps": []
 }

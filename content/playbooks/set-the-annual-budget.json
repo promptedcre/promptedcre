@@ -7,30 +7,512 @@
   "phase": "report",
   "order": 420,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "set-up-the-books",
+    "abstract-the-leases",
+    "hire-property-manager",
+    "take-over-operations"
+  ],
+  "consumes": [
+    "loan-documents",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "trailing-12",
+    "rent-roll",
+    "lease-abstract",
+    "lease",
+    "property-condition-assessment",
+    "underwriting-model",
+    "comp-set"
+  ],
+  "produces": [
+    "underwriting-model"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Pull the prior years' operating statements and confirm they foot",
-    "Remove depreciation, interest and one-time items",
-    "Ask the manager what was one-time and what was deferred",
-    "Project rent from the rent roll with its steps and expirations",
-    "Forecast vacancy, downtime and leasing costs for expiring leases",
-    "Set each expense line by average, trend or a current quote",
-    "Re-estimate property taxes at the current value",
-    "Set the management fee and the reimbursement budget",
-    "Set capital spending and reserves from the component schedule",
-    "Test the budget against comparable properties and the loan's coverage",
-    "Get the budget approved",
-    "Send the approved budget to the manager and, where required, the lender"
-  ]
+  "sources": [
+    {
+      "id": "tx-tax-code-23",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.23.htm",
+      "title": "Texas Tax Code, Chapter 23 (Sections 23.01, Appraisals generally, and 23.231, Circuit breaker limitation on appraised value of real property other than residence homestead)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "This section expires December 31, 2026.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-25",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.25.htm",
+      "title": "Texas Tax Code, Chapter 25 (Section 25.19, Notice of appraised value)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "beginning in the 2027 tax year, the circuit breaker limitation provided under Section 23.231, Tax Code, will no longer be in effect",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-26",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.26.htm",
+      "title": "Texas Tax Code, Chapter 26 (Sections 26.05, Tax rate, and 26.16, Posting of tax-related information)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "must adopt a tax rate before the later of September 30 or the 60th day after the date the certified appraisal roll is received",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-31",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.31.htm",
+      "title": "Texas Tax Code, Chapter 31 (Sections 31.02, Delinquency date, and 31.04, Postponement of delinquency date)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "are delinquent if not paid before February 1 of the year following the year in which imposed",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-11",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.11.htm",
+      "title": "Texas Tax Code, Chapter 11 (Section 11.145, Income-producing tangible personal property)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-franchise",
+      "url": "https://comptroller.texas.gov/taxes/franchise/",
+      "title": "Franchise Tax (due dates and the tax rates, thresholds and deduction limits by report year)",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "quote": "The annual franchise tax report is due May 15.",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-franchise-filing",
+      "url": "https://comptroller.texas.gov/taxes/franchise/filing-requirements.php",
+      "title": "Requirements for Reporting and Paying Franchise Tax",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "quote": "whose annualized total revenue is less than or equal to the No Tax Due Threshold is not required to file a No Tax Due Report",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-1-263a-3",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.263(a)-3",
+      "title": "26 CFR 1.263(a)-3, Amounts paid to improve tangible property (paragraphs (d), (h) and (i))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "to keep the building structure or each building system in its ordinarily efficient operating condition",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "set-the-timetable",
+      "title": "Set the budget timetable and the principals' instructions",
+      "instruction": "Set the dates for the draft, review, each approval and each delivery, working back from the first day of the budget year. Read the management agreement for when the property manager delivers a draft budget and in what form; the loan documents for any budget the lender must receive or approve, and when; the deal entity agreement for who adopts the budget; and, for a joint venture, the JV agreement's consent list and reporting schedule. Work dates counted back by hand, with a second reader's check, and enter only periods counted forward in the deadline-calendar. Then draft the principals' instructions to the property manager: the format, coded to set-up-the-books' chart of accounts; the year's business plan; and the principals' assumptions, such as renewal odds and variance threshold. Where it drafts the budget, the later steps become the firm's review of its figures. A person approves the instructions before they go.",
+      "mode": "agent",
+      "modeBasis": "Reading the agreements, working and checking the dates and drafting instructions is document work; a person approves what goes to the property manager.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "loan-documents",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "pull-the-history",
+      "title": "Pull the prior years' statements, confirm they foot and mark one-time items",
+      "instruction": "Collect the property's operating statements for the recent full years on file, and this year's actual results to date with the property manager's forecast to year end. Check that each statement foots and cross-foots, ties to the general ledger and bank reconciliations, and codes the same costs to the same lines every year; send any break back to the bookkeeper. Take everything below net operating income out: depreciation and amortization, interest and principal, capital spending, leasing commissions and tenant improvements, and entity costs such as asset management, audit and tax work, which add-entity-costs budgets. Then draft questions to the property manager on each line that moved: which costs were one-time, such as a storm repair or a legal settlement; which work was deferred and is still owed; and which contracts, rates or staffing change next year. A person approves the questions before they go. Record each answer beside its line.",
+      "mode": "agent",
+      "modeBasis": "Footing statements against the ledger and drafting questions is file work from the firm's own records; a person approves what goes to the property manager.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-the-timetable"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "trailing-12"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "project-rent",
+      "title": "Project rent lease by lease from the rent roll, with its steps and expirations",
+      "instruction": "Build the year's rent month by month for every lease on the current rent roll, read against the lease abstracts. For each lease, carry its scheduled steps, the month any free or reduced rent ends, signed leases that start paying during the year, and each expiration and option date. For every expiration, state the assumption: renews on stated terms, leaves, or renews at the asking terms set under lease-a-vacancy for space being marketed, otherwise at what the comp set from pull-sale-and-lease-comps supports, marked as an assumption. Use what renew-a-tenant has learned of each tenant's plans, and the principals' renewal odds where nothing is known. Check any lease with steps or free rent in lease-rent, and run lease-rollover with the analysis date set to the first day of the budget year. Budget other income, such as parking, storage or signage, from the leases and the history, each with its basis.",
+      "mode": "agent",
+      "modeBasis": "Projecting rent from the rent roll and lease abstracts is calculation from the firm's own documents.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "pull-the-history"
+      ],
+      "rules": [],
+      "calculators": [
+        "lease-rent",
+        "lease-rollover"
+      ],
+      "market": "deal-pipeline-underwriting",
+      "consumes": [
+        "rent-roll",
+        "lease-abstract",
+        "lease",
+        "comp-set"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": [],
+      "typeNotes": {
+        "multifamily": "Project from the unit mix rather than lease by lease: in-place rent, market rent the firm can source, loss to lease, concessions, and expected move-outs and turn time by month. Budget late fees and water and wastewater reimbursements only as the leases allow and as collect-rent-and-reconcile-cam bills them (follow-up-late-rent, bill-tenant-utilities), and keep in the expense budget the share of utility charges those rules leave with the owner.",
+        "retail": "Add percentage rent only for leases that provide it, from each tenant's reported sales against its breakpoint; the expense-recovery calculator computes it. Read co-tenancy and operating covenants for any rent reduction a departing anchor would trigger, and budget it where the departure is known."
+      }
+    },
+    {
+      "id": "forecast-vacancy-and-leasing-costs",
+      "title": "Forecast vacancy, downtime, credit loss and leasing costs",
+      "instruction": "For each space vacant now or assumed to empty during the year, set the months it stays empty and the month a new lease starts paying. Add the free rent, allowance and commissions each new lease or renewal will cost, from the leasing or management agreement's commission terms and the asking terms set under lease-a-vacancy, or, for space not yet marketed, the terms the comp set supports, marked as an assumption. Run lease-rollover's downtime check with project-rent's renewal odds to compare the rent at risk with any flat vacancy allowance, and show both for the principals to choose at approve-the-budget. Add a credit loss line from the arrears aging and each tenant in default under tenant-stops-paying or tenant-files-bankruptcy. Put leasing costs below net operating income, in the month each is paid, and list what the owner carries on empty space, such as taxes, insurance and utilities no tenant reimburses.",
+      "mode": "agent",
+      "modeBasis": "Downtime, credit loss and leasing cost schedules are calculations from the rent roll, the abstracts and the asking terms.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "project-rent"
+      ],
+      "rules": [],
+      "calculators": [
+        "lease-rollover",
+        "lease-rent"
+      ],
+      "consumes": [
+        "rent-roll",
+        "lease-abstract",
+        "comp-set"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "set-expense-lines",
+      "title": "Set each expense line by average, trend or a current quote",
+      "instruction": "Set every operating expense line from its best basis, and write that basis beside it. Use the signed contract or a current quote for services such as cleaning, landscaping, security and elevator service; usage and the provider's current rates for utilities; the history from pull-the-history, averaged or trended, for repairs and supplies; and the property manager's staffing plan for payroll. Take insurance, with flood cover where the loan requires it, from the renewal under renew-property-insurance, or the broker's written estimate before it. Ask for any missing quote through the instructions to the property manager from set-the-timetable, and for the insurance estimate through the broker under renew-property-insurance; a person approves each request before it goes. Flag any line that rests on a guess.",
+      "mode": "agent",
+      "modeBasis": "Setting lines from contracts, quotes, bills and history is document and calculation work; the quotes come from the property manager and the broker, and a person approves each request for one.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "pull-the-history"
+      ],
+      "rules": [
+        "us-fed.flood.mandatory-purchase"
+      ],
+      "calculators": [],
+      "consumes": [
+        "trailing-12",
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "re-estimate-property-taxes",
+      "title": "Re-estimate property taxes at the current value",
+      "instruction": "Estimate the budget year's property tax from a current value and current rates. In Texas, the circuit breaker capping yearly increases in appraised value for non-homestead real property under the Comptroller's ceiling (us-tx.tax.appraisal-increase-limit) expires December 31, 2026 unless extended (Tax Code 23.231(b), (k), 25.19(o)). Start from the January 1 market value in the district's record (23.01(a)), not a capped value; note any other value for the principals to adopt at approve-the-budget. Use each unit's last adopted rate, from the county's Truth in Taxation summary (26.16), in the property-tax calculator, since the budget year's rates are adopted that year, before the later of September 30 or 60 days after the roll (26.05(a)). Accrue the tax monthly and pay or escrow it on the loan's schedule: bills are delinquent from February 1, later if mailed after January 10 (31.02(a), 31.04(a)). Add personal property tax only above the $125,000 exemption per location (11.145).",
+      "mode": "agent-browser",
+      "modeBasis": "The appraisal district's values and the county's posted rates are public records an agent can look up in a browser.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "pull-the-history"
+      ],
+      "rules": [
+        "us-tx.tax.market-value",
+        "us-tx.tax.appraisal-increase-limit"
+      ],
+      "calculators": [
+        "property-tax"
+      ],
+      "market": "market-property-data",
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-23",
+        "tx-tax-code-25",
+        "tx-tax-code-26",
+        "tx-tax-code-31",
+        "tx-tax-code-11"
+      ]
+    },
+    {
+      "id": "set-fee-and-recoveries",
+      "title": "Set the management fee and the expense recovery budget",
+      "instruction": "Compute the management fee and every other property manager charge as the signed management agreement defines them, on the revenue its fee base names, with any minimum. Leasing commissions stay in forecast-vacancy-and-leasing-costs; put any construction management fee with its project in set-capital-and-reserves. Then budget what tenants will reimburse. Group the budgeted expenses into the pools the leases use, such as taxes, insurance and common area maintenance, and run the expense-recovery calculator for each lease with its share, method, base year or stop, and cap; work a cumulative cap or a gross-up by hand, and only where the lease provides one. Check the result against the owner-borne amounts recorded in the last reconciliation under collect-rent-and-reconcile-cam. The output is the recovery income line, each tenant's monthly estimate, and the cost the owner keeps. A fee on collected revenue moves with recoveries, so recompute the fee once recoveries are set.",
+      "mode": "agent",
+      "modeBasis": "Applying the management agreement's fee terms and each lease's recovery terms to the budget is calculation from signed documents.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "forecast-vacancy-and-leasing-costs",
+        "set-expense-lines",
+        "re-estimate-property-taxes"
+      ],
+      "rules": [],
+      "calculators": [
+        "expense-recovery"
+      ],
+      "consumes": [
+        "lease-abstract",
+        "rent-roll"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": [],
+      "typeNotes": {
+        "office": "Recoveries under a base-year or expense-stop lease depend on next year's expenses against the base or stop, and a gross-up, where the lease allows one, adjusts variable costs for vacancy; confirm which applies lease by lease.",
+        "industrial": "Where a lease has the tenant pay taxes, insurance or utilities directly, budget neither the expense nor its recovery, and record who pays each.",
+        "multifamily": "Residential leases reimburse only what they state, typically utilities billed back; budget those under project-rent."
+      }
+    },
+    {
+      "id": "set-capital-and-reserves",
+      "title": "Set capital spending and reserves from the component schedule",
+      "instruction": "List the year's capital work, each with scope, estimate and source, timing, and funding from a lender reserve, operating cash or new capital. Include items take-over-operations listed from the property condition assessment and the loan's required repairs, replacements the component schedule shows due, work the property manager reported deferred, and any construction management fee the management agreement sets. Run replacement-reserves on the component schedule, and show the loan's required deposit beside the calculator's figure; the principals set the deposit at approve-the-budget. Give the CPA each item's facts: what it replaces; whether it betters, restores or adapts the building structure or a system, which is generally capitalized; and whether it is recurring upkeep keeping it in ordinarily efficient operating condition, expected more than once in ten years, which is deemed not an improvement. The CPA decides the classification and any safe-harbor election (26 CFR 1.263(a)-3(d), (h), (i)).",
+      "mode": "agent",
+      "modeBasis": "Building the capital list and running the component schedule through the calculator is document and calculation work; the repair-or-improvement call and any election are the CPA's, and the reserve level is the principals'.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "pull-the-history"
+      ],
+      "rules": [],
+      "calculators": [
+        "replacement-reserves"
+      ],
+      "consumes": [
+        "property-condition-assessment",
+        "loan-documents",
+        "underwriting-model"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-26-1-263a-3"
+      ]
+    },
+    {
+      "id": "add-entity-costs",
+      "title": "Add the entity's own costs and, for a fund, roll up the properties",
+      "instruction": "Budget the deal entity's own costs, below net operating income, as its governing agreement allows them. These include the sponsor's asset management fee and other fees on the agreement's base and rate, administration, the return and K-1s under file-partnership-return-and-k1s, any audit the agreements or loan require, legal and filing costs, and interest on any entity credit line. Apply the agreement's caps, and leave out costs it charges to the entity's manager or general partner. Take each Texas entity's franchise tax from the CPA's estimate in file-texas-franchise-report, or else its last report: reports are due May 15; an entity with annualized total revenue at or under the no-tax-due threshold, $2,650,000 for 2026 and 2027 reports, owes none but still files an information report. For a fund, first combine the property budgets, keeping fund costs apart, and show cash after each property's capital and reserves beside uncalled commitments; calls follow call-capital-fund-closing.",
+      "mode": "agent",
+      "modeBasis": "Applying the governing agreement's expense terms, the CPA's franchise tax estimate and the property budgets is calculation from the firm's own documents.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-fee-and-recoveries",
+        "set-capital-and-reserves"
+      ],
+      "rules": [
+        "us-tx.franchise-tax.basics"
+      ],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "cpa-franchise",
+        "cpa-franchise-filing"
+      ]
+    },
+    {
+      "id": "test-the-budget",
+      "title": "Test the budget against history, the model, comparable properties and the loan",
+      "instruction": "Test the draft four ways before approval and explain every line that differs by more than the principals' threshold. Against history: each line beside the prior years from pull-the-history. Against the plan: the same year in the underwriting model, in the version investors were shown. Against the market: rent, vacancy and each large expense per square foot or per unit, beside the comp set and the firm's data services, with source and date, marking lines no evidence tests. Against the loan: give the budget to the projection under meet-loan-covenants for coverage and debt yield on the lender's definitions at each test date, with rate-reset on floating-rate debt. Run income-value for the year's net operating income and leverage for break-even occupancy. Show cash after debt service, leasing costs, capital, reserves and the entity's own costs, and flag in the approval package any gap against the distributions investors were led to expect.",
+      "mode": "agent",
+      "modeBasis": "Comparing the draft with the books, the model, sourced market data and the loan's tests is analysis an agent can do.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "forecast-vacancy-and-leasing-costs",
+        "set-fee-and-recoveries",
+        "set-capital-and-reserves",
+        "add-entity-costs"
+      ],
+      "rules": [],
+      "calculators": [
+        "income-value",
+        "leverage",
+        "rate-reset"
+      ],
+      "market": "market-property-data",
+      "consumes": [
+        "underwriting-model",
+        "comp-set",
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "approve-the-budget",
+      "title": "Approve the budget in writing",
+      "instruction": "The people the governing agreement names approve the budget in writing, in the form it sets, such as the written consent of the entity's manager or general partner, or a resolution signed by the principals. Give them the budget by month, the assumptions with their bases, the choices left open in earlier steps, the test results with every variance explained, the capital plan with its funding, and the open questions. Record each choice made, what changed in review, and who approved which version on what date. Where the governing agreement gives investors a copy of the budget or a vote on it, follow that term. In a fund, the approval covers each property and the fund budget. A change to any figure after approval goes back through test-the-budget and a new approval. If the approved budget cannot support the distributions investors were led to expect, open distribution-shortfall.",
+      "mode": "human-online",
+      "modeBasis": "Adopting the budget is the principals' decision under the governing agreement; an agent prepares the package.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "test-the-budget"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "partner-approves",
+      "title": "Get the capital partner's approval where the JV agreement requires it",
+      "instruction": "The capital partner decides on the budget where the JV agreement's consent list requires its approval. Read the agreement for whether the partner must approve the budget, by what date and in what form, whether silence counts as approval, and what governs until a budget is approved, such as last year's budget with stated adjustments. An agent prepares the request with the approved package and the answer date the agreement sets, and a person approves it before it goes. Send it by the agreement's date and before the budget year starts, even where the agreement pairs the budget with the business plan; hold-annual-investor-update reports the decision recorded here rather than asking for it again. Record the partner's written decision with any conditions. Carry any change the partner requires back through test-the-budget and the principals' approval, and send a disagreement the agreement routes to a dispute process to counsel.",
+      "mode": "human-online",
+      "modeBasis": "The decision is the capital partner's own under the JV agreement; an agent prepares the request and a person approves it before it goes.",
+      "actor": "investor",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "approve-the-budget"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "deliver-the-budget",
+      "title": "Send the approved budget to the property manager and, where required, the lender",
+      "instruction": "Send the approved budget to the property manager as the plan it reports against, with the approval limits the management agreement sets, and load it into the books by month and account for actual-to-budget reports. Where the loan documents require the budget, deliver it in their form by the calendar date, as their notice clause directs, and keep the delivery evidence; where they put it in the reporting package, meet-loan-covenants delivers it there. File the lender's answer under meet-loan-covenants and, until it approves, follow the documents on which budget governs. Flag for the principals any escrow the loan statements show falling short of the budgeted tax and premiums. Hand each tenant's recovery estimate to collect-rent-and-reconcile-cam's reset-estimates, the leasing assumptions to lease-a-vacancy's set-the-asking-terms, empty-space carrying costs to renew-a-tenant's compare-renew-and-relet, and each project to run-a-capital-project. Record the budget year in the underwriting model. A person approves each delivery before it goes.",
+      "mode": "agent",
+      "modeBasis": "Loading the budget and drafting the deliveries is document work; a person approves each delivery outside the firm.",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "approve-the-budget",
+        "partner-approves"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "loan-documents"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "track-and-reforecast",
+      "title": "Track results against the budget and reforecast when facts change",
+      "instruction": "Each month, compare the property manager's reported results with the budget line by line, and list each variance past the principals' threshold with its cause and whether it is timing or lasting, for send-quarterly-investor-report. Reforecast the rest of the year when a fact the budget rested on changes: the appraisal notice under appraisal-notice-jumps or a protest result under protest-property-taxes, the adopted tax rates, an insurance renewal under renew-property-insurance, a tenant lost or a lease signed, a rate reset, or a revised projection from distribution-shortfall. Keep the approved budget unchanged as the baseline and show the reforecast beside it, with the date and reason for each change. Rerun the coverage projection under meet-loan-covenants on the reforecast. A reforecast that changes capital spending, reserves or anything the agreements make subject to approval goes back through approve-the-budget, and in a joint venture to the partner.",
+      "mode": "agent",
+      "modeBasis": "Comparing the monthly books with the budget and updating the forecast is analysis from the firm's own records.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "deliver-the-budget"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "trailing-12",
+        "rent-roll"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    }
+  ],
+  "outlineSteps": []
 }

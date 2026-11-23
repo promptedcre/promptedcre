@@ -7,30 +7,585 @@
   "phase": "operate",
   "order": 320,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "set-up-the-books",
+    "abstract-the-leases",
+    "take-over-operations"
+  ],
+  "consumes": [
+    "lease",
+    "lease-abstract",
+    "rent-roll",
+    "loan-documents",
+    "trailing-12",
+    "purchase-and-sale-agreement",
+    "settlement-statement",
+    "jv-agreement"
+  ],
+  "produces": [
+    "rent-roll"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Bill base rent from each lease's rent schedule",
-    "Bill estimated expense recoveries each month",
-    "Post receipts and track arrears by tenant",
-    "Follow up on late rent under the lease's late-fee and default terms",
-    "Pool the year's recoverable expenses by line",
-    "Remove costs the leases exclude from recovery",
-    "Allocate expenses by each tenant's share and recovery method",
-    "Compute percentage rent for tenants that owe it",
-    "Record the owner's share for vacant space",
-    "Send each tenant its reconciliation statement",
-    "Answer tenant questions and audits under the lease",
-    "Reset next year's estimated recovery billings"
-  ]
+  "sources": [
+    {
+      "id": "tx-pr-93",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.93.htm",
+      "title": "Texas Property Code, Chapter 93 (Sections 93.001 and 93.012, Commercial tenancies and assessment of charges)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "A landlord may not assess a charge, excluding a charge for rent or physical damage to the leased premises, to a tenant unless",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-92",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.92.htm",
+      "title": "Texas Property Code, Chapter 92 (Sections 92.011, 92.019 and 92.0191, Cash rental payments and late fees)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "any portion of the tenant's rent has remained unpaid two full days after the date the rent was originally due",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-64",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.64.htm",
+      "title": "Texas Property Code, Chapter 64 (Sections 64.054, 64.055 and 64.060, Enforcement of an assignment of rents and turnover of rents)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-22-535-146",
+      "url": "https://www.law.cornell.edu/regulations/texas/22-Tex-Admin-Code-SS-535-146",
+      "title": "22 Tex. Admin. Code 535.146, Maintaining Trust Money",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "\"Trust money\" means client's money, earnest money, rent, unearned fees, security deposits, or any money held on behalf of another person.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bc-3-506",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.3.htm",
+      "title": "Texas Business and Commerce Code, Section 3.506, Processing fee by holder of payment device",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary",
+      "quote": "may charge the drawer or indorser a maximum processing fee of $30"
+    },
+    {
+      "id": "ecfr-26-1-6050i-1",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.6050I-1",
+      "title": "26 CFR 1.6050I-1, Returns relating to cash in excess of $10,000 received in a trade or business",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Cash in excess of $10,000 received by a person for the account of another must be reported under this section.",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-form-8300-guide",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/irs-form-8300-reference-guide",
+      "title": "IRS Form 8300 Reference Guide",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "Generally, a business must file Form 8300 within 15 days after they receive the cash.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-fi-392",
+      "url": "https://tcss.legis.texas.gov/resources/FI/htm/FI.392.htm",
+      "title": "Texas Finance Code, Chapter 392 (Sections 392.001 and 392.301 to 392.304, Debt collection)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-16-24-275",
+      "url": "https://www.law.cornell.edu/regulations/texas/16-Tex-Admin-Code-SS-24-275",
+      "title": "16 Tex. Admin. Code 24.275, General Rules and Definitions (submetered and allocated water and wastewater)",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "A commercial or industrial park, office complex, or marina with five or more units",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-16-24-277",
+      "url": "https://www.law.cornell.edu/regulations/texas/16-Tex-Admin-Code-SS-24-277",
+      "title": "16 Tex. Admin. Code 24.277, Owner Registration and Records",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-23",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-16-24-279",
+      "url": "https://www.law.cornell.edu/regulations/texas/16-Tex-Admin-Code-SS-24-279",
+      "title": "16 Tex. Admin. Code 24.279, Rental Agreement",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-16-24-281",
+      "url": "https://www.law.cornell.edu/regulations/texas/16-Tex-Admin-Code-SS-24-281",
+      "title": "16 Tex. Admin. Code 24.281, Charges and Calculations (submetered and allocated water and wastewater)",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-16-24-283",
+      "url": "https://www.law.cornell.edu/regulations/texas/16-Tex-Admin-Code-SS-24-283",
+      "title": "16 Tex. Admin. Code 24.283, Billing (submetered and allocated water and wastewater)",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "The due date on the bill may not be less than 16 days after it is mailed or hand delivered to the tenant",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-31",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.31.htm",
+      "title": "Texas Tax Code, Chapter 31 (Sections 31.02 and 31.04, Delinquency date and its postponement)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "taxes are due on receipt of the tax bill and are delinquent if not paid before February 1",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "bill-rent-and-estimates",
+      "title": "Bill each month's rent and estimated recoveries from the lease",
+      "instruction": "Each month, build every tenant's charges from its lease abstract and signed lease, and send the statements as the lease directs once a person approves them. Base rent follows the rent schedule: each step on its date, free or abated rent, partial months, and any holdover rent the lease sets. Add the year's estimated payments for taxes, insurance and common area costs, and any other recurring charge the lease provides, each tied to its clause. A Texas commercial landlord may assess a charge other than rent or physical damage only if the lease, an exhibit or an amendment states its amount or how it is computed, or a statute or the common law allows it, such as post-receipts' returned-payment fee (Prop. Code 93.012(a), (b)); any other charge stays off the bill. Where the property manager bills and collects from its own system, check its statements against the abstracts instead.",
+      "mode": "agent",
+      "modeBasis": "Building charges from the lease terms is ledger work; statements go to tenants only after a person approves them.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "lease",
+        "lease-abstract",
+        "rent-roll"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-pr-93"
+      ],
+      "typeNotes": {
+        "multifamily": "Chapter 93, and with it the rule on charges, covers only commercial property; residential leases fall under chapter 92. Resident leases rarely carry expense estimates: bill rent and the fees the lease form lists. In Texas, water and wastewater billed to residents by submeter or allocation follow bill-tenant-utilities.",
+        "office": "In Texas, an office complex of five or more units that bills tenants for master-metered water and wastewater by submeter or allocation follows bill-tenant-utilities.",
+        "industrial": "In Texas, a commercial or industrial park of five or more units that bills tenants for master-metered water and wastewater by submeter or allocation follows bill-tenant-utilities.",
+        "retail": "Add any monthly percentage rent the lease requires on reported sales, chasing each sales report by the due date on the calendar from take-over-operations' set-up-tenant-watch; the year's percentage rent is settled in its own step. In Texas, a center that counts as a commercial park of five or more units bills tenants' water under bill-tenant-utilities; counsel confirms whether it counts."
+      }
+    },
+    {
+      "id": "bill-tenant-utilities",
+      "title": "Bill tenants for submetered or allocated water as the utility rules require",
+      "instruction": "In Texas, bill submetered or allocated water and wastewater monthly under the Public Utility Commission's rules for apartment houses, office complexes and commercial or industrial parks of five or more units (16 TAC 24.275). The owner registers with the Commission before its first such bill, including after buying the property, and after any method change; the lease carries the rules' disclosures (24.277(a), 24.279). Pass through only the utility's water and wastewater charges, with no base charges for vacant units. Allocated bills first deduct base or customer service charges and common-area use, then apply a listed formula (24.281). Show the charges apart from rent, say they are submetered or allocated, not billed by the utility, with payment due at least 16 days after mailing or delivery. A one-time late penalty up to 5 percent needs a written lease stating it; answer written disputes in writing within 30 days (24.283).",
+      "mode": "agent",
+      "modeBasis": "Computing each tenant's charge from the utility's bill and the unit data is arithmetic under the rule's formulas; bills go to tenants after a person approves them.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "consumes": [
+        "lease",
+        "rent-roll"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tac-16-24-275",
+        "tac-16-24-277",
+        "tac-16-24-279",
+        "tac-16-24-281",
+        "tac-16-24-283"
+      ],
+      "typeNotes": {
+        "multifamily": "An apartment house may add a service charge of up to 9 percent of a resident's submetered water and wastewater charge, at the percentage the lease states, except for a unit with low income housing tax credits or a resident with a Section 8 voucher (16 TAC 24.281(d)(3), 24.279(a)(9)). A building of four or fewer units is not an apartment house under these rules.",
+        "office": "An office complex allocates by each rental space's square footage over that of all rental spaces, or by one of the factors the rule lists for apartments (16 TAC 24.281(e)(2)(D)).",
+        "industrial": "A commercial or industrial park allocates by each rental space's square footage over that of all rental spaces, or by one of the factors the rule lists for apartments (16 TAC 24.281(e)(2)(D)). A building with fewer than five units is outside these rules.",
+        "retail": "A shopping center falls under these rules only if it is a commercial park of five or more units; the rules do not define a commercial park, so counsel confirms before tenants are billed this way (16 TAC 24.275(c)(9))."
+      }
+    },
+    {
+      "id": "post-receipts",
+      "title": "Post every receipt and keep an aged arrears list by tenant",
+      "instruction": "Post each payment to the tenant's ledger, applied as the lease directs, and keep an aged list of what each tenant owes. Match deposits to each account's statement, including any lender-controlled account the loan requires. A tenant that receives a lender's notice enforcing its assignment of rents owes rent to the lender, and after the lender's notice to the borrower, rents the owner collects are turned over within 30 days, less expenses the documents allow, unless they set another period (Prop. Code 64.055, 64.060). Send either notice to counsel at once and open loan-covenant-breach; once tenants have the lender's notice, bills stop naming the owner as payee, and rent received after either notice is held apart for turnover. Record returned payments; the statute allows a processing fee of up to $30 even without a lease clause and leaves a charge the lease provides in place (Bus. & Com. Code 3.506).",
+      "mode": "agent",
+      "modeBasis": "Posting payments and matching them to bank records is ledger work an agent does through a limited user the principals grant in the books, with a read-only bank feed or statements a person downloads; where the property manager posts in its own system, the agent checks its postings against the abstracts instead.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "bill-rent-and-estimates"
+      ],
+      "rules": [
+        "us-tx.property.assignment-of-rents"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "lease-abstract",
+        "rent-roll",
+        "loan-documents"
+      ],
+      "produces": [
+        "rent-roll"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-pr-64",
+        "tx-bc-3-506",
+        "tx-pr-92",
+        "tac-16-24-283"
+      ],
+      "typeNotes": {
+        "multifamily": "A landlord must accept a resident's timely cash rent unless a written lease requires payment by check, money order or another traceable or negotiable instrument; when it takes cash, it gives a written receipt and enters the date and amount in a record book (Prop. Code 92.011). Unless a third-party billing company collects or the resident designates otherwise, a payment applies first to rent and then to submetered or allocated water (16 TAC 24.283)."
+      }
+    },
+    {
+      "id": "report-large-cash",
+      "title": "File Form 8300 when cash from one payer exceeds $10,000",
+      "instruction": "File Form 8300 within 15 days (the next business day after a weekend or holiday) whenever cash rent from one payer passes $10,000. Count one payment, payments within 24 hours, and payments under one lease within a year of the first; after a filing, the count restarts (26 CFR 1.6050I-1(b), (c)(7)). Cash means currency, plus a cashier's check, bank draft, traveler's check or money order of $10,000 or less known to be used to avoid the report. Whoever takes the cash, the owning entity or its property manager, files, verifying the payer's identity and taxpayer number on receipt. The agent flags receipts and prepares the form; the CPA confirms the owning entity is in a trade or business. A person files, electronically where the business must file 10 or more other information returns that year, gives each person named a written statement by January 31, and keeps copies five years.",
+      "mode": "human-online",
+      "modeBasis": "A person files it on paper or, where required, through the BSA E-Filing System, and where the property manager received the cash, it files; an agent can flag the receipts and prepare the form.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "post-receipts"
+      ],
+      "consumes": [
+        "rent-roll"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-26-1-6050i-1",
+        "irs-form-8300-guide"
+      ]
+    },
+    {
+      "id": "follow-up-late-rent",
+      "title": "Follow up on late rent under the lease's late-fee and default terms",
+      "instruction": "When a payment is late, remind the tenant promptly and charge a late fee or interest only as its lease provides. Send nothing to a tenant known to be in bankruptcy; follow tenant-files-bankruptcy. A tenant with a lender's rent notice pays the lender, and rent accruing in the 30 days after receipt is not in default until the earlier of 10 days after the next payment date or 30 days after receipt (Prop. Code 64.055); tell counsel. Read the lease's due date, grace period, late charge and default notice; a commercial late charge follows the rule on charges in bill-rent-and-estimates (Prop. Code 93.012(a), (b)). Attach the tenant's ledger to each reminder, and record every contact and answer. Offer no waiver, payment plan or new deadline in a reminder: a principal decides those. If rent stays unpaid after the reminders, or the tenant says it cannot pay, open tenant-stops-paying.",
+      "mode": "agent",
+      "modeBasis": "Reading the lease and drafting reminders from the ledger is document work; each message to a tenant goes out with a person's approval.",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "post-receipts"
+      ],
+      "rules": [
+        "us-tx.property.assignment-of-rents"
+      ],
+      "consumes": [
+        "lease",
+        "lease-abstract"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-pr-93",
+        "tx-pr-64",
+        "tx-pr-92",
+        "tx-fi-392"
+      ],
+      "typeNotes": {
+        "multifamily": "A residential late fee needs notice in a written lease, must be reasonable, and may be charged only once rent stays unpaid two full days after it was due; a fee of no more than 10 percent of the period's rent is reasonable in a building of more than four units, 12 percent in one of four or fewer, and an initial fee and any daily fees count together as one fee for that test (Prop. Code 92.019). On a resident's request, the landlord states in writing whether a late fee is owed and how much (92.0191). Texas debt collection law reaches anyone collecting consumer debts, defined as obligations primarily for personal, family or household purposes, and bars threats and harassment, collecting interest or fees neither expressly authorized by the agreement nor legally chargeable, misstating the amount owed, and saying fees will be added that no contract or statute authorizes (Fin. Code 392.001, 392.301 to 392.304); counsel confirms how it applies to residents' rent."
+      }
+    },
+    {
+      "id": "report-collections",
+      "title": "Report collections and arrears to the principals each month",
+      "instruction": "After each month's close, give the principals a short collections report: rent and recoveries billed against collected by tenant, the aged arrears list, payments received after month end, returned payments, any Form 8300 filed, and each tenant in follow-up with its status. Tie the totals to the ledger and bank statement under set-up-the-books' month-end close. Rent a licensed broker managing the property collects for the owner is trust money, deposited in a trust account by the second working day after receipt unless otherwise agreed in writing, and the broker keeps a record of each deposit and withdrawal and accounts to the owner at least monthly when the account has activity (22 TAC 535.146); check its accounting against the deposits. The report feeds the property manager review in hire-property-manager, the lender's reports in meet-loan-covenants, the investor report in send-quarterly-investor-report and any reports the JV agreement owes a capital partner.",
+      "mode": "agent",
+      "modeBasis": "Summarizing the ledger and checking the property manager's accounting is document work; the report stays inside the firm.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "post-receipts",
+        "follow-up-late-rent"
+      ],
+      "consumes": [
+        "rent-roll"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tac-22-535-146"
+      ]
+    },
+    {
+      "id": "pool-the-expenses",
+      "title": "Pool the year's recoverable operating expenses by line",
+      "instruction": "After the year closes, pull the year's operating expenses from the general ledger and group them by the leases' categories, such as taxes, insurance, common area maintenance, utilities and management. Calendar each lease's statement deadline with the deadline-calendar first, so a statement at risk is seen early. Use the expense year each lease states, and accrue costs that belong to the year but were paid outside it. For taxes, use the year's bill: taxes are delinquent if unpaid before February 1 of the next year, later where the bill was mailed after January 10 (Tax Code 31.02(a), 31.04(a)). Note any protest still open under protest-property-taxes and how each lease treats a later refund. Split a premium or contract that spans two years as the leases provide. Tie the pool to the trailing-12 and the budget, and list every line with its support.",
+      "mode": "agent",
+      "modeBasis": "Grouping ledger entries and tying them to statements and bills is accounting work an agent can do with read access to the books.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "when": {
+        "propertyType": [
+          "industrial",
+          "office",
+          "retail"
+        ]
+      },
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "trailing-12",
+        "lease-abstract"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-31",
+        "tac-16-24-275"
+      ],
+      "typeNotes": {
+        "office": "In a Texas office complex of five or more units, master-metered water and wastewater allocated to tenants falls under the utility rules in bill-tenant-utilities, so counsel confirms whether the lease's expense clause may pool it (16 TAC 24.275).",
+        "industrial": "In a Texas commercial or industrial park of five or more units, master-metered water and wastewater allocated to tenants falls under the utility rules in bill-tenant-utilities, so counsel confirms whether the lease's expense clause may pool it (16 TAC 24.275).",
+        "retail": "Where a Texas center counts as a commercial park of five or more units, master-metered water and wastewater allocated to tenants falls under the utility rules in bill-tenant-utilities, so counsel confirms whether the lease's expense clause may pool it (16 TAC 24.275)."
+      }
+    },
+    {
+      "id": "remove-excluded-costs",
+      "title": "Remove the costs each lease excludes from recovery",
+      "instruction": "For each lease, take out of its pool every cost its expense clause excludes or limits, working from the expense grid in the lease abstract and the clause itself. Exclusions to look for include capital replacements, or all but their yearly amortization where the lease allows it; leasing commissions and tenant improvements; the landlord's financing and ownership costs; costs repaid by insurance, warranties or another tenant; services only some tenants receive; and management or administrative fees above the rate the lease states. A Texas commercial landlord may assess a charge other than rent or physical damage only if the lease, an exhibit or an amendment states its amount or how it is computed, or a statute or the common law allows it (Prop. Code 93.012(a), (b)); any other fee or cost stays out. Record each removal with its clause; counsel reads any clause whose meaning is unclear.",
+      "mode": "agent",
+      "modeBasis": "Applying each lease's expense clause to the pool is document work; what an unclear clause means is counsel's conclusion.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "pool-the-expenses"
+      ],
+      "when": {
+        "propertyType": [
+          "industrial",
+          "office",
+          "retail"
+        ]
+      },
+      "consumes": [
+        "lease",
+        "lease-abstract"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-pr-93"
+      ]
+    },
+    {
+      "id": "allocate-by-share",
+      "title": "Allocate each tenant's share and record what the owner bears",
+      "instruction": "For each tenant, including any that left during the year, compute what it owes for the months its lease ran under the lease's recovery method. Apply the pro rata share on the area the lease states; the base year, expense stop or gross structure; any cap; and any gross-up for occupancy, only where the lease provides one. Run expense-recovery for each lease; it applies a cap that is not cumulative and no gross-up, so work a cumulative cap or a gross-up by hand, checked by a second reader. Subtract the year's billed estimates and any tax true-up a lease requires, billed or credited under protest-property-taxes, to get each balance due or credit; unpaid estimates stay on the arrears list. Record what the owner bears: the share for vacant space, amounts above caps or within base years and stops, and expenses under gross leases, for set-the-annual-budget and the investor report.",
+      "mode": "agent",
+      "modeBasis": "The allocation is arithmetic on the lease terms and the pooled expenses.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "remove-excluded-costs",
+        "post-receipts"
+      ],
+      "when": {
+        "propertyType": [
+          "industrial",
+          "office",
+          "retail"
+        ]
+      },
+      "calculators": [
+        "expense-recovery"
+      ],
+      "consumes": [
+        "lease-abstract",
+        "rent-roll"
+      ],
+      "basis": "practitioner",
+      "typeNotes": {
+        "office": "Base-year office leases often gross up variable expenses to a stated occupancy so a tenant's share does not swing as the building fills or empties; apply the gross-up only as the lease defines it, and to the base year as well where the lease says so.",
+        "industrial": "Under a single-tenant net lease the tenant may pay taxes, insurance or upkeep directly; leave what the tenant paid itself out of the pool and reconcile only what the landlord paid."
+      }
+    },
+    {
+      "id": "compute-percentage-rent",
+      "title": "Compute percentage rent for each tenant that owes it",
+      "instruction": "For each retail lease with percentage rent, collect the tenant's sales statement for the lease year, with any certification the lease requires, by the due date set-up-tenant-watch in take-over-operations calendared, and draft a request for any that is missing, which a person approves before it goes. Check the reported sales against the lease's definition of gross sales and its exclusions, then compute the percentage rent over the breakpoint the lease states, or over the natural breakpoint, base rent divided by the rate, where the lease provides for one. Run the expense-recovery calculator for each lease, subtract any percentage rent already paid during the year, and note any amount the lease lets the tenant offset. Where the reported sales look wrong, the lease may give the landlord a right to audit the tenant's records; a principal decides whether to use it. Bill the balance with the reconciliation.",
+      "mode": "agent",
+      "modeBasis": "Checking sales statements against the lease and computing the rent is document work and arithmetic; a request to a tenant goes out with a person's approval.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "post-receipts"
+      ],
+      "when": {
+        "propertyType": [
+          "retail"
+        ]
+      },
+      "calculators": [
+        "expense-recovery"
+      ],
+      "consumes": [
+        "lease",
+        "lease-abstract"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "send-reconciliations",
+      "title": "Send each tenant its reconciliation statement by the lease's deadline",
+      "instruction": "Send each tenant a reconciliation statement within the time its lease allows, once a person approves it. Show the building's expenses by line, the exclusions taken, the tenant's share and method, any cap, base year or stop, the estimates billed, and the balance due or credit, with any percentage rent; attach the support the lease requires, such as the tax bills. Hold the statement of any tenant in bankruptcy for counsel under tenant-files-bankruptcy. Send a departed tenant's statement to its forwarding address and bill its balance. Calendar the tenant's objection or audit window and the payment date, which run from delivery, with the deadline-calendar. Bill a balance due on the lease's payment terms, and apply a credit as the lease says, against the next charges or by refund. Note any lease that bars or limits charges billed late, and send the principal every statement that will miss its deadline.",
+      "mode": "agent",
+      "modeBasis": "Drafting statements from the allocation is document work; each statement goes to a tenant only after a person approves it.",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "allocate-by-share",
+        "compute-percentage-rent"
+      ],
+      "when": {
+        "propertyType": [
+          "industrial",
+          "office",
+          "retail"
+        ]
+      },
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "lease",
+        "lease-abstract"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "settle-year-of-sale",
+      "title": "Settle the year of a sale with the other owner as the contract provides",
+      "instruction": "In a year the property was bought or sold, split the reconciliation between seller and buyer as the purchase contract and the settlement statement provide. Read the contract's proration clause for recoveries: whether estimates were prorated at closing, who prepares the year-end reconciliation and by when, and how a balance due from or owed to tenants is shared for the months each side owned the property. Compute each side's share from the reconciliation and the estimates each collected, and draft the statement to the other party with its support. A person approves the statement before it goes, and any payment between the parties is made by a person under the firm's payment controls. A purchase came through take-over-operations; for a sale, close-the-sale lists the true-ups that survive closing and make-the-final-distribution holds cash back for them.",
+      "mode": "agent",
+      "modeBasis": "Reading the contract and computing the split is document work and arithmetic; the statement to the other party goes out with a person's approval.",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "allocate-by-share"
+      ],
+      "when": {
+        "propertyType": [
+          "industrial",
+          "office",
+          "retail"
+        ]
+      },
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "settlement-statement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "answer-tenant-audits",
+      "title": "Answer tenant questions and audits under the lease",
+      "instruction": "When a tenant questions its statement or gives notice of an audit, a principal handles it within the lease's terms, with an agent preparing the records. Check the notice against the lease: its timing, who may audit, any bar on auditors paid by contingency fee, where and when records are produced, and who pays for the audit if it finds an overcharge above a stated threshold. Produce the ledger detail, invoices, tax bills and allocation workings for the year, and no more than the lease requires; the agent rechecks each disputed item against the lease and the support. The principal decides what to concede and what to dispute, with counsel where a claim is large or turns on what a clause means; in a joint venture, a settlement waits for the capital partner's consent where the JV agreement requires it. Put any settlement in writing and correct later statements.",
+      "mode": "human-online",
+      "modeBasis": "Conceding or disputing a tenant's claim is a business decision for the principal; an agent assembles and rechecks the records.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "send-reconciliations"
+      ],
+      "when": {
+        "propertyType": [
+          "industrial",
+          "office",
+          "retail"
+        ]
+      },
+      "consumes": [
+        "lease",
+        "lease-abstract",
+        "jv-agreement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "reset-estimates",
+      "title": "Reset next year's estimated recovery billings",
+      "instruction": "Before the year's first bill, load each tenant's estimate for the year as set-the-annual-budget hands it over, within what the lease allows. Check each estimate against the lease's share, method, cap and base year or stop, and against the owner-borne amounts in the latest reconciliation, and note any lease that limits how often or how much estimates may change or requires notice before a change takes effect. Draft each tenant's notice of its new estimate with a short basis and the effective date, and load the new amounts into the monthly billing. A person approves each notice before it goes. Revised estimates after an insurance renewal are drafted under renew-property-insurance, and after a tax result under pass-through-savings in protest-property-taxes; check each against the lease, send its notice the same way, and load it into billing here.",
+      "mode": "agent",
+      "modeBasis": "Loading the budget's estimates and checking them against the lease terms is document work; each notice goes to a tenant after a person approves it.",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "when": {
+        "propertyType": [
+          "industrial",
+          "office",
+          "retail"
+        ]
+      },
+      "consumes": [
+        "lease-abstract",
+        "rent-roll"
+      ],
+      "basis": "practitioner"
+    }
+  ],
+  "outlineSteps": []
 }

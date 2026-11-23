@@ -7,28 +7,617 @@
   "phase": "report",
   "order": 430,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "onboard-an-investor",
+    "set-up-document-storage",
+    "set-up-the-books"
+  ],
+  "consumes": [
+    "investor-register",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "subscription-agreement",
+    "investor-questionnaire",
+    "wire-instructions",
+    "loan-documents"
+  ],
+  "produces": [
+    "investor-register",
+    "wire-instructions"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Keep one register as the record for every investor",
-    "Record each investor's legal name, ownership and contact details",
-    "Record payment instructions and confirm any change by phone",
-    "Collect and file each investor's tax form",
-    "Read the transfer terms before recording any transfer",
-    "Record each transfer with the approvals and documents behind it",
-    "Reconcile the register to capital accounts and distributions",
-    "Log every change with its date and source",
-    "Limit who can change the register",
-    "Ask investors to confirm their details on a set schedule"
-  ]
+  "sources": [
+    {
+      "id": "tx-boc-3",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.3.htm",
+      "title": "Texas Business Organizations Code, Chapter 3 (Section 3.151, Books and records for all filing entities)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "a current record of the name and mailing address of each owner or member of the filing entity",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-6",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.6.htm",
+      "title": "Texas Business Organizations Code, Chapter 6 (Section 6.051, General notice requirements; Section 6.301, Applicability of chapter to partnerships)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-101",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.101.htm",
+      "title": "Texas Business Organizations Code, Chapter 101 (Sections 101.052, 101.108 to 101.112 and 101.352)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "on the approval of all of the company's members",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-153",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.153.htm",
+      "title": "Texas Business Organizations Code, Chapter 153 (Sections 153.113, 153.251 to 153.256 and 153.551)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bc-322",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.322.htm",
+      "title": "Texas Business and Commerce Code, Chapter 322, Uniform Electronic Transactions Act (Section 322.005)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-72",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.72.htm",
+      "title": "Texas Property Code, Chapter 72, Abandonment of Personal Property (Sections 72.001 and 72.101)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "a communication to the owner is returned undelivered by the United States Postal Service",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-74",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.74.htm",
+      "title": "Texas Property Code, Chapter 74, Report, Delivery, and Claims Process (Sections 74.101, 74.1011, 74.102, 74.106 and 74.301)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-6031",
+      "url": "https://www.law.cornell.edu/uscode/text/26/6031",
+      "title": "26 U.S.C. 6031, Return of partnership income (subsections (b) and (c))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-706",
+      "url": "https://www.law.cornell.edu/uscode/text/26/706",
+      "title": "26 U.S.C. 706, Taxable years of partner and partnership (subsection (d)(1))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "takes into account the varying interests of the partners in the partnership during such taxable year",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-iw9",
+      "url": "https://www.irs.gov/instructions/iw9",
+      "title": "Instructions for the Requester of Form W-9 (Rev. March 2024)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-iw8ben",
+      "url": "https://www.irs.gov/instructions/iw8ben",
+      "title": "Instructions for Form W-8BEN (Rev. October 2021)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "unless a change in circumstances makes any information on the form incorrect",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-29-1002",
+      "url": "https://www.law.cornell.edu/uscode/text/29/1002",
+      "title": "29 U.S.C. 1002, Definitions (paragraph (42), plan assets and benefit plan investor)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "an employee benefit plan subject to part 4",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-29-2510-3-101",
+      "url": "https://www.ecfr.gov/current/title-29/section-2510.3-101",
+      "title": "29 CFR 2510.3-101, Definition of \"plan assets\": plan investments (paragraph (f)(1), significant participation by benefit plan investors)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "immediately after the most recent acquisition of any equity interest in the entity",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-4975",
+      "url": "https://www.law.cornell.edu/uscode/text/26/4975",
+      "title": "26 U.S.C. 4975, Tax on prohibited transactions (subsection (e)(1), definition of plan)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-80a-3",
+      "url": "https://www.law.cornell.edu/uscode/text/15/80a-3",
+      "title": "15 U.S.C. 80a-3, Definition of investment company (subsections (c)(1) and (c)(7))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-270-3c-6",
+      "url": "https://www.ecfr.gov/current/title-17/section-270.3c-6",
+      "title": "17 CFR 270.3c-6, Certain transfers of interests in section 3(c)(1) and section 3(c)(7) funds",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "ofac-faq-11",
+      "url": "https://ofac.treasury.gov/faqs/11",
+      "title": "OFAC FAQ 11: Who must comply with OFAC sanctions?",
+      "publisher": "U.S. Department of the Treasury, Office of Foreign Assets Control",
+      "accessed": "2026-11-21",
+      "quote": "All U.S. persons must comply with OFAC sanctions",
+      "tier": "primary"
+    },
+    {
+      "id": "ofac-sls",
+      "url": "https://ofac.treasury.gov/sanctions-list-search-tool",
+      "title": "Sanctions List Search Tool",
+      "publisher": "U.S. Department of the Treasury, Office of Foreign Assets Control",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "ic3-bec-psa",
+      "url": "https://www.ic3.gov/PSA/2024/PSA240911",
+      "title": "Business Email Compromise: The $55 Billion Scam (Alert I-091124-PSA)",
+      "publisher": "FBI Internet Crime Complaint Center (IC3)",
+      "accessed": "2026-11-21",
+      "quote": "Use secondary channels and/or two-factor authentication to verify requests for changes in account information.",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "name-the-register",
+      "title": "Keep one register as the record for every investor",
+      "instruction": "Name one investor register for each deal or fund entity as the record of who holds its interests, and make the portal, mailing lists, books and the governing agreement's member or partner schedule agree with it. A Texas LLC or limited partnership must keep a current record of each owner's name and mailing address, printable within a reasonable time if electronic; set-up-document-storage lists its other records, under inventory-required-records for an LLC and fund-lp-records for a fund partnership, and any other Texas limited partnership keeps those Business Organizations Code 153.551 lists. Subscribers declined or withdrawn under close-the-raise stay in the register, marked so with the date, as ended holders do. It holds commitments and funding, not capital accounts, distributions, account or taxpayer numbers; it points to the capital ledger kept under set-up-the-books and to the verified payment record. In a joint venture, it is the partner schedule. Record where it lives.",
+      "mode": "agent",
+      "modeBasis": "Choosing the record and mapping the other lists to it is file work from the entity's own documents.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "investor-register",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-3",
+        "tx-boc-153"
+      ]
+    },
+    {
+      "id": "control-register-access",
+      "title": "Name the register's keeper, limit who can change it and review its log",
+      "instruction": "A principal names who keeps the register and sets it so that only named people can change it, each with multi-factor sign-in, and everyone else, agents included, can read it or propose changes for approval; apply the access table from set-up-document-storage. Tax forms, identity documents and payment instructions stay in the restricted area, and sensitive personal information is handled as protect-sensitive-information in set-up-document-storage sets out. Each quarter, a principal who made none of the changes reads the log against the documents and confirmation records behind each entry, signs off with the date and removes access no one needs; with one principal, a person the firm engages who made none of the changes does the review. Suspected unauthorized access or disclosure follows investor-data-exposed.",
+      "mode": "human-online",
+      "modeBasis": "Naming the keeper is the principals' call, setting permissions takes an administrator's sign-in, and the review is an independent person's judgment.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "name-the-register"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "record-holder-details",
+      "title": "Record each investor's legal name, holding, interest and notice details",
+      "instruction": "For each holder, record from the signed documents: the legal name as signed; how it holds, as an individual, joint owners, a trust with its trustees, an entity with its signers, or a custodian for a retirement account; its interest as the governing agreement measures it, with class and effective date; and the mailing address, email and phone for notices. Record a nominee and the person it holds for, whose name and address it must give the partnership. Record the agreed notice channel and its date. Unless its documents differ, a Texas LLC's mailed meeting notice is given when mailed to the address on the ownership records, and an electronic one when sent to an address the person gave or consented to; a limited partnership follows this only if its agreement adopts it. Texas's electronic transactions law needs both sides' agreement to deal electronically, and either may refuse later dealings.",
+      "mode": "agent",
+      "modeBasis": "Copying fields from signed documents into the register is data entry.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "name-the-register"
+      ],
+      "rules": [
+        "us-tx.ueta",
+        "us-fed.esign"
+      ],
+      "calculators": [],
+      "consumes": [
+        "subscription-agreement",
+        "investor-questionnaire",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-6",
+        "tx-boc-101",
+        "usc-26-6031",
+        "tx-bc-322"
+      ]
+    },
+    {
+      "id": "confirm-changes-by-phone",
+      "title": "Keep payment instructions apart and confirm any change by phone",
+      "instruction": "Treat any request to change payment instructions, the notice email, the mailing address or the phone number as unconfirmed until a principal calls the holder at a number on file from before the request, never one the request supplies. Keep each holder's distribution instructions in the place the wire-instructions record names, or at the bank, never in the register, which notes only where they are held and who verified them, how and when. The FBI advises verifying requests to change account information through a second channel. A changed email or address can precede a redirected payment. Record who called, where the number came from, who confirmed and the date. A request that fails the call, or that came from an address the firm does not know, follows wire-instructions-change. No changed instruction is used for a payment until this record exists.",
+      "mode": "human-offline",
+      "modeBasis": "The control is a live call to a known number by a person who can judge the answer; an agent cannot make or vouch for it.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-holder-details"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "wire-instructions",
+        "investor-register"
+      ],
+      "produces": [
+        "wire-instructions"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ic3-bec-psa"
+      ]
+    },
+    {
+      "id": "collect-tax-forms",
+      "title": "Collect each holder's tax form and renew it when it lapses or changes",
+      "instruction": "Keep a current Form W-9, or a Form W-8 for a foreign holder, for every holder, because the partnership must give each partner and nominee the return information the regulations require for each year it held an interest. Keep forms in the restricted area; the register records only type, signature date and location, never the taxpayer number. Tell the CPA of every foreign holder, missing form and W-9 with line 3b checked, which flags foreign owners: withholding or Schedules K-2 and K-3 may follow. A foreign individual's Form W-8BEN generally stays valid through the end of the third calendar year after the year signed, and a holder must give a new one within 30 days of a change making it wrong. Calendar each expiry, request a new form when a name, entity type or residence changes, and send requests once a principal approves.",
+      "mode": "agent",
+      "modeBasis": "Tracking forms and drafting requests is file work; the holder signs the form and a principal approves each request.",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-holder-details"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register"
+      ],
+      "produces": [
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-26-6031",
+        "irs-iw9",
+        "irs-iw8ben"
+      ]
+    },
+    {
+      "id": "read-transfer-terms",
+      "title": "Read the transfer terms before recording any change of holder",
+      "instruction": "Before recording a change of holder, abstract, with section numbers, the governing agreement's terms: whether the interest may be transferred, whose consent is needed and its standard, any first-refusal right, permitted transfers to family, trusts, estates or affiliates, what happens on death, incapacity or divorce, and what admits a new member or partner. A sale or redemption an investor asks for runs through investor-asks-to-exit, whose record-and-notify step records it; other changes of holder run here. Where a Texas company agreement is silent, an LLC interest's assignee gets the allocations and distributions assigned but becomes a member only with every member's approval, and the assignor stays a member until then. On a member's death or divorce, the spouse, heirs or estate are assignees to the extent of their interest. Texas limited partnerships' assignment rules are similar; a deceased or incapacitated limited partner's representative may exercise its rights to settle the estate.",
+      "mode": "agent",
+      "modeBasis": "Abstracting the signed agreement against the statute's default rules is reading work; any reading in doubt goes to counsel.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "name-the-register"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "subscription-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "tx-boc-153"
+      ]
+    },
+    {
+      "id": "screen-new-names",
+      "title": "Screen new holders and changed names, and rescreen every holder before each distribution",
+      "instruction": "OFAC sanctions bind every U.S. person, including the entity, so before any consent to a change of holder, and before a new holder or changed name enters the register, search the name in OFAC's Sanctions List Search, which checks the SDN List and the consolidated non-SDN lists with fuzzy name matching. For an entity or trust, also search its signers, trustees and principal owners. Before each distribution, search every holder and payee again, after the last register change, and give the dated result to that distribution's second-person check. Save the search date, the names searched and the result in the holder's file and the register's sanctions field. A possible match is not a conclusion: stop the change, make no payment to that person, and send it to counsel. Heirs, donees, trustees and new signers are screened here; a buyer completes onboard-an-investor's screen-sanctions before investor-asks-to-exit's sign-and-settle.",
+      "mode": "agent-browser",
+      "modeBasis": "OFAC's search tool is a public website that needs no account.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-holder-details",
+        "read-transfer-terms"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "investor-register"
+      ],
+      "produces": [
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ofac-faq-11",
+        "ofac-sls"
+      ]
+    },
+    {
+      "id": "retest-holder-limits",
+      "title": "Retest the plan-asset percentage and, in a fund, the owner count before any consent",
+      "instruction": "Before any consent to a change of holder, recompute each affected limit from the register and questionnaires; counsel gets any result at or near one and decides what follows. Benefit plan investors are employee benefit plans subject to ERISA's fiduciary part, Code section 4975 plans such as IRAs, and plan-asset entities, counted only as far as benefit plan investors hold them. Their share is significant at 25 percent or more of any class's value right after any equity acquisition, disregarding interests of those with discretionary control or paid advice over the entity's assets, or their affiliates, unless a benefit plan investor holds them. Section 3(c)(1) caps a fund's beneficial owners at 100 and 3(c)(7) admits only qualified purchasers; under Rule 3c-6, a transferor's estate, a donee, or a company solely for the transferor and those persons counts as the transferor, as does a 3(c)(7) holder taking by an involuntary event.",
+      "mode": "agent",
+      "modeBasis": "The percentage and the count are arithmetic on the register and the questionnaires; what they mean is counsel's conclusion.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-transfer-terms"
+      ],
+      "rules": [
+        "us-fed.erisa.plan-assets",
+        "us-fed.ica.fund-exclusions"
+      ],
+      "calculators": [],
+      "consumes": [
+        "investor-register",
+        "investor-questionnaire"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-29-1002",
+        "ecfr-29-2510-3-101",
+        "usc-26-4975",
+        "usc-15-80a-3",
+        "ecfr-270-3c-6"
+      ]
+    },
+    {
+      "id": "decide-consent-and-admission",
+      "title": "Have the principals decide consent and admission for a change of holder",
+      "instruction": "The principals the agreement names decide whether to consent to a change of holder that is not a sale, waive or use any first-refusal right, and admit the new holder as a member or partner, applying the agreement's standard. They decide only once the sanctions screen and the limit retests are clear or counsel has answered them. Where a Texas agreement is silent, an assignee becomes a member or limited partner only with every member's or partner's approval, collected as the agreement allows. Where the loan documents treat the change as a transfer, an agent drafts the lender request or notice by ask-lender-consent's method in meet-loan-covenants, a principal approves and sends it, and nothing is signed before a required consent arrives. Each consent or refusal is signed and dated, and a refusal goes to the holder in writing. A sale the investor asked for is decided under investor-asks-to-exit.",
+      "mode": "human-online",
+      "modeBasis": "Consent and admission are the principals' decisions under the agreement, signed by them; an agent drafts any lender request but cannot decide.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "screen-new-names",
+        "retest-holder-limits"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "investor-register",
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "tx-boc-153"
+      ]
+    },
+    {
+      "id": "confirm-change-of-holder",
+      "title": "Have counsel confirm who holds the interest after a change of holder",
+      "instruction": "Counsel confirms in writing who holds the interest after a change of holder, from documents the firm assembles as the agreement and counsel require: for a transfer, the signed assignment, consents, first-refusal waivers and joinder; for a death, the death certificate and papers showing who acts for the estate; for a divorce, the decree or settlement awarding the interest; for a trust or reorganized entity, the trust certificate or filing; for a charging order or other court order against an interest, the order as served. Counsel says who holds it, as member, partner or only assignee, who receives its distributions, from when, and whether the loan documents, resale limits or anything else must be met first; the register waits for that answer. A new name for the same owner, after a marriage or renaming, skips this step and the consent decision: record-the-change takes it once screened, with its document.",
+      "mode": "human-online",
+      "modeBasis": "Who holds an interest after a transfer, death or divorce is a legal conclusion on the documents.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-consent-and-admission"
+      ],
+      "rules": [
+        "us-fed.reg-d.resale-limits"
+      ],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "loan-documents",
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "record-the-change",
+      "title": "Record each change with its effective date, source and approval",
+      "instruction": "Enter a change only when what it needs is done: a contact or payment change after the confirming call; a tax form once checked; a new name for the same owner once screened, with the document showing it; a change of holder after counsel's written answer. Log the effective date, old and new values, the document and its location, who entered it and the approving principal, keeping earlier values. A holder whose interest ends stays, marked ended with its date, never deleted. Record a charging order's creditor as that interest's payee, as counsel directs, so make-a-distribution's run and payment checks pay it. Send each change of interest to the CPA with its effective date, since partners' shares reflect interests that varied during the year; it feeds the K-1s under file-partnership-return-and-k1s and the capital account the bookkeeper moves as the CPA directs. Tell the holder in writing what changed and when.",
+      "mode": "agent",
+      "modeBasis": "Entering approved changes from signed documents is data entry; a principal approves each entry before it takes effect.",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-changes-by-phone",
+        "collect-tax-forms",
+        "screen-new-names",
+        "confirm-change-of-holder"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register"
+      ],
+      "produces": [
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-26-706",
+        "tx-boc-101",
+        "tx-boc-153"
+      ]
+    },
+    {
+      "id": "reconcile-register",
+      "title": "Reconcile the register to the capital accounts, the books and the agreement",
+      "instruction": "Before each quarterly report and each distribution, tie the register out, dated for that distribution's second-person check. Interests add up to the whole for each class. Each holder's funded capital and, in a fund, its uncalled commitment agree with the capital ledger and the books. Every holder in the ledger, the portal and the governing agreement's member or partner schedule appears in the register under the same name, and no one else does, apart from entries marked declined, withdrawn or ended. Every change since the last tie-out has its documents and log entry, and every holder has a current tax form and verified payment instructions. List each difference with its cause: the bookkeeper fixes ledger errors, and register errors go back through record-the-change. A finding from audit-past-raises, such as an investor with no accepted subscription or money from someone else, goes to counsel before the next payment.",
+      "mode": "agent",
+      "modeBasis": "Matching the register to the ledger, the books and the agreement is comparison work on the firm's own records.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-the-change"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register",
+        "deal-entity-agreement",
+        "jv-agreement",
+        "subscription-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "confirm-details-yearly",
+      "title": "Ask investors to confirm their details on a set schedule",
+      "instruction": "Once a year, on a date the firm sets, such as with the annual update or the year-end tax package, send each holder its register entry to confirm: legal name, how it holds, mailing address, email and phone for notices, the notice channel it agreed to, and whether its tax form is current. Send no payment instructions; ask the holder to call the firm at its published number if its bank details have changed. A reply that changes anything goes through confirm-changes-by-phone and record-the-change, and a holder who does not answer is followed up by phone. Keep a running list, with the date each began, of mail the Postal Service returns, payments not cashed or returned, and email that bounces, and log every reply; report-unclaimed-property says which of these count. A principal approves the request before it goes out.",
+      "mode": "agent",
+      "modeBasis": "Drafting and sending confirmations from the register is routine writing work once a principal approves it.",
+      "risk": "low",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-the-change"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register"
+      ],
+      "produces": [
+        "investor-register"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "report-unclaimed-property",
+      "title": "Look for lost holders and report unclaimed property under Texas law",
+      "instruction": "Trace each holder whose mail returns or payment goes unclaimed, and prepare the Texas report. An ownership interest is presumed abandoned after over three years with the owner unlocated and no claim or act of ownership; the clock starts at the first unclaimed payment or mail the Postal Service returns, and any act of ownership or recorded contact stops it. Undelivered close-the-raise refunds follow the general three-year rule. Texas reaches holders whose recorded last address is in Texas, and some with none or a foreign one. Property held March 1 is reported and delivered to the Comptroller by July 1, with written notice to an owner of over $250 at least 60 days before; filers then report yearly, even with nothing held. Counsel decides what is reportable, as non-freely transferable securities are excluded, and which state's law, not researched here, applies; the signer Section 74.102 names signs, files and delivers.",
+      "mode": "agent",
+      "modeBasis": "Tracing and drafting are file work; counsel decides what is reportable, and a person signs, files and pays.",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-details-yearly"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-72",
+        "tx-prop-74"
+      ]
+    }
+  ],
+  "outlineSteps": []
 }

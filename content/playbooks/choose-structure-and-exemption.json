@@ -11,7 +11,8 @@
   "review": "practitioner-reviewed",
   "lastVerified": "2026-11-12",
   "requires": [
-    "form-sponsor-entity"
+    "form-sponsor-entity",
+    "build-investor-list"
   ],
   "consumes": [
     "underwriting-model",
@@ -193,6 +194,15 @@
       "accessed": "2026-11-12",
       "quote": "are self-executing, and therefore do not require a filing or a fee",
       "tier": "primary"
+    },
+    {
+      "id": "tac-115-1",
+      "url": "https://www.law.cornell.edu/regulations/texas/7-Tex-Admin-Code-SS-115-1",
+      "title": "7 Tex. Admin. Code 115.1, General Provisions (subsections (a)(9), finder, and (c)(2)(B)(v), finder registration)",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "individual who receives compensation for introducing an accredited investor to an issuer or an issuer to an accredited investor",
+      "tier": "primary"
     }
   ],
   "steps": [
@@ -218,7 +228,7 @@
     {
       "id": "list-investor-relationships",
       "title": "List prospects and how each relationship began",
-      "instruction": "For each prospective investor, the sponsor states when and how the relationship began and what the sponsor knew about the person's finances and investing experience before any offering started. SEC staff treats a pre-existing, substantive relationship as one way, not the only way, to show that offers were not a general solicitation. Pre-existing means formed before the offering began, or through a registered broker-dealer or adviser before it joined the offering; substantive means the sponsor had enough information to evaluate, and did evaluate, the person's financial circumstances and sophistication. A self-certification checkbox alone does not make a relationship substantive.",
+      "instruction": "Start from the latest dated copy of build-investor-list's confirmed list, and name the copy used. For each prospect not on it, and only those, the sponsor states when and how the relationship began and what the sponsor knew about the person's finances and investing experience before any offering started. SEC staff treats a pre-existing, substantive relationship as one way, not the only way, to show that offers were not a general solicitation. Pre-existing means formed before the offering began, or through a registered broker-dealer or adviser before it joined the offering; substantive means the sponsor had enough information to evaluate, and did evaluate, the person's financial circumstances and sophistication. A self-certification checkbox alone does not make a relationship substantive.",
       "mode": "human-online",
       "modeBasis": "Only the sponsor knows when and how each relationship formed; an agent can format the list but cannot attest to it.",
       "actor": "principal",
@@ -318,7 +328,7 @@
     {
       "id": "check-paid-solicitors",
       "title": "Check anyone who will be paid to raise money",
-      "instruction": "List everyone who will be paid for bringing in investors, including the sponsor's own staff and any outside finder. SEC staff names finders who locate investors for issuers among those who may need broker-dealer registration, and asks whether pay depends on the size or outcome of the deal. The sponsor's own people fall within the issuer safe harbor only if, among other conditions, they receive no commissions or other transaction-based pay. Texas bars paying anyone who solicits Texas investors under Rule 506 unless that person is registered in Texas as a dealer or agent. Every paid solicitor is also a bad-actor covered person and is named on Form D.",
+      "instruction": "List everyone who will be paid for bringing in investors, including the sponsor's own staff and any outside finder. SEC staff names finders who locate investors for issuers among those who may need broker-dealer registration, and asks whether pay depends on the size or outcome of the deal. The sponsor's own people fall within the issuer safe harbor only if, among other conditions, they receive no commissions or other transaction-based pay. Texas bars paying anyone who solicits Texas investors under Rule 506 unless that person is registered in Texas as a dealer or agent, or as an individual finder paid only to introduce accredited investors. Every paid solicitor is also a bad-actor covered person and is named on Form D.",
       "mode": "agent",
       "modeBasis": "Comparing the planned pay arrangements with published rules is document work; any doubtful arrangement goes to counsel.",
       "risk": "high",
@@ -339,6 +349,7 @@
         "sec-bd-guide",
         "ecfr-240-3a4-1",
         "ssb-exemptions",
+        "tac-115-1",
         "sec-form-d",
         "ecfr-230-506"
       ]
@@ -436,7 +447,7 @@
     {
       "id": "decide-with-counsel",
       "title": "Decide the structure and exemption with counsel",
-      "instruction": "Give counsel the one-page profile, the relationship list and the notes from the tests above. The sponsor chooses the business structure; counsel chooses the exemption and, for a fund, the Investment Company Act exclusion, and says whether a joint venture interest is a security. Ask for the decision in writing with its conditions: who may be contacted and how, whether non-accredited investors may buy, the verification method under Rule 506(c), and who, if anyone, may be paid to solicit.",
+      "instruction": "Give counsel the one-page profile, build-investor-list's dated list with the answers for prospects not on it, and the notes from the tests above. The sponsor chooses the business structure; counsel chooses the exemption and, for a fund, the Investment Company Act exclusion, and says whether a joint venture interest is a security. Ask for the decision in writing with its conditions: who may be contacted and how, whether non-accredited investors may buy, the verification method under Rule 506(c), and who, if anyone, may be paid to solicit.",
       "mode": "human-online",
       "modeBasis": "Choosing the exemption is a legal judgment for counsel; choosing the structure is the sponsor's business decision.",
       "actor": "counsel",

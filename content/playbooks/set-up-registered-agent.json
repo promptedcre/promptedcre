@@ -7,17 +7,516 @@
   "phase": "stand-up",
   "order": 30,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
+  "lastVerified": "2026-11-20",
+  "requires": [
+    "form-sponsor-entity"
+  ],
+  "consumes": [
+    "certificate-of-formation",
+    "jv-agreement"
+  ],
   "produces": [],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx",
+      "us-de"
+    ]
   },
-  "sources": [],
-  "steps": [],
+  "sources": [
+    {
+      "id": "tx-boc-5",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.5.htm",
+      "title": "Texas Business Organizations Code, Chapter 5 (Sections 5.200 to 5.208, 5.251 to 5.255 and 5.301 to 5.306, registered agents and service of process, including on a series)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "quote": "may not be solely a mailbox service or a telephone answering service",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-9",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.9.htm",
+      "title": "Texas Business Organizations Code, Chapter 9 (Sections 9.101 and 9.104, revocation and reinstatement of a foreign entity's registration)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-11",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.11.htm",
+      "title": "Texas Business Organizations Code, Chapter 11 (Sections 11.251 to 11.253, termination by the Secretary of State and reinstatement)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "quote": "maintain a registered agent or registered office in this state as required by law",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-101",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.101.htm",
+      "title": "Texas Business Organizations Code, Chapter 101 (Section 101.501, records and the principal office address kept at the registered office)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-401",
+      "url": "https://www.sos.state.tx.us/corp/instructions/401.shtml",
+      "title": "Form 401, Instructions for Change of Registered Agent/Office, revised 09/26",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-401a",
+      "url": "https://www.sos.state.tx.us/corp/instructions/401-a.shtml",
+      "title": "Form 401-A, Acceptance of Appointment and Consent to Serve as Registered Agent, revised 09/26",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-20",
+      "quote": "The signed consent of the registered agent should be sent to and retained by the represented entity.",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-424",
+      "url": "https://www.sos.state.tx.us/corp/instructions/424.shtml",
+      "title": "Form 424, Instructions for Certificate of Amendment, revised 09/26",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-20",
+      "quote": "a document on file with the secretary of state is a public record that is subject to public access and disclosure",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-806",
+      "url": "https://www.sos.state.tx.us/corp/forms/806_boc.pdf",
+      "title": "Form 806, Business Filings and Trademarks Fee Schedule, revised 09/26",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-ra-faq",
+      "url": "https://www.sos.state.tx.us/corp/registeredagentfaqs.shtml",
+      "title": "Registered Agents FAQs",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-20",
+      "quote": "Although an officer, owner, or employee may serve as an entity's registered agent, an entity may not serve as its own registered agent.",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-amend-faq",
+      "url": "https://www.sos.state.tx.us/corp/amendmentsfaqs.shtml",
+      "title": "Amendments and Corrections FAQs",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-20",
+      "quote": "The only way to change a registered office address is to file a statement of change.",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-pir-oir",
+      "url": "https://comptroller.texas.gov/taxes/franchise/pir-oir-filing-req.php",
+      "title": "Franchise Tax Public Information Report and Ownership Information Report Filing Requirements",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-20",
+      "quote": "Changes to the registered agent or registered office must be filed directly with the SOS and cannot be made on the PIR or OIR.",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-account-search",
+      "url": "https://comptroller.texas.gov/taxes/franchise/account-status/search",
+      "title": "Franchise Tax Account Status Search (an entity's result shows its registered agent name and registered office street address)",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-1",
+      "url": "https://delcode.delaware.gov/title6/c018/sc01/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter I (Sections 18-104, 18-105 and 18-109, registered office, registered agent and service of process)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-20",
+      "quote": "may not perform its duties or functions solely through the use of a virtual office",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-2",
+      "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter II (Sections 18-202, 18-204 and 18-206, amendment, execution and filing)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-11",
+      "url": "https://delcode.delaware.gov/title6/c018/sc11/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter XI (Sections 18-1105, 18-1107 and 18-1109, fees, annual tax and revival)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "de-faqs",
+      "url": "https://corp.delaware.gov/faqs/",
+      "title": "Frequently Asked Questions (registered agents, changing the agent, entity search)",
+      "publisher": "Delaware Division of Corporations",
+      "accessed": "2026-11-20",
+      "quote": "The entity information provided free of charge, includes the entity name, file number, incorporation/formation date, registered agent name, address and phone number",
+      "tier": "primary"
+    },
+    {
+      "id": "de-agents",
+      "url": "https://corp.delaware.gov/agents/",
+      "title": "List of Delaware Registered Agents (disclaimer and consent requirement)",
+      "publisher": "Delaware Division of Corporations",
+      "accessed": "2026-11-20",
+      "quote": "The selected Registered Agent must consent to being appointed before submitting the filing.",
+      "tier": "primary"
+    },
+    {
+      "id": "de-coa",
+      "url": "https://corp.delaware.gov/coa09/",
+      "title": "Change of Agent Forms for Entities",
+      "publisher": "Delaware Division of Corporations",
+      "accessed": "2026-11-20",
+      "quote": "To change a Registered Agent, it is required to file a document with the Division of Corporations.",
+      "tier": "primary"
+    },
+    {
+      "id": "de-upload",
+      "url": "https://corp.delaware.gov/document-upload-service-information/",
+      "title": "Document Filing and Certificate Request Information",
+      "publisher": "Delaware Division of Corporations",
+      "accessed": "2026-11-20",
+      "quote": "The service does not calculate fees.",
+      "tier": "primary"
+    },
+    {
+      "id": "de-fee",
+      "url": "https://corp.delaware.gov/fee/",
+      "title": "Corporate Fee Schedule (links the Division's current fee schedule)",
+      "publisher": "Delaware Division of Corporations",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "list-entities",
+      "title": "List every entity and each state where it must keep an agent",
+      "instruction": "Build one list of every entity the firm runs: the sponsor entity and each deal entity; for a fund, the fund, its general partner entity and the management company; for a joint venture, the firm's member entity and the venture entity. For each, record the state of formation, each state where it is registered as a foreign entity, its file numbers, and the agent and registered office now on file, starting from the filed certificate and later change filings. Texas requires every filing entity, and every foreign entity registered there, to keep an agent and office in Texas at all times; a Delaware LLC keeps both in Delaware. Each series uses its LLC's agent in both states, and papers served on a series through that agent must name both the LLC and the series. List each series under its LLC.",
+      "mode": "agent",
+      "modeBasis": "Building the list from the firm's filed certificates and later filings is file work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-tx.boc.registered-agent",
+        "us-de.llc.formation"
+      ],
+      "consumes": [
+        "certificate-of-formation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-5",
+        "de-code-18-1"
+      ]
+    },
+    {
+      "id": "jv-venture-agent",
+      "title": "In a joint venture, settle who keeps the venture entity's agent",
+      "instruction": "Read the JV agreement for who maintains the venture entity's filings and who must receive copies of legal papers. Where it is silent, agree in writing with the capital partner which member appoints and pays the agent, whose people the agent forwards to, and how quickly each member sends the other anything served on the venture or on the firm's member entity. Settle this before the agent is chosen and its forwarding details are set, and put both entities on the service log.",
+      "mode": "human-online",
+      "modeBasis": "What the members agree is settled between the firm and the capital partner.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-entities"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "choose-who-serves",
+      "title": "Decide who serves as each entity's agent and where its office is",
+      "instruction": "For an entity whose agent was not set at formation, or when an agent is being replaced, the principals choose who serves, applying the eligibility rules in form-sponsor-entity's line-up-registered-agent step; in Texas that can be a principal or employee who lives in Texas, or a commercial registered agent service. Two rules that step leaves out: in Texas an organization serving as agent must keep an employee at the registered office during normal business hours to receive service; in Delaware an agent may not do its work solely through a virtual office or a mail forwarding service. Filed documents are public, so a principal or employee who serves puts that street address on the public record.",
+      "mode": "human-online",
+      "modeBasis": "Choosing the agent and accepting its service terms are the principals' decisions; an agent can compare the options against the rules.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-entities",
+        "jv-venture-agent"
+      ],
+      "rules": [
+        "us-tx.boc.registered-agent",
+        "us-de.llc.formation"
+      ],
+      "market": "formation-back-office",
+      "basis": "cited",
+      "sources": [
+        "tx-boc-5",
+        "sos-ra-faq",
+        "de-code-18-1",
+        "sos-424"
+      ]
+    },
+    {
+      "id": "get-consent",
+      "title": "Get each agent's written consent and keep it on file",
+      "instruction": "For each new or replacement agent, get the agent's signed consent before any filing names it; form-sponsor-entity's line-up-registered-agent step sets out the consent rule. Use the Secretary of State's Form 401-A or the agent service's own consent; either should name the entity, state expressly that the person consents to serve as its registered agent, give the agent's name, and carry the agent's signature and the date. The entity keeps the signed consent and need not file it; filed on its own, it costs $15 and is indexed in the entity's filing history. Delaware's Division says the agent must consent before the filing is submitted. Store each consent with the entity's records and note its date in the list.",
+      "mode": "agent",
+      "modeBasis": "Drafting the consent and sending it for signature is document work; the agent signs, and anything sent outside the firm needs approval each time.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-who-serves"
+      ],
+      "rules": [
+        "us-tx.boc.registered-agent"
+      ],
+      "market": "formation-back-office",
+      "basis": "cited",
+      "sources": [
+        "sos-401a",
+        "sos-806",
+        "de-agents"
+      ]
+    },
+    {
+      "id": "give-forwarding-details",
+      "title": "Give each agent the forwarding address and the people to reach",
+      "instruction": "Give each agent, in writing, the address to forward to and the people who receive what it forwards, with how to reach them; name at least two, so one person's absence does not stall a lawsuit. In Texas the agent's only duties are to forward process, notices and demands to the address the entity most recently gave it, and papers for a series come to the LLC, not to the series, so a stale address means papers go astray. A Texas LLC must also keep at its registered office the street address of the principal office where its records are kept. A Delaware LLC must give its agent the name, business address and phone number of a natural person authorized to receive the agent's communications, and keep it current; an agent left without one may resign. Update these details whenever a person or address changes.",
+      "mode": "human-online",
+      "modeBasis": "The details go into the firm's own account with the agent service or a signed letter, which a person controls; an agent drafts them.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "get-consent",
+        "jv-venture-agent"
+      ],
+      "rules": [
+        "us-tx.boc.registered-agent-lapse"
+      ],
+      "market": "formation-back-office",
+      "basis": "cited",
+      "sources": [
+        "tx-boc-5",
+        "tx-boc-101",
+        "de-code-18-1"
+      ]
+    },
+    {
+      "id": "file-texas-change",
+      "title": "File Form 401 when a Texas agent or office changes",
+      "instruction": "To change a Texas entity's agent or office, file a statement of change on the Secretary of State's Form 401; a postal or 911 renumbering of the same location needs one too. It gives the entity's name, the current agent and office, the new agent or office, and recites that the entity authorized the change and that the agent's business address and the office are the same; the form recommends adding the file number. A person authorized by the entity signs; no notary is needed. File through SOSPortal, or by mail, for $15; it takes effect on filing or on a stated later date up to 90 days after signing. If the entity is amending its certificate anyway, the change can go in that amendment. The change cannot be made on the Comptroller's Public Information Report. Save the evidence of filing.",
+      "mode": "human-online",
+      "modeBasis": "A person authorized by the entity signs and pays the fee; an agent fills in the form from the list.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "cost": {
+        "text": "$15 Secretary of State filing fee",
+        "usdMin": 15,
+        "usdMax": 15,
+        "sourceId": "sos-806"
+      },
+      "after": [
+        "get-consent"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.boc.registered-agent"
+      ],
+      "market": "formation-back-office",
+      "basis": "cited",
+      "sources": [
+        "sos-401",
+        "tx-boc-5",
+        "sos-amend-faq",
+        "sos-806",
+        "cpa-pir-oir"
+      ]
+    },
+    {
+      "id": "file-delaware-change",
+      "title": "Change a Delaware agent or office with a filing at the Division",
+      "instruction": "To change a Delaware LLC's agent or office, file the Division of Corporations' change of agent form for an LLC, or a certificate of amendment setting out the LLC's name and the change. The new agent must consent before the filing goes in. An authorized person signs, and signing affirms under penalty of perjury that the facts are true. Submit it through the Division's document upload service; the fee is charged when the Division processes it, and the Division returns a certified copy. The Act lists a $50 fee for an amendment captioned as changing only the registered office or agent; the Division's fee schedule gives the total it charges, which can be higher with expedited service, so confirm it before paying. A Delaware LLC registered in Texas changes its Texas agent separately, on Form 401.",
+      "mode": "human-online",
+      "modeBasis": "An authorized person signs and the Division charges the firm's payment account; an agent prepares the form.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "get-consent"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-de"
+        ]
+      },
+      "rules": [
+        "us-de.llc.formation"
+      ],
+      "market": "formation-back-office",
+      "basis": "cited",
+      "sources": [
+        "de-coa",
+        "de-faqs",
+        "de-agents",
+        "de-code-18-2",
+        "de-code-18-11",
+        "de-upload",
+        "de-fee",
+        "sos-401"
+      ]
+    },
+    {
+      "id": "log-and-forward",
+      "title": "Log every paper served on an entity and send it on that day",
+      "instruction": "Keep one service log for all entities. Log what the agent forwards and anything served another way: in Texas on a manager, a member of a member-managed LLC or a governing person of a series; in Delaware on a manager in the state, or on a manager through the LLC's agent. Record when and how each was served, when it reached the firm, the entity and any series named, what it is and who holds it. Send a lawsuit or demand to counsel that day and follow deal-entity-sued. Route Delaware's annual tax statement, mailed in care of the agent, to whoever pays. If a Texas entity's agent cannot be found at its office, or Delaware process cannot with due diligence be served, a plaintiff may serve the Secretary of State, which mails the papers to the address in its records; a Texas LLC keeps that address current with the Comptroller.",
+      "mode": "agent",
+      "modeBasis": "Logging and routing what the agent service forwards is inbox and file work; sending papers outside the firm, even to counsel, needs approval each time.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "give-forwarding-details"
+      ],
+      "rules": [
+        "us-tx.boc.registered-agent-lapse"
+      ],
+      "market": "formation-back-office",
+      "basis": "cited",
+      "sources": [
+        "tx-boc-5",
+        "de-code-18-1",
+        "de-code-18-11",
+        "sos-amend-faq"
+      ]
+    },
+    {
+      "id": "check-each-year",
+      "title": "Check each entity's agent and office against the state record every year",
+      "instruction": "Once a year, and after any change in principals or ownership, compare each entity's agent and office in the state's record with the list. For each Texas entity, and each entity registered in Texas, search the Comptroller's free franchise tax account status by file number or taxpayer number; an entity's result shows its registered agent name and registered office street address, the record audit-entity-standing's agent check also reads. Save each result with its date. A Delaware LLC's agent appears in the Division's free entity search, which a principal runs in the next step. Send any mismatch to a principal to fix through the change steps above.",
+      "mode": "agent-browser",
+      "modeBasis": "The Comptroller's account status search is public and needs no sign-in.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "give-forwarding-details"
+      ],
+      "rules": [
+        "us-tx.boc.registered-agent"
+      ],
+      "market": "formation-back-office",
+      "basis": "cited",
+      "sources": [
+        "cpa-account-search",
+        "de-faqs"
+      ]
+    },
+    {
+      "id": "confirm-service-current",
+      "title": "Confirm each agent service is paid and holds current details",
+      "instruction": "Each year, a principal confirms, in the firm's account with each agent service or with the person serving, that the service is paid through a stated date and holds the current forwarding address and contacts, and that a principal serving as agent still lives in Texas and can be found at the office. For each Delaware LLC, the principal checks the Division's free entity search, which shows the registered agent's name, address and phone. Before any sale of a majority interest in a Texas entity, the governing authority verifies that the agent consents to continue; keeping the agent on after the sale affirms that this was verified. Record the date and the result.",
+      "mode": "human-online",
+      "modeBasis": "The firm's account with the agent service is a person's sign-in; an agent prepares the list of what to confirm.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-each-year"
+      ],
+      "rules": [
+        "us-tx.boc.registered-agent",
+        "us-tx.boc.registered-agent-lapse"
+      ],
+      "market": "formation-back-office",
+      "basis": "cited",
+      "sources": [
+        "tx-boc-5",
+        "sos-401a",
+        "de-faqs"
+      ]
+    },
+    {
+      "id": "handle-resignation",
+      "title": "Treat an agent's resignation or a lapse as a deadline",
+      "instruction": "When an agent resigns or its service lapses unpaid, calendar the cutoff that day. A Texas agent must notify the Secretary of State within 10 days after notifying the entity, and the appointment ends on the 31st day after the Secretary receives that notice, so file a new agent within 30 days of the agent's notice. With no agent on file, service can go to the Secretary of State, and if the gap is not fixed within 90 days after the Secretary mails a notice that the entity lacks an agent, it may terminate a Texas entity or revoke a foreign entity's registration; reinstatement takes a certificate of reinstatement, a Comptroller tax clearance letter and $75. A Delaware agent's resignation without a successor takes effect 30 days after filing; with no new agent named by then, the certificate of formation is canceled, and reviving it takes a certificate of revival.",
+      "mode": "agent",
+      "modeBasis": "Calendaring the cutoff and preparing the replacement is file work; the filing itself belongs to the change steps.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "log-and-forward"
+      ],
+      "rules": [
+        "us-tx.boc.registered-agent-lapse",
+        "us-de.llc.formation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-5",
+        "tx-boc-11",
+        "tx-boc-9",
+        "sos-806",
+        "de-code-18-1",
+        "de-code-18-11"
+      ]
+    }
+  ],
   "outlineSteps": []
 }

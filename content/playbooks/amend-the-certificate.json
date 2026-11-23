@@ -7,17 +7,729 @@
   "phase": "stand-up",
   "order": 32,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "lastVerified": "2026-11-20",
+  "requires": [
+    "form-sponsor-entity"
+  ],
+  "consumes": [
+    "certificate-of-formation",
+    "sponsor-operating-agreement",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "ein-confirmation",
+    "loan-documents",
+    "lease",
+    "insurance-binder",
+    "investor-register"
+  ],
+  "produces": [
+    "certificate-of-formation"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx",
+      "us-de"
+    ]
   },
-  "sources": [],
-  "steps": [],
+  "sources": [
+    {
+      "id": "tx-boc-3",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.3.htm",
+      "title": "Texas Business Organizations Code, Chapter 3 (Sections 3.051 to 3.063, amending and restating the certificate of formation)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "quote": "an action brought by or against the entity in the former name of the entity does not abate because of the name change",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-4",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.4.htm",
+      "title": "Texas Business Organizations Code, Chapter 4 (Sections 4.001, 4.002, 4.008, 4.052 and 4.053, filing, acknowledgment and effectiveness)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-5",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.5.htm",
+      "title": "Texas Business Organizations Code, Chapter 5 (Sections 5.001, 5.053, 5.056 and 5.101 to 5.105, effect on others' rights, entity names and reservations)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-9",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.9.htm",
+      "title": "Texas Business Organizations Code, Chapter 9 (Sections 9.009 and 9.101, amending and revoking a foreign entity's registration)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "quote": "The application for amendment must be filed on or before the 91st day following the date of the change.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-101",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.101.htm",
+      "title": "Texas Business Organizations Code, Chapter 101 (Sections 101.052(c), 101.053, 101.054, 101.356, 101.501 and 101.602; the company agreement may change the default approvals, records, the series notice)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "quote": "the company's members must approve by an affirmative vote of all the members",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bcc-71",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.71.htm",
+      "title": "Texas Business and Commerce Code, Chapter 71, Assumed Business or Professional Name Act (Sections 71.002, 71.101, 71.151 to 71.153)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "quote": "Not later than the 60th day after an event occurs that causes the information in a certificate to become materially misleading",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bcc-9",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.9.htm",
+      "title": "Texas Business and Commerce Code, Chapter 9 (Section 9.507, effect of a debtor's name change on a financing statement)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "quote": "unless an amendment to the financing statement that renders the financing statement not seriously misleading is filed within four months after that event",
+      "tier": "primary"
+    },
+    {
+      "id": "de-ucc-9-5",
+      "url": "https://delcode.delaware.gov/title6/c009/sc05/index.html",
+      "title": "6 Del. C. Chapter 9, Subchapter V (Section 9-507, effect of a debtor's name change on a financing statement)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-424",
+      "url": "https://www.sos.state.tx.us/corp/instructions/424.shtml",
+      "title": "Form 424, Instructions for Certificate of Amendment, revised 09/26",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-20",
+      "quote": "Do not make financial expenditures or execute documents based on a preliminary clearance.",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-414",
+      "url": "https://www.sos.state.tx.us/corp/instructions/414.shtml",
+      "title": "Form 414, Instructions for Restated Certificate of Formation with New Amendments, revised 09/26",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-415",
+      "url": "https://www.sos.state.tx.us/corp/instructions/415.shtml",
+      "title": "Form 415, Instructions for Restated Certificate of Formation without Further Amendments, revised 09/26",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-406",
+      "url": "https://www.sos.state.tx.us/corp/instructions/406.shtml",
+      "title": "Form 406, Instructions for Amendment to Registration, revised 09/26",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-503",
+      "url": "https://www.sos.state.tx.us/corp/instructions/503.shtml",
+      "title": "Form 503, Instructions for Assumed Name Certificate, revised 09/26",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-20",
+      "quote": "There is no procedure for an amendment to or correction of an assumed name certificate.",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-504",
+      "url": "https://www.sos.state.tx.us/corp/instructions/504.shtml",
+      "title": "Form 504, Instructions for Abandonment of Assumed Name Certificate, revised 09/26",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-806",
+      "url": "https://www.sos.state.tx.us/corp/forms/806_boc.pdf",
+      "title": "Form 806, Business Filings and Trademarks Fee Schedule, revised 09/26",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-name-faq",
+      "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+      "title": "Name Filings FAQs (name availability, name changes and assumed names)",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-amend-faq",
+      "url": "https://www.sos.state.tx.us/corp/amendmentsfaqs.shtml",
+      "title": "Amendments and Corrections FAQs",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-copies",
+      "url": "https://www.sos.state.tx.us/corp/copies.shtml",
+      "title": "Copies and Certificates",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-account-search",
+      "url": "https://comptroller.texas.gov/taxes/franchise/account-status/search",
+      "title": "Franchise Tax Account Status Search",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-20",
+      "quote": "API access to this data is available.",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-name-change",
+      "url": "https://www.irs.gov/businesses/business-name-change",
+      "title": "Business name change (page last reviewed February 22, 2026)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-20",
+      "quote": "If you are filing a current year Form 1065, mark the appropriate name change box on the form: Page 1, Line G, Box 3.",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-f1065",
+      "url": "https://www.irs.gov/pub/irs-pdf/f1065.pdf",
+      "title": "Form 1065, U.S. Return of Partnership Income (2025): line G(3) and the signature block",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-20",
+      "quote": "Signature of partner or limited liability company member",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-p1635",
+      "url": "https://www.irs.gov/pub/irs-pdf/p1635.pdf",
+      "title": "Publication 1635, Understanding Your EIN (Rev. 2-2014), relied on only for its line that a partnership's name change needs no new EIN",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-20",
+      "quote": "The partnership name changes",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-1",
+      "url": "https://delcode.delaware.gov/title6/c018/sc01/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter I (Section 18-102, name set forth in the certificate)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-2",
+      "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter II (Sections 18-202, 18-204, 18-206 and 18-208, amendment, execution, filing and restated certificates)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-20",
+      "quote": "shall promptly amend the certificate of formation",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-3",
+      "url": "https://delcode.delaware.gov/title6/c018/sc03/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter III (Sections 18-302(e) and (f) and 18-305, amending the LLC agreement and members' records)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-11",
+      "url": "https://delcode.delaware.gov/title6/c018/sc11/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter XI (Section 18-1105, fees)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "de-faqs",
+      "url": "https://corp.delaware.gov/faqs/",
+      "title": "Frequently Asked Questions (amendments, name availability and reservations)",
+      "publisher": "Delaware Division of Corporations",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "de-llc-forms",
+      "url": "https://corp.delaware.gov/corpformsllc09/",
+      "title": "Corporate Forms and Certificates for a Limited Liability Company",
+      "publisher": "Delaware Division of Corporations",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "de-upload",
+      "url": "https://corp.delaware.gov/document-upload-service-information/",
+      "title": "Document Filing and Certificate Request Information",
+      "publisher": "Delaware Division of Corporations",
+      "accessed": "2026-11-20",
+      "quote": "The service does not calculate fees.",
+      "tier": "primary"
+    },
+    {
+      "id": "de-fee",
+      "url": "https://corp.delaware.gov/fee/",
+      "title": "Corporate Fee Schedule (links the Division's current fee schedule)",
+      "publisher": "Delaware Division of Corporations",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "define-the-change",
+      "title": "Write down exactly what the amendment changes",
+      "instruction": "List each provision of the certificate being added, changed or deleted, with its new text and the reason. An amended certificate may contain only what an original certificate could contain at the time, plus changes to the owners' interests or rights. Some changes need no amendment: a Texas entity changes only its agent or office with a statement of change (see set-up-registered-agent), and an LLC's new managers reach the state's records through its next Public Information Report, though it may amend instead. Adding the notice a series LLC needs is an amendment (see set-up-series). For many changes, a restated certificate states the whole text with the new amendments. In Delaware, a manager, or a member if there is none, who learns that a statement in the certificate was false when made, or has changed so the certificate is false in any material respect, must promptly amend it.",
+      "mode": "agent",
+      "modeBasis": "Comparing the filed certificate with the intended change and drafting the list is document work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-tx.boc.certificate-of-amendment"
+      ],
+      "consumes": [
+        "certificate-of-formation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-3",
+        "sos-424",
+        "sos-amend-faq",
+        "tx-boc-101",
+        "de-code-18-2"
+      ]
+    },
+    {
+      "id": "find-consents",
+      "title": "Find every agreement that needs consent or notice before the change",
+      "instruction": "Before anyone approves the amendment, read each agreement the entity is party to for a clause requiring consent to, or notice before, a change of name or of the terms being amended: the loan documents first, then the leases, the JV agreement, the deal or fund documents, the insurance policies, the property management agreement and service contracts. List each requirement with its deadline and form. Draft each consent request; a principal approves it before it goes out, and nothing is filed until every required consent is in hand. Notices due only after the change wait for the notice step.",
+      "mode": "agent",
+      "modeBasis": "Reading the agreements and drafting requests is document work; each request leaves the firm only with a principal's approval.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "define-the-change"
+      ],
+      "consumes": [
+        "loan-documents",
+        "lease",
+        "jv-agreement",
+        "deal-entity-agreement",
+        "insurance-binder"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "check-new-name",
+      "title": "Check that a new name is available and carries the right ending",
+      "instruction": "For a name change, check the new name before anyone signs. For a Texas entity, run form-sponsor-entity's Texas name check (check-name-texas) on it, including its email to the Secretary of State for a preliminary determination. A Delaware name must contain \"Limited Liability Company,\" \"L.L.C.\" or \"LLC\" and be distinguishable on the Division's records; a principal checks it in the Division's online name tool, which can also reserve it for 120 days for $75. Neither clearing nor filing a name gives a right to use it against another's trademark or common-law rights.",
+      "mode": "agent-browser",
+      "modeBasis": "The Texas check is a public search plus an email to the Secretary of State, which a principal approves before it goes; each state decides when it accepts the filing.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "define-the-change"
+      ],
+      "rules": [
+        "us-tx.boc.llc-formation",
+        "us-de.llc.formation"
+      ],
+      "market": "formation-back-office",
+      "basis": "cited",
+      "sources": [
+        "tx-boc-5",
+        "de-code-18-1",
+        "de-faqs"
+      ]
+    },
+    {
+      "id": "approve-the-amendment",
+      "title": "Get the approval the company agreement and the statute require",
+      "instruction": "Counsel reads the company agreement's amendment and decision terms and confirms who must approve. In Texas an amendment to the certificate needs every member's approval unless the company agreement provides otherwise; a restated certificate that adds no amendment needs only a majority of the managers, or of the managing members. The certificate states that the approval the code and the governing documents require was given, so it must really have been given. If the company agreement's text must change too, approve both at once: amending a Texas company agreement takes every member's consent unless it provides otherwise, and a Delaware LLC formed in 2012 or later whose agreement is silent on its own amendment needs every member. In a deal or fund entity, check the investors' voting and notice rights; in a joint venture, the capital partner's consent rights. Record the approval in a signed written consent.",
+      "mode": "human-online",
+      "modeBasis": "Who must approve is a legal reading of the governing documents, and the members sign the consent.",
+      "actor": "principal",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "define-the-change",
+        "find-consents"
+      ],
+      "rules": [
+        "us-tx.boc.certificate-of-amendment"
+      ],
+      "consumes": [
+        "sponsor-operating-agreement",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "tx-boc-3",
+        "sos-424",
+        "sos-415",
+        "de-code-18-3"
+      ]
+    },
+    {
+      "id": "draft-texas-filing",
+      "title": "Draft the Texas certificate of amendment or restated certificate",
+      "instruction": "Prepare the filing on the Secretary of State's Form 424, or on Form 414 for a restated certificate with new amendments. Give the entity's legal name exactly as the Secretary's records show it, its type and its file number; the new name with its ending, if the name changes; each provision added, altered or deleted, with the text of each new or changed one; the statement of approval; and when it takes effect, on filing or on a stated later date up to 90 days after signing. A restated certificate states the whole current text with each earlier amendment carried forward and each new one, and may leave out the organizers and the initial mailing address. An agent or office change can go in the same filing. Filings are public: use a business address and include no Social Security numbers.",
+      "mode": "agent",
+      "modeBasis": "Every answer comes from the change list and the approval; an agent fills in the form for the person who signs.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-new-name",
+        "approve-the-amendment"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.boc.certificate-of-amendment"
+      ],
+      "consumes": [
+        "certificate-of-formation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "sos-424",
+        "sos-414",
+        "tx-boc-3",
+        "tx-boc-4"
+      ]
+    },
+    {
+      "id": "file-texas-filing",
+      "title": "Sign and file the Texas amendment",
+      "instruction": "An authorized manager signs, or a managing member if the LLC has no managers; no notary is needed, but knowingly signing a materially false filing is an offense. File through SOSPortal and pay by ACH or card (cards add a convenience fee), or file by mail or in person with a check or money order. The fee is $150 for a certificate of amendment and $300 for a restated certificate. The Secretary of State checks a new name when the filing arrives. The amendment takes effect when the filing does; it does not disturb existing claims or pending suits, and a suit by or against the entity under its former name continues. An online filing's evidence of filing comes by email. Record the filing date and keep the evidence with the entity's records.",
+      "mode": "human-online",
+      "modeBasis": "The filing is signed and paid for in the entity's name; neither can be handed to an agent.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "cost": {
+        "text": "$150 Secretary of State fee for a certificate of amendment; $300 for a restated certificate",
+        "usdMin": 150,
+        "usdMax": 300,
+        "sourceId": "sos-806"
+      },
+      "after": [
+        "draft-texas-filing"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.boc.certificate-of-amendment"
+      ],
+      "market": "formation-back-office",
+      "produces": [
+        "certificate-of-formation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "sos-424",
+        "sos-414",
+        "sos-806",
+        "tx-boc-3",
+        "tx-boc-4"
+      ]
+    },
+    {
+      "id": "file-delaware-amendment",
+      "title": "Draft, sign and file the Delaware certificate of amendment",
+      "instruction": "Prepare the Division of Corporations' certificate of amendment for an LLC, which sets out the LLC's name and the amendment. For many changes, an \"Amended and Restated Certificate of Formation\" integrates the whole text and states the present name, the original name if it changed, and the original filing date. An authorized person signs, which affirms under penalty of perjury that the facts are true. Submit it through the Division's document upload service; the fee is charged when the Division processes it, and the Division returns a certified copy. It takes effect on filing unless it states a later date or time. The Act lists $180 for a certificate of amendment or a restated certificate; the Division's fee schedule gives the total it charges, which can be higher with expedited service, so confirm it before paying.",
+      "mode": "human-online",
+      "modeBasis": "An authorized person signs and the Division charges the firm's payment account; an agent prepares the form.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-new-name",
+        "approve-the-amendment"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-de"
+        ]
+      },
+      "rules": [
+        "us-de.llc.formation"
+      ],
+      "market": "formation-back-office",
+      "produces": [
+        "certificate-of-formation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "de-code-18-2",
+        "de-code-18-11",
+        "de-llc-forms",
+        "de-upload",
+        "de-faqs",
+        "de-fee"
+      ]
+    },
+    {
+      "id": "amend-texas-registration",
+      "title": "For a Delaware LLC registered in Texas, amend the Texas registration",
+      "instruction": "A Delaware LLC registered to do business in Texas that changes its name must amend its Texas registration on or before the 91st day after the change, on the Secretary of State's Form 406, for $150. Give the new legal name as amended in Delaware; it must meet the Texas naming rules, and if Texas would refuse it, the registration is suspended until the LLC adopts a name available in Texas, which also takes an assumed name certificate. Failing to amend when required can lead to revocation of the registration. An authorized person signs; file through SOSPortal or by mail.",
+      "mode": "human-online",
+      "modeBasis": "An authorized person signs and pays the fee; an agent fills in the form.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "cost": {
+        "text": "$150 Secretary of State fee for an amendment to registration",
+        "usdMin": 150,
+        "usdMax": 150,
+        "sourceId": "sos-806"
+      },
+      "after": [
+        "file-delaware-amendment"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-de"
+        ]
+      },
+      "market": "formation-back-office",
+      "basis": "cited",
+      "sources": [
+        "tx-boc-9",
+        "sos-406",
+        "sos-806"
+      ]
+    },
+    {
+      "id": "record-filed-copy",
+      "title": "Save the filed copy and check that the state's records show the change",
+      "instruction": "When the filing comes back, save the Secretary of State's evidence of filing, or the Division's certified copy, with the entity's records, and update the certificate of formation record: the current legal name, the former name, and this amendment's filing date and content. A Texas LLC must keep its certificate with every amendment and restatement, and a Delaware member may ask for the same. For an entity on Texas records, search the Comptroller's free account status and save the result: the Secretary of State says an LLC amendment of its managers updates both offices' records, so check that a name change carried over too, and a principal asks the Comptroller if not. Certified copies and certificates of status are a principal's paid order, from SOSPortal ($15 a certificate) or the Division's certificate service.",
+      "mode": "agent-browser",
+      "modeBasis": "Saving the copy is file work and the Comptroller's search is public; ordering certified copies is a paid order a person places.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "file-texas-filing",
+        "file-delaware-amendment",
+        "amend-texas-registration"
+      ],
+      "consumes": [
+        "certificate-of-formation"
+      ],
+      "produces": [
+        "certificate-of-formation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-4",
+        "tx-boc-101",
+        "de-code-18-2",
+        "de-code-18-3",
+        "sos-copies",
+        "sos-806",
+        "de-upload",
+        "cpa-account-search",
+        "sos-amend-faq"
+      ],
+      "market": "formation-back-office"
+    },
+    {
+      "id": "refile-assumed-names",
+      "title": "File new assumed name certificates after a name change",
+      "instruction": "A Texas entity, or a Delaware LLC registered in Texas, whose name changes must file a new assumed name certificate within 60 days for each assumed name it keeps using, because the old certificate has become materially misleading; an assumed name certificate cannot be amended. Each costs $25 and lasts up to 10 years. If the firm will keep doing business under the former name, that name is now an assumed name and needs its own certificate. For a name the firm stops using, it may file a statement of abandonment, for $10. A protected series whose name lacks the LLC's name is an assumed name of the LLC, so review series names too.",
+      "mode": "human-online",
+      "modeBasis": "An officer, manager or member signs each certificate and the fee is paid in the entity's name; an agent drafts them.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "cost": {
+        "text": "$25 per assumed name certificate",
+        "usdMin": 25,
+        "usdMax": 25,
+        "sourceId": "sos-806"
+      },
+      "after": [
+        "file-texas-filing",
+        "amend-texas-registration"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.assumed-name.certificate"
+      ],
+      "market": "formation-back-office",
+      "basis": "cited",
+      "sources": [
+        "tx-bcc-71",
+        "sos-503",
+        "sos-504",
+        "sos-806",
+        "sos-name-faq"
+      ]
+    },
+    {
+      "id": "tell-the-irs",
+      "title": "Tell the IRS about the name change",
+      "instruction": "Tell the IRS of the new name the way its business name change page directs. The page lists partnerships, not LLCs; an LLC taxed as a partnership files Form 1065, so it follows the partnership steps: mark the name change box on the current year's return (page 1, line G, box 3), or, if that return is already filed, write to the IRS at the address where it was filed, in a letter signed by a member. If the EIN is new and its filing requirement is not yet set, send the change to the address where the return will be filed. Ask for an acknowledgment if wanted. The IRS says some name changes need a new EIN or a final return; its EIN publication says a partnership's name change does not. For any other classification, the CPA confirms the steps. Note the change on the EIN record.",
+      "mode": "human-online",
+      "modeBasis": "A member signs the letter, or the CPA marks the change on the return; an agent drafts the letter.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-filed-copy"
+      ],
+      "rules": [
+        "us-fed.irs.ein"
+      ],
+      "consumes": [
+        "ein-confirmation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "irs-name-change",
+        "irs-f1065",
+        "irs-p1635"
+      ]
+    },
+    {
+      "id": "retitle-bank-accounts",
+      "title": "Have each bank retitle the accounts in the new name",
+      "instruction": "A principal who is an authorized signer gives each bank the filed amendment, and the IRS acknowledgment if the bank asks for it, and has the account title changed to the new legal name under the EIN confirmed in tell-the-irs. Order checks, deposit stamps and online banking profiles in the new name, and ask how long the bank will accept payments made out to the former name. Do not send anyone new payment instructions as part of the name change; if the account numbers stay the same, say so through a channel the recipient already knows.",
+      "mode": "human-online",
+      "modeBasis": "The bank deals only with the account's authorized signers.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-filed-copy",
+        "tell-the-irs"
+      ],
+      "market": "formation-back-office",
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "notify-counterparties",
+      "title": "Tell lenders, insurers, tenants, partners and investors",
+      "instruction": "After the filing, send each notice that the agreements found before approval require, and tell every lender, tenant, insurer, capital partner and investor of the new name, with the filing date and the EIN confirmed in tell-the-irs. The amendment does not disturb existing rights, claims or pending suits. If the new name makes a lender's financing statement seriously misleading, Texas and Delaware law both keep it covering collateral the entity had before the change or acquires within four months after, but not collateral acquired later unless the lender files an amendment within those four months, so tell lenders promptly. Counsel decides whether anything recorded, such as a deed in the former name, needs a filing. A principal approves each notice before it goes out.",
+      "mode": "agent",
+      "modeBasis": "Building the list and drafting the notices is document work; each notice leaves the firm only with a principal's approval.",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-filed-copy",
+        "find-consents",
+        "tell-the-irs"
+      ],
+      "consumes": [
+        "loan-documents",
+        "lease",
+        "insurance-binder",
+        "investor-register"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-3",
+        "tx-bcc-9",
+        "de-ucc-9-5"
+      ]
+    },
+    {
+      "id": "update-firm-records",
+      "title": "Change the name everywhere the firm itself uses it",
+      "instruction": "Update the entity's name in the firm file and entity list, signature blocks, letterhead, invoices, the website, email signatures, the investor register, the books, the insurance and tax calendars, and document templates. Conform the company agreement and any offering documents through counsel where the approval step changed them. Keep the former name in the record with the date it changed, so older contracts and filings can still be matched. Then run the name match check in audit-entity-standing to confirm every record uses the new legal name, punctuation and ending included.",
+      "mode": "agent",
+      "modeBasis": "Updating the firm's own files is document work; a change to the public website is published only after a principal approves it.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "refile-assumed-names",
+        "tell-the-irs",
+        "retitle-bank-accounts",
+        "notify-counterparties"
+      ],
+      "consumes": [
+        "investor-register"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    }
+  ],
   "outlineSteps": []
 }

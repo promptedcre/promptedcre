@@ -385,7 +385,7 @@
     {
       "id": "file-texas-notice-now",
       "title": "File the late Texas notice through EFD",
-      "instruction": "If any investor is in Texas, file the Form D notice and fee with the Texas Securities Commissioner through EFD now; Texas wanted both with the SEC filing and within 15 days of the first Texas sale. The fee is one-tenth of 1% of the offering amount, capped at $500, paid by ACH through EFD. Texas's fee chapter and Rule 114.4 set no separate late fee for a Rule 506 notice, though an issuer that offers more than its notice covered owes three times the fee shortfall plus interest. Counsel advises on how the State Securities Board views the delay.",
+      "instruction": "If any investor is in Texas, file the Form D notice and fee with the Texas Securities Commissioner through EFD now; Texas wanted both with the SEC filing and within 15 days of the first Texas sale. The fee is one-tenth of 1% of the offering amount, capped at $500, paid by ACH through EFD. Texas's fee chapter and Rule 114.4 set no separate late fee for a Rule 506 notice, though an issuer that offers more than its notice covered owes three times the fee shortfall plus interest. Counsel advises on how the State Securities Board views the delay. If a Form D was on file before this situation opened and only the Texas notice is late, this situation does not apply: file-form-d-and-state-notices/file-texas-notice files it after counsel's review.",
       "mode": "human-online",
       "modeBasis": "EFD needs a registered filer account and an ACH payment a person authorizes.",
       "actor": "principal",

@@ -2,36 +2,488 @@
   "id": "sponsor-partners-disagree",
   "slug": "sponsor-partners-disagree",
   "kind": "situation",
-  "title": "Sponsor partners disagree on a major decision",
-  "summary": "Go back to the partner agreement's decision and deadlock terms and resolve it before it reaches investors.",
+  "title": "The principals disagree on a major decision",
+  "summary": "Frame the decision, read the partner agreement's vote and deadlock terms and the state's defaults where it is silent, and keep the firm running and its deadlines met meanwhile. Escalate only as the agreement provides, from a vote to mediation to a buy-sell, with counsel on remedies and on what outsiders hear.",
   "phase": "stand-up",
   "order": 129,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
+  "lastVerified": "2026-11-21",
   "situation": {
     "trigger": "The principals cannot agree on a decision the business needs to make.",
     "urgency": "weeks"
   },
-  "requires": [],
-  "consumes": [],
+  "requires": [
+    "sign-partner-agreement",
+    "choose-counsel-and-cpa"
+  ],
+  "consumes": [
+    "sponsor-operating-agreement",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "loan-documents",
+    "loan-term-sheet",
+    "purchase-and-sale-agreement",
+    "underwriting-model",
+    "ic-memo",
+    "private-placement-memorandum",
+    "investor-register"
+  ],
   "produces": [],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx",
+      "us-de"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Write down the decision in dispute and each partner's position",
-    "Read the partner agreement's decision, vote and deadlock terms",
-    "List the deadlines the dispute puts at risk",
-    "Gather the facts and figures each side relies on",
-    "Meet to decide under the agreement's process",
-    "Use the agreement's mediation or buy-sell steps if still stuck",
-    "Bring in counsel if the agreement's remedies come into play",
-    "Record the decision and how it was reached",
-    "Tell investors what the governing documents require"
-  ]
+  "sources": [
+    {
+      "id": "tx-boc-101",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.101.htm",
+      "title": "Texas Business Organizations Code, Chapter 101 (Sections 101.053, 101.254, 101.255, 101.353 to 101.356, 101.358, 101.401, 101.502 and 101.552)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "Each governing person, member, or committee member of a limited liability company has an equal vote",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-11",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.11.htm",
+      "title": "Texas Business Organizations Code, Chapter 11 (Section 11.314, winding up of a partnership or LLC by court order)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "it is not reasonably practicable to carry on the entity's business in conformity with its governing documents",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-cprc-154",
+      "url": "https://tcss.legis.texas.gov/resources/CP/htm/CP.154.htm",
+      "title": "Texas Civil Practice and Remedies Code, Chapter 154 (Sections 154.023, 154.071 and 154.073: mediation, settlement agreements and confidentiality)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "A mediator may not impose his own judgment on the issues for that of the parties.",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-1",
+      "url": "https://delcode.delaware.gov/title6/c018/sc01/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter I (Section 18-110, contested votes and contested managers)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-21",
+      "quote": "may hear and determine the validity of any admission, election, appointment, removal or resignation of a manager",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-3",
+      "url": "https://delcode.delaware.gov/title6/c018/sc03/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter III (Sections 18-302(d) and 18-305: members' written consents and access to information)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-21",
+      "quote": "does not reply to the demand that has been made within 5 business days",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-4",
+      "url": "https://delcode.delaware.gov/title6/c018/sc04/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter IV (Sections 18-402 and 18-404(d): management, voting, authority to bind and managers' written consents)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-21",
+      "quote": "the decision of members owning more than 50 percent of the said percentage or other interest in the profits controlling",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-8",
+      "url": "https://delcode.delaware.gov/title6/c018/sc08/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter VIII (Sections 18-801(a)(3) and 18-802: dissolution by the members' vote and judicial dissolution)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-21",
+      "quote": "whenever it is not reasonably practicable to carry on the business in conformity with a limited liability company agreement",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-11",
+      "url": "https://delcode.delaware.gov/title6/c018/sc11/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter XI (Section 18-1101(c) to (e), duties and the limits on eliminating them)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-21",
+      "quote": "the limited liability company agreement may not eliminate the implied contractual covenant of good faith and fair dealing",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "To make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "frame-the-decision",
+      "title": "Write down the decision in dispute and each principal's position",
+      "instruction": "Draft a short, neutral statement of the dispute: the decision the business needs, which entity it binds (the firm, a deal or fund entity, or a venture), the options on the table, the date it must be made by and what happens if nothing is decided. Give each principal a section for their position and reasons in their own words, and have each confirm their section. Note what the principals already agree on, and separate disputed facts from disputed judgments. The statement stays inside the firm, with the principals and counsel.",
+      "mode": "agent",
+      "modeBasis": "Drafting a neutral statement is writing work; each principal confirms their own section.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "read-decision-terms",
+      "title": "Abstract the agreement's decision, vote and deadlock terms",
+      "instruction": "From the signed sponsor operating agreement and its term sheet, abstract with section numbers: whether this is a major decision and the vote it needs; who may act alone in the ordinary course, and within what limits; the notice, quorum, meeting and written consent rules; the deadlock steps in order, such as a time to decide, a named tie-breaker, mediation, arbitration, a buy-sell or a sale; who runs each existing deal while a dispute lasts; the duties the principals owe each other as the agreement sets them; the dispute clause, governing law and forum; and who bears the costs. If the decision belongs to a deal or fund entity or a venture, abstract that agreement's terms too, including any investor or partner consent it needs. List each question the agreements leave open.",
+      "mode": "agent",
+      "modeBasis": "Abstracting signed agreements is reading work; what a disputed term means is counsel's call.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "frame-the-decision"
+      ],
+      "consumes": [
+        "sponsor-operating-agreement",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "apply-default-rules",
+      "title": "Where the agreement is silent, write in the state's voting defaults",
+      "instruction": "For each open question, write the default beside it. In Texas each manager, or each member at a members' meeting, has an equal vote; a majority present at a meeting with a majority quorum acts. But an act outside the ordinary course needs a majority of all governing persons; a fundamental business transaction, or one that would end the ordinary business, a majority of all members; and amending the certificate or the company agreement, every member. Where a Delaware LLC's members manage, they vote by share of profits, more than half controlling. In both states, a consent signed by the votes a full meeting needs acts without one. A Texas LLC winds up voluntarily on a majority of all members' votes, and a Delaware LLC dissolves on the vote of members owning over two-thirds of the profits interest. An even split defeats the proposal, so nothing needing approval happens.",
+      "mode": "agent",
+      "modeBasis": "Reading the defaults from the statutes against the abstract is document work; counsel confirms how they apply.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-decision-terms"
+      ],
+      "consumes": [
+        "sponsor-operating-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "de-code-18-4",
+        "de-code-18-3",
+        "de-code-18-8"
+      ]
+    },
+    {
+      "id": "list-deadlines-at-risk",
+      "title": "List every deadline the dispute puts at risk and what doing nothing costs",
+      "instruction": "List each date the decision, or the delay, affects: in a purchase contract, the feasibility deadline, the date a deposit goes hard and closing; in loan papers, a rate lock, a commitment's expiry or a reporting date; capital calls and distributions; lease and renewal answers; tax protest and filing dates; and any response period owed to a capital partner or investors. For each, record what happens if no one acts, whether doing nothing is itself a decision, such as letting a deposit go hard, and whether the date can be extended, by whom and at what cost. Enter each in the deadline-calendar and give the principals the list, earliest first. Any date that will pass before the agreement's process can finish goes into the interim agreement in the next step.",
+      "mode": "agent",
+      "modeBasis": "Reading dates from signed contracts and loan papers and building the calendar is document work.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "loan-term-sheet",
+        "loan-documents",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "hold-the-status-quo",
+      "title": "Agree in writing how the firm runs while the dispute lasts",
+      "instruction": "The principals sign a short interim agreement within the partner agreement's terms. It names who runs each existing deal and makes ordinary-course decisions, and who may approve messages for the firm; says no one commits the firm or a deal to the disputed decision, changes bank signers, payment roles or system access, moves or deletes firm records, or speaks for the firm about the dispute alone; keeps every payment on two people; and says how each listed deadline will be met, extended or decided in time. This matters because a Texas governing person or authorized officer acting apparently in the ordinary course binds the company unless the person lacks actual authority and the other side knows it, and a Delaware member or manager can bind the company unless the agreement says otherwise. If the principals cannot agree on this, their next meeting takes it up first.",
+      "mode": "human-online",
+      "modeBasis": "An agreement among the principals is signed by each of them; an agent drafts it from the abstract and the deadline list.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-decision-terms",
+        "list-deadlines-at-risk"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "sponsor-operating-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "de-code-18-4"
+      ]
+    },
+    {
+      "id": "gather-the-facts",
+      "title": "Build one fact pack that both principals work from",
+      "instruction": "Assemble one pack for the decision: every document, figure and assumption either principal relies on, each with its source and date. Where numbers matter, run the same model on each side's assumptions, using the returns-sensitivity calculator for returns and the scenario-risk calculator to compare the two options at the odds each principal assigns. Mark checkable facts apart from judgments, and give both principals the same pack at once. Log any principal's written demand for records with its date, calendar the reply and give it to counsel, who answers under the agreement and set-up-document-storage's records procedure. A Delaware member may go to the Court of Chancery if the company refuses or does not reply within five business days, or the agreement's period up to thirty; a Texas member's right reaches emails or texts only if one carried out a company action or the agreement says so.",
+      "mode": "agent",
+      "modeBasis": "Assembling documents and running the calculators on stated assumptions is file work; the principals supply the assumptions and counsel answers any records demand.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "frame-the-decision"
+      ],
+      "calculators": [
+        "returns-sensitivity",
+        "scenario-risk"
+      ],
+      "market": "deal-pipeline-underwriting",
+      "consumes": [
+        "underwriting-model",
+        "ic-memo"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "de-code-18-3"
+      ]
+    },
+    {
+      "id": "decide-what-outsiders-hear",
+      "title": "Have counsel decide what investors, a lender or a partner must be told",
+      "instruction": "Keep the dispute inside the firm unless something must be disclosed or a document requires notice. Give counsel the framing statement, the deadline list and the documents that could require it: the loan papers' notice duties, such as litigation or a change in management; the venture agreement's reporting and consent terms; each deal or fund agreement's reporting terms; and the memorandum for any offering still open. An untrue statement of a material fact, or an omission that leaves what is said misleading, is unlawful in connection with a securities sale, so counsel decides whether the dispute is material to an offering still open or a transfer and, for a report, what the reporting terms require. Until counsel answers, no principal discusses the dispute with investors, lenders or partners.",
+      "mode": "human-online",
+      "modeBasis": "Whether a fact must be disclosed is a legal conclusion; an agent gathers the documents.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-deadlines-at-risk",
+        "gather-the-facts"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5"
+      ],
+      "consumes": [
+        "loan-documents",
+        "jv-agreement",
+        "deal-entity-agreement",
+        "private-placement-memorandum"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5"
+      ]
+    },
+    {
+      "id": "jv-one-answer",
+      "title": "For a joint venture, read the partner's response terms and ask for more time if needed",
+      "instruction": "If the disputed decision is one the venture agreement reserves for the capital partner, or one the firm's member entity must answer, read the agreement for the response period, whether silence counts as consent or refusal, and who may speak and sign for the firm's member entity. Where the response period ends before the agreement's process can finish, draft a written request for more time that says nothing about the dispute beyond what counsel approved. The principals approve it together, or the person the interim agreement names, and the authorized signer sends it. Counsel checks whether the dispute or a missed answer could trigger the venture's default, removal or buy-sell terms. The answer itself goes out from record-the-outcome once the principals decide, so the partner hears one voice.",
+      "mode": "agent",
+      "modeBasis": "Reading the venture agreement and drafting the request is document work; anything sent to the partner needs the principals' joint approval or the person they named.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-decision-terms",
+        "list-deadlines-at-risk",
+        "decide-what-outsiders-hear"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "fund-decision-process",
+      "title": "For a fund, follow the fund documents' own decision and conflict process",
+      "instruction": "In a fund, read the partnership agreement and the general partner entity's agreement for who decides this kind of question: an investment committee and its vote, matters the limited partners' advisory committee must approve, such as a conflict between the firm and the fund, and any key-person clause the dispute could trip if a principal stops devoting the time it requires. Note any notice the limited partners must receive and when. Set the fund's process beside the firm's: where the fund documents give the decision to a committee, the firm's own deadlock steps settle only how the firm acts within that process.",
+      "mode": "agent",
+      "modeBasis": "Reading the fund documents and setting out their process is document work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-decision-terms"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "consumes": [
+        "deal-entity-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "meet-and-decide",
+      "title": "Meet and decide under the agreement's process",
+      "instruction": "Hold the meeting the agreement calls for, with the notice it requires, or use a written consent if the votes are there. Work from the framing statement, the abstract, the defaults and the shared fact pack, take the decisions in deadline order and vote, recording who attended, the options considered, each vote and the result. Where one principal has a personal interest in the decision, such as a deal with that principal's affiliate, follow the agreement's conflict terms; absent them, a Texas contract with an interested governing person stands if, with the material facts disclosed to or known by them, a majority of the disinterested governing persons or the members approve it in good faith, or if it is fair to the company when approved. If the vote settles the matter, go to the record step; the deadlock steps run only while the principals stay stuck.",
+      "mode": "human-offline",
+      "modeBasis": "The vote is the principals' own act at a meeting; an agent prepares the papers and drafts the minutes.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "apply-default-rules",
+        "hold-the-status-quo",
+        "gather-the-facts",
+        "jv-one-answer",
+        "fund-decision-process"
+      ],
+      "consumes": [
+        "sponsor-operating-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101"
+      ]
+    },
+    {
+      "id": "tie-break-and-mediate",
+      "title": "If still stuck, use the agreement's tie-breaker, then mediation",
+      "instruction": "Take the agreement's deadlock steps in order and on its timetable: send the decision to the named tie-breaker or outside adviser if the agreement provides one for this kind of decision and, if that fails, mediate if the agreement provides it or the principals agree to it, with the mediator the agreement names or the principals choose. A mediator helps the principals talk and settle but may not substitute a judgment for theirs. In Texas, what a participant says about the dispute in mediation is confidential and cannot be used as evidence against them, though material usable apart from the mediation stays usable, and a signed written settlement is enforceable like any other contract. Each principal decides whether to bring their own counsel. Put any settlement in a signed writing, and have counsel amend the company agreement where the settlement changes it.",
+      "mode": "human-offline",
+      "modeBasis": "Mediation is a meeting of the principals with a mediator; an agent prepares the briefing papers.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "meet-and-decide"
+      ],
+      "consumes": [
+        "sponsor-operating-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-cprc-154"
+      ]
+    },
+    {
+      "id": "counsel-on-remedies",
+      "title": "Bring in counsel when the agreement's remedies come into play",
+      "instruction": "Once a step could change who owns or runs the firm, such as a buy-sell notice, removal for cause, arbitration or a claim of breach of the agreement or a duty, counsel runs the process. Firm counsel acts for whom its engagement letter names; each principal may retain their own (choose-counsel-and-cpa). Where the agreement sets the duties, its terms govern: Texas lets it expand, restrict or eliminate a principal's duties, and Delaware the same, but not the implied covenant of good faith and fair dealing. Delaware's Court of Chancery can decide a contested vote or a manager's removal. As a last resort, on application by an owner (in Delaware, a member or manager), a Texas district court may order an LLC wound up, and the Delaware court may dissolve one, when carrying on its business in conformity with its governing documents is not reasonably practicable; Texas allows other grounds.",
+      "mode": "human-online",
+      "modeBasis": "Remedies, duties and court relief are legal judgments for a licensed attorney; an agent assembles the record.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "meet-and-decide"
+      ],
+      "consumes": [
+        "sponsor-operating-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "de-code-18-11",
+        "de-code-18-1",
+        "tx-boc-11",
+        "de-code-18-8"
+      ]
+    },
+    {
+      "id": "run-the-exit",
+      "title": "If the agreement's way out is triggered, run it exactly as written",
+      "instruction": "When the agreement's last deadlock step is a buy-sell, a put or call, or a sale of the company, and a principal starts it, follow its text exactly with counsel: who may give the notice and in what form, how the price is named or appraised, each election period, the deposit, the closing date and what follows if the buyer cannot pay. Before any price is named, the CPA answers the tax questions set out in key-principal-leaves, and the waterfall-promote calculator shows each principal's share of the promote at the test price. A principal who sells out becomes a departing principal: run key-principal-leaves from its first step.",
+      "mode": "human-online",
+      "modeBasis": "Naming a price and electing to buy or sell bind the principals; counsel papers each step.",
+      "actor": "principal",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-on-remedies"
+      ],
+      "calculators": [
+        "waterfall-promote"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "sponsor-operating-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "record-the-outcome",
+      "title": "Record the decision, how it was reached and what follows",
+      "instruction": "Write the record of the outcome: the decision, the vote or consent that made it, each step of the agreement's process used and its date, any settlement signed and where each document is kept. File any signed consent with the company's records and update the deadline-calendar. From the record, facts only, draft each notice counsel decided is required and, in a joint venture, the firm's one answer to the capital partner. The principals approve each together, or the person the interim agreement names, before the authorized signer sends it; keep proof of delivery. If the dispute exposed a gap in the agreement, list it for the principals to close by amendment under sign-partner-agreement. If the outcome is that a principal leaves, open key-principal-leaves.",
+      "mode": "agent",
+      "modeBasis": "Writing the record and drafting notices is document work; nothing goes out without the principals' joint approval or the person they named.",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "meet-and-decide",
+        "tie-break-and-mediate",
+        "run-the-exit",
+        "decide-what-outsiders-hear"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "sponsor-operating-agreement",
+        "investor-register",
+        "jv-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    }
+  ],
+  "outlineSteps": []
 }

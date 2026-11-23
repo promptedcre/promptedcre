@@ -7,31 +7,664 @@
   "phase": "operate",
   "order": 133,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
+  "lastVerified": "2026-11-21",
   "situation": {
     "trigger": "The deal entity is served with a lawsuit.",
     "urgency": "days"
   },
-  "requires": [],
-  "consumes": [],
+  "requires": [
+    "set-up-registered-agent",
+    "bind-property-insurance",
+    "bind-sponsor-insurance",
+    "set-up-document-storage",
+    "choose-counsel-and-cpa"
+  ],
+  "consumes": [
+    "deal-entity-agreement",
+    "insurance-binder",
+    "owner-title-policy",
+    "lease",
+    "lease-abstract",
+    "purchase-and-sale-agreement",
+    "loan-documents",
+    "guaranty",
+    "jv-agreement",
+    "wire-instructions",
+    "investor-register",
+    "private-placement-memorandum",
+    "capital-call-notice"
+  ],
   "produces": [],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Record the date and manner of service",
-    "Calendar the answer deadline",
-    "Send the suit to every insurer that may cover it",
-    "Engage litigation counsel",
-    "Preserve documents, emails and files tied to the claim",
-    "Tell the lender if the loan requires notice of litigation",
-    "Assess the claim and the exposure with counsel",
-    "Decide the response with counsel",
-    "Tell investors and record the suit and its status"
-  ]
+  "sources": [
+    {
+      "id": "tx-boc-5",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.5.htm",
+      "title": "Texas Business Organizations Code, Chapter 5 (Sections 5.201 and 5.251 to 5.255, Registered agent; service on the Secretary of State; agents for service as a matter of law)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "each member of a member-managed domestic or foreign limited liability company is an agent of that limited liability company",
+      "tier": "primary"
+    },
+    {
+      "id": "trcp",
+      "url": "https://www.txcourts.gov/media/1463426/texas-rules-of-civil-procedure.pdf",
+      "title": "Texas Rules of Civil Procedure (October 1, 2026), Rules 4, 11, 28, 47, 86, 91a, 92, 93, 99, 106, 120a, 169, 185, 194, 239, 329b, 354, 355, 500.3, 502.5, 509.3, 509.4 and 680",
+      "publisher": "Supreme Court of Texas (Texas Judicial Branch)",
+      "accessed": "2026-11-23",
+      "quote": "on or before 10:00 a.m. on the Monday next after the expiration of twenty days after the date of service thereof",
+      "tier": "primary"
+    },
+    {
+      "id": "frcp-4",
+      "url": "https://www.law.cornell.edu/rules/frcp/rule_4",
+      "title": "Federal Rules of Civil Procedure, Rule 4 (Summons), subdivisions (d) and (h)",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-23",
+      "quote": "has a duty to avoid unnecessary expenses of serving the summons",
+      "tier": "primary"
+    },
+    {
+      "id": "frcp-12",
+      "url": "https://www.law.cornell.edu/rules/frcp/rule_12",
+      "title": "Federal Rules of Civil Procedure, Rule 12(a) (Time to serve a responsive pleading)",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "within 21 days after being served with the summons and complaint",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-28-1446",
+      "url": "https://www.law.cornell.edu/uscode/text/28/1446",
+      "title": "28 U.S.C. 1446(b), Procedure for removal of civil actions",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "The notice of removal of a civil action or proceeding shall be filed within 30 days after the receipt by the defendant",
+      "tier": "primary"
+    },
+    {
+      "id": "tdrpc",
+      "url": "https://www.txcourts.gov/media/1459244/texas-disciplinary-rules-of-professional-conduct-pdf.pdf",
+      "title": "Texas Disciplinary Rules of Professional Conduct (effective March 7, 2025), Rules 1.06 and 1.13",
+      "publisher": "Supreme Court of Texas (Texas Judicial Branch)",
+      "accessed": "2026-11-21",
+      "quote": "A lawyer employed or retained by an organization represents the entity.",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-form-t1",
+      "url": "https://www.tdi.texas.gov/title/documents/form_t-01.pdf",
+      "title": "Owner's Policy of Title Insurance, Form T-1 (effective November 1, 2024), Conditions 3 and 5",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-23",
+      "quote": "The Insured shall notify the Company promptly in writing (i) in case of any litigation",
+      "tier": "primary"
+    },
+    {
+      "id": "frcp-37",
+      "url": "https://www.law.cornell.edu/rules/frcp/rule_37",
+      "title": "Federal Rules of Civil Procedure, Rule 37(e) (Failure to preserve electronically stored information)",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-23",
+      "quote": "should have been preserved in the anticipation or conduct of litigation is lost because a party failed to take reasonable steps to preserve it",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-171",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.171.htm",
+      "title": "Texas Tax Code, Chapter 171 (Sections 171.2515, 171.252, 171.255, 171.309 and 171.3125, Forfeiture, its effects and revival)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "the corporation shall be denied the right to sue or defend in a court of this state",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-coas",
+      "url": "https://comptroller.texas.gov/taxes/franchise/coas-instructions.php",
+      "title": "Franchise Tax Account Status",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "quote": "provides the status of an entity's right to transact business in Texas",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-12",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.12.htm",
+      "title": "Texas Property Code, Chapter 12 (Sections 12.007 and 12.0071, Lis pendens; motion to expunge)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "a party to the action who is seeking affirmative relief may file for record with the county clerk",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-101",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.101.htm",
+      "title": "Texas Business Organizations Code, Chapter 101 (Sections 101.002, 101.114 and 101.402, Other laws applied; liability for obligations; indemnification and advancement)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "a member or manager is not liable for a debt, obligation, or liability of a limited liability company",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-153",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.153.htm",
+      "title": "Texas Business Organizations Code, Chapter 153 (Sections 153.102, 153.152, 153.351 and 153.353, Liability of limited and general partners; limited liability limited partnerships)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "A limited partner is not liable for the obligations of a limited partnership unless",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-52",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.52.htm",
+      "title": "Texas Property Code, Chapter 52 (Section 52.001, Establishment of judgment lien)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "constitutes a lien on and attaches to any real property of the defendant",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-506",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.506",
+      "title": "17 CFR 230.506(d), Bad actor disqualification",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "restrains or enjoins such person from engaging or continuing to engage in any conduct or practice",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-cprc-154",
+      "url": "https://tcss.legis.texas.gov/resources/CP/htm/CP.154.htm",
+      "title": "Texas Civil Practice and Remedies Code, Chapter 154 (Sections 154.021 and 154.022, Referral to alternative dispute resolution; objection)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "Any party may, within 10 days after receiving the notice under Subsection (a), file a written objection to the referral.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "To make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made",
+      "tier": "primary"
+    },
+    {
+      "id": "frcp-81",
+      "url": "https://www.law.cornell.edu/rules/frcp/rule_81",
+      "title": "Federal Rules of Civil Procedure, Rule 81(c)(2) (Further pleading after removal)",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-23",
+      "quote": "A defendant who did not answer before removal must answer or present other defenses or objections under these rules within the longest of these periods",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-21",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.21.htm",
+      "title": "Texas Business Organizations Code, Chapter 21 (Section 21.223, Limitation of liability for obligations)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "did perpetrate an actual fraud on the obligee primarily for the direct personal benefit of the holder",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-152",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.152.htm",
+      "title": "Texas Business Organizations Code, Chapter 152 (Section 152.801, Liability of partner in a limited liability partnership)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "for any obligation of the partnership incurred while the partnership is a limited liability partnership",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tre",
+      "url": "https://www.txcourts.gov/media/1463074/texas-rules-of-evidence-updated-with-amendments-effective-07022026.pdf",
+      "title": "Texas Rules of Evidence (effective July 2, 2026), Rules 503(b) and 511(a)",
+      "publisher": "Supreme Court of Texas (Texas Judicial Branch)",
+      "accessed": "2026-11-23",
+      "quote": "discloses or consents to disclosure of any significant part of the privileged matter unless such disclosure itself is privileged",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-i1099mec",
+      "url": "https://www.irs.gov/instructions/i1099mec",
+      "title": "Instructions for Forms 1099-MISC and 1099-NEC (Rev. December 2026), Payments to attorneys; Box 10",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-23",
+      "quote": "for example, as in a settlement agreement",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "log-the-service",
+      "title": "Record when, how and on whom the suit was served",
+      "instruction": "Open the suit's record the day the papers arrive, from its entry in the service log that set-up-registered-agent keeps. Add from the citation the court, cause number, parties, filing date and answer time (TRCP 99), and any court-ordered method, such as email (TRCP 106). Ask each manager, each member of a member-managed LLC and each general partner whether they were served for the entity (Tex. Bus. Orgs. Code 5.255). Papers the Secretary of State forwards were served the day it received them, not the day the mail arrived, and are returnable in not less than 30 days (5.252 to 5.254); flag both for counsel. A federal waiver request is not service: log when it was sent and the return date it gives, at least 30 days later; a defendant in the United States that fails without good cause to return it pays the later costs of service (FRCP 4(d)).",
+      "mode": "agent",
+      "modeBasis": "Adding the citation's details to the service log's entry is record work; the log's own step sends the papers to counsel.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-tx.boc.registered-agent"
+      ],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-5",
+        "trcp",
+        "frcp-4"
+      ],
+      "typeNotes": {
+        "multifamily": "In a resident's repair and remedy suit, if the landlord cannot be served, the citation can go to the management company, the on-site manager or the rent collector (TRCP 509.4); have the property manager forward any papers the day they arrive."
+      }
+    },
+    {
+      "id": "calendar-the-deadlines",
+      "title": "Calendar the answer date and every early deadline that service starts",
+      "instruction": "Calendar each date, counted from the service date, for counsel to confirm. Texas district or county court: answer by 10:00 a.m. on the Monday after 20 days from service (TRCP 99, 4); initial disclosures 30 days after the first answer (TRCP 194.2). Justice court: end of the 14th day, later if the court closes early (TRCP 502.5). Federal court: 21 days after service, or 60 days after sending a waiver request returned in time (FRCP 12(a), 4(d)). Also: any restraining order's hearing date (TRCP 680); a Rule 91a motion within 60 days; removal within 30 days (28 U.S.C. 1446(b)), then the answer, as soon as 7 days after removal (FRCP 81(c)(2)); a Business Court authority challenge or removal within 30 days (TRCP 354, 355); and a new trial motion within 30 days after any judgment already signed (TRCP 329b). Without an answer, a default judgment may follow (TRCP 239).",
+      "mode": "agent",
+      "modeBasis": "Each date follows from the service date and the published rules; counsel confirms the dates.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "log-the-service"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "trcp",
+        "frcp-12",
+        "frcp-4",
+        "usc-28-1446",
+        "frcp-81"
+      ],
+      "typeNotes": {
+        "multifamily": "A resident's repair and remedy suit in justice court has no answer deadline: the appearance date on the citation, 10 to 21 days after the petition is filed, is the trial date, and a written answer is optional (TRCP 509.3). Service can come as little as 6 days before it (TRCP 509.4). Calendar it as the trial."
+      }
+    },
+    {
+      "id": "notify-insurers-and-indemnitors",
+      "title": "Send the suit to every insurer and every party that may owe a defense",
+      "instruction": "Send the citation and petition, with a written request to defend, to every insurer whose policy may respond and every party that may owe the entity a defense, following the claim reporting written in bind-sponsor-insurance, bind-property-insurance and renew-property-insurance. Policies: the property's general liability and umbrella; the firm's management liability, errors and omissions, cyber and crime; and the owner's title policy for a title claim. Parties: tenants, the property manager, contractors, a seller under surviving contract terms, and insurers covering the entity as an additional insured. A written demand or threat received before service starts this step the day it arrives. The Texas owner's policy (T-1, effective November 1, 2024) requires prompt written notice of litigation, reduces its liability to the extent late notice prejudices it, and defends only on written request and only claims alleging insured matters (Conditions 3, 5); read the policy issued. Log each claim number and reply.",
+      "mode": "agent",
+      "modeBasis": "The policies and contracts are on file and each notice is drafted in the form and to the address they set; each goes out only after a principal approves it.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "log-the-service"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "insurance-binder",
+        "owner-title-policy",
+        "lease",
+        "lease-abstract",
+        "purchase-and-sale-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tdi-form-t1"
+      ]
+    },
+    {
+      "id": "engage-litigation-counsel",
+      "title": "Engage litigation counsel for the entity before the answer is due",
+      "instruction": "A principal the deal entity agreement authorizes signs, in the entity's name, an engagement with litigation counsel admitted in that court, and sends counsel the papers, service log and deadlines. First read whether a policy that may respond requires the insurer's consent or its own counsel: a Texas owner's title insurer chooses counsel for covered claims and pays no other (Form T-1, Condition 5(a)). If no insurer has answered by the answer date, engage counsel anyway and tell the insurers. Check the license, compare the letter and pay any retainer as choose-counsel-and-cpa does. In a Texas justice court an owner, officer or employee may represent the entity (TRCP 500.3). Counsel represents the entity, not its managers or members (Rule 1.13); if a principal, the manager or a partner is also named, ask whether one lawyer may act for several, which needs each client's consent after full disclosure (Rule 1.06).",
+      "mode": "human-online",
+      "modeBasis": "Hiring a lawyer binds the entity and needs an authorized signer; an agent assembles what counsel receives.",
+      "actor": "principal",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "calendar-the-deadlines",
+        "notify-insurers-and-indemnitors"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "deal-entity-agreement",
+        "insurance-binder",
+        "owner-title-policy"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "trcp",
+        "tdrpc",
+        "tdi-form-t1"
+      ]
+    },
+    {
+      "id": "preserve-the-records",
+      "title": "Put a written hold on every record tied to the claim",
+      "instruction": "Draft a hold notice for counsel to approve (until then, a principal), naming the suit's subject, the period and the records to keep: email and texts, leases, work orders, inspection reports, photos and footage, access logs, accounting entries and the data room. A written demand or threat received before service starts this step the day it arrives. Send it to each principal and employee involved, the property manager and each vendor holding records, and get written confirmation. List each account and folder whose automatic deletion must stop, for an administrator to switch off that day, and mark the hold on the retention schedule from set-up-document-storage. In federal court, electronic information lost through a failure to take reasonable steps, and not restorable, can bring orders curing the prejudice or, on a finding of intent to deprive, an adverse inference or default (FRCP 37(e)). Lift the hold only when counsel says.",
+      "mode": "agent",
+      "modeBasis": "Drafting and sending the hold is record work and leaves the firm only after approval; an administrator changes the retention settings.",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "log-the-service"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "frcp-37"
+      ]
+    },
+    {
+      "id": "give-required-notices",
+      "title": "Give the lender and partners the notices their documents require",
+      "instruction": "List what the suit sets off under the loan agreement, guaranty, deal entity agreement and any joint venture or fund agreement. Look for a duty to tell the lender of litigation above a stated amount or affecting the property, and by when; a representation of no litigation repeated in each compliance certificate or draw request; a default if a judgment goes unpaid or a lien is recorded; and reporting duties to a joint venture partner or a fund's advisory committee. List each duty with its section, deadline, address and threshold. Draft each notice from the facts in the service log, with no view on the merits, for counsel to review and a principal to approve before it is sent, and correct the next compliance certificate under meet-loan-covenants. If the suit could cause a loan default, follow loan-covenant-breach for the cure and lender terms.",
+      "mode": "agent",
+      "modeBasis": "The duties are in the signed documents and the notices are drafted from them; each is sent only after approval.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "log-the-service"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "loan-documents",
+        "guaranty",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "counsel-on-open-offering",
+      "title": "Have counsel decide what any open offering or capital call must now disclose",
+      "instruction": "If any offering is open, a capital call or closing is pending, or an investor's interest is changing hands, give counsel the petition and the memorandum the day the suit is logged. Counsel decides whether the offering documents need a supplement before the next sale or call, and whether sales or calls pause until then, since an untrue statement of a material fact, or an omission that leaves what was said misleading, is unlawful in connection with buying or selling securities (17 CFR 240.10b-5). Until counsel decides, no one discusses the suit with investors or prospective investors beyond what counsel approves.",
+      "mode": "human-online",
+      "modeBasis": "Whether an offering must disclose the suit or pause is a legal conclusion; an agent assembles the documents.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "log-the-service"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5"
+      ],
+      "calculators": [],
+      "consumes": [
+        "private-placement-memorandum",
+        "capital-call-notice",
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5"
+      ]
+    },
+    {
+      "id": "check-public-records",
+      "title": "Check the entity's franchise tax standing and the county records",
+      "instruction": "Check two public records, saving a dated copy of each. First, the Comptroller's franchise tax account status: a forfeited entity cannot defend in a Texas court, and its officers and directors become liable for its Texas debts incurred after the missed report and before revival (Tex. Tax Code 171.2515, 171.252, 171.255). If forfeited, tell counsel and revive it (file-texas-franchise-report), with the Secretary of State too if it has forfeited the registration, as it may after 120 days; revival does not erase liability already incurred (171.309, 171.3125, 171.255(d)). Second, the county real property records, for a lis pendens naming the entity: a party seeking relief in a suit over title, an interest in land or an encumbrance may record one, and the court must expunge it if it lacks a real property claim, proof of probable validity or service (Tex. Prop. Code 12.007, 12.0071). Recheck both while the suit is open.",
+      "mode": "agent-browser",
+      "modeBasis": "The franchise tax account status and the county real property records are public and searchable in a browser; counsel watches the court's docket.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "log-the-service"
+      ],
+      "rules": [
+        "us-tx.franchise-tax.forfeiture"
+      ],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-171",
+        "cpa-coas",
+        "tx-prop-12"
+      ]
+    },
+    {
+      "id": "build-claim-file",
+      "title": "Build the claim file counsel works from",
+      "instruction": "Abstract the petition: each cause of action, the facts alleged, any injunction request, and the relief band it states; one seeking only money of $325,000 or less (up from $250,000 in 2026) generally goes in the expedited process (TRCP 47, 169). Check who is named: the deal entity by exact name, the firm, a principal, or an assumed name, under which a partnership, corporation or individual may be sued (TRCP 28). Flag for counsel any denial the answer must verify, such as of capacity, of signing an instrument sued on, or of a sworn account (TRCP 93, 185), and whether the suit is or could be in the Business Court. Gather the records it turns on and a timeline, and list for the initial disclosures the insurance and indemnity agreements and anyone who may share responsibility (TRCP 194.2). Related matters: a contractor's lien, loan-maturity-refi-fails, tenant-files-bankruptcy, condemnation-notice, sponsor-partners-disagree, regulator-sends-inquiry or investor-data-exposed.",
+      "mode": "agent",
+      "modeBasis": "Abstracting the petition and gathering the firm's records is document work; what the claim is worth is counsel's judgment.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "log-the-service"
+      ],
+      "rules": [
+        "us-tx.assumed-name.certificate",
+        "us-tx.property.mechanics-liens"
+      ],
+      "calculators": [],
+      "consumes": [
+        "lease",
+        "lease-abstract",
+        "deal-entity-agreement",
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "trcp"
+      ]
+    },
+    {
+      "id": "file-the-answer",
+      "title": "File the answer or first response before the deadline",
+      "instruction": "Counsel files the entity's first response with the court before the calendared deadline and serves it on the plaintiff. In Texas, a general denial puts in issue everything not required to be sworn (TRCP 92); the TRCP 93 matters need a verification, which a principal with knowledge may sign; and a special appearance, then any venue motion, goes before or with the first other filing, answer or Rule 91a motion alike (TRCP 120a, 86). In federal court the answer or a Rule 12 motion is due within Rule 12(a)'s time, or Rule 81(c)(2)'s after removal. In a Texas court, an agreement with the plaintiff to extend a deadline is enforced only if written, signed and filed, or made in open court on the record (TRCP 11). Save the file-stamped copy, confirm it on the docket, and watch the docket for every filing and order until the suit ends.",
+      "mode": "human-online",
+      "modeBasis": "A pleading for the entity is prepared and signed by its lawyer; a verification is sworn by a person.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "calendar-the-deadlines",
+        "engage-litigation-counsel",
+        "check-public-records",
+        "build-claim-file"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "trcp",
+        "frcp-12",
+        "frcp-81"
+      ]
+    },
+    {
+      "id": "assess-the-exposure",
+      "title": "Assess the claim and the exposure with counsel",
+      "instruction": "Counsel gives the principals a written view of the defenses, likely outcomes, defense cost, insurers' positions and the effect on property, loan and firm. A Texas LLC's members and managers are not liable for its debts unless its company agreement says so (Tex. Bus. Orgs. Code 101.114), but that does not cover a principal's own guaranty or conduct, and actual fraud for a member's own benefit can make the member liable on the company's contracts (101.002, 21.223(b)). A general partner is liable as one unless the partnership registered as a limited liability partnership; a limited partner generally is not (153.152, 153.353, 152.801, 153.102). Ask whether the agreement indemnifies or advances costs to the manager or principals (101.402). A recorded abstract of judgment liens the entity's land in that county (Tex. Prop. Code 52.001). For a securities claim, ask whether an order could bar future Rule 506 offerings (17 CFR 230.506(d)).",
+      "mode": "human-online",
+      "modeBasis": "Valuing a claim and reading liability under the agreements are a lawyer's judgments.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "engage-litigation-counsel",
+        "notify-insurers-and-indemnitors",
+        "build-claim-file"
+      ],
+      "rules": [
+        "us-tx.property.judgment-liens",
+        "us-fed.reg-d.bad-actor"
+      ],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "guaranty"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "tx-boc-21",
+        "tx-boc-153",
+        "tx-boc-152",
+        "tx-prop-52",
+        "ecfr-230-506"
+      ]
+    },
+    {
+      "id": "decide-the-response",
+      "title": "Decide the response and get the consents the agreements require",
+      "instruction": "With counsel's assessment, the principals choose: defend through trial, seek early dismissal, counterclaim or join another party, mediate, or settle within a stated range. Read the deal entity, fund or joint venture agreement for who else must agree or review: members or investors, for a settlement, a payment above a stated amount or an agreed judgment; a fund's advisory committee, for a claim about the firm's own conduct or a payment for it; a capital partner, for settling, admitting liability or spending above budget. Get each in writing before counsel commits, sending the facts and the proposed course; ask counsel what of its advice may be shared, since disclosing a significant part of it outside the privilege can waive it (Tex. R. Evid. 511(a)(1)). Where an insurer defends, record what it controls and whether a settlement needs its consent. Record the decision, its authority, the budget and a review date.",
+      "mode": "human-online",
+      "modeBasis": "How the entity answers a claim is the principals' decision, and each consent is its giver's own act under the agreement; an agent records them.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "assess-the-exposure",
+        "give-required-notices"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "insurance-binder",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-tre"
+      ]
+    },
+    {
+      "id": "settle-in-writing",
+      "title": "Put any settlement in a signed writing, then pay and dismiss",
+      "instruction": "Counsel drafts a settlement agreement, signed by a principal within the recorded authority, covering the payment and who makes it, a release of the entity, its members and managers and the firm, and dismissal with prejudice. Get each insurer's written consent where its policy requires it. In a Texas court, a settlement is enforced only if written, signed and filed, or made in open court on the record (TRCP 11). Record how the entity funds what no insurer or indemnitor pays: reserves, a reduced distribution (distribution-shortfall) or a permitted capital call, and in a joint venture the effect on the promote. Get the payee's Form W-9 and tell the CPA, since a settlement paid to a claimant's attorney is generally reported on Form 1099-MISC. A principal pays only to instructions confirmed through a channel already trusted (wire-instructions-change); counsel then files the dismissal.",
+      "mode": "human-online",
+      "modeBasis": "Counsel negotiates and drafts the settlement; signing it and releasing money are a principal's acts.",
+      "actor": "principal",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-the-response"
+      ],
+      "rules": [],
+      "calculators": [
+        "waterfall-promote"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "wire-instructions"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "trcp",
+        "irs-i1099mec"
+      ]
+    },
+    {
+      "id": "track-and-tell-investors",
+      "title": "Keep the suit's record current and tell investors what they need to know",
+      "instruction": "Keep one record of the suit: court, cause number, parties, counsel, insurers and claim numbers, deadlines, filings, decisions, spending against the budget and status, updated after each event. Calendar each new deadline, such as the 10 days to object in writing to a court's mediation referral (Tex. Civ. Prac. & Rem. Code 154.022). Report the suit in each quarterly investor report (send-quarterly-investor-report) and to the lender or partner as their documents require. Draft any investor notice from that record with counsel's wording on the merits, following counsel's decision in counsel-on-open-offering; a principal approves each notice. When the suit ends, file the dismissal order or judgment and any release, end the hold when counsel releases it, and close each insurer's claim.",
+      "mode": "agent",
+      "modeBasis": "Keeping the record and drafting from it is writing work; investor communications go out only with a person's approval.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "log-the-service"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5"
+      ],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-cprc-154"
+      ]
+    }
+  ],
+  "outlineSteps": []
 }

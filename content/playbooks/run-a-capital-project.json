@@ -7,29 +7,834 @@
   "phase": "operate",
   "order": 325,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "abstract-the-leases",
+    "take-over-operations"
+  ],
+  "consumes": [
+    "property-condition-assessment",
+    "loan-documents",
+    "underwriting-model",
+    "lease",
+    "lease-abstract",
+    "rent-roll",
+    "survey",
+    "phase-i-esa",
+    "deal-entity-agreement",
+    "jv-agreement"
+  ],
+  "produces": [
+    "lien-release",
+    "underwriting-model"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Confirm the component's condition and remaining life",
-    "Check the leases for who pays for the work",
-    "Check the loan for reserve draws and lender approval",
-    "Hire a designer or engineer to scope the work where needed",
-    "Write the scope and bid it to qualified contractors",
-    "Compare bids and sign the construction contract",
-    "Pull permits and schedule the work around tenants",
-    "Supervise progress and approve pay applications",
-    "Collect lien waivers with each payment",
-    "Close out with warranties and as-built records",
-    "Update the reserve schedule"
-  ]
+  "sources": [
+    {
+      "id": "tx-pr-93",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.93.htm",
+      "title": "Texas Property Code, Sections 93.001 and 93.012, Applicability of chapter; assessment of charges",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "the amount of the charge or the method by which the charge is to be computed is stated in the lease",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-occ-1001",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1001.htm",
+      "title": "Texas Occupations Code, Sections 1001.056 and 1001.402, Engineering license exemption for certain buildings; plans accepted by public officials",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "may accept a plan, specification, or other related document only if the plan, specification, or other document was prepared by an engineer",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-occ-1051",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1051.htm",
+      "title": "Texas Occupations Code, Sections 1051.606 and 1051.703, Activities of persons not represented to be architects; plans only an architect may prepare",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "unless the alteration involves a substantial structural or exitway change to the building",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-28-36-402",
+      "url": "https://www.ecfr.gov/current/title-28/section-36.402",
+      "title": "28 CFR 36.402, Alterations",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-23",
+      "quote": "Normal maintenance, reroofing, painting or wallpapering, asbestos removal, or changes to mechanical and electrical systems are not alterations unless they affect the usability",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-28-36-403",
+      "url": "https://www.ecfr.gov/current/title-28/section-36.403",
+      "title": "28 CFR 36.403, Alterations: Path of travel",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "deemed disproportionate to the overall alteration when the cost exceeds 20% of the cost of the alteration to the primary function area",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-28-36-104",
+      "url": "https://www.ecfr.gov/current/title-28/section-36.104",
+      "title": "28 CFR 36.104, Definitions (commercial facilities; place of public accommodation)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Facilities that are covered or expressly exempted from coverage under the Fair Housing Act of 1968",
+      "tier": "primary"
+    },
+    {
+      "id": "ada-title-iii-manual",
+      "url": "https://www.ada.gov/resources/title-iii-manual/",
+      "title": "ADA Title III Technical Assistance Manual (III-1.2000, Public accommodations)",
+      "publisher": "U.S. Department of Justice, Civil Rights Division",
+      "accessed": "2026-11-23",
+      "quote": "The rental office is a place of public accommodation.",
+      "tier": "primary"
+    },
+    {
+      "id": "ada-restriping",
+      "url": "https://www.ada.gov/resources/restriping-parking-spaces/",
+      "title": "ADA Compliance Brief: Restriping Parking Spaces",
+      "publisher": "U.S. Department of Justice, Civil Rights Division",
+      "accessed": "2026-11-23",
+      "quote": "it must provide accessible parking spaces as required by the 2010 ADA Standards for Accessible Design",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-61-141",
+      "url": "https://www.ecfr.gov/current/title-40/section-61.141",
+      "title": "40 CFR 61.141, Definitions (asbestos standard: demolition, facility)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-23",
+      "quote": "Demolition means the wrecking or taking out of any load-supporting structural member of a facility",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-61-145",
+      "url": "https://www.ecfr.gov/current/title-40/section-61.145",
+      "title": "40 CFR 61.145, Standard for demolition and renovation (asbestos)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-23",
+      "quote": "thoroughly inspect the affected facility or part of the facility where the demolition or renovation operation will occur for the presence of asbestos",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-occ-1954",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1954.htm",
+      "title": "Texas Occupations Code, Sections 1954.002, 1954.101, 1954.259 and 1954.260, Texas Asbestos Health Protection Act",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "may not issue the permit unless the applicant provides",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-745-82",
+      "url": "https://www.ecfr.gov/current/title-40/section-745.82",
+      "title": "40 CFR 745.82, Applicability (lead-based paint renovation, repair and painting)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-23",
+      "quote": "This subpart applies to all renovations performed for compensation in target housing and child-occupied facilities",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-745-83",
+      "url": "https://www.ecfr.gov/current/title-40/section-745.83",
+      "title": "40 CFR 745.83, Definitions (child-occupied facility)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-23",
+      "quote": "Child-occupied facilities may include, but are not limited to, day care centers, preschools and kindergarten classrooms.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-745-84",
+      "url": "https://www.ecfr.gov/current/title-40/section-745.84",
+      "title": "40 CFR 745.84, Information distribution requirements",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "No more than 60 days before beginning renovation activities in any residential dwelling unit of target housing",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-745-89",
+      "url": "https://www.ecfr.gov/current/title-40/section-745.89",
+      "title": "40 CFR 745.89, Firm certification",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Firms that perform renovations for compensation must electronically apply to EPA for certification",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-745-103",
+      "url": "https://www.ecfr.gov/current/title-40/section-745.103",
+      "title": "40 CFR 745.103, Definitions (target housing)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Target housing means any housing constructed prior to 1978",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-34-3-357",
+      "url": "https://www.law.cornell.edu/regulations/texas/34-Tex-Admin-Code-SS-3-357",
+      "title": "34 Tex. Admin. Code 3.357, Nonresidential Real Property Repair, Remodeling, and Restoration; Real Property Maintenance",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-23",
+      "quote": "must collect tax on the total sales price to the customer less separately stated charges for unrelated services",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-occ-1305",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1305.htm",
+      "title": "Texas Occupations Code, Section 1305.151, License required (electricians)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "may not perform or offer to perform electrical work or residential appliance installation unless the person or business holds an appropriate license",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-occ-1302",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1302.htm",
+      "title": "Texas Occupations Code, Section 1302.251, License required (air conditioning and refrigeration contractors)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "A person may not engage in air conditioning and refrigeration contracting unless the person holds an air conditioning and refrigeration contractor license",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-occ-1301",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1301.htm",
+      "title": "Texas Occupations Code, Section 1301.351, License, endorsement, or registration required (plumbing)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "the person holds the proper license, registration, or endorsement required by this chapter",
+      "tier": "primary"
+    },
+    {
+      "id": "tdlr-license-search",
+      "url": "https://www.tdlr.texas.gov/LicenseSearch/",
+      "title": "TDLR License Data Search",
+      "publisher": "Texas Department of Licensing and Regulation",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-151",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.151.htm",
+      "title": "Texas Insurance Code, Sections 151.101 to 151.105, Indemnification and additional insured provisions in construction contracts",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "is void and unenforceable as against public policy to the extent that it requires an indemnitor to indemnify, hold harmless, or defend a party",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bc-27",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.27.htm",
+      "title": "Texas Business and Commerce Code, Section 27.02, Goods or services paid for by insurance proceeds: payment of deductible required",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "must contain the following notice in at least 12-point boldfaced type",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-28",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.28.htm",
+      "title": "Texas Property Code, Chapter 28, Prompt payment to contractors and subcontractors (Sections 28.002, 28.003, 28.0091)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "not later than the 35th day after the date the owner receives the request",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-53-retainage",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.53.htm",
+      "title": "Texas Property Code, Sections 53.101 and 53.105, Funds required to be reserved; owner's liability for failure to reserve",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "for 30 days after the work under the contract is completed, the owner shall reserve",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-53-withholding",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.53.htm",
+      "title": "Texas Property Code, Sections 53.081, 53.082 and 53.084, Authority to withhold funds; owner's liability",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "the owner may withhold from payments to the original contractor an amount necessary to pay the claim for which he receives notice",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-53-waivers",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.53.htm",
+      "title": "Texas Property Code, Sections 53.281 to 53.284, Waiver and release of lien or payment bond claim",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "is unenforceable unless it substantially complies with the applicable form",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-53-bond",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.53.htm",
+      "title": "Texas Property Code, Sections 53.201 to 53.203, Payment bond furnished by the original contractor",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "a claimant may not file suit against the owner or the owner's property",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-53-completion",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.53.htm",
+      "title": "Texas Property Code, Sections 53.106, 53.107 and 53.152, Affidavit of completion; notice of termination; release of lien",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "An owner may file with the county clerk of the county in which the property is located an affidavit of completion.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-162",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.162.htm",
+      "title": "Texas Property Code, Sections 162.001 to 162.003 and 162.031, Construction payments and loan receipts as trust funds",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "Loan receipts are trust funds under this chapter if the funds are borrowed by a contractor, subcontractor, or owner",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gov-469",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.469.htm",
+      "title": "Texas Government Code, Sections 469.003, 469.101, 469.102 and 469.105, Elimination of architectural barriers",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "may not allow an application to be filed with a local governmental entity for a building construction permit",
+      "tier": "primary"
+    },
+    {
+      "id": "tdlr-ab",
+      "url": "https://www.tdlr.texas.gov/ab/ab.htm",
+      "title": "Elimination of Architectural Barriers (program page, TABS registration and project search)",
+      "publisher": "Texas Department of Licensing and Regulation",
+      "accessed": "2026-11-21",
+      "quote": "Owner information in TABS records must reflect the owning entity that holds title to the property",
+      "tier": "primary"
+    },
+    {
+      "id": "tdlr-ab-fees",
+      "url": "https://www.tdlr.texas.gov/ab/abfees.htm",
+      "title": "Architectural Barriers Fee Schedule",
+      "publisher": "Texas Department of Licensing and Regulation",
+      "accessed": "2026-11-23",
+      "quote": "Project filing Fee--$175",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-16-68-10",
+      "url": "https://www.law.cornell.edu/regulations/texas/16-Tex-Admin-Code-SS-68-10",
+      "title": "16 Tex. Admin. Code 68.10, Definitions (alteration)",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-23",
+      "quote": "Re-roofing, painting, or wallpapering, or changes to mechanical and electrical systems are not alterations unless they affect the usability",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-16-68-50",
+      "url": "https://www.law.cornell.edu/regulations/texas/16-Tex-Admin-Code-SS-68-50",
+      "title": "16 Tex. Admin. Code 68.50, Submission of Construction Documents",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-23",
+      "quote": "When there is not a design professional with overall responsibility, the owner of a building or facility must submit the construction documents",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-16-68-52",
+      "url": "https://www.law.cornell.edu/regulations/texas/16-Tex-Admin-Code-SS-68-52",
+      "title": "16 Tex. Admin. Code 68.52, Inspections and Corrective Modifications",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-23",
+      "quote": "a written request for inspection from the owner or the owner's designated agent",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-2210",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.2210.htm",
+      "title": "Texas Insurance Code, Sections 2210.251 and 2210.2515, Plan of operation compliance; certificates of compliance",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "before the person begins to construct, repair, alter, remodel, or enlarge the structure",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-windstorm",
+      "url": "https://www.tdi.texas.gov/tips/need-windstorm-inspection.html",
+      "title": "What you need to know about windstorm inspections",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-23",
+      "quote": "Most new construction, roof replacements, major repairs, and other alterations require an inspection and certificate of compliance.",
+      "tier": "primary"
+    },
+    {
+      "id": "tceq-cgp",
+      "url": "https://www.tceq.texas.gov/permitting/stormwater/construction",
+      "title": "Stormwater General Permit for Construction Activities (TXR150000)",
+      "publisher": "Texas Commission on Environmental Quality",
+      "accessed": "2026-11-23",
+      "quote": "construction activities that disturb one (1) or more acres of soil",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-1-263a-3",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.263(a)-3",
+      "title": "26 CFR 1.263(a)-3, Amounts paid to improve tangible property",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-23",
+      "quote": "a unit of property is improved if the amounts paid for activities performed after the property is placed in service",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-1-168i-8",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.168(i)-8",
+      "title": "26 CFR 1.168(i)-8, Dispositions of MACRS property (partial disposition election)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-23",
+      "quote": "A taxpayer may make an election under this paragraph (d)(2) to apply this section to a disposition of a portion of an asset.",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "confirm-the-need",
+      "title": "Confirm the component's condition and remaining life",
+      "instruction": "Build the case for the project from the firm's own records before anyone is hired. Gather the property condition assessment, take-over-operations' component schedule and lender reserve schedule with its required repairs, service and repair records, past permits, warranties in force and the approved budget from set-the-annual-budget. Record the component's type, age and condition, any warranty or service contract that may pay, any loan deadline, how the work will be funded (lender reserve, operating cash, insurance proceeds or new capital), and the source of each fact. Run the replacement-reserves calculator on the component's cost, life and age. Casualty repairs start from the claim file and restoration terms in casualty-damages-property; landlord's work under a signed lease, from what lease-a-vacancy's record-and-deliver handed over: scope, tenant-approved plans, delivery date, allowance and remedy for delay. Mark unknowns, such as hidden roof deck or paving base, for the designer. A principal decides whether to proceed.",
+      "mode": "agent",
+      "modeBasis": "Gathering the records and running the calculator is document work; whether to proceed is a principal's decision.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "calculators": [
+        "replacement-reserves"
+      ],
+      "consumes": [
+        "property-condition-assessment",
+        "loan-documents",
+        "underwriting-model"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "read-the-leases",
+      "title": "Check the leases for who pays for the work and what tenants are owed during it",
+      "instruction": "From the lease abstracts, and each lease where an abstract is silent, record for every tenant the work touches who must repair or replace the component, whether its cost may be billed to tenants and how (in full, amortized over its useful life, or excluded as capital), and any cap. Record the landlord's duties while work goes on: notice before entry, access hours, limits on interfering with the tenant's use, and any rent abatement or termination right if the premises are disturbed. A Texas commercial landlord may assess a charge other than rent or physical damage only if the lease, an exhibit or an amendment states its amount or how it is computed, or a statute or the common law allows it (Prop. Code 93.012(a), (b)). Run the expense-recovery calculator for the leases that let the cost through. Counsel says what an unclear clause means.",
+      "mode": "agent",
+      "modeBasis": "Reading the leases and abstracts is document work; what an unclear clause means is counsel's conclusion.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-the-need"
+      ],
+      "calculators": [
+        "expense-recovery"
+      ],
+      "consumes": [
+        "lease",
+        "lease-abstract",
+        "rent-roll"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-pr-93"
+      ],
+      "typeNotes": {
+        "multifamily": "Residential leases fall under Property Code chapter 92, not chapter 93 (93.001). Read the apartment lease and community rules for entry, notice and any interruption of water, power or parking the work causes.",
+        "retail": "Read co-tenancy, operating covenant, signage, visibility and access clauses, and any parking ratio or no-build area a lease or recorded agreement protects, before closing parking, entrances or storefronts.",
+        "industrial": "In a single-tenant net lease the tenant may carry the repair or even the replacement duty; read which, and plan roof work around the tenant's operations, stored goods and fire protection.",
+        "office": "Read after-hours access, freight elevator and noise terms, and any building standard the leases promise, since lobby, restroom and system work runs through occupied floors."
+      }
+    },
+    {
+      "id": "engage-the-designer",
+      "title": "Hire a designer or engineer to scope the work where needed",
+      "instruction": "Where the work needs plans a city must accept, or changes structure, exits or usability, a principal engages an architect or engineer to draw and specify it. Texas exempts only narrow classes, such as small one-story buildings, from the engineering license, and officials enforcing it accept only engineer-sealed plans (Occ. Code 1001.056, 1001.402); an alteration with a substantial structural or exit change needs an architect unless the building is a listed exempt type, and a building for 24-hour custodial care always does (1051.606, 1051.703). Federally, an alteration affecting usability must make the altered area accessible to the maximum extent feasible, and primary function area work improves the path of travel to it, up to 20 percent of its cost; reroofing and system changes alone are not alterations unless usability changes (28 CFR 36.402, 36.403). Restriping parking must provide the accessible spaces the 2010 Standards require, counted lot by lot.",
+      "mode": "human-online",
+      "modeBasis": "A principal signs the engagement; design and code judgments belong to the licensed design professional.",
+      "actor": "consultant",
+      "licensed": "engineer",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-the-need"
+      ],
+      "consumes": [
+        "property-condition-assessment",
+        "survey"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-occ-1001",
+        "tx-occ-1051",
+        "ecfr-28-36-402",
+        "ecfr-28-36-403",
+        "ada-restriping",
+        "ecfr-28-36-104",
+        "ada-title-iii-manual"
+      ],
+      "typeNotes": {
+        "multifamily": "Housing the Fair Housing Act covers is not a commercial facility under the federal accessibility rules (28 CFR 36.104), but a rental office is a public accommodation (DOJ Title III Technical Assistance Manual III-1.2000), so the designer says which parts of the work those rules reach. Restriping parking that serves the rental office must provide accessible spaces; residents' parking follows the 2010 Standards' different residential-facility rules (208.2)."
+      }
+    },
+    {
+      "id": "survey-hazardous-materials",
+      "title": "Survey for asbestos, and for lead paint in older housing, before work disturbs materials",
+      "instruction": "Before any renovation or demolition, have the parts of the building the work will disturb inspected for asbestos, including nonfriable roofing, flooring and mastic. The federal rule requires the owner or operator to inspect beforehand and to give the regulator written notice at least 10 working days before any demolition, which includes taking out a load-supporting structural member, even with no asbestos, and a renovation disturbing regulated amounts (40 CFR 61.141, 61.145). In Texas, only a licensed person may survey, remove or disturb asbestos in a public building, and a city that permits renovation or demolition of a public or commercial building may not issue the permit without that survey's evidence or an engineer's or architect's certification that the affected parts contain none (Occ. Code 1954.101, 1954.259). A valid earlier survey may be reused (1954.260). The report goes to the designer and bidders, and any abatement into the scope.",
+      "mode": "human-offline",
+      "modeBasis": "Sampling building materials on site is a licensed inspector's physical work.",
+      "actor": "consultant",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "engage-the-designer"
+      ],
+      "consumes": [
+        "property-condition-assessment",
+        "phase-i-esa"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-40-61-141",
+        "ecfr-40-61-145",
+        "tx-occ-1954",
+        "ecfr-40-745-82",
+        "ecfr-40-745-83",
+        "ecfr-40-745-84",
+        "ecfr-40-745-89",
+        "ecfr-40-745-103"
+      ],
+      "typeNotes": {
+        "multifamily": "In target housing, generally housing built before 1978, renovation for pay must be done by a firm certified for lead-safe work, which gives the owner and an adult occupant the federal pamphlet no more than 60 days before work in a unit, with a parallel rule for common areas, unless testing shows the components are free of lead-based paint (40 CFR 745.82, 745.84, 745.89, 745.103). The Texas asbestos law does not count an apartment building of four or fewer units as a public building (Occ. Code 1954.002). The federal asbestos rule's facility definition leaves out residential buildings of four or fewer dwelling units (40 CFR 61.141).",
+        "industrial": "The Texas asbestos law's public-building definition leaves out an industrial facility closed to all but employees because of a process hazardous to health or safety, and a manufacturing facility limited to workers and invited guests under controlled conditions (Occ. Code 1954.002). A city permit to renovate or demolish a commercial building still needs the survey evidence (1954.259), and the federal inspection duty in 40 CFR 61.145 is separate.",
+        "retail": "Renovation for pay in a child-occupied facility, such as a child care tenant's space in a building built before 1978, falls under the federal lead-safe renovation rule (40 CFR 745.82, 745.83).",
+        "office": "Renovation for pay in a child-occupied facility, such as a child care tenant's space in a building built before 1978, falls under the federal lead-safe renovation rule (40 CFR 745.82, 745.83)."
+      }
+    },
+    {
+      "id": "review-the-contract",
+      "title": "Have counsel set the construction contract form and its insurance terms",
+      "instruction": "Before bids go out, counsel prepares the contract form and its insurance terms to suit the loan and Texas law, and explains each choice to the principal in writing. A term making a contractor indemnify or defend the owner against the owner's own negligence or fault is generally void, except claims for injury or death of the contractor's or subcontractors' employees, and additional insured terms are limited alike (Ins. Code 151.102 to 151.104). An owner pays a contractor's proper written request within 35 days, less amounts statutes let it withhold, and in a good faith dispute withholds at most the amount disputed (Prop. Code 28.002, 28.003). A contract of $1,000 or more expected to be paid even partly from insurance proceeds must print the statutory deductible notice in 12-point bold (Bus. & Com. Code 27.02). Counsel also sets retainage, waiver forms, warranties and whether to require a payment bond (53.201).",
+      "mode": "human-online",
+      "modeBasis": "Setting contract terms is legal work, which is counsel's.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "engage-the-designer"
+      ],
+      "consumes": [
+        "loan-documents"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-ins-151",
+        "tx-pr-28",
+        "tx-bc-27",
+        "tx-pr-53-bond",
+        "tx-pr-53-waivers"
+      ]
+    },
+    {
+      "id": "invite-bids",
+      "title": "Write the scope and bid it to qualified contractors",
+      "instruction": "Assemble one bid package so every contractor prices the same job: the designer's drawings and specifications, the hazardous-materials survey, site access and working hours the leases allow, the schedule and any deadline the loan or a lease sets, counsel's contract form with its insurance, payment, retainage and lien waiver terms, warranty terms, and a bid form that separates base price, alternates, unit prices, allowances, exclusions and sales tax. Build the invitation list from the property manager's vendors, the designer's suggestions and contractors the firm has used, and ask each for references, comparable recent projects and proof of insurance. Send the package with one due date and one channel for questions, and share every answer with all bidders. A person approves the list and the package before they go.",
+      "mode": "agent",
+      "modeBasis": "Drafting the package and the list is document work; sending them speaks for the firm, so a person approves it.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-the-leases",
+        "engage-the-designer",
+        "survey-hazardous-materials",
+        "review-the-contract"
+      ],
+      "consumes": [
+        "lease-abstract"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "level-the-bids",
+      "title": "Compare the bids and check each contractor's licenses",
+      "instruction": "Put every bid on one sheet against the package: inclusions and exclusions, alternates and unit prices, allowances, schedule, warranty, insurance and any bond; draft questions closing each bid's gaps, sent once a person approves. Flag each bid's Texas sales tax for the CPA to classify: nonresidential repair, remodeling and restoration is taxed on the total price less separately stated unrelated services; separately stated new usable square footage is untaxed new construction; scheduled, periodic maintenance is not taxable remodeling, but upgrades, major repair and restoration never count as maintenance; separately stated labor repairing a declared disaster's damage is exempt on a certificate a principal signs (34 TAC 3.357). In TDLR's search, confirm electrical and air conditioning contractors are currently licensed (Occ. Code 1305.151, 1302.251); plumbing needs a plumbing board license (1301.351), and removing or disturbing asbestos in a public building a Texas asbestos license (1954.101). A principal picks the contractor.",
+      "mode": "agent-browser",
+      "modeBasis": "Leveling bids is document work and license records are public searches; questions to bidders speak for the firm, so a person approves each, the tax treatment is the CPA's and the choice of contractor the principal's.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "invite-bids"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tac-34-3-357",
+        "tx-occ-1305",
+        "tx-occ-1302",
+        "tx-occ-1301",
+        "tdlr-license-search",
+        "tx-occ-1954"
+      ],
+      "typeNotes": {
+        "multifamily": "The sales tax rule counts a multifamily apartment complex and its tenant common areas as residential property; contractors repairing residential property are sent to the Comptroller's contractor rule (34 TAC 3.291) instead, and the CPA confirms the treatment."
+      }
+    },
+    {
+      "id": "get-consents",
+      "title": "Get the approvals the loan and the governing documents require",
+      "instruction": "From the loan documents, find whether the work needs the lender's consent, often above a stated alteration amount or for structural work, what a request must include, and how a reserve draw or, after a casualty, a release of held insurance proceeds (casualty-damages-property) is requested. Draft the consent request as meet-loan-covenants does. From the governing documents, find who approves the project, budget and funding: what the entity's manager may decide alone, any fund advisory committee consent for a related party doing or managing the work, and the capital partner's written consent where a JV agreement makes the budget, contract or an affiliate's construction management fee a major decision. The principals and counsel decide how any new capital is raised under the governing agreement, such as by capital call; investor-misses-capital-call covers a call not met. Send each request once a person approves it; nothing is signed until each required consent arrives.",
+      "mode": "agent",
+      "modeBasis": "Reading the documents and drafting the requests is document work; each request speaks for the firm, so a person approves it.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "level-the-bids"
+      ],
+      "consumes": [
+        "loan-documents",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "basis": "practitioner"
+    },
+    {
+      "id": "sign-the-contract",
+      "title": "Sign the construction contract and confirm insurance",
+      "instruction": "Once counsel has cleared the chosen bidder's changes and every required consent is in hand, the person the owning entity's agreement authorizes signs the contract with all its exhibits: drawings, specifications, the bid, schedule, schedule of values, insurance requirements and the waiver forms. Where the contractor furnishes a payment bond, a principal endorses written approval on it, and the bond with the contract or its memorandum is filed with the county clerk (Prop. Code 53.202, 53.203). Before work starts, collect the contractor's insurance certificates naming the parties the contract requires, any performance bond, and proof of its subcontractors' coverage. Ask the property insurer in writing, through the broker, whether the policy covers work in progress or builder's risk is needed, and check the lender's construction insurance terms; renew-property-insurance carries the change forward. Any deposit is released as release-payment describes. File the signed contract and approvals in the project record.",
+      "mode": "human-online",
+      "modeBasis": "Signing the contract and endorsing any bond bind the owning entity, so a person does both.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "get-consents",
+        "review-the-contract"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "loan-documents"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-pr-53-bond"
+      ]
+    },
+    {
+      "id": "confirm-permits-and-notify-tenants",
+      "title": "Confirm permits and filings, and schedule the work around tenants",
+      "instruction": "Before work starts, confirm the building permit has issued to whoever the contract names and other filings are in place. Where Texas accessibility law covers the building and construction or alteration is estimated at $50,000 or more (not reroofing or system changes that leave usability alone), the design professional submits plans within 20 business days of issue, or the owner does if none has overall responsibility, before any permit application, which carries proof of submission, or work (Gov't Code 469.101, 469.102; 16 TAC 68.10, 68.50); check TDLR's search names the title-holding entity. For windstorm association cover, notify the Department of Insurance first and have work inspected under way; certifying finished work needs a Texas engineer's seal (Ins. Code 2210.2515). Disturbing an acre or more, alone or in a larger common plan, needs TCEQ stormwater coverage. Book permit inspections, schedule the contractor and draft lease notices for a person to approve.",
+      "mode": "agent-browser",
+      "modeBasis": "Permit and registration records are public searches; tenant notices speak for the firm, so a person approves them.",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "cost": {
+        "text": "TDLR project filing fee for a project registered for accessibility review: $175, or $300 if registered after construction is complete; a registered accessibility specialist's own review and inspection fees are separate and not stated",
+        "usdMin": 175,
+        "usdMax": 300,
+        "sourceId": "tdlr-ab-fees"
+      },
+      "after": [
+        "sign-the-contract"
+      ],
+      "consumes": [
+        "lease-abstract"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-gov-469",
+        "tac-16-68-10",
+        "tac-16-68-50",
+        "tdlr-ab",
+        "tdlr-ab-fees",
+        "tx-ins-2210",
+        "tdi-windstorm",
+        "tceq-cgp"
+      ]
+    },
+    {
+      "id": "supervise-the-work",
+      "title": "Supervise the work, decide change orders and walk the finished job",
+      "instruction": "A principal, or a property manager or owner's representative assigned in writing, walks the site regularly with the contractor and any designer, who checks work against the drawings. Keep a dated, photographed log of progress, delays, inspections (windstorm included), tenant complaints and safety concerns. Price each change before ordering it, at contract unit prices where they apply, and have an authorized person sign it after any approval the governing documents or lender require; past 10 percent of the original contract in unsigned extras, the contractor may refuse more (Prop. Code 28.0091). If the contract is terminated or abandoned, notify within 10 days each subcontractor that sent notice (53.107). At completion, walk the finished work and list what remains. Each month, report budget, contingency left, contract amount with changes, cost to date and to finish, original and expected finish, and open issues to the principals and for send-quarterly-investor-report.",
+      "mode": "human-offline",
+      "modeBasis": "Walking the site needs a person present, and ordering a change or accepting the work binds the owner.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-permits-and-notify-tenants"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-pr-28",
+        "tx-pr-53-completion"
+      ]
+    },
+    {
+      "id": "check-pay-applications",
+      "title": "Check each pay application and collect lien waivers with each payment",
+      "instruction": "Check each pay application against the schedule of values, site log, change orders and retainage before release. Unless a valid payment bond is filed, the owner keeps 10 percent of the contract price or of the work's value until 30 days after completion, or complying claimants hold a lien for at least that amount (Prop. Code 53.101, 53.105, 53.201). With each payment, collect a conditional waiver for it and an unconditional one for the last from the contractor and each claimant that sent notice; a waiver binds only in substantially the statutory form, and an unconditional one may not be demanded before payment (53.281 to 53.284). After notice of an unpaid claim, the owner may withhold that amount; paying anyway risks liability (53.081, 53.084). Property-secured construction loan proceeds are trust funds for those furnishing labor and materials, and whoever controls them for the owner is a trustee (162.001 to 162.003).",
+      "mode": "agent",
+      "modeBasis": "Checking a pay application against the contract and the waivers is document work; a principal releases the payment in release-payment.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "supervise-the-work"
+      ],
+      "rules": [
+        "us-tx.property.mechanics-liens"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "loan-documents"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-pr-53-retainage",
+        "tx-pr-53-bond",
+        "tx-pr-53-waivers",
+        "tx-pr-53-withholding",
+        "tx-pr-162"
+      ]
+    },
+    {
+      "id": "release-payment",
+      "title": "Release each payment to verified bank details",
+      "instruction": "A principal releases each approved payment, including any deposit the contract calls for, from the owning entity's account in the checked amount, only against the waivers due with it, within 35 days of the contractor's proper request (Prop. Code 28.002). Before the first payment, and whenever the contractor's bank details change, confirm them by calling the contractor at a number from the signed contract or an earlier verified record, never one in the message carrying the details; any change follows wire-instructions-change. Final payment waits for the punch list, the final waivers and the end of the 30-day retainage period (53.101). After each release, compare the bank's confirmation with the approved amount and record who released it and when.",
+      "mode": "human-online",
+      "modeBasis": "Releasing a payment takes a bank sign-in and an authorized approver; an agent never moves money.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-pay-applications"
+      ],
+      "market": "formation-back-office",
+      "basis": "cited",
+      "sources": [
+        "tx-pr-28",
+        "tx-pr-53-retainage"
+      ]
+    },
+    {
+      "id": "close-out",
+      "title": "Close out with final waivers, warranties, inspections and as-built records",
+      "instruction": "Draft the affidavit of completion for a principal to sign, the lien calendar and close-out file from the project record. Filed with the county clerk and copied within 3 days to the contractor and each claimant who gave notice, the affidavit is prima facie evidence of the completion date that starts the 30-day retainage period; if filed more than 10 days after completion, the filing date counts (Prop. Code 53.106, 53.101). Calendar the lien deadlines in us-tx.property.mechanics-liens; a paid lien claimant gives a recordable release within 10 days of a written request (53.152). Collect final waivers, warranties, manuals, permit sign-offs, as-built drawings and any windstorm certificate. For a project registered for accessibility review, request in writing a registered accessibility specialist's inspection, done within a year of completion with an owner's representative present to sign; answer corrections within 30 days, finishing them within 270 days (Gov't Code 469.105; 16 TAC 68.52).",
+      "mode": "agent",
+      "modeBasis": "The affidavit, calendar, file and inspection request are drafted from the project record; a principal signs the affidavit and an owner's representative attends the inspection.",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "release-payment"
+      ],
+      "rules": [
+        "us-tx.property.mechanics-liens"
+      ],
+      "produces": [
+        "lien-release"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-pr-53-completion",
+        "tx-pr-53-retainage",
+        "tx-gov-469",
+        "tac-16-68-52",
+        "tx-ins-2210"
+      ]
+    },
+    {
+      "id": "update-reserves-and-books",
+      "title": "Update the component schedule and hand the costs to the CPA",
+      "instruction": "Record the project's final cost by component, with change orders, design and permit fees, and what reserves, insurance or tenants paid. Update the component schedule with the new item's install date, life and warranty, re-run the replacement-reserves calculator, and update the underwriting model's capital plan, set-the-annual-budget's next budget and meet-loan-covenants' reserve ledger; tenant recoveries go to collect-rent-and-reconcile-cam. Send the CPA the invoices and work description once a person approves. The CPA classifies each cost as a deductible repair or a capital improvement: amounts that better, restore or adapt the building structure or a system are generally capitalized, while routine maintenance expected more than once in ten years is not an improvement (26 CFR 1.263(a)-3(d), (i)). For a replaced component, the CPA decides by that year's original return whether to elect a partial disposition of the old one; a deducted loss on it makes the replacement a capitalized restoration (1.168(i)-8(d)(2); 1.263(a)-3(k)).",
+      "mode": "agent",
+      "modeBasis": "Recording costs and updating the component schedule and the model is document work; the tax treatment is the CPA's.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "close-out"
+      ],
+      "rules": [
+        "us-fed.irc.depreciation-recovery-periods",
+        "us-fed.irc.bonus-depreciation"
+      ],
+      "calculators": [
+        "replacement-reserves"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "property-condition-assessment",
+        "underwriting-model"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-26-1-263a-3",
+        "ecfr-26-1-168i-8"
+      ]
+    }
+  ],
+  "outlineSteps": []
 }

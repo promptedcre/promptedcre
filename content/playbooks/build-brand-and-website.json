@@ -3,21 +3,595 @@
   "slug": "build-brand-and-website",
   "kind": "process",
   "title": "Build the brand and website",
-  "summary": "Name, logo and a plain website that says what the sponsor buys and how to reach it, within the limits the offering exemption allows.",
+  "summary": "Name, logo and a plain website that says what the firm buys and how to reach it, within the limits the offering exemption allows.",
   "phase": "stand-up",
   "order": 50,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
+  "lastVerified": "2026-11-20",
+  "requires": [
+    "form-sponsor-entity",
+    "choose-counsel-and-cpa"
+  ],
+  "consumes": [
+    "certificate-of-formation",
+    "buy-box"
+  ],
   "produces": [],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
+  "sources": [
+    {
+      "id": "uspto-search",
+      "url": "https://www.uspto.gov/trademarks/search",
+      "title": "Search our trademark database",
+      "publisher": "United States Patent and Trademark Office",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "uspto-federal-search",
+      "url": "https://www.uspto.gov/trademarks/search/federal-trademark-searching",
+      "title": "Federal trademark searching",
+      "publisher": "United States Patent and Trademark Office",
+      "accessed": "2026-11-20",
+      "quote": "Trademarks may be confusingly similar if they look alike, sound alike, have similar meanings, or create similar commercial impressions.",
+      "tier": "primary"
+    },
+    {
+      "id": "uspto-clearance",
+      "url": "https://www.uspto.gov/trademarks/search/comprehensive-clearance-search-similar-trademarks",
+      "title": "Comprehensive clearance search for similar trademarks",
+      "publisher": "United States Patent and Trademark Office",
+      "accessed": "2026-11-20",
+      "quote": "At a minimum, be sure to check our database and the TMOG for federal applications and registrations, and also search the internet for common-law use.",
+      "tier": "primary"
+    },
+    {
+      "id": "uspto-fees",
+      "url": "https://www.uspto.gov/learning-and-resources/fees-and-payment/uspto-fee-schedule",
+      "title": "USPTO fee schedule, effective January 19, 2025, last revised November 1, 2026 (trademark application fees, 37 CFR 2.6(a)(1))",
+      "publisher": "United States Patent and Trademark Office",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bcc-71",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.71.htm",
+      "title": "Texas Business and Commerce Code, Chapter 71, Assumed Business or Professional Name Act (Sections 71.002, 71.101 to 71.104, 71.151, 71.152, 71.155, 71.157 and 71.201)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "quote": "does not in itself constitute actual use of the assumed name stated in the certificate",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-503",
+      "url": "https://www.sos.state.tx.us/corp/instructions/503.shtml",
+      "title": "Form 503, Instructions for Assumed Name Certificate, revised 09/26",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-20",
+      "quote": "does not have the authority to review the name of the certificate to determine if the filing conflicts with another name on file",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-17-101",
+      "url": "https://www.law.cornell.edu/uscode/text/17/101",
+      "title": "17 U.S.C. 101, Definitions (work made for hire)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-17-201",
+      "url": "https://www.law.cornell.edu/uscode/text/17/201",
+      "title": "17 U.S.C. 201, Ownership of copyright (subsections (a) and (b))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-20",
+      "quote": "Copyright in a work protected under this title vests initially in the author or authors of the work.",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-17-204",
+      "url": "https://www.law.cornell.edu/uscode/text/17/204",
+      "title": "17 U.S.C. 204, Execution of transfers of copyright ownership (subsection (a))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-502",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.502",
+      "title": "17 CFR 230.502, General conditions to be met (paragraph (c), limitation on manner of offering)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-20",
+      "quote": "neither the issuer nor any person acting on its behalf shall offer or sell the securities by any form of general solicitation or general advertising",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-506",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.506",
+      "title": "17 CFR 230.506, Exemption for limited offers and sales without regard to dollar amount of offering (paragraphs (b) and (c))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-20",
+      "quote": "The issuer shall take reasonable steps to verify that purchasers of securities sold in any offering under paragraph (c) of this section are accredited investors.",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-77d",
+      "url": "https://www.law.cornell.edu/uscode/text/15/77d",
+      "title": "15 U.S.C. 77d, Exempted transactions (subsection (b))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-20",
+      "quote": "shall not be deemed public offerings under the Federal securities laws as a result of general advertising or general solicitation",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-20",
+      "quote": "To make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gov-code-4008",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.4008.htm",
+      "title": "Texas Government Code, Chapter 4008 (Section 4008.052, offeror or seller liability for untruth or omission)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "quote": "regardless of whether the security or transaction is exempt under Chapter 4005",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-275-206-4-1",
+      "url": "https://www.ecfr.gov/current/title-17/section-275.206(4)-1",
+      "title": "17 CFR 275.206(4)-1, Investment adviser marketing",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-20",
+      "quote": "any investment adviser registered or required to be registered under section 203 of the Act",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-275-206-4-8",
+      "url": "https://www.ecfr.gov/current/title-17/section-275.206(4)-8",
+      "title": "17 CFR 275.206(4)-8, Pooled investment vehicles",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-20",
+      "quote": "to any investor or prospective investor in the pooled investment vehicle",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-80b-2",
+      "url": "https://www.law.cornell.edu/uscode/text/15/80b-2",
+      "title": "15 U.S.C. 80b-2, Definitions (Investment Advisers Act; paragraph (a)(29), private fund)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-20",
+      "quote": "but for section 3(c)(1) or 3(c)(7) of that Act",
+      "tier": "primary"
+    },
+    {
+      "id": "trec-rules",
+      "url": "https://www.trec.texas.gov/agency-information/rules-and-laws/trec-rules",
+      "title": "TREC Rules: 22 Tex. Admin. Code 531.18 (Consumer Protection Notice), 531.20 (Information About Brokerage Services) and 535.155 (advertisements, including subsection (d))",
+      "publisher": "Texas Real Estate Commission",
+      "accessed": "2026-11-20",
+      "quote": "contains information about a license holder's real estate brokerage services",
+      "tier": "primary"
+    },
+    {
+      "id": "trec-license-search",
+      "url": "https://www.trec.texas.gov/license-search",
+      "title": "License Holder Search",
+      "publisher": "Texas Real Estate Commission",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "oc-1101",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1101.htm",
+      "title": "Texas Occupations Code, Chapter 1101 (Section 1101.004(b)(2), activities that are not real estate brokerage)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-20",
+      "quote": "sponsoring, promoting, or managing, or otherwise participating as a principal, partner, or financial manager of, an investment in real estate",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-7702",
+      "url": "https://www.law.cornell.edu/uscode/text/15/7702",
+      "title": "15 U.S.C. 7702, Definitions (CAN-SPAM Act: commercial electronic mail message, initiate, procure, transactional or relationship message)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-7704",
+      "url": "https://www.law.cornell.edu/uscode/text/15/7704",
+      "title": "15 U.S.C. 7704, Other protections for users of commercial electronic mail (subsection (a))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-20",
+      "quote": "more than 10 business days after the receipt of such request",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-16-316",
+      "url": "https://www.ecfr.gov/current/title-16/part-316",
+      "title": "16 CFR Part 316, CAN-SPAM Rule (Sections 316.1 to 316.3 and 316.5)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-20",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "list-candidate-names",
+      "title": "List candidate names and how each relates to the legal name",
+      "instruction": "Draft a short list of names the firm could use in public, from the principals' ideas, and record for each how it relates to the legal name in the certificate of formation: the same name, or a different one, which needs the assumed-name step below or a change of legal name through amend-the-certificate. For each candidate, note whether the matching web domain and the social media handles the firm wants appear to be free, and whether a principal already uses the name, or used it at a prior firm or in another venture. Drop names that are hard to spell when heard, or that describe the firm as something it is not. The list goes to the trademark search next; nothing is bought, registered or announced yet.",
+      "mode": "agent",
+      "modeBasis": "Drafting candidates and checking whether domains and handles look free is research work; the principals choose a name only after counsel clears it.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "consumes": [
+        "certificate-of-formation"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "search-trademark-records",
+      "title": "Search the USPTO's trademark records for each candidate",
+      "instruction": "Search each candidate in the USPTO's free trademark search system for live registrations and pending applications. Start with the exact wording, then the words with other text around them, other spellings and sound-alikes, and each strong word alone and in combination; for a logo, look up its design codes and search those. Then check the Trademark Official Gazette, state trademark registries and the internet for the same or similar names used for real estate investment, management, brokerage, lending or related services. The USPTO asks whether marks look, sound or mean alike or leave a similar commercial impression, and whether the services are related, so record each close hit with its owner, status, services and a link. The search informs counsel's decision; it clears nothing.",
+      "mode": "agent-browser",
+      "modeBasis": "The USPTO's search system and the other registries are public and need no sign-in; what the hits mean is counsel's call.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-candidate-names"
+      ],
+      "basis": "cited",
+      "sources": [
+        "uspto-search",
+        "uspto-federal-search",
+        "uspto-clearance"
+      ]
+    },
+    {
+      "id": "counsel-clears-name",
+      "title": "Have counsel clear the name and decide whether to register it",
+      "instruction": "Send counsel the candidates and the search record, and ask in writing which names the firm may use and whether to apply to register one as a federal trademark. The USPTO recommends a comprehensive search, and an attorney can run one and read the results. The principals choose among the names counsel clears and record the choice with counsel's answer. If they decide to register, counsel prepares and files the application for the services the firm offers; the USPTO does not refund filing fees when a mark is not registered, and its examiner runs its own search for conflicts.",
+      "mode": "human-online",
+      "modeBasis": "Whether a name is clear to use and worth registering is a legal judgment; the agent supplies the search record and files the answer.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "cost": {
+        "text": "If the firm registers: USPTO base application fee of $350 per class filed electronically, plus $100 per class when required information is missing, $200 per class for describing services in free-form text instead of the ID Manual, and $200 per class for each further 1,000 characters of free-form text",
+        "usdMin": 350,
+        "sourceId": "uspto-fees"
+      },
+      "after": [
+        "search-trademark-records"
+      ],
+      "basis": "cited",
+      "sources": [
+        "uspto-federal-search",
+        "uspto-clearance",
+        "uspto-fees"
+      ]
+    },
+    {
+      "id": "file-assumed-name",
+      "title": "File an assumed name certificate for any name other than the legal name",
+      "instruction": "If the firm will regularly do business in Texas under any name other than the exact name in its certificate of formation, file an assumed name certificate with the Secretary of State before using it; a Delaware LLC registered in Texas does the same. The agent fills Form 503 from the firm file: the assumed name, the legal name, entity type and file number, state of formation, principal office address, a term of up to 10 years, and the Texas counties where the name is used. A manager, member or other authorized person signs and files it through SOSPortal; each name needs its own certificate. The filing only gives notice: the Secretary of State does not check it against other names, and it gives no right to use the name against others' rights. Without it, the firm cannot sue in Texas on a contract made under the name.",
+      "mode": "human-online",
+      "modeBasis": "Signing, filing through the Secretary of State's portal and paying are a person's acts; the agent prepares the form from the firm file.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "cost": {
+        "text": "$25 Secretary of State filing fee for each certificate",
+        "usdMin": 25,
+        "usdMax": 25,
+        "sourceId": "sos-503"
+      },
+      "after": [
+        "counsel-clears-name"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.assumed-name.certificate"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "certificate-of-formation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-bcc-71",
+        "sos-503"
+      ]
+    },
+    {
+      "id": "secure-accounts-and-design",
+      "title": "Hold the domain and accounts in the firm's name and own the design",
+      "instruction": "Register the domain, site hosting, email and social profiles in the firm's name, in accounts at least two principals can open, with two-factor sign-in, never in a designer's or an employee's own account. Before a designer, agency or freelancer starts on the logo, the site or its copy, have them sign a written assignment to the firm of the copyright in everything made for it, source files included, confirming the right to use any fonts, photos or code inside. Copyright starts with the author. A commissioned work is made for hire only if it is one of the nine kinds the statute lists and both sides sign a writing saying so, and any other transfer of ownership needs a writing signed by the owner. Counsel drafts or reviews the assignment.",
+      "mode": "human-online",
+      "modeBasis": "Opening accounts, paying and signing the designer agreement are the principals' acts; an agent can compare terms and keep the checklist.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-clears-name"
+      ],
+      "market": "formation-back-office",
+      "basis": "cited",
+      "sources": [
+        "usc-17-101",
+        "usc-17-201",
+        "usc-17-204"
+      ]
+    },
+    {
+      "id": "fund-adviser-rules",
+      "title": "For a fund, ask counsel whether adviser marketing rules reach the site",
+      "instruction": "Ask counsel once, in writing, whether the firm or its management company is an investment adviser and which adviser rules reach the site, profiles and email, and record the answer as rules for the drafts and where build-track-record-deck reads it. The SEC's marketing rule binds advisers registered, or required to be registered, with it. It covers a communication to more than one person, or to one if it shows hypothetical performance, offering the adviser's services with regard to securities to prospective clients or to investors in a private fund it advises (under the Advisers Act, one relying on Section 3(c)(1) or 3(c)(7)), and any paid testimonial or endorsement; it bars untrue or misleading statements and sets conditions on testimonials, endorsements, third-party ratings and performance. A separate rule bars any adviser to such a fund, registered or not, from making untrue or misleading statements to its investors or prospective investors.",
+      "mode": "human-online",
+      "modeBasis": "Whether the manager is an investment adviser and which rules bind it is a legal conclusion; the agent records the answer as rules for the drafts.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-clears-name"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "basis": "cited",
+      "sources": [
+        "ecfr-275-206-4-1",
+        "ecfr-275-206-4-8",
+        "usc-15-80b-2"
+      ]
+    },
+    {
+      "id": "draft-site-copy",
+      "title": "Draft a site that describes the firm and makes no offer",
+      "instruction": "Draft the pages: who the firm is; each principal's role and background, stated as facts a document can show; what the firm buys, taken from the current buy box once it is written, as property types, markets and size, with no return targets; how brokers and owners send deals; and how to reach the firm. Draft the social profiles and email signatures to match. Leave out any fund or deal open for investment, any offering terms or returns, and any button, form or page that invites people to invest or sign up as investors. Rule 502(c) bars offering or selling in a Regulation D offering by general solicitation or general advertising unless it relies on Rule 506(c) or Rule 504(b)(1). What counts as an offer on a public page is counsel's call, so until counsel has chosen the exemption and approved more, the site makes no offer.",
+      "mode": "agent",
+      "modeBasis": "Drafting pages from the firm file and the buy box is writing work; counsel and a principal clear them before anything is published.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-clears-name",
+        "fund-adviser-rules"
+      ],
+      "rules": [
+        "us-fed.reg-d.general-solicitation"
+      ],
+      "consumes": [
+        "buy-box",
+        "certificate-of-formation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-502"
+      ]
+    },
+    {
+      "id": "check-claims",
+      "title": "Check every claim about results against the cleared track-record deck",
+      "instruction": "List every statement on the pages, profiles and email templates about what the firm or a principal has done: deals, square feet or dollars bought, returns, investor results, awards and past partners. Each must trace to a document and match the current cleared deck from build-track-record-deck, with the same attribution for prior-firm deals, the same split between sold and still-held deals, and the losses wherever results are shown; until a cleared deck exists, no claim about results goes on the site. Photos and descriptions show only properties the firm or a principal actually owned or ran, in the role held. Rule 10b-5 bars untrue statements of material fact, and omissions that leave statements misleading, in connection with buying or selling a security; Texas makes whoever offers or sells a security that way liable to the buyer, exempt or not. Counsel decides whether site claims are part of an offer.",
+      "mode": "agent",
+      "modeBasis": "Tracing each claim to a document and to the cleared deck is checking work; whether a claim is part of an offer is counsel's call.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "draft-site-copy"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5",
+        "us-tx.securities.offer-sale-liability"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5",
+        "tx-gov-code-4008"
+      ]
+    },
+    {
+      "id": "texas-license-links",
+      "title": "If a principal holds a Texas license, check whether TREC's website rules apply",
+      "instruction": "Look up each principal in TREC's license holder search, and for each license holder ask counsel whether the site will contain information about that person's real estate brokerage services; sponsoring, promoting or managing a real estate investment is not, by itself, brokerage. TREC's rules call a public site with such information, whose content the license holder controls, a business website. Its home page carries, in a readily noticeable place, links to the completed Information About Brokerage Services notice and TREC's Consumer Protection Notice, labeled as the rules set; a social profile may carry them. An advertisement for brokerage services names the license holder and the broker, gives no sales agent a title such as owner or CEO that implies the agent runs a brokerage, and clearly discloses that any unlicensed person it names or pictures holds no license.",
+      "mode": "agent-browser",
+      "modeBasis": "TREC's license holder search is public and needs no sign-in; whether the site counts as a business website is counsel's call.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "draft-site-copy"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.trec.iabs"
+      ],
+      "basis": "cited",
+      "sources": [
+        "trec-rules",
+        "trec-license-search",
+        "oc-1101"
+      ]
+    },
+    {
+      "id": "set-up-marketing-email",
+      "title": "Build any marketing email to the CAN-SPAM rules",
+      "instruction": "If the firm will send commercial email, such as a note to brokers about what it buys, build the template and list rules to the CAN-SPAM Act and the FTC's rule under it. Each message has accurate header and sender information and a subject line that does not mislead; says it is an advertisement unless the recipient gave prior affirmative consent; gives the firm's valid physical postal address; and offers a working way to opt out that stays live for at least 30 days. Opt-outs are honored within 10 business days, the address is never sold or passed on, and opting out asks for nothing beyond a reply or a visit to one web page. Paying a service to send does not move the duty, since whoever procures a message counts as initiating it. Under Rule 506(b), no list email offers a deal.",
+      "mode": "agent",
+      "modeBasis": "Building templates and list rules is setup work; each send is approved in the publication step.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-clears-name"
+      ],
+      "rules": [
+        "us-fed.reg-d.general-solicitation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-15-7704",
+        "usc-15-7702",
+        "ecfr-16-316",
+        "ecfr-230-502"
+      ]
+    },
+    {
+      "id": "counsel-reviews-site",
+      "title": "Have counsel read every page and template before launch",
+      "instruction": "Send counsel the pages, profiles, email templates and signatures as they will appear, with the claims list and its sources, the name clearance, any license-holder answer and, for a fund, counsel's adviser-rule answer. Counsel marks what must change and approves each version in writing. Once an offering is being prepared, the site and the templates are also read with the offering documents in the antifraud check of prepare-offering-documents, so they say nothing the documents do not. Any later material change, such as a new page or claim, a principal joining or leaving, or an offering opening or closing, comes back to counsel before it is published.",
+      "mode": "human-online",
+      "modeBasis": "Judging whether the words are lawful under the exemption and the antifraud rules is counsel's licensed work; the agent assembles the package.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "file-assumed-name",
+        "secure-accounts-and-design",
+        "check-claims",
+        "fund-adviser-rules",
+        "texas-license-links",
+        "set-up-marketing-email"
+      ],
+      "rules": [
+        "us-fed.reg-d.general-solicitation",
+        "us-fed.exchange-act.rule-10b-5",
+        "us-tx.securities.offer-sale-liability"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "approve-and-publish",
+      "title": "Approve each publication and keep a dated copy",
+      "instruction": "A principal approves each publication before it goes out: the site at launch, each later change, each post and each marketing email, in the version counsel cleared. Then publish it and record who approved it, when, and which version. Keep a dated copy of every page and email exactly as it appeared, with counsel's sign-off, so the firm can show later what a reader saw on a given day. Nothing goes live from a draft, a page counsel has not cleared stays off the site, and earlier versions are kept, not overwritten.",
+      "mode": "human-online",
+      "modeBasis": "Releasing anything to the public is a principal's decision; an agent keeps the version store and the log.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-reviews-site"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "fit-site-to-exemption",
+      "title": "When the exemption is chosen, fit the site and lists to it",
+      "instruction": "When counsel records the exemption in choose-structure-and-exemption, check the site, profiles and email lists against the guardrails written there, and send any change back through counsel and approval. Under Rule 506(b) the bar on general solicitation holds: no offering, terms or invitation to invest appears in public, and anyone who first reaches the firm through the site is logged with how they came, so counsel's rules on relationships decide whether they may be approached. Under Rule 506(c), general solicitation is allowed, but every buyer must be an accredited investor the firm has taken reasonable steps to verify; an offering page goes up only as drafted in present-the-deal-to-investors, and its buyers go through onboard-an-investor. A Rule 506 offering is not deemed public just because of general solicitation, which matters for a fund's Investment Company Act exclusion. For a joint venture, counsel's written decision governs.",
+      "mode": "agent",
+      "modeBasis": "Comparing the published pages and lists with the recorded guardrails is checking work; changes go back through counsel and a principal.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "approve-and-publish"
+      ],
+      "rules": [
+        "us-fed.reg-d.general-solicitation",
+        "us-fed.reg-d.rule-506b",
+        "us-fed.reg-d.rule-506c",
+        "us-fed.ica.fund-exclusions",
+        "us-fed.securities.jv-interests"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-502",
+        "ecfr-230-506",
+        "usc-15-77d"
+      ]
+    },
+    {
+      "id": "keep-site-current",
+      "title": "Send the site back through review whenever something changes",
+      "instruction": "Keep a list of events that send the site, profiles and templates back through counsel's review and a principal's approval: an offering opened, changed or closed, or the exemption changed; a deal bought or sold, or a new valuation that changes the track-record deck; a principal joining or leaving; a new market or property type in the buy box; and a change of the firm's name, address or license holders. When one happens, mark every page it touches, draft the change and route it. Review the whole site at an interval the principals set, even with no event, and take down anything no longer true. In Texas, renew each assumed name certificate in the six months before its term ends, and file a new one within 60 days of a change that makes it materially misleading.",
+      "mode": "agent",
+      "modeBasis": "Watching for events, marking affected pages and drafting changes is file work; nothing changes in public without counsel and a principal.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "approve-and-publish"
+      ],
+      "rules": [
+        "us-tx.assumed-name.certificate"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-bcc-71"
+      ]
+    }
+  ],
   "outlineSteps": []
 }

@@ -7,31 +7,612 @@
   "phase": "raise",
   "order": 132,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
+  "lastVerified": "2026-11-21",
   "situation": {
     "trigger": "The SEC or a state securities regulator asks for information about an offering.",
     "urgency": "days"
   },
-  "requires": [],
-  "consumes": [],
+  "requires": [
+    "prepare-offering-documents",
+    "choose-counsel-and-cpa",
+    "set-up-document-storage",
+    "bind-sponsor-insurance"
+  ],
+  "consumes": [
+    "private-placement-memorandum",
+    "subscription-agreement",
+    "investor-questionnaire",
+    "accreditation-verification-letter",
+    "investor-register",
+    "form-d",
+    "state-notice-filing",
+    "bad-actor-questionnaire",
+    "loan-documents",
+    "jv-agreement",
+    "guaranty",
+    "deal-entity-agreement"
+  ],
   "produces": [],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Log the inquiry, who sent it and the response date",
-    "Bring in securities counsel before any reply",
-    "Put a hold on records the inquiry may reach",
-    "Notify the insurance carrier if the policy covers inquiries",
-    "Gather the documents requested with counsel",
-    "Review the production with counsel before it goes",
-    "Respond fully and on time through counsel",
-    "Track follow-up requests and their deadlines",
-    "Record the outcome and any change to practice"
-  ]
+  "sources": [
+    {
+      "id": "ecfr-202-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-202.5",
+      "title": "17 CFR 202.5, Enforcement activities",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "In such preliminary investigation no process is issued or testimony compelled.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-203",
+      "url": "https://www.ecfr.gov/current/title-17/part-203",
+      "title": "17 CFR Part 203, Rules relating to investigations (sections 203.1 to 203.8)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Unless otherwise ordered by the Commission, all formal investigative proceedings shall be non-public.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-200-83",
+      "url": "https://www.ecfr.gov/current/title-17/section-200.83",
+      "title": "17 CFR 200.83, Confidential treatment procedures under the Freedom of Information Act",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-21f-17",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.21F-17",
+      "title": "17 CFR 240.21F-17, Staff communications with individuals reporting possible securities law violations",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "No person may take any action to impede an individual from communicating directly with the Commission staff about a possible securities law violation",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-506",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.506",
+      "title": "17 CFR 230.506, Exemption for limited offers and sales without regard to dollar amount of offering (paragraph (d), bad-actor disqualification)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-77s",
+      "url": "https://www.law.cornell.edu/uscode/text/15/77s",
+      "title": "15 U.S.C. 77s, Special powers of Commission (Securities Act Section 19)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-78u",
+      "url": "https://www.law.cornell.edu/uscode/text/15/78u",
+      "title": "15 U.S.C. 78u, Investigations and actions (Exchange Act Section 21)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-80b-3",
+      "url": "https://www.law.cornell.edu/uscode/text/15/80b-3",
+      "title": "15 U.S.C. 80b-3, Registration of investment advisers (Advisers Act Section 203)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-80b-4",
+      "url": "https://www.law.cornell.edu/uscode/text/15/80b-4",
+      "title": "15 U.S.C. 80b-4, Reports by investment advisers",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-18-1519",
+      "url": "https://www.law.cornell.edu/uscode/text/18/1519",
+      "title": "18 U.S.C. 1519, Destruction, alteration, or falsification of records in Federal investigations and bankruptcy",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "in relation to or contemplation of any such matter or case",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-18-1505",
+      "url": "https://www.law.cornell.edu/uscode/text/18/1505",
+      "title": "18 U.S.C. 1505, Obstruction of proceedings before departments, agencies, and committees",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-18-1001",
+      "url": "https://www.law.cornell.edu/uscode/text/18/1001",
+      "title": "18 U.S.C. 1001, Statements or entries generally",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gov-4007",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.4007.htm",
+      "title": "Texas Government Code, Chapter 4007 (Securities Act enforcement)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "the payment of a fine assessed in an agreed order under this title does not constitute an admission of any misconduct described in the order",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gov-4008",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.4008.htm",
+      "title": "Texas Government Code, Chapter 4008 (Securities Act civil liability)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pe-37",
+      "url": "https://tcss.legis.texas.gov/resources/PE/htm/PE.37.htm",
+      "title": "Texas Penal Code, Chapter 37 (Perjury and other falsification), Section 37.09",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "knowing that an investigation or official proceeding is pending or in progress",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-106-1",
+      "url": "https://www.law.cornell.edu/regulations/texas/7-Tex-Admin-Code-SS-106-1",
+      "title": "7 Tex. Admin. Code 106.1, Guidelines for the Assessment of Administrative Fines",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "cooperation by the person or company in any inquiry conducted by the State Securities Board concerning the violation",
+      "tier": "primary"
+    },
+    {
+      "id": "ssb-offices",
+      "url": "https://www.ssb.texas.gov/about-us/offices",
+      "title": "Offices",
+      "publisher": "Texas State Securities Board",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "ssb-admin-actions",
+      "url": "https://www.ssb.texas.gov/news-publications/enforcement-actions-administrative",
+      "title": "Enforcement Actions: Administrative",
+      "publisher": "Texas State Securities Board",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "log-the-inquiry",
+      "title": "Log the inquiry, who sent it and every date it sets",
+      "instruction": "Open an inquiry record the day the request arrives, before anyone answers it. Record the regulator and office, the staff named, how and when it arrived, the entities, offerings, people and period it covers, and each item it asks for, numbered as the request numbers them. Note whether it is a voluntary request or a subpoena: in an SEC preliminary investigation no process is issued or testimony compelled, while in a formal one the SEC can subpoena witnesses and records and may also ask for them voluntarily; the Texas Securities Commissioner can subpoena in an investigation. Put the response date and any testimony date in the deadline calendar. From the regulator's own website, copy its published phone numbers and addresses beside the ones in the request and flag any difference. Send nothing to the regulator or counsel; the principals send the record to counsel in engage-counsel.",
+      "mode": "agent-browser",
+      "modeBasis": "The facts come from the request itself, and the regulator's contact details from its public website.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-202-5",
+        "ecfr-203",
+        "usc-15-77s",
+        "usc-15-78u",
+        "tx-gov-4007",
+        "ssb-offices"
+      ]
+    },
+    {
+      "id": "engage-counsel",
+      "title": "Bring in securities counsel and stop automatic deletion before anyone replies",
+      "instruction": "The same day, a principal sends the request and inquiry record to securities counsel from choose-counsel-and-cpa, or a lawyer it refers, asks the broker whether the management liability policy requires the insurer's consent or a panel firm, then signs the engagement on any terms the policy sets. Without waiting for the hold notice, the principal also stops automatic deletion in email, messaging and storage, pausing scheduled disposals. Ask counsel to state in writing whom it represents: the issuer, the firm, the principals personally, or some of them; whether any principal or employee needs separate counsel is counsel's judgment. From then on the firm's answers, staff contacts and requests addressed to the firm go through counsel. Tell everyone plainly none of this limits their right to talk to a regulator, or requires telling the firm: SEC rules bar any action to impede direct communication with SEC staff about a possible violation.",
+      "mode": "human-online",
+      "modeBasis": "Hiring counsel and signing the engagement are the principals' decision, and deletion settings need administrator logins, which stay with people.",
+      "actor": "principal",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "log-the-inquiry"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-21f-17"
+      ]
+    },
+    {
+      "id": "confirm-scope-with-staff",
+      "title": "Have counsel confirm the request, its scope and the deadline with the staff",
+      "instruction": "Counsel calls the staff at a number taken from the regulator's own website, confirms the request is genuine, and asks what it can learn about the inquiry's nature. Counsel confirms whether the request is voluntary or compelled; in a formal SEC investigation, anyone asked for documents or testimony may ask to be shown the order of investigation, and a witness may bring counsel. Counsel agrees in writing on the scope, the order of production, the format for electronic records and the response date, and asks for more time before the date if it is needed. Record each agreement counsel reaches in the inquiry record and the calendar.",
+      "mode": "human-offline",
+      "modeBasis": "Calling the staff and agreeing scope for the firm are a lawyer's work.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "engage-counsel"
+      ],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-202-5",
+        "ecfr-203",
+        "ssb-offices"
+      ]
+    },
+    {
+      "id": "draft-the-hold",
+      "title": "Map where the records are and draft the hold notice",
+      "instruction": "List every place a record the inquiry may reach is kept, with its custodian, and draft the hold notice for counsel. From the folder structure and access table in set-up-document-storage, include email, text and chat messages, phones and laptops, including personal devices used for firm business, shared drives, the data room, the investor portal, the books, online bank records, the e-signature service and contact lists, plus records held outside the firm by the property manager, a fund administrator, a placement agent or any other service. Read the request broadly when choosing the entities, people and dates covered. The notice says briefly what must be kept, from what date, that automatic deletion stops, and whom to ask. It must not impede anyone from communicating directly with SEC staff, which SEC rules forbid, and should not discourage contact with any other regulator.",
+      "mode": "agent",
+      "modeBasis": "The folder structure, access table and retention schedule are in the firm file; counsel approves the draft before anything goes out.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "log-the-inquiry"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-21f-17"
+      ]
+    },
+    {
+      "id": "issue-the-hold",
+      "title": "Put the hold in place and confirm automatic deletion is off",
+      "instruction": "Once counsel approves the notice, a principal sends it to every custodian on the map, inside and outside the firm, and collects a written confirmation from each. Keep the retention schedule's disposals suspended for everything covered, confirm automatic deletion is off for every custodian on the map, and keep any device being replaced. Nothing covered is altered, deleted, tidied up or moved out of reach. Federal law punishes destroying, altering or concealing a record with intent to impede a matter within a federal agency's jurisdiction, including one only in contemplation; Texas makes it a felony, knowing an investigation is pending, to alter, destroy or conceal a record to impair its availability as evidence. Record the hold's date, scope and confirmations in the inquiry record, and lift it only when counsel says so in writing.",
+      "mode": "human-online",
+      "modeBasis": "Changing retention settings takes administrator logins to the firm's accounts, which stay with people.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "engage-counsel",
+        "draft-the-hold"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-18-1519",
+        "tx-pe-37"
+      ]
+    },
+    {
+      "id": "give-required-notices",
+      "title": "Give the notices the insurance policies and loan documents require",
+      "instruction": "Read the firm's management liability and other policies, and each loan agreement and guaranty, for notice duties the inquiry may start. For each policy, quote how it defines a claim and any clause for reporting a circumstance, and whether the insurer must consent to defense costs or any settlement; counsel and the broker decide whether to report the inquiry as a claim or a circumstance. A claims-made policy answers only what is reported within its terms, so decide before any formal proceeding. For each loan, note any duty to report a governmental investigation or proceeding, its deadline and form. Draft each notice factually for counsel's review, following bind-sponsor-insurance's claim procedure. Once a principal approves, send each insurance notice by the method, to the address and within the time its policy sets, through the broker and directly where the policy names an address, and loan notices as the documents require.",
+      "mode": "agent",
+      "modeBasis": "The terms are in policies and loan documents the firm holds; each notice leaves the firm only after a principal approves it.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "engage-counsel"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "loan-documents",
+        "guaranty"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "fund-adviser-exam",
+      "title": "For a fund, tell an adviser examination apart from an offering inquiry",
+      "instruction": "Read whether the request is addressed to the fund as the issuer of an offering or to its manager as an investment adviser. An adviser that uses interstate commerce, other than one exempt from registration under Section 203(b) of the Advisers Act, which does not include the private fund or venture capital fund exemptions, must keep the records the SEC prescribes, open to SEC examination at any time; the Texas commissioner may inspect a registered investment adviser without notice. Give counsel the manager's registration or exemption status, filings and books and records, and ask which process applies. Add the fund's partnership agreement, side letters and advisory committee records to the record map, and list any duty they set to tell the limited partners or their committee about a regulator's inquiry. Draft any such notice; it goes out only after counsel reviews it and a principal approves it.",
+      "mode": "agent",
+      "modeBasis": "The request names its addressee and authority, and the manager's status is in its own filings; a notice leaves the firm only after a principal approves it.",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "engage-counsel",
+        "draft-the-hold"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-15-80b-4",
+        "usc-15-80b-3",
+        "tx-gov-4007"
+      ]
+    },
+    {
+      "id": "jv-partner-terms",
+      "title": "For a JV, read the venture agreement's notice and consent terms",
+      "instruction": "Read the joint venture agreement for any duty to tell the capital partner about a governmental inquiry or proceeding, with its deadline and form, and for whether answering for the venture, admitting facts or settling is a decision that needs the partner's consent. Note which records the capital partner holds itself. Give counsel the written decision from choose-structure-and-exemption on whether the venture interest is a security, since the regulator's reach may turn on it. Draft any notice the agreement requires; it goes to the partner only after counsel reviews it and a principal approves it.",
+      "mode": "agent",
+      "modeBasis": "The terms are in the signed venture agreement; the notice leaves the firm only after a principal approves it.",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "engage-counsel"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "rules": [
+        "us-fed.securities.jv-interests"
+      ],
+      "calculators": [],
+      "consumes": [
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "decide-what-to-say",
+      "title": "Get counsel's advice on disclosure and decide whether an open offering pauses",
+      "instruction": "Counsel advises, as soon as engaged, whether the inquiry must be disclosed before any further sale; the principals decide on that advice whether sales pause, and record the decision. Give counsel the inquiry record, any offering still open with its memorandum, and the next investor report. An untrue statement of a material fact, or an omission that leaves what was said misleading, is unlawful in connection with a sale of securities, and Texas makes the seller liable to the buyer, exempt offering or not. Counsel also approves what anyone at the firm says about the inquiry to investors, lenders, partners or the press. No one may take any action to impede an investor or employee from communicating directly with SEC staff about a possible violation, or corruptly try to influence or obstruct a pending federal agency proceeding. Hold the quarterly report for counsel's review, as send-quarterly-investor-report requires.",
+      "mode": "human-online",
+      "modeBasis": "Whether the inquiry is material and what the firm may say are counsel's judgment; whether sales pause is the principals' decision on that advice.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "engage-counsel"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5",
+        "us-tx.securities.offer-sale-liability"
+      ],
+      "calculators": [],
+      "consumes": [
+        "private-placement-memorandum"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5",
+        "tx-gov-4008",
+        "ecfr-240-21f-17",
+        "usc-18-1505"
+      ]
+    },
+    {
+      "id": "gather-the-documents",
+      "title": "Gather the documents requested, item by item, from the held records",
+      "instruction": "Working from copies and never changing an original, collect from the firm's storage what each numbered item asks for, as counsel has scoped it. List each record that sits on a phone, behind a person's sign-in or with an outside custodian, for a principal to export or request; counsel decides how phones are collected. Offering inquiries often ask for the memorandum and each version of it, subscription agreements, investor questionnaires and accreditation verification, the investor register, Form D and state notice filings, marketing materials and the log of who received them, bad-actor questionnaires, records of investor money received and spent, and any payment to people who introduced investors. Index each document to the item it answers, with its source, custodian and date. Mark anything exchanged with a lawyer for counsel's privilege review. List each item with no document or an unfinished search, rather than guessing or creating anything.",
+      "mode": "agent",
+      "modeBasis": "The agent works from records in the firm's storage; anything behind a person's sign-in or outside the firm is exported or requested by a principal.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-scope-with-staff",
+        "issue-the-hold",
+        "fund-adviser-exam",
+        "jv-partner-terms"
+      ],
+      "rules": [
+        "us-tx.securities.rule-506-compensation",
+        "us-fed.exchange-act.broker-registration"
+      ],
+      "calculators": [],
+      "consumes": [
+        "private-placement-memorandum",
+        "subscription-agreement",
+        "investor-questionnaire",
+        "accreditation-verification-letter",
+        "investor-register",
+        "form-d",
+        "state-notice-filing",
+        "bad-actor-questionnaire"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "review-and-produce",
+      "title": "Have counsel review the production and send it on time",
+      "instruction": "Counsel reviews the gathered set for completeness and privilege, logs anything withheld, numbers every page and, once a principal approves, sends the production by the agreed date. For the SEC, each page needing confidential treatment is marked \"Confidential Treatment Requested by\" the firm; a written request citing those page numbers goes with the records to the receiving staff member, and a copy, without the records, is mailed to the SEC's FOIA office. Where that is impracticable, counsel tells the staff at production and sends the request within 30 days; this never excuses late production. Every answer must be true and complete: knowingly and willfully making a materially false statement in a matter within a federal agency's jurisdiction is a crime, as in Texas is knowingly making a materially false or misleading statement in a filing with the commissioner or a proceeding. Texas weighs cooperation when setting any fine.",
+      "mode": "human-online",
+      "modeBasis": "Privilege calls, confidentiality requests and statements to a regulator are a lawyer's work, sent under counsel's name.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "gather-the-documents"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-200-83",
+        "usc-18-1001",
+        "tx-gov-4007",
+        "tac-106-1"
+      ]
+    },
+    {
+      "id": "track-follow-ups",
+      "title": "Track follow-ups and deadlines, and list what the inquiry shows should change",
+      "instruction": "After each production, update the inquiry record: each follow-up request with its items and deadline, each testimony date and who attends with counsel, each extension counsel agreed, and what was sent. Calendar every date. SEC rules let a person involved in an investigation send the Commission a written statement of its position, and the staff may, on request, say how much time there is to prepare one before it makes a recommendation. If the staff say an investigation has ended, record it; SEC rules say that advice is not exoneration. As counsel's reports show what should change, draft a list of changes and any harm to remedy, for the principals to give each an owner and a date before any order is agreed: Texas weighs efforts to prevent a repeat and to mitigate harm, restitution included, in setting a fine.",
+      "mode": "agent",
+      "modeBasis": "The record, the calendar and the draft list are kept from counsel's reports and the papers exchanged; the principals assign each change.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "review-and-produce"
+      ],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-202-5",
+        "tac-106-1"
+      ]
+    },
+    {
+      "id": "weigh-any-settlement",
+      "title": "Weigh any proposed order or settlement with counsel before signing",
+      "instruction": "Before signing any order, have counsel set out its effect on future raises. No later sale may rely on Rule 506 while the issuer or a covered person is under a court injunction against securities conduct, as the SEC or Texas Attorney General may obtain, entered within five years and in effect; a state securities regulator's bar, while it lasts, or its final antifraud order, for ten years; or an SEC cease-and-desist order under a scienter-based fraud provision or Section 5, for five. No disqualification arises if the ordering authority advises in writing, before the sale, that it should not, or the SEC waives it for good cause. In a JV, first get any written consent the venture agreement requires from the capital partner. Texas publishes its orders, but paying an agreed order's fine is no admission for private suits. An SEC settlement resolves only the civil or administrative matter.",
+      "mode": "human-online",
+      "modeBasis": "An agreed order binds the firm and the principals, who sign it on counsel's advice.",
+      "actor": "principal",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-what-to-say",
+        "jv-partner-terms",
+        "track-follow-ups"
+      ],
+      "rules": [
+        "us-fed.reg-d.bad-actor",
+        "us-fed.reg-d.rule-507"
+      ],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-506",
+        "usc-15-78u",
+        "tx-gov-4007",
+        "ecfr-202-5",
+        "ssb-admin-actions"
+      ]
+    },
+    {
+      "id": "record-the-outcome",
+      "title": "Record the outcome and any change to practice",
+      "instruction": "When counsel confirms the matter is closed, record the outcome in the inquiry record: closed without action, or an order or settlement with its terms, with every undertaking and its due date in the calendar. Add any order against the firm, an issuer or a principal to the facts that bad-actor questionnaires ask about, so every later offering's Rule 506(d) inquiry checks it, and counsel decides what later offering documents must say about it. Confirm each change on the list from track-follow-ups is done by its owner and date, and calendar any left open; Texas weighs a history of previous violations in setting any later fine. When counsel says in writing that the hold may end, draft the release for every custodian who received the hold and list the deletion settings and disposals to restore; a principal sends the release and restores them. File the record with the offering's records.",
+      "mode": "agent",
+      "modeBasis": "The outcome and the changes are recorded from counsel's closing advice and the signed papers.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "weigh-any-settlement"
+      ],
+      "rules": [
+        "us-fed.reg-d.bad-actor"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "bad-actor-questionnaire"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-506",
+        "tac-106-1"
+      ]
+    }
+  ],
+  "outlineSteps": []
 }

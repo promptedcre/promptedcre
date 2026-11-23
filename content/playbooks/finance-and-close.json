@@ -11,7 +11,8 @@
   "review": "practitioner-reviewed",
   "lastVerified": "2026-11-12",
   "requires": [
-    "run-due-diligence"
+    "run-due-diligence",
+    "bind-property-insurance"
   ],
   "consumes": [
     "loan-term-sheet",
@@ -348,14 +349,13 @@
     },
     {
       "id": "bind-insurance",
-      "title": "Bind property and liability insurance from closing",
-      "instruction": "Get quotes early using the condition report, the flood determination and the lender's insurance requirements: property, general liability, and any flood, wind or other coverage the lender lists, naming the lender as the commitment requires. If a building is in a special flood hazard area where federal flood insurance is available, a regulated lender may not make the loan unless flood coverage is in place for the loan's term, in at least the lesser of the loan balance and the maximum available. Bind coverage effective at closing and send the binder to the lender and the title company.",
-      "mode": "human-online",
-      "modeBasis": "Binding coverage commits the buyer to a premium, which a person authorizes with the insurer or agent.",
-      "actor": "principal",
+      "title": "Confirm the insurance binders are delivered for closing",
+      "instruction": "Confirm that bind-property-insurance has bound coverage starting no later than closing and delivered each binder, with the endorsements the lender requires, to the lender and the title company, and that each is checked off on the closing checklist. If a building is in a special flood hazard area where federal flood insurance is available, a regulated lender may not make the loan unless flood coverage is in place for the loan's term, in at least the lesser of the loan balance and the maximum available. Anything missing goes back to bind-property-insurance before closing.",
+      "mode": "agent",
+      "modeBasis": "Checking the binder record and the closing checklist is file work; binding and paying premiums are a principal's steps in bind-property-insurance.",
       "risk": "high",
       "undo": "reversible",
-      "approval": "signature",
+      "approval": "none",
       "effort": null,
       "elapsed": null,
       "after": [
@@ -365,13 +365,9 @@
         "us-fed.flood.mandatory-purchase"
       ],
       "consumes": [
-        "property-condition-assessment",
-        "loan-term-sheet",
-        "survey"
-      ],
-      "produces": [
         "insurance-binder"
       ],
+      "produces": [],
       "basis": "cited",
       "sources": [
         "usc-42-4012a",
@@ -635,7 +631,7 @@
     {
       "id": "build-post-closing-file",
       "title": "Send tenant notices and build the post-closing file",
-      "instruction": "Collect the recorded documents, the final settlement statement, the signed loan documents, the insurance binder and policies, and the diligence reports with their reliance letters. Track the owner's policy until it issues and check its Schedule B against the agreed pro forma. Send each tenant the new owner's signed deposit statement and notice of where to pay rent; for commercial tenants, the seller stays liable for deposits until that statement is delivered. Calendar the loan's reporting, reserve and insurance renewal dates. Record where each document is stored in the firm file.",
+      "instruction": "Collect the recorded documents, the final settlement statement, the signed loan documents, the insurance binder and policies, and the diligence reports with their reliance letters. Track the owner's policy until it issues and check its Schedule B against the agreed pro forma. Send each tenant the new owner's signed deposit statement and notice of where to pay rent; for commercial tenants, the seller stays liable for deposits until that statement is delivered. Hand the signed loan documents to build-the-covenant-calendar in meet-loan-covenants. Record where each document is stored in the firm file.",
       "mode": "agent",
       "modeBasis": "Filing, tracking and sending prepared letters are document tasks an agent can do with file and mailbox access.",
       "risk": "low",
@@ -646,9 +642,7 @@
       "after": [
         "record-the-deed"
       ],
-      "calculators": [
-        "deadline-calendar"
-      ],
+      "calculators": [],
       "consumes": [
         "deed",
         "loan-documents",

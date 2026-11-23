@@ -7,29 +7,686 @@
   "phase": "acquire",
   "order": 270,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "negotiate-purchase-contract",
+    "abstract-the-leases",
+    "run-due-diligence",
+    "confirm-zoning-and-use",
+    "source-acquisition-debt",
+    "negotiate-loan-documents"
+  ],
+  "consumes": [
+    "loan-term-sheet",
+    "loan-documents",
+    "purchase-and-sale-agreement",
+    "lease",
+    "lease-abstract",
+    "property-condition-assessment",
+    "survey",
+    "appraisal",
+    "zoning-report",
+    "rent-roll",
+    "trailing-12",
+    "certificate-of-formation",
+    "deal-entity-agreement",
+    "private-placement-memorandum",
+    "jv-agreement"
+  ],
+  "produces": [
+    "insurance-binder"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Read the lender's insurance requirements",
-    "Read the leases' insurance and waiver terms",
-    "Get the building's replacement cost",
-    "Check the flood zone",
-    "Set the coverages and limits needed",
-    "Give the broker the property information and loss history",
-    "Compare quotes against the requirements",
-    "Get the lender's sign-off on the proposed coverage",
-    "Bind coverage effective at closing",
-    "Deliver certificates to the lender, the title company and tenants",
-    "File the policy and calendar the renewal"
-  ]
+  "sources": [
+    {
+      "id": "usc-42-4012a",
+      "url": "https://www.law.cornell.edu/uscode/text/42/4012a",
+      "title": "42 U.S.C. 4012a, Flood insurance purchase and compliance requirements and escrow accounts (subsections (b), private flood insurance, and (e)(5), review of a determination)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "covered for the term of the loan by flood insurance in an amount at least equal to the outstanding principal balance of the loan",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-12-339",
+      "url": "https://www.ecfr.gov/current/title-12/part-339",
+      "title": "12 CFR part 339, Loans in areas having special flood hazards (Sections 339.2, 339.3 and 339.6, for FDIC-supervised institutions)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "limited to the building or mobile home and any personal property that secures a loan and not the land itself",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-42-4013",
+      "url": "https://www.law.cornell.edu/uscode/text/42/4013",
+      "title": "42 U.S.C. 4013, Nature and limitation of insurance coverage (subsection (c), effective date of policies)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "when the purchase of insurance is in connection with the making, increasing, extension, or renewal of a loan",
+      "tier": "primary"
+    },
+    {
+      "id": "fema-msc",
+      "url": "https://msc.fema.gov/portal/home",
+      "title": "FEMA Flood Map Service Center",
+      "publisher": "Federal Emergency Management Agency",
+      "accessed": "2026-11-21",
+      "quote": "the official public source for flood hazard information produced in support of the National Flood Insurance Program (NFIP)",
+      "tier": "primary"
+    },
+    {
+      "id": "floodsmart-lending",
+      "url": "https://agents.floodsmart.gov/topics/mortgages-lending",
+      "title": "Mortgages and Lending: resources for lenders (standard flood hazard determination form, community participation status, Map Service Center)",
+      "publisher": "FEMA National Flood Insurance Program (FloodSmart for agents)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-42-4026",
+      "url": "https://www.law.cornell.edu/uscode/text/42/4026",
+      "title": "42 U.S.C. 4026, Expiration of insurance authority (the date after which no new National Flood Insurance Program contract may be made)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "No new contract for flood insurance under this chapter shall be entered into after September 30, 2026.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-44-65-17",
+      "url": "https://www.ecfr.gov/current/title-44/section-65.17",
+      "title": "44 CFR 65.17, Review of determinations (joint borrower and lender request for FEMA review of a flood hazard determination)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Elevation data will not be considered under the procedures described in this section.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-44-70",
+      "url": "https://www.ecfr.gov/current/title-44/part-70",
+      "title": "44 CFR part 70, Procedure for map correction (Sections 70.3 to 70.5, owner's technical submission and Letter of Map Amendment)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-31-50",
+      "url": "https://www.ecfr.gov/current/title-31/part-50",
+      "title": "31 CFR part 50, Terrorism Risk Insurance Program (Sections 50.10 to 50.15, disclosures; Sections 50.20 to 50.22, mandatory availability)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "property and casualty insurance coverage for insured losses does not have to be made available beyond December 31, 2027",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-5",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.5.htm",
+      "title": "Texas Property Code, Chapter 5 (Section 5.007, Uniform Vendor and Purchaser Risk Act)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "the purchaser is not relieved from the duty to pay the contract price",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-92",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.92.htm",
+      "title": "Texas Property Code, Chapter 92 (Section 92.054, Casualty loss)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "the period for repair does not begin until the landlord receives the insurance proceeds",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-2210",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.2210.htm",
+      "title": "Texas Insurance Code, Chapter 2210, Texas Windstorm Insurance Association (Sections 2210.202, 2210.203, 2210.2032, 2210.251, 2210.2515, 2210.258, 2210.501 and 2210.502)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "evidence of one declination every three calendar years is required before renewal of an association policy",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-wind-maps",
+      "url": "https://www.tdi.texas.gov/wind/maps/index.html",
+      "title": "Designated catastrophe area county maps (windstorm)",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-wind",
+      "url": "https://www.tdi.texas.gov/wind/index.html",
+      "title": "Windstorm inspections: certificates of compliance (WPI-8 and WPI-8-E) and the certificate search",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-21",
+      "quote": "If you live on the coast, your property must meet certain building standards to get windstorm insurance.",
+      "tier": "primary"
+    },
+    {
+      "id": "twia-eligibility",
+      "url": "https://www.twia.org/coverage-eligibility/",
+      "title": "Coverage and eligibility requirements",
+      "publisher": "Texas Windstorm Insurance Association",
+      "accessed": "2026-11-21",
+      "quote": "Applicants must have been denied coverage by at least one authorized insurer actively writing or renewing windstorm and hail coverage in the designated area",
+      "tier": "secondary"
+    },
+    {
+      "id": "twia-certification",
+      "url": "https://www.twia.org/windstorm-certification/",
+      "title": "Windstorm Certificates of Compliance (WPI-8, WPI-8-E and WPI-8-C)",
+      "publisher": "Texas Windstorm Insurance Association",
+      "accessed": "2026-11-21",
+      "quote": "As of June 1, 2020, all Certificates of Compliance are issued by the Texas Department of Insurance as part of its Windstorm Inspection Program.",
+      "tier": "secondary"
+    },
+    {
+      "id": "tac-5-4001",
+      "url": "https://www.law.cornell.edu/regulations/texas/28-Tex-Admin-Code-SS-5-4001",
+      "title": "28 Texas Administrative Code 5.4001, Texas Windstorm Insurance Association plan of operation (subsection (d)(2)(C) and (E), application, premium and when new coverage takes effect)",
+      "publisher": "Legal Information Institute (Texas Administrative Code text)",
+      "accessed": "2026-11-21",
+      "quote": "no new or increased coverage applications will be accepted",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-549",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.549.htm",
+      "title": "Texas Insurance Code, Chapter 549, Prohibited practices relating to property insurance (Sections 549.001, 549.052, 549.054, 549.055 and 549.056)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "must accept an insurance binder as evidence of the required insurance",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-1811",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.1811.htm",
+      "title": "Texas Insurance Code, Chapter 1811, Certificates of property and casualty insurance (Sections 1811.002, 1811.051 to 1811.054, 1811.103, 1811.152 to 1811.155)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "A certificate of insurance is not a policy of insurance and does not amend, extend, or alter the coverage afforded by the referenced insurance policy.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-981",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.981.htm",
+      "title": "Texas Insurance Code, Chapter 981 (Sections 981.002, 981.003, 981.004 and 981.101, surplus lines insurance, when the chapter applies, and the notice its documents carry)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-2251",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.2251.htm",
+      "title": "Texas Insurance Code, Chapter 2251 (Section 2251.0031, commercial lines exempt from rate filing, which Section 981.004(g) cross-references)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "commercial flood insurance not provided through the National Flood Insurance Program",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-4001",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.4001.htm",
+      "title": "Texas Insurance Code, Chapter 4001 (Sections 4001.051 and 4001.101, acting as an agent and the license required)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-4051",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.4051.htm",
+      "title": "Texas Insurance Code, Chapter 4051 (Section 4051.051, general property and casualty license)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-agentlists",
+      "url": "https://www.tdi.texas.gov/agent/agentlists.html",
+      "title": "Lists of Texas insurance agents, adjusters, and agencies (licensee lists, surplus lines agent lists, company appointments and authorized company lists)",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-21",
+      "quote": "Licensed agents, adjusters, and agencies",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-company-lookup",
+      "url": "https://www.tdi.texas.gov/consumer/company-profiles-and-agents-for-service-of-process.html",
+      "title": "Look up an insurance company or find a company's agent for service of process (list of authorized insurance companies)",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "read-lender-requirements",
+      "title": "List the lender's insurance requirements",
+      "instruction": "List every insurance requirement the lender has set for the property, with the section it comes from: the signed term sheet, the commitment, the draft loan agreement and deed of trust, and any insurance exhibit or guide they attach. For each, record the coverage, the minimum limit or valuation basis, the largest deductible allowed, the minimum insurer rating, whether an insurer not authorized in Texas is acceptable, how the lender must be named (mortgagee and loss payee on property, additional insured on liability), the cancellation notice owed, and the evidence required and when. Note what the lender says about flood, wind and hail, terrorism, rent loss or business income, ordinance or law, equipment breakdown, pollution or environmental liability and blanket policies. Mark each term still open in negotiate-loan-documents as open, and list any document the loan refers to but the firm lacks, for a principal to request.",
+      "mode": "agent",
+      "modeBasis": "Reading the term sheet and the draft loan documents and listing their insurance terms is document work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "loan-term-sheet",
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "read-lease-insurance-terms",
+      "title": "Read the leases' insurance, waiver and casualty terms",
+      "instruction": "From the lease abstracts, list what each lease requires of the landlord's insurance and of the tenant's. Record who insures the building and on what basis, the coverages and limits the landlord must carry, whether tenants reimburse premiums, mutual waivers of subrogation, the tenant's coverage and whether it must name the owner, the certificates owed and to whom, and the casualty clause's rent abatement, rebuilding deadlines and termination rights. Where an abstract is silent, read the lease (abstract-the-leases). Do the same for any property management agreement already signed and for the purchase contract's casualty clause; in Texas, unless the contract says otherwise, a loss after title or possession passes does not excuse the buyer from paying the price. Flag each term the new policy must answer, such as a waiver of subrogation it must permit, a building the tenant insures, or an abatement period rent-loss cover must reach.",
+      "mode": "agent",
+      "modeBasis": "The insurance and casualty terms are lease, agreement and contract text an agent can read and list.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "lease-abstract",
+        "lease",
+        "purchase-and-sale-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-92",
+        "tx-prop-5"
+      ],
+      "typeNotes": {
+        "industrial": "A single-tenant net lease may have the tenant insure the building. Read whether that policy must name the owner and the lender, whether it meets the lender's list, and what the owner must still carry, such as liability and rent loss.",
+        "multifamily": "Resident leases rarely set the owner's coverage; note any renter's insurance the lease form requires. In Texas, the repair period after an insured casualty starts only when the landlord receives the insurance proceeds, and a unit left totally unusable through no fault of the resident, the resident's household or guests lets either side end the lease by written notice before repairs are complete.",
+        "retail": "A single-tenant net lease may have the tenant insure the building; in a center, read which premiums the leases let the owner recover, any cap on them, and what an anchor insures itself."
+      }
+    },
+    {
+      "id": "get-replacement-cost",
+      "title": "Check the broker's license and get each building's replacement cost",
+      "instruction": "Check the license of the broker the principals chose, then gather the building data an insurer prices from and get each building's replacement cost estimate. In Texas, soliciting an insurance application needs a license: before anything goes to the broker, look it up in the Texas Department of Insurance's licensee lists, surplus lines lists included, and record the license type, number, status and date checked; a missing or inactive license goes to the principals. Take each building's construction, area, stories, year built, renovations, roof, fire protection and systems from the property condition assessment, the survey and the seller's records, citing each. Ask the broker for the estimate, or the principals engage a valuation consultant where they or the lender want it independent. Record its basis and date and compare it with the seller's insured values and any lender value. A principal approves the data before it leaves the firm.",
+      "mode": "agent-browser",
+      "modeBasis": "The licensee lists are public Texas Department of Insurance records and the building data is file work; the estimate comes from the broker or a consultant.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "property-condition-assessment",
+        "survey",
+        "appraisal"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-ins-4001",
+        "tdi-agentlists"
+      ]
+    },
+    {
+      "id": "confirm-flood-zone",
+      "title": "Confirm the flood zone and the flood coverage the loan needs",
+      "instruction": "Check each building's flood zone on the lender's standard flood hazard determination against the FEMA map saved in run-due-diligence. Where federal flood insurance is available, a regulated lender may not lend on a building in a special flood hazard area without flood insurance for the loan's term of at least the lesser of the loan balance and the program maximum, land excluded, and must accept qualifying private flood insurance. New program policies can be sold only until the date in 42 U.S.C. 4026, which Congress often extends; if it falls before closing, ask the lender in writing how it will treat the requirement and get private flood quotes. To dispute the determination, the principals and lender jointly ask FEMA, with fee and technical data, postmarked within 45 days of the lender's flood insurance notice; FEMA's answer, due within 45 days, is final but ignores elevation, which takes a map amendment.",
+      "mode": "agent-browser",
+      "modeBasis": "The determination is in the loan file and FEMA's map service is a public website that needs no sign-in; any request to FEMA is the principals' and the lender's.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-fed.flood.mandatory-purchase"
+      ],
+      "calculators": [],
+      "consumes": [
+        "survey",
+        "loan-term-sheet"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-42-4012a",
+        "ecfr-12-339",
+        "fema-msc",
+        "floodsmart-lending",
+        "usc-42-4026",
+        "ecfr-44-65-17",
+        "ecfr-44-70"
+      ]
+    },
+    {
+      "id": "check-texas-wind",
+      "title": "On the Texas coast, check wind and hail cover and TWIA eligibility",
+      "instruction": "If the property is in the Texas Department of Insurance's designated catastrophe area (the 14 first-tier coastal counties and part of Harris County east of Highway 146), check what Texas Windstorm Insurance Association (TWIA) cover needs. A structure built, altered, enlarged or repaired on or after January 1, 1988 generally needs a certificate of compliance: search the department's list, and TWIA's for its 2017 to 2020 certificates, and record any missing. In designated areas, a V-zone structure built, altered, remodeled or enlarged on or after September 1, 2009 needs proof of flood insurance where the federal program offers it. Set TWIA's per-property maximum, adjusted yearly by its board subject to the commissioner, beside the replacement cost. TWIA takes no new or increased coverage application while a hurricane threatens (hurricane-forecast); new coverage starts when TWIA receives the application with the premium, in full or by installment plan, so apply early.",
+      "mode": "agent-browser",
+      "modeBasis": "The Texas Department of Insurance's maps and certificate search and TWIA's eligibility pages are public websites; marketing the risk is the broker's work in send-submission.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "get-replacement-cost",
+        "confirm-flood-zone"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-ins-2210",
+        "tdi-wind-maps",
+        "tdi-wind",
+        "twia-eligibility",
+        "twia-certification",
+        "tac-5-4001"
+      ]
+    },
+    {
+      "id": "set-coverage-spec",
+      "title": "Set the coverages, limits and deductibles to quote",
+      "instruction": "Draft one coverage specification that meets the lender's list, the leases and the principals' own needs, with the source of each line. Include property at the estimated replacement cost and how coinsurance works; rent loss or business income for the time a rebuild could take; ordinance or law for any rebuilding limit the zoning report found (confirm-zoning-and-use); equipment breakdown; flood and wind as required or wanted; terrorism where the lender requires it; liability and umbrella limits; and the deductibles the lender allows. Name the insured exactly as the deal entity taking title appears on its certificate of formation, and name the lender and each party a lease or signed property management agreement requires as mortgagee, loss payee or additional insured. Mark whether the lender accepts surplus lines quotes; in Texas it may insist on an insurer authorized in Texas with a licensed resident agent (lender-approves-coverage).",
+      "mode": "agent",
+      "modeBasis": "Combining the requirement lists into one specification is drafting work; the principals approve it before the submission goes out.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-lender-requirements",
+        "read-lease-insurance-terms",
+        "get-replacement-cost",
+        "confirm-flood-zone",
+        "check-texas-wind"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "loan-term-sheet",
+        "lease-abstract",
+        "certificate-of-formation",
+        "zoning-report"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-ins-549"
+      ]
+    },
+    {
+      "id": "fund-or-jv-terms",
+      "title": "For a fund or a JV, apply the governing agreement's insurance terms",
+      "instruction": "For a fund or a JV, carry the governing agreement's insurance terms into the specification before the submission goes out. In a fund, read the partnership agreement and memorandum for how insurance on fund properties is bought and paid: whether properties may share a blanket program, how premiums and deductibles are split, and any cap on fund expenses. If the fund has a program, ask the broker whether the property can join and what limit would be shared, check whether the lender accepts a blanket policy and on what terms, and give the principals both options, joining or a stand-alone policy. In a JV, add to the specification the coverages and limits the JV agreement requires, whether the partner and the venture are additional insureds or loss payees, who pays, and which insurers, brokers or deductibles the partner must approve. A person approves each message to the broker.",
+      "mode": "agent",
+      "modeBasis": "Reading the fund documents or the JV agreement and carrying their terms into the specification is document work; a person approves any message to the broker.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-coverage-spec"
+      ],
+      "when": {
+        "structure": [
+          "fund",
+          "jv"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "private-placement-memorandum",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "send-submission",
+      "title": "Give the broker the property information and loss history",
+      "instruction": "Assemble the submission and send it securely to the broker once a principal approves it, early enough for the lender to review quotes before closing. Include the specification, building data and estimate, flood determination, any windstorm certificate, rent roll and operating income, lease insurance terms, and the seller's loss runs and claim records, which the principals request if the contract's deliveries lack them. Ask each quote to list every exclusion, sublimit and deductible, wind and named storm included, show terrorism premium separately and say whether the insurer is admitted. On the Texas coast, have the broker offer wind and hail to authorized insurers, report in writing who quoted and who declined, since TWIA needs one declination from an authorized insurer writing wind and hail in the first-tier coastal counties, and quote excess wind above TWIA's maximum. Application answers describe the property as it is; unknowns go to the principals.",
+      "mode": "agent",
+      "modeBasis": "Assembling the submission is drafting work; it leaves the firm only after a principal approves it.",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-coverage-spec",
+        "fund-or-jv-terms"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "rent-roll",
+        "trailing-12",
+        "property-condition-assessment",
+        "survey",
+        "lease-abstract"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-ins-2210"
+      ]
+    },
+    {
+      "id": "compare-quotes",
+      "title": "Compare each quote with the specification and check each insurer",
+      "instruction": "Set quotes against the specification, marking every gap and premium and, on the Texas coast, whether the broker's report shows TWIA's declination. Insurers must offer federal-program terrorism cover on terms not materially different from other losses, a duty that ends December 31, 2027, even mid-policy; the firm may decline it, though the loan may require it. In Texas, check each admitted insurer on the Texas Department of Insurance's authorized company list. Where the deal entity's home state is Texas, a surplus lines insurer is unlicensed and placed only through a surplus lines agent; its documents must say the department does not review its solvency and it is not in the guaranty association. Ask the broker which rule allows each placement: authorized insurers declining, or an exception such as flood from an insurer rated A- or better, boiler and machinery, or umbrella. The principals choose the program to propose.",
+      "mode": "agent-browser",
+      "modeBasis": "Comparing quotes is document analysis and the company check is a public Texas Department of Insurance record; the choice stays with the principals.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "send-submission"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-31-50",
+        "tx-ins-981",
+        "tx-ins-2251",
+        "tdi-company-lookup",
+        "tx-ins-2210"
+      ]
+    },
+    {
+      "id": "jv-partner-approves",
+      "title": "For a JV, get the capital partner's approval of the insurance program",
+      "instruction": "The capital partner approves in writing the program, insurers, broker or deductibles the JV agreement lets it approve, before anything is bound. Send the partner the specification, the quote comparison and the program the principals chose, and add the partner to the parties owed evidence where the agreement asks for it.",
+      "mode": "human-online",
+      "modeBasis": "The approval is the capital partner's own decision under the JV agreement; an agent prepares the package.",
+      "actor": "investor",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "compare-quotes"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "lender-approves-coverage",
+      "title": "Get the lender's written sign-off on the proposed coverage",
+      "instruction": "The lender, or the insurance reviewer it uses, confirms in writing that the program the principals chose meets the loan's requirements, or lists what does not, before anything is bound. Send it the insurers and their ratings, coverages, limits, deductibles, how the lender is named and the draft mortgagee, loss payee and additional insured wording. Send each gap to the principals, who change the coverage or ask the lender for a written waiver, which counsel records in the loan documents (negotiate-loan-documents). In Texas a lender may require an insurer authorized in Texas with a licensed resident agent, and may refuse an insurer on reasonable, nondiscriminatory grounds of financial soundness or ability to service the policy, but may not require a particular agent or insurer.",
+      "mode": "human-online",
+      "modeBasis": "Whether the coverage satisfies the loan is the lender's decision; an agent prepares the package and tracks the answers.",
+      "actor": "lender",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "compare-quotes",
+        "jv-partner-approves"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "loan-term-sheet",
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-ins-549"
+      ]
+    },
+    {
+      "id": "bind-at-closing",
+      "title": "Bind coverage to start no later than closing and get written binders",
+      "instruction": "A principal confirms the program the lender accepted, checks and signs each application, and has the broker bind each private line, with any TWIA application already received, to start no later than when title or possession passes. The principal pays each premium, directly or on the settlement statement, or finances lines other than TWIA, which bars financing, keeping proof of payment. While the program can write new policies, a federal flood policy bought with the loan starts without the usual 30-day wait. Get a written binder per line naming the deal entity, property, lender's interest, limits and dates. In Texas, a lender requiring insurance for a commercial real estate loan must accept a binder in place of the policy if a licensed general property and casualty agent appointed by the named insurer and authorized to bind issued it, with proof of premium payment, and the policy follows within 30 days.",
+      "mode": "human-online",
+      "modeBasis": "Signing applications, paying premiums and committing to coverage are commitments only a principal can make.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "lender-approves-coverage"
+      ],
+      "rules": [
+        "us-fed.flood.mandatory-purchase"
+      ],
+      "calculators": [],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "certificate-of-formation"
+      ],
+      "produces": [
+        "insurance-binder"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-42-4013",
+        "usc-42-4026",
+        "tx-ins-549",
+        "tx-ins-4051",
+        "tx-ins-2210",
+        "tac-5-4001"
+      ]
+    },
+    {
+      "id": "deliver-evidence",
+      "title": "Deliver the binders and certificates to the lender, title company and tenants",
+      "instruction": "Send each binder, with the endorsements the lender requires, to the lender and title company before closing through the channel the closing checklist names (finance-and-close), and log each on the binder record. For tenants and others whose contracts require evidence, ask the broker for certificates and the endorsements behind them. In Texas a certificate of insurance must be on a form the Department of Insurance approved or deems approved, cannot change or extend the policy, and gives no rights beyond the policy and endorsements; a right to notice of cancellation exists only where the person is named in the policy or an endorsement and the policy, the endorsement or Texas law requires the notice. These rules do not reach a lender's evidence of property insurance. Check that each additional insured, waiver of subrogation and notice term is in an endorsement, not only a certificate. A person approves each delivery.",
+      "mode": "agent",
+      "modeBasis": "Requesting, checking and logging the evidence is clerical work; each delivery outside the firm is approved first.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "bind-at-closing"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "insurance-binder",
+        "lease-abstract"
+      ],
+      "produces": [
+        "insurance-binder"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-ins-1811"
+      ]
+    },
+    {
+      "id": "file-and-calendar",
+      "title": "File the policies when they issue and calendar the renewal",
+      "instruction": "Track each binder until its policy issues, check the declarations, named insureds, limits, deductibles, endorsements and dates against the binder, and draft a note of any error to the broker, which a person approves; take-over-operations then checks the issued policies against the loan documents. File the policies, binders, endorsements and the lender's sign-off, and fill in the binder record's policy period. Calendar each expiration early enough to re-market it under renew-property-insurance, the binder's lapse date, premium installments, any premium audit and the loan's evidence dates; in Texas a lender may not demand evidence of renewal earlier than 15 days before the old policy ends, and a TWIA policy needs a fresh declination every three calendar years. Take-over-operations' operating calendar takes these dates from the binder record. Record how and by when each policy's claims are reported, for casualty-damages-property and hurricane-forecast, and give the premium to the budget and recovery billing.",
+      "mode": "agent",
+      "modeBasis": "Checking policies against binders and keeping the file and the calendar is file work; a person approves any message to the broker.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "deliver-evidence"
+      ],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "insurance-binder",
+        "loan-documents"
+      ],
+      "produces": [
+        "insurance-binder"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-ins-549",
+        "tx-ins-2210"
+      ]
+    }
+  ],
+  "outlineSteps": []
 }

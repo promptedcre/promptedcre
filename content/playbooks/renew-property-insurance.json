@@ -7,29 +7,687 @@
   "phase": "operate",
   "order": 335,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "bind-property-insurance",
+    "take-over-operations",
+    "abstract-the-leases"
+  ],
+  "consumes": [
+    "insurance-binder",
+    "loan-documents",
+    "lease",
+    "lease-abstract",
+    "rent-roll",
+    "trailing-12",
+    "property-condition-assessment",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "underwriting-model"
+  ],
+  "produces": [
+    "insurance-binder",
+    "underwriting-model"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Calendar the policy expiration and start the renewal early",
-    "Refresh the building's replacement cost",
-    "Confirm the flood zone and any flood coverage the lender requires",
-    "Read the loan's insurance requirements",
-    "Read each lease's insurance and waiver of subrogation terms",
-    "Update the property and loss information for the broker",
-    "Market the coverage to carriers",
-    "Compare quotes on limits, deductibles and exclusions",
-    "Bind coverage before the old policy expires",
-    "Send certificates to the lender and tenants",
-    "Bill tenants their share as the leases provide"
-  ]
+  "sources": [
+    {
+      "id": "tx-ins-551",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.551.htm",
+      "title": "Texas Insurance Code, Chapter 551 (Sections 551.051 to 551.056, cancellation, nonrenewal and renewal changes for commercial property and liability policies; Section 551.007, declination notices for commercial lines, effective January 1, 2026; Sections 551.102 and 551.105, nonrenewal of dwelling fire policies)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "the coverage remains in effect until the 61st day after the date on which the notice is delivered or mailed",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-549",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.549.htm",
+      "title": "Texas Insurance Code, Chapter 549 (Sections 549.052, 549.054 and 549.056, what a lender may and may not require of a borrower's insurance)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "may not require a borrower to provide evidence of insurance earlier than the 15th day before the termination date of an existing insurance policy",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-4001",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.4001.htm",
+      "title": "Texas Insurance Code, Chapter 4001 (Sections 4001.051 and 4001.101, acting as an agent and the license required)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "solicit or receive an application for insurance in this state",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-981",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.981.htm",
+      "title": "Texas Insurance Code, Chapter 981 (Sections 981.004 and 981.101, when surplus lines insurance may be placed and the notice its documents carry; Sections 981.073 and 981.076, domestic surplus lines insurers)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "The Texas Department of Insurance does not audit the finances or review the solvency of the surplus lines insurer providing this coverage",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-2251",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.2251.htm",
+      "title": "Texas Insurance Code, Chapter 2251 (Section 2251.0031, commercial lines excepted from rate filing, which Section 981.004(g) also excepts from the surplus lines diligent-effort test)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "commercial flood insurance not provided through the National Flood Insurance Program",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-1811",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.1811.htm",
+      "title": "Texas Insurance Code, Chapter 1811, Certificates of property and casualty insurance (Sections 1811.002, 1811.051, 1811.052, 1811.152, 1811.153 and 1811.155)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "A certificate of insurance is not a policy of insurance and does not amend, extend, or alter the coverage afforded by the referenced insurance policy.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-2210",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.2210.htm",
+      "title": "Texas Insurance Code, Chapter 2210, Texas Windstorm Insurance Association (Sections 2210.202, 2210.203, 2210.2032 and 2210.251, declinations, term and renewal, payment and building code compliance)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "evidence of one declination every three calendar years is required before renewal of an association policy",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-2301",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.2301.htm",
+      "title": "Texas Insurance Code, Chapter 2301 (Section 2301.004, exemption for large risks, which Section 551.056(e) applies to renewal change notices)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "total insured property values of $5 million or more",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-92",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.92.htm",
+      "title": "Texas Property Code, Chapter 92 (Section 92.0135, notice for a dwelling located in a floodplain, amended effective September 1, 2025)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-42-4012a",
+      "url": "https://www.law.cornell.edu/uscode/text/42/4012a",
+      "title": "42 U.S.C. 4012a, Flood insurance purchase and compliance requirements (subsection (b), the purchase requirement and private flood insurance; subsection (e), placement by the lender)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "If the borrower fails to purchase such flood insurance within 45 days after notification under paragraph (1)",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-42-4013",
+      "url": "https://www.law.cornell.edu/uscode/text/42/4013",
+      "title": "42 U.S.C. 4013, Nature and limitation of insurance coverage (subsection (c), effective date of policies and the waiting period)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "shall become effective upon the expiration of the 30-day period beginning on the date that all obligations for such coverage",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-44-61-6",
+      "url": "https://www.ecfr.gov/current/title-44/section-61.6",
+      "title": "44 CFR 61.6, Maximum amounts of coverage available (National Flood Insurance Program building and contents limits by occupancy)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-31-50",
+      "url": "https://www.ecfr.gov/current/title-31/part-50",
+      "title": "31 CFR part 50, Terrorism Risk Insurance Program (Sections 50.10 to 50.15, disclosures at offer and renewal; Sections 50.20 to 50.22, mandatory availability)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "as well as at the time an insurer makes an initial offer of renewal of an existing policy",
+      "tier": "primary"
+    },
+    {
+      "id": "fema-msc",
+      "url": "https://msc.fema.gov/portal/home",
+      "title": "FEMA Flood Map Service Center",
+      "publisher": "Federal Emergency Management Agency",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "floodsmart-map-updates",
+      "url": "https://agents.floodsmart.gov/flood-maps-and-data/flood-map-updates",
+      "title": "Understanding Changes in Flood Risk (flood map updates and letters of map change)",
+      "publisher": "FEMA National Flood Insurance Program (FloodSmart for agents)",
+      "accessed": "2026-11-21",
+      "quote": "Flood maps frequently change because of new land development and weather patterns.",
+      "tier": "primary"
+    },
+    {
+      "id": "floodsmart-renewals",
+      "url": "https://agents.floodsmart.gov/topics/renewals",
+      "title": "Renewing Flood Insurance Policies (renewal and the waiting period after a lapse)",
+      "publisher": "FEMA National Flood Insurance Program (FloodSmart for agents)",
+      "accessed": "2026-11-21",
+      "quote": "Flood insurance policies do not renew automatically",
+      "tier": "primary"
+    },
+    {
+      "id": "floodsmart-coverage",
+      "url": "https://agents.floodsmart.gov/topics/selling-flood-insurance/coverage",
+      "title": "Types of Flood Insurance Coverage (National Flood Insurance Program limits and what is not covered)",
+      "publisher": "FEMA National Flood Insurance Program (FloodSmart for agents)",
+      "accessed": "2026-11-21",
+      "quote": "Financial losses caused by business interruption or loss of use of insured property",
+      "tier": "primary"
+    },
+    {
+      "id": "twia-renewals",
+      "url": "https://www.twia.org/agents/renewals/",
+      "title": "Renewals in the Agent Portal",
+      "publisher": "Texas Windstorm Insurance Association",
+      "accessed": "2026-11-21",
+      "quote": "You can make edits 90-35 days before the policy renewal date.",
+      "tier": "secondary"
+    },
+    {
+      "id": "twia-eligibility",
+      "url": "https://www.twia.org/coverage-eligibility/",
+      "title": "Coverage and Eligibility (the designated area and the requirements to obtain or continue coverage)",
+      "publisher": "Texas Windstorm Insurance Association",
+      "accessed": "2026-11-21",
+      "quote": "Applicants must have been denied coverage by at least one authorized insurer actively writing or renewing windstorm and hail coverage in the designated area",
+      "tier": "secondary"
+    },
+    {
+      "id": "twia-certification",
+      "url": "https://www.twia.org/windstorm-certification/",
+      "title": "Windstorm Certification (certificates of compliance and the work that needs one)",
+      "publisher": "Texas Windstorm Insurance Association",
+      "accessed": "2026-11-21",
+      "quote": "Replacing a roof or repairing a significant portion of a roof",
+      "tier": "secondary"
+    },
+    {
+      "id": "twia-moratoriums",
+      "url": "https://www.twia.org/moratoriums/",
+      "title": "Moratoriums (when the association stops issuing new policies or increasing coverage during a hurricane)",
+      "publisher": "Texas Windstorm Insurance Association",
+      "accessed": "2026-11-21",
+      "quote": "increase coverage on an existing/renewal windstorm insurance policy when there is a hurricane in the Gulf",
+      "tier": "secondary"
+    },
+    {
+      "id": "tdi-wind",
+      "url": "https://www.tdi.texas.gov/wind/index.html",
+      "title": "Windstorm inspections (Windstorm Inspection Program and the certificate of compliance search; updated August 7, 2026)",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-21",
+      "quote": "If you live on the coast, your property must meet certain building standards to get windstorm insurance.",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-company-lookup",
+      "url": "https://www.tdi.texas.gov/consumer/company-profiles-and-agents-for-service-of-process.html",
+      "title": "Look up an insurance company or find a company's agent for service of process (list of authorized insurance companies and license lookup)",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-agentlists",
+      "url": "https://www.tdi.texas.gov/agent/agentlists.html",
+      "title": "Lists of Texas insurance agents, adjusters, and agencies (licensee and surplus lines agent lists on the state's open data portal)",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-21",
+      "quote": "The portal allows users to view, sort, filter, create charts and graphs (“visualize”), and export.",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-5-4001",
+      "url": "https://www.law.cornell.edu/regulations/texas/28-Tex-Admin-Code-SS-5-4001",
+      "title": "28 Tex. Admin. Code 5.4001, Plan of Operation of the Texas Windstorm Insurance Association (subsection (d)(2)(E)(ii), new or increased coverage while a hurricane is in the Gulf or inside the 80-west, 20-north boundary)",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-23",
+      "quote": "no new or increased coverage applications will be accepted",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-44-61-11",
+      "url": "https://www.ecfr.gov/current/title-44/section-61.11",
+      "title": "44 CFR 61.11, Effective date and time of coverage under the Standard Flood Insurance Policy (paragraph (a), first purchase within 13 months after a map revision; paragraphs (b) and (d))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-23",
+      "quote": "During the 13-month period beginning on the effective date of a revised Flood Hazard Boundary Map or Flood Insurance Rate Map for a community",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-42-4026",
+      "url": "https://www.law.cornell.edu/uscode/text/42/4026",
+      "title": "42 U.S.C. 4026, Expiration of insurance authority (the date after which no new National Flood Insurance Program contract may be made)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-23",
+      "quote": "No new contract for flood insurance under this chapter shall be entered into after September 30, 2026.",
+      "tier": "primary"
+    },
+    {
+      "id": "fema-w-24020",
+      "url": "https://agents.floodsmart.gov/sites/default/files/bulletins/W-24020/w-24020.pdf",
+      "title": "Bulletin W-24020, Guidance on Potential Expiration in National Flood Insurance Program (NFIP) Authority (December 20, 2024; handling of new policies, renewals and claims during a lapse)",
+      "publisher": "FEMA National Flood Insurance Program (FloodSmart for agents)",
+      "accessed": "2026-11-23",
+      "quote": "NFIP insurers cannot make renewal offers during an expiration in authority.",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "calendar-the-renewal",
+      "title": "Start the renewal at the lead time and confirm the notice dates",
+      "instruction": "Open the renewal at the principals' lead time from the deadline-calendar, adding any missing policy with its declared expiration date and time. Confirm notices to the first-named insured reach the firm. If set-the-annual-budget needs figures earlier, ask the broker, once a person approves, for a written premium estimate per line, and give it to set-expense-lines marked as an estimate. A Texas lender may not demand evidence of new coverage until 15 days before the old policy ends; if none meeting its requirements is provided by then, it may place coverage as the loan documents allow. An admitted insurer not renewing a commercial property or liability policy must deliver or mail notice to the first-named insured at least 60 days before expiration; a later notice extends coverage to the 61st day after it. Surplus lines insurers are exempt. Send any nonrenewal notice to the principals the day it arrives.",
+      "mode": "agent",
+      "modeBasis": "Reading declarations pages into the calendar and checking notice addresses is file work; the request for a premium estimate leaves the firm only after a person approves it.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "insurance-binder"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-ins-551",
+        "tx-ins-549"
+      ],
+      "typeNotes": {
+        "multifamily": "A single-family or duplex rental insured on a standard fire (dwelling) policy falls under section 551.105 instead: without written notice of nonrenewal 60 days before expiration, the insurer must renew if the firm asks."
+      }
+    },
+    {
+      "id": "read-loan-requirements",
+      "title": "Read the loan's insurance requirements as they stand today",
+      "instruction": "List every insurance requirement in the loan documents as they stand today, with its section. Read the loan agreement, deed of trust and later amendments, waivers and servicer letters for the coverages; each limit and its measure; the deductibles allowed, including wind or named storm; allowed insurers and ratings; the lender's naming as mortgagee, loss payee and additional insured; notice of cancellation; any blanket policy terms; any insurance escrow and when the servicer needs each invoice; and the lender's remedies if coverage lapses. A Texas lender may not require a particular agent or insurer, but may require one authorized in Texas with a licensed resident agent, or refuse one on reasonable, nondiscriminatory grounds of financial soundness or service (549.052, 549.056). Calendar the deadline for proof of renewal. After a loan sale or servicer change, use the name and address in the latest notice. Mark changes since the last renewal.",
+      "mode": "agent",
+      "modeBasis": "Reading the signed loan documents, listing their insurance terms and calendaring the proof date is document work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "calendar-the-renewal"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "loan-documents"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-ins-549"
+      ]
+    },
+    {
+      "id": "read-lease-requirements",
+      "title": "Update each lease's insurance and waiver of subrogation terms",
+      "instruction": "Update the lease insurance requirements kept from the last placement for every lease signed, amended, assigned or ended since, including those from lease-a-vacancy and renew-a-tenant. For each, list from its abstract, or the signed lease where the abstract is silent, what the landlord must insure and on what basis; what the tenant must carry, at what limits, and whom it must name as additional insured; whether landlord and tenant waive claims against each other for insured losses, so the landlord's policy must allow that waiver; any limit on the deductible or premium a tenant can be charged; which insurance costs tenants reimburse; and when each tenant's certificate is due. Do the same for the management agreement and any service contract that requires the owner to insure or name others. Send any conflict with the loan's terms to the principals, and mark each item that changed.",
+      "mode": "agent",
+      "modeBasis": "Reading the changed leases and contracts and listing their insurance terms is document work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "calendar-the-renewal"
+      ],
+      "consumes": [
+        "lease",
+        "lease-abstract"
+      ],
+      "basis": "practitioner",
+      "sources": [],
+      "typeNotes": {
+        "industrial": "Where a single-tenant lease makes the tenant insure the building, record the tenant's policy, limits, named insureds, loss payee and expiration, and check its evidence against the lease and the loan as if it were the owner's own renewal.",
+        "retail": "Record whether any tenant insures its own building or pad, and the restoration duties and deadlines each lease sets after a casualty, since the limits bought must pay for them.",
+        "multifamily": "Record what the lease form requires residents to carry, if anything, and how the property manager collects proof of it."
+      }
+    },
+    {
+      "id": "check-flood-zone",
+      "title": "Confirm the flood zone and the flood coverage the loan requires",
+      "instruction": "Search each building on FEMA's Flood Map Service Center and record its zone, panel and effective date. Compare them with last year's record and the lender's determination, and check for any approved letter of map change. Where a building in a special flood hazard area with federal flood insurance available, even one mapped after closing, secures a loan from a federally regulated or federal agency lender or one Fannie Mae or Freddie Mac bought, it and any personal property securing the loan must stay insured against flood for the loan's term, for at least the lesser of the balance and the program maximum; other loans set their own terms. A lender finding coverage short notifies the borrower and, if none is bought within 45 days, buys it at the borrower's cost. Report the findings to the principals, at once if limits must rise, since an increase waits 30 days.",
+      "mode": "agent-browser",
+      "modeBasis": "FEMA's map service is public and searchable by address, so an agent can run the check under a standing approval; the findings go only to the principals.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "calendar-the-renewal"
+      ],
+      "rules": [
+        "us-fed.flood.mandatory-purchase"
+      ],
+      "consumes": [
+        "loan-documents"
+      ],
+      "basis": "cited",
+      "sources": [
+        "fema-msc",
+        "floodsmart-map-updates",
+        "usc-42-4012a",
+        "usc-42-4013",
+        "tx-pr-92"
+      ],
+      "typeNotes": {
+        "multifamily": "In Texas, a residential landlord gives each tenant under a lease of 30 days or more a written notice, signed by both, of whether it knows the dwelling is in a 100-year floodplain, and a notice of any flooding it knows damaged the dwelling in the five years before the lease (Prop. Code 92.0135, amended in 2025). Carry a map change or a new flood loss found here into the lease form."
+      }
+    },
+    {
+      "id": "refresh-replacement-cost",
+      "title": "Refresh each building's replacement cost",
+      "instruction": "Update the value each building is insured for before the submission goes out. Start from last year's values and how they were set, then gather current evidence: a consultant's valuation if the principals engaged one, the cost of recent capital work, and changes such as an addition or a new roof. Ask the broker for an updated replacement cost estimate once a person approves the building data sent with the request. Market value and the purchase price do not substitute. Read the expiring policy's valuation terms, any coinsurance clause, which can cut a partial-loss payment when the limit is below the stated share of value, any agreed-value endorsement, and whether code-upgrade costs after a loss are covered, and check what the loan and leases require. Set last year's value, each new indication and its source side by side; the principals choose the figure, and an unknown stays marked unknown.",
+      "mode": "agent",
+      "modeBasis": "Gathering estimates and reading valuation terms is document work; the request to the broker leaves the firm only after a person approves it, and the principals choose the value.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-loan-requirements",
+        "read-lease-requirements"
+      ],
+      "consumes": [
+        "insurance-binder",
+        "property-condition-assessment"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "fund-blanket-schedule",
+      "title": "For a fund, put the property in the blanket program's schedule",
+      "instruction": "Where the fund insures several properties under one blanket program, list this property in the program's schedule at its refreshed values with the lender's interest. Read the fund agreement and each loan secured by a scheduled property for whether a shared limit is allowed, the per-property limits or schedules each lender requires, and how premium is allocated among the properties. Record the allocation method the agreement allows and apply it the same way to every property. Mark for the principals any lender whose requirement the shared limit does not meet. The updated schedule goes to the broker with send-renewal-submission.",
+      "mode": "agent",
+      "modeBasis": "Reading the agreements and updating the schedule is document work inside the firm.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "refresh-replacement-cost"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "consumes": [
+        "deal-entity-agreement",
+        "loan-documents"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "send-renewal-submission",
+      "title": "Update the property and loss information and send it to the broker",
+      "instruction": "Update the schedule of buildings and values and the loss history, and send them to the broker once a person approves. For each building, give the address, construction, year built, area, occupancy and uses, vacancy, roof and systems with ages and updates, fire protection, and the replacement cost from refresh-replacement-cost. Add rent loss values from the rent roll and budget, and any project under way with its builder's risk cover from run-a-capital-project. List each loss and open claim since the last renewal, with repairs, from the claim files under casualty-damages-property, checked against the current insurers' loss runs. On the Texas coast, attach each structural project's certificate of compliance from the Department of Insurance's search and list any missing, since the Texas Windstorm Insurance Association (TWIA) may deem such a structure uninsurable. Attach the requirements list, the flood findings and any fund program schedule. Each answer is sourced or marked unknown.",
+      "mode": "agent-browser",
+      "modeBasis": "Assembling the submission from the property file and the department's public certificate search is drafting work; it leaves the firm only after a person approves it.",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "refresh-replacement-cost",
+        "check-flood-zone",
+        "fund-blanket-schedule"
+      ],
+      "consumes": [
+        "rent-roll",
+        "trailing-12",
+        "property-condition-assessment",
+        "lease-abstract",
+        "insurance-binder"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-ins-2210",
+        "tdi-wind",
+        "twia-certification"
+      ]
+    },
+    {
+      "id": "market-the-coverage",
+      "title": "Have the broker market the coverage to insurers",
+      "instruction": "The broker markets the submission to the expiring insurers and others for property, liability, umbrella and any flood or wind cover, reporting in writing who quoted, declined and why. In Texas, soliciting an application takes a Department of Insurance license, and since January 1, 2026 an insurer declining a commercial application notifies the insurance agent, who must disclose it. A surplus lines insurer, not admitted in Texas, writes only through a surplus lines agent and, for most lines, only what authorized insurers will not write after a diligent effort. Exceptions include commercial umbrella or excess liability, highly protected commercial property and commercial flood outside the federal program, and TWIA cover does not bar surplus lines wind cover (981.004, 2251.0031). The broker records the effort or exception. A surplus lines policy must say the department does not review the insurer's solvency (a domestic one uses the commissioner's form).",
+      "mode": "human-online",
+      "modeBasis": "Placing coverage with insurers is licensed work for the broker; the firm supplies the submission and answers.",
+      "actor": "broker",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "send-renewal-submission"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-ins-4001",
+        "tx-ins-551",
+        "tx-ins-981",
+        "tx-ins-2251"
+      ]
+    },
+    {
+      "id": "renew-texas-wind-policy",
+      "title": "On the Texas coast, renew the windstorm policy and its proofs",
+      "instruction": "Where TWIA writes the wind and hail cover, have the broker update its renewal offer with the refreshed values 90 to 35 days before renewal; once the offer packet is mailed at 35 days, nothing can change. TWIA writes only in the designated coastal counties and part of Harris County, and a policy runs one year, renewable while the property stays insurable. Renewal needs evidence of one declination from an authorized insurer every three calendar years: one from market-the-coverage, or an earlier one still within that period. A V-zone structure built, altered, remodeled or enlarged on or after September 1, 2009, in an area the commissioner designates, also needs evidence of flood insurance where the federal program offers it. TWIA cannot increase coverage on a renewal while a hurricane is in the Gulf or inside the 80-west, 20-north boundary (hurricane-forecast), so settle any increase early.",
+      "mode": "human-online",
+      "modeBasis": "The broker works the renewal in TWIA's agent portal; the deal entity pays it under bind-before-expiration.",
+      "actor": "broker",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "send-renewal-submission"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "basis": "cited",
+      "sources": [
+        "tx-ins-2210",
+        "twia-eligibility",
+        "twia-renewals",
+        "twia-moratoriums",
+        "tac-5-4001"
+      ]
+    },
+    {
+      "id": "compare-renewal-terms",
+      "title": "Compare the renewal and the quotes with the expiring policy and the requirements",
+      "instruction": "Set each quote beside the expiring policy and the requirements list: limits, valuation, deductibles including wind or named storm, coinsurance, rent loss, exclusions, endorsements, cancellation notice, insurer rating and premium. Compare forms line by line: the notice Texas requires, 30 days before renewal, of a change that cuts coverage or alters conditions or duties does not cover a change the firm asked for or agreed to, or a large risk, such as insured values of $5 million or more (551.056, 2301.004). The federal terrorism program requires the renewal offer to make terrorism cover available on terms not materially different from other losses and show its premium and the federal share; it need not be offered beyond December 31, 2027. Check each admitted insurer on the Department of Insurance's authorized list and the broker's license, and mark any surplus lines quote the loan rules out. Mark every gap; the principals choose.",
+      "mode": "agent-browser",
+      "modeBasis": "Comparing quotes is document analysis and the insurer and license checks are public records; the choice stays with the principals.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "market-the-coverage"
+      ],
+      "consumes": [
+        "insurance-binder",
+        "loan-documents",
+        "lease-abstract"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-ins-551",
+        "tx-ins-2301",
+        "ecfr-31-50",
+        "tdi-company-lookup",
+        "tdi-agentlists",
+        "tx-ins-549"
+      ]
+    },
+    {
+      "id": "renew-flood-coverage",
+      "title": "Renew flood coverage before it lapses",
+      "instruction": "A principal renews each flood policy before it expires, choosing federal program, private or excess flood from the comparison. Program policies do not renew automatically. New coverage, even after a lapse, and increases start 30 days after a complete application and premium, except an initial purchase tied to a loan's making, increase, extension or renewal, or a first purchase within 13 months after the community's revised flood map took effect, which starts the next day. The program writes new contracts only until the date in 42 U.S.C. 4026, which Congress often extends; if it has passed, record that and quote private flood. In a lapse, FEMA's guidance (bulletin W-24020) bars renewal offers but lets a policy already offered renew if its premium arrives within the 30-day grace period. The program insures up to $500,000 per building ($250,000 for one-to-four-unit residential), not business interruption. Regulated lenders must accept qualifying private flood.",
+      "mode": "human-online",
+      "modeBasis": "Renewing a policy commits the deal entity and pays its premium, which a person does.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-flood-zone",
+        "compare-renewal-terms"
+      ],
+      "rules": [
+        "us-fed.flood.mandatory-purchase"
+      ],
+      "consumes": [
+        "insurance-binder"
+      ],
+      "basis": "cited",
+      "sources": [
+        "floodsmart-renewals",
+        "usc-42-4013",
+        "ecfr-44-61-6",
+        "floodsmart-coverage",
+        "usc-42-4012a",
+        "ecfr-44-61-11",
+        "usc-42-4026",
+        "fema-w-24020"
+      ]
+    },
+    {
+      "id": "jv-partner-consent",
+      "title": "For a JV, get the partner's consent to insurance changes",
+      "instruction": "Draft the capital partner's consent request for every insurance change the JV agreement makes a major decision. Read the JV agreement for the coverages the venture must carry, whether the partner is an additional insured or loss payee, and which changes in insurer, limits, deductibles or premium need the partner's consent. Send the request with the comparison, once a person approves it, to the notice address the agreement names. Bind nothing that needs the partner's consent until it arrives in writing, and add the partner to the parties owed evidence where the agreement asks.",
+      "mode": "agent",
+      "modeBasis": "Reading the agreement and drafting the consent request is document work; the request leaves the firm only after a person approves it.",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "compare-renewal-terms"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "consumes": [
+        "jv-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "bind-before-expiration",
+      "title": "Decide the program and bind it before the old policies expire",
+      "instruction": "The principals choose insurers, limits and deductibles from the comparison, recording each reason and any requirement the program will not meet. Where it misses a loan requirement, a principal asks the lender or servicer for a written waiver before binding. Without one, the firm buys what the loan requires, or a principal and counsel first read the loan's insurance default, notice and cure terms (negotiate-loan-documents' map-defaults-notice-and-cure) and the lender's force-placement right; coverage never lapses. A principal signs the applications after checking each answer against the confirmed submission, approves the premium and any financing, and binds coverage to start by the time the expiring policies end, with a written binder for each. Where the loan holds an insurance escrow, send the servicer each renewal invoice by the loan's date and confirm payment before the old policy ends. A TWIA renewal issues on payment; TWIA offers installments and bars premium financing.",
+      "mode": "human-online",
+      "modeBasis": "Choosing coverage, asking for a waiver, signing applications and paying premiums are commitments only the principals can make.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "compare-renewal-terms",
+        "jv-partner-consent",
+        "renew-texas-wind-policy"
+      ],
+      "consumes": [
+        "loan-documents"
+      ],
+      "produces": [
+        "insurance-binder"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-ins-2210",
+        "twia-renewals"
+      ]
+    },
+    {
+      "id": "deliver-evidence-and-record",
+      "title": "Check the issued policies, send evidence and record the renewal",
+      "instruction": "Check each issued policy against its binder, the deal entity's legal name and the requirements; send differences to the broker. Check the broker's evidence for each requirement and, once a person approves, send it to the lender or servicer and the tenants owed it. A lender must accept a flood declarations page with the policy number and insurer or agent contact. A Texas certificate of insurance cannot change the policy, so lease additional insured, waiver and notice terms belong in endorsements; lender evidence of property insurance is exempt. Chase missing tenant certificates. Record each policy's claim terms for casualty-damages-property, hurricane-forecast and deal-entity-sued, calendar the next renewal and update the model; give renewed premiums and periods to set-the-annual-budget's reforecast, meet-loan-covenants and send-quarterly-investor-report. With expense-recovery, draft each tenant's revised insurance estimate within its lease (share, cap, base year, notice), including any recoverable deductible change, for reset-estimates in collect-rent-and-reconcile-cam to load into billing.",
+      "mode": "agent",
+      "modeBasis": "Checking policies against binders, sending and logging evidence and updating the files is clerical work; each delivery outside the firm is approved first.",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "bind-before-expiration",
+        "renew-flood-coverage"
+      ],
+      "rules": [
+        "us-fed.flood.mandatory-purchase"
+      ],
+      "calculators": [
+        "deadline-calendar",
+        "expense-recovery"
+      ],
+      "consumes": [
+        "insurance-binder",
+        "loan-documents",
+        "lease-abstract",
+        "underwriting-model"
+      ],
+      "produces": [
+        "insurance-binder",
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-42-4012a",
+        "tx-ins-1811"
+      ]
+    }
+  ],
+  "outlineSteps": []
 }

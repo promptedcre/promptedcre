@@ -7,28 +7,677 @@
   "phase": "report",
   "order": 415,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "form-deal-entity",
+    "set-up-the-books",
+    "file-partnership-return-and-k1s"
+  ],
+  "consumes": [
+    "certificate-of-formation",
+    "sponsor-operating-agreement",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "investor-register"
+  ],
   "produces": [],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "List each Texas entity and its taxpayer number",
-    "Confirm each entity's due date and filing status",
-    "Gather the year's revenue and the ownership details the reports ask for",
-    "Decide the report type with the tax preparer",
-    "Update officer, manager and registered agent information",
-    "Prepare the franchise tax report and the information report",
-    "Review and approve each filing",
-    "File each report and pay any tax due",
-    "Confirm each entity shows in good standing with the state",
-    "Record the filings and set next year's reminders"
-  ]
+  "sources": [
+    {
+      "id": "tx-tax-code-171",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.171.htm",
+      "title": "Texas Tax Code, Chapter 171 (Sections 171.0001 to 171.0003, 171.001, 171.0011, 171.002, 171.101, 171.1011, 171.103, 171.1014 to 171.1016, 171.202, 171.203, 171.212, 171.251 to 171.258, 171.309 and 171.362)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "shall file a combined group report in lieu of individual reports based on the combined group's business",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-34-3-584",
+      "url": "https://www.law.cornell.edu/regulations/texas/34-Tex-Admin-Code-SS-3-584",
+      "title": "34 Tex. Admin. Code 3.584, Margin: Reports and Payments",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "no later than May 15 of the year following the year the entity became subject to the tax",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-34-3-585",
+      "url": "https://www.law.cornell.edu/regulations/texas/34-Tex-Admin-Code-SS-3-585",
+      "title": "34 Tex. Admin. Code 3.585, Margin: Annual Report Extensions",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-34-3-586",
+      "url": "https://www.law.cornell.edu/regulations/texas/34-Tex-Admin-Code-SS-3-586",
+      "title": "34 Tex. Admin. Code 3.586, Margin: Nexus",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "holding, acquiring, leasing, or disposing of any property located in Texas",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-34-3-590",
+      "url": "https://www.law.cornell.edu/regulations/texas/34-Tex-Admin-Code-SS-3-590",
+      "title": "34 Tex. Admin. Code 3.590, Margin: Combined Reporting",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-34-3-582",
+      "url": "https://www.law.cornell.edu/regulations/texas/34-Tex-Admin-Code-SS-3-582",
+      "title": "34 Tex. Admin. Code 3.582, Margin: Passive Entities",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-boc-153",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.153.htm",
+      "title": "Texas Business Organizations Code, Chapter 153, Subchapter G (Sections 153.301 to 153.307, periodic report of a limited partnership)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "not more than once every four years",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-franchise",
+      "url": "https://comptroller.texas.gov/taxes/franchise/",
+      "title": "Franchise Tax (due date, rates and thresholds for 2026 and 2027, final reports, penalties and interest)",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "quote": "If May 15 falls on a weekend or holiday, the due date will be the next business day.",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-filing-requirements",
+      "url": "https://comptroller.texas.gov/taxes/franchise/filing-requirements.php",
+      "title": "Requirements for Reporting and Paying Franchise Tax",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "quote": "TEXNET is the only acceptable payment method.",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-ntd-2024",
+      "url": "https://comptroller.texas.gov/taxes/franchise/ntd-rpt-updates-2024.php",
+      "title": "No Tax Due Reporting for Report Year 2024 and Later",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-pir-oir",
+      "url": "https://comptroller.texas.gov/taxes/franchise/pir-oir-filing-req.php",
+      "title": "Texas Franchise Tax Public Information Report and Ownership Information Report",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "quote": "Changes to the registered agent or registered office must be filed directly with the SOS and cannot be made on the PIR or OIR.",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-extensions",
+      "url": "https://comptroller.texas.gov/taxes/franchise/filing-extensions.php",
+      "title": "Franchise Tax Extensions of Time to File",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "quote": "Timely means the request is received or postmarked on or before the due date of the original report.",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-coas",
+      "url": "https://comptroller.texas.gov/taxes/franchise/coas-instructions.php",
+      "title": "Franchise Tax Account Status",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "quote": "A franchise tax account status may be required to conduct real estate or financial transactions.",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-account-search",
+      "url": "https://comptroller.texas.gov/taxes/franchise/account-status/search",
+      "title": "Franchise Tax Account Status Search",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-certificates",
+      "url": "https://comptroller.texas.gov/taxes/franchise/certificate-letter-request.php",
+      "title": "Requesting Tax Certificates and Tax Clearance Letters",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "quote": "It is not required by banking institutions for financial transactions.",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-notices",
+      "url": "https://comptroller.texas.gov/taxes/franchise/notices.php",
+      "title": "Franchise Tax Notices and Resolving Problems With Your Account",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "quote": "There is no $50 penalty for late filing a PIR or OIR.",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-05-915",
+      "url": "https://comptroller.texas.gov/forms/05-915.pdf",
+      "title": "2026 Texas Franchise Tax Report Information and Instructions (Form 05-915)",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "quote": "An entity’s treatment for federal income tax purposes does not determine its responsibility for Texas franchise tax.",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-faq-taxable",
+      "url": "https://comptroller.texas.gov/taxes/franchise/faq/taxable-entities.php",
+      "title": "Franchise Tax Frequently Asked Questions: Taxable Entities (series LLC reporting)",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "quote": "A series LLC is treated as a single legal entity.",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-forms-2026",
+      "url": "https://comptroller.texas.gov/taxes/franchise/forms/2026-franchise.php",
+      "title": "Texas Franchise Tax Report Forms for 2026",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-111",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.111.htm",
+      "title": "Texas Tax Code, Chapter 111 (Section 111.053, due dates on weekends and holidays)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "a list of the legal holidays for banking purposes for that year",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-reinstate",
+      "url": "https://comptroller.texas.gov/taxes/franchise/reinstate-terminate.php",
+      "title": "Reinstating or Terminating a Business",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "quote": "File all outstanding annual Franchise Tax and Public/Ownership Information Reports.",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-f8825",
+      "url": "https://www.irs.gov/pub/irs-pdf/f8825.pdf",
+      "title": "Form 8825 (Rev. December 2025), Rental Real Estate Income and Expenses of a Partnership or an S Corporation",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-23",
+      "quote": "Other deductions (attach Schedule A (Form 8825))",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-i8825",
+      "url": "https://www.irs.gov/instructions/i8825",
+      "title": "Instructions for Form 8825 and Schedule A (Rev. December 2025), Line 17, Other Deductions",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-23",
+      "quote": "Enter the total amount on Form 8825, line 17, for each property.",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "list-entities",
+      "title": "List each entity that may owe Texas reports, with its numbers",
+      "instruction": "List every entity the firm runs, with its legal name, formation state, taxpayer number, Secretary of State file number, where its Webfile number is kept, and its Texas contacts (property, partnerships, staff, receipts): the firm's own, each deal or fund entity, its general partner and property subsidiaries. LLCs, partnerships, corporations and most joint ventures are taxable; a general partnership or joint venture owned directly and entirely by individuals, without limited liability, is not, nor is a co-ownership electing out of federal partnership treatment. Owning or leasing Texas property is doing business, as is being general partner of a limited partnership that does; being only a limited partner is not, under $500,000 of yearly Texas receipts. A disregarded LLC still counts, and a series LLC reports as one (set-up-series). Note which joint venture party files. Flag for the CPA each entity treated as nontaxable and each out-of-state entity with unclear nexus.",
+      "mode": "agent",
+      "modeBasis": "Building the list is file work from the firm's formation records and governing agreements; an unclear case is the CPA's call.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-tx.franchise-tax.basics",
+        "us-tx.boc.series-llc"
+      ],
+      "calculators": [],
+      "consumes": [
+        "certificate-of-formation",
+        "sponsor-operating-agreement",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-171",
+        "tac-34-3-586",
+        "cpa-05-915",
+        "cpa-faq-taxable"
+      ]
+    },
+    {
+      "id": "check-status-and-dates",
+      "title": "Confirm each entity's status and its report due date",
+      "instruction": "Search each entity in the Comptroller's status search by taxpayer or file number, and save the dated result: the right to transact business and the officers from the last Public Information Report. A first annual report is due May 15 of the year after the entity became subject to the tax, covering through its accounting year end that year, or only its first day if its federal year end came earlier; later ones cover through the accounting year end in the year before the report is due. A May 15 on a weekend, or a holiday on the Comptroller's banking-holiday list published in the Texas Register before each year, moves to the next business day. Enter each date in the deadline-calendar, which skips only weekends; check that list each January. Any status but active, or a notice such as Form 05-211, goes straight to the principals and the CPA.",
+      "mode": "agent-browser",
+      "modeBasis": "The account status search is a free public page that needs no login; the dates follow from published rules.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-entities"
+      ],
+      "rules": [
+        "us-tx.franchise-tax.due-date-extension",
+        "us-tx.franchise-tax.forfeiture"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "cpa-account-search",
+        "cpa-coas",
+        "cpa-pir-oir",
+        "tac-34-3-584",
+        "cpa-05-915",
+        "cpa-franchise",
+        "tx-tax-code-111",
+        "cpa-notices"
+      ]
+    },
+    {
+      "id": "revive-forfeited-entity",
+      "title": "Revive a forfeited entity before anything else is filed",
+      "instruction": "If an entity's right to transact business is forfeited, a principal revives it first and tells counsel at once. The CPA prepares every outstanding annual franchise tax and information report; a principal files them and pays the tax, penalty and interest due, and the Comptroller then revives the right. Revival does not end the officers' and directors' liability for Texas debts incurred between the missed due date and revival. If the right is not revived within 120 days, the Secretary of State may forfeit the registration too. To reinstate it, a principal requests the Comptroller's Tax Clearance Letter in Webfile or on Form 05-391, two or three business days after any payment, and counsel files it with the Secretary of State's reinstatement forms and fees. Save each report, payment confirmation and letter.",
+      "mode": "human-online",
+      "modeBasis": "Filing past reports and paying from the entity's account take a person's login and approval; reinstatement with the Secretary of State is counsel's filing.",
+      "actor": "principal",
+      "licensed": "cpa",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-status-and-dates"
+      ],
+      "rules": [
+        "us-tx.franchise-tax.forfeiture"
+      ],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-171",
+        "cpa-05-915",
+        "cpa-certificates",
+        "cpa-reinstate"
+      ]
+    },
+    {
+      "id": "gather-figures",
+      "title": "Gather the year's revenue, receipts and ownership facts",
+      "instruction": "For each entity, collect the federal figures from close-the-year in file-partnership-return-and-k1s, noting whether each is working or final; flag working figures that may change before the due date for extend-if-needed. Gather the federal line amounts and support from the closed books, not a computed Texas total: the accounting period's dates, receipts from Texas and from everywhere (rent from Texas property is a Texas receipt), and cost of goods sold and compensation for a possible deduction. Mark a period that is not exactly 12 months, shorter or longer: the CPA annualizes its total revenue for the threshold tests, dividing by the days in the period and multiplying by 365. As of the planned filing date, list the corporations, LLCs and limited partnerships owning 10 percent or more of the entity, and those it owns 10 percent or more of, with percentages. Figures that do not tie go back to the bookkeeper.",
+      "mode": "agent",
+      "modeBasis": "Pulling federal line amounts and support from the books and the return and tying them out is file work; the Texas total is the CPA's.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-entities"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "investor-register",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-171",
+        "tac-34-3-584",
+        "cpa-05-915"
+      ]
+    },
+    {
+      "id": "check-groups-and-passive",
+      "title": "Check for a combined group, a tiered election or a passive partnership",
+      "instruction": "The CPA decides in writing each entity's Texas nexus, combination, tiered election and passive status. Combined: entities, disregarded ones included, over 50 percent commonly owned and unitary file one report, each with nexus filing an information report. Affiliates are presumed unitary, and one a member forms is unitary from formation; the CPA decides any rebuttal. Tiered: a lower-tier partnership may elect to pass total revenue to its owners, unless combined, at or below the threshold, or owing under $1,000; both tiers then owe any tax computed and file Form 05-175. Passive: a general or limited partnership or trust (never an LLC) all period, with federal gross income, at least 90 percent of it from interest, dividends, LLC income, positive partnership shares, real property sale gains or similar, never rent; it owes no tax and files no information report, but if registered files an EZ or Long Form report marked passive.",
+      "mode": "human-online",
+      "modeBasis": "Nexus, a unitary combined group and passive status are tax judgments for the CPA.",
+      "actor": "cpa",
+      "licensed": "cpa",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "gather-figures"
+      ],
+      "rules": [
+        "us-tx.franchise-tax.basics"
+      ],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-171",
+        "tac-34-3-586",
+        "tac-34-3-590",
+        "tac-34-3-582",
+        "cpa-ntd-2024",
+        "cpa-pir-oir",
+        "cpa-05-915"
+      ]
+    },
+    {
+      "id": "decide-report-type",
+      "title": "Decide each entity's report type with the CPA",
+      "instruction": "The CPA computes each entity's total revenue and decides in writing what it files. For a partnership the CPA maps the statute's Form 8825 line 17 onto the December 2025 revision, where line 17 holds other deductions and property income or loss is line 19 (Tax Code 171.1011(b), (c)(2)). For 2026 and 2027 reports, annualized total revenue of $2.65 million or less means only an information report: Public for a corporation, LLC, limited partnership, professional association or financial institution, otherwise Ownership. Computed tax under $1,000 is not owed, except after a tiered election, but each required report is filed. Up to $20 million allows the EZ Computation: 0.331 percent of apportioned revenue, no deductions or credits. Otherwise the Long Form taxes apportioned margin (the least of 70 percent of revenue or revenue less $1 million, cost of goods sold or compensation) at 0.75 percent, 0.375 for mainly retail or wholesale.",
+      "mode": "human-online",
+      "modeBasis": "Choosing a report type and any deduction is a tax position, and tax positions are the CPA's.",
+      "actor": "cpa",
+      "licensed": "cpa",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-status-and-dates",
+        "check-groups-and-passive"
+      ],
+      "rules": [
+        "us-tx.franchise-tax.basics"
+      ],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "cpa-franchise",
+        "cpa-filing-requirements",
+        "cpa-ntd-2024",
+        "cpa-pir-oir",
+        "cpa-05-915",
+        "tx-tax-code-171",
+        "irs-f8825",
+        "irs-i8825"
+      ]
+    },
+    {
+      "id": "update-people-and-addresses",
+      "title": "Update officers, managers, owners and the registered agent before filing",
+      "instruction": "Draft each Public Information Report's people section from the governing agreement and firm records, not last year's report, as of the filing date: the name, title and mailing address of each officer, director and manager, with any term's expiration date, each general partner of a limited partnership, and members only of a member-managed LLC; an out-of-state entity lists whom its home law requires. Investor members of a manager-managed LLC are not listed. Add the principal office and principal place of business. Note changes from the officers the status search shows. Mark each person named not employed by the entity or a 10 percent related company, to be mailed a copy. Compare the registered agent and office with set-up-registered-agent's check-each-year result; a change is filed there first. Mark a new mailing address on the report, or draft the Comptroller's address change form for a principal if it must change sooner.",
+      "mode": "agent",
+      "modeBasis": "Drafting from the governing agreement, the firm's records and saved public results is document work; any filing it calls for goes to a person.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-status-and-dates",
+        "gather-figures"
+      ],
+      "rules": [
+        "us-tx.boc.registered-agent"
+      ],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "certificate-of-formation",
+        "sponsor-operating-agreement",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-171",
+        "tac-34-3-584",
+        "cpa-pir-oir",
+        "cpa-05-915",
+        "cpa-franchise"
+      ]
+    },
+    {
+      "id": "prepare-reports",
+      "title": "Prepare each entity's filing package for review",
+      "instruction": "For each entity, assemble what the CPA or a principal will enter in Webfile or tax software: the report year (its due year); the accounting period, starting the day after the last report's end date, for a new entity the day it became subject to the tax, and after a year of only an information report, the day after the end date a tax report would have used; the CPA's total revenue, receipts and report type, with any group, tiered or passive treatment; and the draft information report. A combined group adds the affiliate schedule. A final report (wind-down-the-entity) uses the final forms and runs to the day the entity stops doing business in Texas, for a Texas entity the effective date of termination, merger or conversion, with no information report; a combined group member files none. Use the report year's forms, tie figures to support, and file nothing.",
+      "mode": "agent",
+      "modeBasis": "Assembling a draft from the gathered figures and the CPA's written decisions is file work; filing is a person's.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-report-type",
+        "update-people-and-addresses"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "cpa-forms-2026",
+        "cpa-05-915"
+      ]
+    },
+    {
+      "id": "extend-if-needed",
+      "title": "Request an extension by the due date if a report will not be ready",
+      "instruction": "Request an extension by the due date if a report is not ready. The CPA computes the payment; a principal submits it through Webfile or Form 05-164. Paying at least 90 percent of the tax, or 100 percent of last year's if filed by May 14 this year, extends to November 15. The 100 percent option is closed for a first annual report or an entity filing alone that was combined last year. An entity at or below the threshold last year, or owing only an information report, requests without paying. A combined group adds Form 05-165. An entity that paid $10,000 or more last state fiscal year pays electronically, extending to August 15, then November 15; at $500,000 or more, its TEXNET payment under code 13080 is the request. Enter extended dates by hand, rolled past weekends and holidays. Underpaying reverts the due date, with penalty and interest.",
+      "mode": "human-online",
+      "modeBasis": "An extension is requested in the entity's Webfile account or on its signed form, with any payment from its account, which takes a person's login and approval.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-status-and-dates",
+        "gather-figures"
+      ],
+      "rules": [
+        "us-tx.franchise-tax.due-date-extension"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "cpa-extensions",
+        "cpa-05-915",
+        "tx-tax-code-171",
+        "tac-34-3-585"
+      ]
+    },
+    {
+      "id": "review-and-approve",
+      "title": "Review and approve each report before it is filed",
+      "instruction": "A principal authorized to act for each entity reviews its package against the CPA's written decisions and approves it in writing, with the date and the version reviewed. For any entity filing an EZ Computation or Long Form report, the CPA first confirms in writing that the package matches the report the CPA prepared or reviewed. Read the people section line by line: the Comptroller forwards the report to the Secretary of State and shows its officers in the public search. A figure or name the principal questions goes back to the preparer and is checked again, not edited at the filing screen. In a joint venture, the party the agreement names approves the venture's filing, and the partner gets any review the agreement gives it.",
+      "mode": "human-online",
+      "modeBasis": "Approving the version to be filed binds the entity and is done by a person it authorizes.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "prepare-reports"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-171",
+        "tac-34-3-584",
+        "cpa-05-915",
+        "cpa-pir-oir"
+      ]
+    },
+    {
+      "id": "file-and-pay",
+      "title": "File each report and pay any tax due",
+      "instruction": "The principal, or the CPA as an authorized paid preparer, files each approved report through Webfile, with the taxpayer and XT Webfile numbers on the Comptroller's notices, or through approved tax software; paper forms go by mail. Whoever files certifies, by filing, that the report is true and correct and that the copies in mail-report-copies go out that day, so confirm the mailing is ready first. The payment method follows what the entity paid in the last state fiscal year, September 1 to August 31: under $10,000, Webfile, approved software, TEXNET or a check; $10,000 to $499,999, electronically; $500,000 or more, TEXNET only. Save each confirmation. A late report draws a $50 penalty, but a late information report filed alone does not; tax paid 1 to 30 days late adds 5 percent, later 10 percent, and interest begins on the 61st day after the original or extended due date.",
+      "mode": "human-online",
+      "modeBasis": "Filing certifies the report for the entity, and filing and paying take its Webfile login and its bank or card, which only a person uses.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "review-and-approve"
+      ],
+      "rules": [
+        "us-tx.franchise-tax.basics",
+        "us-tx.franchise-tax.forfeiture"
+      ],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "cpa-05-915",
+        "cpa-filing-requirements",
+        "cpa-franchise",
+        "cpa-notices",
+        "tx-tax-code-171"
+      ]
+    },
+    {
+      "id": "mail-report-copies",
+      "title": "Mail the report copy to each person named who is not an employee",
+      "instruction": "On the day each Public Information Report is filed, mail a copy to every person it names who is not employed by the entity or a 10 percent related company, as marked in update-people-and-addresses. The filer certifies that this mailing happens on the filing date, so prepare the letters, envelopes or mailing batch and the address list in advance. A principal approves and mails them that day, or the agent submits the approved batch to a mailing service. Any other way of delivering the copies is counsel's call. Record who was mailed a copy, at which address and on what date.",
+      "mode": "agent",
+      "modeBasis": "The agent prepares the copies and the address list; a principal approves each batch and mails it or has the agent send it through a mailing service.",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "file-and-pay"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-171",
+        "tac-34-3-584",
+        "cpa-pir-oir"
+      ]
+    },
+    {
+      "id": "confirm-standing",
+      "title": "Confirm each entity shows active once the filings are processed",
+      "instruction": "Once the filings are processed, search each entity again and save the dated result. The right to transact business should read active; the officers shown change only after the Secretary of State processes the information report, so they can lag. This printout serves real estate and financial transactions; the Certificate of Account Status is needed only to terminate, merge, convert or withdraw an entity, and banks do not require it. If a report is not accepted, send it to the CPA and the principal that day, who correct and refile it. Once a notice of intent to forfeit is mailed or sent electronically, the entity has 45 days to file or pay; after a forfeiture it cannot sue or defend in a Texas court and its officers and directors can owe its Texas debts. Send any other status to the principals and the CPA, and a forfeiture to revive-forfeited-entity.",
+      "mode": "agent-browser",
+      "modeBasis": "The account status search is a free public page that needs no login.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "file-and-pay"
+      ],
+      "rules": [
+        "us-tx.franchise-tax.forfeiture"
+      ],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "cpa-account-search",
+        "cpa-coas",
+        "cpa-pir-oir",
+        "cpa-franchise",
+        "cpa-certificates",
+        "cpa-notices",
+        "tx-tax-code-171"
+      ]
+    },
+    {
+      "id": "record-and-calendar",
+      "title": "Record the filings and set next year's dates",
+      "instruction": "File each entity's approved package, the CPA's decisions, confirmations, any extension, the mailing record and the status result. Enter next year's due dates in the deadline-calendar; give set-the-annual-budget each entity's tax paid and the CPA's estimate for next year. An amended Texas report is due within 120 days after an amended federal return, or a final IRS or other adjustment, changes taxable margin. An error in a Public Information Report is corrected by an amended one with a cover letter; other changes wait a year. A person wrongly named may disclaim the role by sworn statement. A final report, due 60 days after an entity stops being subject to the tax, runs from decide-report-type to file-and-pay here; wind-down-the-entity sets its dates and requests the certificate. A limited partnership filing no Public Information Report answers any Secretary of State report request, made at most every four years, within 30 days.",
+      "mode": "agent",
+      "modeBasis": "Filing records and entering dates that follow from published rules is file work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "mail-report-copies",
+        "confirm-standing"
+      ],
+      "rules": [
+        "us-tx.franchise-tax.due-date-extension",
+        "us-tx.franchise-tax.basics"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-171",
+        "tac-34-3-584",
+        "cpa-05-915",
+        "tx-boc-153",
+        "cpa-franchise"
+      ]
+    }
+  ],
+  "outlineSteps": []
 }

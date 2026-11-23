@@ -7,32 +7,743 @@
   "phase": "operate",
   "order": 134,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
+  "lastVerified": "2026-11-21",
   "situation": {
-    "trigger": "A government agency notifies the owner of a planned taking of part or all of the property.",
+    "trigger": "A government agency, or a company with eminent domain power such as a pipeline, utility or railroad, notifies the owner of a planned taking of part or all of the property.",
     "urgency": "weeks"
   },
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "requires": [
+    "take-over-operations",
+    "abstract-the-leases",
+    "negotiate-loan-documents",
+    "confirm-zoning-and-use"
+  ],
+  "consumes": [
+    "survey",
+    "owner-title-policy",
+    "lease",
+    "lease-abstract",
+    "snda",
+    "loan-documents",
+    "rent-roll",
+    "trailing-12",
+    "zoning-report",
+    "underwriting-model",
+    "appraisal",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "investor-register"
+  ],
+  "produces": [
+    "appraisal",
+    "lease-abstract",
+    "underwriting-model",
+    "deed",
+    "lien-release",
+    "settlement-statement",
+    "rent-roll"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Calendar every date in the notice",
-    "Read the notice for what is being taken and when",
-    "Engage condemnation counsel",
-    "Read each lease's condemnation clause",
-    "Read the loan's provisions on condemnation awards",
-    "Notify the lender and affected tenants as the documents require",
-    "Hire an appraiser to value the taking and the remainder",
-    "Assess the effect on access, parking, leases and the loan",
-    "Respond to the agency's offer with counsel",
-    "Tell investors and record the award and how it is used"
-  ]
+  "sources": [
+    {
+      "id": "tx-prop-21",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.21.htm",
+      "title": "Texas Property Code, Chapter 21 (Eminent domain), Sections 21.0111 to 21.0113, 21.012 to 21.021, 21.0211, 21.042, 21.046, 21.047, 21.061 and 21.101 to 21.103",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "must make a bona fide offer to acquire the property from the property owner voluntarily",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gov-2206",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.2206.htm",
+      "title": "Texas Government Code, Chapter 2206 (Eminent domain), Sections 2206.001, 2206.053 and 2206.151 to 2206.156",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "authorize the initiation of the condemnation proceeding at a public meeting by a record vote",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gov-402",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.402.htm",
+      "title": "Texas Government Code, Section 402.031 (Preparation of landowner's bill of rights statement)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "a bona fide good faith effort to negotiate by the entity proposing to acquire the property",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-const-1-17",
+      "url": "https://tcss.legis.texas.gov/resources/CN/htm/CN.1.htm",
+      "title": "Texas Constitution, Article 1, Section 17 (Taking property for public use)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "No person's property shall be taken, damaged, or destroyed for or applied to public use without adequate compensation being made",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-eminent-domain",
+      "url": "https://comptroller.texas.gov/transparency/local/eminent-domain/",
+      "title": "Eminent Domain Reporting (the eminent domain database and what reporting does and does not affect)",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "quote": "does not affect the entity's authority to exercise the power of eminent domain",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-occ-1101",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1101.htm",
+      "title": "Texas Occupations Code, Chapter 1101, Sections 1101.002(3-a) and 1101.501 (Easement or right-of-way agents)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "A person may not act as an easement or right-of-way agent unless the person",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-5",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.5.htm",
+      "title": "Texas Property Code, Section 5.007 (Vendor and Purchaser Risk Act)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "or is taken by eminent domain, the vendor may not enforce the contract",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-92",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.92.htm",
+      "title": "Texas Property Code, Chapter 92 (Residential tenancies)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "CHAPTER 92. RESIDENTIAL TENANCIES",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-93",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.93.htm",
+      "title": "Texas Property Code, Chapter 93 (Commercial tenancies)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "CHAPTER 93. COMMERCIAL TENANCIES",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-26",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.26.htm",
+      "title": "Texas Tax Code, Section 26.11 (Prorating taxes: acquisition by government)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "the number of days that elapsed prior to the date of the conveyance",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-23",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.23.htm",
+      "title": "Texas Tax Code, Section 23.01 (Appraisals generally)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "all taxable property is appraised at its market value as of January 1",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-42-4651",
+      "url": "https://www.law.cornell.edu/uscode/text/42/4651",
+      "title": "42 U.S.C. 4651, Uniform policy on real property acquisition practices",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "the owner or his designated representative shall be given an opportunity to accompany the appraiser during his inspection of the property",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-42-4602",
+      "url": "https://www.law.cornell.edu/uscode/text/42/4602",
+      "title": "42 U.S.C. 4602, Effect upon property acquisition",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-23",
+      "quote": "create no rights or liabilities and shall not affect the validity of any property acquisitions by purchase or condemnation",
+      "tier": "primary"
+    },
+    {
+      "id": "frcp-71-1",
+      "url": "https://www.law.cornell.edu/rules/frcp/rule_71.1",
+      "title": "Federal Rules of Civil Procedure, Rule 71.1 (Condemning real or personal property)",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-23",
+      "quote": "These rules govern proceedings to condemn real and personal property by eminent domain, except as this rule provides otherwise.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-49-24-101",
+      "url": "https://www.ecfr.gov/current/title-49/section-24.101",
+      "title": "49 CFR 24.101, Applicability of acquisition requirements",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "where there is Federal financial assistance in any part of project costs",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-49-24-102",
+      "url": "https://www.ecfr.gov/current/title-49/section-24.102",
+      "title": "49 CFR 24.102, Basic acquisition policies",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "the compensation for the real property to be acquired and the compensation for damages, if any, to the remaining real property shall be separately stated",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-49-24-105",
+      "url": "https://www.ecfr.gov/current/title-49/section-24.105",
+      "title": "49 CFR 24.105, Acquisition of tenant-owned improvements",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "The owner of the real property on which the improvement is located disclaims all interest in the improvement",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-49-24-106",
+      "url": "https://www.ecfr.gov/current/title-49/section-24.106",
+      "title": "49 CFR 24.106, Expenses incidental to transfer of title to the agency",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Penalty costs and other charges for prepayment of any preexisting recorded mortgage entered into in good faith encumbering the real property",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-49-24-107",
+      "url": "https://www.ecfr.gov/current/title-49/section-24.107",
+      "title": "49 CFR 24.107, Certain litigation expenses",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "The condemnation proceeding is abandoned by the agency other than under an agreed-upon settlement",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-49-24-203",
+      "url": "https://www.ecfr.gov/current/title-49/section-24.203",
+      "title": "49 CFR 24.203, Relocation notices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "No lawful occupant shall be required to move unless he or she has received at least 90 days advance written notice",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-1033",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1033",
+      "title": "26 U.S.C. 1033, Involuntary conversions (subsections (a)(2) and (g))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-23",
+      "quote": "the earliest date of the threat or imminence of requisition or condemnation of the converted property",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-703",
+      "url": "https://www.law.cornell.edu/uscode/text/26/703",
+      "title": "26 U.S.C. 703(b), Elections of the partnership",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "Any election affecting the computation of taxable income derived from a partnership shall be made by the partnership",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-pub-544",
+      "url": "https://www.irs.gov/publications/p544",
+      "title": "Publication 544 (2025), Sales and Other Dispositions of Assets, chapter 1 (Condemnations)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "If a partnership or corporation owns the condemned property, only the partnership or corporation can elect to postpone reporting the gain.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "To make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "read-the-notice",
+      "title": "Read the notice for what is being taken, by whom and at what stage",
+      "instruction": "Read everything the acquiring entity sent and write a one-page summary: who is acquiring, the project and public use, the interest sought (fee, easement or access), the area mapped against the survey and title policy, any entry request, any federal funding, and the stage: first contact, initial offer, final offer, petition or hearing notice. A Texas initial offer includes the bill of rights, the conveyance, a named contact, a bold statement of what the amount covers and the entity's appraisals from the past decade; a final offer must be written, at least the entity's certified appraisal, and come with or after a copy of it. A federal agency's own taking proceeds in federal court under Federal Rule of Civil Procedure 71.1. On a federally funded state or local project, federal acquisition policy applies only as far as state law allows and creates no enforceable rights. List gaps for counsel.",
+      "mode": "agent",
+      "modeBasis": "Reading the entity's papers against the survey and title policy and summarizing them is document work.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "survey",
+        "owner-title-policy"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-21",
+        "tx-gov-402",
+        "ecfr-49-24-101",
+        "usc-42-4602",
+        "frcp-71-1"
+      ]
+    },
+    {
+      "id": "calendar-the-dates",
+      "title": "Calendar every date in the notice and the steps that follow it",
+      "instruction": "Put each date on one calendar with its source and owner, and have counsel confirm it once engaged. In Texas, the final offer comes at least 30 days after the written initial offer and seven after the bill of rights, and the owner gets at least 14 days to answer. After a petition, the judge appoints commissioners within 30 days; either side may strike one by the later of 10 days after that order or 20 days after filing; the hearing comes at least 20 days after appointment, on 20 days' notice; appraisals used there are disclosed three business days before, the firm's within 10 days of receipt if sooner; objections are due the first Monday after the 20th day from the filed findings. For tax, record when a court deposit could first be withdrawn and when the threat of condemnation began, which can start the replacement period.",
+      "mode": "agent",
+      "modeBasis": "The dates follow from the notice and the statutes; counsel confirms them and nothing is filed.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-the-notice"
+      ],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-21",
+        "usc-26-1033",
+        "irs-pub-544"
+      ]
+    },
+    {
+      "id": "check-the-authority",
+      "title": "Check the entity's authority, its vote and the owner record",
+      "instruction": "Look up the acquiring entity in the Comptroller's eminent domain database and record the law it cites, its scope and contact. A missed report does not end its authority; any lapse is counsel's question. Once a governmental entity files or threatens a petition, find the minutes of its record vote authorizing condemnation; one route-wide resolution naming no parcels can cover a water, wastewater or drainage line. Texas bars a taking for a particular private party's benefit, as a pretext, not for public use, or for economic development outside a narrow blight exception, but the statute's bars exempt transportation, water, drainage, public buildings, parks, utilities and common carrier pipelines; the Constitution's public-use limit still applies. Check any pipeline, utility, railroad or telecommunications right-of-way agent's Texas Real Estate Commission license or registration. Note the owner and address on the latest tax roll, where the bill of rights goes. Counsel decides any challenge.",
+      "mode": "agent-browser",
+      "modeBasis": "The database, meeting records, license lookup and appraisal roll are public websites an agent can read.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-the-notice"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "market": "market-property-data",
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "cpa-eminent-domain",
+        "tx-gov-2206",
+        "tx-const-1-17",
+        "tx-occ-1101",
+        "tx-prop-21"
+      ]
+    },
+    {
+      "id": "engage-counsel",
+      "title": "Engage eminent domain counsel before answering or signing anything",
+      "instruction": "A principal engages eminent domain counsel before the firm answers the offer or signs anything, including a right of entry, a possession and use agreement or the offered conveyance. Give counsel the notice packet, summary, calendar, title policy, survey, leases and loan documents. Counsel tells the entity in writing that the owner is represented, so a later petition and the order appointing commissioners also go to counsel. Read how the engagement letter sets fees. Texas awards the owner reasonable attorney, appraiser and photographer fees when the condemnor's motion to dismiss is granted, may award them when the right to condemn is denied, and orders fees tied to a missing bona fide offer. Where the project is federal or federally funded, federal rules reimburse reasonable attorney, appraisal and engineering fees if the court rules the agency cannot take the property or the agency abandons the case other than by settlement.",
+      "mode": "human-online",
+      "modeBasis": "Choosing and engaging counsel is the principals' decision and a signed engagement.",
+      "actor": "principal",
+      "licensed": "attorney",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-the-notice"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "owner-title-policy",
+        "survey",
+        "lease",
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-21",
+        "ecfr-49-24-101",
+        "ecfr-49-24-107"
+      ]
+    },
+    {
+      "id": "read-lease-and-loan-terms",
+      "title": "Read each lease's and the loan's condemnation terms",
+      "instruction": "From each lease abstract, or the lease where silent, list: what counts as a taking (land, parking or access), who may terminate or abate rent and at what threshold, the landlord's restoration duty and any cap, who owns the award, which improvements are the tenant's, what it may claim itself, and notice duties. From the loan documents and any SNDA, list the lender's notice, its right to join the case and approve a settlement, the award assignment, whether the award pays down the loan or funds restoration, any prepayment premium and the partial release. Texas Property Code chapters 92 and 93 have no condemnation section; list as gaps for counsel any lease silent on the award, termination or rent. With federal funding, the agency pays for a tenant's improvements only if the tenant releases them and the landlord disclaims them; the tenant may instead claim under other law.",
+      "mode": "agent",
+      "modeBasis": "The terms are in the signed leases, abstracts, SNDAs and loan documents; reading and listing them is document work.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "lease-abstract",
+        "lease",
+        "snda",
+        "loan-documents"
+      ],
+      "produces": [
+        "lease-abstract"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-92",
+        "tx-prop-93",
+        "ecfr-49-24-105"
+      ],
+      "typeNotes": {
+        "retail": "Read the parking ratio, visibility, access and co-tenancy clauses and any reciprocal easement agreement: losing parking or a driveway can let a tenant reduce rent or leave even when no building space is taken.",
+        "multifamily": "Read what the residential lease form says about ending the lease if the unit or the property is taken; Texas Property Code chapter 92 adds no condemnation rule."
+      }
+    },
+    {
+      "id": "notify-lender-and-tenants",
+      "title": "Notify the lender and affected tenants as the documents require",
+      "instruction": "Draft each notice the loan documents and affected leases require, sent as each clause requires: what the entity seeks, the stage, the calendar's dates and counsel's contact. Ask the lender who handles condemnations, how it consents to a settlement and what a partial release needs. Ask each affected tenant whether it will claim on its own and to coordinate through counsel; tell the property manager. A tenant business that must move for a state or local taking may be owed relocation payments by that entity; refer it there. Notify any buyer under a signed sale contract as it requires; unless it says otherwise, Texas lets the buyer out if all or a material part is taken before title or possession passes. A Texas condemnor may not make its offer confidential, so it can be shared unless counsel advises otherwise. Counsel reviews and a principal approves each notice before it goes.",
+      "mode": "agent",
+      "modeBasis": "Drafting notices from the documents is writing work; each goes out only with a person's approval.",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "engage-counsel",
+        "read-lease-and-loan-terms"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "lease-abstract",
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-21",
+        "tx-prop-5",
+        "ecfr-49-24-203"
+      ],
+      "typeNotes": {
+        "multifamily": "Residents who must move are displaced persons. A state agency or Texas political subdivision provides relocation advisory service and pays moving and relocation costs, capped at federal Uniform Act levels (Property Code 21.046); where federal funding is involved, the agency also gives a written description of its relocation program and at least 90 days' written notice, and no one need leave a dwelling until a comparable replacement dwelling is available. Tell residents what is known, refer them to the agency and promise nothing the agency has not."
+      }
+    },
+    {
+      "id": "hire-an-appraiser",
+      "title": "Hire an appraiser to value the part taken and the damage to the remainder",
+      "instruction": "Counsel or a principal engages a certified general appraiser who does condemnation work, and, if the site plan changes, an engineer or planner to price cures. Texas measures a whole taking at the property's local market value at the commissioners' hearing; for a partial taking, the commissioners weigh injury and benefit, including the effect on the remainder's value. They count an injury peculiar to the owner, such as a material impairment of direct access to an adjoining road that affects the remainder's market value, but not one shared with the community, such as a longer route or diverted traffic. With federal funding, the agency should invite the owner to accompany its appraiser; a principal attends and points out what the remainder loses. A report the firm uses for its opinion of value goes to the entity within 10 days of receipt, so counsel sets when a final report is delivered.",
+      "mode": "human-online",
+      "modeBasis": "A principal or counsel signs the engagement; the appraisal itself is a licensed appraiser's opinion.",
+      "actor": "principal",
+      "licensed": "appraiser",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "engage-counsel"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "survey",
+        "rent-roll",
+        "trailing-12",
+        "lease-abstract"
+      ],
+      "produces": [
+        "appraisal"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-21",
+        "usc-42-4651",
+        "ecfr-49-24-102"
+      ]
+    },
+    {
+      "id": "assess-the-effect",
+      "title": "Assess the effect on access, parking, zoning, leases and the loan",
+      "instruction": "Overlay the right-of-way map on the survey and list what the property loses: land, frontage, driveways, parking spaces, signs, landscaping, detention, utilities and any part of a building, and how long a temporary construction easement disrupts access. Test the remainder against the zoning report for parking, setbacks and landscaping, and list for counsel the questions to put to the city on whether it would become nonconforming (confirm-zoning-and-use); where the city is the acquirer, every contact goes through counsel. List each lease that may end, abate or claim a breach, and the cures the consultants priced. Re-run net operating income and value before and after the taking, and the loan's coverage and loan-to-value tests after any required paydown; a failing test goes to loan-covenant-breach. Hand the results to counsel and the appraiser as inputs, not as the firm's claim.",
+      "mode": "agent",
+      "modeBasis": "Mapping the taking against the survey, zoning report and leases and re-running the model is analysis an agent can do.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-the-notice",
+        "read-lease-and-loan-terms",
+        "hire-an-appraiser"
+      ],
+      "rules": [],
+      "calculators": [
+        "income-value"
+      ],
+      "market": "deal-pipeline-underwriting",
+      "consumes": [
+        "survey",
+        "zoning-report",
+        "rent-roll",
+        "lease-abstract",
+        "loan-documents",
+        "trailing-12",
+        "underwriting-model"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner",
+      "sources": [],
+      "typeNotes": {
+        "retail": "Count parking against each lease's required ratio and any reciprocal easement agreement, and check pylon sign and curb-cut locations; a lost anchor can set off co-tenancy claims in other leases.",
+        "industrial": "Check truck court depth, the turning path to the docks, trailer parking and any outdoor storage area against what each tenant's operation needs."
+      }
+    },
+    {
+      "id": "choose-the-response",
+      "title": "Choose whether to accept, negotiate or have the commissioners set damages",
+      "instruction": "The principals weigh the offer against the firm's appraisal, the effect on income and loan, and counsel's view of the right to take, then decide whether to accept, counter with evidence or have damages set, and how an award would be used: a required loan paydown, restoration, a distribution or replacement property. They act as the governing agreement provides, with any investor vote it requires. In Texas the proceeding's costs, not attorney's or appraiser's fees, fall on the entity if the commissioners award more than its pre-suit offer or a court on objection more than they did, and on the owner if the award is at or below it. With federal money, the agency should weigh the owner's evidence, may settle above its offer and should offer to buy an uneconomic remnant. Confirm any lender consent, record the decision, and have counsel answer the final offer in writing in time.",
+      "mode": "human-online",
+      "modeBasis": "Accepting or contesting a price for the property is the principals' decision.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "calendar-the-dates",
+        "check-the-authority",
+        "notify-lender-and-tenants",
+        "hire-an-appraiser",
+        "assess-the-effect"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "appraisal",
+        "underwriting-model",
+        "loan-documents",
+        "deal-entity-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-21",
+        "ecfr-49-24-102"
+      ]
+    },
+    {
+      "id": "partner-consents",
+      "title": "Get the capital partner's consent to the response",
+      "instruction": "Send the capital partner the notice summary, the appraisal, the effect on income and the loan, counsel's view and the chosen response. Settling a condemnation, conveying part of the property, changing the loan and deciding how the award is used are usually major decisions a JV agreement reserves for the capital partner; get its written consent before anything goes to the entity, and confirm how the award will be applied under the agreement and whether that affects the promote.",
+      "mode": "human-online",
+      "modeBasis": "The partner's consent is its own decision under the JV agreement.",
+      "actor": "investor",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-the-response"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "rules": [],
+      "calculators": [
+        "waterfall-promote"
+      ],
+      "consumes": [
+        "jv-agreement",
+        "appraisal",
+        "underwriting-model"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "sign-the-settlement",
+      "title": "Sign the settlement and conveyance if a price is agreed",
+      "instruction": "If the principals accept a price, counsel reviews the conveyance and closing papers before a principal signs: whether it conveys fee or an easement, any temporary easement's term and restoration duty, replacement driveways, signs or fences, who removes improvements, and the possession date. State the severance damages, the payment for harm to the remaining property, separately in the signed agreement; IRS Publication 544 says that without a written agreement on that amount, all proceeds are treated as paid for the part taken unless the parties' intent can be shown from all the facts. Get the lender's partial release and its paydown figure. Where federal funding is involved, the agency reimburses recording fees, transfer taxes, boundary surveys, mortgage prepayment penalties and prepaid taxes for the period after it takes title or possession; when a government takes title or possession, Texas prorates that year's property taxes to the date.",
+      "mode": "human-offline",
+      "modeBasis": "Counsel reviews the papers; a principal signs, and the conveyance is acknowledged before a notary for recording, as in close-the-sale.",
+      "actor": "principal",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-the-response",
+        "partner-consents"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "loan-documents",
+        "appraisal",
+        "survey"
+      ],
+      "produces": [
+        "deed",
+        "lien-release",
+        "settlement-statement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "irs-pub-544",
+        "ecfr-49-24-106",
+        "tx-tax-26"
+      ]
+    },
+    {
+      "id": "contest-before-commissioners",
+      "title": "Take the case to the special commissioners if no price is agreed",
+      "instruction": "Counsel takes the case to the special commissioners once the entity files its petition, which must reach the owner by certified and first-class mail. Counsel decides whether to strike a commissioner, discloses the firm's appraisal reports on time and presents the evidence at the hearing, then files any objection by the deadline; with no timely objection the award becomes the court's judgment, and with one the case is tried like other civil suits. Once the commissioners rule, the entity may take possession by paying the award or depositing it with the court; entities other than the state, a county, a city and certain districts also post security. Before a deposit is released, the owner files a certificate of no delinquent taxes. Counsel and the CPA advise before any withdrawal: withdrawing a deposit above basis, or having the right to, can realize gain that year, setting when the replacement period ends.",
+      "mode": "human-offline",
+      "modeBasis": "The commissioners hear the parties at a place near the property or at the county seat; counsel strikes, discloses and presents the case there.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-the-response",
+        "partner-consents"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "appraisal"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-21",
+        "irs-pub-544"
+      ]
+    },
+    {
+      "id": "record-the-award",
+      "title": "Record the award, update the property records and give the CPA the tax facts",
+      "instruction": "Record the award by part: the taking, severance damages, interest, reimbursed expenses and lender payments. Update the rent roll, lease abstracts and model; flag a remainder survey; calendar a check of next January 1's appraisal (protest-property-taxes); once a person approves, ask the broker to endorse the policies for what was taken, which renew-property-insurance carries forward. If taken by eminent domain (counsel says whether negotiated sales count), calendar the Texas buy-back right at the price paid if the use is canceled before it starts, stalls or becomes unnecessary within ten years, or taxes go unpaid three years; answer repurchase notices within 180 days. For the CPA (file-partnership-return-and-k1s): gain is the net award over adjusted basis; interest is ordinary income; severance damages reduce the remainder's basis; similar or like-kind real property bought within three years after the close of the first tax year with gain can defer it; only the partnership elects.",
+      "mode": "agent",
+      "modeBasis": "Recording the award and updating the records is record work; the request to the broker leaves the firm only after a person approves it, and the tax treatment and election are the CPA's call.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-the-settlement",
+        "contest-before-commissioners"
+      ],
+      "rules": [
+        "us-fed.irc.gain-and-adjusted-basis",
+        "us-tx.tax.market-value"
+      ],
+      "calculators": [
+        "property-tax"
+      ],
+      "consumes": [
+        "settlement-statement",
+        "appraisal"
+      ],
+      "produces": [
+        "rent-roll",
+        "lease-abstract",
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-26-1033",
+        "usc-26-703",
+        "irs-pub-544",
+        "tx-prop-21",
+        "tx-tax-23"
+      ]
+    },
+    {
+      "id": "tell-investors",
+      "title": "Tell investors what is being taken and what it means for them",
+      "instruction": "Draft an update once the effect is known, and again when the award is fixed: what the entity is taking and why, the stage and dates, the offer against the firm's appraisal, the effect on income, leases and loan, the decision, and how the award will be used (a required loan paydown, restoring the remainder, a distribution through make-a-distribution, or replacement property). Rule 10b-5 bars material misstatements, and omissions that make what is said misleading, when securities are bought or sold; where interests change hands or capital is sought, counsel reviews the update. Match every figure to the appraisal and the model. A principal approves it before it goes; in a joint venture the capital partner gets it directly. After a whole taking, counsel decides, before wind-down-the-entity's read-wind-down-terms, whether the buy-back right is kept, assigned or distributed; the decision goes on the claims list there (list-claims-and-notify) and make-the-final-distribution's holdback (set-holdback).",
+      "mode": "agent",
+      "modeBasis": "Drafting from the appraisal and the model is writing work; investor communications go out only with a person's approval.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "choose-the-response"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5",
+        "us-tx.securities.offer-sale-liability"
+      ],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register",
+        "appraisal",
+        "underwriting-model"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5",
+        "tx-prop-21"
+      ]
+    }
+  ],
+  "outlineSteps": []
 }

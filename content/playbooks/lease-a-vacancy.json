@@ -7,29 +7,802 @@
   "phase": "operate",
   "order": 310,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "abstract-the-leases",
+    "take-over-operations"
+  ],
+  "consumes": [
+    "loan-documents",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "lease-abstract",
+    "rent-roll",
+    "comp-set",
+    "underwriting-model",
+    "property-condition-assessment",
+    "trailing-12",
+    "zoning-report",
+    "investor-register"
+  ],
+  "produces": [
+    "site-visit-report",
+    "comp-set",
+    "underwriting-model",
+    "letter-of-intent",
+    "lease",
+    "guaranty",
+    "lease-abstract",
+    "rent-roll",
+    "snda",
+    "tenant-estoppel"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Walk the space and list what it needs before it shows",
-    "Survey market rents for comparable space on one expense basis",
-    "Set the asking rent, term and lease structure",
-    "Budget improvements, commissions and free rent",
-    "Market the space and track inquiries and tours",
-    "Qualify the prospective tenant's operating record and credit",
-    "Compare each proposal on net effective rent",
-    "Test the deal against the return hurdle and loan coverage",
-    "Check the lender's consent rights over new leases",
-    "Negotiate and sign the lease",
-    "Get the SNDA and update the rent roll"
-  ]
+  "sources": [
+    {
+      "id": "tx-pr-92-156",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.92.htm",
+      "title": "Texas Property Code, Sections 92.156 and 92.258, Rekeying after tenant turnover; smoke alarm testing at the start of possession",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "shall be rekeyed by the landlord at the landlord's expense not later than the seventh day after each tenant turnover date",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-28-36-402",
+      "url": "https://www.ecfr.gov/current/title-28/section-36.402",
+      "title": "28 CFR 36.402, Alterations",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "the altered portions of the facility are readily accessible to and usable by individuals with disabilities, including individuals who use wheelchairs",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-28-36-403",
+      "url": "https://www.ecfr.gov/current/title-28/section-36.403",
+      "title": "28 CFR 36.403, Alterations: Path of travel",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "deemed disproportionate to the overall alteration when the cost exceeds 20% of the cost of the alteration to the primary function area",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-28-36-104",
+      "url": "https://www.ecfr.gov/current/title-28/section-36.104",
+      "title": "28 CFR 36.104, Definitions (commercial facilities; place of public accommodation)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Facilities that are covered or expressly exempted from coverage under the Fair Housing Act of 1968",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gv-469",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.469.htm",
+      "title": "Texas Government Code, Sections 469.003, 469.101 and 469.102, Elimination of architectural barriers: coverage and plan submission",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "the estimated construction cost is at least $50,000",
+      "tier": "primary"
+    },
+    {
+      "id": "tdlr-ab-fees",
+      "url": "https://www.tdlr.texas.gov/ab/abfees.htm",
+      "title": "Architectural Barriers Fee Schedule",
+      "publisher": "Texas Department of Licensing and Regulation",
+      "accessed": "2026-11-23",
+      "quote": "Project filing Fee--$175",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-16-68-30",
+      "url": "https://www.law.cornell.edu/regulations/texas/16-Tex-Admin-Code-SS-68-30",
+      "title": "16 Tex. Admin. Code 68.30, Exemptions (residential facilities)",
+      "publisher": "Legal Information Institute (Texas Administrative Code text)",
+      "accessed": "2026-11-21",
+      "quote": "used exclusively by residents and their guests",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-oc-1101-002",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1101.htm",
+      "title": "Texas Occupations Code, Sections 1101.002 and 1101.351, Broker defined; license required",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "Unless a business entity holds a license issued under this chapter, the business entity may not act as a broker.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-oc-1101-005",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1101.htm",
+      "title": "Texas Occupations Code, Section 1101.005, Applicability of chapter",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "an owner or the owner's employee who leases the owner's improved or unimproved real estate",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-62",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.62.htm",
+      "title": "Texas Property Code, Sections 62.002, 62.021 and 62.041, Broker's lien on commercial real estate",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "The broker's right to claim a lien based on the commission agreement must be disclosed in the commission agreement.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-24-100-75",
+      "url": "https://www.ecfr.gov/current/title-24/section-100.75",
+      "title": "24 CFR 100.75, Discriminatory advertisements, statements and notices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "which indicates any preference, limitation or discrimination because of race, color, religion, sex, handicap, familial status, or national origin",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-1681b",
+      "url": "https://www.law.cornell.edu/uscode/text/15/1681b",
+      "title": "15 U.S.C. 1681b, Permissible purposes of consumer reports",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "In accordance with the written instructions of the consumer to whom it relates.",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-1681m",
+      "url": "https://www.law.cornell.edu/uscode/text/15/1681m",
+      "title": "15 U.S.C. 1681m, Requirements on users of consumer reports",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "provide oral, written, or electronic notice of the adverse action to the consumer",
+      "tier": "primary"
+    },
+    {
+      "id": "comptroller-status",
+      "url": "https://comptroller.texas.gov/taxes/franchise/coas-instructions.php",
+      "title": "Franchise Tax Account Status",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-23",
+      "tier": "primary",
+      "quote": "provides the status of an entity's right to transact business in Texas"
+    },
+    {
+      "id": "ofac-faq-11",
+      "url": "https://ofac.treasury.gov/faqs/11",
+      "title": "OFAC FAQ 11: Who must comply with OFAC sanctions?",
+      "publisher": "U.S. Department of the Treasury, Office of Foreign Assets Control",
+      "accessed": "2026-11-21",
+      "quote": "All U.S. persons must comply with OFAC sanctions",
+      "tier": "primary"
+    },
+    {
+      "id": "ofac-search-tool",
+      "url": "https://ofac.treasury.gov/sanctions-list-search-tool",
+      "title": "Sanctions List Search Tool",
+      "publisher": "U.S. Department of the Treasury, Office of Foreign Assets Control",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-5-252",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.5.htm",
+      "title": "Texas Property Code, Sections 5.252, 5.253 and 5.255, Limits on acquiring real property by certain foreign governments, companies and individuals",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "a leasehold interest in land or improvements constructed on a leasehold if the duration of the interest is less than one year",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-92-3515",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.92.htm",
+      "title": "Texas Property Code, Sections 92.3515 and 92.352, Notice of eligibility requirements; rejection of applicant",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "printed notice of the landlord's tenant selection criteria and the grounds for which the rental application may be denied",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-93-012",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.93.htm",
+      "title": "Texas Property Code, Sections 93.001 and 93.012, Applicability of chapter; assessment of charges",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "the amount of the charge or the method by which the charge is to be computed is stated in the lease",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-54-021",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.54.htm",
+      "title": "Texas Property Code, Section 54.021, Building landlord's lien",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "has a preference lien on the property of the tenant or subtenant in the building for rent that is due",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-28-36-201",
+      "url": "https://www.ecfr.gov/current/title-28/section-36.201",
+      "title": "28 CFR 36.201, General: landlord and tenant responsibilities",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "allocation of responsibility for complying with the obligations of this part may be determined by lease or other contract",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bc-26-01",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.26.htm",
+      "title": "Texas Business and Commerce Code, Section 26.01, Promise or agreement must be in writing",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "a lease of real estate for a term longer than one year",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-745-101",
+      "url": "https://www.ecfr.gov/current/title-40/section-745.101",
+      "title": "40 CFR 745.101, Scope and applicability (lead-based paint disclosure)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Short-term leases of 100 days or less, where no lease renewal or extension can occur.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-745-103",
+      "url": "https://www.ecfr.gov/current/title-40/section-745.103",
+      "title": "40 CFR 745.103, Definitions (target housing)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Target housing means any housing constructed prior to 1978",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-745-107",
+      "url": "https://www.ecfr.gov/current/title-40/section-745.107",
+      "title": "40 CFR 745.107, Disclosure requirements for sellers and lessors",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "before the purchaser or lessee is obligated under any contract to purchase or lease target housing",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-745-113",
+      "url": "https://www.ecfr.gov/current/title-40/section-745.113",
+      "title": "40 CFR 745.113, Certification and acknowledgment of disclosure",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "for no less than 3 years from the commencement of the leasing period",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-93-008",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.93.htm",
+      "title": "Texas Property Code, Section 93.008, Records of security deposits",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "The landlord shall keep accurate records of all security deposits.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-92-106",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.92.htm",
+      "title": "Texas Property Code, Section 92.106, Records of residential security deposits",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "The landlord shall keep accurate records of all security deposits.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "To make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "read-leasing-terms",
+      "title": "Read what the loan and the owners' documents require of a new lease",
+      "instruction": "Write a one-page leasing brief from the loan documents and the owning entity's agreements before any terms are set. From the loan documents, list any criteria a new lease must meet, such as minimum rent, term, space size or an approved lease form; which leases need the lender's consent; what a consent request must include and where it goes; any period after which consent is deemed given; whether a new lease must be subordinate or carry the lender's subordination, non-disturbance and attornment agreement; and any leasing reserve or cash sweep the vacancy has triggered. From the deal entity agreement, the fund agreement or the JV agreement, list who approves a new lease and whether a lease of this size is a major decision needing investor or capital partner consent. Cite the section for each item, and send unclear clauses to counsel.",
+      "mode": "agent",
+      "modeBasis": "Reading leasing terms off the loan and entity documents is document work; what an unclear clause means is counsel's conclusion.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "loan-documents",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "walk-the-space",
+      "title": "Walk the space and list what it needs before it shows",
+      "instruction": "A principal, or the property manager at the principal's direction, walks the vacant space and lists what it needs before it shows. Take the property condition assessment and the last tenant's surrender record along, and list cleaning, repairs, life-safety and code items, building systems that need service, and anything the last tenant left behind, which goes on a list to counsel before it is moved or thrown away. Photograph the space, confirm its area and how it was measured, and note the features a prospect will ask about, such as access, parking, loading, ceiling height and power. Record what was seen and what was not as a site visit report, and give the repair list to the property manager to price.",
+      "mode": "human-offline",
+      "modeBasis": "The walk-through happens on site.",
+      "actor": "principal",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "property-condition-assessment",
+        "lease-abstract"
+      ],
+      "produces": [
+        "site-visit-report"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-pr-92-156"
+      ],
+      "typeNotes": {
+        "industrial": "Confirm the clear height, dock and grade-level doors, truck court, power, sprinkler system and any yard, since industrial prospects screen on these first.",
+        "multifamily": "Add the unit's make-ready to the list. A Texas landlord rekeys each security device worked by a key, card or combination, at its own expense, no later than the seventh day after each tenant turnover date, and tests each smoke alarm at the start of the new resident's possession (Prop. Code 92.156, 92.258)."
+      }
+    },
+    {
+      "id": "hire-leasing-broker",
+      "title": "Sign a listing agreement with a licensed leasing broker, if the firm uses one",
+      "instruction": "Unless the firm or its property manager leases the space, a principal picks a leasing broker, checked as in hire-property-manager's check-licenses, and signs a listing agreement setting the term, the commission, when it is earned and payable, and the broker's lien right. In Texas, leasing for another for pay needs a broker's license, and an entity its own (Occ. Code 1101.002, 1101.351); exempt are the owner, its employees, the owning LLC's manager or managing member or LP's general partner, and their employees in the course of employment (1101.005). Counsel says whether that reaches a firm acting through an upper-tier entity. A broker may record a lien for a commission over $2,500 earned under a signed agreement disclosing that right; for a lease, it is void unless recorded before the 91st day after payment is due or, if sooner, the owner's recording of a later conveyance (Prop. Code 62.002, 62.021, 62.041).",
+      "mode": "human-online",
+      "modeBasis": "Choosing the broker and signing the agreement bind the owning entity, so a person does both.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "walk-the-space"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-oc-1101-002",
+        "tx-oc-1101-005",
+        "tx-pr-62"
+      ],
+      "typeNotes": {
+        "multifamily": "An on-site manager of an apartment complex may lease units without a real estate license (Occ. Code 1101.005); a residential rental locator needs one (1101.351)."
+      }
+    },
+    {
+      "id": "survey-market-rents",
+      "title": "Survey market rents for comparable space on one expense basis",
+      "instruction": "Build the comp set for space like this one, measured against the site visit report. Start from recent leases and asking terms for competing space that a principal exports from the firm's data subscriptions, written broker opinions in hand, and the firm's own recent leasing, gathered as in pull-sale-and-lease-comps: a request to a broker goes out only once a person approves it (request-broker-comps), and confirming calls are a person's (confirm-each-comp). For each comparable, record the source, the date, who confirmed it, the space size, the term, the expense basis (net, base year or gross), free rent, improvement allowance and commission. Restate each rent on one expense basis and figure its net effective rent with the lease-rent calculator, as in normalize-lease-comps. Leave out any figure no source supports, mark each comparable confirmed or unconfirmed, and say where the evidence is thin. Save the result as the comp set for this vacancy.",
+      "mode": "agent",
+      "modeBasis": "Normalizing comparables the firm holds is calculation work; signing in to subscriptions and calling parties are a person's.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "walk-the-space"
+      ],
+      "rules": [],
+      "calculators": [
+        "lease-rent"
+      ],
+      "market": "market-property-data",
+      "consumes": [
+        "site-visit-report",
+        "comp-set",
+        "rent-roll"
+      ],
+      "produces": [
+        "comp-set"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "set-the-asking-terms",
+      "title": "Set the asking rent, term and lease structure",
+      "instruction": "The principal writes the firm's asking position from the comp set, the site visit report, the leasing brief and the leasing broker's written opinion where one is hired. It sets the asking rent and its annual steps, the term range, the expense structure (net, base year or gross), whether the space is offered as is, finished by the landlord or with an allowance, whether it may be divided or combined with other space, and the most the firm will give in free rent and improvements. Each term sits inside the loan's leasing criteria or is marked as needing the lender's consent. Check each term against the leasing assumptions in the budget approved under set-the-annual-budget, and say why any differs. Record the reasoning and the date, so the broker, the budget and the later comparison all work from one written position.",
+      "mode": "human-online",
+      "modeBasis": "Setting the terms the firm will offer is the principals' decision.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-leasing-terms",
+        "survey-market-rents",
+        "hire-leasing-broker"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "comp-set",
+        "site-visit-report"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": [],
+      "typeNotes": {
+        "multifamily": "Set the rent and any concession policy for each floor plan rather than terms for one prospect, and apply them the same way to every applicant."
+      }
+    },
+    {
+      "id": "budget-the-concessions",
+      "title": "Budget improvements, commissions and free rent",
+      "instruction": "Budget the leasing cost on the asking terms. Run the lease-rent calculator on the allowance or landlord's work from a written estimate, commissions under any signed agreement or proposal, and free rent, then add the vacancy carrying costs it omits: taxes, insurance, utilities and unreimbursed upkeep. In a public accommodation or commercial facility, landlord's work affecting usability must make the altered area accessible as far as feasible and, in a primary function area, the path of travel to it within 20 percent of the work's cost (28 CFR 36.402, 36.403); tenant alterations in space only the tenant occupies put no such duty on the landlord (36.403(d)). In Texas, plans for a covered building's work estimated at $50,000 or more go for accessibility review (Gov't Code 469.101): budget TDLR's filing fee and the accessibility specialist's review and inspection. Submission follows run-a-capital-project's confirm-permits-and-notify-tenants. Mark anything unpriced not estimated.",
+      "mode": "agent",
+      "modeBasis": "Pricing from written estimates, the brokerage terms and the operating statement is document and calculation work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "cost": {
+        "text": "If the work must be registered for Texas accessibility review: TDLR project filing fee of $175, or a $300 late filing fee in its place for a project registered only after construction is complete. A registered accessibility specialist's own review and inspection fees are not on the schedule",
+        "usdMin": 175,
+        "usdMax": 300,
+        "sourceId": "tdlr-ab-fees"
+      },
+      "after": [
+        "walk-the-space",
+        "set-the-asking-terms"
+      ],
+      "rules": [],
+      "calculators": [
+        "lease-rent"
+      ],
+      "consumes": [
+        "site-visit-report",
+        "property-condition-assessment",
+        "trailing-12",
+        "underwriting-model"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-28-36-402",
+        "ecfr-28-36-403",
+        "ecfr-28-36-104",
+        "tx-gv-469",
+        "tac-16-68-30",
+        "tdlr-ab-fees"
+      ],
+      "typeNotes": {
+        "multifamily": "Housing the Fair Housing Act covers or exempts is not a commercial facility under the ADA rules (28 CFR 36.104), and Texas accessibility rules leave out the parts of apartments used only by residents and their guests (16 TAC 68.30(4)), so unit make-ready triggers neither. A leasing office or amenity open to the public may be covered; the design professional says which work is."
+      }
+    },
+    {
+      "id": "market-the-space",
+      "title": "Market the space and track inquiries and tours",
+      "instruction": "Draft the listing, the flyer and the listing-service entries from the site visit report and the asking position, stating only facts the firm can support: the area and how it was measured, the expense basis, the delivery condition and the date available. A person approves each item, and the broker, or a principal from the firm's own account, posts or sends it; any change to the asking terms goes back through the principal. Keep one log of every inquiry, tour and proposal: who, when, the source, the space needed, and the follow-up owed with its date. The broker or a principal gives the tours. Send the principal a short activity report on the schedule the principal sets, and route each proposal received to qualification.",
+      "mode": "agent",
+      "modeBasis": "Drafting the marketing and keeping the inquiry log is writing and records work; a person approves each item, and posting to a listing service is done from a person's account.",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "budget-the-concessions",
+        "hire-leasing-broker"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "market-property-data",
+      "consumes": [
+        "site-visit-report",
+        "comp-set"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-24-100-75"
+      ],
+      "typeNotes": {
+        "multifamily": "No ad, application, flyer, sign or statement about renting a unit may use words, photos, symbols or a choice of media that indicates a preference, limitation or discrimination because of race, color, religion, sex, handicap, familial status or national origin (24 CFR 100.75)."
+      }
+    },
+    {
+      "id": "qualify-the-tenant",
+      "title": "Qualify the prospective tenant's operating record and credit",
+      "instruction": "Summarize each prospect with a proposal from what it delivered: the tenant's and any guarantor's financial statements and tax returns, its operating history and plan for the space. The broker or a principal gets an individual guarantor's signed authorization before anyone orders that person's consumer report (15 U.S.C. 1681b(a)(2)) and, for a Texas lease of one year or longer, the tenant's written statement of the ownership, citizenship and domicile facts Property Code 5.253 turns on; counsel decides whether it applies. Check a Texas entity's right to transact business on the Comptroller's Franchise Tax Account Status Search, and screen the tenant, owners and guarantors in OFAC's Sanctions List Search, since U.S. persons must comply with OFAC sanctions; a possible match stops the lease and goes to counsel. If a consumer report contributes to a turn-down, counsel says whether 15 U.S.C. 1681m requires notice. Give the principal each summary without a recommendation.",
+      "mode": "agent-browser",
+      "modeBasis": "Reading the prospect's documents is document work and the status and sanctions checks are public lookups an agent runs in a browser; requests to the prospect, ordering a consumer report and judging a statute's reach are people's.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "market-the-space"
+      ],
+      "rules": [
+        "us-tx.franchise-tax.forfeiture",
+        "us-tx.property.foreign-acquisition-restrictions"
+      ],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-15-1681b",
+        "comptroller-status",
+        "ofac-faq-11",
+        "ofac-search-tool",
+        "tx-pr-5-252",
+        "tx-pr-92-3515",
+        "usc-15-1681m",
+        "ecfr-40-745-101",
+        "ecfr-40-745-103",
+        "ecfr-40-745-107"
+      ],
+      "typeNotes": {
+        "multifamily": "Screen each applicant against the written criteria, the same way for every applicant; counsel puts any Property Code 5.253 question into those criteria rather than asking it case by case. Make the printed tenant selection criteria and grounds for denial available with each application and get the signed acknowledgment; without the notice, a rejected applicant's fee and deposit are returned (Prop. Code 92.3515). An applicant not accepted by the seventh day after a completed application is deemed rejected (92.352). Where a consumer report contributed to a rejection, send the applicant the adverse action notice 15 U.S.C. 1681m requires. For target housing under 40 CFR 745.103 (generally housing built before 1978, less housing for the elderly or persons with disabilities and 0-bedroom units, unless a child under 6 lives or is expected to live there), give the EPA lead hazard pamphlet, disclose any known lead-based paint or hazards, and provide the records available to the firm, including any it can reasonably obtain, before accepting the application, so the applicant can review them and amend its offer (745.107). Exempt leases, such as 100 days or less with no renewal possible, are in 745.101.",
+        "industrial": "Ask what the tenant will store, handle or discharge, which permits its operation needs, and its record at its current site, and give the answers to the principal for the lease's environmental terms."
+      }
+    },
+    {
+      "id": "compare-the-proposals",
+      "title": "Compare proposals on net effective rent, the return hurdle and loan coverage",
+      "instruction": "Compare each qualified proposal on net effective rent, the return hurdle and loan coverage, using the calculators. Run the lease-rent calculator for its total and net effective rent with its free rent, allowance and commissions, and the expense-recovery calculator for what the tenant would reimburse under its proposed expense terms. Then test each in the underwriting model: the returns against the hurdle the principals set, with the returns-sensitivity calculator, and the loan's coverage and break-even occupancy with the leverage calculator, using the loan's definitions from the leasing brief. Show each tenant's qualification summary beside its numbers, and mark where a proposal falls outside the loan's leasing criteria or the asking position. Give the principal the comparison without choosing.",
+      "mode": "agent",
+      "modeBasis": "The calculators run from the proposals, the comp set and the model; choosing a tenant is the principals'.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "qualify-the-tenant",
+        "budget-the-concessions"
+      ],
+      "rules": [],
+      "calculators": [
+        "lease-rent",
+        "expense-recovery",
+        "returns-sensitivity",
+        "leverage"
+      ],
+      "market": "deal-pipeline-underwriting",
+      "consumes": [
+        "comp-set",
+        "underwriting-model",
+        "rent-roll",
+        "loan-documents"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner",
+      "sources": [],
+      "typeNotes": {
+        "multifamily": "For apartment units, test the floor-plan pricing and any concession policy against the budget, returns and coverage, rather than each application."
+      }
+    },
+    {
+      "id": "negotiate-the-terms",
+      "title": "Negotiate the chosen proposal to a signed term sheet",
+      "instruction": "A principal, or the leasing broker under its signed agreement, negotiates the chosen proposal within the written asking position; a term outside it goes back to the principal first. Each counterproposal says it binds no one until a lease is signed, in words counsel approves, and a person approves each before it goes. Check the tenant's use against the zoning and the certificate of occupancy, as in confirm-zoning-and-use, and against every exclusive or use limit in the other leases' abstracts. Agree the main terms in a non-binding term sheet or letter of intent that a principal signs: premises, term, rent and steps, expense terms, allowance and landlord work, deposit or letter of credit, guaranty, options, use and the delivery date. Keep a dated record of each proposal and response.",
+      "mode": "human-online",
+      "modeBasis": "Conceding terms binds the firm, so a person negotiates.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "compare-the-proposals"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "lease-abstract",
+        "underwriting-model",
+        "comp-set",
+        "zoning-report"
+      ],
+      "produces": [
+        "letter-of-intent"
+      ],
+      "basis": "practitioner",
+      "sources": [],
+      "typeNotes": {
+        "retail": "Settle percentage rent, radius limits, signage, co-tenancy and any opening covenant in the term sheet.",
+        "multifamily": "Apartment leases go on the property's standard form at the floor-plan price and concession policy; any change to the form goes to the principal and counsel."
+      }
+    },
+    {
+      "id": "ask-for-lender-consent",
+      "title": "Ask for the lender's consent where the loan requires it",
+      "instruction": "From the leasing brief, draft the consent request with the agreed terms, the tenant's qualification summary and, once counsel has it, the draft lease, with everything the loan documents say a request must include, to the notice address and by the method they name. Where no consent is needed, record the clause that says so, and send any notice of a new lease the documents still require. A person approves each request or notice before it goes. Calendar any period after which the documents deem consent given and check that date by hand. Send any condition the lender sets to counsel for the draft. Nothing is signed before a required consent arrives. In a JV, where the JV agreement requires the capital partner's consent before a request goes to the lender, get it first.",
+      "mode": "agent",
+      "modeBasis": "Drafting the request from the loan documents is document work; it speaks for the borrower, so a person approves it.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-leasing-terms",
+        "negotiate-the-terms"
+      ],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": [],
+      "typeNotes": {
+        "multifamily": "Where the loan documents let apartment leases on an approved form within stated terms go without consent, record that clause once for the property and ask only for a lease outside it."
+      }
+    },
+    {
+      "id": "draft-the-lease",
+      "title": "Have counsel draft the lease",
+      "instruction": "Counsel drafts the lease from the signed term sheet, the firm's standard form if any, and any lender conditions or leasing criteria. The draft covers premises, term, rent, expenses, allowance and landlord work, deposit or letter of credit, guaranty, options, use and exclusives, insurance, assignment, default and remedies, and subordination on the lender's terms. It says whether the landlord's statutory lien on tenant property is kept, waived or subordinated (Prop. Code 54.021). A Texas commercial landlord may assess a charge other than rent or physical damage only if the lease, an exhibit or an amendment states its amount or computation, or a statute or the common law allows it (93.012(a), (b)). In a place of public accommodation, landlord and tenant both carry ADA duties; the lease may allocate them, but each stays answerable to the public (28 CFR 36.201(b)). The firm checks the draft against the term sheet.",
+      "mode": "human-online",
+      "modeBasis": "Drafting a lease is legal drafting, which is counsel's.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "negotiate-the-terms"
+      ],
+      "rules": [
+        "us-tx.property.commercial-landlord-lien"
+      ],
+      "calculators": [],
+      "consumes": [
+        "letter-of-intent",
+        "lease-abstract",
+        "loan-documents"
+      ],
+      "produces": [
+        "lease",
+        "guaranty"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-pr-54-021",
+        "tx-pr-93-012",
+        "ecfr-28-36-201"
+      ],
+      "typeNotes": {
+        "multifamily": "Apartment leases are not drafted one by one: the property manager fills in the property's standard residential form, which counsel approved, and counsel sees only changes to it. Chapter 93 does not apply to rental property covered by chapter 92 (Prop. Code 93.001), and the building landlord's lien reaches nonresidential leases only; counsel applies the residential rules."
+      }
+    },
+    {
+      "id": "approve-and-sign",
+      "title": "Approve and sign the lease",
+      "instruction": "Put the final lease, comparison and lender's consent before the approvers the governing documents name, and record their written approval and conditions: in a syndication, those the deal entity agreement authorizes, with any investor vote it requires; in a fund, the fund's manager within the fund agreement and any investment committee it requires; in a joint venture, also the capital partner's written consent where the JV agreement requires it. Then the authorized person signs for the landlord, with the tenant and any guarantor. In Texas, a lease longer than one year, and a promise to answer for another's debt, are enforceable only on a writing or memorandum signed by the party to be charged or someone lawfully authorized to sign for it (Bus. & Com. Code 26.01). Electronic signatures work where the parties have agreed to deal electronically. Only a person releases any allowance or commission, on the signed terms.",
+      "mode": "human-online",
+      "modeBasis": "Approving and signing commit the owning entity, and releasing a payment moves money, so people do all three.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "ask-for-lender-consent",
+        "draft-the-lease"
+      ],
+      "rules": [
+        "us-tx.contracts.statute-of-frauds",
+        "us-tx.ueta",
+        "us-fed.esign"
+      ],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "underwriting-model"
+      ],
+      "produces": [
+        "lease",
+        "guaranty"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-bc-26-01",
+        "ecfr-40-745-103",
+        "ecfr-40-745-113"
+      ],
+      "typeNotes": {
+        "multifamily": "The approvers approve the standard form, floor-plan pricing and concession policy once; within them the property manager signs each lease under the management agreement's authority. Lead disclosures come before the application is accepted (qualify-the-tenant). For target housing, include the lead warning statement and disclosures in or with each lease, and keep the signed copy at least three years from the start of the lease (40 CFR 745.103, 745.113)."
+      }
+    },
+    {
+      "id": "record-and-deliver",
+      "title": "Update the records and send the lender and investors what their documents require",
+      "instruction": "Update the records and send the lender and investors what their documents require. A person receives the deposit or original letter of credit, insurance certificate and any guaranty; record the deposit: a Texas commercial landlord keeps accurate records of all security deposits (Prop. Code 93.008). Abstract the lease, calendar its dates as renew-a-tenant's build-the-lease-calendar does, update the rent roll and re-run lease-rollover. Prepare the SNDA, any lender-form tenant estoppel and a commencement date memorandum, check each signed return against the lease, and deliver them with the lease to the lender. Hand run-a-capital-project any landlord's work with its scope, plans, delivery date and allowance. Draft the report the governing agreement requires, tying each figure to the lease and the model. Rule 10b-5 bars material misstatements and misleading omissions in connection with buying or selling securities; where interests are being sold, counsel decides what to say. A principal approves each item first.",
+      "mode": "agent",
+      "modeBasis": "Updating records and filling forms from the signed lease is document work; a person takes in the deposit and original instruments, and anything sent to the tenant, the lender or investors goes with a person's approval.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "approve-and-sign"
+      ],
+      "rules": [
+        "us-tx.property.commercial-security-deposit",
+        "us-fed.exchange-act.rule-10b-5"
+      ],
+      "calculators": [
+        "lease-rollover",
+        "deadline-calendar"
+      ],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "lease",
+        "lease-abstract",
+        "rent-roll",
+        "loan-documents",
+        "deal-entity-agreement",
+        "jv-agreement",
+        "investor-register",
+        "underwriting-model"
+      ],
+      "produces": [
+        "lease-abstract",
+        "rent-roll",
+        "snda",
+        "tenant-estoppel"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-pr-93-008",
+        "tx-pr-93-012",
+        "tx-pr-92-106",
+        "ecfr-240-10b-5"
+      ],
+      "typeNotes": {
+        "multifamily": "No SNDA, estoppel, commencement memorandum or investor report per apartment lease unless the loan or governing documents call for one; update the rent roll and the deposit records. Chapter 93's deposit rules do not apply to rental property covered by chapter 92 (Prop. Code 93.001); a residential landlord keeps accurate records of all security deposits under 92.106."
+      }
+    }
+  ],
+  "outlineSteps": []
 }

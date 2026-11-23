@@ -7,34 +7,750 @@
   "phase": "operate",
   "order": 122,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
+  "lastVerified": "2026-11-21",
   "situation": {
     "trigger": "A fire, storm or flood damages the building or makes space unusable.",
     "urgency": "hours"
   },
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "requires": [
+    "bind-property-insurance",
+    "take-over-operations",
+    "abstract-the-leases"
+  ],
+  "consumes": [
+    "insurance-binder",
+    "loan-documents",
+    "lease",
+    "lease-abstract",
+    "rent-roll",
+    "trailing-12",
+    "property-condition-assessment",
+    "zoning-report",
+    "survey",
+    "underwriting-model",
+    "investor-register",
+    "deal-entity-agreement",
+    "jv-agreement"
+  ],
+  "produces": [
+    "rent-roll",
+    "underwriting-model"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Make sure everyone is safe and call emergency services if needed",
-    "Secure the site and stop further damage",
-    "Photograph and document the damage before cleanup",
-    "Notify the insurer and open a claim",
-    "Notify the lender as the loan requires",
-    "Read each lease's casualty clause for abatement, rebuild and termination rights",
-    "Hire mitigation contractors and keep every receipt",
-    "Get repair estimates and work with the adjuster",
-    "Re-test cash flow and loan coverage with abated rent",
-    "Calendar the lease and loan restoration deadlines",
-    "Tell tenants and investors what the leases and loan provide",
-    "Record the claim, payments and repairs in the property file"
-  ]
+  "sources": [
+    {
+      "id": "ecfr-44-61-a2",
+      "url": "https://www.ecfr.gov/current/title-44/part-61",
+      "title": "44 CFR part 61, Standard Flood Insurance Policy: Appendix A(2), General Property Form (I.A, III.D, V.A, V.D, VII.G, VII.J, VII.M, VII.N, VII.O, VII.P and VII.R), and Appendix A(1), Dwelling Form (I.A)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Within 60 days after the loss, send us a proof of loss, which is your statement of the amount you are claiming under the policy",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-44-59-1",
+      "url": "https://www.ecfr.gov/current/title-44/section-59.1",
+      "title": "44 CFR 59.1, Definitions (substantial damage and substantial improvement)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "the cost of restoring the structure to its before damaged condition would equal or exceed 50 percent of the market value of the structure",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-44-60-3",
+      "url": "https://www.ecfr.gov/current/title-44/section-60.3",
+      "title": "44 CFR 60.3, Flood plain management criteria for flood-prone areas",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "fema-msc",
+      "url": "https://msc.fema.gov/portal/home",
+      "title": "FEMA Flood Map Service Center (search by address)",
+      "publisher": "Federal Emergency Management Agency",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "floodsmart-icc",
+      "url": "https://agents.floodsmart.gov/topics/handling-claims/increased-cost-of-compliance",
+      "title": "What is Increased Cost of Compliance (ICC) Coverage?",
+      "publisher": "FEMA National Flood Insurance Program (FloodSmart for agents)",
+      "accessed": "2026-11-21",
+      "quote": "Their building is determined by the community building official to be substantially or repeatedly damaged by floods",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-61-145",
+      "url": "https://www.ecfr.gov/current/title-40/section-61.145",
+      "title": "40 CFR 61.145, Standard for demolition and renovation (asbestos)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "thoroughly inspect the affected facility or part of the facility where the demolition or renovation operation will occur for the presence of asbestos",
+      "tier": "primary"
+    },
+    {
+      "id": "epa-asbestos-neshap",
+      "url": "https://www.epa.gov/asbestos/overview-asbestos-national-emission-standards-hazardous-air-pollutants-neshap",
+      "title": "Overview of the Asbestos National Emission Standards for Hazardous Air Pollutants (NESHAP)",
+      "publisher": "U.S. Environmental Protection Agency",
+      "accessed": "2026-11-21",
+      "quote": "notify the appropriate delegated entity (often a state agency) before any demolition",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-oc-1954",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1954.htm",
+      "title": "Texas Occupations Code, Chapter 1954, Asbestos health protection (Sections 1954.002 and 1954.101)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "perform an asbestos survey or inspection of a public building, including the sampling and assessment of exposure",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-92",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.92.htm",
+      "title": "Texas Property Code, Chapter 92 (Section 92.054, Casualty loss; Section 92.055, Closing the rental premises)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "either the landlord or the tenant may terminate the lease by giving written notice to the other any time before repairs are completed",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-93",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.93.htm",
+      "title": "Texas Property Code, Chapter 93, Commercial tenancies (Sections 93.001 to 93.013)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-542",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.542.htm",
+      "title": "Texas Insurance Code, Chapter 542, Subchapter B, Prompt payment of claims (Sections 542.051 to 542.061)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "notify a claimant in writing of the acceptance or rejection of a claim not later than the 15th business day",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-542a",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.542A.htm",
+      "title": "Texas Insurance Code, Chapter 542A, Certain consumer actions related to claims for property damage (Sections 542A.001 to 542A.004)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "the claimant must give written notice to the person in accordance with this section as a prerequisite to filing the action",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-2210",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.2210.htm",
+      "title": "Texas Insurance Code, Chapter 2210, Texas Windstorm Insurance Association (Sections 2210.205, 2210.251, 2210.2515, 2210.573, 2210.5731, 2210.574, 2210.5741, 2210.575 and 2210.577)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "an insured must file a claim under an association policy not later than the first anniversary of the date on which the damage to property",
+      "tier": "primary"
+    },
+    {
+      "id": "twia-claims",
+      "url": "https://www.twia.org/claims/",
+      "title": "Claims process: reporting a claim, claims deadlines, temporary repairs and contractor estimates",
+      "publisher": "Texas Windstorm Insurance Association",
+      "accessed": "2026-11-21",
+      "quote": "Do not make any permanent repairs until you discuss your claim with a TWIA claims examiner.",
+      "tier": "secondary"
+    },
+    {
+      "id": "tac-28-5-4605",
+      "url": "https://www.law.cornell.edu/regulations/texas/28-Tex-Admin-Code-SS-5-4605",
+      "title": "28 Tex. Admin. Code 5.4605, Items not requiring an inspection for windstorm and hail insurance coverage through the Texas Windstorm Insurance Association",
+      "publisher": "Legal Information Institute (Texas Department of Insurance rule text)",
+      "accessed": "2026-11-21",
+      "quote": "temporary repairs after a storm",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-4102",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.4102.htm",
+      "title": "Texas Insurance Code, Chapter 4102, Public insurance adjusters (Sections 4102.051, 4102.103, 4102.104, 4102.158 and 4102.163)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "The total commission received may not exceed 10 percent of the amount of the insurance settlement on the claim.",
+      "tier": "primary"
+    },
+    {
+      "id": "tdi-public-adjusters",
+      "url": "https://www.tdi.texas.gov/tips/public-adjusters.html",
+      "title": "Public adjusters: What to know before you hire one to help with your claim",
+      "publisher": "Texas Department of Insurance",
+      "accessed": "2026-11-21",
+      "quote": "Under Texas law, public insurance adjusters who work on your claim can’t act as your contractor.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bc-27",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.27.htm",
+      "title": "Texas Business and Commerce Code, Chapter 27 (Section 27.02, Goods or services paid for by insurance proceeds: payment of deductible required)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "Texas law requires a person insured under a property insurance policy to pay any deductible applicable to a claim made under the policy.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-ins-707",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.707.htm",
+      "title": "Texas Insurance Code, Chapter 707, Payment of insurance deductible (Sections 707.001, 707.002 and 707.004)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "until the insurer receives reasonable proof of payment by the policyholder of any deductible applicable to the claim",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-oc-1958",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1958.htm",
+      "title": "Texas Occupations Code, Chapter 1958, Mold assessors and remediators (Sections 1958.101, 1958.102, 1958.154 and 1958.155)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "A license holder may not perform both mold assessment and mold remediation on the same project.",
+      "tier": "primary"
+    },
+    {
+      "id": "tdlr-license-search",
+      "url": "https://www.tdlr.texas.gov/LicenseSearch/",
+      "title": "TDLR License Data Search (mold assessment and mold remediation license types)",
+      "publisher": "Texas Department of Licensing and Regulation",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-11",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.11.htm",
+      "title": "Texas Tax Code, Chapter 11 (Section 11.35, Temporary exemption for qualified property damaged by disaster; Section 11.43(s), application deadline)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "not later than the 105th day after the date the governor declares the area",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-form-50-312",
+      "url": "https://comptroller.texas.gov/forms/50-312.pdf",
+      "title": "Form 50-312, Temporary Exemption Property Damaged by Disaster",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "quote": "File this form and all supporting documentation with the appraisal district office in each county where property is located",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "To make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-1033",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1033",
+      "title": "26 U.S.C. 1033, Involuntary conversions (subsections (a)(2) and (h)(2))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "2 years after the close of the first taxable year in which any part of the gain upon the conversion is realized",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-pub-547",
+      "url": "https://www.irs.gov/pub/irs-pdf/p547.pdf",
+      "title": "Publication 547 (2025), Casualties, Disasters, and Thefts",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "If a partnership or a corporation owns the stolen or destroyed property, only the partnership or corporation can choose to postpone reporting the gain.",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "get-everyone-safe",
+      "title": "Get everyone out safely and call emergency services",
+      "instruction": "Get every occupant, worker and visitor clear of the damage, and call emergency services for fire, injury, structural danger, a gas leak or downed lines. Keep everyone out until the fire department or the building official allows entry, and have the utilities shut off gas, power or water where the damage calls for it. Write down who was hurt, what happened and when, and who responded; report any injury to the liability insurer through the broker, and confirm the employer has made any report the law requires. If fuel, chemicals or other hazardous material escaped, also follow environmental-release-on-site. Then tell the principals, the property manager, the broker and, in a joint venture, the capital partner as the JV agreement requires, and name one person to speak for the firm.",
+      "mode": "human-offline",
+      "modeBasis": "Clearing a building and calling responders happens on site and by phone; an agent can only keep the contact list.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": [],
+      "typeNotes": {
+        "multifamily": "Account for the residents of every unit, keep a list of who cannot return and how to reach them, and tell residents where updates will be posted."
+      }
+    },
+    {
+      "id": "hire-mitigation",
+      "title": "Stop further damage under signed contracts with licensed firms",
+      "instruction": "Before any contractor likely to be paid from a claim starts, a principal signs its written contract (scope, rates, a not-to-exceed amount); pay against invoices and lien waivers. The contractors then stop the water, tarp, board up and make temporary repairs only, drying out at once because the federal flood policy excludes mold damage from failing to maintain the property after a flood recedes. In Texas a contract of $1,000 or more paid from a claim must print the statutory deductible notice, and the contractor may not waive or rebate it without the insurer's consent. Mold remediation of 25 contiguous square feet or more needs a licensed remediator, not the project's assessor. Before tear-out or demolition, have the area inspected for asbestos as run-a-capital-project describes, with Texas-licensed firms surveying and abating in a commercial or five-plus-unit building; any federal notice is due by the next working day for emergency work.",
+      "mode": "human-online",
+      "modeBasis": "Signing contracts and directing emergency work on site bind the firm; an agent can check licenses and compare scopes.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "get-everyone-safe"
+      ],
+      "rules": [
+        "us-tx.property.mechanics-liens"
+      ],
+      "calculators": [],
+      "consumes": [
+        "insurance-binder"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-44-61-a2",
+        "twia-claims",
+        "tx-bc-27",
+        "tx-ins-707",
+        "tx-oc-1958",
+        "tdlr-license-search",
+        "ecfr-40-61-145",
+        "epa-asbestos-neshap",
+        "tx-oc-1954"
+      ],
+      "typeNotes": {
+        "multifamily": "In Texas an owner of residential property with fewer than 10 units, or its manager or employee, may do mold work there without a mold license unless that manager or employee does mold work for the public. Neither the federal asbestos rule nor Texas asbestos licensing reaches an apartment building of four or fewer units.",
+        "industrial": "Texas asbestos licensing does not reach an industrial facility whose access is limited principally to employees because of a hazardous process, or a manufacturing facility open only to workers and invited guests under controlled conditions; the federal asbestos rule still applies."
+      }
+    },
+    {
+      "id": "document-the-damage",
+      "title": "Photograph and list the damage before cleanup",
+      "instruction": "Before cleanup or tear-out, photograph and video every affected area with the date, entering tenant space as the leases allow in an emergency: each side of the exterior, the roofs, each damaged room or suite, the waterline or burn pattern, equipment nameplates and damaged contents, and undamaged areas for comparison. If hurricane-forecast opened this playbook, compare against its pre-storm shot list and photos. Keep damaged property apart and in order, with samples, for the insurers to examine; tell each insurer before wet material is torn out, and hold permanent repairs and disposal until a claims examiner is consulted. The agent builds the loss inventory from the files, condition assessment and asset records: each item's quantity, description, actual cash value and amount of loss, with bills and receipts, as the federal flood policy requires. Record which spaces are unusable and since when; rent abatement and rent loss cover turn on it.",
+      "mode": "human-offline",
+      "modeBasis": "Photographing the damage is done on site by a person; building the inventory from the photos is agent work.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "get-everyone-safe"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "rent-roll",
+        "property-condition-assessment"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-44-61-a2",
+        "twia-claims"
+      ]
+    },
+    {
+      "id": "report-the-loss",
+      "title": "Report the loss in writing to each insurer and to the lender",
+      "instruction": "Once a person approves, send the lender and each insurer that may cover the loss written notice as soon as people are safe. List each such policy (property, flood, windstorm, rent loss, liability) with its reporting method, deadline and deductible; in a fund, note any shared blanket limit or deductible. Each notice, copied to the broker, gives policy number, date, cause, damage, unusable spaces and a contact. Federal flood policies require prompt written notice; a Texas Windstorm Insurance Association (TWIA) claim is due within one year of the damage (the commissioner may add up to 180 days for good cause); a Texas prompt-payment insurer must acknowledge and request what it needs within 15 days, or 30 business days if surplus lines. Draft the lender's notice from the loan's casualty clause. If hurricane-forecast opened this playbook, start the list from its coverage and contact sheets and attach its damage summary.",
+      "mode": "agent",
+      "modeBasis": "The policy terms are in the insurance file and the notices are drafting; each goes out only after a person approves it.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "get-everyone-safe"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "insurance-binder",
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-44-61-a2",
+        "tx-ins-2210",
+        "tx-ins-542",
+        "twia-claims"
+      ],
+      "typeNotes": {
+        "multifamily": "A residential building of four or fewer units is insured on the federal flood Dwelling Form, not the General Property Form this record cites; read that form's own claim terms."
+      }
+    },
+    {
+      "id": "read-casualty-terms",
+      "title": "Read each lease's and the loan's casualty and restoration terms",
+      "instruction": "From the lease abstracts, and the leases where an abstract is silent, list for each tenant when and how much rent abates, who restores what, the landlord's deadlines to estimate and finish restoration, each side's termination rights and notice periods, and how deductibles pass through. From the loan documents, list who adjusts and settles the claim and above what amount the lender joins, where proceeds go, what releases them to restore (plans, budget, a balancing deposit), when the lender may apply them to the debt, and any restoration deadline; a federal flood policy pays building losses to the insured and each mortgagee as interests appear. In a joint venture, list the JV agreement's terms on casualty notice, emergency spending outside the budget, and control of the claim and restoration. Texas Property Code chapter 93 has no casualty section, so the commercial lease governs; residential leases also follow section 92.054.",
+      "mode": "agent",
+      "modeBasis": "The terms are in the signed leases, abstracts and loan documents; reading and listing them is document work.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "lease-abstract",
+        "lease",
+        "loan-documents",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-prop-93",
+        "tx-prop-92",
+        "ecfr-44-61-a2"
+      ],
+      "typeNotes": {
+        "multifamily": "In Texas, if a casualty not caused by the negligence or fault of the resident, the resident's family, guests or invitees leaves a unit as a practical matter totally unusable, either side may end the lease by written notice before repairs are finished, and the resident gets a pro rata rent refund from move-out and any deposit owed. Partial unusability reduces rent only by court judgment unless the written lease says otherwise, and for an insured casualty the repair period runs from the landlord's receipt of the insurance proceeds.",
+        "industrial": "In a single-tenant net lease the tenant may insure and restore the building; read who controls the claim and the proceeds, and whether rent continues while the tenant restores.",
+        "retail": "Read whether damage to an anchor's or major tenant's space triggers co-tenancy rent or termination rights in other leases, and any restoration duty in a reciprocal easement agreement.",
+        "office": "Read how abatement is measured when only some floors or suites are out of use, and whether lost access or building services counts."
+      }
+    },
+    {
+      "id": "tell-tenants-and-investors",
+      "title": "Tell tenants and investors what happened and what the documents provide",
+      "instruction": "Draft the notices the leases require, sent as each lease's notice clause sets: the casualty, spaces out of use, rent abatement as the lease provides, the restoration estimate when due, and how to reach the firm. Update the rent roll for abatements and hand billing changes to collect-rent-and-reconcile-cam before the next bill. Once retest-cash-and-loan has run, draft the investor update: what happened, that people are safe, coverage and deductibles, the claim's status, the effect on cash flow, distributions and the loan, and the next update's date; in a joint venture the capital partner gets it directly, and in a fund add any material-loss report the fund agreement requires. Rule 10b-5 forbids a material misstatement, or an omission that makes what is said misleading, when a security is bought or sold; where interests change hands or capital is sought, counsel reviews the update. A person approves each notice before it goes.",
+      "mode": "agent",
+      "modeBasis": "Drafting from the lease terms and the forecast is writing work; nothing goes out without a person's approval.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-casualty-terms"
+      ],
+      "market": "investor-portals-fund-admin",
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5",
+        "us-tx.securities.offer-sale-liability"
+      ],
+      "calculators": [],
+      "consumes": [
+        "lease-abstract",
+        "rent-roll",
+        "investor-register",
+        "underwriting-model"
+      ],
+      "produces": [
+        "rent-roll"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5"
+      ]
+    },
+    {
+      "id": "work-with-the-adjuster",
+      "title": "Meet the adjuster and get independent repair estimates",
+      "instruction": "A principal or the property manager walks each adjuster through the damage with the inventory and photos, and gets contractor estimates, and an engineer's report where structure, roof or systems are in doubt, for the insurer. A Texas prompt-payment insurer accepts or rejects in writing within 15 business days of receiving everything it requested, or says why it needs longer and decides within 45 days of saying so, then pays within 5 business days, or 20 if surplus lines; each deadline runs 15 days longer after a weather-related catastrophe or major natural disaster the commissioner defines. TWIA decides within 60 days of the later of the claim or the information it requested. A public adjuster needs a Texas license and a state-approved contract the firm may cancel in writing within 72 hours of signing, takes at most 10 percent of the settlement and may not do the repairs.",
+      "mode": "human-offline",
+      "modeBasis": "Walking the property with the adjuster and the contractors is done in person; an agent tracks the requests and the dates.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "document-the-damage",
+        "report-the-loss"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "property-condition-assessment",
+        "insurance-binder"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-ins-542",
+        "tx-ins-2210",
+        "twia-claims",
+        "tx-ins-4102",
+        "tdi-public-adjusters"
+      ]
+    },
+    {
+      "id": "check-rebuild-rules",
+      "title": "Check whether rebuilding must meet current flood and building rules",
+      "instruction": "Look up the flood zone on FEMA's Flood Map Service Center, and draft a principal's question to the floodplain official: will the community find the building substantially damaged, meaning repairs cost at least half its pre-damage market value? In a special flood hazard area it must then meet elevation or floodproofing standards. A federal flood policy with building coverage pays up to $30,000 of that work if the community, enforcing its floodplain rules, finds the building substantially or repeatedly flood-damaged and the work is done within two years; it otherwise excludes code costs. Under TWIA cover, permanent repairs must meet its building code, with prior notice to the Department of Insurance and an engineer-backed certificate of compliance, to keep the building insurable; temporary storm repairs need no inspection. List from the zoning report other permits, code upgrades or zoning limits changing cost or time, against ordinance or law coverage.",
+      "mode": "agent-browser",
+      "modeBasis": "The flood map and the federal rules are public; the conversation with the local official is a principal's.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "document-the-damage"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "zoning-report",
+        "survey",
+        "insurance-binder"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "fema-msc",
+        "ecfr-44-59-1",
+        "ecfr-44-60-3",
+        "ecfr-44-61-a2",
+        "floodsmart-icc",
+        "tx-ins-2210",
+        "tac-28-5-4605"
+      ]
+    },
+    {
+      "id": "retest-cash-and-loan",
+      "title": "Re-test cash flow and loan coverage with rent abated",
+      "instruction": "Rebuild the operating forecast month by month through the restoration: the rent each lease abates, tenants that may terminate, rent loss or business income cover with its waiting period and limit, deductibles and costs paid before insurance pays, and what the leases let the firm recover. A federal flood policy pays only direct physical loss and excludes lost revenue, so rent a lease abates after a flood is uninsured unless a rent loss policy covers flood; for a commercial or five-plus-unit building it also settles at actual cash value, leaving depreciation unpaid. In Texas, an insurer may withhold recoverable depreciation until it sees proof the deductible was paid. Run the income-value and leverage calculators for coverage and debt yield as the loan defines them, and mark each month's cash gap and what could fund it. If a covenant fails, open loan-covenant-breach; if a planned distribution cannot be paid, open distribution-shortfall.",
+      "mode": "agent",
+      "modeBasis": "The forecast follows from the leases, the policies and the loan terms run through live calculators.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "report-the-loss",
+        "read-casualty-terms"
+      ],
+      "market": "deal-pipeline-underwriting",
+      "rules": [],
+      "calculators": [
+        "income-value",
+        "leverage"
+      ],
+      "consumes": [
+        "rent-roll",
+        "lease-abstract",
+        "trailing-12",
+        "loan-documents",
+        "underwriting-model"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-44-61-a2",
+        "tx-ins-707"
+      ],
+      "typeNotes": {
+        "multifamily": "Count each unit out of service, and each resident who ends a lease after the casualty, as lost rent until the unit is restored and re-leased.",
+        "retail": "Add lost percentage rent and any co-tenancy rent reductions the damage triggers in other leases."
+      }
+    },
+    {
+      "id": "calendar-the-deadlines",
+      "title": "Calendar the claim, lease, loan and tax deadlines",
+      "instruction": "Calendar every date with source and owner: each policy's claim, appraisal and suit deadlines, insurer response dates, and the leases' and loan's notice, restoration and termination dates. Federal flood suits are due within one year of a written denial. TWIA notices state its dates: from a coverage notice, 60 days to demand appraisal (missing it waives the dispute) and 545 days to document repairs for replacement cost; from a denial notice, two years to give notice of suit and sue. Texas requires written notice at least 61 days before suing another insurer over damage from natural forces; counsel times each notice. If the governor declares a disaster area and a building, or rendered income-producing personal property, is at least 15 percent damaged as the chief appraiser determines, prepare Form 50-312 for a principal to file with the appraisal district within 105 days of the declaration, extendable for good cause.",
+      "mode": "agent",
+      "modeBasis": "The dates follow from the policies, leases, loan documents and statutes; a person signs anything filed.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "report-the-loss",
+        "read-casualty-terms"
+      ],
+      "rules": [
+        "us-tx.tax.market-value"
+      ],
+      "calculators": [
+        "deadline-calendar",
+        "property-tax"
+      ],
+      "consumes": [
+        "insurance-binder",
+        "lease-abstract",
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-44-61-a2",
+        "tx-ins-542a",
+        "tx-ins-2210",
+        "twia-claims",
+        "tx-tax-11",
+        "cpa-form-50-312"
+      ]
+    },
+    {
+      "id": "sign-proofs-of-loss",
+      "title": "Sign each proof of loss and send any appraisal demand before its deadline",
+      "instruction": "A principal signs each proof of loss by its calendared date, after checking every figure against the inventory and the repair estimates, without waiting for the decision whether to restore. The federal flood proof of loss is due within 60 days of the loss, signed and sworn, and states the insured's own judgment of the amount, even if the adjuster helped prepare it; if the insurer rejects it, an amended proof may be filed within the same 60 days, and the claim is payable 60 days after the insurer receives the proof and the amount is settled. Where the firm disputes the amount a TWIA claim was accepted for, counsel sends the appraisal demand within 60 days of the coverage notice, since missing it waives the dispute. Any other policy's appraisal clause and any presuit notice follow the policy and counsel's timing.",
+      "mode": "human-online",
+      "modeBasis": "A sworn proof of loss and an appraisal demand bind the firm and rest on a principal's own judgment of the amount.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "work-with-the-adjuster",
+        "calendar-the-deadlines"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "insurance-binder"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-44-61-a2",
+        "tx-ins-2210",
+        "twia-claims"
+      ]
+    },
+    {
+      "id": "jv-partner-consents",
+      "title": "For a JV, get the capital partner's consent to the restoration plan and settlement",
+      "instruction": "Send the capital partner the loss inventory, the adjuster's and contractors' estimates, the rebuild rules found, the cash forecast, and the proposed restoration plan and claim settlement. Settling a large claim, deciding whether to restore, ending leases, funding a cash gap and changing the loan are usually major decisions a JV agreement reserves for the capital partner; get its written consent before any of them is signed, and confirm how any added capital is credited and whether the change affects the promote.",
+      "mode": "human-online",
+      "modeBasis": "The partner's consent is its own decision under the JV agreement.",
+      "actor": "investor",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "work-with-the-adjuster",
+        "check-rebuild-rules",
+        "retest-cash-and-loan"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "rules": [],
+      "calculators": [
+        "waterfall-promote"
+      ],
+      "consumes": [
+        "jv-agreement",
+        "underwriting-model"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "decide-and-settle",
+      "title": "Decide whether to restore, and sign the claim settlement",
+      "instruction": "The principals decide, with the lender where the loan gives it a say and the investors where the deal entity agreement reserves the decision to their vote: restore as before, restore differently, or, only where the leases and loan allow, not restore; and whether to accept each insurer's final adjustment. Send any landlord termination notice the leases or Property Code 92.054 allow only after this decision and any JV consent, within the period calendared. Before signing a lease termination, release or settlement with anyone who may have caused the loss, confirm with each insurer that it does not give up the insurer's recovery rights. Counsel handles any presuit notice or suit. Endorse each proceeds check, which may also name the lender, and deposit it as the loan directs; the restoration follows run-a-capital-project.",
+      "mode": "human-online",
+      "modeBasis": "Choosing whether to rebuild and signing a settlement or release bind the firm.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "work-with-the-adjuster",
+        "check-rebuild-rules",
+        "retest-cash-and-loan",
+        "calendar-the-deadlines",
+        "sign-proofs-of-loss",
+        "jv-partner-consents"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "loan-documents",
+        "lease-abstract",
+        "underwriting-model",
+        "deal-entity-agreement",
+        "insurance-binder"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-44-61-a2",
+        "tx-prop-92",
+        "tx-ins-542a"
+      ],
+      "typeNotes": {
+        "multifamily": "Under Texas Property Code section 92.054, a landlord ending a lease because a casualty left the unit totally unusable gives written notice before repairs are finished; keep a copy. A landlord that decides to demolish a unit or stop renting it as housing closes it by certified-mail notice, return receipt requested, to the resident and to the local health officer and building inspector, if any; the unit may not be reoccupied for six months after the resident moves out, and if the resident had given a repair notice the landlord pays reasonable moving expenses and a pro rata rent refund (section 92.055)."
+      }
+    },
+    {
+      "id": "record-the-claim",
+      "title": "Record the claim, payments and repairs, and give the CPA the tax facts",
+      "instruction": "Keep one claim file per policy: notices and acknowledgments, adjuster reports, estimates, each proof of loss, each payment and whether the lender held or released it, proof the deductible was paid, mitigation and repair invoices with their lien waivers, and any certificate of mold remediation, which goes to a buyer in any sale within five years of its issue. Update the rent roll for any lease termination and the underwriting model, and hand the rebuild to run-a-capital-project and the loss history to renew-property-insurance. For the CPA: proceeds above the property's adjusted basis are gain that may be deferred by buying similar replacement property within the set period, generally two years after the close of the first tax year in which gain is realized, and after a federally declared disaster any tangible business property counts as similar; when a partnership owns the property, only the partnership can elect.",
+      "mode": "agent",
+      "modeBasis": "Filing the claim records and updating the rent roll and model is record work; the tax election is the CPA's call.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-and-settle"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "insurance-binder"
+      ],
+      "produces": [
+        "rent-roll",
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-26-1033",
+        "irs-pub-547",
+        "tx-ins-707",
+        "tx-oc-1958"
+      ]
+    }
+  ],
+  "outlineSteps": []
 }

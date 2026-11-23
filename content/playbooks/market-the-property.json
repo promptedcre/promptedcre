@@ -7,28 +7,609 @@
   "phase": "exit",
   "order": 510,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "decide-when-to-sell",
+    "select-a-listing-broker"
+  ],
+  "consumes": [
+    "rent-roll",
+    "lease",
+    "lease-abstract",
+    "trailing-12",
+    "comp-set",
+    "underwriting-model",
+    "loan-documents",
+    "owner-title-policy",
+    "survey",
+    "phase-i-esa",
+    "property-condition-assessment",
+    "zoning-report",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "investor-register",
+    "letter-of-intent"
+  ],
+  "produces": [
+    "offering-memorandum"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Name the likely buyers for the property's type and stage",
-    "Normalize the NOI and source every market claim",
-    "Assemble the data room: rent roll, leases, contracts, statements and reports",
-    "Review the offering package before it goes out",
-    "Set the marketing timeline and the offer date",
-    "Release the package to buyers who sign the confidentiality agreement",
-    "Run tours with the tenant notice the leases require",
-    "Answer buyer questions in one log shared with every bidder",
-    "Collect offers on a common form",
-    "Summarize the offers for the decision makers"
-  ]
+  "sources": [
+    {
+      "id": "tx-bcc-27",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.27.htm",
+      "title": "Texas Business and Commerce Code chapter 27, Fraud (section 27.01, fraud in real estate and stock transactions)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "false representation of a past or existing material fact",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bcc-26",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.26.htm",
+      "title": "Texas Business and Commerce Code chapter 26, Statute of Frauds (section 26.01)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "a contract for the sale of real estate",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bcc-521",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.521.htm",
+      "title": "Texas Business and Commerce Code chapter 521, Unauthorized Use of Identifying Information (sections 521.002 and 521.052)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "A business shall implement and maintain reasonable procedures, including taking any appropriate corrective action, to protect from unlawful use or disclosure any sensitive personal information",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-5-notices",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.5.htm",
+      "title": "Texas Property Code chapter 5, Conveyances (sections 5.011, 5.014, 5.0141 and 5.019, seller's notices)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "shall be given to the prospective purchaser before the execution of a binding contract of purchase and sale",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-water-49",
+      "url": "https://tcss.legis.texas.gov/resources/WA/htm/WA.49.htm",
+      "title": "Texas Water Code chapter 49 (sections 49.452, 49.4521, 49.453 and 49.455, notice to purchasers)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "The notice required by this section shall be given to the prospective purchaser prior to execution of a binding contract of sale and purchase",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-water-13",
+      "url": "https://tcss.legis.texas.gov/resources/WA/htm/WA.13.htm",
+      "title": "Texas Water Code chapter 13, Water Rates and Services (section 13.257, notice to purchasers in a certificated service area)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "The notice must be given to the prospective purchaser before the execution of a binding contract of purchase and sale.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-nr-33",
+      "url": "https://tcss.legis.texas.gov/resources/NR/htm/NR.33.htm",
+      "title": "Texas Natural Resources Code chapter 33 (section 33.135, notice to purchaser of coastal area property)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "real property adjoining and abutting the tidally influenced waters of the state must include the following notice as a part of a written executory contract",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-nr-61",
+      "url": "https://tcss.legis.texas.gov/resources/NR/htm/NR.61.htm",
+      "title": "Texas Natural Resources Code chapter 61 (section 61.025, disclosure to purchaser of property seaward of the Gulf Intracoastal Waterway)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "real property located seaward of the Gulf Intracoastal Waterway",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-occ-1101",
+      "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.1101.htm",
+      "title": "Texas Occupations Code chapter 1101, Real Estate Brokers and Sales Agents (section 1101.558, representation disclosure)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "At the time of a license holder's first substantive communication with a party relating to a proposed transaction regarding specific real property",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-745-103",
+      "url": "https://www.ecfr.gov/current/title-40/section-745.103",
+      "title": "40 CFR 745.103, Definitions (lead-based paint disclosure on sale or lease of target housing)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-23",
+      "quote": "Target housing means any housing constructed prior to 1978, except housing for the elderly or persons with disabilities or any 0-bedroom dwelling",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-745-107",
+      "url": "https://www.ecfr.gov/current/title-40/section-745.107",
+      "title": "40 CFR 745.107, Disclosure requirements for sellers and lessors",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-23",
+      "quote": "the seller or lessor shall complete the required disclosure activities prior to accepting the purchaser's or lessee's offer",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-745-110",
+      "url": "https://www.ecfr.gov/current/title-40/section-745.110",
+      "title": "40 CFR 745.110, Opportunity to conduct an evaluation",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-23",
+      "quote": "the seller shall permit the purchaser a 10-day period",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-40-745-113",
+      "url": "https://www.ecfr.gov/current/title-40/section-745.113",
+      "title": "40 CFR 745.113, Certification and acknowledgment of disclosure",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-23",
+      "quote": "Each contract to sell target housing shall include an attachment containing the following elements",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-24-100-75",
+      "url": "https://www.ecfr.gov/current/title-24/section-100.75",
+      "title": "24 CFR 100.75, Discriminatory advertisements, statements and notices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-23",
+      "quote": "a dwelling which indicates any preference, limitation or discrimination because of race, color, religion, sex, handicap, familial status, or national origin",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-24-100-20",
+      "url": "https://www.ecfr.gov/current/title-24/section-100.20",
+      "title": "24 CFR 100.20, Definitions (Fair Housing Act regulations)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-23",
+      "quote": "any building, structure or portion thereof which is occupied as, or designed or intended for occupancy as, a residence by one or more families",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "confirm-rights-to-buy",
+      "title": "Have counsel clear every right to buy and draft the bidder confidentiality agreement",
+      "instruction": "Before any buyer hears of the sale, have counsel confirm every right that comes ahead of a sale to a third party. Counsel takes as settled the partner, investor and lender rights and consents confirmed in decide-when-to-sell's counsel-confirms-authority, and starts from the tenant rights in select-a-listing-broker's sale brief. An agent adds, each with its clause, every lease's first offer, first refusal or purchase option, any ground lease, and restrictions the owner's title policy lists. Counsel says what notice each right needs, in what order, how long the holder has to answer, and whether marketing may start first. Counsel also drafts the bidder confidentiality agreement, or marks up the listing broker's form: who signs and may receive materials, permitted use, no contact with tenants, staff, vendors or the lender except as the firm arranges, no disclosure of the sale, return or destruction on request, and its term. Record the answers.",
+      "mode": "human-online",
+      "modeBasis": "Whether a right reaches this sale, and what the confidentiality agreement says, is a legal judgment; an agent prepares the extract.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "lease",
+        "lease-abstract",
+        "owner-title-policy"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "name-likely-buyers",
+      "title": "Name the likely buyers for the property's type, size and stage",
+      "instruction": "List the kinds of buyer most likely to pay the most for this property, and the names within each. Start from who bought the sales in the comp set, refreshed through pull-sale-and-lease-comps if it is older than the firm's own standard; owners of similar property nearby; buyers the listing broker has closed with; and any tenant or neighbor with a reason to own. Group them by what the property offers: stabilized income on long leases, lease-up or repositioning, a building an owner could occupy, or a loan a buyer could assume. For each name record why it fits, the deal size it buys, how it pays (cash, a loan or an exchange) and the source of each fact. Rank by ability to close, not by anything else. The list feeds the listing broker's outreach; how each name is contacted is settled in the release step.",
+      "mode": "agent",
+      "modeBasis": "Building the list from the comp set, ownership records and the broker's buyer list is research and writing.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [],
+      "market": "market-property-data",
+      "consumes": [
+        "comp-set",
+        "rent-roll",
+        "lease-abstract",
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "normalize-the-noi",
+      "title": "Normalize the NOI and source every claim the package makes",
+      "instruction": "Build the package's income statement from the rent roll and trailing-12 as of one date. List each adjustment beside the line it changes: one-time income or costs removed, a management fee at the rate a buyer would pay, reserves on their own line, and property tax as billed and, labeled as an estimate, at the value recorded in decide-when-to-sell in the property-tax calculator. Keep in-place income apart from projected rent, lease-up or recoveries, labeling each projection's assumptions. Check recoveries and rollover in the expense-recovery and lease-rollover calculators, and tie value to decide-when-to-sell's income-value run. Give every market claim its source and date. The listing broker drafts the package and teaser from this statement and the data room. In Texas, a false representation of a past or existing material fact, made to induce a real estate contract and relied on, is statutory fraud; actual awareness of the falsity adds exemplary damages.",
+      "mode": "agent",
+      "modeBasis": "Four live calculators run on the rent roll, statements and leases; every adjustment and claim is labeled with its source.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [
+        "property-tax",
+        "expense-recovery",
+        "lease-rollover",
+        "income-value"
+      ],
+      "market": "deal-pipeline-underwriting",
+      "consumes": [
+        "rent-roll",
+        "trailing-12",
+        "lease-abstract",
+        "comp-set",
+        "underwriting-model"
+      ],
+      "produces": [
+        "offering-memorandum"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-bcc-27"
+      ]
+    },
+    {
+      "id": "assemble-data-room",
+      "title": "Assemble the data room from the property file",
+      "instruction": "Build a read-only, logged data room on the structure set in set-up-document-storage from documents already in the property file, posted as they exist. The marketing room holds what any bidder under the confidentiality agreement may see: rent roll, lease abstracts, operating statements and expense reconciliations for the years held, tax bills, service contracts, the seller's title policy and survey, and third-party reports the firm holds, such as the Phase I, condition assessment and zoning report. Full leases, tenant financial statements and anything a lease or contract keeps confidential wait in a second room until the contract is signed; close-the-sale's answer-diligence-requests then releases them, marking what a contract or confidentiality agreement limits. Leave out internal memos and underwriting. A Texas business must keep reasonable procedures to protect sensitive personal information, such as a name with a Social Security or driver's license number; strip it from every file before posting.",
+      "mode": "agent",
+      "modeBasis": "Sorting, redacting and posting documents the firm already holds is file work; nothing leaves the firm until the release step.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "rent-roll",
+        "lease",
+        "lease-abstract",
+        "trailing-12",
+        "owner-title-policy",
+        "survey",
+        "phase-i-esa",
+        "property-condition-assessment",
+        "zoning-report"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-bcc-521"
+      ],
+      "typeNotes": {
+        "multifamily": "Post a unit-level rent roll and the lease form in use, not resident files: applications, screening reports and identity documents stay out of both rooms.",
+        "retail": "Tenant sales reports and percentage-rent statements often carry confidentiality terms in the lease; check each before posting, and show co-tenancy and exclusive-use clauses in the abstracts.",
+        "industrial": "On a single-tenant building, read the lease's confidentiality terms before posting the tenant's financial statements, environmental records or permits."
+      }
+    },
+    {
+      "id": "gather-texas-notices",
+      "title": "Find the Texas notices a buyer must get before or in the contract",
+      "instruction": "Check the public records for the notices Texas requires the seller to give a buyer before or in the contract, for negotiate-the-sale's attach-contract-notices, where counsel completes them. On the appraisal district record, find any water, sewer, drainage or management district under Water Code 49.452 and get its completed notice form, or the information form and map it filed with the county clerk; seller and buyer both date and sign it. Check for a public improvement district (Property Code 5.014, 5.0141). Unless the property lies wholly within a city, 5.011 calls for the annexation notice. Check whether it lies in a certificated water or sewer area without service from it (Water Code 13.257), adjoins a reservoir of 5,000 acre-feet or more (5.019), or adjoins tidal waters or lies seaward of the Gulf Intracoastal Waterway (Natural Resources Code 33.135, 61.025). Record each finding with its source and date; counsel confirms which apply.",
+      "mode": "agent-browser",
+      "modeBasis": "The appraisal district and county clerk records are public websites an agent can read without signing in.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "market": "market-property-data",
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-water-49",
+        "tx-water-13",
+        "tx-prop-5-notices",
+        "tx-nr-33",
+        "tx-nr-61"
+      ]
+    },
+    {
+      "id": "gather-lead-paint-records",
+      "title": "For housing built before 1978, gather the lead paint records and disclosure",
+      "instruction": "Where any housing on the property predates 1978, gather every lead-based paint record and report on file, common areas included, and draft the firm's statement of known lead-based paint or hazards, with basis, location and condition. Pre-1978 housing is target housing, except housing for the elderly or persons with disabilities and 0-bedroom dwellings, unless a child under six lives or is expected to live there. Before a contract obligates a buyer, the seller gives the approved pamphlet, the known information and available records, and allows 10 days, or another period agreed in writing, to test, unless the buyer waives in writing. Disclosure after an offer is completed before acceptance, and the buyer may amend the offer. Once a principal confirms the statement, post the records, tell the listing broker, and hand the contract attachment to negotiate-the-sale; seller and any agent keep the signed attachment at least three years after closing.",
+      "mode": "agent",
+      "modeBasis": "Collecting the records and drafting the seller's statement is file work; a principal confirms the statement before it leaves the firm, and the parties sign the attachment later.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "assemble-data-room"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "property-condition-assessment",
+        "phase-i-esa"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-40-745-103",
+        "ecfr-40-745-107",
+        "ecfr-40-745-110",
+        "ecfr-40-745-113"
+      ]
+    },
+    {
+      "id": "set-timeline-and-offer-form",
+      "title": "Set the marketing timeline, the offer date and the offer form",
+      "instruction": "With the listing broker, draft one calendar: release, tours, last questions, offer date, any second round, choice of buyer and target contract date. Fit it to each lease's entry notice, the loan's prepayment notice and open window, counsel's response periods for any right to buy, any lead-paint testing period, and, if the selling entity will exchange, the replacement search run-a-1031-exchange needs. Draft a one-page offer form for every bidder: price, deposit and when it goes hard, inspection and closing periods, financing and its source, any loan assumption or exchange cooperation, the buying entity and its owners, proof of equity, approvals still needed and conditions. Texas enforces a contract to sell real estate only if it, or a memorandum of it, is in writing and signed by the party to be charged; counsel reviews the form and call for offers in review-the-package so only a signed contract binds the seller.",
+      "mode": "agent",
+      "modeBasis": "Drafting the calendar and the form from recorded dates and terms is writing; counsel reviews what binds.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-rights-to-buy"
+      ],
+      "rules": [
+        "us-tx.contracts.statute-of-frauds"
+      ],
+      "calculators": [],
+      "consumes": [
+        "lease-abstract",
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-bcc-26"
+      ]
+    },
+    {
+      "id": "review-the-package",
+      "title": "Review the offering package line by line before it goes out",
+      "instruction": "A principal reads the offering package and teaser against the normalized statement, rent roll, leases and data room, and approves each version before release. Every figure ties to a document or labeled calculator run, nothing hoped for is stated as fact, and statements on the leases, condition, environmental reports, disputes and the loan match the documents and omit nothing that makes them misleading. Texas statutory fraud reaches a person who knows another's representation is false, does not disclose it and benefits from it. The principals set the asking price or guidance, or call for offers without one, from decide-when-to-sell's value and the broker's tested opinion, and choose a public listing or named buyers only; no bidder sees the lowest acceptable price. Counsel reviews the offer form, call for offers and any statement on legal status, consents or the leases' enforceability. Record the approved version and date; only it goes out.",
+      "mode": "human-online",
+      "modeBasis": "Approving what the firm tells buyers is a principal's judgment; an agent prepares the tie-out of each figure to its source.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "normalize-the-noi",
+        "assemble-data-room",
+        "gather-texas-notices",
+        "gather-lead-paint-records",
+        "set-timeline-and-offer-form"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "offering-memorandum",
+        "rent-roll",
+        "lease",
+        "lease-abstract"
+      ],
+      "produces": [
+        "offering-memorandum"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-bcc-27",
+        "ecfr-24-100-75",
+        "ecfr-24-100-20"
+      ],
+      "typeNotes": {
+        "multifamily": "An apartment building is a dwelling under the federal fair housing rules, which bar any notice, statement or brochure about its sale that indicates a preference, limitation or discrimination because of race, color, religion, sex, handicap, familial status or national origin, and bar expressing such a preference about any purchaser to brokers. Describe the property and its income, not the people who live there or whom it suits, and give the broker no such instruction."
+      }
+    },
+    {
+      "id": "clear-partner-rights",
+      "title": "Give each holder of a right to buy or approve its notice before marketing",
+      "instruction": "A principal signs and sends each notice counsel found must go out before marketing, such as a tenant's or ground lessor's first offer or, in a joint venture, the capital partner's first offer or approval of the price guidance and package, in the document's form, to its notice address, with the approved package where needed. An agent calendars each response period from the date the document treats notice as given. Record each written answer: an offer, a waiver, or approval with any conditions. Marketing to others starts only once each period has run or the holder has waived in writing. If a holder offers, the principals weigh it against decide-when-to-sell's value, and counsel says what the document requires if the firm declines. Broker and listing approvals came in select-a-listing-broker's get-consents, any buy-sell in decide-when-to-sell, and a partner's approval of the buyer comes in choose-the-buyer. Where counsel found none, record that.",
+      "mode": "human-online",
+      "modeBasis": "Each notice binds the owner under its lease or agreement and the answer is the holder's own; an agent calendars the period and records the reply.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-rights-to-buy",
+        "review-the-package"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "lease",
+        "lease-abstract",
+        "jv-agreement",
+        "underwriting-model",
+        "offering-memorandum"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "release-to-signed-bidders",
+      "title": "Release the package only to bidders who sign the confidentiality agreement",
+      "instruction": "Send the teaser to the likely buyers, and to listing services if the principals chose a public listing, and release the approved package and marketing room only to a bidder that returns counsel's confidentiality agreement signed by the entity that will buy. The teaser names no tenant and gives no rent, income or price figure; the teaser and package are the versions approved in review-the-package, and the offer form and call for offers go with the package. Log each signer, entity, date, item sent and access granted. A principal approves each release. In Texas, the listing broker gives each party TREC's brokerage services notice at the first substantive communication, unless it knows another license holder represents the party.",
+      "mode": "agent",
+      "modeBasis": "Sending the teaser, checking returned agreements and granting room access is routine work; each release goes out on a principal's approval.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "name-likely-buyers",
+        "clear-partner-rights"
+      ],
+      "rules": [
+        "us-tx.trec.iabs"
+      ],
+      "calculators": [],
+      "market": "market-property-data",
+      "consumes": [
+        "offering-memorandum"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-occ-1101"
+      ]
+    },
+    {
+      "id": "run-tours",
+      "title": "Run tours with the notice and limits the leases require",
+      "instruction": "Schedule tours inside the window the calendar sets, after reading each lease's entry clause in the abstracts: the notice the landlord must give, the hours, whether the tenant may require an escort, and areas the tenant may close. The property manager gives each tenant that notice in the form the lease requires and confirms the time. Where tenants have not been told of the sale, settle with the property manager what is said before the first tour. The listing broker or a principal escorts every group; bidders do not question tenants, the manager's staff or vendors except as the firm arranges, and no one discloses another bid. Log who toured, when and what they saw, and put any question asked on site into the shared log so every bidder gets the answer.",
+      "mode": "human-offline",
+      "modeBasis": "Walking buyers through occupied space is done on site by the broker and the property manager.",
+      "actor": "broker",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "release-to-signed-bidders"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "lease",
+        "lease-abstract"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": [],
+      "typeNotes": {
+        "multifamily": "Show vacant and model units first; enter occupied units only on the notice the residential lease gives, and keep residents' belongings and papers out of photographs.",
+        "retail": "Tour in the hours the leases and center rules allow, without disrupting shoppers; bidders do not question store staff.",
+        "industrial": "Follow the tenant's safety rules and escort on the floor; secure areas and the tenant's processes may be closed to visitors under the lease."
+      }
+    },
+    {
+      "id": "answer-questions-in-one-log",
+      "title": "Answer buyer questions in one log that every bidder sees",
+      "instruction": "Keep one question log for the whole process: each question, who asked, the date, the answer, the document it rests on and the date it was posted. Answer only from the property file and the data room, sending documents as they exist; where the file has no answer, say so rather than estimate. A principal approves each answer before it is posted, and every answer goes to every bidder with room access at the same time, whoever asked. A bidder affiliated with the firm or its principals gets the same information at the same time and nothing more, and counsel is told of its interest. Send counsel first any question that asks the seller to confirm a fact, warrant a condition or describe a dispute. Add documents found later to the room and tell every bidder. Close questions on the date the calendar sets.",
+      "mode": "agent",
+      "modeBasis": "Logging questions and drafting answers from the file is document work; every answer is posted only on a principal's approval.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "release-to-signed-bidders"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "rent-roll",
+        "lease-abstract",
+        "trailing-12"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "log-and-summarize-offers",
+      "title": "Log the offers and summarize them for the decision makers",
+      "instruction": "Log each offer with its arrival time and enter it on the common form; mark every term it leaves out or states differently, and ask all bidders for missing items on the same terms, each request approved by a principal. For each offer, run the sale-proceeds calculator at its price and terms, with the costs, payoff and any credit it asks, and compare the cash at closing with decide-when-to-sell's net; for the leading offers, run waterfall-promote for what investors and the sponsor receive. Rank certainty apart from price: the deposit and when it goes hard, inspection and closing periods, financing and its source, the buyer's closing record, proof of equity and approvals still needed. Record each bidder's stated buying entity and owners, and before ranking send counsel any whose ownership plainly raises a sanctions or Texas foreign-ownership question; negotiate-the-sale's screen-buyer-ownership screens the chosen buyer. Every recommendation states its reasons.",
+      "mode": "agent",
+      "modeBasis": "Two live calculators run on each offer's stated terms and the comparison is writing from recorded figures; each request to bidders goes on a principal's approval.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "run-tours",
+        "answer-questions-in-one-log"
+      ],
+      "rules": [
+        "us-tx.property.foreign-acquisition-restrictions"
+      ],
+      "calculators": [
+        "sale-proceeds",
+        "waterfall-promote"
+      ],
+      "market": "deal-pipeline-underwriting",
+      "consumes": [
+        "letter-of-intent",
+        "underwriting-model",
+        "loan-documents",
+        "deal-entity-agreement",
+        "jv-agreement",
+        "investor-register"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "choose-the-buyer",
+      "title": "Choose the buyer to negotiate with and keep a backup",
+      "instruction": "Those the governing agreement entitles to decide choose from the summary: take one offer forward with a backup, call a second round, or reject all. A syndication's principals decide within decide-when-to-sell's limits; a fund's investment committee as its documents provide; a joint venture with any partner approval. Record the choice, reasons and backup. Where counsel found a right of first refusal, a principal signs and sends the holder the chosen terms as the right requires; the choice stays conditional until the holder waives in writing or its period runs. Tell other bidders the outcome, disclosing no other offer. Ask the backup to hold its offer open; negotiate-the-sale ends the other bidders' room access at sign-sale-contract and releases the backup at record-hard-date-or-restart. If the contract ends before then, the principals may reopen this step with the backup.",
+      "mode": "human-online",
+      "modeBasis": "Choosing a buyer commits the owners' sale and is made by the people the governing agreement names; an agent records it and notifies bidders on approval.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "log-and-summarize-offers"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "letter-of-intent",
+        "deal-entity-agreement",
+        "jv-agreement",
+        "underwriting-model"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    }
+  ],
+  "outlineSteps": []
 }

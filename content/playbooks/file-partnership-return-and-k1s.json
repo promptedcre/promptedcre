@@ -7,29 +7,698 @@
   "phase": "report",
   "order": 410,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "choose-counsel-and-cpa",
+    "set-up-the-books",
+    "keep-investor-register-current"
+  ],
+  "consumes": [
+    "deal-entity-agreement",
+    "jv-agreement",
+    "investor-register",
+    "settlement-statement",
+    "loan-documents",
+    "guaranty",
+    "rent-roll",
+    "ein-confirmation"
+  ],
   "produces": [],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Close the year's books and reconcile them to the bank statements",
-    "Book the year's depreciation and amortization",
-    "Compute taxable income apart from cash flow",
-    "Allocate income, loss and distributions under the governing agreement",
-    "Update each partner's capital account",
-    "Collect investor tax information and address changes",
-    "Send the year-end package to the tax preparer",
-    "Review the draft return and K-1s",
-    "Approve and file the return or an extension",
-    "Deliver each investor's K-1",
-    "Answer investor questions and file the copies"
-  ]
+  "sources": [
+    {
+      "id": "usc-26-6072",
+      "url": "https://www.law.cornell.edu/uscode/text/26/6072",
+      "title": "26 U.S.C. 6072, Time for filing income tax returns (subsection (b), returns of partnerships)",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-21",
+      "quote": "shall be filed on or before the 15th day of March following the close of the calendar year",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-6031",
+      "url": "https://www.law.cornell.edu/uscode/text/26/6031",
+      "title": "26 U.S.C. 6031, Return of partnership income (subsections (a), (b) and (c))",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-21",
+      "quote": "on or before the day on which the return for such taxable year was required to be filed",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-1-6031b-1t",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.6031(b)-1T",
+      "title": "26 CFR 1.6031(b)-1T, Statements to partners (temporary) (paragraphs (a) and (b))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "(determined with regard to extensions)",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-1-6081-2",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.6081-2",
+      "title": "26 CFR 1.6081-2, Automatic extension of time to file certain returns filed by partnerships",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "will be allowed an automatic six-month extension of time to file the return after the date prescribed for filing the return",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-6698",
+      "url": "https://www.law.cornell.edu/uscode/text/26/6698",
+      "title": "26 U.S.C. 6698, Failure to file partnership return (subsection (a))",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-21",
+      "quote": "for each month (or fraction thereof) during which such failure continues (but not to exceed 12 months)",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-7508a",
+      "url": "https://www.law.cornell.edu/uscode/text/26/7508A",
+      "title": "26 U.S.C. 7508A, Authority to postpone certain deadlines by reason of federally declared disaster or terroristic or military actions (subsection (a))",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-21",
+      "quote": "the Secretary may specify a period of up to 1 year that may be disregarded",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-i1065",
+      "url": "https://www.irs.gov/instructions/i1065",
+      "title": "Instructions for Form 1065 (2025): electronic filing, when to file, who must sign, penalties, elections, Schedule B question 33, partnership representative, Schedules K and K-1 (items E, F, K1, K2 and L; box 20 codes V, AM and AR), amended returns and AARs",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "Calendar-year partnerships may therefore timely file their returns for the 2025 partnership year by March 16, 2026.",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-i7004",
+      "url": "https://www.irs.gov/instructions/i7004",
+      "title": "Instructions for Form 7004 (Rev. December 2025), automatic extension of time to file",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "No signature is required on this form.",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-704",
+      "url": "https://www.law.cornell.edu/uscode/text/26/704",
+      "title": "26 U.S.C. 704, Partner's distributive share (subsections (a) and (b))",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-21",
+      "quote": "the allocation to a partner under the agreement of income, gain, loss, deduction, or credit (or item thereof) does not have substantial economic effect",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-706",
+      "url": "https://www.law.cornell.edu/uscode/text/26/706",
+      "title": "26 U.S.C. 706, Taxable years of partner and partnership (subsection (d), partner's interest changes)",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-21",
+      "quote": "which takes into account the varying interests of the partners in the partnership during such taxable year",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-1-706-4",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.706-4",
+      "title": "26 CFR 1.706-4, Determination of distributive share when a partner's interest varies (paragraph (a)(3))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Absent an agreement of the partners (within the meaning of paragraph (f) of this section) to use the proration method",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-168",
+      "url": "https://www.law.cornell.edu/uscode/text/26/168",
+      "title": "26 U.S.C. 168, Accelerated cost recovery system (subsections (b), (c), (d) and (e)(2))",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-21",
+      "quote": "the applicable convention is the mid-month convention",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-i4562",
+      "url": "https://www.irs.gov/instructions/i4562",
+      "title": "Instructions for Form 4562 (2025), Who Must File and Recordkeeping",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "the information needed to compute your depreciation deduction (basis, method, etc.) must be part of your permanent records",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-i8825",
+      "url": "https://www.irs.gov/instructions/i8825",
+      "title": "Instructions for Form 8825 and Schedule A (Rev. December 2025), Rental Real Estate Income and Expenses of a Partnership or an S Corporation",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "except for land, which is not depreciable",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-rp-2012-17",
+      "url": "https://www.irs.gov/pub/irs-irbs/irb12-10.pdf",
+      "title": "Rev. Proc. 2012-17, furnishing substitute Schedule K-1 in electronic format (Internal Revenue Bulletin 2012-10, pages 453 to 455)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "The recipient must have affirmatively consented to receive the Schedule K–1 in an electronic format.",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-pw1446",
+      "url": "https://www.irs.gov/individuals/international-taxpayers/partnership-withholding",
+      "title": "Partnership withholding (page last reviewed July 21, 2026): section 1446(a) and 1446(f)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "must pay a withholding tax on the effectively connected taxable income (ECTI) that is allocable to its foreign partners",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-i1065s23",
+      "url": "https://www.irs.gov/instructions/i1065s23",
+      "title": "Partnership Instructions for Schedules K-2 and K-3 (Form 1065) (2025), Domestic Filing Exception",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "The notification must state that partners won’t receive Schedule K-3 from the partnership unless the partners request the schedule.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-1-1061-6",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.1061-6",
+      "title": "26 CFR 1.1061-6, Reporting rules (paragraph (b), passthrough entity reporting)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "A Passthrough Entity that has issued an API must furnish to the API Holder",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-6221",
+      "url": "https://www.law.cornell.edu/uscode/text/26/6221",
+      "title": "26 U.S.C. 6221, Determination at partnership level (subsection (b), election out)",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-21",
+      "quote": "is made with a timely filed return for such taxable year",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-301-6221b-1",
+      "url": "https://www.ecfr.gov/current/title-26/section-301.6221(b)-1",
+      "title": "26 CFR 301.6221(b)-1, Election out for certain partnerships with 100 or fewer partners (paragraph (c))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "must notify each of its partners of the election within 30 days of making the election",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-6223",
+      "url": "https://www.law.cornell.edu/uscode/text/26/6223",
+      "title": "26 U.S.C. 6223, Partners bound by actions of partnership",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-21",
+      "quote": "shall have the sole authority to act on behalf of the partnership under this subchapter",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-6227",
+      "url": "https://www.law.cornell.edu/uscode/text/26/6227",
+      "title": "26 U.S.C. 6227, Administrative adjustment request by partnership",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "accessed": "2026-11-21",
+      "quote": "may not file such a request more than 3 years after the later of",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-f8879pe",
+      "url": "https://www.irs.gov/pub/irs-pdf/f8879pe.pdf",
+      "title": "Form 8879-PE, E-file Authorization for Form 1065 (Rev. December 2025), with its instructions",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "The ERO must receive the completed and signed Form 8879-PE",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-301-6011-3",
+      "url": "https://www.ecfr.gov/current/title-26/section-301.6011-3",
+      "title": "26 CFR 301.6011-3, Required use of electronic form for partnership returns (paragraph (a))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "the partnership has more than 100 partners during the partnership's taxable year",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-171",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.171.htm",
+      "title": "Texas Tax Code, Chapter 171 (Section 171.202, annual report)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "The taxable entity shall file the report before May 16 of each year after the beginning of the regular annual period.",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "set-the-dates",
+      "title": "Calendar the return, extension and K-1 dates for each entity",
+      "instruction": "Enter each deal or fund entity's federal return dates in the deadline-calendar before the year ends. A partnership's return is due by the 15th day of the third month after its tax year ends, March 15 for a calendar year, moving to the next business day from a weekend or legal holiday. Each K-1 is due by the return's due date, extension included. A late or incomplete return draws a monthly penalty per partner, up to 12 months, absent reasonable cause. For foreign partners, add Forms 8804 and 8805 and the CPA's Form 8813 payment dates; a principal pays. Include the firm's own entities taxed as partnerships, such as the sponsor entity or a fund's general partner, each dated after the entities whose K-1s it files from. Add the governing agreement's earlier dates. If the IRS postpones deadlines for a federally declared disaster, the CPA confirms which dates moved.",
+      "mode": "agent",
+      "modeBasis": "Working dates out from published rules and the agreement and entering them on the firm's calendar is file work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-26-6072",
+        "irs-i1065",
+        "usc-26-6031",
+        "ecfr-26-1-6031b-1t",
+        "usc-26-6698",
+        "irs-pw1446",
+        "usc-26-7508a"
+      ]
+    },
+    {
+      "id": "close-the-year",
+      "title": "Close the year's books and reconcile every account",
+      "instruction": "Run December's close under set-up-the-books (close-each-month), and have a principal who did not prepare it review and lock it there (review-and-lock); then add the year-end items. Agree the loan balance and the year's interest to the lender's year-end statement, and tie security deposits held to the rent roll. The method of accounting on the return must be reconcilable with the partnership's books, so the CPA starts from these locked balances. In Texas, the closed books and the CPA's working federal figures go to file-texas-franchise-report in time for its May 15 report, marked subject to change; its gather-figures step collects them and its decide-report-type maps them to the Texas lines.",
+      "mode": "agent",
+      "modeBasis": "Matching year-end statements to the ledger is file work; the review and lock are a principal's, under set-up-the-books, and the CPA maps the Texas lines.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-tx.franchise-tax.basics",
+        "us-tx.franchise-tax.due-date-extension"
+      ],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "loan-documents",
+        "rent-roll"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "irs-i1065",
+        "tx-tax-171"
+      ]
+    },
+    {
+      "id": "roll-fixed-assets",
+      "title": "Roll forward each property's depreciation and amortization schedule",
+      "instruction": "Update each entity's fixed-asset schedule for the CPA. Carry forward each asset's cost, placed-in-service date, method and depreciation to date; add the year's capital spending, with invoices and dates; list anything retired, replaced or demolished. In a purchase year, split the settlement statement's cost between land, never depreciated, and building and improvements. The general system recovers residential rental buildings over 27.5 years and nonresidential ones over 39, straight line from the middle of the month placed in service. Under the irrevocable real property election from the business interest limit, buildings and qualified improvement property instead use the alternative system, 30 years residential and 40 nonresidential, with no bonus depreciation; note whether it applies. Flag shorter-lived or bonus-eligible improvements and any cost segregation study; the CPA decides methods and elections. Form 4562 covers property placed in service and amortization begun in the year, and any listed property; keep depreciation records permanently.",
+      "mode": "agent",
+      "modeBasis": "Building a schedule from invoices and closing records is file work; methods and elections are the CPA's decision.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "close-the-year"
+      ],
+      "rules": [
+        "us-fed.irc.depreciation-recovery-periods",
+        "us-fed.irc.bonus-depreciation"
+      ],
+      "calculators": [],
+      "consumes": [
+        "settlement-statement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-26-168",
+        "irs-i1065",
+        "irs-i4562",
+        "irs-i8825"
+      ],
+      "typeNotes": {
+        "multifamily": "A building is residential rental property, recovered over 27.5 years under the general system (30 under the alternative system), only if 80 percent or more of its gross rental income for the year comes from dwelling units; otherwise it is nonresidential."
+      }
+    },
+    {
+      "id": "confirm-partner-details",
+      "title": "Confirm every partner's tax details, address and K-1 delivery consent",
+      "instruction": "From the register (keep-investor-register-current), list everyone who was a partner during the year, with legal name, tax form, entity type, address and each dated change in its interest. Each gets a K-1, including each spouse holding an interest; a nominee must name the person it holds for. Request each IRA partner's own EIN through its custodian: after 2025, an IRA allocated unrelated business income needs it on its K-1 (box 20, code AR). Flag for the CPA every partner on a Form W-8, since effectively connected income allocable to foreign partners draws partnership withholding and other U.S.-source income 30 percent withholding; every partnership or trust partner; and every partner type the domestic exception to Schedules K-2 and K-3 omits, such as a C corporation or exempt organization. A K-1 goes electronically only to a partner whose consent is recorded under set-up-investor-portal; request it from others once a principal approves.",
+      "mode": "agent",
+      "modeBasis": "Reading the register and preparing requests is file work; nothing goes to a partner until a principal approves.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-fed.irc.retirement-account-debt-financed-income"
+      ],
+      "calculators": [],
+      "consumes": [
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "irs-i1065",
+        "irs-rp-2012-17",
+        "irs-pw1446",
+        "irs-i1065s23"
+      ]
+    },
+    {
+      "id": "draft-allocations",
+      "title": "Draft each partner's share of the year's items and roll its capital account",
+      "instruction": "Using the governing agreement's allocation terms, draft how the year's income, gain, loss and deduction divide among the partners, and roll each partner's capital account from last year's ending balance through contributions, allocations and the distributions recorded under make-a-distribution. The agreement sets each share unless it is silent or the allocation lacks substantial economic effect; then shares follow each partner's interest in the partnership. When an interest changed during the year, the shares must reflect the varying interests, and unless the partners agreed to prorate, the regulations generally call for an interim closing of the books at each change. Keep the roll both on the agreement's own basis and on the tax basis that K-1 item L reports, where contributed property counts at its adjusted tax basis. Mark the result a draft; the CPA decides the tax allocations.",
+      "mode": "agent",
+      "modeBasis": "Applying written allocation terms to the ledger is reading and arithmetic; what the return reports is the CPA's decision.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "close-the-year",
+        "confirm-partner-details"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-26-704",
+        "usc-26-706",
+        "ecfr-26-1-706-4",
+        "irs-i1065"
+      ]
+    },
+    {
+      "id": "send-year-end-package",
+      "title": "Send the CPA the year-end package",
+      "instruction": "Send the CPA one package per entity through the channel the engagement letter names: the locked trial balance and ledger; bank, loan and escrow statements; the fixed-asset roll-forward with invoices and, in a purchase or sale year, the settlement statement; the loan documents and any guaranty a partner or principal signed; every payment to the firm, its principals or affiliates, such as fees and reimbursements, for the CPA to classify; the draft allocations and capital accounts; the partner list; last year's return; and the agreement with its amendments. Add a bridge from the year's cash flow to book income showing principal paid, capital spent, reserves moved and distributions, since partners are taxed on their shares of income whether or not distributed. Send taxpayer numbers only through the CPA's secure channel, and list every open question.",
+      "mode": "agent",
+      "modeBasis": "Assembling records the firm holds is file work; the package leaves the firm only after a principal approves it.",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "roll-fixed-assets",
+        "draft-allocations"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "settlement-statement",
+        "loan-documents",
+        "guaranty",
+        "deal-entity-agreement",
+        "jv-agreement",
+        "investor-register",
+        "ein-confirmation"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "irs-i1065"
+      ]
+    },
+    {
+      "id": "fund-lower-tier",
+      "title": "For a fund, gather the lower-tier K-1s and the fund-level figures",
+      "instruction": "Where the fund holds properties through deal entities or joint ventures, calendar each lower-tier K-1, request it once a principal approves, and send it to the CPA on arrival; the fund's return is built from them. The fund passes to its own partners its share of each lower-tier entity's liabilities, so include each lower-tier loan's terms. Give the CPA the year's management fee calculation, each partner's commitment beside its actual contributions, and any clawback, holdback or deal-by-deal accounting the partnership agreement applies. Where the fund's partners include other funds, feeder vehicles or nominees, tell the CPA, since their own returns wait on the fund's K-1s.",
+      "mode": "agent",
+      "modeBasis": "Requesting and forwarding documents and computing a fee from the agreement are file work; requests go out on a principal's approval.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-the-dates"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "irs-i1065"
+      ]
+    },
+    {
+      "id": "jv-return-roles",
+      "title": "For a joint venture, follow the agreement on who prepares and approves the return",
+      "instruction": "Read the JV agreement's tax terms: which member's CPA prepares the venture's return, when the draft goes to the other member and how long it has to comment, which elections need both members' consent, who is named partnership representative and what notice that person owes the other member, and when K-1s are due. Send the draft or the firm's comments on those dates once a principal approves. A partnership that must issue a K-1 to another partnership or to a trust cannot elect out of the centralized audit regime, and the partnership representative's actions bind the partnership and every partner.",
+      "mode": "agent",
+      "modeBasis": "Reading the agreement and tracking its dates is file work; anything sent to the partner goes on a principal's approval.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-the-dates"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "irs-i1065",
+        "usc-26-6221",
+        "usc-26-6223"
+      ]
+    },
+    {
+      "id": "extend-if-needed",
+      "title": "Have the CPA file Form 7004 by the due date if the return will not be final",
+      "instruction": "By each return's due date, the principals and the CPA decide whether it will be final in time, counting any lower-tier K-1s a fund still awaits; if not, the CPA files Form 7004 on or before that date and keeps the acceptance. The form needs no signature and gives one automatic six-month extension, no more. It also moves the K-1 due date, but not any partner's own return or the time to pay a partner's tax. Form 8804, where due, takes its own Form 7004.",
+      "mode": "human-online",
+      "modeBasis": "Whether the return can be final in time is the CPA's call with the principals, and the CPA files the extension; an agent tracks the date.",
+      "actor": "cpa",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-the-dates"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-26-1-6081-2",
+        "irs-i7004",
+        "irs-i1065",
+        "ecfr-26-1-6031b-1t"
+      ]
+    },
+    {
+      "id": "cpa-prepares-return",
+      "title": "Have the CPA prepare the return and recommend its elections",
+      "instruction": "The CPA prepares Form 1065 with Form 8825, any Form 4562 and K-1s, recording the reason for each position. The CPA recommends the elections and partnership representative in writing; the principals the governing agreement authorizes decide, honoring any consent it requires and any representative it names. Choices: the representative, named on each return absent an election out of the centralized audit regime; that election, which needs 100 or fewer K-1s, counting those S corporation partners issue, every partner an eligible type, a timely return disclosing each partner's name and taxpayer number, S corporation shareholders' included, and notice to each partner; a section 754 election; the irrevocable real property election under the business interest limit, moving buildings and qualified improvement property to the alternative system without bonus depreciation; bonus depreciation elsewhere; promote holders' section 1061 figures; foreign partners' Forms 8804 and 8805; and the domestic exception to Schedules K-2 and K-3.",
+      "mode": "human-online",
+      "modeBasis": "Return positions are the CPA's judgment; elections and the partnership representative are the partnership's decision on the CPA's advice.",
+      "actor": "cpa",
+      "licensed": "cpa",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "send-year-end-package",
+        "fund-lower-tier",
+        "jv-return-roles"
+      ],
+      "rules": [
+        "us-fed.irc.partnership-basis-election",
+        "us-fed.irc.bonus-depreciation",
+        "us-fed.irc.section-1061-applicable-partnership-interests",
+        "us-fed.irc.retirement-account-debt-financed-income"
+      ],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "irs-i1065",
+        "irs-i8825",
+        "usc-26-6221",
+        "ecfr-26-301-6221b-1",
+        "usc-26-6223",
+        "ecfr-26-1-1061-6",
+        "irs-pw1446",
+        "irs-i1065s23"
+      ]
+    },
+    {
+      "id": "check-the-draft",
+      "title": "Check the draft return and K-1s against the books and the register",
+      "instruction": "Before anyone signs, list for a principal every difference between the CPA's draft and the firm's records. Check for one K-1 per person on the partner list, with name, number type, address and entity type matching the register; each partner's share and ending capital tying to the draft allocations and the ledger, and the K-1 totals to the return; beginning capital matching last year's ending, and distributions the ledger; partners' item K1 liability shares totaling the liabilities on Schedule L, or a reconciliation attached; item K2 checked where lower-tier liabilities are included; item K3 checked for each partner whose own or a related person's guaranty the CPA treats as a payment obligation; rental income and expenses tying to the closed books; and entries for foreign, tax-exempt and IRA partners and any promote holder as the CPA directed. Note large changes from last year and why. The CPA decides each item.",
+      "mode": "agent",
+      "modeBasis": "Comparing a draft with the ledger and register is file work; the CPA decides what changes.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "cpa-prepares-return"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "investor-register",
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "irs-i1065"
+      ]
+    },
+    {
+      "id": "sign-and-file",
+      "title": "Sign and file the return by its due date, extension included",
+      "instruction": "Once differences are settled, a partner or LLC member signs the final return, or, for an entity member, its authorized individual. For an electronic return, the signer signs Form 8453-PE, or Form 8879-PE with a PIN entered by the signer or, if authorized, the CPA's firm, which may not transmit until it holds the signed form. A partnership must file electronically if, in the calendar year ending with or within its tax year, it must file 10 or more returns of any type, counting its prior-year return and Forms 1099 and W-2 but not K-1s, or had more than 100 direct partners over its tax year. Keep the acceptance. An election out of the centralized audit regime counts only on that timely return, extension included; a section 754 election belongs there too, and if missed the CPA can make it within 12 months of the deadline under Regulations section 301.9100-2.",
+      "mode": "human-online",
+      "modeBasis": "Only a partner or member can sign the return, and an agent cannot sign or authorize a PIN.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-the-draft"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "irs-i1065",
+        "irs-f8879pe",
+        "ecfr-26-301-6011-3",
+        "usc-26-6221"
+      ]
+    },
+    {
+      "id": "deliver-k1s",
+      "title": "Deliver each partner's K-1 by the due date",
+      "instruction": "Deliver each K-1 by the return's due date, extension included, with the partner instructions, every statement the CPA attached, each foreign partner's Form 8805, even with nothing withheld, notice of any election out of the centralized audit regime, due within 30 days of it, and, under the domestic filing exception, the notice that Schedule K-3 comes only on request. Electronic delivery goes only to consenting partners. For a website posting, send each partner a notice with instructions to open and print the K-1 and the words IMPORTANT TAX RETURN DOCUMENT AVAILABLE, in an email's subject line; keep it posted until twelve months after the tax year ends or six months after issue, whichever is later. A bounced email notice with no correct address found goes by mail or in person within 30 calendar days. A person or approved mailing service mails the rest on paper. Log each delivery.",
+      "mode": "agent",
+      "modeBasis": "Posting through the portal is routine work; paper is mailed by a person; the batch goes out on a principal's approval.",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-and-file"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-26-6031",
+        "ecfr-26-1-6031b-1t",
+        "irs-i1065",
+        "irs-rp-2012-17",
+        "irs-i1065s23",
+        "irs-pw1446",
+        "ecfr-26-301-6221b-1"
+      ]
+    },
+    {
+      "id": "answer-and-file",
+      "title": "Answer partners' questions, route corrections to the CPA and file the copies",
+      "instruction": "Answer factual questions from the records, each reply approved by a principal; reporting questions go to the CPA. Send K-3 requests to the CPA that day; under the domestic filing exception it is due within a month. The CPA decides corrections; an electronic recipient gets an amended K-1, or notice of its posting, within 30 calendar days. K-1s may not be amended after the due date unless the Code allows, as after electing out of the centralized audit regime; otherwise an administrative adjustment request corrects a return, within three years of the later of filing or the original due date and before the IRS mails notice of a proceeding for that year, signed by the partnership representative or its designated individual. Send file-texas-franchise-report the date and figures of any amended K-1, adjustment request or final IRS adjustment. File the return, K-1s, delivery log, workpapers and elections; carry capital accounts forward.",
+      "mode": "agent",
+      "modeBasis": "Answering from the record and filing copies is file work; replies go out on a principal's approval and tax judgments stay with the CPA.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "deliver-k1s"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-26-6031",
+        "usc-26-6227",
+        "irs-i1065",
+        "irs-i1065s23",
+        "irs-rp-2012-17"
+      ]
+    }
+  ],
+  "outlineSteps": []
 }

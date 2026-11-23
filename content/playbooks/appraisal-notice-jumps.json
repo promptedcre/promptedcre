@@ -7,32 +7,470 @@
   "phase": "operate",
   "order": 127,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
+  "lastVerified": "2026-11-21",
   "situation": {
     "trigger": "The property tax appraisal notice comes in far above the expected value.",
-    "urgency": "weeks"
+    "urgency": "days"
   },
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "requires": [
+    "abstract-the-leases",
+    "protest-property-taxes",
+    "meet-loan-covenants"
+  ],
+  "consumes": [
+    "lease",
+    "lease-abstract",
+    "rent-roll",
+    "settlement-statement",
+    "survey",
+    "property-condition-assessment",
+    "loan-documents",
+    "underwriting-model",
+    "jv-agreement",
+    "investor-register"
+  ],
+  "produces": [
+    "underwriting-model"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Calendar the protest deadline the day the notice arrives",
-    "Read the notice's land, improvement and total values",
-    "Compute what the new value would do to the tax bill",
-    "Gather income, sales and condition evidence",
-    "Decide whether to protest yourself or hire an agent",
-    "File the protest",
-    "Present the case at the hearing",
-    "Update the budget and the lender's tax escrow",
-    "Pass the result through to tenants as the leases require",
-    "Tell the lender and investors the result and record it"
-  ]
+  "sources": [
+    {
+      "id": "tx-tax-code-41-deadline",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.41.htm",
+      "title": "Texas Tax Code, Chapter 41 (Sections 41.12, Approval of appraisal records by board; 41.412, Person acquiring property after January 1; 41.44, Notice of protest)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "not later than May 15 or the 30th day after the date that notice to the property owner was delivered",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-41-lessee",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.41.htm",
+      "title": "Texas Tax Code, Chapter 41 (Section 41.413, Protest by person leasing property)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "The property owner must send the notice not later than the 10th day after the date the property owner receives the notice.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-41-grounds",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.41.htm",
+      "title": "Texas Tax Code, Chapter 41 (Sections 41.41, Right of protest; 41.43, Protest of determination of value or inequality of appraisal)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "may not require a property owner to pay a fee in connection with a protest filed by the owner with the board",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-41-late",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.41.htm",
+      "title": "Texas Tax Code, Chapter 41 (Sections 41.411, Protest of failure to give notice; 41.4115, Forfeiture of remedy for nonpayment of taxes)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "the failure of the chief appraiser or the appraisal review board to provide or deliver any notice to which the property owner is entitled",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-1",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.1.htm",
+      "title": "Texas Tax Code, Chapter 1 (Sections 1.06, Effect of weekend, holiday, or office closure; 1.07, Delivery of notice; 1.085, Electronic delivery of communication; 1.111, Representation of property owner)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "is presumed delivered when it is deposited in the mail",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-25-notice",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.25.htm",
+      "title": "Texas Tax Code, Chapter 25 (Section 25.19, Notice of appraised value)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "may result in an increase in ad valorem taxes imposed on real property previously subject to the limitation",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-25-correction",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.25.htm",
+      "title": "Texas Tax Code, Chapter 25 (Sections 25.195, Inspection by property owner; 25.22, Submission for review and protest; 25.25, Correction of appraisal roll; 25.26, Forfeiture of remedy for nonpayment of taxes)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "A chief appraiser may not impose a fee for providing a copy of records",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-23",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.23.htm",
+      "title": "Texas Tax Code, Chapter 23 (Sections 23.01, Appraisals generally; 23.231, Circuit breaker limitation on appraised value of real property other than residence homestead)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "This section expires December 31, 2026.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-26",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.26.htm",
+      "title": "Texas Tax Code, Chapter 26 (Sections 26.16, Posting of tax-related information; 26.17, Database of property-tax-related information)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "is searchable by property address and owner",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-31",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.31.htm",
+      "title": "Texas Tax Code, Chapter 31 (Sections 31.01, Tax bills; 31.02, Delinquency date; 31.04, Postponement of delinquency date; 31.071, Conditional payments)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-23",
+      "quote": "taxes are due on receipt of the tax bill and are delinquent if not paid before February 1",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-33",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.33.htm",
+      "title": "Texas Tax Code, Chapter 33 (Sections 33.01, Penalties and interest; 33.07, Additional penalty for collection costs for taxes due before June 1)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "a tax delinquent on July 1 incurs a total penalty of twelve percent",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-protests",
+      "url": "https://comptroller.texas.gov/taxes/property-tax/protests/",
+      "title": "Appraisal Protests and Appeals",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "quote": "Note that the deadline is 30 days from the date the appraisal district mails a notice, not from the delivery date.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "To make any untrue statement of a material fact or to omit to state a material fact",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "calendar-the-deadlines",
+      "title": "Calendar the protest deadline and the tenant-copy deadline the day the notice arrives",
+      "instruction": "The day the notice arrives, enter the protest deadline in the deadline-calendar and, by hand, the tenant-copy date 10 days after receipt (Tax Code 41.413(d)), and open protest-property-taxes, whose send-tenant-copies step meets that date. Keep the envelope or email; record its printed date, postmark or send date, and arrival date. A protest is due by the later of May 15 or the 30th day after delivery (41.44(a)(1)); a mailed notice is presumed delivered when mailed (1.07(c)), and an electronic one, where the owner chose that, when sent (1.085(d)), so count from the earliest. A last day on a weekend or legal holiday moves to the next business day (1.06). Have the property manager, any designated agent and anyone named to receive notices forward it the day it arrives (1.07(b), 1.111(f)). If the jump showed first on the district's website (25.19(n)), a notice never received changes neither appraisal nor tax (25.19(d)).",
+      "mode": "agent",
+      "modeBasis": "Dating the notice and entering statutory deadlines in a calendar is file work an agent can do from the notice and the statutes.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.tax.protest-deadline"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-41-deadline",
+        "tx-tax-code-41-lessee",
+        "tx-tax-code-1",
+        "tx-tax-code-25-notice",
+        "cpa-protests"
+      ]
+    },
+    {
+      "id": "find-the-cause",
+      "title": "Find what drove the jump: land, improvements, a sale, a lost cap or an error",
+      "instruction": "Read the notice against last year's and the district's online record; the notice gives land and improvement values separately, last year's value and the change from five years before (Tax Code 25.19(b), (b-1), (f)). Check the record's area, year built, land size, class and condition against the survey, condition report and rent roll as of January 1, the valuation date (23.01(a)); a wrong description can be corrected or protested (25.25(b), 41.41(a)). Look for new improvements, a recent sale, and the circuit breaker limit's end on December 31, 2026: from tax year 2027, property it held below market value is appraised at market value unless the Legislature extends it (23.231(k), 25.19(o)). If last year's value was lowered on protest or appeal, an increase needs clear and convincing support (23.01(e)), a burden the district bears at the hearing only if that value was not set by written agreement (41.43(a-3)). Record each finding.",
+      "mode": "agent-browser",
+      "modeBasis": "The notice and the firm's records are documents, and the appraisal district's property record is a public website an agent can read under a standing approval.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "calendar-the-deadlines"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.tax.market-value",
+        "us-tx.tax.appraisal-increase-limit"
+      ],
+      "calculators": [],
+      "market": "market-property-data",
+      "consumes": [
+        "survey",
+        "property-condition-assessment",
+        "rent-roll",
+        "settlement-statement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-25-notice",
+        "tx-tax-code-23",
+        "tx-tax-code-25-correction",
+        "tx-tax-code-41-grounds"
+      ]
+    },
+    {
+      "id": "price-the-increase",
+      "title": "Price the increase and run it through the budget, the loan tests and the escrow",
+      "instruction": "Price the increase in the property-tax calculator at last year's value and at the notice value, using each taxing unit's adopted rate from last year, labeled as such. The county's website posts five years of adopted rates (Tax Code 26.16); the district's public tax database later shows the tax at each unit's proposed rate (26.17). From the lease abstracts, run expense-recovery to split the increase between the tenants and the owner. Read the loan documents for the tax escrow deposit, how the lender may reset it, and any condition on contesting taxes, such as notice before filing, paying first or posting security. Rerun project-the-tests in meet-loan-covenants with the new tax, using leverage, and record the results in the underwriting model; if a test may fail, open loan-covenant-breach. Reforecast the year under track-and-reforecast in set-the-annual-budget; if a distribution may be cut, open distribution-shortfall.",
+      "mode": "agent-browser",
+      "modeBasis": "Rates come from the county's and the district's public websites, read under a standing approval; the rest is arithmetic in live calculators.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "find-the-cause"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [],
+      "calculators": [
+        "property-tax",
+        "expense-recovery",
+        "leverage"
+      ],
+      "market": "deal-pipeline-underwriting",
+      "consumes": [
+        "lease-abstract",
+        "rent-roll",
+        "loan-documents",
+        "underwriting-model"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-26"
+      ]
+    },
+    {
+      "id": "check-late-remedies",
+      "title": "If the protest deadline has passed, have counsel name the late remedies",
+      "instruction": "If the protest deadline has passed, get counsel's written advice. A late protest is heard only for good cause and if filed before the review board approves the records, by July 20 (August 30 where a district in a county of a million or more postpones), or sooner, as counsel confirms (Tax Code 41.44(b), 41.12). A protest of a missed notice is due before delinquency (41.411, 41.44(c)), or within 125 days of first written notice of the taxes where it claims only a late tax bill (41.44(c-3)). Before delinquency, a motion may correct a value more than one-third above the correct one, at a 10 percent penalty on the corrected tax, unless a protest was decided on the merits or the value agreed (25.25(d), (d-1)); clerical, multiple-appraisal, nonexistent-property and ownership errors reach five prior years (25.25(c)). Motions and 41.411 protests require paying the undisputed tax before delinquency (25.26(b), 41.4115(b)).",
+      "mode": "human-online",
+      "modeBasis": "Which late remedy fits the facts, and whether good cause can be shown, is a legal judgment for counsel.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "calendar-the-deadlines",
+        "find-the-cause"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [
+        "us-tx.tax.protest-deadline"
+      ],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-41-deadline",
+        "tx-tax-code-41-late",
+        "tx-tax-code-25-correction",
+        "cpa-protests"
+      ]
+    },
+    {
+      "id": "run-the-protest",
+      "title": "Run the protest under protest-property-taxes with what this situation found",
+      "instruction": "Run the protest itself under protest-property-taxes, from send-tenant-copies through pass-through-savings. Give its decide-to-protest the cause from find-the-cause, the tax at stake and the loan's conditions on a contest from price-the-increase, and any late filing counsel advised in check-late-remedies, which its file-the-protest makes instead. A firm that bought the property after January 1 and before the protest deadline may protest as if it owned it then (Tax Code 41.412(a)). Before anything is filed, send the lender any notice the loan documents require for a contest, once a person approves. Date the review board's order the day it arrives and send it to counsel that day for advise-on-remedies. Whether or not the firm protests, the tenant pass-through runs under pass-through-savings once the bills issue. The steps below add only what the jump changes: telling tenants at once if the firm will not protest, rerunning the loan tests and resetting the escrow.",
+      "mode": "agent",
+      "modeBasis": "Handing the findings to the protest record and drafting the lender's notice is file work; the decisions, signatures and filings are made in that record's human steps, and the notice goes only with a person's approval.",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "find-the-cause",
+        "price-the-increase",
+        "check-late-remedies"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-41-deadline"
+      ]
+    },
+    {
+      "id": "tell-tenants-if-no-protest",
+      "title": "Tell each reimbursing tenant at once if the firm will not protest",
+      "instruction": "If the principal decides under decide-to-protest in protest-property-taxes not to protest, tell each tenant that reimburses the owner's real property taxes the same day, unless its lease says it will not protest. Such a tenant may protest the appraised value itself when the owner files no protest, and only one protest is allowed (Tax Code 41.413(b)); the owner's failure to send it a copy of the notice does not change its time to protest (41.413(d)), so every day counts against the calendared deadline. Draft each letter from the lease abstracts to the notice address the lease names, stating the decision and the protest deadline. A person approves each letter before it goes; save the sent copies and any tenant's answer in the tax file, and tell the principal at once if a tenant says it will protest.",
+      "mode": "agent",
+      "modeBasis": "Listing tenants from the abstracts and drafting letters is document work; anything sent to a tenant goes only with a person's approval.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "run-the-protest"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "lease",
+        "lease-abstract"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-41-lessee"
+      ],
+      "typeNotes": {
+        "multifamily": "A resident whose lease does not oblige it to reimburse the owner's property taxes has no protest right under Tax Code 41.413(b), so no letter is needed; confirm it on the lease form the property uses."
+      }
+    },
+    {
+      "id": "pay-before-delinquency",
+      "title": "Pay the bill before it is delinquent, even while the value is contested",
+      "instruction": "Pay each tax bill before it is delinquent: bills go out by October 1 or soon after, and taxes unpaid before February 1 of the next year, or the later delinquency date printed on a bill mailed after January 10, are delinquent (Tax Code 31.01(a), (c)(7), 31.02(a), 31.04(a)). A delinquent tax draws a penalty rising from 6 percent to 12 percent by July 1, plus 1 percent interest a month (33.01); a unit with a collection-attorney contract may add a further penalty on taxes still unpaid on July 1 (33.07). While a protest is pending, the collector must accept a conditional payment: the greater of the tax on the undisputed value or last year's tax, capped at the tax on the protested value (31.071). Where the lender pays from escrow, confirm it paid, as keep-taxes-and-insurance-current in meet-loan-covenants describes; otherwise the principal releases each payment. Receipts go in the tax file.",
+      "mode": "human-online",
+      "modeBasis": "Paying taxes moves the owner's money, which only an authorized person can release.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "run-the-protest"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "loan-documents"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-tax-code-31",
+        "tx-tax-code-33"
+      ]
+    },
+    {
+      "id": "record-and-update",
+      "title": "Rerun the loan tests and reset the tax escrow on the final tax",
+      "instruction": "Take the final value and tax from record-the-result in protest-property-taxes or, where the firm did not protest, run the property-tax calculator at the notice value with each unit's adopted rate. Hand the final tax to project-the-tests in meet-loan-covenants, which reruns the coverage projection on the loan's definitions and opens loan-covenant-breach if a test may fail, and to track-and-reforecast in set-the-annual-budget. Compare the lender's tax escrow deposit with the new tax and draft a request to reset it, with any notice the loan documents require about a changed tax figure or the contest's outcome. A person approves anything sent to the lender. Record the effect in the underwriting model, and log each payment and any refund when made.",
+      "mode": "agent",
+      "modeBasis": "Handing the final tax on and drafting the escrow request is file work; anything sent to the lender goes only with a person's approval.",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "run-the-protest"
+      ],
+      "rules": [],
+      "calculators": [
+        "property-tax"
+      ],
+      "consumes": [
+        "loan-documents",
+        "underwriting-model"
+      ],
+      "produces": [
+        "underwriting-model"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "tell-investors",
+      "title": "Tell investors, or the capital partner, the result and its effect",
+      "instruction": "Draft an update on the jump and its result for the next investor report, or sooner where the governing documents or a reduced distribution call for one. Cover the notice value and its cause, the tax at stake, what was filed, the result and its cost, the effect on cash flow, distributions and loan coverage, and what next year may bring, such as new rates. In a JV, send it to the capital partner as the agreement requires; in a fund, roll it into the fund report. Match every figure to the tax file and the underwriting model. Rule 10b-5 bars untrue statements of material fact, and omissions that make what is said misleading, in connection with buying or selling securities; where an offering is open or interests are changing hands, counsel decides what must be said. A principal approves it before it goes out; regular reports follow send-quarterly-investor-report.",
+      "mode": "agent",
+      "modeBasis": "Drafting from the tax file and the model is writing work; investor communications go out only with a person's approval.",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-and-update"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5"
+      ],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register",
+        "underwriting-model",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5"
+      ]
+    }
+  ],
+  "outlineSteps": []
 }

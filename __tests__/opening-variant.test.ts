@@ -52,9 +52,10 @@ describe("the view a record's file is made for", () => {
   });
 
   it("is nothing for an outline, for no structure, and for a record that lacks the default coverage", () => {
-    const outline = corpus.playbooks.find((p) => p.depth === "outline");
-    expect(outline).toBeTruthy();
-    expect(openingVariant(outline!)).toBeNull();
+    // Every catalog record is written now, so the outline is a written one turned back into a list of step titles.
+    const base = redeclared(["syndication", "fund", "jv"]);
+    const outline: Playbook = { ...base, depth: "outline", steps: [], outlineSteps: base.steps.map((s) => s.title) };
+    expect(openingVariant(outline)).toBeNull();
     expect(openingVariant(redeclared([]))).toBeNull();
     expect(openingVariant(redeclared(["jv"], ["us-federal"]))).toBeNull();
   });

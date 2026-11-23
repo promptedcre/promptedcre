@@ -2,36 +2,679 @@
   "id": "key-principal-leaves",
   "slug": "key-principal-leaves",
   "kind": "situation",
-  "title": "A sponsor principal leaves",
-  "summary": "Apply the partner agreement, check key-person terms with lenders and investors, and reassign duties.",
+  "title": "A principal leaves",
+  "summary": "End the departing principal's access once the role ends, apply the partner agreement's departure terms or the state's defaults where it is silent, and give the notices loan, fund and venture documents require. Then appoint successors, update filings and IRS contacts, and settle the interest with counsel and the CPA.",
   "phase": "stand-up",
   "order": 130,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
+  "lastVerified": "2026-11-21",
   "situation": {
-    "trigger": "A principal resigns, becomes unable to work or dies.",
-    "urgency": "weeks"
+    "trigger": "A principal resigns, is removed, becomes unable to work or dies, or a divorce moves part of a principal's interest to a spouse.",
+    "urgency": "days"
   },
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "requires": [
+    "sign-partner-agreement",
+    "open-sponsor-bank-accounts",
+    "set-up-document-storage"
+  ],
+  "consumes": [
+    "sponsor-operating-agreement",
+    "certificate-of-formation",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "loan-documents",
+    "guaranty",
+    "form-d",
+    "private-placement-memorandum",
+    "ein-confirmation",
+    "investor-register"
+  ],
+  "produces": [
+    "sponsor-operating-agreement",
+    "bad-actor-questionnaire"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx",
+      "us-de"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Confirm the departure terms and the effective date",
-    "Read the partner agreement's departure and buyout terms",
-    "Check key-person clauses in loans, fund documents and JV agreements",
-    "List each role, signing authority and account the principal held",
-    "Reassign duties and update bank signers and system access",
-    "Notify lenders, partners and investors as their documents require",
-    "Update entity filings where the principal was named",
-    "Settle the departing principal's ownership and promote",
-    "Record the changes in the firm file"
-  ]
+  "sources": [
+    {
+      "id": "tx-boc-101",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.101.htm",
+      "title": "Texas Business Organizations Code, Chapter 101 (Sections 101.106 to 101.111, 101.1115, 101.205, 101.206, 101.304, 101.305, 101.358, 101.501 and 101.502)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "A member of a limited liability company may not withdraw or be expelled from the company.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-fam-code-3",
+      "url": "https://tcss.legis.texas.gov/resources/FA/htm/FA.3.htm",
+      "title": "Texas Family Code, Chapter 3 (Sections 3.002 and 3.003, community property and its presumption)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "Property possessed by either spouse during or on dissolution of marriage is presumed to be community property.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-tax-code-171",
+      "url": "https://tcss.legis.texas.gov/resources/TX/htm/TX.171.htm",
+      "title": "Texas Tax Code, Chapter 171 (Section 171.203, public information report)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "the person may file with the comptroller a sworn statement disclaiming the person's status as shown on the report",
+      "tier": "primary"
+    },
+    {
+      "id": "sos-amend-faq",
+      "url": "https://www.sos.state.tx.us/corp/amendmentsfaqs.shtml",
+      "title": "Amendments and Corrections FAQs (questions 3 and 4: ownership and management changes)",
+      "publisher": "Texas Secretary of State",
+      "accessed": "2026-11-21",
+      "quote": "corporations and LLCs are required to update their management information each year on the Public Information Report",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-2",
+      "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter II (Section 18-202(b), duty to amend the certificate of formation)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-21",
+      "quote": "or that any matter described has changed making the certificate of formation false in any material respect",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-3",
+      "url": "https://delcode.delaware.gov/title6/c018/sc03/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter III (Sections 18-302(d), 18-304 and 18-305(h): members' written consents, events of bankruptcy, record of members and managers)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-21",
+      "quote": "shall maintain a current record that identifies the name and last known business, residence or mailing address of each member and manager",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-4",
+      "url": "https://delcode.delaware.gov/title6/c018/sc04/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter IV (Sections 18-402 and 18-404(d): management, and managers' written consents)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-21",
+      "quote": "Unless otherwise provided in a limited liability company agreement, each member and manager has the authority to bind the limited liability company.",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-6",
+      "url": "https://delcode.delaware.gov/title6/c018/sc06/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter VI (Sections 18-602 to 18-604 and 18-607: resignation of a manager or member, distribution on resignation, limits on distributions)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-21",
+      "quote": "a member may not resign from a limited liability company prior to the dissolution and winding up of the limited liability company",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-7",
+      "url": "https://delcode.delaware.gov/title6/c018/sc07/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter VII (Sections 18-702, 18-704 and 18-705: assignment, admission of an assignee, a deceased or incompetent member's estate)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-21",
+      "quote": "the member’s personal representative may exercise all of the member’s rights for the purpose of settling the member’s estate or administering the member’s property",
+      "tier": "primary"
+    },
+    {
+      "id": "de-code-18-8",
+      "url": "https://delcode.delaware.gov/title6/c018/sc08/index.html",
+      "title": "6 Del. C. Chapter 18, Subchapter VIII (Section 18-801(b), a member's departure does not dissolve the company)",
+      "publisher": "Delaware General Assembly (Delaware Code Online)",
+      "accessed": "2026-11-21",
+      "quote": "the limited liability company shall be continued without dissolution",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-503",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.503",
+      "title": "17 CFR 230.503, Filing of notice of sales (paragraph (a)(3), when a Form D must be amended)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "The address or relationship to the issuer of a related person identified in response to Item 3 of the notice of sales on Form D",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-506",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.506",
+      "title": "17 CFR 230.506, Exemption for limited offers and sales without regard to dollar amount of offering (paragraph (d), bad actor disqualification)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "any director, executive officer, other officer participating in the offering, general partner or managing member of the issuer",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "To make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-f8822b",
+      "url": "https://www.irs.gov/pub/irs-pdf/f8822b.pdf",
+      "title": "Form 8822-B, Change of Address or Responsible Party — Business (Rev. December 2019), with instructions",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "is required to report a change in its “responsible party” on lines 8 and 9 within 60 days of the change",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-partnership-representative",
+      "url": "https://www.irs.gov/businesses/partnerships/designate-or-change-a-partnership-representative",
+      "title": "Designate or change a partnership representative (page last reviewed or updated November 14, 2026)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "The designation of a partnership representative for one taxable year is effective only for that taxable year.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-301-6223-1",
+      "url": "https://www.ecfr.gov/current/title-26/section-301.6223-1",
+      "title": "26 CFR 301.6223-1, Partnership representative (paragraphs (a) and (c) to (e): designation, resignation and revocation)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "The partnership must designate a partnership representative separately for each taxable year.",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-i8979",
+      "url": "https://www.irs.gov/pub/irs-pdf/i8979.pdf",
+      "title": "Instructions for Form 8979, Partnership Representative Designation or Resignation (Rev. September 2025)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "A partnership must designate a PR on the partnership’s return filed for the partnership tax year.",
+      "tier": "primary"
+    },
+    {
+      "id": "fincen-boi",
+      "url": "https://www.fincen.gov/boi",
+      "title": "Beneficial Ownership Information Reporting (alert updated August 11, 2026)",
+      "publisher": "Financial Crimes Enforcement Network",
+      "accessed": "2026-11-21",
+      "quote": "U.S. companies are exempt from the Beneficial Ownership Information (BOI) reporting requirements",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-706",
+      "url": "https://www.law.cornell.edu/uscode/text/26/706",
+      "title": "26 U.S.C. 706, Taxable years of partner and partnership (subsections (c)(2)(A) and (d)(1))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "The taxable year of a partnership shall close with respect to a partner whose entire interest in the partnership terminates",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-736",
+      "url": "https://www.law.cornell.edu/uscode/text/26/736",
+      "title": "26 U.S.C. 736, Payments to a retiring partner or a deceased partner's successor in interest",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "be considered as a distribution by the partnership and not as a distributive share or guaranteed payment",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-741",
+      "url": "https://www.law.cornell.edu/uscode/text/26/741",
+      "title": "26 U.S.C. 741, Recognition and character of gain or loss on sale or exchange",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "Such gain or loss shall be considered as gain or loss from the sale or exchange of a capital asset",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-743",
+      "url": "https://www.law.cornell.edu/uscode/text/26/743",
+      "title": "26 U.S.C. 743, Special rules where section 754 election or substantial built-in loss (subsections (a) and (b))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "such increase or decrease shall constitute an adjustment to the basis of partnership property with respect to the transferee partner only",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-754",
+      "url": "https://www.law.cornell.edu/uscode/text/26/754",
+      "title": "26 U.S.C. 754, Manner of electing optional adjustment to basis of partnership property",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "Such an election shall apply with respect to all distributions of property by the partnership and to all transfers of interests in the partnership",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-1061",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1061",
+      "title": "26 U.S.C. 1061, Partnership interests held in connection with performance of services (subsection (d), transfer to a related person)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "the person performed a service within the current calendar year or the preceding three calendar years in any applicable trade or business",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "record-the-departure",
+      "title": "Record the departure, its effective date and every role the principal held",
+      "instruction": "Open a departure record the day the firm learns of the event. Record who left, the kind of departure as reported, the date of the event and the date it takes effect, who reported it and what evidence arrived, such as a resignation letter, a removal vote, a death certificate or a decree dividing an interest; where the agreement treats kinds or causes of departure differently, mark the classification for counsel. Then list every role the principal held, from the firm file and the signed documents: manager and officer titles; bank signer, approver and online roles; loan guarantor; key person in a loan, fund, venture or offering document; Form D related person; registered agent; partnership representative or designated individual; EIN responsible party; any license the firm holds through the principal; system administrator; and the deals, investors and lenders the principal handled. Enter each clock the event starts in the deadline-calendar.",
+      "mode": "agent",
+      "modeBasis": "Building the record and the role list from the firm file and signed documents is file work; a remaining principal confirms both, and counsel classifies a disputed departure.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "sponsor-operating-agreement",
+        "certificate-of-formation",
+        "deal-entity-agreement",
+        "jv-agreement",
+        "loan-documents",
+        "guaranty",
+        "form-d",
+        "ein-confirmation"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "cut-off-role-access",
+      "title": "End the access and payment authority that went with the role, once it ends",
+      "instruction": "On the day the role ends, a remaining principal who administers each system lists, removes and confirms the departing principal's access, as set-up-document-storage's remove-access-on-departure sets out, recording each removal and its date: online banking logins and payment roles, the books, storage and data rooms, email, the investor portal, domain and software accounts, and shared passwords and recovery details. Keep every outgoing payment on two people; where one principal remains, the second approver named in the payment controls steps in. Where the removal or exit is contested, or the principal may still hold a governing role under the agreement, counsel first confirms the role has ended; until then no one changes access alone (sponsor-partners-disagree). A principal who keeps an interest, or an heir or spouse who now holds part of it, asks for records through the firm's records procedure. Bank signer records change on the consent in appoint-successors.",
+      "mode": "human-online",
+      "modeBasis": "Each system's administrator removes users inside that system; an agent holds no logins and cannot do it.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-the-departure"
+      ],
+      "market": "formation-back-office",
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "read-departure-terms",
+      "title": "Abstract what the partner agreement says about this kind of departure",
+      "instruction": "From the signed sponsor operating agreement, its amendments and its term sheet, abstract with section numbers what applies to this departure: whether the firm or the other principals may or must buy the interest, with the notice and exercise periods; how the price is set, by formula, appraisal or agreed value, and how it is paid; what happens to vested and unvested promote and to the principal's share of deals already made; capital the principal owes or is owed; any sharing or indemnity among the principals for guaranties; who manages and signs meanwhile; restrictive covenants, confidentiality and return of firm property; any right to keep using the principal's name; and any spousal consent signed under sign-partner-agreement. In a fund, read each general partner and management company agreement the same way; in a joint venture, the firm's member entity agreement. Mark each question the agreements leave open.",
+      "mode": "agent",
+      "modeBasis": "Abstracting a signed agreement is reading work; what a term means in a close case is counsel's call.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-the-departure"
+      ],
+      "consumes": [
+        "sponsor-operating-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "texas-defaults",
+      "title": "Where a Texas agreement is silent, write in the code's default rules",
+      "instruction": "For each open question on a Texas LLC, write the default beside it. A member may not withdraw or be expelled; one withdrawing under a right the agreement grants receives fair value within a reasonable time. Members may remove a manager with or without cause at a meeting called for that purpose, and the remaining managers or the members fill the vacancy. A member's surviving spouse, heirs, devisees and personal representative become assignees on death, as does a spouse holding an interest after divorce. An interest may be community property; the right to manage is not. An assignee gets the assigned allocations, distributions and records access but becomes a member only if every member approves; the assignor stays a member until then and is not released from liability to the company, even once the assignee is admitted. The code does not impair a buy-sell agreement on death or divorce.",
+      "mode": "agent",
+      "modeBasis": "Reading the defaults from the statute against the abstract is document work; counsel confirms how they apply.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-departure-terms"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "consumes": [
+        "sponsor-operating-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101"
+      ]
+    },
+    {
+      "id": "delaware-defaults",
+      "title": "Where a Delaware agreement is silent, write in the Act's default rules",
+      "instruction": "For each open question on a Delaware LLC, write the default beside it. A member may not resign before the company is dissolved and wound up; if the agreement allows resignation but sets no price, the member receives fair value, based on its share of distributions, within a reasonable time. A manager ceases to be one as the agreement provides, and may resign by written notice even where the agreement forbids it, though the company may recover damages and offset them against distributions. The personal representative of a member who dies or is adjudged incompetent may exercise the member's rights to settle the estate or administer the property. An assignee shares in profits, losses and distributions but becomes a member only as the agreement provides or with every member's consent; assigning a whole interest ends membership. A member's bankruptcy ends its membership, and no member's departure dissolves the company.",
+      "mode": "agent",
+      "modeBasis": "Reading the defaults from the statute against the abstract is document work; counsel confirms how they apply.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-departure-terms"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-de"
+        ]
+      },
+      "consumes": [
+        "sponsor-operating-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "de-code-18-6",
+        "de-code-18-7",
+        "de-code-18-4",
+        "de-code-18-3",
+        "de-code-18-8"
+      ]
+    },
+    {
+      "id": "find-key-person-terms",
+      "title": "List every key-person, consent and notice term the departure sets off",
+      "instruction": "Read each document outside the partner agreement that names the departing principal or turns on who runs the firm, and list every term the departure touches: its section, what it requires (notice, consent, a replacement or a cure), the deadline counted from the effective date, and what follows if it is missed. Start with the loan documents and guaranties: change-of-management and key-principal clauses, replacement-guarantor conditions, and net worth or liquidity covenants the principal met. Then read each deal entity agreement's manager-removal and key-person terms, any property management or service contract the principal signed, insurance naming the principal or funding a buyout, and, for an offering still open, the memorandum's management section. Enter each deadline in the deadline-calendar. Counsel reads any term whose meaning is unclear; nothing goes out yet.",
+      "mode": "agent",
+      "modeBasis": "Reading signed documents and listing their terms is document work; counsel settles any unclear meaning.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-the-departure"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "loan-documents",
+        "guaranty",
+        "deal-entity-agreement",
+        "private-placement-memorandum"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "fund-or-jv-rights",
+      "title": "For a fund or a JV, read the key-person and consent rights the departure sets off",
+      "instruction": "Read the fund's partnership agreement or the venture agreement for the rights the limited partners or the capital partner gain when a principal leaves. In a fund: who the key persons are, what counts as an event, such as no longer devoting the required time, whether it suspends new investments or the investment period, what notice the limited partners or their advisory committee get, and what vote ends the suspension or approves a replacement. In a joint venture: a key-principal clause, grounds for removing the firm as manager, the partner's consent to a change in control of the firm's member entity or a transfer of interests in it, and any duty to replace a guarantor. Add each term and its deadline to the list, so the principals see every clock before deciding anything.",
+      "mode": "agent",
+      "modeBasis": "Reading the fund and venture agreements and listing their terms is document work.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "find-key-person-terms"
+      ],
+      "when": {
+        "structure": [
+          "fund",
+          "jv"
+        ]
+      },
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "appoint-successors",
+      "title": "Appoint successors and change the signers by written consent",
+      "instruction": "The remaining principals act by the vote and in the form the agreement requires, counting any vote the departing principal or the estate still holds, as counsel confirms. They sign one written consent that records the departure and its effective date, accepts any resignation, fills each manager, officer, signing, registered agent, partnership representative and responsible party role on the list, and resets who may open accounts and create or approve payments. A role that a loan, fund or venture document makes subject to consent is filled subject to that consent, which send-required-notices requests. Absent other terms, the remaining Texas managers by majority, or the members at a meeting, fill a manager vacancy, and both states accept a written consent signed by the votes a full meeting would need. A principal it names then gives each bank the consent and the bank's form and confirms the old signer is removed (open-sponsor-bank-accounts).",
+      "mode": "human-online",
+      "modeBasis": "Appointing officers and signers binds the firm and is signed by the principals; an agent drafts the consent.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "cut-off-role-access",
+        "texas-defaults",
+        "delaware-defaults",
+        "find-key-person-terms",
+        "fund-or-jv-rights"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "sponsor-operating-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "de-code-18-3",
+        "de-code-18-4"
+      ]
+    },
+    {
+      "id": "send-required-notices",
+      "title": "Send each notice and consent request the documents require, on time",
+      "instruction": "From the list of key-person, consent and notice terms, draft each notice and consent request the documents require, to the lender, the capital partner, the fund's limited partners or their committee, the property manager and the insurers, each in the form, by the delivery method and to the address the document names. State facts only: who left, the effective date, who now holds each role and what is asked. Where a lender must approve a replacement guarantor or a change in management, ask early and in writing. Counsel reviews any notice that could be read as admitting a default. A remaining principal approves each one before it goes; record when and how each was delivered, and calendar each answer due.",
+      "mode": "agent",
+      "modeBasis": "Drafting from the term list is writing work; each notice speaks for the firm, so a remaining principal approves it first.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "find-key-person-terms",
+        "fund-or-jv-rights",
+        "appoint-successors"
+      ],
+      "consumes": [
+        "loan-documents",
+        "guaranty",
+        "deal-entity-agreement",
+        "jv-agreement",
+        "investor-register"
+      ],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "counsel-on-open-offering",
+      "title": "Have counsel decide what any open offering must now disclose",
+      "instruction": "If any offering is still open, give counsel the departure record, the memorandum's management section and any Form D on file. Counsel decides whether the offering documents need a supplement before the next sale, and whether sales pause until then, since an untrue statement of a material fact, or an omission that leaves what was said misleading, is unlawful in connection with a sale of securities. While an offering continues, its Form D must be amended as soon as practicable after most changes in the information filed; a change only in a related person's address or relationship to the issuer is an exception, so counsel decides whether this departure calls for one (file-form-d-amendment). Before anyone takes a covered role, such as executive officer or managing member, and before the next sale, that person answers the bad actor questionnaire, since reasonable care requires a factual inquiry into disqualifications.",
+      "mode": "human-online",
+      "modeBasis": "Whether a supplement or an amendment is required is a legal conclusion; an agent assembles the documents.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "record-the-departure"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5",
+        "us-fed.reg-d.form-d-amendments",
+        "us-fed.reg-d.bad-actor"
+      ],
+      "consumes": [
+        "private-placement-memorandum",
+        "form-d"
+      ],
+      "produces": [
+        "bad-actor-questionnaire"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b-5",
+        "ecfr-230-503",
+        "ecfr-230-506"
+      ]
+    },
+    {
+      "id": "update-filings-and-irs",
+      "title": "Update the state filings and IRS contacts that named the principal",
+      "instruction": "A principal the consent names updates each filing listing the departed principal. A registered agent change follows set-up-registered-agent. A Delaware manager, or a member if there is no manager, who learns the certificate has become materially false must amend it promptly (amend-the-certificate); a Texas certificate need not be amended for a new manager, since the yearly Public Information Report updates the state's records. If the principal was an EIN's responsible party, file Form 8822-B within 60 days. If the principal was any entity's partnership representative or designated individual, that year's designation, and the holder's power to bind the partnership, lasts until a valid resignation, revocation or IRS determination; name a successor on the next return, as an earlier year changes only after an IRS examination letter, with an adjustment request filed for another reason, or in other cases the Form 8979 instructions list. U.S. companies file no beneficial ownership report.",
+      "mode": "human-online",
+      "modeBasis": "Each filing is signed and submitted by an authorized person; an agent prepares the forms.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "appoint-successors"
+      ],
+      "rules": [
+        "us-tx.boc.registered-agent",
+        "us-fed.irs.ein",
+        "us-fed.fincen.boi"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "certificate-of-formation",
+        "ein-confirmation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "de-code-18-2",
+        "sos-amend-faq",
+        "irs-f8822b",
+        "irs-partnership-representative",
+        "ecfr-26-301-6223-1",
+        "irs-i8979",
+        "fincen-boi"
+      ]
+    },
+    {
+      "id": "cpa-tax-questions",
+      "title": "Have the CPA answer the tax questions before the buyout terms are fixed",
+      "instruction": "Before the price and form of any buyout are fixed, send the CPA the agreement's terms, the departing principal's capital account and the proposed effective date for written answers. The partnership's year closes for a partner whose entire interest ends, by death, liquidation or otherwise, and the year's items follow each partner's changing interest. If the firm redeems the interest, payments for the partner's share of partnership property are distributions and other payments a distributive share or guaranteed payment; if the other principals buy it, the seller's gain is capital except as section 751 provides. Under section 1061(d), transferring a promote interest to a family member, or to someone who worked in the same business this year or the three prior calendar years, can make gain short-term. Ask whether a section 754 election is or should be in place; it adjusts basis on a sale, a death or a distribution.",
+      "mode": "human-online",
+      "modeBasis": "How the exit is taxed is a licensed tax adviser's judgment; an agent sends the facts and records the answers.",
+      "actor": "cpa",
+      "licensed": "cpa",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "texas-defaults",
+        "delaware-defaults"
+      ],
+      "rules": [
+        "us-fed.irc.partnership-basis-election",
+        "us-fed.irc.section-1061-applicable-partnership-interests"
+      ],
+      "consumes": [
+        "sponsor-operating-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "usc-26-706",
+        "usc-26-736",
+        "usc-26-741",
+        "usc-26-1061",
+        "usc-26-754",
+        "usc-26-743"
+      ]
+    },
+    {
+      "id": "settle-and-sign",
+      "title": "Settle the interest under the agreement and sign what counsel drafts",
+      "instruction": "Within each exercise period, the remaining principals decide whether to use any purchase right the agreement gives the firm or them, and fix the price by its method; where it values promote by formula, the waterfall-promote calculator shows the promote at the formula's test value. Counsel drafts what the decision needs: a purchase or redemption agreement, the principal's resignation and release, an amended company agreement and member schedule, the lender's release and replacement of any guaranty, and a spouse's joinder where the interest may be community property, as Texas presumes of property held during marriage; on a death, the estate's representative signs. If the company itself pays, counsel confirms each payment is within the limit on distributions, which bars one that leaves liabilities above the fair value of assets; a member who knew of a violation must return it. Counsel confirms which covenants still bind. Then the parties sign.",
+      "mode": "human-online",
+      "modeBasis": "Using a purchase right binds the firm and the papers change legal rights; the principals decide and sign, counsel drafts.",
+      "actor": "principal",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "cpa-tax-questions",
+        "send-required-notices"
+      ],
+      "calculators": [
+        "waterfall-promote"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "sponsor-operating-agreement",
+        "guaranty",
+        "loan-documents"
+      ],
+      "produces": [
+        "sponsor-operating-agreement"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "de-code-18-6",
+        "tx-fam-code-3"
+      ]
+    },
+    {
+      "id": "update-firm-file",
+      "title": "Bring the member list, roles, calendar and firm file up to date",
+      "instruction": "Once the papers are signed, update the firm file from them: the current list of members with each one's interest and class, which a Texas LLC must keep, or produce within five days, at its principal office, or the current record of each member's and manager's name and address a Delaware LLC must keep; the roles table, signers and online roles, with the date each changed; and the company agreement with its amendments. Close the departure record with the terms and defaults applied, each notice and its delivery, counsel's and the CPA's answers and where each document is kept. Calendar what remains: buyout payments, guaranty releases, covenant end dates, the next return's partnership representative and the next Texas Public Information Report, which lists officers and directors on its filing date; tell the departed principal they may disclaim a later report that lists them. Then run audit-entity-standing's checks.",
+      "mode": "agent",
+      "modeBasis": "Updating records from signed documents is file work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "settle-and-sign",
+        "counsel-on-open-offering",
+        "update-filings-and-irs"
+      ],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "market": "formation-back-office",
+      "consumes": [
+        "sponsor-operating-agreement",
+        "certificate-of-formation"
+      ],
+      "basis": "cited",
+      "sources": [
+        "tx-boc-101",
+        "de-code-18-3",
+        "tx-tax-code-171"
+      ]
+    }
+  ],
+  "outlineSteps": []
 }

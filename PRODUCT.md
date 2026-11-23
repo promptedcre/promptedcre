@@ -25,8 +25,9 @@ web
 - The first user of the local engine is the owner, running his own firms from his own
   machine [44].
 - The word for the user is **operator**. "Sponsor" is not used for the user on the
-  marketing layer; catalog text still says it and is renamed later in a pass the owner
-  reads first [29, 30].
+  marketing layer. It is a real estate term and stays in catalog text wherever it is that
+  term; titles and summaries that meant the user were renamed in a pass the owner read
+  [29, 30, 104, 106, 107].
 
 ## Product Purpose
 
@@ -61,8 +62,8 @@ calendar file, a sheet for counsel and one for the CPA, and a score [35, 36].
 - Jurisdiction covered: federal and Texas, with Delaware for entity formation [13].
 - Three capital structures, switchable: single-asset syndication, blind-pool fund,
   joint venture with one capital partner [8].
-- The lifecycle written at full depth is standing up the firm, raising, and buying.
-  Operating, reporting and selling are outlines unless a record says otherwise [7].
+- The whole lifecycle is written at full depth: standing up the firm, raising, buying,
+  operating, reporting and selling [7, 110].
 - The local engine keeps a firm folder: JSON files plus one append-only log [46]. It is
   driven from a command line or a local MCP server [47].
 - Playbooks print, and each written playbook can be copied whole into any AI chat.
@@ -91,7 +92,7 @@ calendar file, a sheet for counsel and one for the CPA, and a score [35, 36].
   back as a prompt's caret, in the agent's green, and a cursor slab in the person's amber
   with the person's cut corner [76].
 - Headline: **"Start and run an autonomous CRE firm."**, and under it "Step-by-step
-  playbooks your AI agent can run, from forming the firm to buying the building." [54, 55]
+  playbooks your AI agent can run, from forming the firm to selling the building." [54, 55, 116]
 - Two themes, each composed on its own: **Paper**, the drawing set on a desk in daylight,
   which every visitor starts on [75], and **Night**, the dark drawing set, on the toggle.
 - One box to start from: the sentence to paste ("Read promptedcre.com/install and set me

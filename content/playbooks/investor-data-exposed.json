@@ -7,32 +7,554 @@
   "phase": "report",
   "order": 131,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
+  "lastVerified": "2026-11-21",
   "situation": {
     "trigger": "Investor records, such as tax ids or bank details, may have been accessed by someone who should not have them.",
     "urgency": "hours"
   },
-  "requires": [],
-  "consumes": [],
+  "requires": [
+    "set-up-document-storage",
+    "bind-sponsor-insurance",
+    "choose-counsel-and-cpa"
+  ],
+  "consumes": [
+    "investor-register",
+    "subscription-agreement",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "loan-documents",
+    "private-placement-memorandum"
+  ],
   "produces": [],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Contain the exposure and stop further access",
-    "Preserve logs, emails and system records",
-    "Bring in counsel and, where needed, a forensic firm",
-    "Work out what data was exposed and whose it was",
-    "Notify the insurance carrier if the policy covers it",
-    "List with counsel each notice required and its deadline",
-    "Reset access and fix the cause",
-    "Send the notices counsel approves",
-    "Answer investor questions with one consistent message",
-    "Record what happened and what changed"
-  ]
+  "sources": [
+    {
+      "id": "tx-bc-521",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.521.htm",
+      "title": "Texas Business and Commerce Code, Chapter 521, Identity Theft Enforcement and Protection Act (Sections 521.002 and 521.053)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "including data that is encrypted if the person accessing the data has the key required to decrypt the data",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bc-542",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.542.htm",
+      "title": "Texas Business and Commerce Code, Chapter 542, Cybersecurity Program (added in 2025)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "a person harmed as a result of the breach may not recover exemplary damages",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-oag-breach-report",
+      "url": "https://www.texasattorneygeneral.gov/consumer-protection/data-breach-reporting",
+      "title": "Data Breach Reporting",
+      "publisher": "Office of the Attorney General of Texas",
+      "accessed": "2026-11-21",
+      "quote": "Your completed Data Breach Report is potentially an open record.",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-248-30",
+      "url": "https://www.ecfr.gov/current/title-17/section-248.30",
+      "title": "17 CFR 248.30, Regulation S-P: safeguarding customer information, incident response programs and customer notice",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "as soon as practicable, but not later than 30 days, after becoming aware that unauthorized access to or use of customer information has occurred",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-16-314",
+      "url": "https://www.ecfr.gov/current/title-16/part-314",
+      "title": "16 CFR Part 314, Standards for Safeguarding Customer Information (Sections 314.1, 314.2 and 314.4(j))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "investment advisors that are not required to register with the Securities and Exchange Commission",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b-5",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b-5",
+      "title": "17 CFR 240.10b-5, Employment of manipulative and deceptive devices",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gov-4008",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.4008.htm",
+      "title": "Texas Government Code, Chapter 4008, Securities Act private rights of action (Section 4008.052)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "regardless of whether the security or transaction is exempt under Chapter 4005",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-1681c-1",
+      "url": "https://www.law.cornell.edu/uscode/text/15/1681c-1",
+      "title": "15 U.S.C. 1681c-1, Identity theft prevention: fraud alerts and the national security freeze",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "the consumer reporting agency shall, free of charge, place the security freeze",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-7001",
+      "url": "https://www.law.cornell.edu/uscode/text/15/7001",
+      "title": "15 U.S.C. 7001, Electronic Signatures in Global and National Commerce Act, general rule of validity (subsection (c), consumer consent)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-data-breach",
+      "url": "https://www.irs.gov/identity-theft-fraud-scams/data-breach-information-for-taxpayers",
+      "title": "Data breach information for taxpayers",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "Your tax account is most at risk if the data breach involves both your SSN and financial data, such as wages.",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-ip-pin",
+      "url": "https://www.irs.gov/identity-theft-fraud-scams/get-an-identity-protection-pin",
+      "title": "Get an identity protection PIN",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "Anyone who has an SSN or individual taxpayer identification number (ITIN) and is able to verify his/her identity is eligible",
+      "tier": "primary"
+    },
+    {
+      "id": "ic3-data-breach",
+      "url": "https://www.ic3.gov/CrimeInfo/DataBreach",
+      "title": "Data Breach (what to do in case of a data breach)",
+      "publisher": "FBI Internet Crime Complaint Center (IC3)",
+      "accessed": "2026-11-21",
+      "quote": "Reset all credentials that may have been exposed during the intrusion, including user and service accounts",
+      "tier": "primary"
+    },
+    {
+      "id": "ic3-ransomware",
+      "url": "https://www.ic3.gov/CrimeInfo/Ransomware",
+      "title": "Ransomware (what to do in case of a ransomware incident)",
+      "publisher": "FBI Internet Crime Complaint Center (IC3)",
+      "accessed": "2026-11-21",
+      "quote": "The FBI does not support paying a ransom in response to a ransomware attack.",
+      "tier": "primary"
+    },
+    {
+      "id": "ic3-faq",
+      "url": "https://www.ic3.gov/Home/FAQ",
+      "title": "Frequently Asked Questions (filing a complaint and keeping evidence)",
+      "publisher": "FBI Internet Crime Complaint Center (IC3)",
+      "accessed": "2026-11-21",
+      "quote": "IC3 does not collect evidence regarding complaints, nor do we accept attachments.",
+      "tier": "primary"
+    },
+    {
+      "id": "ofac-ransomware-advisory",
+      "url": "https://ofac.treasury.gov/media/912981/download?inline",
+      "title": "Updated Advisory on Potential Sanctions Risks for Facilitating Ransomware Payments (September 21, 2021)",
+      "publisher": "U.S. Department of the Treasury, Office of Foreign Assets Control",
+      "accessed": "2026-11-21",
+      "quote": "the U.S. government strongly discourages the payment of cyber ransom or extortion demands",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "contain-the-exposure",
+      "title": "Contain the exposure and stop further access",
+      "instruction": "Stop further access at once, without destroying the record of what happened. An administrator disables what was used: revokes shared links and open portal sessions; resets or revokes every credential that may have been exposed, user and service accounts alike, and signs each out everywhere; records, then removes, any forwarding rule or connected app the firm did not set up; and takes an infected computer off the network rather than wiping it. The FBI's guidance is to reimage compromised machines unless told to preserve them; here nothing is reimaged until counsel confirms the evidence is captured. If a vendor held the data, such as the portal or a fund administrator, call its security contact now. If a file went to the wrong person, ask them in writing to delete it and confirm they have. Hold any payment to changed instructions (wire-instructions-change).",
+      "mode": "human-online",
+      "modeBasis": "Disabling accounts, links and sessions takes the administrator's own sign-in to each system, which an agent does not hold.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ic3-data-breach"
+      ]
+    },
+    {
+      "id": "open-incident-record",
+      "title": "Open the incident record and start the clocks",
+      "instruction": "Open an incident record the day the firm learns of the exposure and keep it current. Record who noticed what and how, and the date each principal, employee or vendor first knew; if a vendor reported it, when its notice arrived. Texas requires a business keeping such data for another to tell the owner immediately after discovering a breach, and puts the duty to tell the people affected on the business that owns or licenses the data, not the vendor that kept it. Enter provisional deadlines in the deadline-calendar for counsel to confirm: Texas counts from the date the firm determines a breach occurred; the FTC's rule from the first day any employee, officer or other agent of the firm, other than the wrongdoer, knew; Regulation S-P from when an SEC-registered adviser became aware. Record the kinds of data, never the values: no tax ids, account numbers or passwords.",
+      "mode": "agent",
+      "modeBasis": "Building a timeline from messages and reports and entering provisional dates is record work; counsel confirms which deadlines apply.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-bc-521",
+        "ecfr-16-314",
+        "ecfr-248-30"
+      ]
+    },
+    {
+      "id": "preserve-evidence",
+      "title": "Preserve logs, emails and system records",
+      "instruction": "Export the evidence to a restricted folder that only counsel and named principals can open, before logs roll over or anyone cleans up. An administrator pulls the sign-in and audit logs from email, storage, the portal and the books; the suspicious messages with their full headers; any ransom note, with a photo of the screen; the misdirected message and its recipients; and the forwarding rules, apps and sessions recorded during containment. Turn off automatic deletion on the affected accounts and place the records on hold, so the retention schedule from set-up-document-storage destroys nothing. Ask each vendor involved, in writing, to preserve its own logs. The IC3 takes no attachments and tells victims to keep original evidence in a secure place in case an agency asks for it.",
+      "mode": "human-online",
+      "modeBasis": "Exporting logs and changing retention settings takes administrator sign-ins; an agent can list what to pull and check it arrived.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ic3-faq",
+        "ic3-data-breach"
+      ]
+    },
+    {
+      "id": "notify-the-insurer",
+      "title": "Notify the insurer under each policy's notice terms",
+      "instruction": "Using the claim procedure written under bind-sponsor-insurance, find each policy that may respond, such as cyber, crime or management liability, and give notice by the method and within the time each one sets, through the broker and directly where the policy names an address. Report facts, not conclusions about cause or fault. A principal approves each notice before it goes. Before the firm hires a forensic firm, a notification service or outside counsel, or discusses any ransom, read whether the policy requires the insurer's consent or a firm from its panel, and ask the insurer in writing. Record the date of each notice, the claim number and the adjuster, and enter any reporting deadline the policy sets in the deadline-calendar. Where no policy may respond, record that and the policies read.",
+      "mode": "agent",
+      "modeBasis": "Drafting each notice from the claim procedure and sending it by the method each policy sets is message work; a principal approves each one and makes any call a policy's claims line requires.",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "open-incident-record"
+      ],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "engage-counsel",
+      "title": "Bring in counsel and, where needed, a forensic firm",
+      "instruction": "A principal engages counsel experienced in data incidents the same day, signing the engagement in the firm's name on the insurer's terms where the policy sets them, and sends the incident record, the evidence list and the containment log. Counsel directs the response from here: whether the facts call for a forensic firm and on what engagement, who speaks for the firm, what is written down and where, and what anyone outside the firm is told meanwhile. A small, contained event, such as one statement sent to the wrong investor and confirmed deleted, may need only counsel's review; a compromised mailbox, portal or network generally needs a forensic examination to show what was reached. Until counsel says otherwise, no one discusses the incident with investors, vendors or the press beyond what containment requires.",
+      "mode": "human-online",
+      "modeBasis": "Engaging counsel takes a principal's signature; choosing the response and directing forensic work are counsel's legal judgments.",
+      "actor": "principal",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "open-incident-record",
+        "notify-the-insurer"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "scope-the-exposure",
+      "title": "Work out what data was exposed and whose it was",
+      "instruction": "From the forensic findings and the investor register, list each file, mailbox or system reached: its fields, paper or electronic, acquired or only viewed, and each person it identifies, with individual or entity, state of residence, and whether it was encrypted and the key taken. In Texas, sensitive personal information is an individual's name with an unencrypted Social Security number, driver's license or government ID number, or account or card number with any code or password permitting access to the financial account; or identifying health information. Texas notice covers only computerized data acquired without authorization; Regulation S-P and the FTC rule also reach paper, and for an SEC-registered adviser Regulation S-P names taxpayer identification numbers. K-1s pair a Social Security number with financial data, which the IRS says most endangers a tax account. Count Texas residents, everyone to be told and individual investors, since thresholds turn on them; mark unknowns.",
+      "mode": "agent",
+      "modeBasis": "Matching the findings to the register and counting is document work; whether a field or a person counts is counsel's call.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "preserve-evidence",
+        "engage-counsel"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-bc-521",
+        "ecfr-248-30",
+        "irs-data-breach"
+      ],
+      "typeNotes": {
+        "multifamily": "If the same systems hold residents' rental applications, screening reports or payment details, list those people too: the Texas notice duty covers any individual whose sensitive personal information was acquired from computerized data the firm owns or licenses, not only investors."
+      }
+    },
+    {
+      "id": "read-notice-terms",
+      "title": "List the notice duties in the firm's signed documents",
+      "instruction": "Read every signed document that may require the firm to report a data incident, and list each duty with its section, recipient, deadline and method. Start with each deal or fund entity agreement and any side letter, for confidentiality, investor information and notice terms; in a fund, any rights of the advisory committee; in a joint venture, the JV agreement's notice, information and major-decision terms, and whether the capital partner must be told or consulted before others. Then read the loan documents, for notice of claims or events affecting the borrower; each vendor contract, for its incident notice and cooperation duties; and each subscription agreement, for the investor's consent to electronic delivery. Enter each deadline in the deadline-calendar and give the list to counsel; nothing goes out yet.",
+      "mode": "agent",
+      "modeBasis": "Reading signed documents and listing their terms is document work; counsel settles any unclear meaning.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "open-incident-record"
+      ],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "loan-documents",
+        "subscription-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "report-the-crime",
+      "title": "Report a suspected crime to the FBI's IC3",
+      "instruction": "Where an intrusion, ransomware or fraud caused the exposure, a principal files a complaint at ic3.gov the day counsel is engaged, with \"data breach\" in the description, saving a copy before leaving the page; the IC3 sends none. For ransomware, add the variant, file extension, cryptocurrency type and address, attackers' emails and websites, demand and any amount paid. The FBI does not support paying a ransom; OFAC says the government strongly discourages it, warns paying a sanctioned person can violate sanctions even unknowingly, and counts a prompt, complete report in mitigation. Paying is the principals' decision, with counsel and the insurer. Get any agency request to delay notice for a criminal investigation in writing, for counsel: Texas lets notices to individuals wait, not the attorney general's report; Regulation S-P allows delay only on the U.S. Attorney General's written notice to the SEC; an FTC notice is still due.",
+      "mode": "human-online",
+      "modeBasis": "The complaint is filed by the victim under its own identity and attestation; an agent can draft the narrative from the incident record.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "preserve-evidence",
+        "engage-counsel"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ic3-data-breach",
+        "ic3-ransomware",
+        "ic3-faq",
+        "ofac-ransomware-advisory",
+        "tx-bc-521",
+        "ecfr-248-30",
+        "ecfr-16-314"
+      ]
+    },
+    {
+      "id": "list-required-notices",
+      "title": "List with counsel each notice required and its deadline",
+      "instruction": "Counsel decides in writing which notices are owed, to whom, by when. In Texas the firm tells each affected individual without unreasonable delay and within 60 days after determining the breach occurred; the attorney general as soon as practicable and within 30 days if at least 250 Texans are affected; and the national credit bureaus if it tells over 10,000 at one time. Texas accepts notice to another state's resident under that state's law; counsel checks that state's own rules. An SEC-registered adviser notifies under Regulation S-P within 30 days; a firm under the FTC's Safeguards Rule, which names advisers not required to register, tells the FTC as soon as possible and within 30 days of discovering an event involving at least 500 consumers. Counsel decides whether an open offering needs a supplement before the next sale: Rule 10b-5 and Texas securities law reach material omissions that make statements misleading.",
+      "mode": "human-online",
+      "modeBasis": "Which laws and contracts reach this incident, and what each requires, are legal conclusions; an agent prepares the table.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "scope-the-exposure",
+        "read-notice-terms",
+        "notify-the-insurer"
+      ],
+      "rules": [
+        "us-fed.exchange-act.rule-10b-5",
+        "us-tx.securities.offer-sale-liability"
+      ],
+      "calculators": [],
+      "consumes": [
+        "investor-register",
+        "private-placement-memorandum"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-bc-521",
+        "ecfr-248-30",
+        "ecfr-16-314",
+        "ecfr-240-10b-5",
+        "tx-gov-4008"
+      ]
+    },
+    {
+      "id": "answer-investor-questions",
+      "title": "Answer investor questions with one consistent message",
+      "instruction": "Before the first notice goes out, draft questions and answers from the notice text and counsel's guidance; route every question to the contact the notice names. Answer from that text; anything else goes to counsel before a reply, with no guessing at cause, scope or blame. Answers about one investor's own records go only to that investor, once identity is confirmed. Tell investors the firm will never ask for passwords or tax ids by email, and confirm any change to distribution instructions by phone at a number already on file (keep-investor-register-current). Each reply goes out with a principal's approval; log each question, answer and date. Complaints, demands, threatened claims and suits go to counsel and the insurer at once; a suit against a deal entity also follows deal-entity-sued; a regulator's inquiry about the incident goes to counsel (engage-counsel), and one about an offering follows regulator-sends-inquiry. Update answers as facts change.",
+      "mode": "agent",
+      "modeBasis": "Drafting answers from approved text and keeping the log is writing work; each reply goes to an investor only with a person's approval.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-required-notices"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "send-approved-notices",
+      "title": "Send the notices counsel approves",
+      "instruction": "Draft each notice on counsel's list; send it only once counsel and a principal approve it. Each contract notice, such as to a lender, advisory committee or JV capital partner, follows its document's form, address and order. Tell each person what happened, which of their information was involved, what the firm has done and whom to contact, plus every item Regulation S-P lists where it applies. Explain that a fraud alert with one nationwide credit bureau lasts at least a year, reaches the others and lets them request a free credit file; that a freeze is free; and how to get an IRS identity protection PIN, linking the IRS page rather than its online sign-up. Mail to the last known address, or send electronically only with the consent federal law requires; log each. If over 10,000 are told at one time, send the credit bureaus the timing, distribution and content.",
+      "mode": "agent",
+      "modeBasis": "Drafting from counsel's list and sending through the portal or mail service is message work; nothing goes out without counsel's and a principal's approval.",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-required-notices",
+        "answer-investor-questions"
+      ],
+      "rules": [
+        "us-fed.esign"
+      ],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register",
+        "subscription-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-bc-521",
+        "ecfr-248-30",
+        "usc-15-1681c-1",
+        "irs-ip-pin",
+        "usc-15-7001"
+      ]
+    },
+    {
+      "id": "file-agency-reports",
+      "title": "File the attorney general's report and any other agency notice",
+      "instruction": "A principal authorized to speak for the firm, or counsel, files each agency report on counsel's list from a draft the agent prepares. The Texas attorney general's report goes on the electronic form on its website and must describe the breach and its circumstances, the number of Texans affected, the number already told by mail or other direct means, the steps taken and planned, and whether law enforcement is investigating. The form cannot be saved, so finish the draft first; each breach gets its own report; an update reports totals to date; and the attorney general lists reported breaches publicly and warns that a filed report is potentially an open record. An FTC notice, where owed, goes on the FTC's online form with the items its rule lists. Save each confirmation and record number in the incident record.",
+      "mode": "human-online",
+      "modeBasis": "The attorney general's form is for an authorized representative of the business to submit; an agent drafts the answers.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-required-notices"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-bc-521",
+        "tx-oag-breach-report",
+        "ecfr-16-314"
+      ]
+    },
+    {
+      "id": "reset-access-and-fix-cause",
+      "title": "Rebuild affected systems and fix the cause",
+      "instruction": "Once counsel confirms the evidence is captured, an administrator rebuilds what the incident touched and closes what let it happen, as the forensic findings direct. Confirm every credential reset during containment, reset any the findings add, and require multi-factor sign-in on each; rebuild or restore affected machines, from a backup tested under set-up-document-storage where one exists; remove access no role needs, against the access table; and fix the gap found, whether a shared link, a missing sign-in control, a vendor setting or a skipped check. Get each vendor's written account of its fix. Confirm in each system's own user list that the changes took, and record each with its date. A principal who made none of the changes reviews them before the incident is closed; with one principal, a person the firm engages who made none of the changes does the review.",
+      "mode": "human-online",
+      "modeBasis": "Changing credentials, access and settings takes administrator sign-ins; an agent can track the list and check the user lists afterward.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "contain-the-exposure",
+        "scope-the-exposure"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ic3-data-breach"
+      ]
+    },
+    {
+      "id": "record-and-close",
+      "title": "Record what happened and what changed",
+      "instruction": "Close the incident with a written record: the timeline, what was exposed and whose, counsel's notice decisions and reasons, every notice and report with its date and method, the insurer's and law enforcement's roles, the costs, the cause and each fix. Update the access table, the claim procedure and the firm's written security procedures, including those set-up-document-storage keeps for sensitive personal information, from what was learned, and calendar a review. A principal approves each change before it takes effect. Since September 2025, in a suit over a breach, a Texas business with fewer than 250 employees that owns or licenses computerized sensitive personal information avoids exemplary damages if it shows that, at the time, it had implemented and maintained a cybersecurity program meeting the state's framework and size requirements; the chapter changes no duty. Report the outcome to investors in the next quarterly report (send-quarterly-investor-report) as counsel approves.",
+      "mode": "agent",
+      "modeBasis": "Assembling the record and updating procedures from the incident file is document work; a principal approves the changes.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "report-the-crime",
+        "send-approved-notices",
+        "file-agency-reports",
+        "answer-investor-questions",
+        "reset-access-and-fix-cause"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-bc-521",
+        "tx-bc-542"
+      ]
+    }
+  ],
+  "outlineSteps": []
 }

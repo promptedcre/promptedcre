@@ -374,7 +374,7 @@
       "actor": "principal",
       "risk": "high",
       "undo": "irreversible",
-      "approval": "none",
+      "approval": "signature",
       "effort": null,
       "elapsed": null,
       "after": [

@@ -7,33 +7,594 @@
   "phase": "operate",
   "order": 123,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
+  "lastVerified": "2026-11-21",
   "situation": {
     "trigger": "A named storm's forecast track includes the property's area.",
     "urgency": "days"
   },
-  "requires": [],
-  "consumes": [],
+  "requires": [
+    "take-over-operations",
+    "hire-property-manager",
+    "bind-property-insurance",
+    "abstract-the-leases",
+    "set-up-document-storage"
+  ],
+  "consumes": [
+    "insurance-binder",
+    "survey",
+    "property-condition-assessment",
+    "lease",
+    "lease-abstract",
+    "rent-roll",
+    "loan-documents",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "investor-register"
+  ],
   "produces": [],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Check the forecast track against the property's flood exposure",
-    "Confirm policies, deductibles and claim contacts",
-    "Photograph the property before the storm",
-    "Back up leases, records and contact lists off site",
-    "Secure loose items, roofs, openings and drains",
-    "Line up generators, pumps and contractors for after the storm",
-    "Tell tenants the plan and how to reach the owner",
-    "Shut down building systems as the property's plan calls for",
-    "Inspect the property once it is safe to return",
-    "Open a claim if there is damage",
-    "Report status to the lender and investors and record what was done"
-  ]
+  "sources": [
+    {
+      "id": "nhc-gloss",
+      "url": "https://www.nhc.noaa.gov/aboutgloss.shtml",
+      "title": "Glossary of NHC Terms (hurricane, tropical storm and storm surge watches and warnings)",
+      "publisher": "National Hurricane Center (NOAA)",
+      "accessed": "2026-11-21",
+      "quote": "Because hurricane preparedness activities become difficult once winds reach tropical storm force",
+      "tier": "primary"
+    },
+    {
+      "id": "nhc-graphics",
+      "url": "https://www.nhc.noaa.gov/aboutnhcgraphics.shtml",
+      "title": "NHC Tropical Cyclone Graphical Product Descriptions (track forecast cone, arrival time of tropical-storm-force winds, potential storm surge flooding map)",
+      "publisher": "National Hurricane Center (NOAA)",
+      "accessed": "2026-11-21",
+      "quote": "Once sustained tropical-storm-force winds begin, such preparations usually become too dangerous or difficult.",
+      "tier": "primary"
+    },
+    {
+      "id": "nhc-cone",
+      "url": "https://www.nhc.noaa.gov/aboutcone.shtml",
+      "title": "Definition of the NHC Track Forecast Cone",
+      "publisher": "National Hurricane Center (NOAA)",
+      "accessed": "2026-11-21",
+      "quote": "The cone represents the probable track of the center of a tropical cyclone",
+      "tier": "primary"
+    },
+    {
+      "id": "nhc-surge",
+      "url": "https://www.nhc.noaa.gov/nationalsurge/",
+      "title": "National Storm Surge Risk Maps, Version 4",
+      "publisher": "National Hurricane Center (NOAA)",
+      "accessed": "2026-11-21",
+      "quote": "storm surge is not just a beachfront problem",
+      "tier": "primary"
+    },
+    {
+      "id": "fema-msc",
+      "url": "https://msc.fema.gov/portal/home",
+      "title": "FEMA Flood Map Service Center",
+      "publisher": "Federal Emergency Management Agency",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-42-4013",
+      "url": "https://www.law.cornell.edu/uscode/text/42/4013",
+      "title": "42 U.S.C. 4013, Nature and limitation of insurance coverage (subsection (c), effective date of policies and the waiting period)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "shall become effective upon the expiration of the 30-day period beginning on the date that all obligations for such coverage",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-44-61",
+      "url": "https://www.ecfr.gov/current/title-44/part-61",
+      "title": "44 CFR part 61, Insurance coverage and rates (Section 61.11, effective date of coverage; Appendix A(2), Standard Flood Insurance Policy General Property Form, III.C.2 loss avoidance measures, IV property not insured and VII.G requirements in case of loss)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "we will cover such property while at that location for a period of 45 consecutive days",
+      "tier": "primary"
+    },
+    {
+      "id": "tac-5-4001",
+      "url": "https://www.law.cornell.edu/regulations/texas/28-Tex-Admin-Code-SS-5-4001",
+      "title": "28 Tex. Admin. Code 5.4001, Plan of Operation of the Texas Windstorm Insurance Association (subsection (d)(2)(E)(ii), new or increased coverage while a hurricane threatens)",
+      "publisher": "Legal Information Institute (rule text)",
+      "accessed": "2026-11-21",
+      "quote": "no new or increased coverage applications will be accepted",
+      "tier": "primary"
+    },
+    {
+      "id": "twia-moratoriums",
+      "url": "https://www.twia.org/moratoriums/",
+      "title": "Moratoriums (when a policy moratorium starts and ends, and how applications and payments are timed)",
+      "publisher": "Texas Windstorm Insurance Association",
+      "accessed": "2026-11-21",
+      "quote": "TWIA cannot issue a new windstorm insurance policy or increase coverage on an existing/renewal windstorm insurance policy",
+      "tier": "secondary"
+    },
+    {
+      "id": "tx-ins-2210",
+      "url": "https://tcss.legis.texas.gov/resources/IN/htm/IN.2210.htm",
+      "title": "Texas Insurance Code, Chapter 2210, Texas Windstorm Insurance Association (Sections 2210.205 and 2210.573, the deadline for filing a claim)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "an insured must file a claim under an association policy not later than the first anniversary of the date on which the damage",
+      "tier": "primary"
+    },
+    {
+      "id": "twia-claims",
+      "url": "https://www.twia.org/claims/",
+      "title": "Claims Process (ways to report a claim, deadlines and temporary repairs)",
+      "publisher": "Texas Windstorm Insurance Association",
+      "accessed": "2026-11-21",
+      "quote": "Policyholders have one year from the date the property was damaged to report a TWIA claim.",
+      "tier": "secondary"
+    },
+    {
+      "id": "gv-418",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.418.htm",
+      "title": "Texas Government Code, Chapter 418, Emergency Management (Sections 418.050, phased reentry plan, and 418.185, mandatory evacuation)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "may compel persons who remain in the evacuated area to leave",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-pr-92",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.92.htm",
+      "title": "Texas Property Code, Chapter 92 (Sections 92.008, interruption of utilities; 92.020, emergency phone number; and 92.054, casualty loss)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "a telephone number that will be answered 24 hours a day for the purpose of reporting emergencies",
+      "tier": "primary"
+    },
+    {
+      "id": "epa-hurricanes",
+      "url": "https://www.epa.gov/natural-disasters/hurricanes",
+      "title": "Hurricanes (prepare for and recover from a hurricane: generators, floodwater, debris)",
+      "publisher": "U.S. Environmental Protection Agency",
+      "accessed": "2026-11-21",
+      "quote": "Generator exhaust is toxic. Always put generators outside well away from doors, windows, and vents.",
+      "tier": "primary"
+    },
+    {
+      "id": "epa-release",
+      "url": "https://www.epa.gov/natural-disasters/hazardous-weather-release-prevention-and-reporting",
+      "title": "Hazardous Weather Release Prevention and Reporting",
+      "publisher": "U.S. Environmental Protection Agency",
+      "accessed": "2026-11-21",
+      "quote": "minimize chemical releases during process shutdown operations; and if reportable releases occur, they must be reported immediately upon constructive knowledge of occurrence.",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-7508a",
+      "url": "https://www.law.cornell.edu/uscode/text/26/7508A",
+      "title": "26 U.S.C. 7508A, Authority to postpone certain deadlines by reason of Federally declared disaster (subsection (c), state-declared disasters, and (e), mandatory 120-day extension)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-23",
+      "quote": "upon the written request of the Governor of a State (or the Mayor, in the case of the District of Columbia)",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-disaster-faq",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/faqs-for-disaster-victims",
+      "title": "FAQs for disaster victims (affected taxpayers and records; partnerships and shareholders; state-declared disasters)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-23",
+      "quote": "records necessary to meet a filing or payment deadline postponed during the relief period are located in a covered disaster area",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-42-4026",
+      "url": "https://www.law.cornell.edu/uscode/text/42/4026",
+      "title": "42 U.S.C. 4026, Expiration of insurance authority (the date after which no new National Flood Insurance Program contract may be made)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-23",
+      "quote": "No new contract for flood insurance under this chapter shall be entered into after September 30, 2026.",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "check-the-forecast",
+      "title": "Check the watches, warnings and wind arrival time for the property",
+      "instruction": "Read the National Hurricane Center's latest advisory and record whether the property's area is under a tropical storm, hurricane or storm surge watch or warning, and the earliest reasonable arrival time of tropical-storm-force winds there. A watch means those conditions are possible and a warning means they are expected; NHC issues hurricane watches 48 hours and warnings 36 hours before tropical-storm-force winds are expected, because preparing becomes difficult once they arrive. The earliest reasonable arrival time is the time before which the chance of those winds starting is no more than one in ten: the window for finishing preparations with a low tolerance for risk. The cone shows only where the center will probably go; damaging winds can reach well beyond it. Give the principals that time as the deadline for outside work, and recheck it at each advisory, normally every six hours, and at each intermediate advisory.",
+      "mode": "agent-browser",
+      "modeBasis": "The advisories and graphics are public pages an agent can read; it decides nothing for the firm.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "nhc-gloss",
+        "nhc-graphics",
+        "nhc-cone"
+      ]
+    },
+    {
+      "id": "check-texas-wind",
+      "title": "On the Texas coast, check the windstorm policy and any moratorium",
+      "instruction": "Where wind and hail cover comes from the Texas Windstorm Insurance Association (TWIA), confirm the policy is in force, its expiration date and its deductible, and check TWIA's site for a moratorium in effect. From the day a storm designated a hurricane is in the Gulf or inside the 80-west, 20-north boundary, TWIA takes no application for new or increased coverage until its general manager finds the storm no longer threatens its coverage area; record any gap. A same-coverage renewal requested before expiry is not cut off. If an application, increase or renewal is pending, a principal approves a message asking the broker to confirm it was submitted and paid before the moratorium took effect. Note the claim routes (portal, chat, text, 24-hour line) for the coverage sheet. Claims are due within one year of the damage; the commissioner may add up to 180 days for good cause.",
+      "mode": "agent",
+      "modeBasis": "Reading the policy and TWIA's rules is document work; the message to the broker leaves the firm, so a person approves it.",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "insurance-binder"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tac-5-4001",
+        "twia-moratoriums",
+        "tx-ins-2210",
+        "twia-claims"
+      ]
+    },
+    {
+      "id": "map-flood-and-surge",
+      "title": "Check each building's flood zone and storm surge exposure",
+      "instruction": "Take each building's flood zone and map date from the survey and the record kept under renew-property-insurance or, for a property bought this year, the map saved in run-due-diligence and the lender's flood determination checked in bind-property-insurance; check FEMA's Flood Map Service Center only where none is on file. Then check NOAA's storm surge risk maps, which show surge reaching miles inland in places. Once NHC issues a Potential Storm Surge Flooding Map for this storm, usually with the first storm surge watch, read the depth it shows at the property: a reasonable worst case, with a one-in-ten chance of being exceeded, updated with each full advisory. Check the local emergency management site for whether the property lies in a surge evacuation zone. From the survey and the property condition assessment, list what sits below the expected water: ground floors, equipment rooms, electrical gear, elevator pits, parking and stored goods.",
+      "mode": "agent-browser",
+      "modeBasis": "The flood maps and surge maps are public websites an agent can search by address.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "standing",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "survey",
+        "property-condition-assessment"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "fema-msc",
+        "nhc-surge",
+        "nhc-graphics"
+      ]
+    },
+    {
+      "id": "read-storm-coverage",
+      "title": "List each policy's storm deductibles, limits and claim contacts",
+      "instruction": "Build one coverage sheet from the policies and the claim notes under bind-property-insurance and renew-property-insurance. For each policy, record insurer and number; how, to whom and by when a claim is reported; the broker's after-hours contact; the wind, hail or named-storm deductible in dollars, per building or occurrence; flood limits and deductibles; and rent loss or business income cover, its waiting period and any civil authority cover. For a blanket program, add the shared limit, occurrence deductible and other insured properties in the forecast area. New federal flood policies and increases generally wait 30 days, so a flood gap usually cannot close before this storm; record it. A first policy within 13 months after the community's revised map took effect starts the next day. No new program policy can be bought after the date in 42 U.S.C. 4026, which Congress often extends; if it has passed, only private flood remains.",
+      "mode": "agent",
+      "modeBasis": "Reading the policies and building the sheet is document work; whether to change coverage is the principals' call.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "insurance-binder"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-42-4013",
+        "ecfr-44-61",
+        "usc-42-4026"
+      ]
+    },
+    {
+      "id": "decide-storm-plan",
+      "title": "Set the storm plan and the limits on emergency spending",
+      "instruction": "The principals set the storm plan against the deadline for outside work from check-the-forecast. It says when the building, parking and services close; what is shut down and by whom; which buildings, or which of the firm's properties in the forecast area, are prepared first; what emergency spending a principal or the property manager may commit beyond the management agreement's limits; and who speaks for the firm. An agent drafts the choices from the forecast, the flood and surge list and the coverage sheet. In a joint venture, send the capital partner the timeline, the coverage sheet and the plan at the notice address the JV agreement names, and get any consent it requires for emergency spending before that spending is committed.",
+      "mode": "human-online",
+      "modeBasis": "Setting the plan and committing money are the principals' decisions; an agent drafts the choices and the partner's notice.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-the-forecast",
+        "map-flood-and-surge",
+        "read-storm-coverage"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "back-up-records",
+      "title": "Back up leases, records and contact lists off site",
+      "instruction": "Confirm that everything needed to run the property and support a claim can be opened from anywhere if the site, its office and local power are lost: the leases and abstracts, the rent roll, the policies and declarations, the loan documents' insurance, casualty and notice sections, the property condition assessment, plans and equipment lists, service contracts and the coverage sheet. Check that copies sit in the firm's storage (set-up-document-storage), not only on a computer at the property, and that the property manager's records can be exported. Build one contact sheet: the principals, the property manager and on-site staff, each tenant's emergency contact, the insurers and the broker, the lender or servicer, any capital partner, utilities, the alarm and elevator companies, and each contractor as it is lined up. Give the principals and the manager a copy that works offline; a person approves the manager's copy.",
+      "mode": "agent",
+      "modeBasis": "Copying files and building lists in the firm's own storage is file work an agent with access can do; the copy for the property manager leaves the firm, so a person approves it.",
+      "risk": "low",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-storm-coverage"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "lease",
+        "lease-abstract",
+        "rent-roll",
+        "loan-documents",
+        "insurance-binder",
+        "property-condition-assessment"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "photograph-before",
+      "title": "Photograph and inventory the property before the storm",
+      "instruction": "While it is still safe, the property manager or a principal photographs and films the whole property from a shot list an agent builds from the property condition assessment, the survey and the equipment list. Cover each building from every side, the roof and rooftop equipment, windows, doors and overhead doors, paving, drainage and landscaping, and every common area, equipment room and vacant space, with the serial plates of major equipment and the date on each file. Enter a tenant's space only as its lease allows. List the owner's property kept at the site, such as maintenance equipment, furniture and supplies, with quantity, age and cost where known: a federal flood claim needs an inventory of damaged property showing quantity, description, actual cash value and amount of loss, with bills and receipts attached. Upload everything to the firm's storage the same day.",
+      "mode": "human-offline",
+      "modeBasis": "Walking the site with a camera is a person's work; an agent prepares the shot list and files the results.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-the-forecast"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "property-condition-assessment",
+        "survey",
+        "lease-abstract"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-44-61"
+      ]
+    },
+    {
+      "id": "line-up-vendors",
+      "title": "Line up generators, pumps and contractors for after the storm",
+      "instruction": "From the service contracts and the property manager's vendor list, an agent lists who can work at the property after landfall: board-up and roof tarping, water extraction and drying, electricians, plumbers, tree and debris removal, security, and generator and pump rental, with each one's contact and what its contract already covers. A principal or the manager calls them and reserves what the property will need, within the limits the management agreement and the storm plan set, knowing that every owner nearby is calling the same firms. Have an electrician confirm the size, fuel and connection of any rental generator, and place it outside, well away from doors, windows and vents: EPA warns that generator exhaust is toxic and carbon monoxide builds up quickly. Add each commitment, its price terms and its contact to the contact sheet, and keep every quote for the claim file.",
+      "mode": "human-offline",
+      "modeBasis": "Reserving crews and equipment commits the owner's money and is done by phone by a person; an agent drafts the list.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "map-flood-and-surge",
+        "decide-storm-plan",
+        "back-up-records"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "epa-hurricanes"
+      ]
+    },
+    {
+      "id": "tell-tenants",
+      "title": "Tell tenants the plan and how to reach the owner",
+      "instruction": "Draft one notice for every tenant from the storm plan, the lease abstracts and the contact sheet. Say what the property will do and when, such as closing the building or the parking, shutting down systems and suspending services; what each lease leaves to the tenant, such as securing its own space, contents and storefront and insuring its own property; where to find official orders, never telling anyone to stay; and the number that will be answered during and after the storm. Send it by the method each lease's notice clause allows and also by email or text, once a person approves it. Ask each tenant to confirm its emergency contact and to report hazardous materials or critical equipment on site.",
+      "mode": "agent",
+      "modeBasis": "Drafting from the leases and the storm plan is writing work; a notice to tenants goes out only with a person's approval.",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "decide-storm-plan",
+        "back-up-records"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "lease-abstract",
+        "rent-roll"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-pr-92",
+        "epa-release"
+      ],
+      "typeNotes": {
+        "multifamily": "Residents live on site, so the notice goes to every unit. In Texas a landlord with an on-site management office must give residents a number answered 24 hours a day for emergencies and post it outside the office, and any other residential landlord must still give a number (Property Code 92.020). Ask residents to move cars out of low parking and to tell the office if they need help leaving.",
+        "industrial": "Ask each tenant about outdoor storage, trailers, racking and stored fuel or chemicals, and when it will stop operations. Ask each tenant that runs process equipment to shut it down under its own procedures; EPA reminds operators to minimize releases during shutdown and to report a reportable release immediately.",
+        "retail": "Ask each tenant to secure its storefront glass, signage and stock, and to say when the store will close."
+      }
+    },
+    {
+      "id": "secure-the-site",
+      "title": "Secure loose items, roofs, openings and drains",
+      "instruction": "Before the deadline for outside work, the manager's crew or contractors, including any board-up crew the storm plan calls for, secure the site. Bring in or tie down furniture, signs, carts and dumpsters; fasten rooftop equipment and hatches; brace shutters and overhead doors; clear drains and gutters; move vehicles, equipment, records and stored goods off low floors or off site; and set barriers where map-flood-and-surge shows water will collect. Move the owner's own stored fuel and chemicals above the expected water; a spill follows environmental-release-on-site. The federal flood policy pays limited costs of sandbags and pumps once flooding starts nearby or officials order flood measures, and of moving insured property off the premises, covered there 45 days if enclosed and above ground or outside the flood zone; it never insures licensed vehicles or deeds, accounts and other valuable papers. Keep any order, every receipt and photos of the work.",
+      "mode": "human-offline",
+      "modeBasis": "Physical work on the site is done by people; an agent tracks the checklist and files the photos.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "map-flood-and-surge",
+        "photograph-before",
+        "decide-storm-plan"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-44-61"
+      ]
+    },
+    {
+      "id": "shut-down-and-leave",
+      "title": "Shut down building systems as the property's plan calls for, then leave",
+      "instruction": "Following the emergency and storm plans, or each maker's instructions where they are silent, a qualified technician or the property manager shuts down what water or power surges would damage. This covers elevators, parked above the expected water and out of service; gas, where the plan or the utility calls for it; and power to equipment below the expected water, keeping fire alarms, sprinklers and sump pumps running where they can. Record the time and state of each system for the restart. Lock the buildings and set alarms and cameras. The firm's and the manager's staff and contractors leave before tropical-storm-force winds arrive, or sooner if officials order an evacuation; in Texas a county judge or mayor who orders one may compel those who remain to leave, and a person who knowingly ignores the order, acts unreasonably and puts someone in danger can owe the cost of a government rescue.",
+      "mode": "human-offline",
+      "modeBasis": "Shutting down equipment and leaving the site are physical acts by qualified people.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "tell-tenants",
+        "secure-the-site"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "gv-418",
+        "nhc-graphics",
+        "tx-pr-92"
+      ],
+      "typeNotes": {
+        "multifamily": "Residents decide whether to leave unless officials order an evacuation. Keep exits, fire alarms and sprinklers working and residents able to get in and out, and cut gas or power to occupied units only where the plan, the utility or officials call for it: a Texas landlord may interrupt utilities it furnishes only for bona fide repairs, construction or an emergency (Property Code 92.008)."
+      }
+    },
+    {
+      "id": "inspect-after",
+      "title": "Return when officials allow and inspect the property",
+      "instruction": "Go back only when local officials reopen the area; in Texas, local emergency management directors time reentry under the state's phased plan and credentialing process. Before entering, check from outside for downed lines, gas, structural damage and standing water; if it finds live lines, gas or structural damage, stay out under casualty-damages-property's get-everyone-safe until the building official or fire department allows entry. Stay out of floodwater, which EPA warns can carry sewage and other hazardous substances. The property manager or a principal then works through the pre-storm shot list from the same angles and records water lines, roof and envelope damage, the state of each system and anything unsafe, entering tenant space only as the leases allow. An agent sets the before and after photos side by side and drafts a damage summary for each building. Restart systems from the shutdown list once a technician confirms wet equipment is safe.",
+      "mode": "human-offline",
+      "modeBasis": "Inspecting a damaged site is a person's work on site; an agent compares the photos and drafts the summary.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "photograph-before",
+        "shut-down-and-leave"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "lease-abstract"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "gv-418",
+        "epa-hurricanes",
+        "tx-pr-92"
+      ],
+      "typeNotes": {
+        "multifamily": "Residents may come back before the inspection is done, so post hazards and closed areas first. In Texas, if a unit is as a practical matter totally unusable after a casualty the resident did not cause, either side may end the lease by written notice before repairs are finished (Property Code 92.054); casualty-damages-property handles it."
+      }
+    },
+    {
+      "id": "hand-off-and-record",
+      "title": "Hand any damage to the casualty playbook and record what was done",
+      "instruction": "Where the inspection found damage, open casualty-damages-property the same day and give it the coverage sheet, the contact sheet, the pre-storm shot list and photos, and the damage summary for its report-the-loss and document-the-damage steps; where it found none, record that. Record the timeline, photos, costs, contractor commitments and lessons in the property file, and write or update the property's emergency plan and contact sheet. After a presidential major-disaster declaration with federal assistance to individuals and households, filing and payment deadlines falling from the incident date until 120 days after the later of that date and the declaration are postponed for a business whose principal place of business or needed records are in the area; the IRS may extend further, also for a state-declared disaster at the governor's request. Flag any declaration for the CPA, who confirms under file-partnership-return-and-k1s which of the entity's and investors' deadlines moved.",
+      "mode": "agent",
+      "modeBasis": "Opening the next playbook and keeping the property file are file work; which tax deadlines moved is the CPA's judgment, made in file-partnership-return-and-k1s.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-texas-wind",
+        "inspect-after"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-26-7508a",
+        "irs-disaster-faq"
+      ]
+    },
+    {
+      "id": "update-after-storm",
+      "title": "Tell tenants and investors how the property came through",
+      "instruction": "Draft a short update for tenants, and one for investors and, in a joint venture, the capital partner, once the inspection is recorded. Tell tenants whether the property was damaged, when the building, parking and services reopen, and whom to call; tell investors whether there was damage and, if so, that casualty-damages-property is open and when they will hear next. Leave the damage details, the lease notices and the investors' damage report to casualty-damages-property. Send the tenant update by the method each lease's notice clause allows and also by email or text, the investor update as the deal entity agreement provides, and the partner's to the notice address the JV agreement names, once a person approves them.",
+      "mode": "agent",
+      "modeBasis": "Drafting from the inspection and the storm file is writing work; updates leave the firm only with a person's approval.",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "hand-off-and-record"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "lease-abstract",
+        "investor-register",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    }
+  ],
+  "outlineSteps": []
 }

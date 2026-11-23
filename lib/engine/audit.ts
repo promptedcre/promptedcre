@@ -101,15 +101,17 @@ export type AuditScore = {
   notApplicable: number;
   openFindings: OpenCounts;
   covers: string;
-  // What this score says nothing about: audits listed but not written, and the
-  // parts of a firm's life no audit covers yet. A score is never read without it.
+  // What this score says nothing about: the other audits, written or only listed, and
+  // the parts of a firm's life no audit covers yet. A score is never read without it.
   notCovered: string[];
   line: string;
 };
 
 function notCovered(ctx: Ctx, playbook: Playbook): string[] {
-  const unwritten = ctx.corpus.playbooks.filter((p) => p.kind === "audit" && p.depth !== "full" && p.slug !== playbook.slug).map((p) => `${p.title} (listed, not written yet)`);
-  return [...unwritten, ...PHASES_NOT_AUDITED.map((phase) => `${PHASE_LABEL[phase]} (no audit yet)`)];
+  const others = ctx.corpus.playbooks.filter((p) => p.kind === "audit" && p.slug !== playbook.slug);
+  const separate = others.filter((p) => p.depth === "full").map((p) => `${p.title} (a separate audit)`);
+  const unwritten = others.filter((p) => p.depth !== "full").map((p) => `${p.title} (listed, not written yet)`);
+  return [...separate, ...unwritten, ...PHASES_NOT_AUDITED.map((phase) => `${PHASE_LABEL[phase]} (no audit yet)`)];
 }
 
 const plural = (n: number, one: string, many: string) => `${n} ${n === 1 ? one : many}`;

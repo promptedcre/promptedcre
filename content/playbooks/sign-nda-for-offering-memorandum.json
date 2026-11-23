@@ -7,28 +7,459 @@
   "phase": "acquire",
   "order": 205,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "set-up-deal-pipeline",
+    "set-up-document-storage",
+    "choose-counsel-and-cpa"
+  ],
+  "consumes": [
+    "certificate-of-formation",
+    "sponsor-operating-agreement",
+    "deal-entity-agreement",
+    "jv-agreement"
+  ],
+  "produces": [
+    "offering-memorandum"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Confirm who is asking and for which property",
-    "Read the confidentiality agreement in full",
-    "Check which entity signs and who signs for it",
-    "Check what counts as confidential and the permitted uses",
-    "Check the no-contact terms for tenants, staff and lenders",
-    "Check the non-solicitation terms and how long the agreement lasts",
-    "Check who may receive the materials, including lenders and partners",
-    "Mark up the terms the sponsor cannot meet",
-    "Sign and return the agreement",
-    "File the signed copy and track its obligations"
-  ]
+  "sources": [
+    {
+      "id": "bo-101",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.101.htm",
+      "title": "Texas Business Organizations Code, Chapter 101, Limited Liability Companies (Sections 101.251, 101.252 and 101.254)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "including the execution of an instrument, document, mortgage, or conveyance in the name of the company, binds the company",
+      "tier": "primary"
+    },
+    {
+      "id": "bo-152",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.152.htm",
+      "title": "Texas Business Organizations Code, Chapter 152, General Partnerships (Sections 152.301 and 152.302)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "Each partner is an agent of the partnership for the purpose of its business.",
+      "tier": "primary"
+    },
+    {
+      "id": "bo-153",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.153.htm",
+      "title": "Texas Business Organizations Code, Chapter 153, Limited Partnerships (Sections 153.003 and 153.152)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "has the rights and powers and is subject to the restrictions of a partner in a partnership without limited partners",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-240-10b5-2",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.10b5-2",
+      "title": "17 CFR 240.10b5-2, Duties of trust or confidence in misappropriation insider trading cases",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "Whenever a person agrees to maintain information in confidence",
+      "tier": "primary"
+    },
+    {
+      "id": "cp-134a",
+      "url": "https://tcss.legis.texas.gov/resources/CP/htm/CP.134A.htm",
+      "title": "Texas Civil Practice and Remedies Code, Chapter 134A, Texas Uniform Trade Secrets Act (Section 134A.002)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "acquired under circumstances giving rise to a duty to maintain the secrecy of or limit the use of the trade secret",
+      "tier": "primary"
+    },
+    {
+      "id": "bc-322",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.322.htm",
+      "title": "Texas Business and Commerce Code, Chapter 322, Uniform Electronic Transactions Act (Sections 322.002, 322.005, 322.007 and 322.009)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "executed or adopted by a person with the intent to sign the record",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-7001",
+      "url": "https://www.law.cornell.edu/uscode/text/15/7001",
+      "title": "15 U.S.C. 7001, General rule of validity (E-SIGN Act)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "may not be denied legal effect, validity, or enforceability solely because it is in electronic form",
+      "tier": "primary"
+    },
+    {
+      "id": "bc-521",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.521.htm",
+      "title": "Texas Business and Commerce Code, Chapter 521, Unauthorized Use of Identifying Information (Sections 521.002, 521.052 and 521.053)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "shall notify the owner or license holder of the information of any breach of system security immediately after discovering the breach",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "confirm-the-request",
+      "title": "Confirm who is asking and for which property",
+      "instruction": "Before anyone signs, confirm the request is genuine and add the property named, how the agreement arrived, from whom and the date to the deal's record from log-lead-collect-package. This record runs inside screen-deal-buy-box, between its log-lead-collect-package and extract-package-facts steps. Open the agreement only through the broker's known website or a link from an address already on the broker list, because lookalike signing pages are used to steal sign-ins. Where the agreement sits behind a deal-room registration, a principal registers with a firm email address and saves the agreement and the site's terms to the deal folder; the agent works from that copy and never creates or signs in to the account. For a broker not yet on the list, run check-broker-licenses in set-up-deal-pipeline first; in Texas it records the license and files any Information About Brokerage Services notice. Record whether the firm has its own broker on this deal.",
+      "mode": "agent",
+      "modeBasis": "Adding to the deal record is file work; a principal does any deal-room registration, because an agent never opens or uses an account in a person's name.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-tx.trec.iabs"
+      ],
+      "calculators": [],
+      "market": "deal-pipeline-underwriting",
+      "consumes": [],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "abstract-the-agreement",
+      "title": "Read the agreement in full and abstract every term",
+      "instruction": "Read the whole agreement, with every exhibit and any website terms the deal room says also apply, from the copy saved to the deal folder, and write a one-page abstract with section numbers for the person who will decide. Record who it protects (the seller, the broker, their affiliates) and who it binds; what counts as confidential and what is excluded; the permitted use; who may receive the materials; any no-contact, non-solicitation, no-hire or no-teaming term; how long each duty lasts; what must be returned or destroyed; remedies such as an injunction, indemnity, fees or damages; governing law, forum and any jury waiver; and anything unusual, such as a standstill, exclusivity or a statement about the firm's finances. Record any statement about brokers: who represents whom, and who pays a broker the firm uses. Mark each term the abstract cannot explain as a question for counsel.",
+      "mode": "agent",
+      "modeBasis": "Reading a contract and abstracting its terms is document work; what a term means for the firm is counsel's call.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-the-request"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "check-signing-entity",
+      "title": "Check which entity signs and who signs for it",
+      "instruction": "Propose which entity signs, usually the firm's existing entity because the one that will buy the property may not exist yet, and copy its exact legal name from the certificate of formation. Check that the agreement lets the firm share the materials with, or assign the agreement to, the entity it later forms to buy (form-deal-entity). The signer must hold authority under the company agreement. For a Texas LLC, each governing person, and each officer the governing authority vests with authority, is an agent of the company, and signing an instrument in the company's name, apparently in the ordinary course, binds it unless the signer lacks actual authority and the other side knows that. Draft the signature block as the entity, by the person, with the person's title. Flag any line that binds a principal personally or binds affiliates without limit.",
+      "mode": "agent",
+      "modeBasis": "Matching the entity's name and the signer's authority to the formation documents is document work; the signing principal confirms the entity in sign-and-return.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "abstract-the-agreement"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "certificate-of-formation",
+        "sponsor-operating-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "bo-101"
+      ]
+    },
+    {
+      "id": "fund-signer-and-affiliates",
+      "title": "For a fund, sign as the fund and keep its investors and other vehicles out",
+      "instruction": "If a fund evaluates the deal, name as signer the fund, or the manager its documents name, as those documents allow. A fund formed as a Texas limited partnership acts through its general partner, which, unless the partnership agreement says otherwise, has the powers of a partner in a partnership without limited partners, so the general partner, not the investors, is the fund's agent for its business; the block then reads the fund, by its general partner, by the person and title. Check that the agreement's affiliates and representatives do not sweep in the fund's investors, other funds the manager runs or the companies they own, so a no-contact or non-solicitation term does not reach them. Add as permitted recipients the advisory committee or investors whose consent the fund's limits may need, as screen-deal-buy-box checks, and keep the property out of investor reports while the agreement bars naming it.",
+      "mode": "agent",
+      "modeBasis": "Reading the fund's documents against the agreement's definitions is document work; who signs is set by the fund's documents.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-signing-entity"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "bo-152",
+        "bo-153"
+      ]
+    },
+    {
+      "id": "jv-partner-coverage",
+      "title": "For a JV, bring the capital partner inside the agreement before it sees anything",
+      "instruction": "If a capital partner will review the deal, check how the agreement reaches it: named as a permitted recipient, covered by a joinder it signs, or required to sign its own agreement with the seller. Share nothing with the partner until one of these is in place. Use the partner approvals already recorded by check-partner-criteria in screen-deal-buy-box and jv-partner-approvals in set-up-deal-pipeline; where pursuing the deal needs the partner's approval, record its answer before the firm signs. Draft a question asking the partner whether it already holds this property's materials or is bidding on its own, because a no-teaming term may bar the firm from joining another bidder or financing source without the seller's consent; a principal approves it before it goes. Keep the venture's own confidentiality terms in view as well: what the firm learns from the partner, and what the partner learns from the seller, may each carry limits.",
+      "mode": "agent",
+      "modeBasis": "Comparing the agreement with the venture's terms and drafting the question to the partner is document work; the question goes out only on a principal's approval, and the partner's answer is its own.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-signing-entity"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "check-confidential-scope",
+      "title": "Check what counts as confidential and the permitted uses",
+      "instruction": "Compare the definition of confidential information with the firm's planned work. Confirm it excludes information that is public, already known to the firm, developed independently or received from someone free to share it, so the firm's own public-record searches and comps stay its own. Check whether the sale itself and the negotiations are confidential. Check that the permitted use covers evaluating, financing and raising equity for this purchase, not evaluation alone. If the seller, or a tenant whose nonpublic information is in the package, has publicly traded securities, record the company and tell everyone on the deal: under SEC Rule 10b5-2, agreeing to keep information confidential creates a duty of trust or confidence, and trading securities on, or passing on, material nonpublic information taken in breach of it can be insider trading; counsel answers any question about a trade. Record each gap with the firm's plans for the markup.",
+      "mode": "agent",
+      "modeBasis": "Comparing a definition with the firm's planned work is document work; what is material, and what follows, is counsel's call.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "abstract-the-agreement"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-240-10b5-2"
+      ]
+    },
+    {
+      "id": "check-no-contact",
+      "title": "Check the no-contact terms for tenants, staff, lenders and officials",
+      "instruction": "List every person the agreement says the firm may not contact without the seller's or the broker's consent, such as tenants, the property manager and site staff, the seller's lender, vendors, neighbors and government offices, and how consent is asked for and given. Check each against the work ahead: questions to the manager and tenants on the tour in tour-a-property, requests to other brokers in pull-sale-and-lease-comps, a zoning letter or records request in confirm-zoning-and-use, and any talk with the seller's lender about taking over the loan. Whether a records request or a call to a city office counts as contact turns on the agreement's words; mark any doubt as a question for counsel. Where the firm needs a contact the agreement bars, propose a consent process for the markup. Record the final limits in the deal file so everyone working on the deal follows them.",
+      "mode": "agent",
+      "modeBasis": "Listing the barred contacts and checking them against the planned work is document work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "abstract-the-agreement"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "check-non-solicit-and-term",
+      "title": "Check the non-solicitation terms and how long the agreement lasts",
+      "instruction": "Record whom any non-solicitation or no-hire term protects, such as the seller's employees, the property manager's staff or the tenants; whether general job postings are allowed; when it ends; and whether it ends if the firm buys the property, since take-over-operations may want to keep the site staff. Record the agreement's term, which duties survive it, and whether a signed purchase contract replaces it. An end date does not end every duty: Texas trade secret law separately treats using or disclosing, without consent, a trade secret learned under a duty to keep it secret or limit its use as misappropriation, and financial data can be a trade secret when its owner takes reasonable steps to keep it secret and it has value from not being generally known or readily found by proper means. Calendar each end date, and mark for the markup any term the firm cannot keep.",
+      "mode": "agent",
+      "modeBasis": "Abstracting terms and calendaring end dates is document and calendar work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "abstract-the-agreement"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "cp-134a"
+      ],
+      "typeNotes": {
+        "multifamily": "Apartment properties usually have on-site leasing and maintenance staff employed by the seller or its manager."
+      }
+    },
+    {
+      "id": "check-recipients",
+      "title": "Check who may receive the materials, including lenders, partners and investors",
+      "instruction": "List everyone outside the firm who will need the materials before a contract is signed: counsel and the CPA, lenders and any mortgage broker, appraisers and consultants, any capital partner and, in a syndication, prospective investors who will see the deal in the offering materials. Compare the list with the agreement's permitted recipients. Note whether recipients must be told of the terms, sign a joinder or the seller's own form, or be approved first, and whether the firm answers for their breaches. Other brokers asked for comps are not recipients unless the agreement says so. If prospective investors are not covered, the seller's materials stay out of the offering until the seller consents as the agreement requires, so ask in the markup to add them. Write the final list as the access list for the deal's folder.",
+      "mode": "agent",
+      "modeBasis": "Comparing the firm's planned recipients with the agreement's list is document work.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "abstract-the-agreement"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "counsel-reviews-terms",
+      "title": "Have counsel review the terms that reach beyond confidentiality",
+      "instruction": "Counsel reviews any term that reaches beyond keeping the materials confidential: an indemnity, liquidated damages or fee-shifting; a duty on a principal personally; a standstill, exclusivity or no-teaming term; a non-solicitation or no-hire term; governing law or a forum outside the states where the firm works; a jury waiver; affiliates defined to reach investors, a fund's other vehicles or a capital partner; or a question about trading from the scope check. The agent sends counsel the agreement, the abstract and the gap list. Counsel says in writing what each term means for the firm and which changes to ask for. If none of these terms appears, a person skips this step with that reason and the abstract goes to the principal who signs under sign-and-return; the principals may instead set a rule that every agreement goes to counsel.",
+      "mode": "human-online",
+      "modeBasis": "What a contract term means for the firm, and what to ask for, is legal advice; an agent assembles the package and records the answers.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "check-signing-entity",
+        "fund-signer-and-affiliates",
+        "jv-partner-coverage",
+        "check-confidential-scope",
+        "check-no-contact",
+        "check-non-solicit-and-term",
+        "check-recipients"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "mark-up-the-terms",
+      "title": "Mark up the terms the firm cannot meet",
+      "instruction": "Draft a markup of the agreement, or a short list of requested changes, from the gap list and counsel's answers: each change, the section it amends and a one-line reason. Common requests add lenders, partners and prospective investors as recipients, set a consent process for contacts the firm needs, end a no-hire at closing, shorten the term, and let the firm keep archived backups and copies the law requires when it returns or destroys the rest. A principal approves the markup before it goes to the broker. Log each version the broker returns and compare it line by line with the last version sent, so only agreed changes appear. If the seller refuses a change the firm needs, the principal decides whether to sign anyway, narrow the firm's plans or walk away.",
+      "mode": "agent",
+      "modeBasis": "Drafting and comparing versions is document work; each markup goes to the broker only on a principal's approval.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-reviews-terms"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "sign-and-return",
+      "title": "Sign and return the agreement",
+      "instruction": "A principal with authority confirms the entity and signature block from the signer check, then signs the final version and returns it as the broker asks. Brokers often take a typed name or a click on a website. In Texas an electronic signature is a sound, symbol or process linked to a record and adopted with intent to sign it, and between parties who agreed to deal electronically it is not denied effect solely because it is electronic. Federal law is similar for transactions in or affecting interstate commerce, and reaches contracts formed through an electronic agent's action attributable to the person bound. A click can therefore bind the firm as a signature would, so only the authorized principal clicks, from a login under their firm email address, entering the entity's name and their title; an agent never clicks. Keep the signed copy, completion record and exact text accepted.",
+      "mode": "human-online",
+      "modeBasis": "A signature, typed or clicked, binds the firm, so the authorized principal signs; an agent prepares the final version and the block.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "mark-up-the-terms"
+      ],
+      "rules": [
+        "us-fed.esign",
+        "us-tx.ueta"
+      ],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "bc-322",
+        "usc-15-7001"
+      ]
+    },
+    {
+      "id": "file-and-track",
+      "title": "File the signed copy and track its obligations",
+      "instruction": "File the signed agreement and its completion record in the deal's folder under keep-signed-records in set-up-document-storage, log it under keep-nda-log in set-up-deal-pipeline, and calendar each end date. Write the deal folder's access list from the final recipient list for an administrator to apply under write-access-table; outside recipients get access only through a send a principal approves, each grant logged. Give everyone at the firm on the deal a short note of the no-contact and no-hire limits. Log the package when it arrives and hand it to extract-package-facts in screen-deal-buy-box. Sensitive personal information, as protect-sensitive-information lists it, goes in the restricted area set up there, since Texas requires reasonable procedures to protect it. If it may have been acquired without authority, follow investor-data-exposed: counsel decides whether the firm must tell the seller immediately, as a holder of another's data, or give the notices protect-sensitive-information lists, as owner or licensee.",
+      "mode": "agent",
+      "modeBasis": "Filing, logging and writing access lists and reminders is file work; an administrator applies the access, and outside access goes only through a send a principal approves.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "sign-and-return"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "deal-pipeline-underwriting",
+      "consumes": [],
+      "produces": [
+        "offering-memorandum"
+      ],
+      "basis": "cited",
+      "sources": [
+        "bc-521"
+      ],
+      "typeNotes": {
+        "multifamily": "Apartment rent rolls, ledgers and lease files name individual residents, and applications can carry identity and account numbers. Keep such files in the restricted area and bring only unit-level figures into the deal screen."
+      }
+    },
+    {
+      "id": "return-or-destroy",
+      "title": "Return or destroy the materials when the firm passes or the seller asks",
+      "instruction": "When the firm passes or loses the deal, or the seller asks, list every copy the firm and its recipients hold, including notes and models the agreement reaches, and return or destroy them as required. Delete copies in shared folders and the tracker; each person at the firm clears their own mailbox and devices, and outside recipients are asked to do likewise; all confirm in writing. Keep what the agreement allows, such as archived backups, copies the law requires and the agreement itself. Nothing under a legal hold is destroyed (write-retention-schedule in set-up-document-storage). Make sensitive personal information unreadable, the standard Texas sets for customer records a business holds. Prepare any certificate it asks for, for a principal to sign, and log what was destroyed, by whom and when. If the firm buys the property, or a purchase contract replaces the agreement, a person skips this step with that reason.",
+      "mode": "agent",
+      "modeBasis": "Finding copies, drafting requests and the certificate, and deleting files in shared folders the agent can reach is file work on a principal's approval; a principal signs any certificate.",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "file-and-track"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "bc-521"
+      ]
+    }
+  ],
+  "outlineSteps": []
 }

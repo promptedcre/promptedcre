@@ -7,17 +7,585 @@
   "phase": "raise",
   "order": 120,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "form-deal-entity",
+    "set-up-document-storage",
+    "set-up-the-books",
+    "prepare-offering-documents"
+  ],
+  "consumes": [
+    "deal-entity-agreement",
+    "jv-agreement",
+    "subscription-agreement",
+    "private-placement-memorandum",
+    "investor-questionnaire",
+    "capital-call-notice",
+    "wire-instructions",
+    "investor-register"
+  ],
   "produces": [],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
+  "sources": [
+    {
+      "id": "usc-15-7001",
+      "url": "https://www.law.cornell.edu/uscode/text/15/7001",
+      "title": "15 U.S.C. 7001, General rule of validity (E-SIGN Act), subsections (a) to (d)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "require any person to agree to use or accept electronic records or electronic signatures",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bcc-322",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.322.htm",
+      "title": "Texas Business and Commerce Code, Chapter 322, Uniform Electronic Transactions Act (Sections 322.005, 322.008, 322.009, 322.012 and 322.015)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "This chapter applies only to transactions between parties each of which has agreed to conduct transactions by electronic means.",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-78o",
+      "url": "https://www.law.cornell.edu/uscode/text/15/78o",
+      "title": "15 U.S.C. 78o, Registration and regulation of brokers and dealers (subsection (a)(1))",
+      "publisher": "Legal Information Institute (U.S. Code text)",
+      "accessed": "2026-11-21",
+      "quote": "to effect any transactions in, or to induce or attempt to induce the purchase or sale of, any security",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-78c",
+      "url": "https://www.law.cornell.edu/uscode/text/15/78c",
+      "title": "15 U.S.C. 78c, Definitions and application (subsection (a)(4), broker)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "any person engaged in the business of effecting transactions in securities for the account of others",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-15-77d",
+      "url": "https://www.law.cornell.edu/uscode/text/15/77d",
+      "title": "15 U.S.C. 77d, Exempted transactions (subsection (c), platforms for Rule 506 offerings)",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "receives no compensation in connection with the purchase or sale of such security",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-gv-4004",
+      "url": "https://tcss.legis.texas.gov/resources/GV/htm/GV.4004.htm",
+      "title": "Texas Government Code, Chapter 4004 (Sections 4004.051 and 4004.101, registration of dealers and agents)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "unless the dealer or other person or company is first registered as provided by this chapter",
+      "tier": "primary"
+    },
+    {
+      "id": "ssb-exemptions",
+      "url": "https://www.ssb.texas.gov/securities-professionals/regulation-securities/exemptions-registration",
+      "title": "Exemptions from Registration",
+      "publisher": "Texas State Securities Board",
+      "accessed": "2026-11-21",
+      "quote": "No commissions, fees or other form of remuneration may be paid to any person who solicits investors in Texas under Rule 506",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-502",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.502",
+      "title": "17 CFR 230.502, General conditions to be met (paragraph (c), limitation on manner of offering)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "neither the issuer nor any person acting on its behalf shall offer or sell the securities by any form of general solicitation or general advertising",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-230-506",
+      "url": "https://www.ecfr.gov/current/title-17/section-230.506",
+      "title": "17 CFR 230.506, Exemption for limited offers and sales without regard to dollar amount of offering (paragraph (c))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "All purchasers of securities sold in any offering under paragraph (c) of this section are accredited investors.",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bcc-521",
+      "url": "https://tcss.legis.texas.gov/resources/BC/htm/BC.521.htm",
+      "title": "Texas Business and Commerce Code, Chapter 521 (Sections 521.002 and 521.053)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "shall notify the owner or license holder of the information of any breach of system security immediately after discovering the breach",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-iw9",
+      "url": "https://www.irs.gov/pub/irs-pdf/iw9.pdf",
+      "title": "Instructions for the Requester of Form W-9 (Rev. March 2024), Electronic Submission of Forms W-9",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "Ensure the information received is the information sent, and document all occasions of user access that result in the submission",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-iw8",
+      "url": "https://www.irs.gov/pub/irs-pdf/iw8.pdf",
+      "title": "Instructions for the Requester of Forms W-8BEN, W-8BEN-E, W-8ECI, W-8EXP, and W-8IMY (Rev. June 2022), Form W-8 provided or signed electronically",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "The withholding certificate must reasonably demonstrate that the form has been electronically signed by the recipient identified on the form",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-1-1441-1",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.1441-1",
+      "title": "26 CFR 1.1441-1, paragraph (e)(4)(iv), electronic transmission of Form W-8",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "The electronic signature must be the final entry in the person's Form W-8 submission.",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-rp-2012-17",
+      "url": "https://www.irs.gov/irb/2012-10_IRB#RP-2012-17",
+      "title": "Rev. Proc. 2012-17, Furnishing substitute Schedule K-1 in electronic format (Internal Revenue Bulletin 2012-10)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "The recipient must have affirmatively consented to receive the Schedule K-1 in an electronic format.",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-i1065",
+      "url": "https://www.irs.gov/pub/irs-pdf/i1065.pdf",
+      "title": "Instructions for Form 1065 (2025), Electronic Filing (pointer to Rev. Proc. 2012-17 for electronic Schedule K-1)",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "tier": "primary"
+    },
+    {
+      "id": "ic3-bec-psa",
+      "url": "https://www.ic3.gov/PSA/2024/PSA240911",
+      "title": "Business Email Compromise: The $55 Billion Scam (Alert I-091124-PSA)",
+      "publisher": "Federal Bureau of Investigation, Internet Crime Complaint Center",
+      "accessed": "2026-11-21",
+      "quote": "Use secondary channels and/or two-factor authentication to verify requests for changes in account information.",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "list-portal-requirements",
+      "title": "List what the portal must do, starting from the offering documents",
+      "instruction": "Write the portal's requirements list from the offering documents before looking at any product. Read the governing agreement, the subscription agreement and the memorandum for how notices, reports, capital calls, distributions and tax forms must be delivered, and whether investors agree there to sign and receive records electronically. Federal law does not deny a signature or record effect solely because it is electronic, but no one has to agree to use electronic records, and Texas's electronic transactions law applies only between parties who each agreed to deal electronically, judged from context and conduct. Then list the jobs: a closed data room for each offering; the signing flow; tax-form collection; capital-call and distribution notices; statements; K-1 posting; one file per investor; accounts for joint owners, trusts, entities with several signers and retirement-account custodians, each signer with their own sign-in; staff roles; multi-factor sign-in; activity logs; and a complete data export.",
+      "mode": "agent",
+      "modeBasis": "Reading the firm's documents and writing a requirements list is document work an agent can do; unclear terms go to counsel.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [
+        "us-fed.esign",
+        "us-tx.ueta"
+      ],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "subscription-agreement",
+        "private-placement-memorandum"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-15-7001",
+        "tx-bcc-322"
+      ]
+    },
+    {
+      "id": "compare-portals",
+      "title": "Compare portals against the requirements list",
+      "instruction": "Score each candidate portal against the requirements list from its published documentation, and turn each line it leaves unclear into a written question for the vendor. Ask each vendor in writing for pricing, its standard contract and data terms, its latest independent security audit report (a principal signs any nondisclosure agreement it requires), where investor data is stored, how a complete export works and in what formats, and how fast it reports security incidents to customers. Flag any feature that would show an offering to people the firm has no relationship with, such as a public listing or an investor marketplace; any feature in which the vendor receives, holds or moves investors' money or securities; and any fee tied to the amount raised or to investors the vendor introduces. Give the principals the comparison and the flags; they pick one candidate for counsel, and nothing is signed yet.",
+      "mode": "agent",
+      "modeBasis": "Reading vendor documentation and building a comparison is research an agent can do; each question to a vendor goes out on a principal's approval, a principal signs any nondisclosure agreement, and choosing is the principals' decision.",
+      "risk": "low",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "list-portal-requirements"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "counsel-reviews-vendor-terms",
+      "title": "Have counsel review the contract, the fees and any marketplace feature",
+      "instruction": "Give counsel the vendor's contract, pricing and flags for written answers to three questions. First, does any fee or handling of investor money make the vendor an unregistered broker, Texas dealer or agent? Unregistered brokers may not induce securities purchases, and a Rule 506 platform's exemption requires that it take no pay tied to a purchase or sale, hold no investor funds or securities, and not be disqualified. Texas bars unregistered dealers unless exempt, and its Securities Board allows no pay to anyone soliciting Texas investors under Rule 506 unless licensed as a Texas dealer or agent. Second, is a listing or marketplace feature general solicitation, barred under Rule 506(b)? Third, does the firm own its records, with full export and deletion on exit? Texas requires the vendor to tell the firm immediately on discovering that sensitive personal information was, or is reasonably believed to have been, acquired without authorization.",
+      "mode": "human-online",
+      "modeBasis": "Whether a fee, a feature or a contract term creates a legal problem is counsel's conclusion; an agent assembles the package and records the answers.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "compare-portals"
+      ],
+      "rules": [
+        "us-fed.exchange-act.broker-registration",
+        "us-tx.securities.rule-506-compensation",
+        "us-fed.reg-d.general-solicitation"
+      ],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-15-78o",
+        "usc-15-78c",
+        "usc-15-77d",
+        "tx-gv-4004",
+        "ssb-exemptions",
+        "ecfr-230-502",
+        "tx-bcc-521"
+      ]
+    },
+    {
+      "id": "open-firm-account",
+      "title": "Sign the contract and open the account in the firm's name",
+      "instruction": "Once counsel has answered, a principal signs the order form for the firm and opens the portal account in the firm's name, never a personal one. Name two principals as administrators, require multi-factor sign-in for every staff user, and give staff, the CPA, the property manager and the agent only the roles set-up-document-storage's access table gives them; the agent works through its own user, which cannot change roles, payment details or payment settings, never a principal's sign-in. Make each entity's posted receiving instructions editable only by the two administrators, with every change alerting both, and post them only after call-capital-fund-closing's verify-receiving-account. Keep the recovery details where both administrators, and no one else, can reach them. Record the account, the administrators, the agent's role, the plan bought, and the renewal and notice dates the contract sets in the firm file, and put the notice date on the calendar.",
+      "mode": "human-online",
+      "modeBasis": "Signing a contract, committing the firm to fees and deciding who may change roles, payment details and posted receiving instructions are a principal's acts; an agent prepares the roles from the access table and records the account.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "counsel-reviews-vendor-terms"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "wire-instructions"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "set-up-offering-room",
+      "title": "Set up each offering's data room behind sign-in, fitted to its exemption",
+      "instruction": "For each offering, once the issuer's certificate under form-deal-entity has taken effect, create its data room under the issuer's exact legal name, holding only the locked offering set and, once counsel clears it, the diligence package, never the internal term sheet. It is the offering's only data room: set-up-document-storage's set-up-offering-data-room keeps just the archived copy, and that step's settings apply here: read-only, every view and download logged, opened only through present-the-deal-to-investors and onboard-an-investor, and closed to non-investors when the offering ends. Set access by counsel's exemption. Except under Rule 506(c) or Rule 504(b)(1), no one may offer or sell for the issuer by general solicitation, so a Rule 506(b) room has no open link or listing. Rule 506(c) allows advertising, but every buyer must be accredited and verified by the issuer's reasonable steps, so nothing is accepted before onboard-an-investor records it. A principal approves each room; none opens before approve-launch.",
+      "mode": "agent",
+      "modeBasis": "Building the data room and its access settings is configuration an agent can do through its own user, in the portal's interface or API; a principal approves each room, and none opens before approve-launch.",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "open-firm-account"
+      ],
+      "rules": [
+        "us-fed.reg-d.general-solicitation",
+        "us-fed.reg-d.rule-506b",
+        "us-fed.reg-d.rule-506c"
+      ],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "private-placement-memorandum",
+        "deal-entity-agreement",
+        "subscription-agreement",
+        "investor-questionnaire"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-230-502",
+        "ecfr-230-506"
+      ]
+    },
+    {
+      "id": "build-signing-flow",
+      "title": "Build the signing flow, starting with consent to deal electronically",
+      "instruction": "Set each offering's signing flow to open with a screen, using counsel's consent wording from the subscription agreement, on which the investor agrees to sign and receive the offering's records electronically, with a way to ask for paper. No one has to accept electronic records, and an investor who agreed for one transaction may refuse to deal electronically in others. Where a law requires giving a consumer information in writing, federal law counts an electronic record only after the consumer consents electronically, in a way showing they can open the records, having first had the clear statement set-up-k1-delivery describes, plus any conditions, consequences or fees of withdrawing and any fee for a paper copy; counsel says whether that reaches the firm's investors. Order the package as onboard-an-investor sends it, with the firm's acceptance last; keep-signed-records files each completed package with its signing audit trail, which can help show who signed.",
+      "mode": "agent",
+      "modeBasis": "Configuring the flow and its consent screen is setup work an agent can do through its own user, in the portal's interface or API; counsel supplies the consent wording, and investors sign in onboard-an-investor.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-up-offering-room"
+      ],
+      "rules": [
+        "us-fed.esign",
+        "us-tx.ueta"
+      ],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "subscription-agreement",
+        "investor-questionnaire"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-15-7001",
+        "tx-bcc-322"
+      ]
+    },
+    {
+      "id": "set-up-tax-form-collection",
+      "title": "Set up tax-form collection to the IRS rules for electronic forms",
+      "instruction": "Have the portal collect a Form W-9 from each U.S. investor and the Form W-8 each foreign investor's status calls for. For both, the system must keep what is received identical to what was sent and log each access that results in a submission, make it reasonably certain the submitter is the person named, show the same information as the paper form, and produce a hard copy if the IRS asks. Where a form must be signed, it ends with the person's electronic signature under penalties of perjury in the paper form's words; for Form W-8, the perjury statement and its instructions come immediately before the signature, and the hard copy goes with a statement that the named person filed it. The CPA confirms the portal meets these rules and reviews each Form W-8. Open the tax-form area only to set-up-document-storage's restricted-area roles, and include it in the recurring export.",
+      "mode": "agent",
+      "modeBasis": "An agent configures the form flow through the portal's interface or API and checks it against the IRS instructions and regulation; the CPA confirms it meets the IRS rules and reviews each Form W-8, since both are tax judgments.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "open-firm-account"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "irs-iw9",
+        "irs-iw8",
+        "ecfr-26-1-1441-1"
+      ]
+    },
+    {
+      "id": "set-up-k1-delivery",
+      "title": "Collect each investor's consent before posting K-1s electronically",
+      "instruction": "Post no Schedule K-1 for an investor who has not affirmatively consented in a way showing they can open its format. At or before consent, give a clear statement, with instructions to open and print it, covering: paper without consent; consent's scope and duration; getting paper later, and whether asking withdraws consent; written withdrawal to a contact with name, mailing address, phone and email, its effective date and written confirmation, and that it leaves K-1s already furnished alone; what ends electronic delivery; updating contact details, and notice of changes to the firm's; hardware and software to open, print and keep the K-1, and when it leaves the site; and that a return may need it printed. Flag bounced notices, which go by mail or in person within 30 calendar days absent a correct address. Before a software change that could stop investors opening K-1s, notify them, then collect new consent.",
+      "mode": "agent",
+      "modeBasis": "Configuring the consent screen, the statement and the bounce flag to a published revenue procedure is setup work an agent can do through the portal's interface or API; deliver-k1s in file-partnership-return-and-k1s does the posting and its notices.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "open-firm-account"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "irs-rp-2012-17",
+        "irs-i1065"
+      ]
+    },
+    {
+      "id": "set-up-notices-and-payment-details",
+      "title": "Set up notices and statements, and lock investors' payment details",
+      "instruction": "Build the capital-call notice, distribution notice and statement templates to the governing agreement's notice clause, and have the portal log when each notice was sent and opened. Unless the agreement makes posting notice, send each notice itself, without payment details, to the address the investor designated: Texas counts a record received when it enters a system the recipient designated or uses for such records and can retrieve it from. Never set notices or statements to view-only: under the same law, an electronic record meets a writing requirement only if the recipient can keep it, and one whose sender blocks printing or saving is not enforceable against the recipient. Set any investor change to payment details, email, phone or address to alert both administrators and take effect only after a principal confirms it under keep-investor-register-current's confirm-changes-by-phone; the FBI advises verifying account changes through a second channel.",
+      "mode": "agent",
+      "modeBasis": "Drafting templates from the agreement and setting notice delivery is configuration an agent can do through the portal's interface or API; a principal administrator sets the payment-detail control and confirms each change, since the agent's user cannot change payment settings. Notices point to the posted receiving instructions drawn from the place the wire-instructions record names, and people approve each notice and payment in the playbooks that send them.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "open-firm-account"
+      ],
+      "rules": [
+        "us-tx.ueta"
+      ],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "capital-call-notice",
+        "wire-instructions"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-bcc-322",
+        "ic3-bec-psa"
+      ]
+    },
+    {
+      "id": "fund-commitments",
+      "title": "For a fund, set up commitments, drawdowns and partner statements",
+      "instruction": "For a fund, set the portal to show each limited partner's commitment, amounts called and funded, and unfunded balance as imported from the investor register and the capital ledger set-up-the-books keeps, refreshed at each call and never computed in the portal, so each drawdown notice states the partner's share and remaining commitment the way the partnership agreement computes them. Post the capital statements send-quarterly-investor-report prepares rather than building separate ones. Leave the beneficial-owner count and qualified-purchaser checks in the register, where onboard-an-investor applies them. call-capital-fund-closing runs each drawdown.",
+      "mode": "agent",
+      "modeBasis": "Showing register and ledger figures in the portal is configuration an agent can do through the portal's interface or API; unclear terms go to counsel.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-up-notices-and-payment-details"
+      ],
+      "when": {
+        "structure": [
+          "fund"
+        ]
+      },
+      "rules": [
+        "us-fed.ica.fund-exclusions"
+      ],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "deal-entity-agreement",
+        "investor-register",
+        "capital-call-notice"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "jv-reporting-channel",
+      "title": "For a joint venture, report through the channel the JV agreement sets",
+      "instruction": "For a joint venture, read the JV agreement's reporting, information and approval clauses before adding the capital partner to the portal. Where the agreement names its own reporting package, deadlines or data site, or set-up-outside-party-rooms already gave the partner a shared room, deliver there instead. Add only the people the partner names in writing, once a principal approves each grant, and set notice delivery to the agreement's terms; major-decision requests go out from the playbooks that raise them. Record the channel, the named people and each deadline in the firm file and on the calendar. Any change to the agreement goes back through negotiate-jv-agreement.",
+      "mode": "agent",
+      "modeBasis": "Reading the agreement's reporting terms and setting delivery to match is document and configuration work an agent can do; a principal approves each grant of access to the partner.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-up-notices-and-payment-details"
+      ],
+      "when": {
+        "structure": [
+          "jv"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "load-register-and-test",
+      "title": "Load the investor register and run a test investor through every flow",
+      "instruction": "Before importing anyone, create two test investors with obviously fictional details and run them through every flow: open an offering, sign a package, submit a tax form, receive a notice, a statement and a test K-1 posting notice, and download each record. Approve only one for a test Rule 506(b) offering, and confirm the other cannot see it and neither can open the other's file; in a fund, add a test drawdown, and in a joint venture, a delivery through the agreed channel. Record results, fix and rerun failures, then delete the test investors. Then import current holders, not prospects, from each entity's register, the record under keep-investor-register-current, and compare name by name and interest by interest, correcting the portal, never the register; with no holders yet, skip the import. Set a recurring export of the register, signed records, tax forms and activity logs into the firm's own storage.",
+      "mode": "agent",
+      "modeBasis": "Importing, comparing and scripted testing are file and configuration work an agent can do through its own user, in the portal's interface or API.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "build-signing-flow",
+        "set-up-tax-form-collection",
+        "set-up-k1-delivery",
+        "set-up-notices-and-payment-details",
+        "fund-commitments",
+        "jv-reporting-channel"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "approve-launch",
+      "title": "Review the test results and approve the launch in writing",
+      "instruction": "A principal reads the test record, the access roles, the settings for each offering and counsel's answers, and approves the launch in writing or sends items back to be fixed. Check in particular that no Rule 506(b) offering can be reached without signing in, or by a signed-in investor not approved for it; that a test investor could not open another investor's file; that notices and statements can be downloaded; and that a change to payment details takes effect only after a principal confirms it by phone. File the approval, with its date, beside the test record. Once approved, open the approved data rooms. Put a quarterly review of portal users and roles against the access table on the calendar, done by a principal who made none of the changes since the last review.",
+      "mode": "human-online",
+      "modeBasis": "Deciding the portal is fit to put in front of investors is a principal's judgment; an agent assembles the test record and the settings, and the approved data rooms open only after it.",
+      "actor": "principal",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "load-register-and-test"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "invite-investors",
+      "title": "Invite investors and track sign-in, consents and tax forms",
+      "instruction": "Once a principal approves the invitation text, send each current holder an invitation that names the firm, gives the portal's exact web address so the investor can check the link or type it, says the firm never sends or changes payment instructions by email, and asks investors to call the firm at a number they already have before acting on any message about money. Prospects reach the portal through present-the-deal-to-investors and onboard-an-investor. Each investor creates their own sign-in and multi-factor method and gives their own consents; the agent never sets a password for anyone. Track sign-ins, both consents and tax forms, and follow up on gaps. An investor who will not deal electronically keeps receiving paper by mail, since no one has to accept electronic records; record each consent, its date and any withdrawal in the investor's file, and the notice channel in the register under keep-investor-register-current.",
+      "mode": "agent",
+      "modeBasis": "Sending approved invitations and tracking responses is routine work an agent can do through the portal's interface or API; investors create their own sign-ins.",
+      "risk": "medium",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "approve-launch"
+      ],
+      "rules": [
+        "us-fed.esign",
+        "us-tx.ueta"
+      ],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-15-7001",
+        "tx-bcc-322"
+      ]
+    }
+  ],
   "outlineSteps": []
 }

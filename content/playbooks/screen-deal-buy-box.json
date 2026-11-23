@@ -3,7 +3,7 @@
   "slug": "screen-deal-buy-box",
   "kind": "process",
   "title": "Screen a deal against the buy box",
-  "summary": "Decide quickly whether a deal deserves underwriting: size, location, tenancy and price against the criteria the sponsor has written down.",
+  "summary": "Decide quickly whether a deal deserves underwriting: size, location, tenancy and price against the criteria the firm has written down.",
   "phase": "acquire",
   "order": 200,
   "featured": true,
@@ -162,7 +162,7 @@
     {
       "id": "log-lead-collect-package",
       "title": "Log the lead and collect the package",
-      "instruction": "Record the lead in the firm file: address, property type, who brought it, the asking price or pricing guidance, and any offer or tour dates. Collect what the broker provides: the offering memorandum, rent roll, operating statements and any listing data, each saved with the date received. If the package is released only after a confidentiality agreement is signed, summarize the agreement for the person who signs: what is confidential, for how long, any no-contact or non-solicitation clause, and what must be returned or destroyed.",
+      "instruction": "Record the lead in the firm file: address, property type, who brought it, the asking price or pricing guidance, and any offer or tour dates. Collect what the broker provides: the offering memorandum, rent roll, operating statements and any listing data, each saved with the date received. If the package is released only after a confidentiality agreement is signed, the next step hands the agreement to sign-nda-for-offering-memorandum.",
       "mode": "agent",
       "modeBasis": "Recording a lead and filing what the broker sends is file and inbox work; the agreement itself is signed by a person in the next step.",
       "risk": "low",
@@ -180,7 +180,7 @@
     {
       "id": "sign-confidentiality-agreement",
       "title": "Sign the confidentiality agreement if the broker requires one",
-      "instruction": "Read the summary, then sign the confidentiality agreement for the firm entity that will evaluate the deal. List anyone outside the firm who will see the package, such as a lender, a capital partner or counsel, and confirm the agreement allows sharing with them. Keep the signed copy in the firm file. Skip this step when the package is public.",
+      "instruction": "If the broker releases the package only after a confidentiality agreement is signed, run sign-nda-for-offering-memorandum before extract-package-facts. That record abstracts and reviews the terms, a principal signs under its sign-and-return, and its file-and-track hands the package to extract-package-facts. Skip this step when the package is public.",
       "mode": "human-online",
       "modeBasis": "A signature binds the firm to the agreement, so a person signs; an agent prepares the summary.",
       "actor": "principal",

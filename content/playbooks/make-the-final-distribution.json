@@ -3,33 +3,689 @@
   "slug": "make-the-final-distribution",
   "kind": "process",
   "title": "Make the final distribution",
-  "summary": "Run the waterfall on the sale proceeds and pay investors and the sponsor.",
+  "summary": "Turn the sale proceeds into the entity's last distribution: reconcile the cash, hold back what wind-down costs and surviving claims need, and run the agreement's sale waterfall with the CPA and a second person checking it. The named people approve, a person pays verified accounts, and investors get final statements.",
   "phase": "exit",
   "order": 530,
   "featured": false,
-  "depth": "outline",
+  "depth": "full",
   "review": "ai-drafted",
-  "lastVerified": null,
-  "requires": [],
-  "consumes": [],
-  "produces": [],
+  "lastVerified": "2026-11-21",
+  "requires": [
+    "close-the-sale",
+    "make-a-distribution",
+    "keep-investor-register-current"
+  ],
+  "consumes": [
+    "settlement-statement",
+    "payoff-letter",
+    "purchase-and-sale-agreement",
+    "trailing-12",
+    "deal-entity-agreement",
+    "jv-agreement",
+    "investor-register",
+    "wire-instructions"
+  ],
+  "produces": [
+    "wire-instructions"
+  ],
   "written": {
-    "structure": [],
-    "jurisdiction": []
+    "structure": [
+      "syndication",
+      "fund",
+      "jv"
+    ],
+    "jurisdiction": [
+      "us-federal",
+      "us-tx"
+    ]
   },
-  "sources": [],
-  "steps": [],
-  "outlineSteps": [
-    "Reconcile net sale proceeds to the settlement statement",
-    "Settle remaining payables, reserves and loan items",
-    "Decide the holdback for wind-down costs and claims",
-    "Read the governing agreement's distribution terms",
-    "Run the waterfall on the proceeds",
-    "Have a second person check the waterfall",
-    "Get the approvals the governing agreement requires",
-    "Confirm each investor's payment instructions",
-    "Send the payments",
-    "Send each investor a statement of the distribution",
-    "Give the tax preparer the gain split for investors' reporting"
-  ]
+  "sources": [
+    {
+      "id": "tx-bo-11",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.11.htm",
+      "title": "Texas Business Organizations Code, Chapter 11, Winding Up and Termination (Sections 11.051, 11.052, 11.053, 11.058, 11.352, 11.353, 11.356 and 11.359)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "shall apply and distribute its property to discharge, or make adequate provision for the discharge of, all of the domestic entity's liabilities and obligations",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bo-101",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.101.htm",
+      "title": "Texas Business Organizations Code, Chapter 101, Limited Liability Companies (Sections 101.203 and 101.552)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "A majority vote of all of the members of a limited liability company",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-bo-153",
+      "url": "https://tcss.legis.texas.gov/resources/BO/htm/BO.153.htm",
+      "title": "Texas Business Organizations Code, Chapter 153, Limited Partnerships (Section 153.504, Disposition of assets)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "to partners first for the return of their capital and second with respect to their partnership interests",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-93",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.93.htm",
+      "title": "Texas Property Code, Chapter 93, Commercial Tenancies (Section 93.007, Cessation of owner's interest)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "remains liable for a security deposit received while the person was the owner until the new owner delivers to the tenant a signed statement",
+      "tier": "primary"
+    },
+    {
+      "id": "tx-prop-92",
+      "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.92.htm",
+      "title": "Texas Property Code, Chapter 92, Residential Tenancies (Section 92.105, Cessation of owner's interest)",
+      "publisher": "Texas Legislature",
+      "accessed": "2026-11-21",
+      "quote": "until the new owner has received the deposit or has assumed the liability for the deposit",
+      "tier": "primary"
+    },
+    {
+      "id": "cpa-tx-terminate",
+      "url": "https://comptroller.texas.gov/taxes/franchise/reinstate-terminate.php",
+      "title": "Reinstating or Terminating a Business (franchise tax requirements before termination)",
+      "publisher": "Texas Comptroller of Public Accounts",
+      "accessed": "2026-11-21",
+      "quote": "File any required Final Franchise Tax Report to report your entity’s accounting data",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-897",
+      "url": "https://www.law.cornell.edu/uscode/text/26/897",
+      "title": "26 U.S.C. 897, Disposition of investment in United States real property (subsection (a)(1))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "as if such gain or loss were effectively connected with such trade or business",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-1446",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1446",
+      "title": "26 U.S.C. 1446, Withholding of tax on foreign partners' share of effectively connected income (subsections (a) and (b))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "such partnership shall pay a withholding tax under this section at such time and in such manner as the Secretary shall by regulations prescribe",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-1-1446-1",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.1446-1",
+      "title": "26 CFR 1.1446-1, Withholding tax on foreign partners' share of effectively connected taxable income (paragraph (c)(3), presumptions without documentation)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "must presume that the partner is a foreign person",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-1-1446-3",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.1446-3",
+      "title": "26 CFR 1.1446-3, Time and manner of calculating and paying over the 1446 tax (paragraphs (a) and (b)(1), installments)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "without regard to whether the partnership makes any distributions to its partners during the partnership's taxable year",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-1-1446f-1",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.1446(f)-1",
+      "title": "26 CFR 1.1446(f)-1, General rules for withholding under section 1446(f) (paragraphs (b)(8), (b)(9) and (e))",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-23",
+      "quote": "includes a distribution from a partnership to a partner",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-1-1446f-2",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.1446(f)-2",
+      "title": "26 CFR 1.1446(f)-2, Withholding on the transfer of a non-publicly traded partnership interest (paragraph (b)(3)(iii), partnership distributions)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-23",
+      "quote": "to determine that the distribution would not result in any realized gain to the transferor as of the determination date",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-1-704-1",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.704-1",
+      "title": "26 CFR 1.704-1, Partner's distributive share (paragraphs (b)(2)(ii)(b) and (g), economic effect and liquidation)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "liquidating distributions are required in all cases to be made in accordance with the positive capital account balances of the partners",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-1245",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1245",
+      "title": "26 U.S.C. 1245, Gain from dispositions of certain depreciable property (subsection (a))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "exceeds the adjusted basis of such property shall be treated as ordinary income",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-1250",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1250",
+      "title": "26 U.S.C. 1250, Gain from dispositions of certain depreciable realty (subsections (a)(1) and (b)(1))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-23",
+      "quote": "shall be treated as gain which is ordinary income",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-1061",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1061",
+      "title": "26 U.S.C. 1061, Partnership interests held in connection with performance of services (subsection (a))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "shall be treated as short-term capital gain, notwithstanding section 83 or any election in effect under section 83(b)",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-1-1061-4",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.1061-4",
+      "title": "26 CFR 1.1061-4, Section 1061 computations (paragraph (b)(7), items not taken into account)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-23",
+      "quote": "Long-term capital gain and long-term capital loss determined under section 1231",
+      "tier": "primary"
+    },
+    {
+      "id": "usc-26-731",
+      "url": "https://www.law.cornell.edu/uscode/text/26/731",
+      "title": "26 U.S.C. 731, Extent of recognition of gain or loss on distribution (subsection (a))",
+      "publisher": "Legal Information Institute (statute text)",
+      "accessed": "2026-11-21",
+      "quote": "loss shall not be recognized to such partner, except that upon a distribution in liquidation of a partner’s interest",
+      "tier": "primary"
+    },
+    {
+      "id": "ecfr-26-1-761-1",
+      "url": "https://www.ecfr.gov/current/title-26/section-1.761-1",
+      "title": "26 CFR 1.761-1, Terms defined (paragraph (d), liquidation of a partner's interest)",
+      "publisher": "Office of the Federal Register (eCFR)",
+      "accessed": "2026-11-21",
+      "quote": "the interest will not be considered as liquidated until the final distribution has been made",
+      "tier": "primary"
+    },
+    {
+      "id": "irs-i1065",
+      "url": "https://www.irs.gov/instructions/i1065",
+      "title": "Instructions for Form 1065 (2025): Termination of the Partnership; When To File",
+      "publisher": "Internal Revenue Service",
+      "accessed": "2026-11-21",
+      "quote": "The partnership’s tax year ends on the date of termination which is the date the partnership winds up its affairs.",
+      "tier": "primary"
+    },
+    {
+      "id": "ic3-bec-psa",
+      "url": "https://www.ic3.gov/PSA/2024/PSA240911",
+      "title": "Business Email Compromise: The $55 Billion Scam (Alert I-091124-PSA)",
+      "publisher": "Federal Bureau of Investigation, Internet Crime Complaint Center",
+      "accessed": "2026-11-21",
+      "quote": "Use secondary channels and/or two-factor authentication to verify requests for changes in account information.",
+      "tier": "primary"
+    }
+  ],
+  "steps": [
+    {
+      "id": "reconcile-sale-cash",
+      "title": "Reconcile the sale proceeds and the entity's other cash",
+      "instruction": "Tie the net proceeds received to the final settlement statement and the bank confirmation from close-the-sale, line by line; after a whole taking with no sale, tie the award payments to condemnation-notice's record-the-award in place of the statement. Then add everything else the entity holds or is owed: operating and reserve accounts, escrow and reserve balances the lender returns after the payoff, return premium on cancelled insurance, utility and vendor deposits, and funds the property manager holds. List what is not the entity's to distribute: tenant security deposits not credited to the buyer, rent for periods after closing, and any amount the sale contract escrows until a survival period ends. Draft the refund requests and the request for the manager's final accounting; a principal approves each first. List open payables and every post-closing true-up, such as re-prorated property taxes. A figure that does not tie goes back to the bookkeeper.",
+      "mode": "agent",
+      "modeBasis": "Tying the statement, the bank record and the books together is file work; refund requests go out only with a principal's approval.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "settlement-statement",
+        "payoff-letter",
+        "purchase-and-sale-agreement",
+        "trailing-12"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": [],
+      "typeNotes": {
+        "industrial": "Where the sale contract leaves the sale year's expense reconciliation with the seller, take each tenant's estimated true-up from collect-rent-and-reconcile-cam's settle-year-of-sale and list it as owed to or by the entity until settled.",
+        "office": "Where leases pass through operating expenses over a base year and the contract leaves the sale year's reconciliation with the seller, take each tenant's estimated true-up from collect-rent-and-reconcile-cam's settle-year-of-sale and list it as owed to or by the entity until settled.",
+        "retail": "Where the contract leaves the sale year's recoveries with the seller, take each tenant's estimated true-up from collect-rent-and-reconcile-cam's settle-year-of-sale, add any percentage rent the leases settle after closing, and list each as owed to or by the entity until settled."
+      }
+    },
+    {
+      "id": "read-final-terms",
+      "title": "Read the agreement's terms for sale proceeds and liquidation",
+      "instruction": "Open the signed governing agreement with every amendment and side letter and write out, with section numbers, each term governing money from a sale or the end of the entity. Add to make-a-distribution's read-distribution-terms list: any separate order for sale proceeds; whether selling the last property requires winding up; who conducts it; reserves and a final accounting; whether liquidating distributions follow the waterfall or positive capital accounts, with any deficit restoration or giveback; the sponsor's sale fees; and defaulted or transferred interests. An agreement written to the allocation regulations' economic-effect test pays liquidating distributions by positive capital accounts. A Texas limited partnership pays creditors first whatever its agreement says; if it is silent, then unpaid distributions, return of capital and partnership interests. A Texas LLC whose agreement is silent distributes by the agreed value of each member's recorded contribution. In a fund, add recycling, recall of distributions and the clawback.",
+      "mode": "agent",
+      "modeBasis": "Reading the signed agreement and writing out its terms is document work; a term that reads two ways goes to counsel in the next step.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-bo-153",
+        "tx-bo-101",
+        "tx-bo-11",
+        "ecfr-26-1-704-1"
+      ]
+    },
+    {
+      "id": "confirm-winding-up",
+      "title": "Have counsel confirm whether the entity is winding up",
+      "instruction": "Counsel says in writing whether this payment is made in winding up or is an interim distribution. Winding up is required on, among other events, one the governing documents specify or a voluntary decision, which by statutory default takes a majority vote of all members of a Texas LLC, or the written consent of all partners of a Texas limited partnership unless its agreement says otherwise. Counsel prepares any vote or consent needed, including any the JV agreement requires of the capital partner; a principal approves it before it goes out by the agreement's notice channel, and each consent is filed with its date. If the payment is not made in winding up, as in a fund with properties left or after a failed vote, use make-a-distribution and its check-lawful-distribution step. Counsel names who conducts the winding up and applies another state's law to an entity formed there.",
+      "mode": "human-online",
+      "modeBasis": "Whether the entity is winding up, and what vote the statute or agreement then requires, is a legal conclusion for counsel; a principal approves anything sent to investors.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-final-terms"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-bo-11",
+        "tx-bo-101"
+      ]
+    },
+    {
+      "id": "check-foreign-withholding",
+      "title": "Have the CPA set withholding on foreign investors' share of the gain",
+      "instruction": "Before any figure is approved, give the CPA the closing's gain estimate and each investor's tax form from the register, and ask in writing whose share draws withholding. Gain from disposing of United States real property is effectively connected income for a nonresident alien or foreign corporation, and a partnership pays withholding tax on such income allocable to foreign partners in installments during the year, whether or not it distributes anything. Without a valid Form W-9 or W-8 it must generally presume a partner is foreign; request missing forms under keep-investor-register-current. The section 1446(f) rules also treat a distribution as a transfer, so each foreign partner's final distribution draws withholding unless an exception applies, such as the partnership's books showing no realized gain; the CPA records which applies. The CPA sets each installment's amount and due date for the deadline-calendar; a principal pays each on time, approved distribution or not.",
+      "mode": "human-online",
+      "modeBasis": "Who is a foreign partner and what the partnership must withhold are tax determinations for the CPA.",
+      "actor": "cpa",
+      "licensed": "cpa",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "reconcile-sale-cash"
+      ],
+      "rules": [],
+      "calculators": [
+        "deadline-calendar"
+      ],
+      "consumes": [
+        "investor-register",
+        "settlement-statement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "usc-26-897",
+        "usc-26-1446",
+        "ecfr-26-1-1446-1",
+        "ecfr-26-1-1446-3",
+        "ecfr-26-1-1446f-1",
+        "ecfr-26-1-1446f-2"
+      ]
+    },
+    {
+      "id": "set-holdback",
+      "title": "Set the holdback for wind-down costs and surviving claims",
+      "instruction": "List what the entity keeps back, each line with amount, support or estimate, and release date. Lines: what reconcile-sale-cash marked as not the entity's, and each post-closing true-up until settled; open payables; the final return and K-1s; the final Texas franchise tax report and tax, which the Comptroller requires before certifying the entity for termination; termination costs; withholding the CPA set; any share that cannot be paid; surviving sale-contract claims, for their survival period and cap; known or threatened disputes; and, after a whole taking, what counsel's buy-back decision (condemnation-notice) requires. Where the agreement follows the economic-effect test, each line must be reasonably required for a liability, and a release goes out as soon as practicable in the ratio of positive capital accounts. In winding up, draft from this list the winding-up notice to each known claimant; a principal approves each first. Distributable cash is reconciled cash less these lines.",
+      "mode": "agent",
+      "modeBasis": "Building the schedule from the contract, the books and counsel's and the CPA's answers is file work; notices go out only with a principal's approval, and counsel confirms the provision in the next step.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "reconcile-sale-cash",
+        "confirm-winding-up",
+        "check-foreign-withholding"
+      ],
+      "rules": [
+        "us-tx.property.commercial-security-deposit",
+        "us-tx.franchise-tax.basics"
+      ],
+      "calculators": [],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "deal-entity-agreement",
+        "jv-agreement",
+        "settlement-statement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-bo-11",
+        "cpa-tx-terminate",
+        "tx-prop-93",
+        "tx-prop-92",
+        "ecfr-26-1-704-1"
+      ],
+      "typeNotes": {
+        "industrial": "A commercial seller stays liable for each tenant's deposit until the buyer gives that tenant a signed statement that it received and is responsible for the deposit, stating its exact amount; keep the line until each tenant's statement is in the file.",
+        "multifamily": "For residential leases the former owner stays liable for a deposit until the new owner has received it or assumed the liability, unless a written contract between the parties says otherwise; counsel confirms what the sale contract did before the deposit line is released.",
+        "office": "A commercial seller stays liable for each tenant's deposit until the buyer gives that tenant a signed statement that it received and is responsible for the deposit, stating its exact amount; keep the line until each tenant's statement is in the file.",
+        "retail": "A commercial seller stays liable for each tenant's deposit until the buyer gives that tenant a signed statement that it received and is responsible for the deposit, stating its exact amount; keep the line until each tenant's statement is in the file."
+      }
+    },
+    {
+      "id": "counsel-confirms-holdback",
+      "title": "Have counsel confirm the holdback provides for every liability",
+      "instruction": "Counsel confirms in writing, line by line, that the holdback makes adequate provision for every known and surviving liability before anything is distributed. A Texas entity winding up must discharge, or make adequate provision for, all its liabilities and obligations, and only then distribute the rest of its property to its owners by their rights; if its property cannot cover them all, it goes to their just and equitable discharge, and counsel directs how. Counsel checks that the winding-up notice went to each known claimant, adds any line a claim calls for, and sets each line's release date. A terminated Texas entity survives three years for existing claims, and a claim not sued on within three years is generally extinguished. A line counsel adds or changes goes back through set-holdback and the run.",
+      "mode": "human-online",
+      "modeBasis": "Whether a provision for a liability is adequate is a legal judgment for counsel.",
+      "actor": "counsel",
+      "licensed": "attorney",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "set-holdback"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "purchase-and-sale-agreement",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-bo-11"
+      ]
+    },
+    {
+      "id": "run-final-waterfall",
+      "title": "Run the waterfall on the final distributable cash",
+      "instruction": "Run distributable cash by the method read-final-terms found: the agreement's order for sale proceeds or, where the agreement requires it, positive capital account balances. For capital accounts, get the CPA's allocation of the year's gain first and distribute in those ratios; the waterfall run then shows whether the allocations reached the waterfall result. Keep a per-investor ledger on the agreement's own accrual: unreturned capital, preferred return to the payment date, any catch-up, each promote tier, and life-of-deal totals contributed and received. Cross-check the tiers in the waterfall-promote calculator with each year's actual flows, and note every gap for the second-person check. Run it again, by the same method, with the holdback added as if later released. In a fund, set the order deal by deal or whole fund, and test any clawback against the final order. In a joint venture, the parties are the capital partner and the sponsor's entity.",
+      "mode": "agent",
+      "modeBasis": "The ledger and the calculator are arithmetic on the agreement's terms and the register; every level comes from the signed agreement.",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "read-final-terms",
+        "counsel-confirms-holdback"
+      ],
+      "rules": [],
+      "calculators": [
+        "waterfall-promote"
+      ],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "cpa-ties-capital-accounts",
+      "title": "Have the CPA tie the run to capital accounts and split the gain",
+      "instruction": "Send the CPA the run, depreciation records and any cost segregation study; get three written answers before approval: the capital account tie-out, each partner's gain character, and the statements' tax sentence and K-1 date. First, whether the run matches each capital account once gain is allocated. Where the agreement follows the economic-effect test, liquidating distributions go by positive capital accounts by the end of the liquidation year or, if later, within 90 days after liquidation, which occurs when the partnership stops being a going concern, even while winding up; the CPA dates it, usually at the sale. Differences go to counsel; the run is redone. Second, gain character: ordinary income up to depreciation on personal-property components, and on real property components such as land improvements up to depreciation beyond straight line; unrecaptured section 1250 gain; section 1231 gain; and the promote's three-year rule, which the regulations keep off 1231 gain.",
+      "mode": "human-online",
+      "modeBasis": "Allocating gain and testing capital accounts are tax positions, and tax positions are the CPA's.",
+      "actor": "cpa",
+      "licensed": "cpa",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "run-final-waterfall"
+      ],
+      "rules": [
+        "us-fed.irc.gain-and-adjusted-basis",
+        "us-fed.irc.section-1231-gains-and-losses",
+        "us-fed.irc.unrecaptured-section-1250-gain",
+        "us-fed.irc.bonus-depreciation",
+        "us-fed.irc.section-1061-applicable-partnership-interests"
+      ],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "settlement-statement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "ecfr-26-1-704-1",
+        "usc-26-1245",
+        "usc-26-1250",
+        "usc-26-1061",
+        "ecfr-26-1-1061-4"
+      ]
+    },
+    {
+      "id": "second-person-check",
+      "title": "Have a second person check the run before anything is paid",
+      "instruction": "A person who did not prepare the run checks it as make-a-distribution's second-person check does, against the signed agreement and the register, confirming that the sanctions rescreen and register tie-out from keep-investor-register-current are both dated after the last register change, and adds the final items: each holdback line and its release date, withholding by investor, the CPA's capital account tie-out, transfers and deaths recorded since the last distribution, and that payments plus holdback plus withholding equal the reconciled cash to the cent. They recompute by hand at least one investor's full life-of-deal ledger and the promote. A difference goes back to the preparer and the run is redone, not patched; the checker signs off in writing with the date and the version checked. In a joint venture, reconcile the capital partner's own run line by line and settle any gap before approval.",
+      "mode": "human-online",
+      "modeBasis": "An independent check of figures about to be paid is a person's judgment, kept apart from whoever prepared them.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "run-final-waterfall",
+        "cpa-ties-capital-accounts"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement",
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "approve-final-distribution",
+      "title": "Approve the final distribution in writing",
+      "instruction": "The people the governing agreement names approve in writing, in the form it sets, the total, each holdback line, the withholding, the record and payment dates and the schedule by investor. In winding up, the persons counsel named to conduct it sign, and the approval attaches the vote and consents filed under confirm-winding-up, including any the JV agreement requires of the capital partner, and counsel's written confirmation under counsel-confirms-holdback. Fees the agreement pays the sponsor on a sale are approved separately, never folded into the distribution. A changed figure goes back through the check and a new approval.",
+      "mode": "human-online",
+      "modeBasis": "Declaring the last distribution binds the entity and is signed by the people its agreement names.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "signature",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "confirm-winding-up",
+        "counsel-confirms-holdback",
+        "second-person-check"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "verify-payment-instructions",
+      "title": "Verify each payee's instructions by a known channel",
+      "instruction": "Before release, a person compares each payee in the batch with the verified record in the wire instructions file, as make-a-distribution does: who verified the instructions, how and when. A sale distribution can be large and go to accounts last confirmed long ago, so confirm by a call to a number already on file every payee whose instructions changed or arrived by email since they were last verified, and every payee not paid since that verification. The FBI advises verifying requests to change account information through a second channel. Pay an estate, a trust or a transferee only as the register shows after counsel confirmed the change under keep-investor-register-current. A request that fails the call follows wire-instructions-change. Account numbers stay in the bank or the secure store, never in a message, and each check is recorded with who made it and when.",
+      "mode": "human-offline",
+      "modeBasis": "The confirmation is a call to a known number, judged by a person who knows the investor.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "reversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "approve-final-distribution"
+      ],
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "wire-instructions",
+        "investor-register"
+      ],
+      "produces": [
+        "wire-instructions"
+      ],
+      "basis": "cited",
+      "sources": [
+        "ic3-bec-psa"
+      ]
+    },
+    {
+      "id": "release-payments",
+      "title": "Release the payments and keep the holdback apart",
+      "instruction": "A person signs in to the bank and releases the approved payments in the amounts on the checked schedule, only to verified instructions, with a second approver where the bank's controls provide one; an agent may prepare the payment list but never moves money. Compare the bank's confirmation with the schedule line by line and follow up the same day on any payment returned or rejected. Payments to the sponsor's own entities, for its co-investment and its promote, go out on the same schedule and are recorded the same way. Tax paid or due for an investor under check-foreign-withholding appears on the schedule as paid for that investor, never as distributable cash. Keep the holdback in a separate account or ledger line, spent only on its listed purposes.",
+      "mode": "human-online",
+      "modeBasis": "Releasing payments takes a bank sign-in and an authorized approver; an agent never moves money.",
+      "actor": "principal",
+      "risk": "high",
+      "undo": "irreversible",
+      "approval": "none",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "verify-payment-instructions"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "formation-back-office",
+      "consumes": [
+        "wire-instructions"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "send-final-statements",
+      "title": "Send each investor a final distribution statement",
+      "instruction": "Draft each investor's statement from the checked schedule and the bank confirmation: the amount, date and method; how the payment divides into return of capital, preferred return and profit, each as the governing agreement defines it; any tax withheld; life-of-deal totals contributed and received; and the holdback in total, with its reasons, when each part may be released and the most a full release of the holdback would pay. Add the CPA's tax sentence from cpa-ties-capital-accounts, including when the CPA expects to issue the year's Schedule K-1. State no return the schedule does not support. A person approves the statements before they go out through the portal or the notice channel the agreement names. In a joint venture, the capital partner gets the final report the JV agreement calls for.",
+      "mode": "agent",
+      "modeBasis": "Drafting statements from the checked schedule is writing work; nothing goes to an investor without a person's approval.",
+      "risk": "medium",
+      "undo": "irreversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "release-payments"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register",
+        "deal-entity-agreement",
+        "jv-agreement"
+      ],
+      "produces": [],
+      "basis": "practitioner",
+      "sources": []
+    },
+    {
+      "id": "deposit-unlocated-shares",
+      "title": "Trace investors who cannot be paid and hold their shares for deposit at termination",
+      "instruction": "When a payment comes back or an investor cannot be reached, try every channel on file and log each attempt with its date and result; outreach goes out only with a principal's approval. Carry each unpaid share as its own holdback line in the separate holdback account, and while the entity exists follow the unclaimed property step in keep-investor-register-current. On the termination of a Texas filing entity, the share of an owner or creditor who is unknown or cannot be found after reasonable diligence must be reduced to cash and deposited with the Comptroller, with a statement of each person's name, last known address and amount; the deposit discharges the person responsible for the liquidating distribution from further liability for that money. Draft the statement and the record of diligence for wind-down-the-entity's release-holdback, where a principal, once counsel confirms the diligence record, signs the statement and makes the deposit.",
+      "mode": "agent",
+      "modeBasis": "Tracing, logging and drafting are file work; outreach goes out with a principal's approval, and the deposit at termination is a principal's payment once counsel confirms.",
+      "risk": "high",
+      "undo": "hard-to-undo",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "release-payments"
+      ],
+      "when": {
+        "jurisdiction": [
+          "us-tx"
+        ]
+      },
+      "rules": [],
+      "calculators": [],
+      "consumes": [
+        "investor-register"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "tx-bo-11"
+      ]
+    },
+    {
+      "id": "record-and-hand-off",
+      "title": "Record the distribution and hand the sale year to the CPA",
+      "instruction": "Post the distribution, the withholding and the holdback to the books and to each investor's ledger and capital account, and reconcile them to the bank confirmation. Then send the CPA the sale-year package for file-partnership-return-and-k1s: the closing statement, the run, the capital account tie-out, the gain split, the withholding paid and the holdback. A partnership's tax year ends on the date it winds up its affairs, so if the holdback keeps the entity winding up past the year end, the sale year's return is not the final one; the final return is filed under wind-down-the-entity's final-federal-return. An interest liquidated by a series of distributions is not treated as liquidated until the last one, so the CPA decides how the holdback bears on each investor's year, including any loss. Hand the rest to wind-down-the-entity.",
+      "mode": "agent",
+      "modeBasis": "Posting and assembling the package are file work from the approved schedule; it goes to the CPA with a principal's approval.",
+      "risk": "medium",
+      "undo": "reversible",
+      "approval": "every-run",
+      "effort": null,
+      "elapsed": null,
+      "after": [
+        "release-payments",
+        "cpa-ties-capital-accounts"
+      ],
+      "rules": [],
+      "calculators": [],
+      "market": "investor-portals-fund-admin",
+      "consumes": [
+        "investor-register",
+        "settlement-statement"
+      ],
+      "produces": [],
+      "basis": "cited",
+      "sources": [
+        "irs-i1065",
+        "ecfr-26-1-761-1",
+        "usc-26-731"
+      ]
+    }
+  ],
+  "outlineSteps": []
 }

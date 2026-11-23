@@ -89,7 +89,7 @@
     },
     {
       "id": "separate-prior-firm-deals",
-      "title": "Separate prior-firm deals from the sponsor's own",
+      "title": "Separate prior-firm deals from the firm's own",
       "instruction": "Sort the inventory into three groups: deals the sponsor itself sponsored and controlled; deals a principal worked on at a prior firm or under someone else's control; and deals in which a principal was only a passive investor. A deal belongs to the sponsor only if the sponsor's entity held the sponsor role in the governing documents. For each prior-firm deal, list the agreements that may limit what can be said about it: employment, separation, confidentiality and non-solicitation terms, and who holds the deal's records today. Collect those agreements for counsel. Do not draft any deck page, headline or summary figure until counsel has answered on the second group.",
       "mode": "agent",
       "modeBasis": "Sorting by the governing documents and collecting agreements is file work; what may be shown is counsel's conclusion in the next step.",
