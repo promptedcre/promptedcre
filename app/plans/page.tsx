@@ -1,14 +1,14 @@
 import type { Metadata, ResolvingMetadata } from "next";
 import { PlanCards } from "@/components/plans/plan-cards";
 import { PlansStyles } from "@/components/plans/styles";
-import { Container, PageHead } from "@/components/ui";
+import { Container } from "@/components/ui";
 import { siteFacts } from "@/lib/compute/site-facts";
 import { getCorpus } from "@/lib/content/load";
 import { TOOLS } from "@/lib/mcp/server";
-import { MONEY_LINE, PLANS_PAGE, plansDescription } from "@/lib/plans";
+import { PLANS_LABEL, plansDescription } from "@/lib/plans";
 import { site } from "@/lib/site";
 
-const SHARE_TITLE = `${PLANS_PAGE.tabTitle} · ${site.name}`;
+const SHARE_TITLE = `${PLANS_LABEL} · ${site.name}`;
 
 // The page's own title and description, in a tab, a search result and a shared link, on the
 // site's own share image (app/opengraph-image.tsx). A page's openGraph replaces the layout's
@@ -19,7 +19,7 @@ export async function generateMetadata(_: PageProps<"/plans">, parent: Resolving
   const { openGraph } = await parent;
   const description = plansDescription();
   return {
-    title: PLANS_PAGE.tabTitle,
+    title: PLANS_LABEL,
     description,
     openGraph: {
       type: "website",
@@ -33,9 +33,11 @@ export async function generateMetadata(_: PageProps<"/plans">, parent: Resolving
   };
 }
 
-// The plans page (decisions 120 to 127), where the header's "Connect your agent" leads: the
-// three cards, then what pays for the plans. Static: built once from the catalog. It takes
-// nothing from a visitor: Pro and Enterprise are coming soon, with no form for now.
+// The plans page (decisions 120 to 127 and 134 to 138), where the header's "Connect your
+// agent" leads: the three cards and nothing else. It draws no title, no line under one and no
+// line under the cards (decision 135); its one h1 is for screen readers, and the cards start
+// where a page head would, at PageHead's own top space. Static: built once from the catalog.
+// It takes nothing from a visitor: Pro and Enterprise are coming soon, with no form for now.
 export default function PlansPage() {
   const facts = siteFacts(getCorpus());
   const counts = {
@@ -47,9 +49,10 @@ export default function PlansPage() {
   return (
     <Container>
       <PlansStyles />
-      <PageHead id="plans-title" title={PLANS_PAGE.title} lede={PLANS_PAGE.lede} />
-      <PlanCards counts={counts} className="mt-10 md:mt-12" />
-      <p className="type-body measure m-0 mb-8 mt-10 text-text md:mt-12">{MONEY_LINE}</p>
+      <h1 id="plans-title" className="sr-only">
+        {PLANS_LABEL}
+      </h1>
+      <PlanCards counts={counts} className="mb-8 pt-8 md:pt-12" />
     </Container>
   );
 }

@@ -100,8 +100,9 @@ calendar file, a sheet for counsel and one for the CPA, and a score [35, 36].
 - Headline: **"Give your AI CRE superpowers."**, its last word penciled then inked once as
   the page opens, and under it "The playbooks, rules and math your AI agent needs to do real
   estate work, from forming the firm to selling the building." [118, 119, 128]
-- The header's "Connect your agent" opens /plans: three cards, Free (live), Pro and
-  Enterprise (coming soon). Free's "Set up your agent" leads on to /connect [121].
+- The header's "Connect your agent" opens /plans: three cards and nothing else, Free (live),
+  Pro and Enterprise (coming soon), each line on a card a name alone. Free's "Set up your
+  agent" leads on to /connect [121, 134, 135].
 - Two themes, each composed on its own: **Paper**, the drawing set on a desk in daylight,
   which every visitor starts on [75], and **Night**, the dark drawing set, on the toggle.
 - One box to start from: the sentence to paste ("Read promptedcre.com/install and set me
