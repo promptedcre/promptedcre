@@ -1,10 +1,12 @@
 import type { ReactNode } from "react";
-import { Disclosure } from "@/components/ui";
+import { Disclosure, TextLink } from "@/components/ui";
 import type { SiteFacts } from "@/lib/compute/site-facts";
+import { costAnswer } from "@/lib/plans";
 import { catalogSentence, listWords, type HostChip } from "./data";
 
 // The questions at the foot of the home page (D218 kept them). Every figure is computed
-// (siteFacts, HOSTS); the hosts are said in lib/hosts.ts's own three words.
+// (siteFacts, HOSTS); the hosts are said in lib/hosts.ts's own three words. What it costs is
+// lib/plans.ts's answer (decision 129): what is live is free, and the plans are coming.
 
 // The review of the written records, said as what it is: "12 practitioner-reviewed;
 // 32 AI-drafted, sources checked 2026-11-14". A level no record has reached is left out.
@@ -38,8 +40,18 @@ export function hostAnswer(hosts: readonly HostChip[]): string {
 }
 
 export function Questions({ facts, hosts }: { facts: SiteFacts; hosts: readonly HostChip[] }) {
+  const cost = costAnswer();
   const qa: Array<[string, ReactNode]> = [
-    ["What does it cost?", "Nothing. There is no account with us."],
+    [
+      "What does it cost?",
+      <>
+        {cost.text}{" "}
+        <TextLink href="/plans" tone="accent">
+          {cost.link}
+        </TextLink>
+        .
+      </>,
+    ],
     ["Is this legal advice?", "No. Every rule links to its source, and a step that needs an attorney or a CPA says so."],
     ["What does it cover?", `${facts.coverage.label}. ${catalogSentence(facts)}`],
     ["Which agents does it work with?", hostAnswer(hosts)],

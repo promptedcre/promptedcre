@@ -28,6 +28,9 @@ web
   marketing layer. It is a real estate term and stays in catalog text wherever it is that
   term; titles and summaries that meant the user were renamed in a pass the owner read
   [29, 30, 104, 106, 107].
+- **Full-service and vertically integrated firms** are who the two paid plans, Pro and
+  Enterprise, are for. Both are coming soon, with no prices and, for now, no sign-up; the
+  Free plan, everything live today, is for operators [120, 127].
 
 ## Product Purpose
 
@@ -52,8 +55,11 @@ calendar file, a sheet for counsel and one for the CPA, and a score [35, 36].
   the agent's word, not proof. The recorded run shows the refusal and the handoff.
 - Vendor rankings judge one thing, agent-readiness, on sealed evidence, and take no
   vendor money, ever [10, 20].
-- Free, no sign-in, and the firm's memory stays in a file on the operator's own
-  machine [17, 18, 38].
+- The Free plan is free, with no sign-in, and the firm's memory stays in a file on the
+  operator's own machine [17, 18, 38]. Pro (self-serve: live market data, models as skills,
+  property lookups and links to a firm's own tools) and Enterprise (built with the firm: its
+  own skills and workflows, a company brain and an agent harness) are coming, paid for by the
+  firms that use them, never by a vendor [120 to 126].
 
 ## Operating Context
 
@@ -70,10 +76,10 @@ calendar file, a sheet for counsel and one for the CPA, and a score [35, 36].
 
 ## Capabilities and Constraints
 
-- **Not live yet, and the site must say so:** the hosted connector is not switched on
-  (`connectorLive` is false in `lib/site.ts`) and the engine is not released
-  (`engineReleased` is false). What works today: copying a playbook into any AI chat,
-  watching the recorded run, reading a finished audit, the calculators, the library.
+- **Live since 2026-11-19:** the hosted connector is switched on (`connectorLive` in
+  `lib/site.ts`) and the engine is released from the public repository (`engineReleased`)
+  [D246]. Every line that says what is live follows those two flags. The paid plans exist
+  only as cards; nothing of them is built, and the site takes no sign-up for them [120, 127].
 - **Numbers are measured.** Every count on the site is computed from the catalog at
   build (`lib/compute/site-facts.ts`). None is typed by hand.
 - **Hosts** are labeled as tested only after a real run [42]. Claude Code is tested;
@@ -83,16 +89,19 @@ calendar file, a sheet for counsel and one for the CPA, and a score [35, 36].
   version one [28].
 - The pages read with scripts off, hold a 12 px text floor, and never carry meaning by
   color alone.
-- **Undecided (the owner's):** who is named as behind the site and as reviewer; the
-  deploy date; whether the audit door leads.
+- **Undecided (the owner's):** who is named as behind the site and as reviewer; whether
+  the audit door leads.
 
 ## Brand Commitments
 
 - Name: **PromptedCRE**, one word [74]; the mark is five floor slabs stepping out and
   back as a prompt's caret, in the agent's green, and a cursor slab in the person's amber
   with the person's cut corner [76].
-- Headline: **"Start and run an autonomous CRE firm."**, and under it "Step-by-step
-  playbooks your AI agent can run, from forming the firm to selling the building." [54, 55, 116]
+- Headline: **"Give your AI CRE superpowers."**, its last word penciled then inked once as
+  the page opens, and under it "The playbooks, rules and math your AI agent needs to do real
+  estate work, from forming the firm to selling the building." [118, 119, 128]
+- The header's "Connect your agent" opens /plans: three cards, Free (live), Pro and
+  Enterprise (coming soon). Free's "Set up your agent" leads on to /connect [121].
 - Two themes, each composed on its own: **Paper**, the drawing set on a desk in daylight,
   which every visitor starts on [75], and **Night**, the dark drawing set, on the toggle.
 - One box to start from: the sentence to paste ("Read promptedcre.com/install and set me

@@ -1,4 +1,5 @@
 import { getCorpus } from "@/lib/content/load";
+import { PLANS_LABEL, llmsNote } from "@/lib/plans";
 import { getRankings } from "@/lib/rankings/load";
 import { engineLine, site, terms } from "@/lib/site";
 
@@ -36,6 +37,9 @@ export function GET(request: Request): Response {
     "## For people",
     "",
     line("Connect your agent", "/connect", "how a person connects an agent, one host at a time, and what the agent can and cannot see"),
+    // The plans, for a person who asks what it costs (decision 129). /install and the
+    // connector say only what works today.
+    line(PLANS_LABEL, "/plans", llmsNote()),
     line("Audit a firm", "/audit", "the audit offer, with a finished example audit of a fictional firm: score, findings and a sheet for each person"),
     line("A recorded run", "/run", "the engine run on a fictional firm: every command, who ran it, its real output and the files it wrote"),
     "",

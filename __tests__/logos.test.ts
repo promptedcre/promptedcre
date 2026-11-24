@@ -38,6 +38,13 @@ describe("company icons", () => {
     expect(missing).toEqual([...NO_ICON].sort());
   });
 
+  it("include the two marks the Free plan's card draws beside their names (D274)", () => {
+    expect(logoSrc("github")).toBe("/logos/github.png");
+    expect(logoSrc("mcp")).toBe("/logos/mcp.png");
+    // GitHub's mark is dark ink on a clear ground, so it sits on the light tile on Night
+    expect(LOGOS.github?.light).toBe(true);
+  });
+
   it("draw a two-letter tile of ours for a name with no icon", () => {
     expect(logoLetters("CoStar")).toBe("Co");
     expect(logoLetters("Northwest Registered Agent")).toBe("NR");

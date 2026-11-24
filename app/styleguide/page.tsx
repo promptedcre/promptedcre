@@ -1021,7 +1021,7 @@ export default function StyleguidePage() {
         <div className="grid gap-12 lg:grid-cols-2">
           <Specimen name="<ButtonLink variant size> · <Button>">
             <div className="flex flex-wrap items-center gap-3">
-              <ButtonLink href="/connect">Connect your agent</ButtonLink>
+              <ButtonLink href="/plans">Connect your agent</ButtonLink>
               <ButtonLink href="/run" variant="secondary">
                 Watch a recorded run
               </ButtonLink>

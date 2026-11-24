@@ -13,6 +13,7 @@ import { getCorpus } from "@/lib/content/load";
 import { HOSTS, statusLine } from "@/lib/hosts";
 import { TOOLS } from "@/lib/mcp/server";
 import { firmFileSpec } from "@/lib/mcp/tools";
+import { CONNECT_LINE } from "@/lib/plans";
 import { nav, site } from "@/lib/site";
 
 // What /connect, the header, the footer, the status line and the not-found page promise,
@@ -100,6 +101,9 @@ describe("/connect", () => {
     expect(anchors(head, "/run").some((a) => a.includes("btn--primary"))).toBe(!site.connectorLive);
     // and the path that needs no connector is offered in both states
     expect(text(head)).toContain("No connector? Open any written playbook and copy its file into any AI chat.");
+    // this is the Free plan, with the way to all three (decision 129)
+    expect(text(head)).toContain(`${CONNECT_LINE.text} ${CONNECT_LINE.link}.`);
+    expect(anchors(head, "/plans")).toHaveLength(1);
     // the engine is said to be what it is before it is said to be unreleased, and while it
     // is unreleased the head says that nothing refuses a step
     expect(text(head)).toContain(
@@ -148,6 +152,8 @@ describe("/connect", () => {
     expect(count(html, "tblock tblock--rows")).toBe(1);
     const plan = text(html.slice(html.indexOf('id="never"')));
     for (const words of ["Files never cross", "Parcel 1", "Parcel 2", "not to scale", "Your machine", "The hosted site"]) expect(plan).toContain(words);
+    // the site takes nothing from a visitor (no waitlist for now, decision 127), so it is read-only whole
+    expect(plan).toContain("Read-only. Takes no firm file.");
     expect(plan).toContain(Object.keys(firmFileSpec().files).join(" · "));
     expect(plan).toContain(`${TOOLS.length} read-only tools`);
     expect(plan).toContain("The connector takes no firm file, and no tool accepts one.");
@@ -189,21 +195,28 @@ describe("the header", () => {
     expect(body(html)).not.toContain('aria-current="page"');
   });
 
-  it("outlines the connect control while the connector is off, and fills it when it is on", () => {
-    const controls = anchors(at("/"), "/connect");
-    expect(controls.length).toBeGreaterThan(0);
+  it("opens the plans from the connect control, outlined while the connector is off and filled when it is on", () => {
+    // the bar's control and the phone menu's (decision 121); the setup steps are a page the menu lists
+    const controls = anchors(at("/"), "/plans");
+    expect(controls).toHaveLength(2);
     for (const a of controls) {
       expect(a.includes("btn--primary")).toBe(site.connectorLive);
       expect(a.includes("btn--secondary")).toBe(!site.connectorLive);
     }
+    const setup = anchors(at("/"), "/connect");
+    expect(setup).toHaveLength(1);
+    expect(setup[0]).toContain('class="sh-more"');
   });
 
   it("marks the page the reader is on, with a state that is not the agent's color", () => {
     const playbooks = at("/playbooks/file-form-d-and-state-notices");
     expect(anchors(playbooks, "/playbooks").every((a) => a.includes('aria-current="page"'))).toBe(true);
     expect(anchors(playbooks, "/situations").some((a) => a.includes('aria-current="page"'))).toBe(false);
+    // the connect control is current on the plans; on the setup steps, the menu's own link is
+    expect(anchors(at("/plans"), "/plans").every((a) => a.includes('aria-current="page"'))).toBe(true);
     const connect = at("/connect");
     expect(anchors(connect, "/connect").every((a) => a.includes('aria-current="page"'))).toBe(true);
+    expect(anchors(connect, "/plans").some((a) => a.includes('aria-current="page"'))).toBe(false);
     // /run is not one of the five, so the menu holds it and marks it
     const run = at("/run");
     expect(anchors(run, "/run").length).toBeGreaterThan(0);
@@ -215,20 +228,29 @@ describe("the header", () => {
   });
 
   it("marks a current control in the bar with the same rule a section's link carries, not with a border's hue", () => {
-    const connect = at("/connect");
+    const plans = at("/plans");
     // the bar's Search and Connect controls take the header's own mark
     const bar = (html: string, href: string) => anchors(html, href).filter((a) => /class="[^"]*\bsh-ctl\b/.test(a));
-    expect(bar(connect, "/connect")).toHaveLength(1);
-    expect(bar(connect, "/connect")[0]).toContain('aria-current="page"');
+    expect(bar(plans, "/plans")).toHaveLength(1);
+    expect(bar(plans, "/plans")[0]).toContain('aria-current="page"');
+    expect(bar(at("/connect"), "/connect")).toHaveLength(0);
     expect(bar(at("/search"), "/search")).toHaveLength(1);
     expect(bar(at("/search"), "/search")[0]).toContain('aria-current="page"');
-    expect(connect).toMatch(/\.sh-ctl\[aria-current="page"\]::after\{[^}]*height:2px;background:var\(--accent-strong\)/);
+    expect(plans).toMatch(/\.sh-ctl\[aria-current="page"\]::after\{[^}]*height:2px;background:var\(--accent-strong\)/);
     // and keep their own outline: no rule here turns a control's border the accent color
-    for (const rule of [...connect.matchAll(/\.sh-(?:ctl|cta)[^{]*\[aria-current="page"\][^{]*\{([^}]*)\}/g)].map((m) => m[1] ?? "")) {
+    for (const rule of [...plans.matchAll(/\.sh-(?:ctl|cta)[^{]*\[aria-current="page"\][^{]*\{([^}]*)\}/g)].map((m) => m[1] ?? "")) {
       expect(rule).not.toMatch(/border-color:var\(--accent/);
     }
     // the control's name is the same at every width, whatever words fit
-    for (const a of bar(connect, "/connect")) expect(a).toContain('aria-label="Connect your agent"');
+    for (const a of bar(plans, "/plans")) expect(a).toContain('aria-label="Connect your agent"');
+    // a filled control on its own page is drawn outlined, so the page's one filled button is its own
+    expect(plans).toMatch(/\.sh-ctl\.btn--primary\[aria-current="page"\],\.sh-cta\.btn--primary\[aria-current="page"\]\{[^}]*background-color:transparent/);
+  });
+
+  it("wraps the menu's other pages whole from 768 px, never word by word or past its edge", () => {
+    const html = at("/");
+    expect(html).toMatch(/\.sh-more\{[^}]*white-space:nowrap/);
+    expect(html).toMatch(/<ul class="[^"]*md:flex-wrap[^"]*">/);
   });
 
   it("puts a record that lives under another section's path in its own section", () => {

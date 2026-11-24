@@ -3,10 +3,12 @@ export const site = {
   // One word, as the owner writes it (D218).
   name: "PromptedCRE",
   wordmark: { left: "Prompted", right: "CRE" },
-  // The home page's headline and the line under it, in the owner's words (D218).
-  tagline: "Start and run an autonomous CRE firm.",
-  subline: "Step-by-step playbooks your AI agent can run, from forming the firm to selling the building.",
-  // The site calls its user an operator: a firm that raises capital and owns property.
+  // The home page's headline and the line under it, in the owner's words (decisions 118 and
+  // 119): the headline is set as written, with no moving word.
+  tagline: "Give your AI CRE superpowers.",
+  subline: "The playbooks, rules and math your AI agent needs to do real estate work, from forming the firm to selling the building.",
+  // The site calls its user an operator: a firm that raises capital and owns property. The
+  // share image prints this over the headline (decision 129 keeps it); no page draws it.
   eyebrow: "For real estate operators",
   description:
     "Open, agent-readable playbooks for real estate operators. Every step says whether an AI agent can do it or a person must, and where it comes from: a cited source or common practice.",

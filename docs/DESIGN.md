@@ -54,7 +54,8 @@ each with its prefixes in its header comment:
 | `FoldStyles` | `components/playbook/fold.tsx` | `rc-` (rule cards) |
 | `LibraryStyles` | `components/library/styles.tsx` | `lb-` |
 | `RunStyles` | `components/run/run-styles.tsx` | `rb-` board, `eo-` engine output, `rd-` document sheet |
-| `HomeStyles` | `components/home/styles.tsx` | `hm-`, `hl-` (the headline's word) |
+| `HomeStyles` | `components/home/styles.tsx` | `hm-`, `hl-` (the headline's inked word) |
+| `PlansStyles` | `components/plans/styles.tsx` | `pl-` (the plan cards) |
 | `BarStyles` | `components/rankings/bars.tsx` | `rkb-` bar rows, `rkc-` chart card, `rks-` sort control |
 | `SegmentedStyles` | `components/catalog/filter.tsx` | the pill switchers of the catalog lists and /rules |
 | `VendorStyles` | `components/rankings/vendor-parts.tsx` | `vd-` (a vendor page's site pill, cards, rings and wells) |

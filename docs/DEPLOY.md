@@ -95,6 +95,13 @@ private repository owned by a GitHub organization, so the repository went public
    drawn only in a build on Vercel. It counts page views without cookies.
 4. The project's `vercel.app` address serves the same production deployment as the domain.
 
+**The plan it runs on.** The project is on Vercel's free Hobby plan. Vercel's terms (section
+4, read on 2026-11-23) limit Hobby to "personal or non-commercial use" and let Vercel disable
+a Hobby site without notice. Since 2026-11-23 the site names two paid plans as coming soon,
+with no prices and no sign-up. Your choice that day was to stay on Hobby and move to Pro
+($20 a month) when Pro opens for sale; if Vercel ever disables the site before then,
+upgrading is the first thing to try.
+
 **Access.** New projects start with Standard Protection: preview deployments, including
 branch pushes and per-deployment URLs, need a Vercel login. Production domains stay
 public. An agent can't sign in, so test the connector on the project's `vercel.app`

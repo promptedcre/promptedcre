@@ -20,6 +20,7 @@ import {
 import { cx } from "@/components/ui/cx";
 import { Icon, type IconName } from "@/components/ui/icon";
 import { Logo } from "@/components/ui/logo";
+import { PLANS_LABEL, QUICK_LINK_NOTE, SETUP_LABEL } from "@/lib/plans";
 import { SEARCH_KINDS, nearestTitles, searchIndex, type SearchDoc, type SearchHit, type SearchKind } from "@/lib/search/index";
 import type { PaletteRequest } from "./search-palette";
 
@@ -50,9 +51,11 @@ function Lead({ icon, children }: { icon?: IconName; children?: ReactNode }) {
   );
 }
 
-// What an empty box offers first: the pages a newcomer comes for, before browsing by kind.
-const QUICK: ReadonlyArray<{ href: string; title: string; sub: string; icon: IconName }> = [
-  { href: "/connect", title: "Connect your agent", sub: "Add PromptedCRE to your AI agent", icon: "plug" },
+// What an empty box offers first: the pages a newcomer comes for, before browsing by kind. The
+// setup steps and the plans are named as the footer names them (decision 130).
+export const QUICK: ReadonlyArray<{ href: string; title: string; sub: string; icon: IconName }> = [
+  { href: "/connect", title: SETUP_LABEL, sub: "Add PromptedCRE to your AI agent", icon: "plug" },
+  { href: "/plans", title: PLANS_LABEL, sub: QUICK_LINK_NOTE, icon: "plus" },
   { href: "/#demo", title: "Watch an agent form an LLC", sub: "A recorded run on a fictional firm", icon: "play" },
   { href: "/audit", title: "Audit a firm", sub: "Eleven checks of an entity's standing", icon: "check" },
   { href: "/rankings", title: "Software rankings", sub: "How well an agent can operate each product", icon: "grid" },

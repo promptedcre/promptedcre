@@ -1,3 +1,5 @@
+import fs from "node:fs";
+import path from "node:path";
 import { createElement, type ComponentType } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
@@ -24,6 +26,7 @@ import { buildBoard } from "@/lib/demo/board";
 import { getDemoRun } from "@/lib/demo/load";
 import { HOSTS } from "@/lib/hosts";
 import { logoSrc } from "@/lib/logos";
+import { costAnswer } from "@/lib/plans";
 import { PHASES } from "@/lib/schemas/playbook";
 import { setupPrompt, site } from "@/lib/site";
 
@@ -162,6 +165,31 @@ describe("the page, as the server renders it", () => {
     expect(count(html, "<h1")).toBe(1);
     expect(text(/<h1[^>]*>([\s\S]*?)<\/h1>/.exec(html)?.[1] ?? "")).toBe(site.tagline);
     expect(page).toContain(site.subline);
+  });
+
+  it("inks its last word once as the page opens, and keeps the line's own words in the h1 (decision 128)", () => {
+    const h1 = /<h1[^>]*>([\s\S]*?)<\/h1>/.exec(html)?.[1] ?? "";
+    // the word is real text, so reading, copying and finding stay plain; the ink is laid over it
+    expect(h1).toContain('<span class="hl-power" data-ink="superpowers">superpowers</span>.');
+    expect(text(h1)).toBe(site.tagline);
+    const css = fs.readFileSync(path.join(process.cwd(), "components", "home", "styles.tsx"), "utf8");
+    // the picture of the word is generated content that screen readers skip
+    expect(css).toMatch(/\.hl-power::after\{content:attr\(data-ink\);content:attr\(data-ink\) \/ ""/);
+    // it moves only on a screen, with scripts on and full motion; never in print or forced colors
+    for (const rule of css.match(/[^{}]*\{[^{}]*animation:hl-[^}]*\}/g) ?? []) expect(rule, rule).toMatch(/html\.js\[data-motion="full"\] \.hl-power/);
+    expect(css).toMatch(/@media print\{\.hl-power\{color:inherit\}\.hl-power::after\{content:none\}\}/);
+    expect(css).toMatch(/@media \(forced-colors:active\)\{\.hl-power\{color:inherit\}\.hl-power::after\{content:none\}\}/);
+    // it plays once: no animation repeats
+    expect(css).not.toMatch(/infinite|alternate/);
+    // the old cycling word is gone, component and rules
+    expect(fs.existsSync(path.join(process.cwd(), "components", "home", "headline.tsx"))).toBe(false);
+    expect(css).not.toMatch(/hl-word/);
+  });
+
+  it("answers what it costs: what is live is free, and the plans are coming", () => {
+    const cost = costAnswer();
+    expect(page).toContain(`${cost.text} ${cost.link}.`);
+    expect(html).toContain('href="/plans"');
   });
 
   it("offers the one sentence, Claude Code's command and the address, and says once that it is not live", () => {

@@ -5,6 +5,7 @@ import { siteFacts } from "@/lib/compute/site-facts";
 import { getCorpus } from "@/lib/content/load";
 import { TOOLS } from "@/lib/mcp/server";
 import { status } from "@/lib/mcp/tools";
+import { CONNECT_LINE } from "@/lib/plans";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -15,10 +16,11 @@ export const metadata: Metadata = {
 
 // The page's job: add the connector once, paste one sentence. It reads in four parts, and
 // they do not get equal air. The head says what this is and, once, what is not switched on
-// yet. The setup follows at once: one form (what you want, your agent) and the chosen
-// agent's numbered steps. Then, a chapter apart, what the agent gets (said in plain words in
-// the heading; the tools by name are developer facts, folded and labelled "For your agent"),
-// and the page's one drawing: the site plan of what it never gets.
+// yet, and that this is the Free plan, with the way to all three (decision 129; the header's
+// "Connect your agent" opens the plans). The setup follows at once: one form (what you want,
+// your agent) and the chosen agent's numbered steps. Then, a chapter apart, what the agent
+// gets (said in plain words in the heading; the tools by name are developer facts, folded and
+// labelled "For your agent"), and the page's one drawing: the site plan of what it never gets.
 export default function ConnectPage() {
   const corpus = getCorpus();
   const notes = doorNotes(corpus.playbooks);
@@ -45,6 +47,13 @@ export default function ConnectPage() {
                 </ButtonLink>
               </>
             )}
+            <p className="type-body-s measure m-0 basis-full text-muted">
+              {CONNECT_LINE.text}{" "}
+              <TextLink href="/plans" tone="accent">
+                {CONNECT_LINE.link}
+              </TextLink>
+              .
+            </p>
             <p className="type-body-s measure m-0 basis-full text-muted">
               No connector? Open any{" "}
               <TextLink href="/playbooks" tone="accent">

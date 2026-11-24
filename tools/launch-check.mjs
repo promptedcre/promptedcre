@@ -3,13 +3,15 @@
 //
 //   node tools/launch-check.mjs https://<project>.vercel.app [--log <file outside the repo>]
 //
-// Three parts, each line marked PASS or FAIL:
+// Three parts, each line marked PASS or FAIL, or SKIP when the catalog has nothing of that
+// kind left to test:
 // 1. The bot check: the pages and a valid connector call, each sent with a user agent naming
 //    GPTBot, ClaudeBot and PerplexityBot, expecting a normal response. Sent from this laptop,
 //    it shows what the host does with those names, not how the real crawlers are treated.
 // 2. The connector's answers to malformed requests: a GET is 405, a bare POST 415, a POST
 //    without both Accept types 406, and a JSON-RPC call with both is 200.
-// 3. The awkward set: an outline, the joint-venture-only record, a state outside coverage, a
+// 3. The awkward set: an outline (skipped once every record is written in full, D272), the
+//    joint-venture-only record, a state outside coverage, a
 //    bad calculator input, the same call twice, and a Form D date already past.
 // The playbook run and the ten operator questions are run by hand (docs/DEPLOY.md, section 4).
 import fs from "node:fs";
@@ -41,7 +43,7 @@ const BOTS = {
   ClaudeBot: "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; ClaudeBot/1.0; +claudebot@anthropic.com)",
   PerplexityBot: "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; PerplexityBot/1.0; +https://perplexity.ai/perplexitybot)",
 };
-const PAGES = ["/", "/install", "/llms.txt", "/playbooks/form-sponsor-entity", "/playbooks/form-sponsor-entity/playbook.md", "/export/playbooks.json"];
+const PAGES = ["/", "/plans", "/install", "/llms.txt", "/playbooks/form-sponsor-entity", "/playbooks/form-sponsor-entity/playbook.md", "/export/playbooks.json"];
 const BOTH = "application/json, text/event-stream";
 
 const lines = [];
@@ -49,6 +51,14 @@ let failed = 0;
 function mark(ok, what, detail = "") {
   if (!ok) failed += 1;
   const line = `${ok ? "PASS" : "FAIL"}  ${what}${detail ? `: ${detail}` : ""}`;
+  lines.push(line);
+  console.log(line);
+}
+
+let skipped = 0;
+function skip(what, detail) {
+  skipped += 1;
+  const line = `SKIP  ${what}: ${detail}`;
   lines.push(line);
   console.log(line);
 }
@@ -105,9 +115,15 @@ async function main() {
 
   console.log("\n3. The awkward set");
   const outlines = await tool("list_playbooks", { depth: "outline" });
-  const outline = outlines.data?.items?.[0]?.slug;
-  const o = outline ? await tool("get_playbook", { slug: outline }) : null;
-  mark(Boolean(o?.data?.note?.startsWith("Outline only")), "an outline", outline ?? "no outline listed");
+  if (Array.isArray(outlines.data?.items) && outlines.data.items.length === 0) {
+    // The call answered and the catalog lists no outline: nothing to test (D272). A failed
+    // call still falls through to FAIL below.
+    skip("an outline", "the catalog lists none; every record is written in full");
+  } else {
+    const outline = outlines.data?.items?.[0]?.slug;
+    const o = outline ? await tool("get_playbook", { slug: outline }) : null;
+    mark(Boolean(o?.data?.note?.startsWith("Outline only")), "an outline", outline ?? "no outline listed");
+  }
 
   const all = await tool("list_playbooks", { depth: "full" });
   const jv = all.data?.items?.find((i) => JSON.stringify(i.writtenForStructures) === JSON.stringify(["jv"]))?.slug;
@@ -138,7 +154,7 @@ async function main() {
   const formD = late.data?.result?.items?.find((x) => x.id === "form-d");
   mark(formD?.passed === true && late.data?.formDPassed?.playbook === "missed-form-d-deadline", "a Form D date already past", formD ? `due ${formD.date}` : "no Form D date");
 
-  const summary = `\n${failed === 0 ? "All passed" : `${failed} failed`}. The playbook run and the ten questions are run by hand (docs/DEPLOY.md, section 4).`;
+  const summary = `\n${failed === 0 ? "All passed" : `${failed} failed`}${skipped ? `, ${skipped} skipped` : ""}. The playbook run and the ten questions are run by hand (docs/DEPLOY.md, section 4).`;
   lines.push(summary.trim());
   console.log(summary);
   if (logFile) {

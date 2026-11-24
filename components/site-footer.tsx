@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PLANS_LABEL, SETUP_LABEL } from "@/lib/plans";
 import { site } from "@/lib/site";
 import { Container } from "./ui/container";
 import { Wordmark } from "./ui/wordmark";
@@ -7,7 +8,8 @@ type FooterGroup = { label: string; links: ReadonlyArray<{ href: string; label: 
 
 // Every page of the site, in plain groups. The footer lists them all; the header's menu
 // lists the ones its four sections leave out. "Scenarios" and "Software" are the owner's
-// names for the situations and the rankings (D218); the routes stay.
+// names for the situations and the rankings (D218); the routes stay. The header's "Connect
+// your agent" opens the plans, so the setup steps are named for what they are (decision 130).
 export const FOOTER_GROUPS: readonly FooterGroup[] = [
   {
     label: "The catalog",
@@ -39,7 +41,8 @@ export const FOOTER_GROUPS: readonly FooterGroup[] = [
     label: "Start",
     links: [
       { href: "/", label: "Home" },
-      { href: "/connect", label: "Connect your agent" },
+      { href: "/plans", label: PLANS_LABEL },
+      { href: "/connect", label: SETUP_LABEL },
     ],
   },
 ];

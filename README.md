@@ -1,6 +1,6 @@
 # PromptedCRE
 
-Step-by-step playbooks your AI agent can run, from forming the firm to selling the building.
+The playbooks, rules and math your AI agent needs to do real estate work, from forming the firm to selling the building.
 
 Open playbooks for real estate operators: starting a firm, raising capital, buying,
 running and selling property, and auditing a firm that already exists. Every step says
@@ -48,6 +48,12 @@ said plainly.
 Coverage is federal and Texas throughout, plus Delaware where entity formation is the
 subject. Playbooks describe common practice and cite their sources; they are not legal,
 tax or investment advice.
+
+## Plans
+
+Everything in this repository is the Free plan: the site, the MCP connector and the engine,
+with no account. Pro and Enterprise are coming for firms that want more. See
+https://www.promptedcre.com/plans.
 
 ## Terms
 

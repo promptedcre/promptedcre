@@ -8,6 +8,7 @@ import { site } from "@/lib/site";
 const PAGE_ROUTES = [
   "/",
   "/audit",
+  "/plans",
   "/connect",
   "/run",
   "/playbooks",

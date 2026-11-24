@@ -10,9 +10,10 @@ import { Wordmark } from "./ui/wordmark";
 
 const MENU_ID = "site-menu";
 
-// The pages the five sections leave out (Search and Connect have their own controls).
+// The pages the five sections leave out (Search and the plans have their own controls; the
+// setup steps, /connect, are one of the pages this list holds).
 const MORE = FOOTER_GROUPS.flatMap((g) => g.links).filter(
-  (l) => l.href !== "/" && l.href !== "/search" && l.href !== "/connect" && !nav.some((n) => n.href === l.href),
+  (l) => l.href !== "/" && l.href !== "/search" && l.href !== "/plans" && !nav.some((n) => n.href === l.href),
 );
 
 // The header's own rules (prefix sh-), in the components layer so a utility on the same
@@ -20,9 +21,11 @@ const MORE = FOOTER_GROUPS.flatMap((g) => g.links).filter(
 //   - the current page, said one way in the bar: the text ink and a 2 px rule in the drafting
 //     blue (never the agent's green) that sits on the header's own rule, like a tab on a sheet
 //     index. A section's link carries it; so do the bar's controls (.sh-ctl: Search on /search,
-//     "Connect your agent" on /connect, the menu button for a page only the menu holds). A
-//     control keeps its own outline: the rule is the mark, never a border's hue. --sh-btn is
-//     the control's height, which places the rule on the header's rule under it;
+//     "Connect your agent" on /plans, the menu button for a page only the menu holds). A
+//     control keeps its own outline: the rule is the mark, never a border's hue. A filled
+//     control on its own page is drawn outlined, so the page's one filled button is the page's
+//     own (Free's "Set up your agent" on /plans). --sh-btn is the control's height, which
+//     places the rule on the header's rule under it;
 //   - in the menu the same rule sits under the current page's words, and along the bottom
 //     edge of the menu's own Connect button;
 //   - a section's link is as tall as the bar, so its focus ring is drawn round its words;
@@ -38,18 +41,18 @@ const CSS = `@layer components {
 .sh-ctl{--sh-btn:2.75rem;position:relative}
 .sh-ctl[aria-current="page"]::after{content:"";position:absolute;inset-inline:-1px;bottom:calc((var(--sh-btn) - var(--header-h))/2 - 2px);height:2px;background:var(--accent-strong)}
 .sh-ctl.btn--secondary[aria-current="page"],.sh-cta.btn--secondary[aria-current="page"]{border-color:var(--line-bold)}
-.sh-ctl.btn--primary[aria-current="page"],.sh-cta.btn--primary[aria-current="page"]{border-color:var(--text)}
+.sh-ctl.btn--primary[aria-current="page"],.sh-cta.btn--primary[aria-current="page"]{border-color:var(--line-bold);background-color:transparent;color:var(--text)}
 .sh-ctl.btn--quiet[aria-current="page"]{border-color:transparent}
 .sh-cta{position:relative}
 .sh-cta[aria-current="page"]::after{content:"";position:absolute;inset-inline:-1px;bottom:-1px;height:2px;background:var(--accent-strong)}
 .sh-row{display:flex;min-height:2.75rem;align-items:center;justify-content:space-between;gap:1rem;color:var(--text);text-decoration:none}
 .sh-row[aria-current="page"],.sh-more[aria-current="page"]{text-decoration:underline;text-decoration-color:var(--accent-strong);text-decoration-thickness:2px;text-underline-offset:.4em}
-.sh-more{display:inline-flex;min-height:2.75rem;align-items:center;gap:.5rem;color:var(--text-muted);text-decoration:none;transition:color var(--dur-1) var(--ease-out)}
+.sh-more{display:inline-flex;min-height:2.75rem;align-items:center;gap:.5rem;color:var(--text-muted);text-decoration:none;white-space:nowrap;transition:color var(--dur-1) var(--ease-out)}
 .sh-more[aria-current="page"]{color:var(--text)}
 @media (hover:hover){
 .sh-link:hover,.sh-more:hover{color:var(--text)}
 .sh-ctl.btn--secondary[aria-current="page"]:hover,.sh-cta.btn--secondary[aria-current="page"]:hover{border-color:var(--text-faint)}
-.sh-ctl.btn--primary[aria-current="page"]:hover,.sh-cta.btn--primary[aria-current="page"]:hover{border-color:var(--fill-hover)}
+.sh-ctl.btn--primary[aria-current="page"]:hover,.sh-cta.btn--primary[aria-current="page"]:hover{border-color:var(--text-faint);background-color:var(--bg-tile)}
 }
 .sh-theme{display:none}
 html.js .sh-theme{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1rem;border-top:1px solid var(--line);padding-top:1rem}
@@ -78,9 +81,11 @@ html.js .sh-theme{margin-top:0;border-top:0;border-left:1px solid var(--line);pa
 // current state and the menu's closing run in the browser (components/site-header-island.tsx),
 // and the search palette loads when it is first opened (components/search-palette.tsx).
 //
-// "Connect your agent" is outlined while the hosted connector is off (site.connectorLive),
-// so the one path that is not switched on is never the brightest thing on a page; when the
-// flag is on it is filled. On /connect it shows as the current page.
+// "Connect your agent" opens the plans (decision 121): Free's card leads on to the setup steps
+// at /connect, which the menu lists with the other pages. It is outlined while the hosted
+// connector is off (site.connectorLive), so the one path that is not switched on is never the
+// brightest thing on a page; when the flag is on it is filled. On /plans it shows as the
+// current page; on /connect the menu's own link does, the way it does for /run.
 //
 // The menu is a <details>, so it opens with scripts off, and it is there at every width.
 // Under 768 px it holds everything: Search, the five sections, the other pages and Connect.
@@ -126,7 +131,7 @@ export function SiteHeader({ sectionOf }: { sectionOf?: Readonly<Record<string, 
               <span className="hidden lg:inline">Search</span>
             </NavLink>
             {/* The words shorten under 1280 px; the control's name does not. */}
-            <NavLink href="/connect" exact aria-label="Connect your agent" className={cx("sh-ctl", connect, inBar)}>
+            <NavLink href="/plans" exact aria-label="Connect your agent" className={cx("sh-ctl", connect, inBar)}>
               <span className="xl:hidden">Connect</span>
               <span className="hidden xl:inline">Connect your agent</span>
               <Icon name="arrow-right" className="hidden xl:inline-block" />
@@ -159,7 +164,8 @@ export function SiteHeader({ sectionOf }: { sectionOf?: Readonly<Record<string, 
                       </ul>
                     </div>
                     <p className="type-label m-0 mt-6 text-faint md:mt-0">More pages</p>
-                    <ul className="type-body-s m-0 grid list-none grid-cols-2 gap-x-6 p-0 md:flex md:gap-8">
+                    {/* From 768 px the pages wrap onto a second row whole, rather than word by word or past the edge. */}
+                    <ul className="type-body-s m-0 grid list-none grid-cols-2 gap-x-6 p-0 md:flex md:min-w-0 md:flex-1 md:flex-wrap md:justify-end md:gap-x-8 md:gap-y-0">
                       {MORE.map((l) => (
                         <li key={l.href}>
                           <NavLink href={l.href} exact className="sh-more">
@@ -173,7 +179,7 @@ export function SiteHeader({ sectionOf }: { sectionOf?: Readonly<Record<string, 
                       <p className="type-label m-0 text-faint">Theme</p>
                       <ThemeToggle />
                     </div>
-                    <NavLink href="/connect" exact className={cx("sh-cta", connect, "mt-6 w-full md:hidden")}>
+                    <NavLink href="/plans" exact className={cx("sh-cta", connect, "mt-6 w-full md:hidden")}>
                       Connect your agent
                       <Icon name="arrow-right" />
                     </NavLink>

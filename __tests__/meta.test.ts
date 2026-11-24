@@ -9,7 +9,7 @@ const urls = sitemap().map((e) => e.url);
 
 describe("sitemap", () => {
   it("lists the home page and the new pages", () => {
-    for (const path of ["", "/audit", "/connect", "/run"]) expect(urls).toContain(`${base}${path}`);
+    for (const path of ["", "/audit", "/plans", "/connect", "/run"]) expect(urls).toContain(`${base}${path}`);
   });
 
   it("has one URL per playbook in the corpus", () => {

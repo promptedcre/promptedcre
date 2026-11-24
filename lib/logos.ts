@@ -6,7 +6,10 @@
 // `light`: dark ink on a clear ground, so it sits on a light tile. `low`: the site serves
 // only a small icon. `maker`: a maker's mark stands in for the product.
 //
-// An id is a vendor's id in rankings/markets/*/vendors.json or a host's id in lib/hosts.ts.
+// An id is a vendor's id in rankings/markets/*/vendors.json or a host's id in lib/hosts.ts,
+// or one of the two marks the Free plan's card draws beside their names (D274): `github` for
+// the repository and `mcp` for the connector, each rendered whole to 128 px from the file its
+// owner's own page declares as its icon.
 // A vendor with no entry is drawn as a letter tile of ours; a government source as one
 // neutral glyph of ours (a seal is never used). Generated 2026-11-17 from the icon kit's
 // manifest; edit by hand only to add a fetched icon with all of its fields.
@@ -42,6 +45,8 @@ export const LOGOS: Readonly<Record<string, LogoEntry>> = {
   "dealpath": { from: "https://www.dealpath.com/wp-content/uploads/2025/01/cropped-favicon-192x192.png", on: "2026-11-15", sha256: "09b714e0c57f386396b24c14c30ea8ee7e01470ea3f5ea76aae1b5463b8cef20", light: false, low: false },
   "docusign": { from: "https://www.docusign.com/assets/images/android-chrome-192x192.png", on: "2026-11-15", sha256: "cd276b627ec30c6dced1ed64ed933e9379695d26153e367970c9a72f7f863bc8", light: false, low: false },
   "dropbox-sign": { from: "https://app.sign.dropbox.com/apple-touch-icon.png", on: "2026-11-15", sha256: "2c85fcafbdc92062e20b6fbce764874bde923af29a2f5a6301dd498c920adcda", light: false, low: false },
+  // The repository's mark on the Free plan's card (D274): the icon github.com declares, dark ink on a clear ground.
+  "github": { from: "https://github.githubassets.com/favicons/favicon.svg", on: "2026-11-23", sha256: "8bb7b55b20554cf519056fa8187e6f81400058b1f238d810a8516941d40abcd8", light: true, low: false },
   "grok": { from: "https://grok.com/images/android-chrome-512x512.png", on: "2026-11-17", sha256: "c0306c84907a15f846c6394620e552b8a111b932b583617c0734f398df6e177f", light: false, low: false },
   "icapital-identity": { from: "https://app.parallelmarkets.com/favicon.svg", on: "2026-11-15", sha256: "17ca66f4eb0b07ce4c58be9eca49d3145cb30cc487d1ada6efd179e4ba6c503f", light: false, low: false, maker: "the product's former name's mark (Parallel Markets)" },
   "intellcre": { from: "https://intellcre.com/wp-content/uploads/2025/11/intell-fav-383x382.png", on: "2026-11-15", sha256: "3bdc571cca45ed41e0c66a938ddc753a290d5aaa1b0fe3c9c8128e00822339a1", light: false, low: false },
@@ -50,6 +55,8 @@ export const LOGOS: Readonly<Record<string, LogoEntry>> = {
   "juniper-square": { from: "https://www.junipersquare.com/favicon.ico", on: "2026-11-15", sha256: "7b8275d1aede5056c7dc9d1b7a459481e6bc7cb64c2189f013205edfd0da3f6c", light: false, low: false },
   "keyway": { from: "https://cdn.prod.website-files.com/6733ce888871e13497cb4c8b/6807cff9c43c5712c229f4b4_webclip.png", on: "2026-11-15", sha256: "bfb51d0475bccc77d1963f062f52c047b21dc173622b7236f1375772cc9f1bb7", light: false, low: false },
   "legalzoom": { from: "https://legalzoomcdn.net/growth/favicon.ico", on: "2026-11-15", sha256: "6880117eae71b7f217eb273e45873f9031438241f6cf82dd563d859a07dbb775", light: false, low: false },
+  // The connector's mark on the Free plan's card (D274): the 192 px icon modelcontextprotocol.io declares for a light page.
+  "mcp": { from: "https://modelcontextprotocol.io/mintlify-assets/_mintlify/favicons/mcp/ebiVJzri-bsiCfVZ/_generated/favicon/android-chrome-192x192.png", on: "2026-11-23", sha256: "d66fe0cef55e6ba534534d5653e0a29073aedd991284e6886bd391e6259d3932", light: false, low: false },
   "mercury": { from: "https://mercury.com/icon.svg?icon.2sq_8nnp61c03.svg", on: "2026-11-15", sha256: "9c72e15d555fd1fe34c98621615ac53a5e54dcb05fbb997169bab13d76d7bc00", light: true, low: false },
   "microsoft-excel": { from: "https://www.microsoft.com/favicon.ico", on: "2026-11-15", sha256: "9c10a02357e544f4b9ea9acf12d8936dfcfbe82aaf48958770960244ad12a28a", light: false, low: false, maker: "Microsoft's mark; the Excel page never loaded" },
   "muse": { from: "https://muse.ai/favicon.ico", on: "2026-11-17", sha256: "6992294e53e228f2af170d372680a40bff462a9b94b88c786b63d90f1319db00", light: false, low: false },

@@ -596,7 +596,8 @@ form is a box too: rounded, with the soft shadow, and its sticky result bar a ro
 The site header (`components/site-header.tsx`) is opaque with one rule. The current
 section is the text ink with a 2 px drafting-blue rule sitting on the header's rule, never
 the agent's green. "Connect your agent" is the secondary button while
-`site.connectorLive` is false and the primary when it is true. Under 768 px the sections
+`site.connectorLive` is false and the primary when it is true. It opens /plans, whose Free
+card leads on to the setup steps at /connect. Under 768 px the sections
 fold into a native menu. `ThemeToggle` sits in the header: a quiet small button that names
 the theme it turns to. Breadcrumbs in `PageHead` are type-body-s in muted ink with a
 faint slash. The footer lists every page in plain groups.

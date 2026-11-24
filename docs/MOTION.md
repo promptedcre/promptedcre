@@ -396,9 +396,11 @@ The design direction's rules for motion. Check each before you call a sequence d
       any loop. Allowed since the owner's BoardUI round (D224), each once and never for
       reduced motion, scripts off or print: a blur-in reveal per section (`data-reveal`,
       `components/motion/page-motion.tsx`), a computed figure counting up once (`CountUp`),
-      a bar filling and icons arriving in turn inside a reveal, the home headline's last word
-      passing once through the structures and resting, a soft highlight or a 2 px lift on hover,
-      the page fading in on arrival, the theme switch's circle and the copy notice.
+      a bar filling and icons arriving in turn inside a reveal, a soft highlight or a 2 px lift
+      on hover, the page fading in on arrival, the theme switch's circle and the copy notice.
+      The home headline's last word, "superpowers", is penciled then inked once as the page
+      opens, its two inks flowing through it, with a small lift at the end (decision 128;
+      `.hl-power` in `components/home/styles.tsx`). The old headline's cycling word is gone.
 
 ## Files
 

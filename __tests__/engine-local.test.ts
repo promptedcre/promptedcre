@@ -55,7 +55,9 @@ describe("the local MCP server", () => {
     const replies = new Map<number, Record<string, unknown>>();
     let buffer = "";
     const done = new Promise<void>((resolve, reject) => {
-      const timer = setTimeout(() => reject(new Error("the server did not answer in time")), 25_000);
+      // Starting tsx and loading the catalog can take well past 25 s on Windows while the
+      // full suite runs (D272).
+      const timer = setTimeout(() => reject(new Error("the server did not answer in time")), 90_000);
       child.stdout.on("data", (chunk: Buffer) => {
         buffer += chunk.toString("utf8");
         for (let nl = buffer.indexOf("\n"); nl >= 0; nl = buffer.indexOf("\n")) {
@@ -91,5 +93,5 @@ describe("the local MCP server", () => {
     const call = replies.get(3)?.result as { content: { text: string }[]; isError?: boolean };
     expect(call.isError).toBeUndefined();
     expect(JSON.parse(call.content[0]?.text ?? "{}")).toMatchObject({ ok: true, action: "firm.status", result: { name: "Example Sponsor LLC" } });
-  }, 30_000);
+  }, 120_000);
 });
